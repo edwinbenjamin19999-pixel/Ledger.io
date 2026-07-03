@@ -18,132 +18,83 @@ const CONTO = [
   "Prognos baserad på din faktiska bokföring",
 ];
 
+/**
+ * FLAT JÄMFÖRELSE — vit sektion. Legacy = grått muted-block,
+ * Ledger.io = blue-50-block med tjock blå kant (border-2).
+ * Färg och kant bär vinnaren — ingen glow.
+ */
 export const WhyNorthLedger = () => {
   const reveal = useScrollReveal<HTMLDivElement>();
   const navigate = useNavigate();
   return (
-    <section className="section-shell">
-      <div ref={reveal.ref} className={`section-inner ${reveal.className}`}>
-        <p className="section-label">Jämförelse</p>
-        <h2
-          className="section-headline text-4xl md:text-5xl font-[700] leading-[1.05]"
-          style={{ letterSpacing: "-0.8px" }}
-        >
-          Inte ett bokföringsprogram. <span style={{ color: "#3b82f6" }}>Ett ekonomisystem.</span>
+    <section className="bg-white py-24 px-6">
+      <div ref={reveal.ref} className={`mx-auto max-w-5xl ${reveal.className}`}>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#2563EB]">
+          Jämförelse
+        </p>
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] text-[#0F1B2D]">
+          Inte ett bokföringsprogram.{" "}
+          <span className="text-[#2563EB]">Ett ekonomisystem.</span>
         </h2>
-        <p className="section-lede text-[15px] leading-relaxed max-w-2xl">
-          Skillnaden mellan att lappa ett gammalt system med AI — och att bygga ett nytt från grunden.
+        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[#0F1B2D]/60">
+          Skillnaden mellan att lappa ett gammalt system med AI — och att bygga
+          ett nytt från grunden.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
-          {/* Traditional — muted */}
-          <div className="dark-surface-card" style={{ padding: "28px 24px" }}>
-            <div
-              style={{
-                color: "rgba(255,255,255,0.3)",
-                fontSize: 11,
-                letterSpacing: "2px",
-                fontWeight: 500,
-                textTransform: "uppercase",
-                marginBottom: 20,
-              }}
-            >
+        <div className="mt-12 grid grid-cols-1 items-start gap-5 md:grid-cols-2">
+          {/* Legacy — muted grått block */}
+          <div className="rounded-lg bg-gray-100 p-7">
+            <div className="mb-5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0F1B2D]/50">
               Legacy-system + AI-tillägg
             </div>
             <ul className="space-y-4">
               {TRADITIONAL.map((t) => (
                 <li key={t} className="flex items-start gap-3">
-                  <div
-                    className="mt-0.5 w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0"
-                    style={{ background: "rgba(255,255,255,0.04)" }}
-                  >
-                    <X className="w-3 h-3" style={{ color: "rgba(239,68,68,0.6)" }} />
+                  <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md bg-white">
+                    <X className="h-3 w-3 text-[#DC2626]" strokeWidth={3} aria-hidden />
                   </div>
-                  <span style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", lineHeight: 1.6 }}>
-                    {t}
-                  </span>
+                  <span className="text-sm leading-relaxed text-[#0F1B2D]/60">{t}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Ledger.io — superior */}
-          <div
-            className="rounded-xl relative"
-            style={{
-              padding: "28px 24px",
-              background: "rgba(29,217,240,0.05)",
-              border: "1px solid rgba(29,217,240,0.25)",
-              boxShadow:
-                "0 0 40px rgba(29,217,240,0.08), inset 0 1px 0 rgba(29,217,240,0.15)",
-            }}
-          >
-            <div className="flex items-center justify-between mb-5">
-              <div
-                style={{
-                  color: "#3b82f6",
-                  fontSize: 11,
-                  letterSpacing: "2px",
-                  fontWeight: 500,
-                  textTransform: "uppercase",
-                }}
-              >
+          {/* Ledger.io — blue-50-block med tjock blå kant */}
+          <div className="rounded-lg border-2 border-[#2563EB] bg-blue-50 p-7">
+            <div className="mb-5 flex items-center justify-between">
+              <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#2563EB]">
                 Ledger.io
               </div>
-              <span
-                style={{
-                  background: "#3b82f6",
-                  color: "#0B1F2F",
-                  fontWeight: 700,
-                  padding: "4px 12px",
-                  borderRadius: 100,
-                  fontSize: 10,
-                  letterSpacing: "0.5px",
-                  textTransform: "uppercase",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 4,
-                }}
-              >
-                ✓ Rekommenderas
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#2563EB] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
+                <Check className="h-3 w-3" strokeWidth={3} aria-hidden />
+                Rekommenderas
               </span>
             </div>
             <ul className="space-y-4">
               {CONTO.map((t) => (
                 <li key={t} className="flex items-start gap-3">
-                  <div
-                    className="mt-0.5 w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0"
-                    style={{ background: "rgba(29,217,240,0.15)" }}
-                  >
-                    <Check className="w-3 h-3" style={{ color: "#3b82f6" }} strokeWidth={3} />
+                  <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md bg-[#2563EB]">
+                    <Check className="h-3 w-3 text-white" strokeWidth={3} aria-hidden />
                   </div>
-                  <span style={{ fontSize: 14, color: "#fff", lineHeight: 1.6 }}>{t}</span>
+                  <span className="text-sm font-medium leading-relaxed text-[#0F1B2D]">{t}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        {/* CTA below */}
-        <div className="flex justify-center" style={{ marginTop: 32 }}>
+        {/* CTA */}
+        <div className="mt-10 flex justify-center">
           <button
             type="button"
             onClick={() => navigate("/auth")}
-            className="inline-flex items-center gap-2 font-semibold transition-all hover:bg-white/90 hover:scale-[1.02]"
-            style={{
-              background: "#ffffff",
-              color: "#050d1a",
-              fontSize: 15,
-              padding: "14px 28px",
-              borderRadius: 12,
-            }}
+            className="inline-flex h-14 items-center gap-2 rounded-md bg-[#2563EB] px-8 text-[15px] font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
           >
             Säkra din plats — 14 dagar utan kostnad vid lansering
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4" aria-hidden />
           </button>
         </div>
       </div>
     </section>
   );
 };
-

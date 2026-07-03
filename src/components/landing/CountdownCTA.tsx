@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { HeroProductMockup } from "./HeroProductMockup";
 import { useWaitlistCount, incrementWaitlist } from "@/hooks/useWaitlistCount";
 
+/**
+ * FLAT SIGNUP-BLOCK — solitt ink-navy, inga glows/mönster/pulser.
+ * Vita platta inputs på mörk yta, vit CTA med skala + färgskifte.
+ */
 export const CountdownCTA = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -38,135 +41,99 @@ export const CountdownCTA = () => {
     }
   };
 
-
   return (
-    <section id="signup" className="relative py-32 md:py-40 overflow-hidden scroll-mt-20">
-      {/* Subtle line pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255,255,255,0.15) 59px, rgba(255,255,255,0.15) 60px)",
-        }}
-      />
-      <div className="absolute top-0 right-0 w-[500px] h-[400px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(8,145,178,0.12)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[400px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(8,145,178,0.08)_0%,transparent_70%)] pointer-events-none" />
+    <section
+      id="signup"
+      className="relative overflow-hidden bg-[#0F1B2D] py-24 md:py-32 scroll-mt-20"
+    >
+      {/* Geometrisk dekoration — platta former i låg opacitet */}
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at 50% 30%, rgba(29,217,240,0.06) 0%, transparent 60%)",
-        }}
+        className="pointer-events-none absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full bg-white/5"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-[10%] -left-24 h-[240px] w-[240px] rotate-12 bg-white/5"
       />
 
       <div className="relative z-10 container mx-auto max-w-2xl px-6 text-center">
-        <style>{`
-          .cta-input,
-          .cta-input:hover,
-          .cta-input:focus,
-          .cta-input:active {
-            appearance: none;
-            background-color: rgba(255,255,255,0.06) !important;
-            color: #ffffff !important;
-            -webkit-text-fill-color: #ffffff !important;
-            caret-color: #ffffff !important;
-            transition: border-color 150ms ease;
-            border-left: 2px solid transparent;
-          }
-          .cta-input:focus { border-left: 2px solid #3b82f6; }
-          .cta-input:-webkit-autofill,
-          .cta-input:-webkit-autofill:hover,
-          .cta-input:-webkit-autofill:focus,
-          .cta-input:-webkit-autofill:active {
-            background-color: rgba(255,255,255,0.06) !important;
-            background-clip: content-box !important;
-            -webkit-text-fill-color: #ffffff !important;
-            -webkit-box-shadow: 0 0 0 1000px #17263a inset !important;
-            box-shadow: 0 0 0 1000px #17263a inset !important;
-            caret-color: #ffffff !important;
-            transition: background-color 9999s ease-in-out 0s;
-          }
-          @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(29,217,240,0.3); }
-            50% { box-shadow: 0 0 35px rgba(29,217,240,0.55); }
-          }
-          .cta-pulse { animation: pulse-glow 2.5s ease-in-out infinite; }
-        `}</style>
-
-        <h2
-          className="text-4xl md:text-5xl font-bold text-white leading-[1.05] mt-2 mb-4"
-          style={{ letterSpacing: "-0.8px" }}
-        >
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.05] mb-4">
           Sluta betala för system som inte tänker.
         </h2>
-        <p className="text-white/70 font-normal text-xl text-center mb-4">
+        <p className="text-white/80 text-xl mb-3">
           Pilotfas pågår — begränsat antal platser.
         </p>
-
-        <p className="text-white/50 text-lg text-center mb-8">
-          De flesta ekonomisystem är byggda på 20 år gammal grund — med AI tillagt i efterhand. Ledger.io är byggt från grunden med AI som motor. Early access är begränsat.
+        <p className="text-white/60 text-base mb-8 max-w-lg mx-auto leading-relaxed">
+          De flesta ekonomisystem är byggda på 20 år gammal grund — med AI
+          tillagt i efterhand. Ledger.io är byggt från grunden med AI som
+          motor. Early access är begränsat.
         </p>
 
         {/* Live signup counter */}
-        <p className="text-[#3b82f6] text-sm font-medium text-center mb-4">
-          🟢{" "}
-          <span className="inline-block tabular-nums">
-            {count.toLocaleString("sv-SE")}
-          </span>{" "}
+        <p className="mb-6 text-sm font-semibold text-white">
+          <span
+            aria-hidden
+            className="mr-2 inline-block h-2 w-2 rounded-full bg-emerald-400 align-middle"
+          />
+          <span className="tabular-nums">{count.toLocaleString("sv-SE")}</span>{" "}
           företag redan anmälda
         </p>
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto w-full space-y-3">
+        {/* Form — vita platta fält på navy */}
+        <form onSubmit={handleSubmit} className="mx-auto w-full max-w-md space-y-3">
+          <label htmlFor="cta-name" className="sr-only">Ditt namn (valfritt)</label>
           <input
+            id="cta-name"
             type="text"
+            autoComplete="name"
             placeholder="Ditt namn (valfritt)"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            style={{ WebkitTextFillColor: "#ffffff", backgroundColor: "rgba(255,255,255,0.06)", color: "#ffffff", colorScheme: "dark" }}
-            className="cta-input w-full h-11 px-3 !bg-white/[0.06] border border-[rgba(255,255,255,0.15)] !text-white text-[15px] placeholder:text-white/50 focus:border-[#3b82f6]/60 focus:outline-none rounded-lg"
+            className="h-12 w-full rounded-md border-2 border-transparent bg-white px-4 text-[15px] text-[#0F1B2D] placeholder:text-[#0F1B2D]/40 focus:border-[#2563EB] focus:outline-none transition-colors duration-200"
           />
+          <label htmlFor="cta-email" className="sr-only">E-postadress</label>
           <input
+            id="cta-email"
             type="email"
             required
+            autoComplete="email"
             placeholder="din@email.se"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ WebkitTextFillColor: "#ffffff", backgroundColor: "rgba(255,255,255,0.06)", color: "#ffffff", colorScheme: "dark" }}
-            className="cta-input w-full h-11 px-3 !bg-white/[0.06] border border-[rgba(255,255,255,0.15)] !text-white text-[15px] placeholder:text-white/50 focus:border-[#3b82f6]/60 focus:outline-none rounded-lg"
+            className="h-12 w-full rounded-md border-2 border-transparent bg-white px-4 text-[15px] text-[#0F1B2D] placeholder:text-[#0F1B2D]/40 focus:border-[#2563EB] focus:outline-none transition-colors duration-200"
           />
-          <Button
+          <button
             type="submit"
             disabled={loading}
-            className="cta-pulse w-full h-11 bg-white hover:bg-white/90 text-[#050d1a] font-semibold rounded-lg group"
+            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#2563EB] text-base font-bold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1D4ED8] disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1B2D]"
           >
             {loading ? "Skickar..." : "Säkra din plats"}
-            <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
-          </Button>
-          <p className="text-white/25 text-[11px] tracking-wide text-center mt-3">
-            ✓ 14 dagar gratis  ·  ✓ Ingen bindningstid
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+          </button>
+          <p className="mt-3 text-xs font-medium tracking-wide text-white/60">
+            ✓ 14 dagar gratis · ✓ Ingen bindningstid
           </p>
-          <p className="text-white/25 text-[11px] text-center mt-2 max-w-sm mx-auto">
-            Din data lagras på svenska servrar, krypteras i vila och transit, och delas aldrig med tredje part.
+          <p className="mx-auto mt-2 max-w-sm text-xs text-white/50">
+            Din data lagras på svenska servrar, krypteras i vila och transit,
+            och delas aldrig med tredje part.
           </p>
         </form>
 
-
-        <div className="bg-[#0a1a2e] border border-white/5 rounded-xl px-8 py-4 max-w-2xl mx-auto mt-12 mb-12">
+        {/* Princip-rad — platt block */}
+        <div className="mx-auto mt-12 mb-12 max-w-2xl rounded-lg bg-white/5 px-8 py-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-center text-center md:text-left">
-            <span className="text-white font-semibold text-base">
+            <span className="text-base font-bold text-white">
               AI bokför — du godkänner.
             </span>
-            <span aria-hidden className="hidden md:inline text-white/15 mx-6">·</span>
-            <span className="text-white/45 text-sm mt-2 md:mt-0">
+            <span aria-hidden className="mx-6 hidden text-white/20 md:inline">·</span>
+            <span className="mt-2 text-sm text-white/60 md:mt-0">
               Varje post är granskbar, spårbar och alltid i linje med bokföringslagen.
             </span>
           </div>
         </div>
       </div>
 
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 mt-12 pb-8">
+      <div className="relative z-10 mx-auto mt-4 w-full max-w-[1600px] px-6 pb-8">
         <HeroProductMockup />
       </div>
     </section>

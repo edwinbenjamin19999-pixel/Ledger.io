@@ -20,10 +20,10 @@ import { FAQ } from "@/components/landing/FAQ";
 const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
 
 /**
- * FLAT POSTER LAYOUT — sidan komponeras som en serie solida färgblock:
- * blå (hero) → navy → vit → navy → amber → navy → vit → navy (footer).
- * Sektioner byggda för mörk bakgrund (vit text) ligger i navy-block tills
- * de konverteras; färgövergångarna är skarpa, aldrig tonade.
+ * FLAT POSTER LAYOUT — sidan är en serie solida färgblock med skarpa
+ * övergångar: blå → navy → vit → grå → navy → vit → emerald → amber →
+ * grå → vit → navy → vit → navy. Varje sektion äger sin egen färg;
+ * NavyBlock omsluter endast sektioner som ännu inte konverterats.
  */
 const NavyBlock = ({ children }: { children: ReactNode }) => (
   <div className="bg-[#0F1B2D]">{children}</div>
@@ -35,21 +35,19 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <CountdownCTA />
         <NavyBlock>
-          <CountdownCTA />
           <InteractiveDemoPreview />
         </NavyBlock>
         <Pillars />
-        <NavyBlock>
-          <HowItWorks />
-          <AutomationGrid />
-          <WhyNorthLedger />
-          <UseCases />
-        </NavyBlock>
+        <HowItWorks />
+        <AutomationGrid />
+        <WhyNorthLedger />
+        <UseCases />
         <PilotCTA />
+        <SelectedFeatures />
+        <TrustCompliance />
         <NavyBlock>
-          <SelectedFeatures />
-          <TrustCompliance />
           <WhiteLabelSection />
         </NavyBlock>
         <FAQ />
