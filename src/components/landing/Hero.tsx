@@ -224,15 +224,51 @@ export const Hero = () => {
               </div>
             </div>
 
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              style={{ width: "100%", display: "block", borderRadius: "0 0 14px 14px" }}
+            {/* Branded placeholder behind the video so the frame is never
+                an empty black box while /hero-demo.mp4 buffers on slow links */}
+            <div
+              aria-hidden
+              className="hero-mockup-fallback"
+              style={{
+                position: "relative",
+                width: "100%",
+                aspectRatio: "16 / 10",
+                background:
+                  "linear-gradient(135deg, #0e2036 0%, #0a1830 55%, #071322 100%)",
+              }}
             >
-              <source src="/hero-demo.mp4" type="video/mp4" />
-            </video>
+              <div
+                aria-hidden
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  backgroundImage:
+                    "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
+                  backgroundSize: "44px 44px",
+                  maskImage:
+                    "radial-gradient(ellipse at 50% 45%, #000 0%, transparent 75%)",
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse at 50% 45%, #000 0%, transparent 75%)",
+                }}
+              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster="/hero-demo-poster.jpg"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              >
+                <source src="/hero-demo.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
 
