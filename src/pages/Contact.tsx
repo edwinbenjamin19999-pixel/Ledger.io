@@ -93,7 +93,14 @@ const Contact = () => {
                 {
                   icon: Phone,
                   title: "Telefon",
-                  content: <p className="text-slate-600">Vardagar 09:00-17:00</p>,
+                  content: (
+                    <div className="text-slate-600">
+                      <a href="tel:+46761646986" className="hover:text-slate-900 transition-colors">
+                        +46 76 164 69 86
+                      </a>
+                      <p className="text-sm text-slate-500">Vardagar 09:00–17:00</p>
+                    </div>
+                  ),
                 },
                 {
                   icon: MapPin,

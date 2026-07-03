@@ -74,39 +74,41 @@ export const CookieBanner = () => { const [showBanner, setShowBanner] = useState
 
   return (
     <>
-      <div className="fixed bottom-20 md:bottom-4 right-4 z-50 max-w-md animate-in slide-in-from-bottom-5">
-        <Card className="p-4 shadow-lg border-[0.5px] border-[#E2E8F0]">
-          <div className="flex items-start gap-3">
-            <Cookie className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
-            <div className="flex-1 space-y-3">
+      {/* Slim bottom bar — spans the width so it never covers page CTAs or content */}
+      <div className="fixed bottom-0 inset-x-0 z-50 p-3 sm:p-4 animate-in slide-in-from-bottom-5">
+        <Card className="mx-auto max-w-3xl p-4 shadow-lg border-[0.5px] border-[#E2E8F0]">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="flex items-start gap-3 flex-1 min-w-0">
+              <Cookie className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
               <div>
-                <h3 className="font-semibold text-sm mb-1">
+                <h3 className="font-semibold text-sm mb-0.5">
                   Vi använder cookies
                 </h3>
                 <p className="text-xs text-muted-foreground">
                   För att förbättra din upplevelse. Vissa cookies är nödvändiga.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-2">
-                <Button size="sm" onClick={handleAcceptAll}>
-                  Acceptera alla
-                </Button>
-                <Button size="sm" variant="outline" onClick={handleAcceptNecessary}>
-                  Endast nödvändiga
-                </Button>
-                <Button size="sm" variant="ghost" onClick={() => setShowDetails(true)}>
-                  Anpassa
-                </Button>
-              </div>
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-6 w-6 flex-shrink-0"
-              onClick={() => handleAcceptNecessary()}
-            >
-              <X className="h-3 w-3" />
-            </Button>
+            <div className="flex flex-wrap gap-2 sm:flex-shrink-0">
+              <Button size="sm" onClick={handleAcceptAll}>
+                Acceptera alla
+              </Button>
+              <Button size="sm" variant="outline" onClick={handleAcceptNecessary}>
+                Endast nödvändiga
+              </Button>
+              <Button size="sm" variant="ghost" onClick={() => setShowDetails(true)}>
+                Anpassa
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 flex-shrink-0"
+                aria-label="Stäng"
+                onClick={() => handleAcceptNecessary()}
+              >
+                <X className="h-3.5 w-3.5" />
+              </Button>
+            </div>
           </div>
         </Card>
       </div>

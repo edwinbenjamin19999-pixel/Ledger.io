@@ -52,7 +52,7 @@ export function ConfidenceScoreCard({ confidence, countsBySeverity }: Confidence
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
-                  Financial Confidence
+                  Finansiell tillförlitlighet
                 </p>
                 <p className={cn("text-2xl font-bold leading-tight mt-0.5 tabular-nums", toneStyles.value)}>
                   {pct}%
