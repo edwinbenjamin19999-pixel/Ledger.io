@@ -39,10 +39,12 @@ export const AppSidebar = () => { const location = useLocation();
   const [customizeOpen, setCustomizeOpen] = useState(false);
   const pendingApprovalCount = usePendingApprovalCount();
   const visibleBottomItems = bottomItems;
-  const sidebarMenuButtonClass = "flex items-center gap-2 px-3 text-[12px] font-normal text-white/60 border-l-2 border-transparent hover:text-white/85 hover:bg-white/[0.04] cursor-pointer transition-colors rounded-lg whitespace-normal h-8 min-h-0 leading-tight !overflow-visible [&>span:last-child]:!overflow-visible [&>span:last-child]:!whitespace-normal [&>span:last-child]:!text-clip";
+  // FLAT: medium-vikt text med högre kontrast, aktiv = solitt blått block
+  // med tjock kantlist — färg som struktur, aldrig glow
+  const sidebarMenuButtonClass = "flex items-center gap-2 px-3 text-[13px] font-medium text-white/70 border-l-2 border-transparent hover:text-white hover:bg-white/[0.06] cursor-pointer transition-colors rounded-md whitespace-normal h-9 min-h-0 leading-tight !overflow-visible [&>span:last-child]:!overflow-visible [&>span:last-child]:!whitespace-normal [&>span:last-child]:!text-clip";
   const sidebarMenuButtonActiveClass = tenant
     ? "font-semibold border"
-    : "!text-white !bg-white/[0.06] !border-l-2 !border-[#3b82f6]";
+    : "!text-white !font-semibold !bg-[#2563EB]/[0.18] !border-l-2 !border-[#3b82f6]";
   const tenantActiveStyle = tenant
     ? {
         backgroundColor: `hsl(var(--brand-primary) / 0.18)`,
@@ -83,7 +85,7 @@ export const AppSidebar = () => { const location = useLocation();
     : filteredGroups;
 
   return (
-    <Sidebar className="bg-[#0B1929] border-r [border-width:0.5px] border-white/[0.06]">
+    <Sidebar className="bg-[#0F1B2D] border-r [border-width:0.5px] border-white/[0.06]">
       {/* Logo header (tenant-aware) */}
       <SidebarHeader className="p-4 border-b [border-width:0.5px] border-white/[0.06]">
         <BrandedLogo />
@@ -103,13 +105,13 @@ export const AppSidebar = () => { const location = useLocation();
                       isActive={isActive}
                       className={cn(
                         isHeaderShortcut
-                          ? "flex items-center gap-2 px-3 h-9 text-[11px] font-medium uppercase tracking-[0.1em] text-white/40 hover:text-white/60 hover:bg-white/[0.04] cursor-pointer transition-colors rounded-lg"
+                          ? "flex items-center gap-2 px-3 h-9 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/50 hover:text-white/60 hover:bg-white/[0.04] cursor-pointer transition-colors rounded-lg"
                           : sidebarMenuButtonClass,
                         isActive && sidebarMenuButtonActiveClass
                       )}
                       style={isActive ? tenantActiveStyle : undefined}
                     >
-                      <Icon size={16} strokeWidth={1.5} className={isHeaderShortcut ? "" : "mt-0.5"} />
+                      <Icon size={16} strokeWidth={2} className={isHeaderShortcut ? "" : "mt-0.5"} />
                       <span className="min-w-0 flex-1 whitespace-normal break-words">{item.label}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -129,7 +131,7 @@ export const AppSidebar = () => { const location = useLocation();
               <SidebarGroup className="py-0">
                 <CollapsibleTrigger asChild>
                    <SidebarGroupLabel
-                     className="cursor-pointer transition-colors flex items-center justify-between pr-2 text-[11px] font-medium uppercase tracking-[0.1em] text-white/40 px-3 h-9 mt-0 mb-0 hover:text-white/60"
+                     className="cursor-pointer transition-colors flex items-center justify-between pr-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/50 px-3 h-9 mt-0 mb-0 hover:text-white/60"
                   >
                     {group.label}
                     <ChevronDown className="h-3.5 w-3.5 transition-transform group-data-[state=open]/collapsible:rotate-180 text-white/30" />
@@ -149,7 +151,7 @@ export const AppSidebar = () => { const location = useLocation();
                                 <CollapsibleTrigger asChild>
                                   <SidebarMenuButton className={cn(sidebarMenuButtonClass, "justify-between")}>
                                     <span className="flex min-w-0 flex-1 items-start gap-2 whitespace-normal break-words">
-                                      <Icon size={16} strokeWidth={1.5} className="mt-0.5" />
+                                      <Icon size={16} strokeWidth={2} className="mt-0.5" />
                                       <span className="min-w-0 flex-1 whitespace-normal break-words">{item.label}</span>
                                     </span>
                                     <ChevronDown className="h-3.5 w-3.5 transition-transform group-data-[state=open]/sub:rotate-180" />
@@ -171,7 +173,7 @@ export const AppSidebar = () => { const location = useLocation();
                                             )}
                                             style={subIsActive ? tenantActiveStyle : undefined}
                                           >
-                                            <SubIcon size={16} strokeWidth={1.5} className="mt-0.5" />
+                                            <SubIcon size={16} strokeWidth={2} className="mt-0.5" />
                                             <span className="min-w-0 flex-1 whitespace-normal break-words">{sub.label}</span>
                                           </SidebarMenuButton>
                                         </SidebarMenuItem>
@@ -208,11 +210,11 @@ export const AppSidebar = () => { const location = useLocation();
                                     : undefined
                               }
                             >
-                              <Icon size={16} strokeWidth={1.5} className="mt-0.5" />
+                              <Icon size={16} strokeWidth={2} className="mt-0.5" />
                               <span className="flex-1 whitespace-normal break-words">{item.label}</span>
                               {showPendingBadge && (
                                 <span
-                                  className="ml-auto bg-[#E24B4A] text-white rounded-full text-[9px] font-medium px-[5px] py-px tabular-nums"
+                                  className="ml-auto bg-[#DC2626] text-white rounded-full text-[9px] font-bold px-[5px] py-px tabular-nums"
                                   title={`${pendingApprovalCount} verifikation${pendingApprovalCount === 1 ? "" : "er"} väntar på godkännande`}
                                 >
                                   {pendingApprovalCount > 99 ? "99+" : pendingApprovalCount}
@@ -245,7 +247,7 @@ export const AppSidebar = () => { const location = useLocation();
                       isActive && "!text-white !bg-white/[0.06]"
                     )}
                   >
-                    <Icon size={16} strokeWidth={1.5} />
+                    <Icon size={16} strokeWidth={2} />
                     <span>{item.label}</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -261,14 +263,14 @@ export const AppSidebar = () => { const location = useLocation();
           onClick={() => navigate("/how-it-works")}
           className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-white/40 hover:text-white/60 hover:bg-white/[0.04] transition-colors"
         >
-          <Sparkles size={14} strokeWidth={1.5} />
+          <Sparkles size={14} strokeWidth={2} />
           Hur Bokfy fungerar
         </button>
         <button
           onClick={() => setCustomizeOpen(true)}
           className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-white/40 hover:text-white/60 hover:bg-white/[0.04] transition-colors"
         >
-          <Settings2 size={16} strokeWidth={1.5} />
+          <Settings2 size={16} strokeWidth={2} />
           Anpassa
         </button>
         <AddCompanyDialog
