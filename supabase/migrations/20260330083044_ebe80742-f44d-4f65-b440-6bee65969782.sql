@@ -1,0 +1,1 @@
+DELETE FROM public.bank_notifications WHERE id IN (SELECT id FROM (SELECT id, ROW_NUMBER() OVER (PARTITION BY company_id, LEFT(message, 40) ORDER BY created_at DESC) as rn FROM public.bank_notifications WHERE notification_type = 'proactive_insight') ranked WHERE rn > 1)

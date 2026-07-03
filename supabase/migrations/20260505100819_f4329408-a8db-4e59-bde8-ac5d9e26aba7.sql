@@ -1,0 +1,1 @@
+UPDATE public.tax_rules SET threshold_min = 643000, updated_at = now() WHERE year = 2026 AND rule_type = 'state_tax';

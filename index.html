@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NorthLedger" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <title>NorthLedger - AI-driven Bokföring för Svenska Företag</title>
+    <meta name="description" content="Automatisera din bokföring med AI. NorthLedger erbjuder intelligent bokföring, koncernkonsolidering och Skatteverket-integration. Migrera från Fortnox på 5 minuter." />
+    <meta name="keywords" content="bokföring, AI bokföring, bokföringsprogram, Fortnox alternativ, koncernkonsolidering, e-faktura, PEPPOL, svenska bokföringsprogram" />
+    <meta name="author" content="NorthLedger" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://northledger.se" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="NorthLedger - AI-driven Bokföring för Svenska Företag" />
+    <meta property="og:description" content="Automatisera din bokföring med AI. Migrera från Fortnox på 5 minuter med 98% automatisk kontering." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://northledger.se" />
+    <meta property="og:image" content="https://northledger.se/og-image.png" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:site_name" content="NorthLedger" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NorthLedger - AI-driven Bokföring" />
+    <meta name="twitter:description" content="Automatisera din bokföring med AI. Migrera från Fortnox på 5 minuter." />
+    <meta name="twitter:image" content="https://northledger.se/og-image.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NorthLedger",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "99",
+        "priceCurrency": "SEK",
+        "priceValidUntil": "2025-12-31"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      },
+      "description": "AI-driven bokföring för svenska företag med automatisk kontering, koncernkonsolidering och Skatteverket-integration."
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NorthLedger",
+      "url": "https://northledger.se",
+      "logo": "https://northledger.se/favicon.png",
+      "description": "AI-driven bokföringsplattform för svenska företag. Automatisk kontering, momsdeklaration och bankavstämning.",
+      "foundingDate": "2024",
+      "areaServed": "SE",
+      "sameAs": []
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vad är NorthLedger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NorthLedger är en AI-driven bokföringsplattform för svenska företag som automatiserar kontering, momsdeklaration och bankavstämning. Priset är 199 kr per månad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vilka banker stödjer NorthLedger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NorthLedger är integrerat med SEB, Nordea, Handelsbanken och Swedbank."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Är NorthLedger integrerat med Skatteverket?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, NorthLedger är godkänt och integrerat med Skatteverket för automatisk momsdeklaration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vad kostar NorthLedger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Introduktionspriset är 199 kr/mån. Ordinarie pris är 399 kr/mån. 14 dagars gratis provperiod ingår."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Är NorthLedger GDPR-säkert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, all data lagras inom EU och NorthLedger följer GDPR fullt ut."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script>
+      // Force light mode — dark mode will be re-enabled via Prompt 125 toggle
+      (function(){
+        document.documentElement.setAttribute('data-theme', 'blue');
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Visible fallback while JS loads – hidden by React once mounted -->
+      <div id="app-loading-fallback" style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:system-ui,sans-serif;background:#fafafa;color:#333">
+        <div style="text-align:center;max-width:28rem;padding:2rem">
+          <p style="font-size:1.125rem;font-weight:600;margin:0 0 .5rem">NorthLedger</p>
+          <p style="font-size:.875rem;color:#888;margin:0">Laddar…</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

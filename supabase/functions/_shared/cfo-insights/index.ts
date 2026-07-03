@@ -1,0 +1,13 @@
+export { liquidityRisk } from "./liquidity-risk.ts";
+export { overdueAR } from "./overdue-ar.ts";
+export { costInefficiency } from "./cost-inefficiency.ts";
+export { revenueOpportunity } from "./revenue-opportunity.ts";
+export { marginOptimization } from "./margin-optimization.ts";
+export { customerConcentration } from "./customer-concentration.ts";
+export { personnelEfficiency } from "./personnel-efficiency.ts";
+export { cashflowStability } from "./cashflow-stability.ts";
+export { profitTrend } from "./profit-trend.ts";
+export { expenseAnomalies } from "./expense-anomalies.ts";
+export { pricingOpportunity } from "./pricing-opportunity.ts";
+export { annualReport } from "./annual-report.ts";
+export type { Generator, Insight, GeneratorContext, InsightKind, CFOActionType, SimulationKind } from "./types.ts";

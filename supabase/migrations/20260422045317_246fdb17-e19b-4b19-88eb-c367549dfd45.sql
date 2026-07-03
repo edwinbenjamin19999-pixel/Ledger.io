@@ -1,0 +1,1 @@
+ALTER TABLE public.bank_accounts ALTER COLUMN iban DROP NOT NULL;

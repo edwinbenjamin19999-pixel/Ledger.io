@@ -1,0 +1,1 @@
+drop function if exists public.dashboard_kpis(uuid, date, date, date, date);

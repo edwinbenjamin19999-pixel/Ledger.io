@@ -1,0 +1,12 @@
+{
+  "name": "northledger-mtls-proxy",
+  "version": "1.0.0",
+  "description": "mTLS proxy for Skatteverket API calls",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

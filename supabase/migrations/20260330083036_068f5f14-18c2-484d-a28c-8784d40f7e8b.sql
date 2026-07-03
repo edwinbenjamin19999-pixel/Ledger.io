@@ -1,0 +1,1 @@
+DELETE FROM public.bank_notifications WHERE message ILIKE '%Infinity%' OR message ILIKE '%NaN%'

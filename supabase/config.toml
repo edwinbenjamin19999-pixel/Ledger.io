@@ -1,0 +1,209 @@
+project_id = "gvlzltcwdsglmkiijlie"
+
+[functions]
+  [functions.ap-create-supplier]
+    verify_jwt = true
+  [functions.ap-preaccount]
+    verify_jwt = true
+  [functions.admin-alert]
+    verify_jwt = false
+  [functions.ai-assistant]
+    verify_jwt = true
+  [functions.ai-suggest-journal-entry]
+    verify_jwt = true
+  [functions.ai-assistant-stream]
+    verify_jwt = false
+  [functions.ai-bookkeeper]
+    verify_jwt = true
+  [functions.ai-map-sie-accounts]
+    verify_jwt = true
+  [functions.ai-bookkeeper-stream]
+    verify_jwt = false
+  [functions.ai-process-document]
+    verify_jwt = true
+  [functions.ai-year-end-audit]
+    verify_jwt = true
+  [functions.analyze-import-file]
+    verify_jwt = true
+  [functions.approve-automation-task]
+    verify_jwt = true
+  [functions.ar-bv-reminders]
+    verify_jwt = false
+  [functions.auth-email-hook]
+    verify_jwt = false
+  [functions.auto-health-check]
+    verify_jwt = false
+  [functions.auto-actions-scheduler]
+    verify_jwt = false
+  [functions.cashflow-negotiation-draft]
+    verify_jwt = true
+  [functions.auto-sync-bank-transactions]
+    verify_jwt = false
+  [functions.bolagsverket-company]
+    verify_jwt = false
+  [functions.book-invoice]
+    verify_jwt = true
+  [functions.calculate-financials]
+    verify_jwt = false
+  [functions.business-insights]
+    verify_jwt = true
+  [functions.calculate-vat]
+    verify_jwt = true
+  [functions.categorize-transaction]
+    verify_jwt = true
+  [functions.check-subscription]
+    verify_jwt = true
+  [functions.cleanup-duplicates]
+    verify_jwt = true
+  [functions.company-lookup]
+    verify_jwt = false
+  [functions.consolidate-group]
+    verify_jwt = true
+  [functions.create-bank-requisition]
+    verify_jwt = true
+  [functions.create-checkout]
+    verify_jwt = false
+  [functions.create-portal-session]
+    verify_jwt = false
+  [functions.customer-portal]
+    verify_jwt = true
+  [functions.fetch-bank-transactions]
+    verify_jwt = true
+  [functions.fetch-company-details]
+    verify_jwt = false
+  [functions.fetch-bolagsverket-annual-reports]
+    verify_jwt = true
+  [functions.fetch-company-details-ai]
+    verify_jwt = false
+  [functions.generate-ai-notes]
+    verify_jwt = true
+  [functions.generate-annual-report]
+    verify_jwt = true
+  [functions.generate-annual-report-ai]
+    verify_jwt = true
+  [functions.detect-adjustment-suggestions]
+    verify_jwt = true
+  [functions.generate-article]
+    verify_jwt = true
+  [functions.generate-proforma]
+    verify_jwt = true
+  [functions.get-stripe-price]
+    verify_jwt = false
+  [functions.handle-bank-callback]
+    verify_jwt = false
+  [functions.handle-email-suppression]
+    verify_jwt = false
+  [functions.handle-email-unsubscribe]
+    verify_jwt = false
+  [functions.health-check]
+    verify_jwt = false
+  [functions.import-sie4]
+    verify_jwt = true
+  [functions.lookup-person-companies]
+    verify_jwt = false
+  [functions.match-bank-transaction]
+    verify_jwt = true
+  [functions.materialize-financial-values]
+    verify_jwt = true
+  [functions.partner-api-health]
+    verify_jwt = false
+  [functions.partner-api-transactions]
+    verify_jwt = false
+  [functions.partner-api-insights]
+    verify_jwt = false
+  [functions.payments-webhook]
+    verify_jwt = false
+  [functions.prepare-agi-submission]
+    verify_jwt = true
+  [functions.preview-transactional-email]
+    verify_jwt = false
+  [functions.proactive-insights]
+    verify_jwt = false
+  [functions.process-email-inbox]
+    verify_jwt = false
+  [functions.process-email-queue]
+    verify_jwt = true
+  [functions.process-invoice-reminders]
+    verify_jwt = false
+  [functions.rillion-webhook]
+    verify_jwt = false
+  [functions.riksbanken-rates]
+    verify_jwt = false
+  [functions.sanctions-check]
+    verify_jwt = true
+  [functions.scb-statistics]
+    verify_jwt = false
+  [functions.send-contact-form]
+    verify_jwt = false
+  [functions.send-invoice]
+    verify_jwt = true
+  [functions.send-launch-emails]
+    verify_jwt = true
+  [functions.send-transactional-email]
+    verify_jwt = true
+  [functions.signicat-auth]
+    verify_jwt = true
+  [functions.signicat-callback]
+    verify_jwt = false
+  [functions.skatteverket-agi-period]
+    verify_jwt = true
+  [functions.skatteverket-agi-submit]
+    verify_jwt = true
+  [functions.skatteverket-car-benefit]
+    verify_jwt = false
+  [functions.skatteverket-connect]
+    verify_jwt = true
+  [functions.skatteverket-events]
+    verify_jwt = true
+  [functions.skatteverket-income-declaration]
+    verify_jwt = true
+  [functions.skatteverket-oauth]
+    verify_jwt = true
+  [functions.skatteverket-oauth-callback]
+    verify_jwt = true
+  [functions.skatteverket-rpa-session]
+    verify_jwt = true
+  [functions.skatteverket-skattekonto]
+    verify_jwt = true
+  [functions.skatteverket-tax-deduction]
+    verify_jwt = true
+  [functions.skv-vat-submit]
+    verify_jwt = true
+  [functions.reports-row-explanation]
+    verify_jwt = false
+  [functions.stripe-webhook]
+    verify_jwt = false
+  [functions.submit-annual-report]
+    verify_jwt = true
+  [functions.submit-vat-declaration]
+    verify_jwt = true
+  [functions.sync-bolagsverket-engagements]
+    verify_jwt = false
+  [functions.tax-tables]
+    verify_jwt = false
+  [functions.test-skatteverket-credentials]
+    verify_jwt = false
+  [functions.track-error]
+    verify_jwt = true
+  [functions.trial-reminder-7d]
+    verify_jwt = false
+  [functions.validate-journal-entry]
+    verify_jwt = true
+  [functions.vies-vat-validation]
+    verify_jwt = false
+  [functions.verify-data-isolation]
+    verify_jwt = false
+  [functions.log-error]
+    verify_jwt = false
+  [functions.fix-error]
+    verify_jwt = true
+  [functions.send-mobile-sign-link]
+    verify_jwt = true
+  [functions.skv-submit-from-mobile-link]
+    verify_jwt = false
+
+  [functions.auditor-portal]
+    verify_jwt = false
+  [functions.create-test-account]
+    verify_jwt = true
+

@@ -1,0 +1,2 @@
+ALTER TABLE public.migration_jobs DROP CONSTRAINT IF EXISTS migration_jobs_source_format_check;
+ALTER TABLE public.migration_jobs ADD CONSTRAINT migration_jobs_source_format_check CHECK (source_format = ANY (ARRAY['sie4'::text, 'csv'::text, 'excel'::text, 'api'::text, 'pdf'::text]));

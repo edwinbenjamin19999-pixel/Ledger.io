@@ -1,0 +1,16 @@
+{
+  "name": "NorthLedger",
+  "short_name": "NorthLedger",
+  "description": "AI-driven redovisningsplattform för svenska företag",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+UPDATE companies SET kyc_status = 'approved', industry = 'consulting', tax_mandate_accepted = true WHERE created_by = '570579fd-a28e-4647-9fec-bba4667b7982';

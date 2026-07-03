@@ -1,0 +1,2 @@
+ALTER TABLE public.budget_plans DROP CONSTRAINT IF EXISTS budget_plans_status_check;
+ALTER TABLE public.budget_plans ADD CONSTRAINT budget_plans_status_check CHECK (status IN ('draft','ai_generated','review','approved','locked'));
