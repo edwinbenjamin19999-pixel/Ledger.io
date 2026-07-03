@@ -95,7 +95,7 @@ export function RegulatoryDeadlineCalendar({ deadlines, onMarkComplete }: Props)
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "northledger-deadlines.ics";
+    a.download = "ledger-io-deadlines.ics";
     a.click();
     URL.revokeObjectURL(url);
   }

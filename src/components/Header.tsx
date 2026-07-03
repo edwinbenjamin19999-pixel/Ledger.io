@@ -38,8 +38,8 @@ export const Header = ({ lightBg = false }: HeaderProps = {}) => {
       <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-0">
-          <span className="text-xl font-[800] text-white">North</span>
-          <span className="text-xl font-[800] text-[#3b82f6] transition-colors">Ledger</span>
+          <span className="text-xl font-[800] text-white">Ledger</span>
+          <span className="text-xl font-[800] text-[#3b82f6] transition-colors">.io</span>
         </Link>
 
         {/* Desktop nav */}

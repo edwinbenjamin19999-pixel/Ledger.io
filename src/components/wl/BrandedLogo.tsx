@@ -43,8 +43,8 @@ export function BrandedLogo({ onClick }: Props) {
 
   return (
     <button onClick={handle} className="text-xl font-bold tracking-tight">
-      <span className="text-white font-bold">North</span>
-      <span className="text-[#3b82f6] font-bold">Ledger</span>
+      <span className="text-white font-bold">Ledger</span>
+      <span className="text-[#3b82f6] font-bold">.io</span>
     </button>
   );
 }

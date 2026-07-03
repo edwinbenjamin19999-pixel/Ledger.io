@@ -40,8 +40,8 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
 
         <div className="relative z-10">
           <div className="flex items-center gap-0">
-            <span className="text-2xl font-[800] text-[#3b82f6]">North</span>
-            <span className="text-2xl font-[800] text-white">Ledger</span>
+            <span className="text-2xl font-[800] text-[#3b82f6]">Ledger</span>
+            <span className="text-2xl font-[800] text-white">.io</span>
           </div>
         </div>
 
@@ -84,8 +84,8 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
         <div className="w-full max-w-sm mx-auto">
           {/* Mobile-only logo */}
           <div className="flex lg:hidden items-center gap-0 mb-8">
-            <span className="text-xl font-[800] text-[#3b82f6]">North</span>
-            <span className="text-xl font-[800] text-[#0f1f35]">Ledger</span>
+            <span className="text-xl font-[800] text-[#3b82f6]">Ledger</span>
+            <span className="text-xl font-[800] text-[#0f1f35]">.io</span>
           </div>
           {children}
         </div>

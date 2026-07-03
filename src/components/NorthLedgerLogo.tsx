@@ -26,7 +26,7 @@ export const NorthLedgerLogo = () => { const [loading, setLoading] = useState(fa
     
     const link = document.createElement('a');
     link.href = logoUrl;
-    link.download = 'northledger-logo.png';
+    link.download = 'ledger-io-logo.png';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

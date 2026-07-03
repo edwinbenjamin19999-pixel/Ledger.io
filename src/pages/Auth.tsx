@@ -338,8 +338,8 @@ const Auth = () => {
     <AuthShell>
       {/* Desktop logo (mobile already shown in shell) */}
       <div className="hidden lg:flex items-center gap-0 mb-10">
-        <span className="text-xl font-[800] text-[#3b82f6]">North</span>
-        <span className="text-xl font-[800] text-[#0f1f35]">Ledger</span>
+        <span className="text-xl font-[800] text-[#3b82f6]">Ledger</span>
+        <span className="text-xl font-[800] text-[#0f1f35]">.io</span>
       </div>
 
       {/* SIGN IN */}

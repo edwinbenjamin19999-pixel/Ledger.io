@@ -73,8 +73,8 @@ export const Footer = () => {
           {/* Brand / Contact */}
           <div className="space-y-5 sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-0">
-              <span className="text-2xl font-[800] text-white tracking-tight">North</span>
-              <span className="text-2xl font-[800] text-[#3b82f6] tracking-tight">Ledger</span>
+              <span className="text-2xl font-[800] text-white tracking-tight">Ledger</span>
+              <span className="text-2xl font-[800] text-[#3b82f6] tracking-tight">.io</span>
             </Link>
             <p className="text-sm text-white/60 max-w-[260px] leading-relaxed">
               AI-driven bokföringsplattform för SME:s och växande företag i Sverige
