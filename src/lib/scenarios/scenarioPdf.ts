@@ -230,7 +230,7 @@ export async function exportScenarioPdf(input: ScenarioPdfInput): Promise<void> 
     doc.setFontSize(8);
     doc.setTextColor(100, 116, 139);
     doc.text(
-      `Genererad av NorthLedger · ${new Date().toLocaleDateString("sv-SE")}`,
+      `Genererad av Ledger.io · ${new Date().toLocaleDateString("sv-SE")}`,
       pageW / 2,
       pageH - 20,
       { align: "center" },

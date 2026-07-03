@@ -58,11 +58,11 @@ export const Differentiator = () => {
             </div>
           </div>
 
-          {/* NorthLedger */}
+          {/* Ledger.io */}
           <div className="rounded-2xl border border-[rgba(34,211,238,0.2)] bg-[rgba(8,145,178,0.06)] p-7 shadow-[0_0_40px_rgba(6,182,212,0.08)]">
             <div className="flex items-center gap-2 mb-6">
               <h3 className="text-sm font-semibold text-[#3b82f6] uppercase tracking-wider">
-                NorthLedger
+                Ledger.io
               </h3>
               <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[rgba(34,211,238,0.1)] text-[#3b82f6] border border-[rgba(34,211,238,0.2)]">
                 Autonom
@@ -87,7 +87,7 @@ export const Differentiator = () => {
             className="h-12 px-8 rounded-xl text-[15px] font-semibold bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] text-white hover:brightness-110 shadow-[0_4px_24px_rgba(6,182,212,0.4)] hover:scale-[1.02] transition-all duration-200"
             onClick={() => (window.location.href = "/auth")}
           >
-            Byt till NorthLedger
+            Byt till Ledger.io
             <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>

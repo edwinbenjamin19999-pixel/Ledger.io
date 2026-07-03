@@ -95,7 +95,7 @@ export const HowItWorks = () => {
         </div>
 
         <p className="text-white/25 text-xs text-center mt-12">
-          Genomsnittlig tid för att bokföra en transaktion med NorthLedger: under 3 sekunder.
+          Genomsnittlig tid för att bokföra en transaktion med Ledger.io: under 3 sekunder.
         </p>
       </div>
     </section>

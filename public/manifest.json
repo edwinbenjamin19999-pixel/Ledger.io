@@ -1,6 +1,6 @@
 {
-  "name": "NorthLedger",
-  "short_name": "NorthLedger",
+  "name": "Ledger.io",
+  "short_name": "Ledger.io",
   "description": "AI-driven redovisningsplattform för svenska företag",
   "start_url": "/",
   "display": "standalone",

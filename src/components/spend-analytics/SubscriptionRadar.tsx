@@ -106,7 +106,7 @@ export function SubscriptionRadar({ vendors, months }: Props) { const [reportOpe
   };
 
   const handleSendReport = () => { const body = subscriptions.map(s => `${s.vendor}: ${s.monthlyAvg} kr/mån`).join("%0A");
-    const subject = encodeURIComponent("Prenumerationsrapport — NorthLedger");
+    const subject = encodeURIComponent("Prenumerationsrapport — Ledger.io");
     window.open(`mailto:?subject=${subject}&body=${encodeURIComponent(`Aktiva prenumerationer:\n\n${subscriptions.map(s => `${s.vendor}: ${s.monthlyAvg} kr/mån`).join("\n")}\n\nTotalt: ${totalMonthly} kr/mån (${totalYearly} kr/år)\nPotentiell besparing: ${potentialSaving} kr/mån`)}`);
   };
 

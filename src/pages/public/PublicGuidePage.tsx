@@ -45,7 +45,7 @@ export default function PublicGuidePage() {
             {/* Header */}
             <div className="text-center mb-10">
               <h1 className="text-3xl sm:text-4xl font-bold text-[#0f1f35] mb-3">
-                Så fungerar NorthLedger
+                Så fungerar Ledger.io
               </h1>
               <p className="text-[#475569] text-lg max-w-2xl mx-auto">
                 En komplett guide till alla moduler och funktioner — steg för steg.

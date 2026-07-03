@@ -27,7 +27,7 @@ const Inner = () => {
           <p className="text-[#64748B]">Den här arbetsytan finns inte eller är inte aktiv.</p>
           {!isCustomDomain && (
             <a href="https://northledger.se" className="inline-block text-sm font-semibold text-[#3b82f6] hover:underline">
-              Gå till NorthLedger →
+              Gå till Ledger.io →
             </a>
           )}
         </div>

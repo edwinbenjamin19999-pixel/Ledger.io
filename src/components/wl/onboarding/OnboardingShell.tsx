@@ -38,7 +38,7 @@ export function OnboardingShell({
             <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-[#3b82f6] to-[#3b82f6] flex items-center justify-center text-white font-bold text-xs">
               C
             </div>
-            <span className="text-sm font-semibold text-slate-900">NorthLedger</span>
+            <span className="text-sm font-semibold text-slate-900">Ledger.io</span>
             <span className="hidden sm:inline text-xs text-slate-400 ml-1">White Label</span>
           </Link>
           <StepProgress current={step} steps={steps} />

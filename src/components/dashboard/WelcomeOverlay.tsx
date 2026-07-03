@@ -27,7 +27,7 @@ export const WelcomeOverlay = ({ onComplete, durationMs = 2600, companyName }: W
 
   const greeting = companyName
     ? `Välkommen, ${companyName}`
-    : "Välkommen till NorthLedger";
+    : "Välkommen till Ledger.io";
 
   return (
     <div

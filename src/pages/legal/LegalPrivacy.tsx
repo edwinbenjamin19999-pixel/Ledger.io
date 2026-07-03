@@ -7,7 +7,7 @@ const EFFECTIVE_DATE = "2025-01-15";
 
 const LegalPrivacy = () => {
   useEffect(() => {
-    document.title = `Integritetspolicy ${VERSION} – NorthLedger`;
+    document.title = `Integritetspolicy ${VERSION} – Ledger.io`;
   }, []);
 
   return (
@@ -25,7 +25,7 @@ const LegalPrivacy = () => {
               Integritetspolicy
             </h1>
             <p className="text-base text-slate-600">
-              Denna policy beskriver hur NorthLedger AB behandlar personuppgifter i egenskap av
+              Denna policy beskriver hur Ledger.io AB behandlar personuppgifter i egenskap av
               personuppgiftsansvarig — främst för kontaktpersoner hos våra B2B-kunder, besökare
               på vår webbplats och prospects.
             </p>
@@ -34,7 +34,7 @@ const LegalPrivacy = () => {
           <article className="prose prose-slate max-w-none prose-headings:text-[#0f1f35] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0f1f35]">
             <h2>1. Personuppgiftsansvarig</h2>
             <p>
-              NorthLedger AB, org.nr [556xxx-xxxx], med säte i Stockholm. Kontakt:{" "}
+              Ledger.io AB, org.nr [556xxx-xxxx], med säte i Stockholm. Kontakt:{" "}
               <a href="mailto:dpo@northledger.se" className="text-[#3b82f6] no-underline hover:underline">
                 dpo@northledger.se
               </a>
@@ -49,7 +49,7 @@ const LegalPrivacy = () => {
               <li><strong>Tekniska uppgifter:</strong> IP-adress, enhetsinformation, loggar, cookies (se separat cookiepolicy).</li>
               <li><strong>Bokföringsdata:</strong> behandlas separat under{" "}
                 <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">DPA</a>
-                {" "}— NorthLedger är då personuppgiftsbiträde, inte ansvarig.
+                {" "}— Ledger.io är då personuppgiftsbiträde, inte ansvarig.
               </li>
             </ul>
 

@@ -14,7 +14,7 @@ export default function BlogArticlePage() {
   const article = getArticle(slug);
 
   useEffect(() => {
-    if (article) document.title = `${article.title} — NorthLedger Blogg`;
+    if (article) document.title = `${article.title} — Ledger.io Blogg`;
   }, [article]);
 
   if (!article) {
@@ -89,7 +89,7 @@ export default function BlogArticlePage() {
               <p className="mt-2 text-white/60 max-w-lg">Onboarding på 30 minuter. Ingen bindning. Bygg en framtidssäker ekonomi.</p>
               <div className="mt-5 flex flex-col sm:flex-row gap-3">
                 <Button asChild className="bg-white text-[#050d1a] hover:bg-white/90 font-semibold">
-                  <Link to="/auth">Testa NorthLedger <ArrowRight className="w-4 h-4 ml-1" /></Link>
+                  <Link to="/auth">Testa Ledger.io <ArrowRight className="w-4 h-4 ml-1" /></Link>
                 </Button>
                 <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">
                   <Link to="/contact">Boka demo</Link>

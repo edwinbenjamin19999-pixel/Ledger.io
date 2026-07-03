@@ -8,8 +8,8 @@ interface MidContentCTAProps {
 }
 
 export const MidContentCTA = ({
-  text = "NorthLedger bokför kvitton och fakturor automatiskt med 95 % AI-träffsäkerhet — du granskar och godkänner.",
-  ctaLabel = "Testa NorthLedger gratis",
+  text = "Ledger.io bokför kvitton och fakturor automatiskt med 95 % AI-träffsäkerhet — du granskar och godkänner.",
+  ctaLabel = "Testa Ledger.io gratis",
   href = "/auth",
 }: MidContentCTAProps) => (
   <div className="not-prose relative -mx-2 md:-mx-6 my-14 rounded-[24px] border border-slate-900/[0.06] bg-white p-7 md:p-8 shadow-[0_24px_60px_-24px_rgba(8,145,178,0.25)] hover:shadow-[0_28px_70px_-24px_rgba(8,145,178,0.35)] transition-shadow duration-300">

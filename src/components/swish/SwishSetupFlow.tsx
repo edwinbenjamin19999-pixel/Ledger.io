@@ -30,7 +30,7 @@ export function SwishSetupFlow({ onSetup }: SwishSetupFlowProps) { const [step, 
       <div className="max-w-2xl mx-auto space-y-6">
         <div className="text-center space-y-2">
           <h2 className="text-2xl font-bold text-foreground">Har du Swish Handel / Swish Företag?</h2>
-          <p className="text-muted-foreground">Välj hur du vill koppla Swish till NorthLedger</p>
+          <p className="text-muted-foreground">Välj hur du vill koppla Swish till Ledger.io</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -80,7 +80,7 @@ export function SwishSetupFlow({ onSetup }: SwishSetupFlowProps) { const [step, 
           <CardContent className="space-y-4">
             <p className="text-sm text-muted-foreground">
               I manuellt läge registrerar du inkommande Swish-betalningar och kopplar dem till fakturor.
-              NorthLedger skapar automatiskt verifikationer vid matchning.
+              Ledger.io skapar automatiskt verifikationer vid matchning.
             </p>
             <div className="flex gap-2">
               <Button variant="outline" onClick={() => setStep("choose")}>Tillbaka</Button>

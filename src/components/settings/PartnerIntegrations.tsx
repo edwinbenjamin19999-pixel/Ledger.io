@@ -27,7 +27,7 @@ const INTEGRATIONS: IntegrationConfig[] = [
     description: "Automatisk inkassohantering för förfallna fakturor. Kopplas till påminnelseflödet och eskalerar automatiskt.",
     icon: ShieldAlert,
     fields: [
-      { key: "client_id", label: "Klient-ID", type: "text", placeholder: "NORTHLEDGER" },
+      { key: "client_id", label: "Klient-ID", type: "text", placeholder: "LEDGER.IO" },
       { key: "api_key", label: "API-nyckel", type: "password", placeholder: "ink_..." },
     ],
     docsUrl: "https://www.inkassogram.se",

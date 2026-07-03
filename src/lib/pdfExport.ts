@@ -35,7 +35,7 @@ export function exportFormToPDF(options: PDFExportOptions): void {
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(18);
   doc.setFont('helvetica', 'bold');
-  doc.text('North Ledger AI', margin, 16);
+  doc.text('Ledger.io AI', margin, 16);
 
   // Formulärnamn
   doc.setFontSize(11);
@@ -130,7 +130,7 @@ export function exportFormToPDF(options: PDFExportOptions): void {
   }
 
   // Footer
-  const footerText = options.footer ?? `Genererad av North Ledger AI — ${new Date().toLocaleDateString('sv-SE')}`;
+  const footerText = options.footer ?? `Genererad av Ledger.io AI — ${new Date().toLocaleDateString('sv-SE')}`;
   doc.setFontSize(8);
   doc.setTextColor(148, 163, 184);
   doc.text(footerText, pageWidth / 2, doc.internal.pageSize.getHeight() - 12, { align: 'center' });

@@ -105,7 +105,7 @@ export const CountdownCTA = () => {
         </p>
 
         <p className="text-white/50 text-lg text-center mb-8">
-          De flesta ekonomisystem är byggda på 20 år gammal grund — med AI tillagt i efterhand. NorthLedger är byggt från grunden med AI som motor. Early access är begränsat.
+          De flesta ekonomisystem är byggda på 20 år gammal grund — med AI tillagt i efterhand. Ledger.io är byggt från grunden med AI som motor. Early access är begränsat.
         </p>
 
         {/* Live signup counter */}

@@ -74,7 +74,7 @@ export default function AccountingGuidesIndexPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <ArticleSEO
-        title="Bokföringsguider — komplett guide-bibliotek på svenska | NorthLedger"
+        title="Bokföringsguider — komplett guide-bibliotek på svenska | Ledger.io"
         description="13 praktiska guider om bokföring, moms, BAS-kontoplan och svenska redovisningsregler. Lär dig bokföra kvitton, fakturor, moms och analysera nyckeltal — steg för steg."
         canonicalPath="/resources/accounting-guides"
         jsonLd={[indexJsonLd]}
@@ -137,7 +137,7 @@ export default function AccountingGuidesIndexPage() {
                   </div>
                   <div className="mt-4 inline-flex items-center gap-1.5 text-xs italic text-[#3b82f6]">
                     <Sparkles className="w-3 h-3" />
-                    Alla dessa moment hanteras automatiskt av NorthLedger
+                    Alla dessa moment hanteras automatiskt av Ledger.io
                   </div>
                 </div>
               );
@@ -159,7 +159,7 @@ export default function AccountingGuidesIndexPage() {
                 Slipp manuell bokföring
               </h2>
               <p className="mt-4 text-lg text-[#475569] leading-relaxed max-w-xl mx-auto">
-                NorthLedger bokför kvitton, fakturor och moms automatiskt med AI.
+                Ledger.io bokför kvitton, fakturor och moms automatiskt med AI.
               </p>
               <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
                 <Button asChild size="lg" className="bg-[#3b82f6] text-white hover:bg-[#3b82f6] gap-1.5">

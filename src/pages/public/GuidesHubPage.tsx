@@ -71,10 +71,10 @@ export default function GuidesHubPage() {
         <section className="py-16">
           <div className="container mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-3xl font-bold text-[#0f1f35]">Slipp läsa — låt AI göra jobbet</h2>
-            <p className="mt-3 text-[#64748b]">NorthLedger tillämpar reglerna automatiskt så att du kan fokusera på företaget.</p>
+            <p className="mt-3 text-[#64748b]">Ledger.io tillämpar reglerna automatiskt så att du kan fokusera på företaget.</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild className="bg-white text-[#050d1a] hover:bg-white/90 font-semibold">
-                <Link to="/auth">Testa NorthLedger <ArrowRight className="w-4 h-4 ml-1" /></Link>
+                <Link to="/auth">Testa Ledger.io <ArrowRight className="w-4 h-4 ml-1" /></Link>
               </Button>
               <Button asChild variant="outline">
                 <Link to="/contact">Boka demo</Link>

@@ -373,7 +373,7 @@ export function buildStatementDocument(
     columns: ctx.layout.columns,
     rows,
     warnings,
-    footer: { confidentiality: "Konfidentiellt · Genererad av NorthLedger" },
+    footer: { confidentiality: "Konfidentiellt · Genererad av Ledger.io" },
   };
 }
 

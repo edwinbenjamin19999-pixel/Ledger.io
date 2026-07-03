@@ -1,6 +1,6 @@
 # Authoring Guide — Master Article Template
 
-Every article (blog or accounting guide) on NorthLedger must follow the **Master Article Template**. This guarantees consistent UX, SEO, and conversion structure.
+Every article (blog or accounting guide) on Ledger.io must follow the **Master Article Template**. This guarantees consistent UX, SEO, and conversion structure.
 
 ## Create a new article in 4 steps
 
@@ -34,11 +34,11 @@ Every article (blog or accounting guide) on NorthLedger must follow the **Master
 | 3 | Problem | `problem` |
 | 4 | Step-by-step | `steps[]` |
 | 5 | Mid CTA | (auto — "Vill du slippa detta manuellt?") |
-| 6 | NorthLedger Solution | `northledgerSolution` |
+| 6 | Ledger.io Solution | `northledgerSolution` |
 | 7 | Example | `example` (journal entry) |
 | 8 | Common mistakes | `mistakes[]` |
 | 9 | Summary | `summary[]` |
-| 10 | Final CTA | (auto — Testa NorthLedger / Boka demo / White Label) |
+| 10 | Final CTA | (auto — Testa Ledger.io / Boka demo / White Label) |
 | 11 | Related | `internalLinks.related[]` |
 
 Plus: dynamic `<title>`, meta description, canonical, OG tags, JSON-LD `Article` + `FAQPage`.

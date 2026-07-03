@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "Bokföringen sker i realtid och jag behöver knappt ingripa. Jag använder NorthLedger som ett ekonomiverktyg, inte ett bokföringsprogram.",
+      "Bokföringen sker i realtid och jag behöver knappt ingripa. Jag använder Ledger.io som ett ekonomiverktyg, inte ett bokföringsprogram.",
     name: "Sara J.",
     title: "Grundare, tech-startup",
     initials: "SJ",
@@ -49,7 +49,7 @@ export const Testimonials = () => {
           Vad våra användare säger
         </h2>
         <p className="section-lede text-[15px] leading-relaxed max-w-2xl">
-          Riktiga röster från svenska företag, byråer och CFO:er som använder NorthLedger dagligen.
+          Riktiga röster från svenska företag, byråer och CFO:er som använder Ledger.io dagligen.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

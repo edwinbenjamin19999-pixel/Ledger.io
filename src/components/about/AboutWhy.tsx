@@ -10,7 +10,7 @@ export const AboutWhy = () => (
     <div className="container mx-auto max-w-6xl px-6">
       <div className="text-center max-w-2xl mx-auto mb-14">
         <h2 className="text-4xl md:text-5xl font-bold text-white leading-[1.05]" style={{ letterSpacing: "-0.8px" }}>
-          Varför välja <span className="text-[#3b82f6]">NorthLedger?</span>
+          Varför välja <span className="text-[#3b82f6]">Ledger.io?</span>
         </h2>
       </div>
 

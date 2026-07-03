@@ -455,11 +455,11 @@ export const guideCategories: GuideCategory[] = [
 ];
 
 export const faqItems = [
-  { q: "Stämmer bokföringen verkligen?", a: "NorthLedger följer svenska redovisningsstandarder (BAS, K2/K3) och validerar varje post med regelbaserad logik kombinerad med AI. Inget slutförs utan ditt godkännande — du har alltid full kontroll." },
-  { q: "Kan jag verkligen lita på AI med min ekonomi?", a: "Ja — NorthLedger ersätter inte kontrollen, det tar bort manuellt arbete. AI:n hanterar repetitiva uppgifter medan du granskar och godkänner allt viktigt." },
+  { q: "Stämmer bokföringen verkligen?", a: "Ledger.io följer svenska redovisningsstandarder (BAS, K2/K3) och validerar varje post med regelbaserad logik kombinerad med AI. Inget slutförs utan ditt godkännande — du har alltid full kontroll." },
+  { q: "Kan jag verkligen lita på AI med min ekonomi?", a: "Ja — Ledger.io ersätter inte kontrollen, det tar bort manuellt arbete. AI:n hanterar repetitiva uppgifter medan du granskar och godkänner allt viktigt." },
   { q: "Vad händer om något blir fel?", a: "Alla poster är fullt spårbara och redigerbara. Du kan korrigera, justera eller reversera vilken transaktion som helst, när som helst." },
-  { q: "Fungerar det med Skatteverket och svenska regler?", a: "NorthLedger är byggt för att följa svensk bokföringslag och rapporteringsstandarder, inklusive momsberäkningar och finansiella rapporter." },
-  { q: "Behöver jag kunna bokföring?", a: "Nej. Systemet är byggt så att du inte behöver förstå debet och kredit — NorthLedger sköter det åt dig." },
-  { q: "Kan jag byta från Fortnox eller Visma?", a: "Ja. NorthLedger har en inbyggd migrationsmotor som importerar data från befintliga system." },
+  { q: "Fungerar det med Skatteverket och svenska regler?", a: "Ledger.io är byggt för att följa svensk bokföringslag och rapporteringsstandarder, inklusive momsberäkningar och finansiella rapporter." },
+  { q: "Behöver jag kunna bokföring?", a: "Nej. Systemet är byggt så att du inte behöver förstå debet och kredit — Ledger.io sköter det åt dig." },
+  { q: "Kan jag byta från Fortnox eller Visma?", a: "Ja. Ledger.io har en inbyggd migrationsmotor som importerar data från befintliga system." },
   { q: "Hur mycket tid kan jag spara?", a: "De flesta användare minskar sitt manuella bokföringsarbete med 70–90 %." },
 ];

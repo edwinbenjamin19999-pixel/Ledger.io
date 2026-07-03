@@ -27,9 +27,9 @@ interface NavItem {
 
 /**
  * WL sidebar shows ONLY bureau-level navigation. Per-client work happens in
- * standard NorthLedger surfaces (/dashboard, /invoices, /vat, …) — once the
+ * standard Ledger.io surfaces (/dashboard, /invoices, /vat, …) — once the
  * advisor opens a client from the bureau overview, the global active-client
- * context routes them through the standard NorthLedger shell instead.
+ * context routes them through the standard Ledger.io shell instead.
  */
 const groups: { label: string; items: NavItem[] }[] = [
   {
@@ -171,7 +171,7 @@ export const AdvisorSidebar = () => {
           {/* Footer */}
           {!collapsed && branding.showPoweredBy && (
             <div className="px-4 py-4 text-[10px] uppercase tracking-[0.18em] text-white/40 font-bold">
-              Powered by NorthLedger
+              Powered by Ledger.io
             </div>
           )}
         </div>

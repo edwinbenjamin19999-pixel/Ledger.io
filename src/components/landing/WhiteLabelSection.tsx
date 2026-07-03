@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 const points = [
   { title: "Din branding", desc: "Logotyp, färger, domän — helt ditt." },
-  { title: "Ditt klientgränssnitt", desc: "Dina kunder ser aldrig NorthLedger." },
-  { title: "Samma motor", desc: "Full kraft av NorthLedger under huven." },
+  { title: "Ditt klientgränssnitt", desc: "Dina kunder ser aldrig Ledger.io." },
+  { title: "Samma motor", desc: "Full kraft av Ledger.io under huven." },
 ];
 
 export const WhiteLabelSection = () => {
@@ -21,7 +21,7 @@ export const WhiteLabelSection = () => {
               Lansera din egen bokföringsplattform.
             </h2>
             <p className="section-lede text-base leading-relaxed">
-              Erbjud NorthLedger under ditt varumärke. För redovisningsbyråer, banker och rådgivare.
+              Erbjud Ledger.io under ditt varumärke. För redovisningsbyråer, banker och rådgivare.
             </p>
 
             {/* Feature list */}

@@ -43,7 +43,7 @@ export const WhiteLabelLayer = () => {
             Lansera din egen bokföringsplattform.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/65">
-            NorthLedger kan köras under ditt varumärke — med full kontroll över klienter,
+            Ledger.io kan köras under ditt varumärke — med full kontroll över klienter,
             arbetsflöden och data. Byggd för redovisningsbyråer, banker och rådgivare.
           </p>
         </div>

@@ -1,5 +1,5 @@
 /**
- * NorthLedger Governance & Control Layer
+ * Ledger.io Governance & Control Layer
  * 
  * Defines AI autonomy boundaries, Category A/B action classification,
  * and shared governance rules enforced across the entire platform.

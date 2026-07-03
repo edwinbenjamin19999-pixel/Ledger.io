@@ -74,7 +74,7 @@ export default function AdvisorInsights() {
             <Sparkles className="h-5 w-5 text-purple-600" /> AI-insikter
           </h1>
           <p className="text-[12px] text-slate-500 mt-0.5">
-            Portföljanalys genererad av NorthLedger · Senast uppdaterad{" "}
+            Portföljanalys genererad av Ledger.io · Senast uppdaterad{" "}
             {aiUpdatedAt
               ? format(aiUpdatedAt, "yyyy-MM-dd HH:mm")
               : format(new Date(), "yyyy-MM-dd HH:mm")}

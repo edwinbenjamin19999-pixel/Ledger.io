@@ -13,7 +13,7 @@ const productLinks = [
 ];
 
 const companyLinks = [
-  { label: "Om NorthLedger", to: "/about" },
+  { label: "Om Ledger.io", to: "/about" },
   { label: "Kontakt", to: "/contact" },
   { label: "Karriär", to: "/careers" },
   { label: "Redovisningsbyrå-portal", to: "/accounting-firms" },
@@ -144,7 +144,7 @@ export const Footer = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-white text-[#050d1a] hover:bg-white/90 font-semibold">
-                <Link to="/auth">Testa NorthLedger</Link>
+                <Link to="/auth">Testa Ledger.io</Link>
               </Button>
               <Button asChild variant="glass" size="lg" className="hover:scale-[1.02]">
                 <Link to="/contact">Boka demo</Link>
@@ -159,7 +159,7 @@ export const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} NorthLedger. Alla rättigheter förbehållna.
+            © {new Date().getFullYear()} Ledger.io. Alla rättigheter förbehållna.
           </p>
           <div className="flex gap-4">
             {/* Facebook */}

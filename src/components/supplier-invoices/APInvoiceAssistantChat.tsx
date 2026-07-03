@@ -184,7 +184,7 @@ export function APInvoiceAssistantChat({
       >
         <div className="flex items-center gap-2">
           <Sparkles className="h-4 w-4 text-[#1E3A5F]" />
-          <span className="text-sm font-semibold">NorthLedger Assistent</span>
+          <span className="text-sm font-semibold">Ledger.io Assistent</span>
           <span className="text-[10px] text-slate-400 font-mono hidden sm:inline">
             #{invoiceNumber}
           </span>

@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const nyckeltalSmaforetag: Article = {
   slug: "nyckeltal-smaforetag",
   h1: "Nyckeltal för småföretag — de viktigaste KPI:erna",
-  metaTitle: "Nyckeltal för småföretag — komplett guide | NorthLedger",
+  metaTitle: "Nyckeltal för småföretag — komplett guide | Ledger.io",
   metaDescription:
     "De 10 viktigaste nyckeltalen för svenska småföretag: bruttomarginal, soliditet, ROE, DSO och fler. Med formler och tolkning.",
   keywords: ["nyckeltal", "kpi småföretag", "bruttomarginal", "soliditet", "räntabilitet"],
@@ -59,7 +59,7 @@ export const nyckeltalSmaforetag: Article = {
     },
   ],
   northledgerSolution: {
-    intro: "NorthLedger:s CFO-modul räknar ut alla nyckeltal automatiskt varje natt och varnar när något avviker mer än 15 % från trenden.",
+    intro: "Ledger.io:s CFO-modul räknar ut alla nyckeltal automatiskt varje natt och varnar när något avviker mer än 15 % från trenden.",
     comparison: [
       { manual: "Excel-mall som uppdateras månadsvis", northledger: "Live KPI-dashboard, alltid aktuell" },
       { manual: "Hitta avvikelser manuellt", northledger: "AI-baserade larm vid trendbrott" },
@@ -95,7 +95,7 @@ export const nyckeltalSmaforetag: Article = {
   ],
   internalLinks: {
     related: ["kassaflode", "resultatrapport", "bruttomarginal-lonsamhet"],
-    product: { label: "Se NorthLedger CFO-dashboard", href: "/auth" },
+    product: { label: "Se Ledger.io CFO-dashboard", href: "/auth" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

@@ -208,7 +208,7 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
                 </div>
               </div>
               <p className="font-mono text-sm font-semibold">{whatsappNumber}</p>
-              <p className="text-xs text-muted-foreground mt-1">NorthLedger Bot</p>
+              <p className="text-xs text-muted-foreground mt-1">Ledger.io Bot</p>
             </div>
 
             {/* Channel status */}

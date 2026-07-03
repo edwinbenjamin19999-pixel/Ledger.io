@@ -444,7 +444,7 @@ export const MAIntelligence = () => { const [companyId, setCompanyId] = useState
           ))}
         </div>
 
-        <AccuracyDisclaimer dataSource="NorthLedger huvudbok" />
+        <AccuracyDisclaimer dataSource="Ledger.io huvudbok" />
       </TabsContent>
 
       {/* ====== METHODS ====== */}

@@ -30,7 +30,7 @@ export default function PublicPlaceholderPage({ title, description, icon: Icon }
           </span>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
             <Button asChild className="bg-white text-[#050d1a] hover:bg-white/90 font-semibold gap-1.5">
-              <Link to="/auth">Testa NorthLedger <ArrowRight className="w-3.5 h-3.5" /></Link>
+              <Link to="/auth">Testa Ledger.io <ArrowRight className="w-3.5 h-3.5" /></Link>
             </Button>
             <Button asChild variant="outline">
               <Link to="/contact">Boka demo</Link>

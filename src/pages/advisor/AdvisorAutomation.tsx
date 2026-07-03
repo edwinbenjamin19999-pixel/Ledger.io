@@ -171,7 +171,7 @@ export default function AdvisorAutomation() {
           <div className="flex-1 min-w-0">
             <p className="text-[12px] font-medium text-[#0C447C]">Automatiseringen är inte aktiverad</p>
             <p className="text-[11px] text-[#185FA5] mt-0.5">
-              Aktivera reglerna nedan för att NorthLedger ska arbeta autonomt åt dig — påminnelser, rapporter och varningar sköts automatiskt.
+              Aktivera reglerna nedan för att Ledger.io ska arbeta autonomt åt dig — påminnelser, rapporter och varningar sköts automatiskt.
             </p>
           </div>
           <button

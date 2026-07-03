@@ -1,5 +1,5 @@
 /**
- * NorthLedger Design System v1 — primitives
+ * Ledger.io Design System v1 — primitives
  *
  * Use these for ALL new UI. See mem://style/northledger-design-system-v1
  * Forbidden: gradients, box-shadows on cards, 1px borders, font-weight ≥600,

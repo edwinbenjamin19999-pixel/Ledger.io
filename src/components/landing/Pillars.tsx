@@ -1,7 +1,7 @@
 const pillars = [
   {
     title: "Automatiserad bokföring",
-    desc: "Lägg noll tid på bokföring. NorthLedger konterar mot BAS-kontoplanen automatiskt — du fokuserar på företaget.",
+    desc: "Lägg noll tid på bokföring. Ledger.io konterar mot BAS-kontoplanen automatiskt — du fokuserar på företaget.",
   },
   {
     title: "Direkt till myndigheter",

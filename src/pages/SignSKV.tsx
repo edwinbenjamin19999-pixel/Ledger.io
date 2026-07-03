@@ -149,7 +149,7 @@ export default function SignSKV() {
           <div className="flex items-center gap-2 text-[#3b82f6] mb-2">
             <ShieldCheck className="h-5 w-5" />
             <span className="text-xs font-semibold uppercase tracking-wider">
-              NorthLedger Signering
+              Ledger.io Signering
             </span>
           </div>
           <h1 className="text-lg font-bold text-slate-900">
@@ -183,7 +183,7 @@ export default function SignSKV() {
                 Starta BankID
               </Button>
               <p className="text-[11px] text-slate-400 text-center">
-                Du behöver inget konto i NorthLedger för att signera.
+                Du behöver inget konto i Ledger.io för att signera.
               </p>
             </>
           )}

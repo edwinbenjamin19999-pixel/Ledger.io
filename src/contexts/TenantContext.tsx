@@ -51,7 +51,7 @@ export const TenantProvider = ({ slug: explicitSlug, children }: { slug?: string
 
       if (!mounted) return;
       if (!resolved) {
-        // Standard host or unresolved — apply NorthLedger default theme
+        // Standard host or unresolved — apply Ledger.io default theme
         // (prevents leaked branding from a previous tenant via persisted state)
         applyDefaultTheme();
         setLoading(false);

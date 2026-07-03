@@ -440,7 +440,7 @@ const App = () => { const [startupError, setStartupError] = useState<Error | nul
                 </Route>
 
                 {/* Advisor (White Label) protected app — fully separate shell, with own provider stack.
-                    Per-client work happens in standard NorthLedger surfaces (/dashboard, /vat, …) once
+                    Per-client work happens in standard Ledger.io surfaces (/dashboard, /vat, …) once
                     a client is opened from the bureau overview. The routes below are the bureau-only
                     pages; module routes (moms, skatt, agi, workflow, tasks, approvals, capacity)
                     redirect back to the bureau overview. */}
@@ -469,7 +469,7 @@ const App = () => { const [startupError, setStartupError] = useState<Error | nul
                   <Route path="clients/:clientId/*" element={<WLClientRedirect />} />
                   <Route path="settings" element={<AdvisorSettings />} />
 
-                  {/* Merged into bureau dashboard / standard NorthLedger client view */}
+                  {/* Merged into bureau dashboard / standard Ledger.io client view */}
                   <Route path="moms" element={<Navigate to="/wl/app/dashboard" replace />} />
                   <Route path="vat" element={<Navigate to="/wl/app/dashboard" replace />} />
                   <Route path="tax" element={<Navigate to="/wl/app/dashboard" replace />} />

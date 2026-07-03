@@ -32,11 +32,11 @@ import { TechSupportProvider } from "@/components/tech-support/TechSupportProvid
 /**
  * White-Label authenticated app shell.
  * Distinct from StandardAppShell (AppLayout) in:
- *  - Topbar: tenant identity dominant, no NorthLedger chrome, brand-tinted border
+ *  - Topbar: tenant identity dominant, no Ledger.io chrome, brand-tinted border
  *  - Sidebar: already tenant-aware via AppSidebar (BrandedLogo + brand-active states)
  *  - User menu: tenant support links + tenant-attributed footer
  *  - Theme toggle: hidden (locked to tenant brand)
- *  - "Powered by NorthLedger" attribution lives discreetly in the user menu footer
+ *  - "Powered by Ledger.io" attribution lives discreetly in the user menu footer
  * Shares the entire product core via <Outlet />.
  */
 export const WhiteLabelAppShell = () => {
@@ -96,7 +96,7 @@ export const WhiteLabelAppShell = () => {
           <ClientContextBar />
           <BalanceAlertBanner companyId={activeCompanyId} />
 
-          {/* Tenant-branded topbar — dominant tenant identity, no NorthLedger chrome */}
+          {/* Tenant-branded topbar — dominant tenant identity, no Ledger.io chrome */}
           <header
             className="sticky top-0 z-40 h-14 flex items-center px-4 gap-4 bg-background"
             style={{
@@ -191,7 +191,7 @@ export const WhiteLabelAppShell = () => {
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <div className="px-2 py-1.5 text-[10px] text-muted-foreground/60 text-center tracking-wide">
-                    {tenant.login.footer_attribution || "Powered by NorthLedger"}
+                    {tenant.login.footer_attribution || "Powered by Ledger.io"}
                   </div>
                 </DropdownMenuContent>
               </DropdownMenu>

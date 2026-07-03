@@ -35,7 +35,7 @@ const COMPARE = [
 ];
 
 const FAQS = [
-  { q: "Är AI-bokföring säkert?", a: "Ja. NorthLedger följer svensk redovisningsstandard, BAS-kontoplan och K2/K3. All data är krypterad och GDPR-säkrad." },
+  { q: "Är AI-bokföring säkert?", a: "Ja. Ledger.io följer svensk redovisningsstandard, BAS-kontoplan och K2/K3. All data är krypterad och GDPR-säkrad." },
   { q: "Vad händer om AI:n gör fel?", a: "Vid osäkerhet stannar AI:n och frågar dig. Allt är spårbart och korrigerbart i revisionsloggen." },
   { q: "Behöver jag fortfarande revisor?", a: "Ja, om du har revisionsplikt. AI:n underlättar arbetet men ersätter inte den oberoende granskningen." },
   { q: "Hur snabbt kommer jag igång?", a: "30 minuter. Vi importerar din historik från Fortnox, Visma eller Bokio automatiskt." },
@@ -144,7 +144,7 @@ export default function AIBookkeepingPage() {
               <p className="mt-3 text-white/70">Onboarding på 30 minuter. Ingen bindning.</p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
                 <Button asChild className="bg-white text-[#050d1a] hover:bg-white/90 font-semibold">
-                  <Link to="/auth">Testa NorthLedger <ArrowRight className="w-4 h-4 ml-1" /></Link>
+                  <Link to="/auth">Testa Ledger.io <ArrowRight className="w-4 h-4 ml-1" /></Link>
                 </Button>
                 <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">
                   <Link to="/contact">Boka demo</Link>

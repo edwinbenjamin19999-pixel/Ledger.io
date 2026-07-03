@@ -14,7 +14,7 @@ export const AutomationGrid = () => {
     <section className="section-shell">
       <div className="section-inner">
         <p className="text-[11px] uppercase tracking-[0.1em] text-[#3b82f6] mb-3">DU SLIPPER</p>
-        <p className="section-label">Vad NorthLedger gör</p>
+        <p className="section-label">Vad Ledger.io gör</p>
         <h2
           className="section-headline"
           style={{
@@ -24,10 +24,10 @@ export const AutomationGrid = () => {
             letterSpacing: "-0.8px",
           }}
         >
-          Det här gör NorthLedger <span style={{ color: "#3b82f6" }}>åt dig</span>
+          Det här gör Ledger.io <span style={{ color: "#3b82f6" }}>åt dig</span>
         </h2>
         <p className="text-white/50 text-[16px] max-w-xl mt-2">
-          Det som tar 40 timmar manuellt — NorthLedger gör det på sekunder.
+          Det som tar 40 timmar manuellt — Ledger.io gör det på sekunder.
         </p>
         <p className="section-lede max-w-2xl" style={{ fontSize: 16, lineHeight: 1.6 }}>
           Sex återkommande arbetsmoment som körs automatiskt i bakgrunden — så du kan fokusera på besluten istället för bokföringen.

@@ -43,7 +43,7 @@ export async function exportAssetRegisterExcel(
   companyName: string,
 ) {
   const wb = new ExcelJS.Workbook();
-  wb.creator = "NorthLedger";
+  wb.creator = "Ledger.io";
   wb.created = new Date();
 
   // === Register sheet ===

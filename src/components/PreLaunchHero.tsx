@@ -110,7 +110,7 @@ export const PreLaunchHero = () => {
 
           {/* Paragraph */}
           <p className="text-[17px] text-[rgba(255,255,255,0.55)] mb-8 max-w-[480px] mx-auto leading-relaxed">
-            NorthLedger automatiserar din bokföring, momsdeklaration och
+            Ledger.io automatiserar din bokföring, momsdeklaration och
             årsredovisning. Du fokuserar på verksamheten.
           </p>
 

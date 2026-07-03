@@ -78,7 +78,7 @@ export const exportEliminationsPDF = (rows: EliminationExportRow[], groupName: s
 
 export const exportEliminationsExcel = async (rows: EliminationExportRow[], groupName: string, period: string) => {
   const wb = new ExcelJS.Workbook();
-  wb.creator = "NorthLedger";
+  wb.creator = "Ledger.io";
 
   // Summary sheet
   const ws = wb.addWorksheet("Elimineringar");

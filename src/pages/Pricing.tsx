@@ -73,7 +73,7 @@ const Pricing = () => { const { user, loading } = useAuth();
 
         <Card className="max-w-md mx-auto border-primary shadow-lg">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl">NorthLedger Komplett</CardTitle>
+            <CardTitle className="text-2xl">Ledger.io Komplett</CardTitle>
             <div className="mt-4">
               <span className="text-5xl font-bold">399 kr</span>
               <span className="text-muted-foreground">/bolag/månad</span>

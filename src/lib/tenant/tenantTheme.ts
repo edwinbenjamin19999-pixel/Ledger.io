@@ -252,7 +252,7 @@ export function applyTenantTheme(theme: TenantTheme, opts?: { tenantSlug?: strin
   }
 }
 
-/* ── NorthLedger default fallback ──────────────────────────────────── */
+/* ── Ledger.io default fallback ──────────────────────────────────── */
 export function getDefaultTheme(): TenantTheme {
   return deriveTenantTheme("#3b82f6", null);
 }

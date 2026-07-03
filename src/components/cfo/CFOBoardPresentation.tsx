@@ -81,7 +81,7 @@ function generateTemplates(): Template[] { const templates: Template[] = [];
   }));
 
   const moderna = [
-    { name: "NorthLedger Default", p: "#1F3864", s: "#FFFFFF", a: "#3b82f6" },
+    { name: "Ledger.io Default", p: "#1F3864", s: "#FFFFFF", a: "#3b82f6" },
     { name: "Gradient Flow", p: "#6A1B9A", s: "#E1BEE7", a: "#42A5F5" },
     { name: "Neo Mint", p: "#00C853", s: "#F1F8E9", a: "#FFFFFF" },
     { name: "Tech Dark", p: "#121212", s: "#1E1E1E", a: "#00E676" },
@@ -196,7 +196,7 @@ export function CFOBoardPresentation({ companyId, snapshot }: BoardPresentationP
   const [genStep, setGenStep] = useState("");
   const [slideData, setSlideData] = useState<SlideData | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [selectedTemplate, setSelectedTemplate] = useState<Template>(ALL_TEMPLATES[20]); // NorthLedger Default
+  const [selectedTemplate, setSelectedTemplate] = useState<Template>(ALL_TEMPLATES[20]); // Ledger.io Default
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [search, setSearch] = useState("");
   const [previewTemplate, setPreviewTemplate] = useState<Template | null>(null);
@@ -364,7 +364,7 @@ export function CFOBoardPresentation({ companyId, snapshot }: BoardPresentationP
                 <h2 className="text-3xl md:text-4xl font-bold">Finansiell rapport</h2>
                 <p className="text-xl mt-2 opacity-80">{period}</p>
                 <div className="w-24 h-0.5 my-4" style={{ backgroundColor: selectedTemplate.colorAccent }} />
-                <p className="text-sm opacity-60">Genererad {new Date().toLocaleDateString("sv-SE")} | NorthLedger CFO</p>
+                <p className="text-sm opacity-60">Genererad {new Date().toLocaleDateString("sv-SE")} | Ledger.io CFO</p>
               </div>
             )}
 

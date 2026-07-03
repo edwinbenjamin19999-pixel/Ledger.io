@@ -44,7 +44,7 @@ export function buildCoverSheet(wb: Workbook, input: CoverSheetInput) {
   // Meta
   ws.mergeCells(r, 1, r, 4);
   const meta = ws.getCell(r, 1);
-  meta.value = `${input.pack} · Genererad ${formatDate(new Date(), "yyyy-MM-dd HH:mm")} · NorthLedger`;
+  meta.value = `${input.pack} · Genererad ${formatDate(new Date(), "yyyy-MM-dd HH:mm")} · Ledger.io`;
   meta.font = FONTS.meta;
   r += 2;
 
@@ -175,7 +175,7 @@ export function buildCoverSheet(wb: Workbook, input: CoverSheetInput) {
   r += 2;
   ws.mergeCells(r, 1, r, 4);
   const note = ws.getCell(r, 1);
-  note.value = "Konfidentiellt · Genererad av NorthLedger";
+  note.value = "Konfidentiellt · Genererad av Ledger.io";
   note.font = FONTS.meta;
   note.alignment = { horizontal: "left" };
 

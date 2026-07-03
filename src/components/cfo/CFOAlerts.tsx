@@ -148,9 +148,9 @@ export function CFOAlerts({ snapshot, companyId }: CFOAlertsProps) { const initi
     if (criticalAlerts.length === 0) { toast.info("Inga kritiska varningar att rapportera");
       return;
     }
-    const subject = `NorthLedger Varningsrapport — ${criticalAlerts.length} aktiva varningar`;
+    const subject = `Ledger.io Varningsrapport — ${criticalAlerts.length} aktiva varningar`;
     const body = [
-      "NORTHLEDGER VARNINGSRAPPORT",
+      "LEDGER.IO VARNINGSRAPPORT",
       `Datum: ${new Date().toLocaleDateString("sv-SE")}`,
       `Aktiva varningar: ${criticalAlerts.length}`,
       "",
@@ -159,7 +159,7 @@ export function CFOAlerts({ snapshot, companyId }: CFOAlertsProps) { const initi
         `   ${a.message}`,
         "",
       ]).flat(),
-      "— NorthLedger CFO",
+      "— Ledger.io CFO",
     ].join("\n");
     window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank");
   };

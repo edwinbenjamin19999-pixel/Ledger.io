@@ -97,7 +97,7 @@ export default function PaymentProviders() {
         <div className="flex-1">
           <h1 className="text-2xl font-bold">Betalningsleverantörer</h1>
           <p className="text-sm text-muted-foreground">
-            Hantera hur NorthLedger förbereder leverantörsbetalningar — filexport idag, Open Banking i nästa fas.
+            Hantera hur Ledger.io förbereder leverantörsbetalningar — filexport idag, Open Banking i nästa fas.
           </p>
         </div>
         {companies.length > 0 && (
@@ -123,7 +123,7 @@ export default function PaymentProviders() {
                 Manuell filexport (ISO 20022 pain.001)
               </CardTitle>
               <CardDescription>
-                Standardflödet — NorthLedger genererar pain.001-XML som ni laddar upp i er internetbank.
+                Standardflödet — Ledger.io genererar pain.001-XML som ni laddar upp i er internetbank.
               </CardDescription>
             </div>
             {fileExport ? (
@@ -153,7 +153,7 @@ export default function PaymentProviders() {
                 Open Banking-leverantörer
               </CardTitle>
               <CardDescription>
-                NorthLedger har ingen egen PSD2-licens. Open Banking-flöden skickar er via en licensierad PIS-leverantör
+                Ledger.io har ingen egen PSD2-licens. Open Banking-flöden skickar er via en licensierad PIS-leverantör
                 som hanterar BankID-godkännandet i bankens egen miljö.
               </CardDescription>
             </div>

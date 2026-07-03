@@ -124,7 +124,7 @@ export function RegulatoryIntelligence({ companyId }: RegulatoryIntelligenceProp
         effectiveDate: `${currentYear}-04-01`, severity: "info", category: "Rantor & finans",
         impactScore: 25, financialImpact: 0, daysUntilEffect: daysUntil(`${currentYear}-04-01`),
         actions: [{ label: "Visa fakturainstellningar", href: "/invoices" }],
-        autoActions: [{ label: "Uppdatera dröjsmålsränta", description: "NorthLedger justerar automatiskt", done: true }],
+        autoActions: [{ label: "Uppdatera dröjsmålsränta", description: "Ledger.io justerar automatiskt", done: true }],
         dismissed: false,
         diff: { field: "Styrräntan", oldValue: "2,50%", newValue: "2,25%", changeDescription: "Sankt med 0,25 procentenheter. Paverkar ränteförmåner och dröjsmålsränta.", effectiveDate: `${currentYear}-04-01`, changePct: -10 },
       },
@@ -147,7 +147,7 @@ export function RegulatoryIntelligence({ companyId }: RegulatoryIntelligenceProp
         severity: "info", category: "Arbetsgivardeklaration", impactScore: empCount > 0 ? 40 : 5,
         financialImpact: 0, daysUntilEffect: daysUntil(`${currentYear}-03-15`),
         actions: [{ label: "Visa AGI", href: "/agi-submission" }],
-        autoActions: [{ label: "Uppdatera AGI-format", description: "Automatiskt genomfort av NorthLedger", done: true }],
+        autoActions: [{ label: "Uppdatera AGI-format", description: "Automatiskt genomfort av Ledger.io", done: true }],
         dismissed: false,
       },
       { id: "eu-csrd-2026", source: "EU-regler", sourceIcon: Globe,
@@ -181,12 +181,12 @@ export function RegulatoryIntelligence({ companyId }: RegulatoryIntelligenceProp
 
   function generateDeadlines() { const year = currentYear;
     const deadlineList: ComplianceDeadline[] = [
-      { id: "moms-q1", title: "Momsdeklaration Q1", description: "Momsdeklaration januari--mars", dueDate: `${year}-05-12`, category: "Moms", status: "upcoming", recurring: true, source: "Skatteverket", daysLeft: 0, autoAction: "NorthLedger kan forbereda momsrapporten automatiskt", externalLink: "https://www.skatteverket.se/foretag/moms", steps: ["Stam av momskonton (2610-2650)", "Kontrollera ingaende moms", "Skicka in via Skatteverkets e-tjanst"] },
+      { id: "moms-q1", title: "Momsdeklaration Q1", description: "Momsdeklaration januari--mars", dueDate: `${year}-05-12`, category: "Moms", status: "upcoming", recurring: true, source: "Skatteverket", daysLeft: 0, autoAction: "Ledger.io kan forbereda momsrapporten automatiskt", externalLink: "https://www.skatteverket.se/foretag/moms", steps: ["Stam av momskonton (2610-2650)", "Kontrollera ingaende moms", "Skicka in via Skatteverkets e-tjanst"] },
       { id: "agi-apr", title: "AGI april", description: "Arbetsgivardeklaration för april", dueDate: `${year}-05-12`, category: "AGI", status: "upcoming", recurring: true, source: "Skatteverket", daysLeft: 0, autoAction: "AGI forbereds automatiskt från lonedata", externalLink: "https://www.skatteverket.se/foretag/arbetsgivare" },
       { id: "agi-may", title: "AGI maj", description: "Arbetsgivardeklaration för maj", dueDate: `${year}-06-12`, category: "AGI", status: "upcoming", recurring: true, source: "Skatteverket", daysLeft: 0 },
       { id: "fskatt-jun", title: "F-skatt juni", description: "Preliminarskatt för juni", dueDate: `${year}-06-17`, category: "Skatt", status: "upcoming", recurring: true, source: "Skatteverket", daysLeft: 0 },
       { id: "ink2", title: "Inkomstdeklaration 2 (INK2)", description: "Inkomstdeklaration för aktiebolag", dueDate: `${year}-07-01`, category: "Deklaration", status: "upcoming", recurring: true, source: "Skatteverket", daysLeft: 0, autoAction: "Skattedeklarationsagenten kan berakna din INK2", externalLink: "https://www.skatteverket.se/foretag/skatter", steps: ["Sammanstall arsresultat", "Berakna skattemassiga justeringar", "Fyll i INK2-blanketten", "Signera med BankID"] },
-      { id: "årsredovisning", title: "Inregistrering av årsredovisning", description: "Registreras hos Bolagsverket", dueDate: `${year}-07-31`, category: "Arsredovisning", status: "upcoming", recurring: true, source: "Bolagsverket", daysLeft: 0, autoAction: "Generera årsredovisning i NorthLedger", externalLink: "https://www.bolagsverket.se/foretag/aktiebolag/årsredovisning" },
+      { id: "årsredovisning", title: "Inregistrering av årsredovisning", description: "Registreras hos Bolagsverket", dueDate: `${year}-07-31`, category: "Arsredovisning", status: "upcoming", recurring: true, source: "Bolagsverket", daysLeft: 0, autoAction: "Generera årsredovisning i Ledger.io", externalLink: "https://www.bolagsverket.se/foretag/aktiebolag/årsredovisning" },
       { id: "k10", title: "K10-blankett", description: "K10 (famansbolag) lamnas med INK1", dueDate: `${year}-05-02`, category: "Deklaration", status: "upcoming", recurring: true, source: "Skatteverket", daysLeft: 0 },
       { id: "moms-q2", title: "Momsdeklaration Q2", description: "Momsdeklaration april--juni", dueDate: `${year}-08-12`, category: "Moms", status: "upcoming", recurring: true, source: "Skatteverket", daysLeft: 0 },
       { id: "agi-jun", title: "AGI juni", description: "Arbetsgivardeklaration för juni", dueDate: `${year}-07-12`, category: "AGI", status: "upcoming", recurring: true, source: "Skatteverket", daysLeft: 0 },
@@ -224,7 +224,7 @@ export function RegulatoryIntelligence({ companyId }: RegulatoryIntelligenceProp
 
   function shareAlert(alert: RegulatoryAlert) { const subject = encodeURIComponent(`Regelandring: ${alert.title}`);
     const body = encodeURIComponent(
-      `Hej,\n\nJag vill informera om följande regeländring:\n\n${alert.title}\n${alert.summary}\n\nPåverkan: ${alert.impact}\n\nRekommendation: ${alert.recommendation}\n\nKälla: ${alert.source}\nGäller från: ${format(new Date(alert.effectiveDate), "d MMMM yyyy", { locale: sv })}\n\n-- Skickat från NorthLedger`
+      `Hej,\n\nJag vill informera om följande regeländring:\n\n${alert.title}\n${alert.summary}\n\nPåverkan: ${alert.impact}\n\nRekommendation: ${alert.recommendation}\n\nKälla: ${alert.source}\nGäller från: ${format(new Date(alert.effectiveDate), "d MMMM yyyy", { locale: sv })}\n\n-- Skickat från Ledger.io`
     );
     window.open(`mailto:?subject=${subject}&body=${body}`);
   }

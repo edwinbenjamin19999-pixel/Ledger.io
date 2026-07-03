@@ -31,7 +31,7 @@ const REGULATIONS_2026 = [
     severity: 'medium' as const,
     affectsSize: 'Alla bolag',
     summary: 'Nya och omstrukturerade konton i BAS-kontoplanen för räkenskapsår från 2026.',
-    action: 'Kontoplan är uppdaterad i North Ledger AI automatiskt.',
+    action: 'Kontoplan är uppdaterad i Ledger.io AI automatiskt.',
     link: 'https://www.bas.se',
   },
   {

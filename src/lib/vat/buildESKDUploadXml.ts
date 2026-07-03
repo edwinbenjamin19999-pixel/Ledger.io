@@ -30,7 +30,7 @@ export interface BuildESKDInput {
   boxes: ESKDBoxes;
 }
 
-// Mapping NorthLedger rutor → SKV XML tag (in canonical document order per Skatteverket spec).
+// Mapping Ledger.io rutor → SKV XML tag (in canonical document order per Skatteverket spec).
 // Order: 05,06,07,08 → 10–12 → 20–24 → 30–32 → 35–42 → 50 → 48 → 60–62.
 // MomsBetala (49) and TextUpplysningMoms are emitted separately at the end.
 const TAG_ORDER: Array<[keyof ESKDBoxes, string]> = [

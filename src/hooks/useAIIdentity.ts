@@ -3,7 +3,7 @@ import { useTenant } from "@/contexts/TenantContext";
 /**
  * Returns tenant-aware AI identity for shell-level surfaces
  * (assistant labels, briefing headers, modal greetings, etc).
- * Falls back to NorthLedger defaults when no tenant is resolved.
+ * Falls back to Ledger.io defaults when no tenant is resolved.
  */
 export function useAIIdentity() {
   const { tenant } = useTenant();

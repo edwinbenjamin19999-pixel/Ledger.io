@@ -27,7 +27,7 @@ const Privacy = () => { const navigate = useNavigate();
           <CardContent className="prose prose-sm max-w-none dark:prose-invert">
             <h2>1. Personuppgiftsansvarig</h2>
             <p>
-              RE Equity Partners AB, org.nr 559164-8208 ("NorthLedger", "vi", "oss"), är 
+              RE Equity Partners AB, org.nr 559164-8208 ("Ledger.io", "vi", "oss"), är 
               personuppgiftsansvarig för behandlingen av dina personuppgifter i enlighet 
               med EU:s allmänna dataskyddsförordning (GDPR) och svensk dataskyddslagstiftning.
             </p>

@@ -41,7 +41,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
     trust_bullets: [],
     show_bankid: true,
     show_password_login: true,
-    footer_attribution: "Powered by NorthLedger",
+    footer_attribution: "Powered by Ledger.io",
     support_email: null,
     support_url: null,
   };
@@ -58,7 +58,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
             Sätt din identitet
           </h1>
           <p className="text-sm text-slate-500 mt-1.5">
-            Detta är din plattform — inte NorthLedger. Allt uppdateras live till höger.
+            Detta är din plattform — inte Ledger.io. Allt uppdateras live till höger.
           </p>
         </div>
 

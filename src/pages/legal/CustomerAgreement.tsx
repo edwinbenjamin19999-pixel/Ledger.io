@@ -7,7 +7,7 @@ const EFFECTIVE_DATE = "2025-01-15";
 
 const CustomerAgreement = () => {
   useEffect(() => {
-    document.title = `Kundavtal ${VERSION} – NorthLedger`;
+    document.title = `Kundavtal ${VERSION} – Ledger.io`;
   }, []);
 
   return (
@@ -25,17 +25,17 @@ const CustomerAgreement = () => {
               Kundavtal
             </h1>
             <p className="text-base text-slate-600">
-              Detta avtal reglerar förhållandet mellan NorthLedger AB (&quot;NorthLedger&quot;) och kunden
-              (&quot;Kunden&quot;) avseende användning av NorthLedger:s tjänster.
+              Detta avtal reglerar förhållandet mellan Ledger.io AB (&quot;Ledger.io&quot;) och kunden
+              (&quot;Kunden&quot;) avseende användning av Ledger.io:s tjänster.
             </p>
           </div>
 
           <article className="prose prose-slate max-w-none prose-headings:text-[#0f1f35] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0f1f35]">
             <h2>1. Parter och definitioner</h2>
             <p>
-              Avtalet ingås mellan NorthLedger AB, org.nr [556xxx-xxxx] (&quot;NorthLedger&quot;) och den
+              Avtalet ingås mellan Ledger.io AB, org.nr [556xxx-xxxx] (&quot;Ledger.io&quot;) och den
               juridiska person som registrerar konto i tjänsten (&quot;Kunden&quot;). Med
-              &quot;Tjänsten&quot; avses NorthLedger:s molnbaserade plattform för bokföring,
+              &quot;Tjänsten&quot; avses Ledger.io:s molnbaserade plattform för bokföring,
               ekonomistyrning, AI-assisterad analys och tillhörande integrationer.
             </p>
 
@@ -82,7 +82,7 @@ const CustomerAgreement = () => {
 
             <h3>4.4 Marknadsjustering vid ny avtalsperiod</h3>
             <p>
-              Vid ingången av varje ny 12-månadersperiod har NorthLedger rätt att justera priserna
+              Vid ingången av varje ny 12-månadersperiod har Ledger.io rätt att justera priserna
               utöver KPI för att spegla utvecklade tjänster, ökade leverantörskostnader eller
               förändrat marknadsläge. Sådan justering meddelas skriftligen senast 90 dagar före
               ny period. Om höjningen utöver KPI överstiger 10 % har Kunden rätt att säga upp
@@ -104,7 +104,7 @@ const CustomerAgreement = () => {
               <li>Använda Tjänsten i enlighet med svensk lag, bokföringslagen (1999:1078) och god redovisningssed.</li>
             </ul>
 
-            <h2>6. NorthLedger:s åtaganden</h2>
+            <h2>6. Ledger.io:s åtaganden</h2>
             <ul>
               <li>Tillgänglighet om minst 99,5 % räknat per kalendermånad, exklusive aviserat underhåll.</li>
               <li>Support på svenska under kontorstid via mejl och inbyggd chatt.</li>
@@ -114,7 +114,7 @@ const CustomerAgreement = () => {
 
             <h2>7. Personuppgifter</h2>
             <p>
-              NorthLedger agerar personuppgiftsbiträde åt Kunden för de personuppgifter som behandlas
+              Ledger.io agerar personuppgiftsbiträde åt Kunden för de personuppgifter som behandlas
               i Tjänsten. Behandlingen regleras i separat{" "}
               <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">
                 personuppgiftsbiträdesavtal (DPA)
@@ -137,16 +137,16 @@ const CustomerAgreement = () => {
             <h2>9. Immateriella rättigheter</h2>
             <p>
               Kunden äger samtliga rättigheter till den data som lagras i Tjänsten (bokföring,
-              fakturor, kunduppgifter etc.). NorthLedger äger samtliga rättigheter till plattformen,
+              fakturor, kunduppgifter etc.). Ledger.io äger samtliga rättigheter till plattformen,
               källkod, AI-modeller och varumärke. Kunden får under avtalstiden en
               icke-exklusiv, icke-överlåtbar nyttjanderätt till Tjänsten.
             </p>
 
             <h2>10. Ansvarsbegränsning</h2>
             <p>
-              NorthLedger:s totala ansvar gentemot Kunden är begränsat till de avgifter Kunden
+              Ledger.io:s totala ansvar gentemot Kunden är begränsat till de avgifter Kunden
               erlagt under de senaste 12 månaderna före den händelse som föranlett anspråket.
-              NorthLedger ansvarar inte för indirekt skada såsom utebliven vinst, förlorade affärer
+              Ledger.io ansvarar inte för indirekt skada såsom utebliven vinst, förlorade affärer
               eller tredjemansskada. Begränsningen gäller inte vid uppsåt eller grov vårdslöshet.
             </p>
 
@@ -160,7 +160,7 @@ const CustomerAgreement = () => {
 
             <h2>12. Underleverantörer</h2>
             <p>
-              NorthLedger använder underleverantörer för drift, lagring, AI-tjänster och e-post.
+              Ledger.io använder underleverantörer för drift, lagring, AI-tjänster och e-post.
               Aktuell lista över underbiträden finns i{" "}
               <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">
                 DPA
@@ -170,7 +170,7 @@ const CustomerAgreement = () => {
 
             <h2>13. Ändringar i avtalsvillkor</h2>
             <p>
-              NorthLedger kan ändra dessa villkor med minst 60 dagars varsel. Vid väsentligt
+              Ledger.io kan ändra dessa villkor med minst 60 dagars varsel. Vid väsentligt
               försämrade villkor har Kunden rätt att säga upp avtalet utan kostnad till
               ändringens ikraftträdande. Mindre justeringar (språkliga, klargöranden) gäller
               utan särskild uppsägningsrätt.

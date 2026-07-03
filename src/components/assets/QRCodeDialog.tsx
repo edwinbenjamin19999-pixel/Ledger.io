@@ -29,7 +29,7 @@ export const QRCodeDialog = ({ asset, open, onOpenChange }: QRCodeDialogProps) =
         <p>${asset.asset_name}</p>
         <p>${asset.acquisition_date}</p>
         <div id="qr" style="margin: 15px 0;"></div>
-        <p style="font-size: 10px;">Skanna för att öppna tillgångskortet i NorthLedger</p>
+        <p style="font-size: 10px;">Skanna för att öppna tillgångskortet i Ledger.io</p>
       </div>
       <script>window.print();</script></body></html>
     `);

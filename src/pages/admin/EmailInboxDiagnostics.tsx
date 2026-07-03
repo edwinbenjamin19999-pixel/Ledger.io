@@ -48,7 +48,7 @@ const EmailInboxDiagnostics = () => {
         body: {
           to: company.email_inbox_address,
           from: "diagnostics@northledger.se",
-          from_name: "NorthLedger Diagnostics",
+          from_name: "Ledger.io Diagnostics",
           subject: `Testmejl ${new Date().toISOString()}`,
           text: "Detta är ett testmejl från diagnos-vyn.",
           attachments: [],

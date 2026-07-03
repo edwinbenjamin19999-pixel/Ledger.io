@@ -5,7 +5,7 @@ const CASES = [
   {
     icon: Building2,
     title: "För företagaren",
-    desc: "Slipp bokföringen helt. NorthLedger konterar, stämmer av och håller dig redo för deklaration — utan att du behöver förstå ett enda kontonummer.",
+    desc: "Slipp bokföringen helt. Ledger.io konterar, stämmer av och håller dig redo för deklaration — utan att du behöver förstå ett enda kontonummer.",
     outcome: "→ Från 0 till full kontroll på dagen.",
   },
   {
@@ -41,7 +41,7 @@ export const UseCases = () => {
           Ett system. <span style={{ color: "#3b82f6" }}>Fyra roller.</span>
         </h2>
         <p className="section-lede text-[15px] leading-relaxed max-w-2xl">
-          NorthLedger anpassar sig efter vem du är och vad du behöver — utan att du byter system.
+          Ledger.io anpassar sig efter vem du är och vad du behöver — utan att du byter system.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">

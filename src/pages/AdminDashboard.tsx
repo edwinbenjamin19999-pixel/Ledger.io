@@ -68,7 +68,7 @@ const AdminDashboard = () => { const { user, loading } = useAuth();
   }, [user]);
 
   const checkAccessAndLoad = async () => { if (!user) return;
-    // Check if user is a platform admin (internal NorthLedger team only)
+    // Check if user is a platform admin (internal Ledger.io team only)
     const { data: isAdmin } = await supabase.rpc("is_platform_admin", { _user_id: user.id,
     });
 

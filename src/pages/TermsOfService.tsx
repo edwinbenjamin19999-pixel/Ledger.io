@@ -27,18 +27,18 @@ const TermsOfService = () => { const navigate = useNavigate();
           <CardContent className="prose prose-sm max-w-none dark:prose-invert">
             <h2>1. Allmänt</h2>
             <p>
-              Dessa användarvillkor ("Villkoren") reglerar din användning av NorthLedger:s 
+              Dessa användarvillkor ("Villkoren") reglerar din användning av Ledger.io:s 
               plattform för automatiserad bokföring och redovisning ("Tjänsten"). 
               Genom att använda Tjänsten godkänner du dessa Villkor i sin helhet.
             </p>
 
             <h2>2. Definitioner</h2>
             <ul>
-              <li><strong>"Tjänsten"</strong> - NorthLedger:s plattform och alla relaterade funktioner</li>
+              <li><strong>"Tjänsten"</strong> - Ledger.io:s plattform och alla relaterade funktioner</li>
               <li><strong>"Användare"</strong> - Du som använder Tjänsten</li>
-              <li><strong>"Konto"</strong> - Ditt användarkonto hos NorthLedger</li>
+              <li><strong>"Konto"</strong> - Ditt användarkonto hos Ledger.io</li>
               <li><strong>"Innehåll"</strong> - All data och information du laddar upp</li>
-              <li><strong>"Vi", "Oss", "Vår"</strong> - NorthLedger AB</li>
+              <li><strong>"Vi", "Oss", "Vår"</strong> - Ledger.io AB</li>
             </ul>
 
             <h2>3. Kontoregistrering</h2>
@@ -56,7 +56,7 @@ const TermsOfService = () => { const navigate = useNavigate();
             </p>
 
             <h2>4. Tjänstens omfattning</h2>
-            <p>NorthLedger tillhandahåller:</p>
+            <p>Ledger.io tillhandahåller:</p>
             <ul>
               <li>Automatiserad bokföring med AI-stöd</li>
               <li>Fakturering och faktura hantering</li>
@@ -125,7 +125,7 @@ const TermsOfService = () => { const navigate = useNavigate();
             <h2>7. Immateriella rättigheter</h2>
             <p>
               Alla rättigheter till Tjänsten, inklusive programvara, design, text, 
-              grafik och logotyper, ägs av NorthLedger. Du får en begränsad, icke-exklusiv, 
+              grafik och logotyper, ägs av Ledger.io. Du får en begränsad, icke-exklusiv, 
               icke-överförbar licens att använda Tjänsten enligt dessa Villkor.
             </p>
 
@@ -246,7 +246,7 @@ const TermsOfService = () => { const navigate = useNavigate();
             <h2>16. Övrigt</h2>
             <h3>16.1 Fullständigt avtal</h3>
             <p>
-              Dessa Villkor utgör det fullständiga avtalet mellan dig och NorthLedger 
+              Dessa Villkor utgör det fullständiga avtalet mellan dig och Ledger.io 
               avseende användningen av Tjänsten.
             </p>
 
@@ -267,7 +267,7 @@ const TermsOfService = () => { const navigate = useNavigate();
               Frågor om dessa Villkor kan ställas till:
             </p>
             <p>
-              <strong>NorthLedger AB</strong><br />
+              <strong>Ledger.io AB</strong><br />
               E-post: legal@northledger.se<br />
               Telefon: +46 76 164 69 86<br />
               Adress: Karlsviksgatan 15, Stockholm, Sverige

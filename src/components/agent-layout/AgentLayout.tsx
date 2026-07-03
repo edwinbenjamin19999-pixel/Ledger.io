@@ -8,7 +8,7 @@ import { ManualActions } from "./ManualActions";
 import type { AgentLayoutProps } from "./types";
 
 /**
- * AgentLayout — shared template for every AI agent page in NorthLedger.
+ * AgentLayout — shared template for every AI agent page in Ledger.io.
  *
  * Structure (top to bottom):
  *   1. Header (icon, name, description, status pill, pause/resume switch)

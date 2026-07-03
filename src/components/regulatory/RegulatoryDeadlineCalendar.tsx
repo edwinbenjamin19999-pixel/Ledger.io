@@ -40,7 +40,7 @@ function getDeadlineColor(daysLeft: number, status: string): string { if (status
 function generateICS(deadlines: ComplianceDeadline[]): string { const lines = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//NorthLedger//Regelverksbevakning//SV",
+    "PRODID:-//Ledger.io//Regelverksbevakning//SV",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
   ];

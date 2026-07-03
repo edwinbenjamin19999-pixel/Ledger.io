@@ -262,7 +262,7 @@ export const AppSidebar = () => { const location = useLocation();
           className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-white/40 hover:text-white/60 hover:bg-white/[0.04] transition-colors"
         >
           <Sparkles size={14} strokeWidth={1.5} />
-          Hur NorthLedger fungerar
+          Hur Ledger.io fungerar
         </button>
         <button
           onClick={() => setCustomizeOpen(true)}
@@ -288,7 +288,7 @@ export const AppSidebar = () => { const location = useLocation();
           </button>
         )}
         <p className="text-[10px] text-white/15 text-center pb-3 pt-2">
-          {tenant ? (tenant.login.footer_attribution || "Powered by NorthLedger") : "NorthLedger © 2026"}
+          {tenant ? (tenant.login.footer_attribution || "Powered by Ledger.io") : "Ledger.io © 2026"}
         </p>
       </SidebarFooter>
 

@@ -3,7 +3,7 @@ import type { CompactGuide } from "./index";
 export const bruttomarginalLonsamhet: CompactGuide = {
   slug: "bruttomarginal-lonsamhet",
   h1: "Bruttomarginal & lönsamhet — så analyserar du",
-  metaTitle: "Bruttomarginal & lönsamhet — guide | NorthLedger",
+  metaTitle: "Bruttomarginal & lönsamhet — guide | Ledger.io",
   metaDescription:
     "Förstå bruttomarginal, täckningsbidrag och lönsamhet per produkt. Med formler och svenska branschsnitt.",
   intent: "business",
@@ -52,6 +52,6 @@ export const bruttomarginalLonsamhet: CompactGuide = {
     { title: "Glömmer att räkna per produkt", body: "Genomsnittsmarginalen döljer förlustprodukter. Bryt ner på SKU-nivå månadsvis." },
   ],
   northledgerNote:
-    "NorthLedger:s CFO-modul räknar bruttomarginal per intäktskonto, kund och projekt — så du ser vad som faktiskt tjänar pengar.",
+    "Ledger.io:s CFO-modul räknar bruttomarginal per intäktskonto, kund och projekt — så du ser vad som faktiskt tjänar pengar.",
   related: ["nyckeltal-smaforetag", "resultatrapport", "kassaflode"],
 };

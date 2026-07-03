@@ -67,7 +67,7 @@ export const WhyNorthLedger = () => {
             </ul>
           </div>
 
-          {/* NorthLedger — superior */}
+          {/* Ledger.io — superior */}
           <div
             className="rounded-xl relative"
             style={{
@@ -88,7 +88,7 @@ export const WhyNorthLedger = () => {
                   textTransform: "uppercase",
                 }}
               >
-                NorthLedger
+                Ledger.io
               </div>
               <span
                 style={{

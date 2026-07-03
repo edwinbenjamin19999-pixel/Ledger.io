@@ -166,7 +166,7 @@ export const AnnualReportSigningPanel = ({
               </CardTitle>
               <CardDescription className="mt-1">
                 Styrelse, VD och revisor får var sin e-postlänk och signerar med
-                BankID på sin egen enhet. Behöver inte ha konto i NorthLedger.
+                BankID på sin egen enhet. Behöver inte ha konto i Ledger.io.
               </CardDescription>
             </div>
             <ScriveSigningButton

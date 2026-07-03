@@ -40,7 +40,7 @@ export interface ResolvedTenant {
  * Resolve a tenant from:
  *  1. Subdomain (clientname.northledger.se → slug = "clientname")
  *  2. Explicit slug param (e.g. /wl/:slug/login)
- * Standard NorthLedger hosts (northledger.se, app.northledger.se, *.lovable.app) return null.
+ * Standard Ledger.io hosts (northledger.se, app.northledger.se, *.lovable.app) return null.
  */
 export function resolveTenantSlugFromHost(hostname: string): string | null {
   const RESERVED = new Set(["app", "www", "api", "admin", "id-preview", "preview"]);
@@ -78,7 +78,7 @@ async function hydrateTenant(tenant: any): Promise<ResolvedTenant> {
       trust_bullets: ["Automatisk bokföring", "Realtidsanalys", "Full revisionslogg", "Spårbar AI"],
       show_bankid: true, show_password_login: true,
       support_email: null, support_url: null,
-      footer_attribution: "Powered by NorthLedger",
+      footer_attribution: "Powered by Ledger.io",
     },
   };
 }

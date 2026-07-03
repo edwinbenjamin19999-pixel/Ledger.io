@@ -20,10 +20,10 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
     description: guide.metaDescription,
     datePublished: guide.updatedAt,
     dateModified: guide.updatedAt,
-    author: { "@type": "Organization", name: "NorthLedger" },
+    author: { "@type": "Organization", name: "Ledger.io" },
     publisher: {
       "@type": "Organization",
-      name: "NorthLedger",
+      name: "Ledger.io",
       logo: { "@type": "ImageObject", url: "https://northledger.se/og-image.jpg" },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
@@ -116,15 +116,15 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
           </ul>
         </section>
 
-        {/* NorthLedger block */}
+        {/* Ledger.io block */}
         <section className="my-12 rounded-2xl bg-gradient-to-br from-[#0f1f35] to-[#0a1525] p-8 text-white">
           <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#3b82f6]">
-            <Sparkles className="w-3.5 h-3.5" /> Hur NorthLedger hjälper
+            <Sparkles className="w-3.5 h-3.5" /> Hur Ledger.io hjälper
           </div>
           <p className="mt-3 text-white/85 leading-relaxed">{guide.northledgerNote}</p>
           <Button asChild className="mt-5 bg-white text-[#050d1a] hover:bg-white/90 font-semibold gap-1.5">
             <Link to="/auth">
-              Testa NorthLedger gratis <ArrowRight className="w-3.5 h-3.5" />
+              Testa Ledger.io gratis <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </Button>
         </section>

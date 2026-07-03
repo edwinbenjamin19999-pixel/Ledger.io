@@ -100,7 +100,7 @@ const TaxMandates = () => {
     if (!company) return;
     setMandateLoading(true);
     try {
-      const mandateText = `FULLMAKT FÖR SKATTEÄRENDEN - NorthLedger AB får företräda ${company.name} hos Skatteverket för ${mandateType === 'full' ? 'AGI och moms' : mandateType === 'agi' ? 'AGI' : 'moms'}deklarationer. Accepterat ${new Date().toISOString()}`;
+      const mandateText = `FULLMAKT FÖR SKATTEÄRENDEN - Ledger.io AB får företräda ${company.name} hos Skatteverket för ${mandateType === 'full' ? 'AGI och moms' : mandateType === 'agi' ? 'AGI' : 'moms'}deklarationer. Accepterat ${new Date().toISOString()}`;
       const { data, error } = await supabase.functions.invoke('register-tax-mandate', {
         body: { company_id: company.id, mandate_type: mandateType, consent_text: mandateText, consent_ip_address: null }
       });
@@ -372,7 +372,7 @@ const TaxMandates = () => {
               <Alert>
                 <Shield className="h-4 w-4" />
                 <AlertDescription>
-                  Fullmakterna gör det möjligt för NorthLedger att automatiskt skicka AGI och momsdeklarationer
+                  Fullmakterna gör det möjligt för Ledger.io att automatiskt skicka AGI och momsdeklarationer
                   till Skatteverket för din räkning. Du behåller full kontroll och kan återkalla fullmakten när som helst.
                 </AlertDescription>
               </Alert>

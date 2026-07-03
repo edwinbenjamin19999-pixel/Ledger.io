@@ -3,7 +3,7 @@ import type { CompactGuide } from "./index";
 export const basKontoplanen: CompactGuide = {
   slug: "bas-kontoplanen",
   h1: "BAS-kontoplanen — så fungerar den",
-  metaTitle: "BAS-kontoplanen — komplett guide | NorthLedger",
+  metaTitle: "BAS-kontoplanen — komplett guide | Ledger.io",
   metaDescription:
     "Förstå BAS-kontoplanen: kontoklasser 1–8, hur du väljer rätt konto och vanliga konton för småföretag. Med exempel.",
   intent: "beginner",
@@ -58,6 +58,6 @@ export const basKontoplanen: CompactGuide = {
     { title: "Använder fel momskonto", body: "Försäljning 25 % → 2611, 12 % → 2621, 6 % → 2631. Ingående: 2641/2642/2643." },
   ],
   northledgerNote:
-    "NorthLedger väljer rätt BAS-konto automatiskt baserat på leverantör, belopp och kategori — och lär sig av dina korrigeringar.",
+    "Ledger.io väljer rätt BAS-konto automatiskt baserat på leverantör, belopp och kategori — och lär sig av dina korrigeringar.",
   related: ["debet-kredit", "bokfora-kvitto", "vad-ar-bokforing"],
 };

@@ -30,7 +30,7 @@ export default function PartnerAPIDocs() {
       <div>
         <h1 className="text-3xl font-bold">Partner API V1</h1>
         <p className="text-muted-foreground mt-1">
-          Minimal partner-API för accounting firms och banker att embedda NorthLedger-intelligens i sina egna system.
+          Minimal partner-API för accounting firms och banker att embedda Ledger.io-intelligens i sina egna system.
         </p>
       </div>
 

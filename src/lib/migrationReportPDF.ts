@@ -24,7 +24,7 @@ export function generateMigrationReportPDF({
 
   doc.setFontSize(20);
   doc.setTextColor("#0B4F6C");
-  doc.text("Migreringsrapport — NorthLedger", margin, y);
+  doc.text("Migreringsrapport — Ledger.io", margin, y);
   y += 28;
 
   doc.setFontSize(10);
@@ -106,7 +106,7 @@ export function generateMigrationReportPDF({
     doc.setPage(i);
     doc.setFontSize(8);
     doc.setTextColor("#94A3B8");
-    doc.text("Rapporten genererades automatiskt av NorthLedger", margin, 820);
+    doc.text("Rapporten genererades automatiskt av Ledger.io", margin, 820);
     doc.text(`Sida ${i} / ${pageCount}`, 545, 820, { align: "right" });
   }
 

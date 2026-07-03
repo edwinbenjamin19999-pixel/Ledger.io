@@ -204,7 +204,7 @@ const Auth = () => {
         return;
       }
       if (signUpData.session) {
-        toast.success("Välkommen till NorthLedger!");
+        toast.success("Välkommen till Ledger.io!");
         redirectAfterAuth("/quick-onboarding");
       } else {
         toast.success(

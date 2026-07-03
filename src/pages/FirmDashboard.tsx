@@ -81,7 +81,7 @@ const FirmDashboard = () => { const { user, signOut } = useAuth();
             </div>
             <div>
               <h1 className="font-semibold">{firm.name}</h1>
-              <p className="text-xs text-muted-foreground">NorthLedger Byrå</p>
+              <p className="text-xs text-muted-foreground">Ledger.io Byrå</p>
             </div>
           </div>
           <div className="flex items-center gap-2">

@@ -27,10 +27,10 @@ export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
     description: article.metaDescription,
     datePublished: article.updatedAt,
     dateModified: article.updatedAt,
-    author: { "@type": "Organization", name: "NorthLedger" },
+    author: { "@type": "Organization", name: "Ledger.io" },
     publisher: {
       "@type": "Organization",
-      name: "NorthLedger",
+      name: "Ledger.io",
       logo: { "@type": "ImageObject", url: "https://northledger.se/og-image.jpg" },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },

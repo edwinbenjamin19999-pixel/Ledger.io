@@ -6,12 +6,12 @@ const faqs = [
   {
     icon: Shield,
     q: "Stämmer bokföringen verkligen?",
-    a: "NorthLedger följer svenska redovisningsstandarder (BAS 2026, K2/K3) och validerar varje post med regelbaserad logik kombinerad med AI. Inget slutförs utan ditt godkännande — du har alltid full kontroll.",
+    a: "Ledger.io följer svenska redovisningsstandarder (BAS 2026, K2/K3) och validerar varje post med regelbaserad logik kombinerad med AI. Inget slutförs utan ditt godkännande — du har alltid full kontroll.",
   },
   {
     icon: Brain,
     q: "Kan jag verkligen lita på AI med min ekonomi?",
-    a: "Ja — NorthLedger ersätter inte kontrollen, det tar bort manuellt arbete. AI:n hanterar repetitiva uppgifter medan du granskar och godkänner. All data krypteras med bank-level säkerhet (AES-256).",
+    a: "Ja — Ledger.io ersätter inte kontrollen, det tar bort manuellt arbete. AI:n hanterar repetitiva uppgifter medan du granskar och godkänner. All data krypteras med bank-level säkerhet (AES-256).",
   },
   {
     icon: FileText,
@@ -21,22 +21,22 @@ const faqs = [
   {
     icon: Building2,
     q: "Fungerar det med Skatteverket och svenska regler?",
-    a: "NorthLedger har direktkoppling till Skatteverket för moms (SKV 4700), AGI och INK2. Deklarationer förbereds automatiskt och skickas med ett klick — alltid enligt gällande regelverk.",
+    a: "Ledger.io har direktkoppling till Skatteverket för moms (SKV 4700), AGI och INK2. Deklarationer förbereds automatiskt och skickas med ett klick — alltid enligt gällande regelverk.",
   },
   {
     icon: Users,
-    q: "Vem passar NorthLedger för?",
-    a: "NorthLedger är designat för små och medelstora företag, konsulter och e-handelsföretag som vill ersätta sin ekonomifunktion med AI — oavsett om du har en eller hundra anställda.",
+    q: "Vem passar Ledger.io för?",
+    a: "Ledger.io är designat för små och medelstora företag, konsulter och e-handelsföretag som vill ersätta sin ekonomifunktion med AI — oavsett om du har en eller hundra anställda.",
   },
   {
     icon: GraduationCap,
     q: "Behöver jag kunna bokföring?",
-    a: "Nej. Systemet är byggt så att du inte behöver förstå debet och kredit. NorthLedger fungerar som din personliga ekonomiavdelning.",
+    a: "Nej. Systemet är byggt så att du inte behöver förstå debet och kredit. Ledger.io fungerar som din personliga ekonomiavdelning.",
   },
   {
     icon: ArrowRightLeft,
     q: "Kan jag byta från mitt nuvarande system?",
-    a: "Ja. NorthLedger importerar SIE4-filer och migrerar din data automatiskt. Hela övergången tar bara några minuter.",
+    a: "Ja. Ledger.io importerar SIE4-filer och migrerar din data automatiskt. Hela övergången tar bara några minuter.",
   },
   {
     icon: Clock,
@@ -92,7 +92,7 @@ export const FAQ = () => {
                 className="h-11 px-6 bg-white text-[#050d1a] hover:bg-white/90 font-semibold rounded-lg"
               >
                 <a href="/auth">
-                  Testa NorthLedger
+                  Testa Ledger.io
                   <ArrowRight className="w-4 h-4 ml-1.5" />
                 </a>
               </Button>

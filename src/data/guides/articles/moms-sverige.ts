@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const momsSverige: Article = {
   slug: "moms-sverige",
   h1: "Moms i Sverige — komplett guide (25 %, 12 % och 6 %)",
-  metaTitle: "Moms i Sverige — komplett guide 2026 | NorthLedger",
+  metaTitle: "Moms i Sverige — komplett guide 2026 | Ledger.io",
   metaDescription:
     "Allt om svensk moms: satser, ingående och utgående moms, omvänd skattskyldighet, EU-moms och momsdeklaration SKV 4700. Med exempel.",
   keywords: [
@@ -140,13 +140,13 @@ export const momsSverige: Article = {
       a: "För digitala tjänster och varor över 99 680 kr/år (gemensam EU-tröskel) ska moms redovisas i köparens land. OSS-systemet (One Stop Shop) förenklar rapporteringen.",
     },
     {
-      q: "Kan NorthLedger sköta momsdeklarationen automatiskt?",
-      a: "Ja. NorthLedger sammanställer SKV 4700 automatiskt från bokföringen och kan lämna in deklarationen direkt till Skatteverket via API.",
+      q: "Kan Ledger.io sköta momsdeklarationen automatiskt?",
+      a: "Ja. Ledger.io sammanställer SKV 4700 automatiskt från bokföringen och kan lämna in deklarationen direkt till Skatteverket via API.",
     },
   ],
   internalLinks: {
     related: ["bokfora-faktura", "bokfora-kvitto", "vad-ar-bokforing"],
-    product: { label: "Automatisera momshantering med NorthLedger", href: "/resources/vat-guide" },
+    product: { label: "Automatisera momshantering med Ledger.io", href: "/resources/vat-guide" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

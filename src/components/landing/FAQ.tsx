@@ -3,14 +3,14 @@ import { useState } from "react";
 const FAQS = [
   {
     q: "Vad händer om AI:n konterar fel?",
-    a: "NorthLedger bokför med hög precision mot BAS-kontoplanen, men du godkänner alltid innan något låses. Varje post är granskbar och spårbar till källtransaktionen. Du behåller full kontroll — AI:n tar bort arbetet, inte ansvaret.",
+    a: "Ledger.io bokför med hög precision mot BAS-kontoplanen, men du godkänner alltid innan något låses. Varje post är granskbar och spårbar till källtransaktionen. Du behåller full kontroll — AI:n tar bort arbetet, inte ansvaret.",
   },
   {
-    q: "Måste jag kunna bokföring för att använda NorthLedger?",
-    a: "Nej. NorthLedger är byggt för dig som vill slippa tänka på bokföring helt — inte för dig som redan kan det. Du kopplar ditt bankkonto, laddar upp kvitton, och AI:n sköter resten. Ingen förkunskap krävs.",
+    q: "Måste jag kunna bokföring för att använda Ledger.io?",
+    a: "Nej. Ledger.io är byggt för dig som vill slippa tänka på bokföring helt — inte för dig som redan kan det. Du kopplar ditt bankkonto, laddar upp kvitton, och AI:n sköter resten. Ingen förkunskap krävs.",
   },
   {
-    q: "Är NorthLedger godkänt och i linje med svenska regler?",
+    q: "Är Ledger.io godkänt och i linje med svenska regler?",
     a: "Ja. Systemet följer bokföringslagen, BAS 2026 och Skatteverkets riktlinjer. Moms hanteras korrekt per transaktion och alla poster uppfyller kraven för en godkänd verifikation.",
   },
   {
@@ -19,11 +19,11 @@ const FAQS = [
   },
   {
     q: "Vad händer när jag ska deklarera?",
-    a: "NorthLedger håller din bokföring löpande uppdaterad så att momsdeklaration, arbetsgivardeklaration (AGI) och inkomstdeklaration kan lämnas direkt till Skatteverket via plattformen — utan manuella formulär eller sista-minuten-stress.",
+    a: "Ledger.io håller din bokföring löpande uppdaterad så att momsdeklaration, arbetsgivardeklaration (AGI) och inkomstdeklaration kan lämnas direkt till Skatteverket via plattformen — utan manuella formulär eller sista-minuten-stress.",
   },
   {
     q: "Kan jag byta från min nuvarande bokföringstjänst?",
-    a: "Ja. Du importerar din historik via SIE-fil eller direktkoppling från Fortnox, Visma och andra system. NorthLedger matchar konton, ingående balanser och öppna poster automatiskt — du är igång samma dag.",
+    a: "Ja. Du importerar din historik via SIE-fil eller direktkoppling från Fortnox, Visma och andra system. Ledger.io matchar konton, ingående balanser och öppna poster automatiskt — du är igång samma dag.",
   },
 ];
 

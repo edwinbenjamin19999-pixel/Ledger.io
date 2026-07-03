@@ -40,7 +40,7 @@ const Unsubscribe = () => { const [status, setStatus] = useState<Status>("loadin
         {status === "valid" && (
           <>
             <p className="text-muted-foreground mb-6">
-              Klicka nedan för att avprenumerera från framtida mejl från NorthLedger.
+              Klicka nedan för att avprenumerera från framtida mejl från Ledger.io.
             </p>
             <button
               onClick={handleUnsubscribe}

@@ -154,7 +154,7 @@ export const ServiceAgreementSign = ({ onSigned, onSkip, companyId }: ServiceAgr
         <Alert>
           <Shield className="h-4 w-4" />
           <AlertDescription>
-            För att använda NorthLedger:s tjänster behöver du godkänna vårt tjänsteavtal. 
+            För att använda Ledger.io:s tjänster behöver du godkänna vårt tjänsteavtal. 
             Vi rekommenderar signering med BankID för högsta säkerhet.
           </AlertDescription>
         </Alert>

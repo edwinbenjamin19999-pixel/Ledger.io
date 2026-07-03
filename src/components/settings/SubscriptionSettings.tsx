@@ -144,7 +144,7 @@ export const SubscriptionSettings = ({ companyId }: { companyId: string }) => { 
       <Card>
         <CardHeader>
           <CardTitle>Inkluderade funktioner</CardTitle>
-          <CardDescription>Allt ingår i NorthLedger Komplett – per bolag</CardDescription>
+          <CardDescription>Allt ingår i Ledger.io Komplett – per bolag</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid gap-2">

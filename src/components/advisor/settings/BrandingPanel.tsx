@@ -15,7 +15,7 @@ interface Props {
 }
 
 const PRESETS: Array<{ hex: string; name: string }> = [
-  { hex: "#0B4F6C", name: "NorthLedger Navy" },
+  { hex: "#0B4F6C", name: "Ledger.io Navy" },
   { hex: "#1B4332", name: "Forest" },
   { hex: "#3B1F5E", name: "Purple" },
   { hex: "#7B2D00", name: "Burgundy" },
@@ -126,11 +126,11 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
       </Section>
 
       {/* === POWERED BY === */}
-      <Section title="Powered by NorthLedger">
+      <Section title="Powered by Ledger.io">
         <div className="rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] p-4 flex items-center justify-between">
           <div>
             <div className="text-sm font-semibold text-[#0F172A]">
-              Visa "Powered by NorthLedger" i sidebar-footer
+              Visa "Powered by Ledger.io" i sidebar-footer
             </div>
             <div className="text-xs text-[#64748B] mt-0.5">
               Kan stängas av i Premium White Label-plan
@@ -328,7 +328,7 @@ function MockSidebarPreview({
           </div>
           {showPoweredBy && (
             <div className="px-3 py-2 text-[8px] uppercase tracking-widest text-white/30 font-bold border-t border-white/5">
-              Powered by NorthLedger
+              Powered by Ledger.io
             </div>
           )}
         </div>

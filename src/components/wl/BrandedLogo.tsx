@@ -8,7 +8,7 @@ interface Props {
 /**
  * Tenant-aware logo block for the sidebar header.
  * Renders the tenant's logo + workspace name when a tenant is resolved,
- * otherwise falls back to the default NorthLedger wordmark.
+ * otherwise falls back to the default Ledger.io wordmark.
  */
 export function BrandedLogo({ onClick }: Props) {
   const { tenant } = useTenant();

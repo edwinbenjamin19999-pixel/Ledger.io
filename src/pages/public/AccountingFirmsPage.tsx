@@ -51,7 +51,7 @@ export default function AccountingFirmsPage() {
               Lansera din egen <span className="text-[#3b82f6]">bokföringsplattform</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto">
-              Erbjud NorthLedger under ditt varumärke — med automation, AI och full kontroll över dina klienter.
+              Erbjud Ledger.io under ditt varumärke — med automation, AI och full kontroll över dina klienter.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild className="bg-[#3b82f6] text-[#0a1428] hover:bg-[#3b82f6] font-semibold h-11 px-6">
@@ -88,7 +88,7 @@ export default function AccountingFirmsPage() {
           <div className="container mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f35] tracking-tight">En plattform — under ditt namn</h2>
             <p className="mt-4 text-[#475569] leading-relaxed text-lg">
-              NorthLedger White Label ger dig hela kraften av en modern AI-driven bokföringsplattform — men presenterad som din egen produkt. Du behåller relationen, varumärket och marginalen.
+              Ledger.io White Label ger dig hela kraften av en modern AI-driven bokföringsplattform — men presenterad som din egen produkt. Du behåller relationen, varumärket och marginalen.
             </p>
             <Button asChild className="mt-6 bg-[#3b82f6] text-white hover:bg-[#3b82f6]">
               <Link to="/white-label">Se hela White Label-pitchen <ArrowRight className="w-4 h-4 ml-1" /></Link>

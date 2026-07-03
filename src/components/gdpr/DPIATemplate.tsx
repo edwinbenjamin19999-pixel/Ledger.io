@@ -5,12 +5,12 @@ import { toast } from "sonner";
 
 export const DPIATemplate = () => { const handleDownload = () => { const dpiaContent = `
 # Dataskyddskonsekvensbedömning (DPIA)
-# NorthLedger - Automatiserad Bokföringsplattform
+# Ledger.io - Automatiserad Bokföringsplattform
 
 ## 1. Beskrivning av behandlingen
 
 ### 1.1 Ändamål
-NorthLedger är en automatiserad bokföringsplattform som behandlar ekonomisk data och personuppgifter för att:
+Ledger.io är en automatiserad bokföringsplattform som behandlar ekonomisk data och personuppgifter för att:
 - Tillhandahålla bokförings- och redovisningstjänster
 - Automatisera bokföring med AI-stöd
 - Hantera löner och personaladministration
@@ -169,7 +169,7 @@ Telefon: [Ditt telefonnummer]
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `DPIA-NorthLedger-${new Date().toISOString().split('T')[0]}.md`;
+    a.download = `DPIA-Ledger.io-${new Date().toISOString().split('T')[0]}.md`;
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);

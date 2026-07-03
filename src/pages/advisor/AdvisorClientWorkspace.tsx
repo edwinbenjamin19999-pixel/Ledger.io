@@ -108,7 +108,7 @@ const AdvisorClientWorkspace = () => {
     }
   }, [clientId, client, activeClient?.id, setActiveClient]);
 
-  // Force every reused NorthLedger page (Reports, Invoices, Bank, …) to scope to
+  // Force every reused Ledger.io page (Reports, Invoices, Bank, …) to scope to
   // this client by mirroring the id into ACTIVE_COMPANY_STORAGE_KEY.
   useScopedActiveCompany(clientId);
 

@@ -18,7 +18,7 @@ export const TaxMandateConsent = ({ onAccept, onSkip, loading }: TaxMandateConse
   const mandateText = `
 FULLMAKT FÖR SKATTEÄRENDEN
 
-Jag/Vi ger härmed NorthLedger AB (org.nr 559999-9999) fullmakt att företräda mitt/vårt företag hos Skatteverket avseende:
+Jag/Vi ger härmed Ledger.io AB (org.nr 559999-9999) fullmakt att företräda mitt/vårt företag hos Skatteverket avseende:
 
 1. ARBETSGIVARDEKLARATION (AGI)
    - Skicka in månatliga arbetsgivardeklarationer
@@ -44,22 +44,22 @@ Jag/Vi ger härmed NorthLedger AB (org.nr 559999-9999) fullmakt att företräda 
    - Hämta uppgifter från Skatteverkets och Bolagsverkets register
 
 FULLMAKTENS OMFATTNING:
-NorthLedger AB får endast:
+Ledger.io AB får endast:
 - Läsa och hämta information från Skatteverket
 - Skicka in deklarationer som godkänts av behörig firmatecknare
 - INTE göra betalningar eller andra dispositioner
 
 GILTIGHET:
-Fullmakten gäller tillsvidare och kan när som helst återkallas via NorthLedger:s inställningar.
+Fullmakten gäller tillsvidare och kan när som helst återkallas via Ledger.io:s inställningar.
 
 ÅTERKALLELSE:
 Fullmakten kan återkallas genom att:
-1. Logga in på NorthLedger
+1. Logga in på Ledger.io
 2. Gå till Inställningar > Skatteverket
 3. Klicka på "Återkalla fullmakt"
 
 DATASKYDD:
-NorthLedger hanterar dina uppgifter enligt GDPR och vår integritetspolicy.
+Ledger.io hanterar dina uppgifter enligt GDPR och vår integritetspolicy.
 
 KONTAKT:
 Vid frågor kontakta support@northledger.se
@@ -79,14 +79,14 @@ Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmateck
           Fullmakt för Skatteärenden
         </CardTitle>
         <CardDescription>
-          För att NorthLedger ska kunna skicka deklarationer till Skatteverket behöver vi din fullmakt
+          För att Ledger.io ska kunna skicka deklarationer till Skatteverket behöver vi din fullmakt
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         <Alert>
           <Info className="h-4 w-4" />
           <AlertDescription>
-            Fullmakten gör det möjligt för NorthLedger att automatiskt skicka in AGI, momsdeklarationer, inkomstdeklaration (INK2) samt årsredovisning till Skatteverket och Bolagsverket. 
+            Fullmakten gör det möjligt för Ledger.io att automatiskt skicka in AGI, momsdeklarationer, inkomstdeklaration (INK2) samt årsredovisning till Skatteverket och Bolagsverket. 
             Du behåller full kontroll och kan återkalla fullmakten när som helst.
           </AlertDescription>
         </Alert>
@@ -117,7 +117,7 @@ Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmateck
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-destructive mt-0.5">✗</span>
-                <span>Göra betalningar (detta kan INTE NorthLedger göra)</span>
+                <span>Göra betalningar (detta kan INTE Ledger.io göra)</span>
               </li>
             </ul>
           </div>
@@ -157,7 +157,7 @@ Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmateck
                 className="text-sm leading-relaxed cursor-pointer"
                 onClick={(e) => e.stopPropagation()}
               >
-                Jag ger NorthLedger fullmakt att företräda mitt företag hos Skatteverket enligt ovanstående villkor.
+                Jag ger Ledger.io fullmakt att företräda mitt företag hos Skatteverket enligt ovanstående villkor.
                 Jag bekräftar att jag är behörig firmatecknare.
               </label>
             </div>
@@ -177,7 +177,7 @@ Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmateck
                 className="text-sm leading-relaxed cursor-pointer"
                 onClick={(e) => e.stopPropagation()}
               >
-                Jag har läst och godkänner NorthLedger:s{" "}
+                Jag har läst och godkänner Ledger.io:s{" "}
                 <a href="/terms" target="_blank" className="text-primary hover:underline" onClick={(e) => e.stopPropagation()}>
                   användarvillkor
                 </a>{" "}

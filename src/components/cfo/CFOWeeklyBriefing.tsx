@@ -183,7 +183,7 @@ export function CFOWeeklyBriefing({ companyId, userName, snapshot }: WeeklyBrief
 
     return [
       `VECKOBRIEFING — Vecka ${briefing.weekNumber}, ${briefing.year}`,
-      `Genererad av NorthLedger CFO`,
+      `Genererad av Ledger.io CFO`,
       "",
       "═══ KASSALÄGE ═══",
       `Kassa idag: ${fmt(briefing.cash)} kr`,
@@ -209,7 +209,7 @@ export function CFOWeeklyBriefing({ companyId, userName, snapshot }: WeeklyBrief
       "═══ REKOMMENDERAD ÅTGÄRD ═══",
       briefing.recommendation,
       "",
-      "— NorthLedger CFO",
+      "— Ledger.io CFO",
     ].filter(l => l !== undefined).join("\n");
   };
 

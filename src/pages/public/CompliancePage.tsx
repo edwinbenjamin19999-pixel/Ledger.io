@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, BookCheck, Lock, FileCheck } from "lucide-react";
 
 const SECTIONS = [
-  { icon: BookCheck, title: "BAS-kontoplan 2026", desc: "NorthLedger följer den senaste BAS-kontoplanen med automatisk uppdatering vid årsskifte. Alla konton, momskoder och SRU-kopplingar är förkonfigurerade." },
+  { icon: BookCheck, title: "BAS-kontoplan 2026", desc: "Ledger.io följer den senaste BAS-kontoplanen med automatisk uppdatering vid årsskifte. Alla konton, momskoder och SRU-kopplingar är förkonfigurerade." },
   { icon: Shield, title: "GDPR & dataskydd", desc: "All data lagras inom EU. Krypterad i vila och i transit. Inbyggt stöd för registerutdrag, dataportabilitet och rätt att bli glömd." },
   { icon: FileCheck, title: "Bokföringslagen (BFL)", desc: "Digital arkivering enligt BFL i 7 år. Spårbarhet, oföränderlighet och fullständig revisionslogg på varje verifikation." },
   { icon: Lock, title: "Årsredovisningslagen (ÅRL)", desc: "Stöd för K2 och K3. Genererar årsredovisning i strukturerat format för digital inlämning till Bolagsverket." },
@@ -26,7 +26,7 @@ export default function CompliancePage() {
               Byggt för svenska regler
             </h1>
             <p className="mt-5 text-lg text-[#475569] leading-relaxed">
-              NorthLedger följer svensk redovisningsstandard, dataskyddsregler och inlämningskrav — så att du kan fokusera på företaget istället för paragraferna.
+              Ledger.io följer svensk redovisningsstandard, dataskyddsregler och inlämningskrav — så att du kan fokusera på företaget istället för paragraferna.
             </p>
           </div>
         </section>
@@ -51,7 +51,7 @@ export default function CompliancePage() {
             <p className="mt-3 text-[#64748b]">Inga plug-ins, inga bilagor. Allt är en del av plattformen.</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild className="bg-white text-[#050d1a] hover:bg-white/90 font-semibold">
-                <Link to="/auth">Testa NorthLedger <ArrowRight className="w-4 h-4 ml-1" /></Link>
+                <Link to="/auth">Testa Ledger.io <ArrowRight className="w-4 h-4 ml-1" /></Link>
               </Button>
               <Button asChild variant="outline">
                 <Link to="/security-info">Läs om säkerhet</Link>

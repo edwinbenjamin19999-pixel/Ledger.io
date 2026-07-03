@@ -82,7 +82,7 @@ export const ComparisonTable = () => { const features = [
                       <th className="text-left p-4 font-semibold min-w-[200px]">Funktion</th>
                       <th className="text-center p-4 font-semibold min-w-[120px]">
                         <div className="flex flex-col items-center gap-1">
-                          <span className="text-primary">NorthLedger</span>
+                          <span className="text-primary">Ledger.io</span>
                           <Badge variant="secondary" className="text-xs">Från 99 kr</Badge>
                         </div>
                       </th>

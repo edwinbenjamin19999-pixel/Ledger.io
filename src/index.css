@@ -11,7 +11,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* NorthLedger Design System – Theme-aware with data-theme attribute */
+/* Ledger.io Design System – Theme-aware with data-theme attribute */
 
 @layer base {
   /* ═══ TEMA 1: Blått (standard) ═══ */
@@ -131,7 +131,7 @@
      Applied on the WL app shell wrapper (.wl-scope). Overrides the global
      brand tokens with cyan defaults for /wl/app/*. Per-tenant branding from
      useBureauBranding() further overrides --brand-primary at runtime. Standard
-     NorthLedger surfaces (outside .wl-scope) keep navy via --primary. */
+     Ledger.io surfaces (outside .wl-scope) keep navy via --primary. */
   .wl-scope {
     --brand-primary: 192 91% 36%;        /* cyan-600  #3b82f6 */
     --brand-primary-hover: 192 91% 30%;  /* cyan-700  #3b82f6 */
@@ -405,7 +405,7 @@ table tbody td,
 }
 
 /* ══════════════════════════════════════════════════
-   NORTHLEDGER DESIGN SYSTEM v6 — Premium Polish Layer
+   LEDGER.IO DESIGN SYSTEM v6 — Premium Polish Layer
    ══════════════════════════════════════════════════ */
 
 /* ── 0. PREMIUM CSS VARIABLES ── */
@@ -1331,7 +1331,7 @@ textarea[class*="bg-slate-"]:focus {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   NorthLedger Design System v1 — Linear/Vercel/Stripe-feel
+   Ledger.io Design System v1 — Linear/Vercel/Stripe-feel
    Phase 1 foundation. Use ds.* tokens / DS* primitives for all NEW UI.
    See mem://style/northledger-design-system-v1 for rules.
    ═══════════════════════════════════════════════════════════════ */

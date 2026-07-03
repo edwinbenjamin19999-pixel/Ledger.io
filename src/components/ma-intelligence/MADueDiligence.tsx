@@ -123,7 +123,7 @@ export function MADueDiligence({ fin, ddScore }: Props) { const financialDD: Che
             <TrendingUp className="h-4 w-4" />
             Finansiell Due Diligence
           </CardTitle>
-          <CardDescription>Automatiskt genererat från NorthLedger-bokföring</CardDescription>
+          <CardDescription>Automatiskt genererat från Ledger.io-bokföring</CardDescription>
         </CardHeader>
         <CardContent className="space-y-2">
           {financialDD.map(item => (
@@ -204,7 +204,7 @@ export function MADueDiligence({ fin, ddScore }: Props) { const financialDD: Che
               Exportera PDF
             </Button>
           </div>
-          <AccuracyDisclaimer className="mt-3" dataSource="NorthLedger huvudbok" />
+          <AccuracyDisclaimer className="mt-3" dataSource="Ledger.io huvudbok" />
         </CardContent>
       </Card>
     </div>

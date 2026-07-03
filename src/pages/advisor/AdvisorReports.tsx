@@ -168,7 +168,7 @@ export default function AdvisorReports() {
             <ReportPage title="Nästa månads åtgärder" subtitle="Moms-deadline 12:e samt rekommenderad fakturapåminnelse." />
           </div>
           <p className="text-[10px] text-slate-400 mt-3 text-center">
-            Sammanställt med NorthLedger · Watermark "UTKAST" tas bort vid godkännande
+            Sammanställt med Ledger.io · Watermark "UTKAST" tas bort vid godkännande
           </p>
         </div>
       )}

@@ -176,7 +176,7 @@ export default function ReviewQueuePage() {
       <header className="bg-white border-b border-slate-200/70">
         <div className="px-6 py-5 max-w-[1400px] mx-auto">
           <div className="font-mono text-[10px] tracking-[0.12em] text-slate-400 uppercase">
-            NorthLedger · Exception workspace
+            Ledger.io · Exception workspace
           </div>
           <div className="flex items-start justify-between gap-4 mt-0.5">
             <div className="min-w-0">

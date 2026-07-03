@@ -69,7 +69,7 @@ const CoSign = () => {
         <div className="flex items-center gap-2 mb-1">
           <FileSignature className="w-5 h-5 text-[#3b82f6]" />
           <span className="text-[12px] font-semibold tracking-wide text-[#3b82f6] uppercase">
-            NorthLedger · Medsignering
+            Ledger.io · Medsignering
           </span>
         </div>
         <h1 className="text-[22px] font-bold text-[#0f1f35] tracking-tight">
@@ -148,7 +148,7 @@ const CoSign = () => {
             <div>
               <p className="font-semibold text-[15px]">Tack — du är klar!</p>
               <p className="text-sm mt-1">
-                Initiatorn meddelas direkt och bolagets fulla läge aktiveras nu i NorthLedger.
+                Initiatorn meddelas direkt och bolagets fulla läge aktiveras nu i Ledger.io.
               </p>
             </div>
           </div>

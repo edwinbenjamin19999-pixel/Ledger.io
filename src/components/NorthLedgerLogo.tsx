@@ -36,9 +36,9 @@ export const NorthLedgerLogo = () => { const [loading, setLoading] = useState(fa
   return (
     <Card>
       <CardHeader>
-        <CardTitle>NorthLedger Logotyp</CardTitle>
+        <CardTitle>Ledger.io Logotyp</CardTitle>
         <CardDescription>
-          Generera och ladda ner NorthLedger-logotyp för branding
+          Generera och ladda ner Ledger.io-logotyp för branding
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -62,7 +62,7 @@ export const NorthLedgerLogo = () => { const [loading, setLoading] = useState(fa
             <div className="border rounded-lg p-4 bg-white">
               <img 
                 src={logoUrl} 
-                alt="NorthLedger Logo" 
+                alt="Ledger.io Logo" 
                 className="w-full h-auto max-w-md mx-auto"
               />
             </div>

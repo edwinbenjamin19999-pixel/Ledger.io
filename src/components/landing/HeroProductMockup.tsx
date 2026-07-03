@@ -22,7 +22,7 @@ export const HeroProductMockup = () => {
       >
         <img
           src={heroDashboard}
-          alt="NorthLedger dashboardöversikt"
+          alt="Ledger.io dashboardöversikt"
           className="block w-full h-auto"
           loading="eager"
         />
