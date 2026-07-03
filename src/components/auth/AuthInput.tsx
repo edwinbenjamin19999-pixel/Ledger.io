@@ -7,8 +7,8 @@ export interface AuthInputProps extends Omit<React.InputHTMLAttributes<HTMLInput
 }
 
 /**
- * Premium auth input — matches landing CTA visual standard.
- * h-[52px] default, h-[56px] for lg. rounded-xl, soft border, cyan focus ring.
+ * FLAT AUTH-INPUT — muted yta i vila, vit yta + hård blå kant i fokus.
+ * Ingen ring-glow, ingen skugga (flat-systemets fokusprincip).
  */
 export const AuthInput = React.forwardRef<HTMLInputElement, AuthInputProps>(
   ({ className, inputSize = "default", ...props }, ref) => {
@@ -16,12 +16,12 @@ export const AuthInput = React.forwardRef<HTMLInputElement, AuthInputProps>(
       <input
         ref={ref}
         className={cn(
-          "w-full px-4 bg-white text-[#0f1f35] text-[15px]",
-          "border border-slate-200 rounded-xl",
-          "placeholder:text-slate-400",
-          "focus:outline-none focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/15",
+          "w-full px-4 bg-gray-100 text-[#0F1B2D] text-[15px]",
+          "border-2 border-transparent rounded-md",
+          "placeholder:text-[#0F1B2D]/40",
+          "focus:outline-none focus:border-[#2563EB] focus:bg-white",
           "disabled:opacity-50 disabled:cursor-not-allowed",
-          "transition-all duration-150",
+          "transition-colors duration-200",
           inputSize === "lg" ? "h-[56px] text-base" : "h-[52px]",
           className,
         )}

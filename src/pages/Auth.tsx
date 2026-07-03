@@ -272,16 +272,16 @@ const Auth = () => {
     );
   }
 
-  // Shared button class — matches landing CTA exactly
+  // FLAT: solid blå CTA — färgskifte + skala, aldrig skugga (matchar landningssidan)
   const primaryBtn =
-    "w-full h-[52px] rounded-xl bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold text-[15px] " +
-    "shadow-[0_2px_12px_rgba(8,145,178,0.25)] hover:shadow-[0_4px_16px_rgba(8,145,178,0.35)] " +
-    "hover:-translate-y-px active:translate-y-0 transition-all duration-150 " +
-    "disabled:opacity-60 disabled:hover:translate-y-0 flex items-center justify-center gap-2";
+    "w-full h-[52px] rounded-md bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold text-[15px] " +
+    "hover:scale-[1.02] active:scale-100 transition-all duration-200 " +
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 " +
+    "disabled:opacity-60 disabled:hover:scale-100 flex items-center justify-center gap-2";
 
   const googleBtn =
-    "w-full h-[52px] rounded-xl border border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 " +
-    "transition-all duration-150 font-medium text-[15px] text-slate-700 " +
+    "w-full h-[52px] rounded-md border-2 border-gray-200 bg-white hover:border-[#2563EB] hover:bg-blue-50 " +
+    "transition-colors duration-200 font-semibold text-[15px] text-[#0F1B2D] " +
     "disabled:opacity-60 flex items-center justify-center gap-3";
 
   const handleGoogle = async () => {
@@ -338,8 +338,8 @@ const Auth = () => {
     <AuthShell>
       {/* Desktop logo (mobile already shown in shell) */}
       <div className="hidden lg:flex items-center gap-0 mb-10">
-        <span className="text-xl font-[800] text-[#3b82f6]">Bok</span>
-        <span className="text-xl font-[800] text-[#0f1f35]">fy</span>
+        <span className="text-xl font-extrabold tracking-tight text-[#0F1B2D]">Bok</span>
+        <span className="text-xl font-extrabold tracking-tight text-[#2563EB]">fy</span>
       </div>
 
       {/* SIGN IN */}

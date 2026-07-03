@@ -20,48 +20,45 @@ const STATS = [
 ];
 
 /**
- * Shared split-screen wrapper for auth + onboarding.
- * LEFT: branding (#0f1f35) — identical to landing hero.
- * RIGHT: white minimal slot for forms.
+ * FLAT AUTH-SHELL — split-screen som speglar landningssidans poster-hero.
+ * VÄNSTER: solitt blue-600-block med geometrisk dekoration (inga glows,
+ * mönster eller gradienter). Amber marker-highlight på "Automatiserad."
+ * HÖGER: vit minimal yta för formulär.
  */
 export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-white">
-      {/* LEFT — branding panel, hidden on mobile */}
-      <div className="hidden lg:flex flex-1 bg-[#0f1f35] relative overflow-hidden flex-col justify-between p-12 xl:p-16">
-        <div
-          className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255,255,255,0.15) 59px, rgba(255,255,255,0.15) 60px)",
-          }}
-        />
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(8,145,178,0.1)_0%,transparent_70%)] pointer-events-none" />
+      {/* LEFT — flat blått poster-block, dolt på mobil */}
+      <div className="hidden lg:flex flex-1 bg-[#2563EB] relative overflow-hidden flex-col justify-between p-12 xl:p-16">
+        {/* Geometrisk dekoration — platta former i låg opacitet */}
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full bg-white/5" />
+          <div className="absolute bottom-[18%] -left-24 h-[260px] w-[260px] rounded-full bg-white/5" />
+          <div className="absolute -bottom-16 right-[14%] h-[180px] w-[180px] rotate-12 bg-white/5" />
+        </div>
 
         <div className="relative z-10">
-          <div className="flex items-center gap-0">
-            <span className="text-2xl font-[800] text-[#3b82f6]">Bok</span>
-            <span className="text-2xl font-[800] text-white">fy</span>
-          </div>
+          <span className="text-2xl font-extrabold tracking-tight text-white">Bokfy</span>
         </div>
 
         <div className="relative z-10 space-y-8">
           <h2
-            className={`${compact ? "text-[36px]" : "text-[44px]"} font-[900] text-white leading-[1.1]`}
-            style={{ letterSpacing: "-1.8px" }}
+            className={`${compact ? "text-[36px]" : "text-[44px]"} font-extrabold text-white leading-[1.15] tracking-tight`}
           >
             Bokföring.
             <br />
-            <span className="text-[#3b82f6]">Automatiserad.</span>
+            <span className="inline-block bg-[#F59E0B] px-3 text-[#0F1B2D]">
+              Automatiserad.
+            </span>
           </h2>
 
           <div className="space-y-4">
             {FEATURES.map((f) => (
               <div key={f} className="flex items-center gap-3">
-                <div className="w-[26px] h-[26px] rounded-md bg-[rgba(34,211,238,0.1)] flex items-center justify-center flex-shrink-0">
-                  <Check className="w-3.5 h-3.5 text-[#3b82f6]" />
+                <div className="flex h-[26px] w-[26px] flex-shrink-0 items-center justify-center rounded-md bg-white">
+                  <Check className="h-3.5 w-3.5 text-[#2563EB]" strokeWidth={3} aria-hidden />
                 </div>
-                <span className="text-sm text-[rgba(255,255,255,0.5)]">{f}</span>
+                <span className="text-sm font-medium text-white/90">{f}</span>
               </div>
             ))}
           </div>
@@ -70,8 +67,8 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
         <div className="relative z-10 flex gap-10">
           {STATS.map((s) => (
             <div key={s.label}>
-              <div className="text-[22px] font-[800] text-white">{s.value}</div>
-              <div className="text-[11.5px] text-[rgba(255,255,255,0.3)] uppercase tracking-wider mt-0.5">
+              <div className="text-[22px] font-extrabold text-white">{s.value}</div>
+              <div className="mt-0.5 text-[11.5px] uppercase tracking-wider text-blue-100">
                 {s.label}
               </div>
             </div>
@@ -84,8 +81,8 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
         <div className="w-full max-w-sm mx-auto">
           {/* Mobile-only logo */}
           <div className="flex lg:hidden items-center gap-0 mb-8">
-            <span className="text-xl font-[800] text-[#3b82f6]">Bok</span>
-            <span className="text-xl font-[800] text-[#0f1f35]">fy</span>
+            <span className="text-xl font-extrabold tracking-tight text-[#0F1B2D]">Bok</span>
+            <span className="text-xl font-extrabold tracking-tight text-[#2563EB]">fy</span>
           </div>
           {children}
         </div>

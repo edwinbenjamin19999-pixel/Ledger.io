@@ -44,7 +44,7 @@ export function KPIWidget({
     <Card
       className={cn(
         "p-4 flex flex-col gap-2 relative transition-all min-h-[148px]",
-        onClick && !editing && "cursor-pointer hover:shadow-md hover:-translate-y-0.5",
+        onClick && !editing && "cursor-pointer hover:border-primary/40",
         editing && "outline-dashed outline-1 outline-muted-foreground/30",
       )}
       onClick={editing ? undefined : onClick}
