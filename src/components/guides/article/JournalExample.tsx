@@ -10,7 +10,7 @@ export const JournalExample = ({ data }: { data: JournalExampleData }) => {
     <figure className="not-prose my-14 rounded-[20px] border border-slate-900/[0.06] bg-[#F8FAFC] overflow-hidden shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
       <figcaption className="border-b border-slate-900/[0.06] bg-white px-6 py-5">
         <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3b82f6]">Exempel</div>
-        <div className="mt-1.5 text-[17px] font-semibold text-[#0f1f35] tracking-tight">{data.title}</div>
+        <div className="mt-1.5 text-[17px] font-semibold text-[#0F1B2D] tracking-tight">{data.title}</div>
         <p className="mt-1 text-[15px] text-slate-600 leading-relaxed">{data.scenario}</p>
       </figcaption>
       <div className="overflow-x-auto">
@@ -27,7 +27,7 @@ export const JournalExample = ({ data }: { data: JournalExampleData }) => {
             {data.lines.map((line, i) => (
               <tr key={i} className="hover:bg-white/60 transition-colors">
                 <td className="px-6 py-3.5">
-                  <span className="inline-flex items-center rounded-md bg-white border border-slate-900/[0.06] px-2 py-0.5 font-mono text-[12px] font-semibold text-[#0f1f35]">
+                  <span className="inline-flex items-center rounded-md bg-white border border-slate-900/[0.06] px-2 py-0.5 font-mono text-[12px] font-semibold text-[#0F1B2D]">
                     {line.account}
                   </span>
                 </td>

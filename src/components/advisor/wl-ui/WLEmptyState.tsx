@@ -91,7 +91,7 @@ export const WLEmptyState = ({
               <button
                 key={c.id}
                 onClick={c.onOpen}
-                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-700 hover:border-[#3b82f6] hover:bg-cyan-50/40 hover:text-[#3b82f6] transition"
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-700 hover:border-[#3b82f6] hover:bg-blue-50/40 hover:text-[#3b82f6] transition"
               >
                 {c.name}
                 <ChevronRight className="h-3 w-3 opacity-60" />

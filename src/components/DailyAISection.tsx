@@ -34,7 +34,7 @@ export const DailyAISection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 sm:py-28 bg-gradient-to-b from-[#0f1f35] to-[#0B1D2A]">
+    <section ref={sectionRef} className="py-20 sm:py-28 bg-gradient-to-b from-[#0F1B2D] to-[#0B1D2A]">
       <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
         <div className="text-center mb-14">
           <h2
@@ -58,7 +58,7 @@ export const DailyAISection = () => {
               key={step}
               className={`flex items-center gap-2.5 px-4 py-3 rounded-xl border transition-all duration-500 ${
                 i < visibleSteps
-                  ? "border-[rgba(34,211,238,0.2)] bg-[rgba(34,211,238,0.06)] opacity-100 translate-y-0"
+                  ? "border-[rgba(37,99,235,0.2)] bg-[rgba(37,99,235,0.06)] opacity-100 translate-y-0"
                   : "border-white/[0.06] bg-white/[0.02] opacity-30 translate-y-2"
               }`}
             >
@@ -75,7 +75,7 @@ export const DailyAISection = () => {
         {/* Mobile: single-insight horizontal swipe (Insight + Risk as 2 slides) */}
         <div className="sm:hidden -mx-4 mb-6">
           <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory px-4 pb-3 scrollbar-hide">
-            <div className="snap-center flex-shrink-0 w-[88%] rounded-xl border border-[rgba(34,211,238,0.25)] bg-[rgba(34,211,238,0.06)] p-5">
+            <div className="snap-center flex-shrink-0 w-[88%] rounded-xl border border-[rgba(37,99,235,0.25)] bg-[rgba(37,99,235,0.06)] p-5">
               <div className="flex items-center gap-2 mb-2">
                 <Lightbulb className="w-4 h-4 text-[#3b82f6]" />
                 <span className="text-[12px] font-semibold text-[#3b82f6] uppercase tracking-wider">Insikt</span>
@@ -104,7 +104,7 @@ export const DailyAISection = () => {
             showCards ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <div className="rounded-xl border border-[rgba(34,211,238,0.25)] bg-[rgba(34,211,238,0.06)] p-5">
+          <div className="rounded-xl border border-[rgba(37,99,235,0.25)] bg-[rgba(37,99,235,0.06)] p-5">
             <div className="flex items-center gap-2 mb-2">
               <Lightbulb className="w-4 h-4 text-[#3b82f6]" />
               <span className="text-[12px] font-semibold text-[#3b82f6] uppercase tracking-wider">Insikt</span>

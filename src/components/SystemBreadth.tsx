@@ -57,9 +57,9 @@ export const SystemBreadth = () => {
           {items.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="group flex flex-col items-center gap-3 p-5 rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm hover:border-[rgba(34,211,238,0.2)] hover:bg-[rgba(34,211,238,0.04)] hover:shadow-[0_0_20px_rgba(6,182,212,0.08)] transition-all duration-300"
+              className="group flex flex-col items-center gap-3 p-5 rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm hover:border-[rgba(37,99,235,0.2)] hover:bg-[rgba(37,99,235,0.04)] hover:shadow-[0_0_20px_rgba(37,99,235,0.08)] transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-xl bg-[rgba(34,211,238,0.08)] border border-[rgba(34,211,238,0.12)] flex items-center justify-center group-hover:border-[rgba(34,211,238,0.25)] transition-colors duration-300">
+              <div className="w-10 h-10 rounded-xl bg-[rgba(37,99,235,0.08)] border border-[rgba(37,99,235,0.12)] flex items-center justify-center group-hover:border-[rgba(37,99,235,0.25)] transition-colors duration-300">
                 <Icon className="w-5 h-5 text-[#3b82f6] group-hover:text-[#3b82f6] transition-colors duration-300" />
               </div>
               <span className="text-[13px] font-medium text-white/60 group-hover:text-white/80 transition-colors duration-300 text-center">

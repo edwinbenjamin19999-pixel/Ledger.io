@@ -135,7 +135,7 @@ export function PosSetupFlow() {
               {i > 0 && <div className={cn("h-px w-6 md:w-10", isPast || isActive ? "bg-[#3b82f6]" : "bg-border")} />}
               <div className={cn(
                 "flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors border",
-                isActive ? "bg-[#3b82f6] text-white border-cyan-600" : isPast ? "bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6] border-[#C8DDF5]" : "bg-card text-muted-foreground border-border"
+                isActive ? "bg-[#3b82f6] text-white border-blue-600" : isPast ? "bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6] border-[#C8DDF5]" : "bg-card text-muted-foreground border-border"
               )}>
                 <span className="font-semibold tabular-nums">{i + 1}</span>
                 <span className="font-medium">{s.label}</span>

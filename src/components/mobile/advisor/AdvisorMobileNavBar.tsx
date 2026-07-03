@@ -45,13 +45,13 @@ export const AdvisorMobileNavBar = ({ active, onChange }: AdvisorMobileNavBarPro
             {isActive && (
               <span className={cn(
                 "absolute top-1 left-1/2 -translate-x-1/2 h-0.5 w-6 rounded-full bg-[#3b82f6]",
-                "shadow-[0_0_8px_rgba(34,211,238,0.7)]",
+                "shadow-[0_0_8px_rgba(37,99,235,0.7)]",
               )} />
             )}
             <div className={cn(
               "rounded-xl p-1 transition-all",
               isActive && "scale-110",
-              isActive && isAI && "shadow-[0_0_14px_rgba(6,182,212,0.5)]",
+              isActive && isAI && "shadow-[0_0_14px_rgba(37,99,235,0.5)]",
             )}>
               <Icon className="h-5 w-5" strokeWidth={isActive ? 2.5 : 1.75} />
             </div>

@@ -146,7 +146,7 @@ export default function Funktioner() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#050d1a]">
+    <div className="min-h-screen bg-[#0F1B2D]">
       <Header />
 
       {/* Page header */}
@@ -168,7 +168,7 @@ export default function Funktioner() {
           {FEATURES.map(({ icon: Icon, title, body }) => (
             <div
               key={title}
-              className="bg-[#0a1525] rounded-2xl p-7 border border-white/5 hover:border-white/10 transition-colors"
+              className="bg-[#0F1B2D] rounded-2xl p-7 border border-white/5 hover:border-white/10 transition-colors"
             >
               <Icon />
               <h3 className="text-white font-semibold text-base mb-2">{title}</h3>

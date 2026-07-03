@@ -2,7 +2,7 @@ import { CheckCircle2, X, Sparkles } from "lucide-react";
 import type { SolutionComparison as SolutionComparisonData } from "@/data/guides/articles/types";
 
 export const SolutionComparison = ({ data }: { data: SolutionComparisonData }) => (
-  <section className="relative my-16 -mx-2 md:-mx-6 rounded-[28px] bg-gradient-to-br from-[#0F1F35] via-[#101a3a] to-[#0a1525] p-8 md:p-10 overflow-hidden">
+  <section className="relative my-16 -mx-2 md:-mx-6 rounded-[28px] bg-gradient-to-br from-[#0F1B2D] via-[#101a3a] to-[#0F1B2D] p-8 md:p-10 overflow-hidden">
     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#3b82f6]/40 to-transparent" />
 
     <div className="flex items-center gap-2.5">
@@ -35,7 +35,7 @@ export const SolutionComparison = ({ data }: { data: SolutionComparisonData }) =
       {/* Med Bokfy */}
       <div className="relative rounded-2xl border border-[#3b82f6]/20 bg-[#3b82f6]/[0.08] p-5 overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-px bg-[#3b82f6]/40" />
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-[#3b82f6]/15 border border-[#3b82f6]/30 px-2.5 py-1 text-[11px] uppercase tracking-[0.14em] font-semibold text-[#3b82f6] shadow-[0_0_20px_-4px_rgba(34,211,238,0.4)]">
+        <div className="inline-flex items-center gap-1.5 rounded-full bg-[#3b82f6]/15 border border-[#3b82f6]/30 px-2.5 py-1 text-[11px] uppercase tracking-[0.14em] font-semibold text-[#3b82f6] shadow-[0_0_20px_-4px_rgba(37,99,235,0.4)]">
           Med Bokfy
         </div>
         <ul className="mt-4 space-y-3">

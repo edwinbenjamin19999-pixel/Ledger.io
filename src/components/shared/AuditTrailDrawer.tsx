@@ -69,7 +69,7 @@ export const AuditTrailDrawer = ({ journalEntryId }: Props) => {
               const Icon = isAi ? Sparkles : e.action.includes("edit") ? FileEdit : User;
               return (
                 <li key={e.id} className="ml-4 relative">
-                  <span className={`absolute -left-[22px] top-1 w-2.5 h-2.5 rounded-full ring-4 ${isAi ? "bg-[#3b82f6] ring-cyan-100" : "bg-slate-400 ring-slate-100"}`} />
+                  <span className={`absolute -left-[22px] top-1 w-2.5 h-2.5 rounded-full ring-4 ${isAi ? "bg-[#3b82f6] ring-blue-100" : "bg-slate-400 ring-slate-100"}`} />
                   <div className="flex items-baseline justify-between gap-2">
                     <span className="text-xs font-medium text-slate-700 inline-flex items-center gap-1.5">
                       <Icon className="w-3 h-3" />

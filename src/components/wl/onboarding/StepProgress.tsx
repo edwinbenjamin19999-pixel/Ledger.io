@@ -22,7 +22,7 @@ export function StepProgress({ current, steps }: Props) {
               <div
                 className={`h-7 w-7 rounded-full flex items-center justify-center text-[11px] font-semibold border transition-all ${
                   isActive
-                    ? "bg-[#3b82f6] text-white border-[#3b82f6] shadow-[0_0_0_4px_rgba(8,145,178,0.12)]"
+                    ? "bg-[#3b82f6] text-white border-[#3b82f6] shadow-[0_0_0_4px_rgba(37,99,235,0.12)]"
                     : isDone
                     ? "bg-[#3b82f6] text-white border-[#3b82f6]"
                     : "bg-white text-slate-400 border-slate-200"

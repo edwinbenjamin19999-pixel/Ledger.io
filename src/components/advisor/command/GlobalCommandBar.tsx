@@ -145,7 +145,7 @@ export const GlobalCommandBar = () => {
           style={{
             background:
               "linear-gradient(180deg, rgba(15,23,42,0.96) 0%, rgba(15,23,42,0.92) 100%)",
-            border: "1px solid rgba(8,145,178,0.25)",
+            border: "1px solid rgba(37,99,235,0.25)",
             boxShadow:
               "0 8px 24px rgba(15,23,42,0.18), inset 0 1px 0 rgba(255,255,255,0.04)",
           }}
@@ -166,7 +166,7 @@ export const GlobalCommandBar = () => {
             style={{
               background:
                 "linear-gradient(180deg, rgba(15,23,42,0.98) 0%, rgba(2,6,23,0.98) 100%)",
-              border: "1px solid rgba(8,145,178,0.35)",
+              border: "1px solid rgba(37,99,235,0.35)",
               boxShadow:
                 "0 30px 80px rgba(2,6,23,0.45), inset 0 1px 0 rgba(255,255,255,0.06)",
               backdropFilter: "blur(20px)",

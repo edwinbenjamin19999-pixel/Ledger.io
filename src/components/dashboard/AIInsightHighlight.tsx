@@ -119,7 +119,7 @@ export const AIInsightHighlight = ({ companyId }: AIInsightHighlightProps) => {
           <Button
             variant="ghost"
             size="sm"
-            className="text-[#3b82f6] hover:text-[#3b82f6] hover:bg-[rgba(8,145,178,0.1)] flex-shrink-0 h-7 text-xs"
+            className="text-[#3b82f6] hover:text-[#3b82f6] hover:bg-[rgba(37,99,235,0.1)] flex-shrink-0 h-7 text-xs"
             onClick={() => navigate("/cfo")}
           >
             Se detaljer

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export const NewsletterCTA = () => (
   <section className="py-16">
     <div className="container mx-auto max-w-4xl px-6">
-      <div className="rounded-3xl bg-gradient-to-br from-[#0f1f35] to-[#3b82f6] p-10 md:p-14 text-center text-white shadow-[0_30px_80px_rgba(8,145,178,0.25)]">
+      <div className="rounded-3xl bg-gradient-to-br from-[#0F1B2D] to-[#3b82f6] p-10 md:p-14 text-center text-white shadow-[0_30px_80px_rgba(37,99,235,0.25)]">
         <Mail className="w-8 h-8 mx-auto text-[#3b82f6]" />
         <h2 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">Få nya insikter om AI och bokföring</h2>
         <p className="mt-3 text-white/70 max-w-lg mx-auto">

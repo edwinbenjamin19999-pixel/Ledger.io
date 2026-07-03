@@ -189,7 +189,7 @@ export const AgeingCustomerTable = ({
                                         type,
                                       );
                                     }}
-                                    className="inline-flex items-center gap-1 text-[11px] h-6 px-2 rounded-md border border-[#C8DDF5] dark:border-[#3b82f6]/60 text-[#3b82f6] dark:text-[#1E3A5F] hover:bg-[#EFF6FF] dark:hover:bg-cyan-950/30 transition-colors"
+                                    className="inline-flex items-center gap-1 text-[11px] h-6 px-2 rounded-md border border-[#C8DDF5] dark:border-[#3b82f6]/60 text-[#3b82f6] dark:text-[#1E3A5F] hover:bg-[#EFF6FF] dark:hover:bg-blue-950/30 transition-colors"
                                   >
                                     <Send className="w-2.5 h-2.5" />
                                     Påminn

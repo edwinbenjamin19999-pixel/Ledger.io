@@ -156,7 +156,7 @@ export const FinancialModelView = ({ rr, br }: Props) => {
           "transition-colors",
           isTotal && "bg-slate-900 dark:bg-slate-950 text-white font-bold",
           isSubtotal && "bg-slate-100 dark:bg-slate-800 font-semibold border-t border-slate-200 dark:border-slate-700",
-          isKPI && "bg-cyan-50/50 dark:bg-cyan-950/20",
+          isKPI && "bg-blue-50/50 dark:bg-blue-950/20",
           !isTotal && !isSubtotal && !isKPI && "hover:bg-slate-50 dark:hover:bg-slate-800/50 border-b border-slate-50 dark:border-slate-900",
         )}
       >

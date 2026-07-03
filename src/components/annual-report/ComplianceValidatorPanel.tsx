@@ -88,7 +88,7 @@ function ChecklistRow({ check, onNavigate }: { check: ComplianceCheck; onNavigat
           {check.label}
         </p>
         {cta && (
-          <p className="text-[10px] text-[#0B4F6C] opacity-0 group-hover:opacity-100 transition-opacity">{cta}</p>
+          <p className="text-[10px] text-[#1D4ED8] opacity-0 group-hover:opacity-100 transition-opacity">{cta}</p>
         )}
       </div>
     </button>
@@ -105,7 +105,7 @@ function CircularProgress({ pct }: { pct: number }) {
         <circle cx="22" cy="22" r={r} fill="none" stroke="#F1F5F9" strokeWidth="4" />
         <circle
           cx="22" cy="22" r={r} fill="none"
-          stroke={pct === 100 ? "#1D9E75" : "#0B4F6C"}
+          stroke={pct === 100 ? "#1D9E75" : "#1D4ED8"}
           strokeWidth="4"
           strokeDasharray={`${dash} ${c}`}
           strokeLinecap="round"

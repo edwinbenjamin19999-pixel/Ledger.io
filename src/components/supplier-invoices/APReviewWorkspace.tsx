@@ -391,7 +391,7 @@ export function APReviewWorkspace({ invoice, onBack }: Props) {
                             value={l.account}
                             onChange={(e) => updateLine(l.id, { account: e.target.value })}
                             disabled={isTerminal}
-                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#0B4F6C]"
+                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#1D4ED8]"
                           />
                         </td>
                         <td className="px-1 py-1">
@@ -399,7 +399,7 @@ export function APReviewWorkspace({ invoice, onBack }: Props) {
                             value={l.costCenter}
                             onChange={(e) => updateLine(l.id, { costCenter: e.target.value })}
                             disabled={isTerminal}
-                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#0B4F6C]"
+                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#1D4ED8]"
                           />
                         </td>
                         <td className="px-1 py-1">
@@ -407,7 +407,7 @@ export function APReviewWorkspace({ invoice, onBack }: Props) {
                             value={l.project}
                             onChange={(e) => updateLine(l.id, { project: e.target.value })}
                             disabled={isTerminal}
-                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#0B4F6C]"
+                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#1D4ED8]"
                           />
                         </td>
                         <td className="px-1 py-1">
@@ -415,7 +415,7 @@ export function APReviewWorkspace({ invoice, onBack }: Props) {
                             value={l.vatCode}
                             onChange={(e) => updateLine(l.id, { vatCode: e.target.value })}
                             disabled={isTerminal}
-                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#0B4F6C] w-16"
+                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#1D4ED8] w-16"
                           />
                         </td>
                         <td className="px-1 py-1 text-right">
@@ -425,7 +425,7 @@ export function APReviewWorkspace({ invoice, onBack }: Props) {
                             value={l.amount}
                             onChange={(e) => updateLine(l.id, { amount: parseFloat(e.target.value) || 0 })}
                             disabled={isTerminal}
-                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#0B4F6C] text-right tabular-nums"
+                            className="h-7 text-xs border-transparent hover:border-[#E2E8F0] focus:border-[#1D4ED8] text-right tabular-nums"
                           />
                         </td>
                         <td className="px-2 py-1 text-right tabular-nums text-[#475569]">{pct.toFixed(0)}%</td>
@@ -579,7 +579,7 @@ export function APReviewWorkspace({ invoice, onBack }: Props) {
                 className="flex-1"
               >
                 <Button
-                  className="w-full bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium h-[34px]"
+                  className="w-full bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium h-[34px]"
                   disabled={isTerminal || invoice.is_blocked || requiresSupplier || wf.approveStep.isPending || !balanced}
                   onClick={handleApprove}
                 >

@@ -314,9 +314,9 @@ const Assistant = () => {
           <div className="flex gap-3 min-w-max md:grid md:grid-cols-5 md:min-w-0">
             {AI_CAPABILITIES.map((cap) => (
               <div key={cap.title} className="relative flex items-start gap-3 px-4 py-3 rounded-[12px] border-[0.5px] border-[#DFE4EA] bg-[#FAFBFC] min-w-[200px] md:min-w-0 hover:shadow-sm transition-all duration-200 overflow-hidden">
-                <span className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0B4F6C]" />
+                <span className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#1D4ED8]" />
                 <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] flex items-center justify-center flex-shrink-0">
-                  <cap.icon size={16} strokeWidth={1.5} color="#0B4F6C" />
+                  <cap.icon size={16} strokeWidth={1.5} color="#1D4ED8" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-[12px] font-medium text-[#0F172A] truncate">{cap.title}</p>
@@ -332,7 +332,7 @@ const Assistant = () => {
           {/* ── Conversation Sidebar ── */}
           <div className="w-[320px] min-w-[300px] max-w-[340px] flex-shrink-0 hidden md:flex flex-col rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm overflow-hidden">
             <div className="p-3 border-b border-border/40 bg-gradient-to-b from-primary/5 to-transparent">
-              <Button onClick={createNewConversation} size="sm" className="w-full gap-2 bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium">
+              <Button onClick={createNewConversation} size="sm" className="w-full gap-2 bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium">
                 <Plus className="w-4 h-4" />
                 Ny konversation
               </Button>
@@ -461,7 +461,7 @@ const Assistant = () => {
                     <div className="w-full max-w-2xl mt-4 space-y-2">
                       {/* Primary AI Action */}
                       <button onClick={() => { textareaRef.current?.focus(); }} className="w-full flex items-center justify-center gap-2.5 px-4 py-3 rounded-[12px] bg-white border-[0.5px] border-[#E2E8F0] hover:bg-[#F8FAFB] hover:border-[#CBD5E1] transition-all duration-200 group">
-                        <Sparkles size={16} strokeWidth={1.5} color="#0B4F6C" className="group-hover:scale-110 transition-transform" />
+                        <Sparkles size={16} strokeWidth={1.5} color="#1D4ED8" className="group-hover:scale-110 transition-transform" />
                         <span className="text-[12px] font-medium text-[#0F172A]">Fråga AI</span>
                       </button>
                       {/* Secondary actions */}
@@ -682,7 +682,7 @@ const Assistant = () => {
                           "w-9 h-9 rounded-[8px] flex items-center justify-center transition-all duration-200",
                           isLoading || (!input.trim() && pendingAttachments.length === 0)
                             ? "bg-muted text-muted-foreground cursor-not-allowed"
-                            : "bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] shadow-sm hover:shadow-md"
+                            : "bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] shadow-sm hover:shadow-md"
                         )}
                       >
                         {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}

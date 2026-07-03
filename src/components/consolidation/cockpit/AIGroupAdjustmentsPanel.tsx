@@ -68,7 +68,7 @@ export function AIGroupAdjustmentsPanel({ periodId, isLocked }: Props) {
     <Card className="bg-white border-slate-200">
       <div className="p-5 border-b border-slate-100 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+          <div className="w-9 h-9 rounded-lg bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_15px_rgba(37,99,235,0.4)]">
             <Sparkles className="w-4 h-4 text-white" />
           </div>
           <div>

@@ -142,15 +142,15 @@ export const Step1Individuals = ({ individuals, onUpdate }: Step1Props) => {
         /* Empty state */
         <Card className="border-dashed border-2 border-border">
           <CardContent className="py-16 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-2xl bg-[#0891B2]/10 flex items-center justify-center mb-5">
-              <Users className="w-8 h-8 text-[#0891B2]" />
+            <div className="w-16 h-16 rounded-2xl bg-[#2563EB]/10 flex items-center justify-center mb-5">
+              <Users className="w-8 h-8 text-[#2563EB]" />
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-1">Inga betalningsmottagare tillagda</h3>
             <p className="text-sm text-muted-foreground max-w-sm mb-6">
               Lägg till betalningsmottagare manuellt eller kopiera från en tidigare period.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-3">
-              <Button onClick={openAddSheet} className="bg-[#0891B2] hover:bg-[#0891B2]/90 text-white">
+              <Button onClick={openAddSheet} className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white">
                 <Plus className="w-4 h-4 mr-2" /> Lägg till betalningsmottagare
               </Button>
               <div className="flex items-center gap-2">
@@ -199,7 +199,7 @@ export const Step1Individuals = ({ individuals, onUpdate }: Step1Props) => {
                       </TableCell>
                       <TableCell>
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-[#0891B2]/10 text-[#0891B2] flex items-center justify-center text-xs font-bold shrink-0">
+                          <div className="w-8 h-8 rounded-full bg-[#2563EB]/10 text-[#2563EB] flex items-center justify-center text-xs font-bold shrink-0">
                             {getInitials(ind.name)}
                           </div>
                           <span className="font-medium text-foreground">
@@ -245,7 +245,7 @@ export const Step1Individuals = ({ individuals, onUpdate }: Step1Props) => {
                     {ind.expanded && (
                       <TableRow>
                         <TableCell colSpan={7} className="bg-muted/10 p-0">
-                          <div className="p-5 border-l-4 border-[#0891B2]/30">
+                          <div className="p-5 border-l-4 border-[#2563EB]/30">
                             <ExpandedIndividual
                               ind={ind}
                               onUpdateField={(field, value) => updateField(ind.id, field, value)}
@@ -299,7 +299,7 @@ export const Step1Individuals = ({ individuals, onUpdate }: Step1Props) => {
                 value={formName}
                 onChange={e => setFormName(e.target.value)}
                 placeholder="Förnamn Efternamn"
-                className="rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#0891B2]/20 focus:border-[#0891B2]"
+                className="rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB]"
               />
             </div>
 
@@ -309,7 +309,7 @@ export const Step1Individuals = ({ individuals, onUpdate }: Step1Props) => {
                 value={formPnr}
                 onChange={e => setFormPnr(e.target.value)}
                 placeholder="YYYYMMDD-XXXX"
-                className="font-mono rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#0891B2]/20 focus:border-[#0891B2]"
+                className="font-mono rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB]"
               />
             </div>
 
@@ -333,7 +333,7 @@ export const Step1Individuals = ({ individuals, onUpdate }: Step1Props) => {
                 value={formGross || ""}
                 onChange={e => setFormGross(Number(e.target.value) || 0)}
                 placeholder="0"
-                className="font-mono rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#0891B2]/20 focus:border-[#0891B2] [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="font-mono rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB] [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
             </div>
 
@@ -344,7 +344,7 @@ export const Step1Individuals = ({ individuals, onUpdate }: Step1Props) => {
                 value={formTax || ""}
                 onChange={e => setFormTax(Number(e.target.value) || 0)}
                 placeholder="0"
-                className="font-mono rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#0891B2]/20 focus:border-[#0891B2] [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="font-mono rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB] [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
             </div>
 
@@ -357,9 +357,9 @@ export const Step1Individuals = ({ individuals, onUpdate }: Step1Props) => {
             </div>
 
             {formAgi && formGross > 0 && (
-              <div className="p-3 bg-[#0891B2]/5 rounded-lg border border-[#0891B2]/20">
+              <div className="p-3 bg-[#2563EB]/5 rounded-lg border border-[#2563EB]/20">
                 <p className="text-xs text-muted-foreground">Beräknade avgifter</p>
-                <p className="text-lg font-bold font-mono text-[#0891B2]">
+                <p className="text-lg font-bold font-mono text-[#2563EB]">
                   {fmt(Math.round(formGross * 0.3142))} kr
                 </p>
               </div>
@@ -371,7 +371,7 @@ export const Step1Individuals = ({ individuals, onUpdate }: Step1Props) => {
             <Button
               onClick={handleSaveSheet}
               disabled={!formName || !formPnr}
-              className="bg-[#0891B2] hover:bg-[#0891B2]/90 text-white"
+              className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white"
             >
               {editingId ? "Spara ändringar" : "Lägg till"}
             </Button>
@@ -412,7 +412,7 @@ const ExpandedIndividual = ({ ind, onUpdateField, onAddFK }: ExpandedIndividualP
           <Input
             value={ind.name}
             onChange={e => onUpdateField("name", e.target.value)}
-            className="h-9 rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#0891B2]/20 focus:border-[#0891B2]"
+            className="h-9 rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB]"
           />
         </div>
         <div className="space-y-1.5">
@@ -420,7 +420,7 @@ const ExpandedIndividual = ({ ind, onUpdateField, onAddFK }: ExpandedIndividualP
           <Input
             value={ind.personal_number}
             onChange={e => onUpdateField("personal_number", e.target.value)}
-            className="h-9 font-mono rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#0891B2]/20 focus:border-[#0891B2]"
+            className="h-9 font-mono rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB]"
             placeholder="YYYYMMDD-XXXX"
           />
         </div>
@@ -443,14 +443,14 @@ const ExpandedIndividual = ({ ind, onUpdateField, onAddFK }: ExpandedIndividualP
           </>
         )}
 
-        <Button variant="link" size="sm" className="text-xs px-0 text-[#0891B2]" onClick={() => onUpdateField("showAllFields", !ind.showAllFields)}>
+        <Button variant="link" size="sm" className="text-xs px-0 text-[#2563EB]" onClick={() => onUpdateField("showAllFields", !ind.showAllFields)}>
           {ind.showAllFields ? "Dölj extra fält" : "Visa alla fält"}
         </Button>
       </div>
 
       {/* Försäkringskassan */}
       <Collapsible open={ind.fk_expanded} onOpenChange={v => onUpdateField("fk_expanded", v)}>
-        <CollapsibleTrigger className="flex items-center gap-2 text-sm font-medium hover:text-[#0891B2] transition-colors w-full">
+        <CollapsibleTrigger className="flex items-center gap-2 text-sm font-medium hover:text-[#2563EB] transition-colors w-full">
           {ind.fk_expanded ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
           Uppgifter till Försäkringskassan
         </CollapsibleTrigger>

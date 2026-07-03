@@ -50,7 +50,7 @@ export function CommentMargin({ comments, showResolved = false, onResolve }: Com
               {!c.resolved && onResolve && (
                 <button
                   onClick={() => onResolve(c.id)}
-                  className="mt-1 text-[10px] text-[#0B4F6C] hover:underline flex items-center gap-0.5"
+                  className="mt-1 text-[10px] text-[#1D4ED8] hover:underline flex items-center gap-0.5"
                 >
                   <Check className="w-3 h-3" /> Markera som löst
                 </button>

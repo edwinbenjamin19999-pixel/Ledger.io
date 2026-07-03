@@ -82,14 +82,14 @@ export const Testimonials = () => {
                       height: 44,
                       borderRadius: "50%",
                       padding: 2,
-                      background: "linear-gradient(135deg, #3b82f6, rgba(29,217,240,0.3))",
+                      background: "linear-gradient(135deg, #3b82f6, rgba(37,99,235,0.3))",
                       flexShrink: 0,
                     }}
                   >
                     <div
                       className="w-full h-full rounded-full flex items-center justify-center"
                       style={{
-                        background: "#0B1F2F",
+                        background: "#0F1B2D",
                         color: "#fff",
                         fontSize: 13,
                         fontWeight: 700,

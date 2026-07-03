@@ -8,7 +8,7 @@ import { useAIStatus } from "@/hooks/useAIStatus";
 export const AIStatusBar = () => {
   const status = useAIStatus();
   return (
-    <div className="flex items-center gap-3 rounded-xl border border-cyan-200/60 bg-[#0F1F3D] px-4 py-2.5">
+    <div className="flex items-center gap-3 rounded-xl border border-blue-200/60 bg-[#0F1F3D] px-4 py-2.5">
       <div className="relative flex-shrink-0">
         <Sparkles className="w-4 h-4 text-[#3b82f6]" />
         <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2">

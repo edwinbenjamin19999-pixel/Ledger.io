@@ -151,8 +151,8 @@ const Bookkeep = () => { const { user, loading } = useAuth();
               <div
                 className="flex items-center gap-2 py-2 px-3"
                 style={{
-                  background: "rgba(29,217,240,0.08)",
-                  border: "1px solid rgba(29,217,240,0.2)",
+                  background: "rgba(37,99,235,0.08)",
+                  border: "1px solid rgba(37,99,235,0.2)",
                   borderRadius: 10,
                 }}
               >
@@ -164,7 +164,7 @@ const Bookkeep = () => { const { user, loading } = useAuth();
                     height: 16,
                     borderRadius: 9999,
                     background: "#3b82f6",
-                    color: "#0B1F2F",
+                    color: "#0F1B2D",
                     fontWeight: 700,
                     fontSize: 11,
                     lineHeight: 1,

@@ -166,7 +166,7 @@ export function BoxDrilldownDrawer({
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent side="right" className="w-full sm:max-w-xl p-0 flex flex-col">
-        <div className="px-5 py-4 border-b border-border bg-gradient-to-r from-cyan-50/50 to-transparent dark:from-cyan-950/20">
+        <div className="px-5 py-4 border-b border-border bg-gradient-to-r from-blue-50/50 to-transparent dark:from-blue-950/20">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-[#1E3A5F]/10 border border-[#C8DDF5] flex items-center justify-center">
@@ -214,7 +214,7 @@ export function BoxDrilldownDrawer({
                       className={cn(
                         "w-full flex items-center justify-between p-3 rounded-lg border transition-colors text-left",
                         activeAccount === a.accountNumber
-                          ? "bg-[#EFF6FF] dark:bg-cyan-950/30 border-[#C8DDF5] dark:border-[#3b82f6]"
+                          ? "bg-[#EFF6FF] dark:bg-blue-950/30 border-[#C8DDF5] dark:border-[#3b82f6]"
                           : "bg-card border-border hover:bg-muted/30"
                       )}
                     >

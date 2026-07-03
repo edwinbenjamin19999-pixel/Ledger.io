@@ -121,10 +121,10 @@ export const MigrationSourceStep = ({ state, updateState }: Props) => { return (
       {(state.source === "fortnox" || state.source === "visma") && (
         <Card className="bg-[#EFF6FF] border-[#B5D4F4]">
           <CardContent className="p-4 flex items-start gap-3">
-            <FileSpreadsheet className="h-5 w-5 text-[#0B4F6C] mt-0.5 shrink-0" />
+            <FileSpreadsheet className="h-5 w-5 text-[#1D4ED8] mt-0.5 shrink-0" />
             <div className="text-sm">
-              <p className="font-medium text-[#0B4F6C]">Direktanslutning tillgänglig</p>
-              <p className="text-xs text-[#0B4F6C]/80 mt-1">
+              <p className="font-medium text-[#1D4ED8]">Direktanslutning tillgänglig</p>
+              <p className="text-xs text-[#1D4ED8]/80 mt-1">
                 Du kan välja mellan att ansluta direkt via {state.source === "fortnox" ? "Fortnox" : "Visma eEkonomi"} OAuth (rekommenderas) eller ladda upp en SIE4-fil. Fortsätt till nästa steg.
               </p>
             </div>

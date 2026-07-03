@@ -35,7 +35,7 @@ const MONTH_NAMES = [
 
 const TYPE_CONFIG: Record<string, { icon: React.ElementType; color: string; borderColor: string; label: string }> = {
   fskatt: { icon: Landmark, color: "text-violet-600", borderColor: "border-l-violet-500", label: "F-skatt" },
-  vat: { icon: DollarSign, color: "text-[#0891B2]", borderColor: "border-l-[#0891B2]", label: "Moms" },
+  vat: { icon: DollarSign, color: "text-[#2563EB]", borderColor: "border-l-[#2563EB]", label: "Moms" },
   agi: { icon: Users, color: "text-[#085041]", borderColor: "border-l-emerald-500", label: "AGI" },
   ink2: { icon: FileText, color: "text-[#7A5417]", borderColor: "border-l-amber-500", label: "INK2" },
   k10: { icon: Building2, color: "text-[#7A1A1A]", borderColor: "border-l-rose-500", label: "K10" },
@@ -185,7 +185,7 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
                     className={cn(
                       "relative flex flex-col items-center gap-0.5 px-4 py-2 rounded-full text-sm font-medium transition-all shrink-0 snap-center",
                       isActive
-                        ? "bg-[#0891B2] text-white shadow-md"
+                        ? "bg-[#2563EB] text-white shadow-md"
                         : "bg-muted/50 text-muted-foreground hover:bg-muted dark:bg-slate-800/50"
                     )}
                   >
@@ -199,7 +199,7 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
                     {!isActive && m.count > 0 && (
                       <span className={cn(
                         "absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full",
-                        m.hasOverdue ? "bg-red-500" : "bg-[#0891B2]"
+                        m.hasOverdue ? "bg-red-500" : "bg-[#2563EB]"
                       )} />
                     )}
                   </button>
@@ -237,7 +237,7 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
                 isActive && isOverdueChip
                   ? "bg-red-500 text-white"
                   : isActive
-                    ? "bg-[#0891B2] text-white shadow-sm"
+                    ? "bg-[#2563EB] text-white shadow-sm"
                     : "bg-muted/60 text-muted-foreground hover:bg-muted dark:bg-slate-800/50"
               )}
             >
@@ -290,7 +290,7 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium flex items-center gap-2">
-                <CalendarDays className="h-4 w-4 text-[#0891B2]" />
+                <CalendarDays className="h-4 w-4 text-[#2563EB]" />
                 Kommande 30 dagarna
               </CardTitle>
             </CardHeader>
@@ -335,12 +335,12 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
                           className={cn(
                             "aspect-square rounded-md text-[10px] font-medium flex items-center justify-center transition-all",
                             isSameMonth(h.month, selectedMonth)
-                              ? "ring-2 ring-[#0891B2] ring-offset-1"
+                              ? "ring-2 ring-[#2563EB] ring-offset-1"
                               : "",
                             h.count === 0 ? "bg-muted/30 text-muted-foreground/50" :
-                              h.count <= 1 ? "bg-[#0891B2]/10 text-[#0891B2]" :
-                                h.count <= 3 ? "bg-[#0891B2]/25 text-[#0891B2]" :
-                                  "bg-[#0891B2]/40 text-[#0891B2] font-bold"
+                              h.count <= 1 ? "bg-[#2563EB]/10 text-[#2563EB]" :
+                                h.count <= 3 ? "bg-[#2563EB]/25 text-[#2563EB]" :
+                                  "bg-[#2563EB]/40 text-[#2563EB] font-bold"
                           )}
                         >
                           {format(h.month, "MMM", { locale: sv }).slice(0, 3)}
@@ -375,11 +375,11 @@ function TimelineItem({ deadline: dl, isLast }: { deadline: EnrichedDeadline; is
 
   const spineColor = dl.computedStatus === "overdue" ? "bg-red-400" :
     dl.computedStatus === "submitted" || dl.computedStatus === "ready" ? "bg-muted-foreground/20" :
-      dl.daysLeft <= 7 ? "bg-[#0891B2]" : "bg-border";
+      dl.daysLeft <= 7 ? "bg-[#2563EB]" : "bg-border";
 
   const dotColor = dl.computedStatus === "overdue" ? "bg-red-500 shadow-red-500/30" :
     dl.daysLeft <= 7 ? "bg-amber-500 shadow-amber-500/30" :
-      dl.daysLeft <= 30 ? "bg-[#0891B2] shadow-[#0891B2]/30" : "bg-muted-foreground/40";
+      dl.daysLeft <= 30 ? "bg-[#2563EB] shadow-[#2563EB]/30" : "bg-muted-foreground/40";
 
   const isUrgent = dl.daysLeft <= 7 && dl.computedStatus === "pending";
 
@@ -481,7 +481,7 @@ function ActionButton({ status, daysLeft }: { status: string; daysLeft: number }
         label="Skicka in nu"
         authority="Skatteverket"
         size="sm"
-        className="text-xs h-7 bg-[#0891B2] hover:bg-[#0891B2]/90 text-white"
+        className="text-xs h-7 bg-[#2563EB] hover:bg-[#2563EB]/90 text-white"
         onDemoSubmit={() => toast.success("Deklaration inskickad till Skatteverket")}
       />
     );

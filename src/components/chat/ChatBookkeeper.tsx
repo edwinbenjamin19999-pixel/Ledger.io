@@ -453,14 +453,14 @@ export const ChatBookkeeper = ({ companyId, companyName }: ChatBookkeeperProps) 
               type="button"
               className="flex-shrink-0 inline-flex items-center gap-2 h-11 px-3 transition-colors duration-150"
               style={{
-                background: "rgba(29,217,240,0.1)",
+                background: "rgba(37,99,235,0.1)",
                 color: "#0D7A8A",
-                border: "1px solid rgba(29,217,240,0.2)",
+                border: "1px solid rgba(37,99,235,0.2)",
                 borderRadius: 8,
                 fontSize: 13,
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(29,217,240,0.18)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(29,217,240,0.1)"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(37,99,235,0.18)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(37,99,235,0.1)"; }}
               onClick={() => void pasteFromClipboard()}
               title="Klistra in bild från urklipp"
             >
@@ -495,8 +495,8 @@ export const ChatBookkeeper = ({ companyId, companyName }: ChatBookkeeperProps) 
                 .chat-bookkeeper-input:focus,
                 .chat-bookkeeper-input:focus-visible {
                   outline: none !important;
-                  border-color: rgba(29,217,240,0.4) !important;
-                  box-shadow: 0 0 0 3px rgba(29,217,240,0.08) !important;
+                  border-color: rgba(37,99,235,0.4) !important;
+                  box-shadow: 0 0 0 3px rgba(37,99,235,0.08) !important;
                 }
               `}</style>
             </div>

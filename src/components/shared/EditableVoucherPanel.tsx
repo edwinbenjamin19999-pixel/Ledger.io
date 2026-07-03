@@ -356,16 +356,16 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                   <div
                     className="rounded-xl p-3.5"
                     style={{
-                      background: "rgba(29,217,240,0.08)",
-                      border: "1px solid rgba(29,217,240,0.2)",
+                      background: "rgba(37,99,235,0.08)",
+                      border: "1px solid rgba(37,99,235,0.2)",
                     }}
                   >
                     <div className="flex items-start gap-3">
                       <div
                         className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
                         style={{
-                          background: "rgba(29,217,240,0.15)",
-                          border: "1px solid rgba(29,217,240,0.25)",
+                          background: "rgba(37,99,235,0.15)",
+                          border: "1px solid rgba(37,99,235,0.25)",
                         }}
                       >
                         <Sparkles className="w-3.5 h-3.5" style={{ color: "#0D7A8A" }} />
@@ -379,8 +379,8 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                           <span
                             className="ml-2 text-[10px] px-1.5 py-0.5 rounded tabular-nums"
                             style={{
-                              background: "rgba(29,217,240,0.12)",
-                              border: "1px solid rgba(29,217,240,0.25)",
+                              background: "rgba(37,99,235,0.12)",
+                              border: "1px solid rgba(37,99,235,0.25)",
                               color: "#0D7A8A",
                             }}
                           >
@@ -394,7 +394,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                         className="text-xs font-medium px-2.5 py-1 rounded-md transition-colors flex-shrink-0"
                         style={{
                           background: "white",
-                          border: "1px solid rgba(29,217,240,0.35)",
+                          border: "1px solid rgba(37,99,235,0.35)",
                           color: "#0D7A8A",
                         }}
                       >

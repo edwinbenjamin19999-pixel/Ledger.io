@@ -191,7 +191,7 @@ const EcommerceOverview = () => {
       {/* ── HERO KPI ROW ───────────────── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <KPICard
-          gradient="from-emerald-500 to-teal-600"
+          gradient="from-emerald-500 to-blue-600"
           icon={ShoppingCart}
           value={<AnimatedNumber value={todayRevenue} suffix=" kr" />}
           label="Omsättning idag"
@@ -224,7 +224,7 @@ const EcommerceOverview = () => {
           subtitle="Average Order Value"
         />
         <KPICard
-          gradient={lowStockItems.length > 0 ? "from-amber-500 to-orange-600" : "from-emerald-500 to-teal-600"}
+          gradient={lowStockItems.length > 0 ? "from-amber-500 to-orange-600" : "from-emerald-500 to-blue-600"}
           icon={AlertTriangle}
           value={<AnimatedNumber value={lowStockItems.length} />}
           label="Lagervarning"
@@ -375,7 +375,7 @@ const EcommerceOverview = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {(data.byPlatform.length > 0 ? data.byPlatform : [{ name: "Shopify", value: 0 }, { name: "WooCommerce", value: 0 }]).map(p => {
           const isShopify = p.name.toLowerCase().includes("shopify");
-          const gradient = isShopify ? "from-emerald-500/10 to-teal-500/5" : "from-violet-500/10 to-purple-500/5";
+          const gradient = isShopify ? "from-emerald-500/10 to-blue-500/5" : "from-violet-500/10 to-purple-500/5";
           const borderColor = isShopify ? "border-[#BFE6D6]" : "border-[#E2E8F0]";
           const dotColor = p.value > 0 ? "bg-emerald-500" : "bg-muted-foreground/30";
           const platformOrders = (orders || []).filter(o => o.platform.toLowerCase() === p.name.toLowerCase()).length;

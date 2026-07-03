@@ -85,7 +85,7 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
         isHeader && "bg-slate-100 dark:bg-slate-800",
         isTotal && "bg-slate-800 dark:bg-slate-900",
         isSubtotal && "bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-700",
-        isKPI && "bg-cyan-50/50 dark:bg-cyan-950/10 border-b border-cyan-100 dark:border-[#3b82f6]",
+        isKPI && "bg-blue-50/50 dark:bg-blue-950/10 border-b border-blue-100 dark:border-[#3b82f6]",
         type === "account" && "border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/60 dark:hover:bg-slate-800/30"
       )}>
         <td className={cn(

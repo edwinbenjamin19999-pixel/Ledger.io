@@ -127,7 +127,7 @@ export function PosKPICards({ todaySales, yesterdaySales, monthTotal, monthVat, 
       {/* KPI Row */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <KPICard
-          gradient="from-emerald-500 to-teal-600"
+          gradient="from-emerald-500 to-blue-600"
           icon={ShoppingBag}
           label="Dagsomsättning"
           value={formatKr(todayTotal)}

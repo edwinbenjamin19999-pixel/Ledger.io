@@ -97,7 +97,7 @@ const AdvisorVAT = () => {
       {/* KPI strip — premium surface with top accent */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {[
-          { label: "Totalt antal", value: rows.length, sub: `${rows.length} period(er)`, accent: "#0B4F6C" },
+          { label: "Totalt antal", value: rows.length, sub: `${rows.length} period(er)`, accent: "#1D4ED8" },
           {
             label: "Försenade",
             value: overdue,
@@ -106,7 +106,7 @@ const AdvisorVAT = () => {
             valueClass: overdue > 0 ? "text-[#791F1F]" : "text-[#0F172A]",
           },
           { label: "Inlämnade", value: counts.submitted ?? 0, sub: "till Skatteverket", accent: "#1D9E75" },
-          { label: "Totalt att betala", value: fmt(totalDue), sub: "ready + review", accent: "#0B4F6C" },
+          { label: "Totalt att betala", value: fmt(totalDue), sub: "ready + review", accent: "#1D4ED8" },
         ].map((k) => (
           <div
             key={k.label}
@@ -252,7 +252,7 @@ const AdvisorVAT = () => {
         </div>
       )}
 
-      <div className="rounded-2xl border border-[#C8DDF5] bg-cyan-50/40 p-4 flex items-start gap-3">
+      <div className="rounded-2xl border border-[#C8DDF5] bg-blue-50/40 p-4 flex items-start gap-3">
         <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5" />
         <div className="text-xs text-[#3b82f6]">
           <strong>AI-radar:</strong> Filtrera på "Saknar data" eller "Hög risk" för att hitta klienter som behöver akut momsåtgärd.

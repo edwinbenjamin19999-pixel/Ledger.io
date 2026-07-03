@@ -81,7 +81,7 @@ export function KPIStoryCard({
           "hover:shadow-lg hover:border-[#C8DDF5] dark:hover:border-[#3b82f6] hover:-translate-y-0.5",
         // States
         isAlert && "border-l-4 border-l-rose-500",
-        !isAlert && simulationActive && "shadow-[0_0_24px_rgba(6,182,212,0.18)] border-[#3b82f6] dark:border-[#3b82f6]",
+        !isAlert && simulationActive && "shadow-[0_0_24px_rgba(37,99,235,0.18)] border-[#3b82f6] dark:border-[#3b82f6]",
         !isAlert && !simulationActive && expanded && verdict.accentClass,
         !reliable && "border-dashed opacity-80",
         className,

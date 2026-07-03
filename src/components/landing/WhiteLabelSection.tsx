@@ -34,8 +34,8 @@ export const WhiteLabelSection = () => {
                       width: 20,
                       height: 20,
                       borderRadius: "50%",
-                      background: "rgba(29,217,240,0.12)",
-                      border: "1px solid rgba(29,217,240,0.3)",
+                      background: "rgba(37,99,235,0.12)",
+                      border: "1px solid rgba(37,99,235,0.3)",
                     }}
                   >
                     <Check className="w-3 h-3" style={{ color: "#3b82f6" }} strokeWidth={3} />
@@ -50,7 +50,7 @@ export const WhiteLabelSection = () => {
 
             <Button
               onClick={() => navigate("/white-label")}
-              className="mt-8 h-11 px-6 bg-white text-[#0f1f35] hover:bg-white/90 font-medium rounded-lg group"
+              className="mt-8 h-11 px-6 bg-white text-[#0F1B2D] hover:bg-white/90 font-medium rounded-lg group"
             >
               Läs mer om White Label
               <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
@@ -68,7 +68,7 @@ export const WhiteLabelSection = () => {
                 borderRadius: 14,
                 overflow: "hidden",
                 boxShadow:
-                  "0 32px 80px rgba(0,0,0,0.45), 0 0 40px rgba(29,217,240,0.15), inset 0 1px 0 rgba(255,255,255,0.06)",
+                  "0 32px 80px rgba(0,0,0,0.45), 0 0 40px rgba(37,99,235,0.15), inset 0 1px 0 rgba(255,255,255,0.06)",
               }}
             >
               {/* Browser chrome */}
@@ -104,7 +104,7 @@ export const WhiteLabelSection = () => {
               </div>
 
               {/* Mockup body */}
-              <div style={{ background: "#0a1525", padding: 24 }}>
+              <div style={{ background: "#0F1B2D", padding: 24 }}>
                 {/* Fake brand header */}
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center gap-2">
@@ -117,7 +117,7 @@ export const WhiteLabelSection = () => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        color: "#0a1525",
+                        color: "#0F1B2D",
                         fontSize: 12,
                         fontWeight: 800,
                       }}

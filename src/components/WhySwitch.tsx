@@ -114,7 +114,7 @@ export const WhySwitch = () => { const advantages = [
             <p className="text-lg font-medium">
               Redo att testa framtidens bokföring?
             </p>
-            <Button size="lg" onClick={() => window.location.href = '/auth'} className="group bg-white text-[#050d1a] hover:bg-white/90 font-semibold">
+            <Button size="lg" onClick={() => window.location.href = '/auth'} className="group bg-white text-[#0F1B2D] hover:bg-white/90 font-semibold">
               Kom igång gratis
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>

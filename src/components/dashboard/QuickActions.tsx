@@ -29,10 +29,10 @@ export const QuickActions = () => {
             <button
               key={index}
               onClick={() => navigate(action.path)}
-              className="group bg-card border border-border hover:border-teal-400/40 hover:shadow-[0_4px_12px_rgba(20,184,166,0.08)] hover:-translate-y-0.5 rounded-xl p-4 cursor-pointer transition-all duration-[160ms] ease-out flex flex-col items-center gap-3 text-center active:scale-[0.99]"
+              className="group bg-card border border-border hover:border-blue-400/40 hover:shadow-[0_4px_12px_rgba(20,184,166,0.08)] hover:-translate-y-0.5 rounded-xl p-4 cursor-pointer transition-all duration-[160ms] ease-out flex flex-col items-center gap-3 text-center active:scale-[0.99]"
             >
-              <div className="w-11 h-11 rounded-lg flex items-center justify-center bg-muted/60 border border-border group-hover:border-teal-400/40 transition-colors">
-                <Icon className="w-5 h-5 text-muted-foreground group-hover:text-teal-500 transition-colors" strokeWidth={1.75} />
+              <div className="w-11 h-11 rounded-lg flex items-center justify-center bg-muted/60 border border-border group-hover:border-blue-400/40 transition-colors">
+                <Icon className="w-5 h-5 text-muted-foreground group-hover:text-blue-500 transition-colors" strokeWidth={1.75} />
               </div>
               <div>
                 <p className="text-foreground font-medium text-xs leading-tight tracking-[-0.01em]">{action.title}</p>

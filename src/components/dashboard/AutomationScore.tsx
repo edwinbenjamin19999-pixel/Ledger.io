@@ -127,7 +127,7 @@ export const AutomationScore = ({ companyId }: AutomationScoreProps) => {
 
       {/* Tips footer */}
       {overallScore < 80 && stats.totalEntries > 0 && (
-        <div className="bg-[#0F1F3D] dark:from-cyan-950/30 dark:to-violet-950/30 px-6 py-4 border-t border-slate-50 dark:border-slate-800 flex items-center gap-3">
+        <div className="bg-[#0F1F3D] dark:from-blue-950/30 dark:to-violet-950/30 px-6 py-4 border-t border-slate-50 dark:border-slate-800 flex items-center gap-3">
           <Lightbulb className="w-5 h-5 text-[#7A5417] flex-shrink-0" />
           <p className="text-slate-600 dark:text-slate-400 text-xs italic flex-1">
             Tips: Använd AI-bokföring och koppla banken för att höja din poäng

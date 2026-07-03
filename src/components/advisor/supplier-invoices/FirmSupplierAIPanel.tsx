@@ -49,7 +49,7 @@ export function FirmSupplierAIPanel({ rows, onAction }: Props) {
       title: "Förfallna utan attest",
       desc: "Kräver omedelbar klient-eskalering",
       metric: `${overdueAwait.length} st`,
-      tone: "from-[#3b82f6]/10 to-cyan-50 border-[#C8DDF5] text-[#3b82f6]",
+      tone: "from-[#3b82f6]/10 to-blue-50 border-[#C8DDF5] text-[#3b82f6]",
       visible: overdueAwait.length > 0,
     },
   ];

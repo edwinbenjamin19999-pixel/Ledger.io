@@ -291,7 +291,7 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
           {/* Smart Capture Card */}
           <div className="mx-5 mt-4 bg-white rounded-[20px] border border-slate-100 shadow-sm overflow-hidden">
             <div className="flex flex-col items-center py-8 px-5">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-teal-500 flex items-center justify-center shadow-lg shadow-[#3b82f6]/20 mb-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-blue-500 flex items-center justify-center shadow-lg shadow-[#3b82f6]/20 mb-4">
                 <Camera className="h-7 w-7 text-white" />
               </div>
               <p className="text-slate-800 font-bold text-lg">Skanna eller ladda upp</p>
@@ -349,7 +349,7 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
                       {/* Status */}
                       <div className="mt-auto pt-1">
                         {stuck && isRetrying ? (
-                          <span className="text-[11px] font-semibold text-[#3b82f6] bg-cyan-50 px-2.5 py-1 rounded-full flex items-center gap-1 w-fit">
+                          <span className="text-[11px] font-semibold text-[#3b82f6] bg-blue-50 px-2.5 py-1 rounded-full flex items-center gap-1 w-fit">
                             <Loader2 className="h-3 w-3 animate-spin" /> Försöker...
                           </span>
                         ) : (
@@ -368,7 +368,7 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
           {/* Expense Capture Card */}
           <div className="mx-5 mt-4 bg-white rounded-[20px] border border-slate-100 shadow-sm overflow-hidden">
             <div className="flex flex-col items-center py-8 px-5">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 mb-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 mb-4">
                 <Camera className="h-7 w-7 text-white" />
               </div>
               <p className="text-slate-800 font-bold text-lg">Registrera utlägg</p>

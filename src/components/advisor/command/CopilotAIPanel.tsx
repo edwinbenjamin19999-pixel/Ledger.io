@@ -166,7 +166,7 @@ export const CopilotAIPanel = ({ firmId, initialQuestion = "", onClose }: Props)
         <button
           type="submit"
           disabled={streaming || !input.trim()}
-          className="bg-[#0B4F6C] hover:bg-[#1074A0] disabled:bg-[#CBD5E1] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[10px] h-[28px] flex items-center gap-1"
+          className="bg-[#1D4ED8] hover:bg-[#1074A0] disabled:bg-[#CBD5E1] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[10px] h-[28px] flex items-center gap-1"
         >
           {streaming ? <Loader2 className="h-3 w-3 animate-spin" /> : <Send className="h-3 w-3" />}
           Skicka
@@ -180,7 +180,7 @@ export const CopilotAIPanel = ({ firmId, initialQuestion = "", onClose }: Props)
               navigator.clipboard.writeText(lastAssistant.content);
               toast.success("Svar kopierat");
             }}
-            className="text-[#475569] hover:text-[#0B4F6C] flex items-center gap-1"
+            className="text-[#475569] hover:text-[#1D4ED8] flex items-center gap-1"
           >
             <Copy className="h-3 w-3" /> Kopiera svar
           </button>

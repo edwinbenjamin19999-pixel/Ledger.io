@@ -65,7 +65,7 @@ export const AssetKPIStrip = ({ assets, entries, getBookValue, getAccumulated }:
       />
 
       <KPICard
-        gradient={fullyDepreciated.length > 0 ? "from-rose-500 to-red-600" : "from-emerald-500 to-teal-600"}
+        gradient={fullyDepreciated.length > 0 ? "from-rose-500 to-red-600" : "from-emerald-500 to-blue-600"}
         icon={AlertTriangle}
         label="Fullt avskrivna"
         value={`${fullyDepreciated.length} st`}

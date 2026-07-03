@@ -20,7 +20,7 @@ function Tile({
     emerald: "text-[#085041] bg-emerald-50/60 border-emerald-200/60",
     amber: "text-[#7A5417] bg-amber-50/60 border-amber-200/60",
     rose: "text-[#7A1A1A] bg-rose-50/60 border-rose-200/60",
-    cyan: "text-[#3b82f6] bg-cyan-50/60 border-cyan-200/60",
+    cyan: "text-[#3b82f6] bg-blue-50/60 border-blue-200/60",
   };
   return (
     <div className={`rounded-xl border px-4 py-3 ${toneMap[tone]}`}>

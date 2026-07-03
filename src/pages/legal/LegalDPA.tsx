@@ -11,7 +11,7 @@ const LegalDPA = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#0f1f35]">
+    <div className="min-h-screen bg-white text-[#0F1B2D]">
 
       <Header lightBg />
 
@@ -21,7 +21,7 @@ const LegalDPA = () => {
             <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-[#0f1f35] mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-[#0F1B2D] mb-3">
               Personuppgiftsbiträdesavtal (DPA)
             </h1>
             <p className="text-base text-slate-600">
@@ -30,7 +30,7 @@ const LegalDPA = () => {
             </p>
           </div>
 
-          <article className="prose prose-slate max-w-none prose-headings:text-[#0f1f35] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0f1f35]">
+          <article className="prose prose-slate max-w-none prose-headings:text-[#0F1B2D] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0F1B2D]">
             <h2>1. Roller</h2>
             <p>
               <strong>Kunden</strong> är personuppgiftsansvarig för de uppgifter som behandlas
@@ -82,7 +82,7 @@ const LegalDPA = () => {
             <div className="not-prose overflow-x-auto mt-4 mb-6">
               <table className="w-full text-sm border border-slate-200 rounded-xl overflow-hidden">
                 <thead className="bg-slate-50">
-                  <tr className="text-left text-[#0f1f35]">
+                  <tr className="text-left text-[#0F1B2D]">
                     <th className="px-4 py-2.5 font-semibold">Underbiträde</th>
                     <th className="px-4 py-2.5 font-semibold">Tjänst</th>
                     <th className="px-4 py-2.5 font-semibold">Plats</th>

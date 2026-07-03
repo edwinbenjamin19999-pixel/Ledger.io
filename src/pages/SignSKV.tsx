@@ -142,7 +142,7 @@ export default function SignSKV() {
   }, [stage, orderRef, envelope, token]);
 
   return (
-    <div className="min-h-screen bg-[#0f1f35] flex flex-col items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-[#0F1B2D] flex flex-col items-center justify-center px-4 py-8">
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Header */}
         <div className="px-6 pt-6 pb-4 border-b">

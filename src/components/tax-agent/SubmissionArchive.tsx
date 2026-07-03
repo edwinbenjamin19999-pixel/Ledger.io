@@ -38,7 +38,7 @@ const MONTH_NAMES = [
 
 const TYPE_COLORS: Record<string, string> = {
   AGI: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-700",
-  Moms: "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5] dark:bg-cyan-900/30 dark:text-[#3b82f6] dark:border-[#3b82f6]",
+  Moms: "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5] dark:bg-blue-900/30 dark:text-[#3b82f6] dark:border-[#3b82f6]",
   INK2: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-700",
   K10: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-rose-900/30 dark:text-rose-300 dark:border-rose-700",
   "F-skatt": "bg-[#F1F5F9] text-violet-700 border-[#E2E8F0] dark:bg-violet-900/30 dark:text-violet-300 dark:border-violet-700",

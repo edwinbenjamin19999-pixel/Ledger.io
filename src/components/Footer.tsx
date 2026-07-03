@@ -139,7 +139,7 @@ export const Footer = () => {
               Låt AI hantera det repetitiva arbetet så att du kan fokusera på ditt företag.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild size="lg" className="bg-white text-[#050d1a] hover:bg-white/90 font-semibold">
+              <Button asChild size="lg" className="bg-white text-[#0F1B2D] hover:bg-white/90 font-semibold">
                 <Link to="/auth">Testa Bokfy</Link>
               </Button>
               <Button asChild variant="glass" size="lg" className="hover:scale-[1.02]">

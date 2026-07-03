@@ -39,7 +39,7 @@ interface INK2Section {
 }
 
 const SECTION_DEFS: Omit<INK2Section, "fieldIndices">[] = [
-  { id: "a", letter: "A", title: "Intäkter", color: "bg-[#0891B2] text-white", bgColor: "border-l-[#0891B2]" },
+  { id: "a", letter: "A", title: "Intäkter", color: "bg-[#2563EB] text-white", bgColor: "border-l-[#2563EB]" },
   { id: "b", letter: "B", title: "Kostnader", color: "bg-violet-500 text-white", bgColor: "border-l-violet-500" },
   { id: "c", letter: "C", title: "Bokslutsdispositioner", color: "bg-emerald-500 text-white", bgColor: "border-l-emerald-500" },
   { id: "d", letter: "D", title: "Obeskattade reserver", color: "bg-amber-500 text-white", bgColor: "border-l-amber-500" },
@@ -232,8 +232,8 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
         <CardContent className="pt-5 pb-5">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-[#0891B2]/10 flex items-center justify-center">
-                <FileText className="h-5 w-5 text-[#0891B2]" />
+              <div className="w-10 h-10 rounded-lg bg-[#2563EB]/10 flex items-center justify-center">
+                <FileText className="h-5 w-5 text-[#2563EB]" />
               </div>
               <div>
                 <h2 className="text-lg font-bold">INK2 — Inkomstdeklaration 2</h2>
@@ -292,7 +292,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
 
       {engine.loading ? (
         <Card><CardContent className="py-16 flex flex-col items-center gap-3">
-          <Loader2 className="h-8 w-8 animate-spin text-[#0891B2]" />
+          <Loader2 className="h-8 w-8 animate-spin text-[#2563EB]" />
           <p className="text-sm text-muted-foreground">Hämtar bokföringsdata...</p>
         </CardContent></Card>
       ) : (
@@ -309,7 +309,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                   className={cn(
                     "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left text-sm transition-all",
                     isActive
-                      ? "bg-[#0891B2]/10 text-[#0891B2] border-l-2 border-[#0891B2]"
+                      ? "bg-[#2563EB]/10 text-[#2563EB] border-l-2 border-[#2563EB]"
                       : "hover:bg-muted/50 text-muted-foreground hover:text-foreground"
                   )}
                 >
@@ -335,7 +335,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                   onClick={() => scrollToSection(sec.id)}
                   className={cn(
                     "px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap shrink-0 transition-all",
-                    isActive ? "bg-[#0891B2] text-white" : "bg-muted/60 text-muted-foreground"
+                    isActive ? "bg-[#2563EB] text-white" : "bg-muted/60 text-muted-foreground"
                   )}
                 >
                   {sec.letter}
@@ -428,7 +428,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                                           placeholder={f.aiValue ? String(f.aiValue) : "0"}
                                           className={cn(
                                             "h-8 w-[120px] text-right font-mono text-sm",
-                                            "focus:ring-2 focus:ring-[#0891B2]/20 focus:border-[#0891B2]",
+                                            "focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB]",
                                             "dark:bg-slate-900 dark:border-slate-600"
                                           )}
                                         />
@@ -483,12 +483,12 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
 
             {/* ─── AI INSIGHTS ─── */}
             <Collapsible open={insightsOpen} onOpenChange={setInsightsOpen}>
-              <Card className="border-[#0891B2]/20">
+              <Card className="border-[#2563EB]/20">
                 <CollapsibleTrigger asChild>
                   <CardHeader className="cursor-pointer hover:bg-muted/30 transition-colors py-3">
                     <CardTitle className="text-sm flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <Sparkles className="h-4 w-4 text-[#0891B2]" />
+                        <Sparkles className="h-4 w-4 text-[#2563EB]" />
                         AI-analys
                       </div>
                       {insightsOpen ? <ChevronUp className="h-4 w-4 text-muted-foreground" /> : <ChevronDown className="h-4 w-4 text-muted-foreground" />}
@@ -517,7 +517,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
             <Card className="dark:bg-slate-800">
               <CardHeader className="pb-3">
                 <CardTitle className="text-sm flex items-center gap-2">
-                  <Calculator className="h-4 w-4 text-[#0891B2]" />
+                  <Calculator className="h-4 w-4 text-[#2563EB]" />
                   Taxerad inkomst och skatt
                 </CardTitle>
               </CardHeader>
@@ -544,12 +544,12 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between p-4 rounded-lg bg-[#0891B2]/5 border border-[#0891B2]/20">
+                <div className="flex items-center justify-between p-4 rounded-lg bg-[#2563EB]/5 border border-[#2563EB]/20">
                   <div>
                     <p className="text-sm font-semibold">Netto att betala</p>
                     <p className="text-xs text-muted-foreground">Förfaller: 1 juli {selectedYear + 1}</p>
                   </div>
-                  <p className="text-2xl font-bold text-[#0891B2] tabular-nums">{fmt(tax)} kr</p>
+                  <p className="text-2xl font-bold text-[#2563EB] tabular-nums">{fmt(tax)} kr</p>
                 </div>
               </CardContent>
             </Card>
@@ -587,7 +587,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
               label="Skicka in"
               authority="Skatteverket"
               size="sm"
-              className="text-xs h-8 bg-[#0891B2] hover:bg-[#0891B2]/90 text-white"
+              className="text-xs h-8 bg-[#2563EB] hover:bg-[#2563EB]/90 text-white"
               icon={<Lock className="h-3.5 w-3.5" />}
               onDemoSubmit={async () => {
                 await saveDraft(fields);

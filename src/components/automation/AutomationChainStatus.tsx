@@ -26,7 +26,7 @@ export const AutomationChainStatus = ({ companyId }: AutomationChainStatusProps)
   const steps = [
     { type: "receipt", label: "Kvitto/AI-chatt", icon: FileText,
       status: "active" as const, detail: "AI bokför automatiskt",
-      iconColor: "text-teal-300" },
+      iconColor: "text-blue-300" },
     { type: "vat", label: "Momsberäkning", icon: Calculator,
       status: (settings?.vat_auto_prepare !== false ? "active" : "disabled") as "active" | "disabled",
       detail: settings?.vat_auto_prepare !== false ? "Uppdateras per verifikat" : "Manuell",
@@ -50,7 +50,7 @@ export const AutomationChainStatus = ({ companyId }: AutomationChainStatusProps)
       <div className="relative z-10 flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <div className="bg-white/[0.04] border border-white/10 rounded-xl p-2">
-            <Zap className="w-5 h-5 text-teal-300" strokeWidth={1.75} />
+            <Zap className="w-5 h-5 text-blue-300" strokeWidth={1.75} />
           </div>
           <span className="text-white font-semibold text-[15px] tracking-[-0.01em]">Automatiseringskedja</span>
         </div>

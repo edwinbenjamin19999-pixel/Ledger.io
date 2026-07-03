@@ -25,7 +25,7 @@ const ROLES: Record<string, { label: string; icon: typeof Shield; tone: string; 
   consultant: {
     label: "Konsult",
     icon: Briefcase,
-    tone: "text-[#3b82f6] bg-[#EFF6FF] ring-cyan-200",
+    tone: "text-[#3b82f6] bg-[#EFF6FF] ring-blue-200",
     perms: ["Bokföring", "Granska klienter", "Skicka godkännanden"],
   },
   viewer: {

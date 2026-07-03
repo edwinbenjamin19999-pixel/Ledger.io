@@ -6,7 +6,7 @@ export const RelatedArticles = ({ articles }: { articles: Article[] }) => {
   return (
     <section className="py-12 border-t border-slate-100">
       <div className="container mx-auto max-w-3xl px-6">
-        <h2 className="text-xl font-bold text-[#0f1f35] tracking-tight mb-2">Relaterade artiklar</h2>
+        <h2 className="text-xl font-bold text-[#0F1B2D] tracking-tight mb-2">Relaterade artiklar</h2>
         <div className="divide-y divide-slate-100">
           {articles.map((a) => <CompactArticleCard key={a.slug} article={a} />)}
         </div>

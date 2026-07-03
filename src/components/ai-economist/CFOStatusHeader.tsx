@@ -46,7 +46,7 @@ export function CFOStatusHeader({
     : { text: "Allt klart", color: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-[#E1F5EE] dark:text-emerald-200 dark:border-[#BFE6D6]" };
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-slate-200/60 dark:border-white/10 bg-white dark:bg-gradient-to-br dark:from-[#0a1428] dark:via-[#0f1f35] dark:to-[#1a1442] p-6 backdrop-blur-xl shadow-sm dark:shadow-[0_0_60px_rgba(6,182,212,0.12)]">
+    <div className="relative overflow-hidden rounded-3xl border border-slate-200/60 dark:border-white/10 bg-white dark:bg-gradient-to-br dark:from-[#0a1428] dark:via-[#0F1B2D] dark:to-[#1a1442] p-6 backdrop-blur-xl shadow-sm dark:shadow-[0_0_60px_rgba(37,99,235,0.12)]">
       <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-[#EFF6FF] dark:bg-[#EFF6FF] blur-3xl" />
       <div className="relative flex items-start justify-between gap-6 flex-wrap">
         <div className="min-w-0">
@@ -105,7 +105,7 @@ export function CFOStatusHeader({
                   className={cn(
                     "px-3 py-1.5 rounded-[8px] text-[12px] font-medium flex items-center gap-1.5 transition-all",
                     active
-                      ? "bg-[#0B4F6C] text-[#E6F4FA] shadow-sm"
+                      ? "bg-[#1D4ED8] text-[#E6F4FA] shadow-sm"
                       : "bg-white border-[0.5px] border-[#E2E8F0] text-[#475569] hover:bg-[#F8FAFB]"
                   )}
                 >

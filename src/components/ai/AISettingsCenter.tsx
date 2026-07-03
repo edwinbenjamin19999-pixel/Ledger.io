@@ -128,7 +128,7 @@ export function AISettingsCenter() {
       </div>
 
       {/* Summary card */}
-      <div className="rounded-2xl border border-cyan-200/60 bg-[#0F1F3D] p-5">
+      <div className="rounded-2xl border border-blue-200/60 bg-[#0F1F3D] p-5">
         <p className="text-[11px] uppercase font-semibold text-[#3b82f6] tracking-wide">Nuvarande AI-läge</p>
         <h2 className="text-xl font-bold text-slate-900 mt-1">{summary}</h2>
         <ul className="text-sm text-slate-700 mt-3 space-y-1">
@@ -155,7 +155,7 @@ export function AISettingsCenter() {
               className={cn(
                 "text-left rounded-xl border p-3 transition-all",
                 settings.level === opt.v
-                  ? "border-[#3b82f6] bg-[#EFF6FF] ring-2 ring-cyan-100"
+                  ? "border-[#3b82f6] bg-[#EFF6FF] ring-2 ring-blue-100"
                   : "border-slate-200 hover:border-slate-300"
               )}
             >
@@ -295,7 +295,7 @@ export function AISettingsCenter() {
                 name="safety"
                 checked={settings.safety === opt.v}
                 onChange={() => update("safety", opt.v)}
-                className="accent-cyan-600"
+                className="accent-blue-600"
               />
               <span className="text-sm text-slate-800">{opt.label}</span>
             </label>

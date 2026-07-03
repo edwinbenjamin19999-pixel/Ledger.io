@@ -39,7 +39,7 @@ const SEV_META = {
   },
   info: {
     icon: Lightbulb,
-    iconBg: "bg-[#EFF6FF] text-[#1E3A5F] dark:bg-cyan-950/30 dark:text-[#1E3A5F]",
+    iconBg: "bg-[#EFF6FF] text-[#1E3A5F] dark:bg-blue-950/30 dark:text-[#1E3A5F]",
     chip: "bg-[#1E3A5F] text-white",
     impact: "text-[#1E3A5F] dark:text-[#1E3A5F]",
     label: "Tips",

@@ -57,11 +57,11 @@ const Priser = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-[#0a1525]">
+    <div className="min-h-screen bg-[#0F1B2D]">
       <Header />
       <main>
         {/* Header */}
-        <section className="bg-[#0a1525] pt-24 pb-16 text-center px-6">
+        <section className="bg-[#0F1B2D] pt-24 pb-16 text-center px-6">
           <div className="text-[11px] uppercase tracking-[0.12em] text-[#3b82f6] mb-3">
             PRISER
           </div>
@@ -72,10 +72,10 @@ const Priser = () => {
         </section>
 
         {/* Cards */}
-        <section className="bg-[#0a1525] pb-24">
+        <section className="bg-[#0F1B2D] pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto px-6">
             {/* Standard */}
-            <div className="bg-[#0f1f35] border border-white/10 rounded-2xl p-8">
+            <div className="bg-[#0F1B2D] border border-white/10 rounded-2xl p-8">
               <h2 className="text-xl font-semibold text-white">Standard</h2>
               <p className="text-white/50 text-sm mt-1">
                 För företag som vill automatisera sin bokföring
@@ -94,7 +94,7 @@ const Priser = () => {
               </div>
               <button
                 onClick={() => navigate("/auth")}
-                className="mt-6 w-full h-12 rounded-xl bg-white hover:bg-white/90 text-[#050d1a] font-semibold text-[15px] transition-colors"
+                className="mt-6 w-full h-12 rounded-xl bg-white hover:bg-white/90 text-[#0F1B2D] font-semibold text-[15px] transition-colors"
               >
                 Kom igång gratis →
               </button>
@@ -115,7 +115,7 @@ const Priser = () => {
             </div>
 
             {/* Enterprise */}
-            <div className="relative bg-[#0f1f35] border border-[#3b82f6]/30 rounded-2xl p-8">
+            <div className="relative bg-[#0F1B2D] border border-[#3b82f6]/30 rounded-2xl p-8">
               <span className="absolute top-4 right-4 bg-[#3b82f6]/10 text-[#3b82f6] border border-[#3b82f6]/20 rounded-full text-[10px] px-3 py-1 uppercase tracking-wide">
                 För specifika behov
               </span>
@@ -156,7 +156,7 @@ const Priser = () => {
         </section>
 
         {/* FAQ */}
-        <section className="bg-[#0a1525] py-16 border-t border-white/5">
+        <section className="bg-[#0F1B2D] py-16 border-t border-white/5">
           <div className="max-w-2xl mx-auto px-6">
             <h2 className="text-2xl font-bold text-white text-center mb-10">
               Vanliga frågor
@@ -191,7 +191,7 @@ const Priser = () => {
         </section>
 
         {/* Bottom CTA */}
-        <section className="bg-[#0f1f35] py-16 text-center border-t border-white/5 px-6">
+        <section className="bg-[#0F1B2D] py-16 text-center border-t border-white/5 px-6">
           <h2 className="text-3xl font-bold text-white">Redo att börja?</h2>
           <p className="text-white/50 mt-3">
             Kom igång på några minuter. Ingen bindningstid.
@@ -199,7 +199,7 @@ const Priser = () => {
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
             <button
               onClick={() => navigate("/auth")}
-              className="h-12 px-8 rounded-xl bg-white hover:bg-white/90 text-[#050d1a] font-semibold transition-colors"
+              className="h-12 px-8 rounded-xl bg-white hover:bg-white/90 text-[#0F1B2D] font-semibold transition-colors"
             >
               Kom igång gratis →
             </button>

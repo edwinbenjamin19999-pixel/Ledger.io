@@ -68,7 +68,7 @@ export function WLRiskControlCenter({ companyId }: Props) {
           <p className="text-[10px] uppercase tracking-[0.07em] font-medium text-black/40">
             Kontrollpanel
           </p>
-          <h3 className="mt-1 text-[#0B1F2F] font-medium text-base tracking-tight">
+          <h3 className="mt-1 text-[#0F1B2D] font-medium text-base tracking-tight">
             Risk &amp; Kontrollcenter
           </h3>
           <p className="text-black/50 text-[11px] mt-0.5">
@@ -92,8 +92,8 @@ export function WLRiskControlCenter({ companyId }: Props) {
             className={cn(
               "px-3 py-1 text-[12px] transition-colors",
               activeFilter === cat
-                ? "bg-[#0B1F2F] text-white font-medium"
-                : "text-black/50 hover:text-[#0B1F2F]",
+                ? "bg-[#0F1B2D] text-white font-medium"
+                : "text-black/50 hover:text-[#0F1B2D]",
             )}
             style={{ borderRadius: 6 }}
           >
@@ -125,7 +125,7 @@ export function WLRiskControlCenter({ companyId }: Props) {
                     style={{ width: 8, height: 8 }}
                   />
                   <div className="min-w-0 flex-1">
-                    <p className="text-[13px] font-medium text-[#0B1F2F] truncate">{insight.title}</p>
+                    <p className="text-[13px] font-medium text-[#0F1B2D] truncate">{insight.title}</p>
                     <p className="text-[11px] text-black/50 truncate mt-0.5">{insight.detail}</p>
                   </div>
                   {urgency && (
@@ -155,7 +155,7 @@ export function WLRiskControlCenter({ companyId }: Props) {
       {insights.length > 0 && (
         <button
           onClick={() => navigate("/audit-log")}
-          className="mt-4 w-full border-t border-black/5 pt-3 text-black/50 hover:text-[#0B1F2F] text-[11px] font-medium uppercase tracking-[0.07em] transition-colors text-left"
+          className="mt-4 w-full border-t border-black/5 pt-3 text-black/50 hover:text-[#0F1B2D] text-[11px] font-medium uppercase tracking-[0.07em] transition-colors text-left"
         >
           Visa fullständig logg →
         </button>

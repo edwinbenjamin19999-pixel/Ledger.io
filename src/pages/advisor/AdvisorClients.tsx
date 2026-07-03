@@ -324,7 +324,7 @@ const AdvisorClients = () => {
                   onClick={() => setRiskFilter(r)}
                   className={`rounded-full px-[10px] py-[3px] text-[11px] transition-colors ${
                     active
-                      ? "bg-[#0B4F6C] text-[#E6F4FA]"
+                      ? "bg-[#1D4ED8] text-[#E6F4FA]"
                       : "bg-white text-[#475569] hover:text-[#0F172A]"
                   }`}
                   style={!active ? { border: "0.5px solid #E2E8F0" } : undefined}
@@ -349,7 +349,7 @@ const AdvisorClients = () => {
                   onClick={() => setDeadlineFilter(k)}
                   className={`rounded-full px-[10px] py-[3px] text-[11px] transition-colors ${
                     active
-                      ? "bg-[#0B4F6C] text-[#E6F4FA]"
+                      ? "bg-[#1D4ED8] text-[#E6F4FA]"
                       : "bg-white text-[#475569] hover:text-[#0F172A]"
                   }`}
                   style={!active ? { border: "0.5px solid #E2E8F0" } : undefined}

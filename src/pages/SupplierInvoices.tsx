@@ -115,7 +115,7 @@ const KPICard = ({
 const SupplierAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   const colors = [
-    "from-violet-500 to-indigo-500", "from-emerald-500 to-teal-500",
+    "from-violet-500 to-indigo-500", "from-emerald-500 to-blue-500",
     "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
     "from-blue-500 to-[#3b82f6]", "from-fuchsia-500 to-purple-500",
   ];
@@ -359,19 +359,19 @@ const SupplierInvoices = () => {
           <TabsList className="bg-transparent p-0 h-auto border-b-[0.5px] border-[#E2E8F0] rounded-none w-full justify-start gap-0">
             <TabsTrigger
               value="list"
-              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors"
+              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors"
             >
               Inkommande
             </TabsTrigger>
             <TabsTrigger
               value="ageing"
-              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors flex items-center gap-[5px]"
+              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors flex items-center gap-[5px]"
             >
               <TrendingUp className="h-3 w-3" strokeWidth={1.8} />Åldersanalys
             </TabsTrigger>
             <TabsTrigger
               value="inbox"
-              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors flex items-center gap-[5px]"
+              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors flex items-center gap-[5px]"
             >
               <Mail className="h-3 w-3" strokeWidth={1.8} />E-postinkorg
             </TabsTrigger>
@@ -433,7 +433,7 @@ const SupplierInvoices = () => {
 
       <button
         onClick={() => setShowCreateDialog(true)}
-        className="fixed bottom-20 md:bottom-8 right-8 bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[36px] transition-colors flex items-center gap-[6px] z-50"
+        className="fixed bottom-20 md:bottom-8 right-8 bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[36px] transition-colors flex items-center gap-[6px] z-50"
       >
         <PlusCircle className="h-3.5 w-3.5" strokeWidth={1.8} />
         Registrera faktura
@@ -463,7 +463,7 @@ const SupplierInvoiceList = ({
       <Card className="overflow-hidden">
         <div className="h-[3px] bg-[#3b82f6]" />
         <CardContent className="py-16 text-center">
-          <div className="rounded-2xl bg-[#EFF6FF] dark:bg-cyan-900/30 p-3 inline-block mb-4">
+          <div className="rounded-2xl bg-[#EFF6FF] dark:bg-blue-900/30 p-3 inline-block mb-4">
             <FileText className="w-12 h-12 text-[#3b82f6] dark:text-[#3b82f6]" />
           </div>
           <p className="text-slate-500 font-medium">

@@ -227,18 +227,18 @@ export function ReceiptAgent({ companyId, userId }: ReceiptAgentProps) { const [
 
       <Tabs defaultValue="upload">
         <TabsList className="flex-wrap h-auto gap-0 rounded-none bg-transparent p-0 border-b-[0.5px] border-[#E2E8F0] w-full justify-start">
-          <TabsTrigger value="upload" className="gap-1.5 rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none -mb-px"><Upload className="h-4 w-4" />Kvittohantering</TabsTrigger>
-          <TabsTrigger value="batch" className="gap-1.5 rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none -mb-px"><Layers className="h-4 w-4" />Batchbearbetning</TabsTrigger>
-          <TabsTrigger value="mileage" className="gap-1.5 rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none -mb-px"><Car className="h-4 w-4" />Körjournal</TabsTrigger>
-          <TabsTrigger value="reports" className="gap-1.5 rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none -mb-px"><FileBarChart className="h-4 w-4" />Utläggsrapporter</TabsTrigger>
+          <TabsTrigger value="upload" className="gap-1.5 rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none -mb-px"><Upload className="h-4 w-4" />Kvittohantering</TabsTrigger>
+          <TabsTrigger value="batch" className="gap-1.5 rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none -mb-px"><Layers className="h-4 w-4" />Batchbearbetning</TabsTrigger>
+          <TabsTrigger value="mileage" className="gap-1.5 rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none -mb-px"><Car className="h-4 w-4" />Körjournal</TabsTrigger>
+          <TabsTrigger value="reports" className="gap-1.5 rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none -mb-px"><FileBarChart className="h-4 w-4" />Utläggsrapporter</TabsTrigger>
         </TabsList>
 
         <TabsContent value="upload" className="mt-4 space-y-6">
           {/* Premium Drop zone */}
           <Card
             className={`group border-[2px] border-dashed transition-all duration-300 cursor-pointer rounded-[12px] ${ dragOver
-              ? "border-[#0B4F6C] bg-[#F5F9FF]"
-              : "border-[#E2E8F0] bg-white hover:border-[#0B4F6C] hover:bg-[#F5F9FF]"
+              ? "border-[#1D4ED8] bg-[#F5F9FF]"
+              : "border-[#E2E8F0] bg-white hover:border-[#1D4ED8] hover:bg-[#F5F9FF]"
             }`}
             onDragOver={e => { e.preventDefault(); setDragOver(true); }}
             onDragLeave={() => setDragOver(false)}
@@ -247,7 +247,7 @@ export function ReceiptAgent({ companyId, userId }: ReceiptAgentProps) { const [
           >
             <CardContent className="py-16 text-center">
               <div className="flex flex-col items-center gap-4">
-                <Upload size={32} strokeWidth={1} className="text-[#94A3B8] group-hover:text-[#0B4F6C] transition-colors" />
+                <Upload size={32} strokeWidth={1} className="text-[#94A3B8] group-hover:text-[#1D4ED8] transition-colors" />
                 <div>
                   <p className="text-[13px] font-medium text-[#0F172A]">Släpp kvitton — AI hanterar allt</p>
                   <p className="text-[11px] text-[#94A3B8] mt-1">Extraherar data, matchar transaktioner och bokför automatiskt</p>
@@ -255,27 +255,27 @@ export function ReceiptAgent({ companyId, userId }: ReceiptAgentProps) { const [
                 </div>
                 {/* Step pills */}
                 <div className="flex flex-wrap items-center justify-center gap-2">
-                  <span className="px-[10px] py-[3px] rounded-full bg-[#0B4F6C] text-[#E6F4FA] text-[11px] font-medium flex items-center gap-1.5">
-                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#0B4F6C] text-[10px] font-medium flex items-center justify-center">1</span>
+                  <span className="px-[10px] py-[3px] rounded-full bg-[#1D4ED8] text-[#E6F4FA] text-[11px] font-medium flex items-center gap-1.5">
+                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#1D4ED8] text-[10px] font-medium flex items-center justify-center">1</span>
                     Extrahera data
                   </span>
                   <span className="text-[#E2E8F0]">→</span>
-                  <span className="px-[10px] py-[3px] rounded-full bg-[#0B4F6C] text-[#E6F4FA] text-[11px] font-medium flex items-center gap-1.5">
-                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#0B4F6C] text-[10px] font-medium flex items-center justify-center">2</span>
+                  <span className="px-[10px] py-[3px] rounded-full bg-[#1D4ED8] text-[#E6F4FA] text-[11px] font-medium flex items-center gap-1.5">
+                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#1D4ED8] text-[10px] font-medium flex items-center justify-center">2</span>
                     Detektera moms
                   </span>
                   <span className="text-[#E2E8F0]">→</span>
-                  <span className="px-[10px] py-[3px] rounded-full bg-[#0B4F6C] text-[#E6F4FA] text-[11px] font-medium flex items-center gap-1.5">
-                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#0B4F6C] text-[10px] font-medium flex items-center justify-center">3</span>
+                  <span className="px-[10px] py-[3px] rounded-full bg-[#1D4ED8] text-[#E6F4FA] text-[11px] font-medium flex items-center gap-1.5">
+                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#1D4ED8] text-[10px] font-medium flex items-center justify-center">3</span>
                     Föreslå konton
                   </span>
                   <span className="text-[#E2E8F0]">→</span>
-                  <span className="px-[10px] py-[3px] rounded-full bg-[#0B4F6C] text-[#E6F4FA] text-[11px] font-medium flex items-center gap-1.5">
-                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#0B4F6C] text-[10px] font-medium flex items-center justify-center">4</span>
+                  <span className="px-[10px] py-[3px] rounded-full bg-[#1D4ED8] text-[#E6F4FA] text-[11px] font-medium flex items-center gap-1.5">
+                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#1D4ED8] text-[10px] font-medium flex items-center justify-center">4</span>
                     Matcha betalning
                   </span>
                 </div>
-                <Button className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px]" onClick={(e) => { e.stopPropagation(); fileInputRef.current?.click(); }}>
+                <Button className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px]" onClick={(e) => { e.stopPropagation(); fileInputRef.current?.click(); }}>
                   <Camera className="h-4 w-4 mr-1.5" />Välj filer
                 </Button>
               </div>
@@ -288,7 +288,7 @@ export function ReceiptAgent({ companyId, userId }: ReceiptAgentProps) { const [
 
           {/* AI Insights Bar */}
           {results.length > 0 && (
-            <div className="bg-[#0F1F3D] border border-cyan-100/50 rounded-2xl px-5 py-3">
+            <div className="bg-[#0F1F3D] border border-blue-100/50 rounded-2xl px-5 py-3">
               <div className="flex items-center gap-6 flex-wrap">
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-[#3b82f6]" />
@@ -527,12 +527,12 @@ export function ReceiptAgent({ companyId, userId }: ReceiptAgentProps) { const [
           )}
 
           {results.length === 0 && (
-            <Card className="rounded-[12px] bg-white border-[2px] border-dashed border-[#E2E8F0] hover:border-[#0B4F6C] hover:bg-[#F5F9FF] transition-colors overflow-hidden relative">
+            <Card className="rounded-[12px] bg-white border-[2px] border-dashed border-[#E2E8F0] hover:border-[#1D4ED8] hover:bg-[#F5F9FF] transition-colors overflow-hidden relative">
               <CardContent className="py-16 text-center relative z-10">
                 {/* AI illustration */}
                 <div className="relative w-24 h-24 mx-auto mb-6">
                   <div className="absolute inset-2 rounded-xl bg-[#F5F9FF] flex items-center justify-center">
-                    <ScanLine className="h-10 w-10 text-[#0B4F6C] animate-[pulse_2s_ease-in-out_infinite]" />
+                    <ScanLine className="h-10 w-10 text-[#1D4ED8] animate-[pulse_2s_ease-in-out_infinite]" />
                   </div>
                   {/* Floating mini receipt */}
                   <div className="absolute -right-6 -top-2 w-14 bg-white rounded-lg shadow-lg p-1.5 border-[0.5px] border-[#E2E8F0] animate-[bounce_3s_ease-in-out_infinite]">
@@ -540,7 +540,7 @@ export function ReceiptAgent({ companyId, userId }: ReceiptAgentProps) { const [
                       <div className="h-1 w-8 bg-slate-200 rounded" />
                       <div className="h-1 w-6 bg-slate-200 rounded" />
                       <div className="h-1 w-10 bg-[#C7DCFA] rounded" />
-                      <div className="text-[6px] font-bold text-[#0B4F6C] text-right">1 249 kr</div>
+                      <div className="text-[6px] font-bold text-[#1D4ED8] text-right">1 249 kr</div>
                     </div>
                   </div>
                 </div>
@@ -552,18 +552,18 @@ export function ReceiptAgent({ companyId, userId }: ReceiptAgentProps) { const [
 
                 {/* 3-step onboarding */}
                 <div className="flex items-center justify-center gap-2 mb-6">
-                  <div className="flex items-center gap-1.5 px-[10px] py-[3px] rounded-full bg-[#0B4F6C] text-[#E6F4FA] text-[11px] font-medium">
-                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#0B4F6C] text-[10px] font-medium flex items-center justify-center">1</span>
+                  <div className="flex items-center gap-1.5 px-[10px] py-[3px] rounded-full bg-[#1D4ED8] text-[#E6F4FA] text-[11px] font-medium">
+                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#1D4ED8] text-[10px] font-medium flex items-center justify-center">1</span>
                     Släpp kvitto
                   </div>
                   <span className="text-[#E2E8F0]">→</span>
-                  <div className="flex items-center gap-1.5 px-[10px] py-[3px] rounded-full bg-[#0B4F6C] text-[#E6F4FA] text-[11px] font-medium">
-                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#0B4F6C] text-[10px] font-medium flex items-center justify-center">2</span>
+                  <div className="flex items-center gap-1.5 px-[10px] py-[3px] rounded-full bg-[#1D4ED8] text-[#E6F4FA] text-[11px] font-medium">
+                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#1D4ED8] text-[10px] font-medium flex items-center justify-center">2</span>
                     AI analyserar
                   </div>
                   <span className="text-[#E2E8F0]">→</span>
-                  <div className="flex items-center gap-1.5 px-[10px] py-[3px] rounded-full bg-[#0B4F6C] text-[#E6F4FA] text-[11px] font-medium">
-                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#0B4F6C] text-[10px] font-medium flex items-center justify-center">3</span>
+                  <div className="flex items-center gap-1.5 px-[10px] py-[3px] rounded-full bg-[#1D4ED8] text-[#E6F4FA] text-[11px] font-medium">
+                    <span className="w-[18px] h-[18px] rounded-full bg-[#E6F4FA] text-[#1D4ED8] text-[10px] font-medium flex items-center justify-center">3</span>
                     Automatiskt bokfört
                   </div>
                 </div>

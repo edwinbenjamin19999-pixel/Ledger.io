@@ -29,7 +29,7 @@ export const WhiteLabelLayer = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#0f1f35] via-[#101a3a] to-[#0a1525] p-8 shadow-[0_30px_80px_rgba(15,23,42,0.18)] md:p-14">
+    <section className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#0F1B2D] via-[#101a3a] to-[#0F1B2D] p-8 shadow-[0_30px_80px_rgba(15,23,42,0.18)] md:p-14">
       {/* Subtle glow */}
       <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#3b82f6]/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#EFF6FF] blur-3xl" />
@@ -66,7 +66,7 @@ export const WhiteLabelLayer = () => {
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Button
             onClick={() => navigate("/white-label")}
-            className="h-11 rounded-lg bg-white px-6 font-medium text-[#0f1f35] shadow-sm transition-all hover:-translate-y-px hover:bg-white/95 hover:shadow-md"
+            className="h-11 rounded-lg bg-white px-6 font-medium text-[#0F1B2D] shadow-sm transition-all hover:-translate-y-px hover:bg-white/95 hover:shadow-md"
           >
             Starta White Label
             <ArrowRight className="ml-1 h-4 w-4" />

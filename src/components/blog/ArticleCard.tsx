@@ -13,7 +13,7 @@ export const ArticleCard = ({ article }: { article: Article }) => {
       <span className={`inline-flex w-fit rounded-full px-2.5 py-0.5 text-[11px] font-medium uppercase tracking-wider ${cat.tint} ${cat.text}`}>
         {cat.label}
       </span>
-      <h3 className="mt-4 text-lg font-semibold text-[#0f1f35] tracking-tight leading-snug group-hover:text-[#3b82f6] transition-colors">
+      <h3 className="mt-4 text-lg font-semibold text-[#0F1B2D] tracking-tight leading-snug group-hover:text-[#3b82f6] transition-colors">
         {article.title}
       </h3>
       <p className="mt-2 text-sm text-[#64748b] leading-relaxed line-clamp-2">{article.excerpt}</p>

@@ -419,7 +419,7 @@ export const InvoicePreviewDrawer = ({ open, onOpenChange, invoiceId, companyId,
                       size="sm"
                       onClick={handleAutoFix}
                       disabled={autoFixing}
-                      className="h-8 text-xs bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA]"
+                      className="h-8 text-xs bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA]"
                     >
                       {autoFixing ? <Loader2 className="h-3 w-3 animate-spin mr-1" /> : null}
                       Korrigera automatiskt

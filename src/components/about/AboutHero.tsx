@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export const AboutHero = () => (
-  <section className="relative bg-[#0f1f35] overflow-hidden">
+  <section className="relative bg-[#0F1B2D] overflow-hidden">
     {/* glow orbs */}
     <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-[#3b82f6]/10 blur-[120px]" />
     <div className="pointer-events-none absolute top-40 right-0 w-[400px] h-[400px] rounded-full bg-[#3b82f6]/10 blur-[100px]" />
@@ -25,7 +25,7 @@ export const AboutHero = () => (
       <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
         <Link
           to="/auth"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white text-[#050d1a] hover:bg-white/90 font-semibold text-sm transition-all"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white text-[#0F1B2D] hover:bg-white/90 font-semibold text-sm transition-all"
         >
           Testa Bokfy <ArrowRight className="w-4 h-4" />
         </Link>

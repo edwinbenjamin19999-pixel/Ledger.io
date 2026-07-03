@@ -54,7 +54,7 @@ export function AutoCloseDialog({ open, onOpenChange, companyId, fiscalYear }: P
     } catch { setPhase("preview"); }
   };
 
-  const primaryBtn = "h-[34px] px-[14px] rounded-[8px] bg-[#0B4F6C] text-white text-[12px] font-medium hover:bg-[#093d54] inline-flex items-center justify-center gap-[6px] disabled:opacity-50";
+  const primaryBtn = "h-[34px] px-[14px] rounded-[8px] bg-[#1D4ED8] text-white text-[12px] font-medium hover:bg-[#093d54] inline-flex items-center justify-center gap-[6px] disabled:opacity-50";
   const ghostBtn = "h-[34px] px-[14px] rounded-[8px] text-[12px] text-[#475569] hover:bg-[#F8FAFB] inline-flex items-center justify-center";
 
   return (
@@ -62,7 +62,7 @@ export function AutoCloseDialog({ open, onOpenChange, companyId, fiscalYear }: P
       <DialogContent className="sm:max-w-2xl">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-[8px] text-[14px] font-medium text-[#0F172A]">
-            <Sparkles className="h-[14px] w-[14px] text-[#0B4F6C]" />
+            <Sparkles className="h-[14px] w-[14px] text-[#1D4ED8]" />
             AI Bokslutsstängning — {fiscalYear}
           </DialogTitle>
         </DialogHeader>
@@ -106,7 +106,7 @@ export function AutoCloseDialog({ open, onOpenChange, companyId, fiscalYear }: P
                     {isDone ? (
                       <CheckCircle2 className="h-[16px] w-[16px] text-[#1D9E75]" />
                     ) : isActive ? (
-                      <Loader2 className="h-[16px] w-[16px] text-[#0B4F6C] animate-spin" />
+                      <Loader2 className="h-[16px] w-[16px] text-[#1D4ED8] animate-spin" />
                     ) : (
                       <span className="text-[10px]">{i + 1}</span>
                     )}

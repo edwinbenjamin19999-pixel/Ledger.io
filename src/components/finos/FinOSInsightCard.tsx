@@ -39,7 +39,7 @@ export function FinOSInsightCard({ insight, dense = false, className }: Props) {
         "hover:border-[#CBD5E1]",
         className,
       )}
-      style={{ borderLeftWidth: 3, borderLeftColor: insight.severity === "critical" ? "#E24B4A" : insight.severity === "warning" ? "#EF9F27" : insight.severity === "watch" ? "#0B4F6C" : insight.severity === "positive" ? "#1D9E75" : "#94A3B8" }}
+      style={{ borderLeftWidth: 3, borderLeftColor: insight.severity === "critical" ? "#E24B4A" : insight.severity === "warning" ? "#EF9F27" : insight.severity === "watch" ? "#1D4ED8" : insight.severity === "positive" ? "#1D9E75" : "#94A3B8" }}
     >
       <header className="flex items-center gap-2 mb-2 flex-wrap">
         <SeverityBadge severity={insight.severity} />

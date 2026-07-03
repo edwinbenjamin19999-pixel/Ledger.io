@@ -32,7 +32,7 @@ export const ArticleHero = ({ h1, intro, intent, readingTime, updatedAt }: Artic
             <Calendar className="w-3 h-3" /> {new Date(updatedAt).toLocaleDateString("sv-SE")}
           </span>
         </div>
-        <h1 className="mt-6 text-4xl md:text-5xl font-semibold tracking-[-0.02em] text-[#0f1f35] leading-[1.1]">
+        <h1 className="mt-6 text-4xl md:text-5xl font-semibold tracking-[-0.02em] text-[#0F1B2D] leading-[1.1]">
           {h1}
         </h1>
         {subtitle && (

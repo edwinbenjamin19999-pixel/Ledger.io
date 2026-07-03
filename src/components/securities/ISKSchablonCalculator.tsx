@@ -28,7 +28,7 @@ export function ISKSchablonCalculator() {
   return (
     <Card className="p-6">
       <div className="flex items-center gap-2 mb-4">
-        <div className="p-2 rounded-lg bg-[#EFF6FF] dark:bg-cyan-950/40">
+        <div className="p-2 rounded-lg bg-[#EFF6FF] dark:bg-blue-950/40">
           <Calculator className="h-5 w-5 text-[#3b82f6] dark:text-[#3b82f6]" />
         </div>
         <div>

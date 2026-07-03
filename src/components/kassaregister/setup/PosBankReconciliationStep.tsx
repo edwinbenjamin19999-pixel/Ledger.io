@@ -112,7 +112,7 @@ export function PosBankReconciliationStep({ onBack, onNext, enabled, setEnabled 
           </div>
 
           {/* Toggle */}
-          <div className="flex items-center justify-between p-3 rounded-xl border border-[#C8DDF5] bg-cyan-50/40">
+          <div className="flex items-center justify-between p-3 rounded-xl border border-[#C8DDF5] bg-blue-50/40">
             <div className="flex items-center gap-2">
               <Landmark className="h-4 w-4 text-[#3b82f6]" />
               <div>

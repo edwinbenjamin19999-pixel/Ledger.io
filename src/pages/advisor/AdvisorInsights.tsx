@@ -147,7 +147,7 @@ export default function AdvisorInsights() {
                   <div className="mt-3 pt-2 flex items-center gap-2">
                     <button
                       onClick={() => navigate("/wl/app/workflow")}
-                      className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
+                      className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
                     >
                       Åtgärda
                     </button>
@@ -252,7 +252,7 @@ export default function AdvisorInsights() {
                   <div className="mt-3 pt-2 flex items-center gap-2">
                     <button
                       onClick={() => navigate(i.fixRoute ?? "/wl/app/workflow")}
-                      className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
+                      className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
                     >
                       Åtgärda
                     </button>

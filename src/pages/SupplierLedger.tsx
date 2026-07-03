@@ -110,7 +110,7 @@ const SupplierAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   const colors = [
     "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
-    "from-emerald-500 to-teal-500", "from-blue-500 to-[#3b82f6]",
+    "from-emerald-500 to-blue-500", "from-blue-500 to-[#3b82f6]",
     "from-violet-500 to-indigo-500", "from-fuchsia-500 to-purple-500",
   ];
   return (

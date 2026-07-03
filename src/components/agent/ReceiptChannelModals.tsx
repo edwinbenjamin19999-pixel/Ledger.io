@@ -74,10 +74,10 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
           className="relative overflow-hidden cursor-pointer bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] hover:bg-[#F5F9FF] transition-all"
           onClick={() => setEmailOpen(true)}
         >
-          <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0B4F6C]" />
+          <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#1D4ED8]" />
           <CardContent className="p-[14px] flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[#EFF6FF] flex items-center justify-center shrink-0">
-              <Mail className="h-5 w-5 text-[#0B4F6C]" />
+              <Mail className="h-5 w-5 text-[#1D4ED8]" />
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
@@ -121,10 +121,10 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
 
         {/* Upload channel */}
         <Card className="relative overflow-hidden bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] hover:bg-[#F5F9FF] transition-all">
-          <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0B4F6C]" />
+          <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#1D4ED8]" />
           <CardContent className="p-[14px] flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[#EFF6FF] flex items-center justify-center shrink-0">
-              <Upload className="h-5 w-5 text-[#0B4F6C]" />
+              <Upload className="h-5 w-5 text-[#1D4ED8]" />
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">

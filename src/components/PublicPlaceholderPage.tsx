@@ -22,14 +22,14 @@ export default function PublicPlaceholderPage({ title, description, icon: Icon }
               <Icon className="w-7 h-7 text-[#3b82f6]" />
             </div>
           )}
-          <h1 className="text-3xl sm:text-4xl font-bold text-[#0f1f35]">{title}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-[#0F1B2D]">{title}</h1>
           <p className="text-[#475569] leading-relaxed">{description}</p>
           <span className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-[#FAEEDA] text-[#7A5417] border border-[#F0DDB7]">
             <Calendar className="w-3 h-3" />
             Kommer snart
           </span>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
-            <Button asChild className="bg-white text-[#050d1a] hover:bg-white/90 font-semibold gap-1.5">
+            <Button asChild className="bg-white text-[#0F1B2D] hover:bg-white/90 font-semibold gap-1.5">
               <Link to="/auth">Testa Bokfy <ArrowRight className="w-3.5 h-3.5" /></Link>
             </Button>
             <Button asChild variant="outline">

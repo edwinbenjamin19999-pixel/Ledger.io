@@ -53,7 +53,7 @@ export function CommandCenter({ companyId, companyName, userName }: Props) {
   const recommendation = summary?.opportunities?.[0]?.action || (priorities?.top?.[0]?.title);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-cyan-50/30 dark:from-[#0a0e1a] dark:via-[#0f1428] dark:to-[#1a1230]">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-[#0a0e1a] dark:via-[#0f1428] dark:to-[#1a1230]">
       <CommandHeader
         companyName={companyName}
         updatedAt={summary?.updated_at || new Date()}

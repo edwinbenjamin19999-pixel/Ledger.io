@@ -198,7 +198,7 @@ export const STAGE_META: Record<
   { label: string; tone: string; order: number }
 > = {
   received: { label: "Mottagen", tone: "bg-slate-100 text-slate-700", order: 1 },
-  draft: { label: "Utkast bokförd", tone: "bg-cyan-50 text-[#3b82f6]", order: 2 },
+  draft: { label: "Utkast bokförd", tone: "bg-blue-50 text-[#3b82f6]", order: 2 },
   awaiting_client: {
     label: "Väntar klientattest",
     tone: "bg-amber-50 text-amber-700",

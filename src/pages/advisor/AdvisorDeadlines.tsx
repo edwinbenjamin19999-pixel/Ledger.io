@@ -12,7 +12,7 @@ type ViewMode = "list" | "calendar" | "timeline";
 
 const KIND_META: Record<FirmDeadlineItem["kind"], { label: string; bg: string; text: string; icon: any; action: string; route: (cid: string) => string }> = {
   vat:    { label: "Moms",          bg: "bg-[#0B1929]",   text: "text-white",         icon: Calculator, action: "Beräkna moms",  route: (cid) => `/wl/app/moms?client=${cid}&action=calculate` },
-  agi:    { label: "AGI",           bg: "bg-[#0B4F6C]",   text: "text-white",         icon: FileText,   action: "Förbered AGI",  route: (cid) => `/wl/app/agi?client=${cid}` },
+  agi:    { label: "AGI",           bg: "bg-[#1D4ED8]",   text: "text-white",         icon: FileText,   action: "Förbered AGI",  route: (cid) => `/wl/app/agi?client=${cid}` },
   ink2:   { label: "Bokslut",       bg: "bg-purple-600",  text: "text-white",         icon: BookOpen,   action: "Öppna bokslut", route: (cid) => `/wl/app/clients/${cid}/workspace/closing` },
   annual: { label: "Årsredovisning", bg: "bg-amber-500",   text: "text-white",         icon: Send,       action: "Lämna in",      route: (cid) => `/wl/app/clients/${cid}/workspace/closing` },
 };
@@ -210,7 +210,7 @@ export default function AdvisorDeadlines() {
                       <td className="px-4 py-2.5 text-right">
                         <button
                           onClick={() => navigate(meta.route(d.client_id))}
-                          className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[28px] inline-flex items-center"
+                          className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[28px] inline-flex items-center"
                         >
                           {meta.action}
                         </button>

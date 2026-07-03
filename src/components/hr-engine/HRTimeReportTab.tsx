@@ -208,7 +208,7 @@ export function HRTimeReportTab({ companyId }: Props) {
               className={cn(
                 "text-[11px] rounded-full px-2 py-[3px]",
                 status === s
-                  ? "bg-[#0B4F6C] text-white"
+                  ? "bg-[#1D4ED8] text-white"
                   : "bg-white border-[0.5px] border-[#E2E8F0] text-[#475569]",
               )}
             >
@@ -218,7 +218,7 @@ export function HRTimeReportTab({ companyId }: Props) {
         </div>
         <button
           onClick={() => setShowAdd((s) => !s)}
-          className="ml-auto text-[12px] inline-flex items-center gap-1 px-3 py-[6px] rounded-[8px] bg-[#0B4F6C] text-[#E6F4FA]"
+          className="ml-auto text-[12px] inline-flex items-center gap-1 px-3 py-[6px] rounded-[8px] bg-[#1D4ED8] text-[#E6F4FA]"
         >
           <Plus className="h-3 w-3" /> Lägg till tidsrad
         </button>
@@ -273,7 +273,7 @@ export function HRTimeReportTab({ companyId }: Props) {
           <button
             onClick={() => insert.mutate()}
             disabled={insert.isPending}
-            className="text-[12px] rounded-[6px] bg-[#0B4F6C] text-[#E6F4FA] py-[6px] disabled:opacity-50"
+            className="text-[12px] rounded-[6px] bg-[#1D4ED8] text-[#E6F4FA] py-[6px] disabled:opacity-50"
           >
             Spara
           </button>

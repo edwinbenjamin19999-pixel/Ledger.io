@@ -48,11 +48,11 @@ export function ExecutiveHero({ loading, headline, bullets = [], recommendation,
         .ai-exec-label {
           background-image: linear-gradient(
             90deg,
-            rgba(29,217,240,0.18) 0%,
-            rgba(29,217,240,0.32) 25%,
-            rgba(29,217,240,0.55) 50%,
-            rgba(29,217,240,0.32) 75%,
-            rgba(29,217,240,0.18) 100%
+            rgba(37,99,235,0.18) 0%,
+            rgba(37,99,235,0.32) 25%,
+            rgba(37,99,235,0.55) 50%,
+            rgba(37,99,235,0.32) 75%,
+            rgba(37,99,235,0.18) 100%
           );
           background-size: 200% 100%;
           animation: ai-label-shimmer 3s linear infinite;
@@ -73,9 +73,9 @@ export function ExecutiveHero({ loading, headline, bullets = [], recommendation,
             <span
               className="inline-flex items-center tabular-nums"
               style={{
-                background: "rgba(29,217,240,0.1)",
+                background: "rgba(37,99,235,0.1)",
                 color: "#0D7A8A",
-                border: "1px solid rgba(29,217,240,0.2)",
+                border: "1px solid rgba(37,99,235,0.2)",
                 borderRadius: 100,
                 padding: "3px 10px",
                 fontSize: 12,
@@ -88,7 +88,7 @@ export function ExecutiveHero({ loading, headline, bullets = [], recommendation,
         </div>
 
         <h2
-          className="tracking-tight max-w-3xl text-[#0B1F2F] dark:text-foreground"
+          className="tracking-tight max-w-3xl text-[#0F1B2D] dark:text-foreground"
           style={{ fontSize: 24, fontWeight: 700, lineHeight: 1.3 }}
         >
           {headline || "Analysen byggs upp — kontrollera bokförd data."}

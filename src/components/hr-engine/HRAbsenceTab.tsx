@@ -21,7 +21,7 @@ const ABSENCE_TYPES = [
 ];
 
 const AVATAR_PALETTE = [
-  "#0B4F6C", "#5DCAA5", "#EF9F27", "#85B7EB", "#A78BFA",
+  "#1D4ED8", "#5DCAA5", "#EF9F27", "#85B7EB", "#A78BFA",
   "#F09595", "#22A06B", "#0C447C", "#412402", "#475569",
 ];
 
@@ -171,7 +171,7 @@ export function HRAbsenceTab({ companyId }: Props) {
                 </div>
                 <button
                   onClick={() => setOpenModal(e.id)}
-                  className="text-[11px] px-2 py-[5px] rounded-[6px] bg-[#0B4F6C] text-[#E6F4FA]"
+                  className="text-[11px] px-2 py-[5px] rounded-[6px] bg-[#1D4ED8] text-[#E6F4FA]"
                 >
                   Registrera frånvaro
                 </button>
@@ -276,7 +276,7 @@ export function HRAbsenceTab({ companyId }: Props) {
               <button
                 disabled={submit.isPending || days < 1}
                 onClick={() => submit.mutate(openModal)}
-                className="w-full text-[12px] font-medium rounded-[8px] py-[8px] bg-[#0B4F6C] text-[#E6F4FA] disabled:opacity-50"
+                className="w-full text-[12px] font-medium rounded-[8px] py-[8px] bg-[#1D4ED8] text-[#E6F4FA] disabled:opacity-50"
               >
                 Registrera frånvaro
               </button>

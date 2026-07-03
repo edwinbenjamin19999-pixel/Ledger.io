@@ -67,7 +67,7 @@ export const BureauAIPrioritiesPanel = () => {
         <div className="flex items-center gap-2">
           <div
             className="h-[18px] w-[18px] rounded-full flex items-center justify-center"
-            style={{ background: "#0B4F6C" }}
+            style={{ background: "#1D4ED8" }}
           >
             <span className="h-[7px] w-[7px] rounded-full bg-[#3b82f6]" />
           </div>

@@ -15,7 +15,7 @@ export const FAQAccordion = ({ items }: { items: FAQItem[] }) => {
               onClick={() => setOpen(isOpen ? null : i)}
               className="w-full flex items-center justify-between gap-4 text-left px-6 py-5 hover:bg-slate-50/50 transition-colors"
             >
-              <span className="font-semibold text-[#0f1f35]">{item.q}</span>
+              <span className="font-semibold text-[#0F1B2D]">{item.q}</span>
               <ChevronDown className={`w-4 h-4 text-[#94a3b8] transition-transform ${isOpen ? "rotate-180" : ""}`} />
             </button>
             {isOpen && (

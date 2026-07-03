@@ -65,7 +65,7 @@ export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
         updatedAt={article.updatedAt}
       />
 
-      <article className="container mx-auto max-w-[760px] px-6 py-16 text-[17px] leading-[1.75] text-slate-700 [&_h2]:text-[26px] [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-[#0f1f35] [&_h2]:mt-14 [&_h2]:mb-5 [&_p]:mb-5">
+      <article className="container mx-auto max-w-[760px] px-6 py-16 text-[17px] leading-[1.75] text-slate-700 [&_h2]:text-[26px] [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-[#0F1B2D] [&_h2]:mt-14 [&_h2]:mb-5 [&_p]:mb-5">
         {article.problem && <ProblemBlock data={article.problem} />}
 
         {article.steps && article.steps.length > 0 && <StepList steps={article.steps} />}

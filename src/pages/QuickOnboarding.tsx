@@ -882,12 +882,12 @@ const QuickOnboarding = () => {
 
   const primaryBtn =
     "w-full h-[52px] rounded-xl bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold text-[15px] " +
-    "shadow-[0_2px_12px_rgba(8,145,178,0.25)] hover:shadow-[0_4px_16px_rgba(8,145,178,0.35)] " +
+    "shadow-[0_2px_12px_rgba(37,99,235,0.25)] hover:shadow-[0_4px_16px_rgba(37,99,235,0.35)] " +
     "hover:-translate-y-px active:translate-y-0 transition-all duration-150 " +
     "disabled:opacity-60 disabled:hover:translate-y-0 flex items-center justify-center gap-2";
 
   const ghostBtn =
-    "h-[52px] px-5 rounded-xl text-[14px] font-medium text-slate-600 hover:text-[#0f1f35] " +
+    "h-[52px] px-5 rounded-xl text-[14px] font-medium text-slate-600 hover:text-[#0F1B2D] " +
     "hover:bg-slate-50 transition-all duration-150 flex items-center justify-center gap-2";
 
   const primarySni = bvData?.sniCodes?.[0];
@@ -896,7 +896,7 @@ const QuickOnboarding = () => {
     <AuthShell compact>
       <div className="hidden lg:flex items-center gap-0 mb-10">
         <span className="text-xl font-[800] text-[#3b82f6]">Bok</span>
-        <span className="text-xl font-[800] text-[#0f1f35]">fy</span>
+        <span className="text-xl font-[800] text-[#0F1B2D]">fy</span>
       </div>
 
       <OnboardingProgress current={step} total={6} />
@@ -904,7 +904,7 @@ const QuickOnboarding = () => {
       {/* ============== Step 1 — Företag ============== */}
       {step === 1 && (
         <div key="s1" className="animate-fade-in">
-          <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">
+          <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">
             Berätta om ditt företag
           </h2>
           <p className="text-sm text-slate-500 mt-1 mb-6">
@@ -1035,7 +1035,7 @@ const QuickOnboarding = () => {
               Steg 2 av 6 · KYC-verifiering (penningtvättslagen)
             </span>
           </div>
-          <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">
+          <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">
             Verifiera ditt företag
           </h2>
           <p className="text-sm text-slate-500 mt-1 mb-6">
@@ -1096,7 +1096,7 @@ const QuickOnboarding = () => {
             </div>
 
             <div className="rounded-xl border border-slate-200 bg-slate-50/50 p-4 space-y-3">
-              <p className="text-[13px] font-semibold text-[#0f1f35]">Verklig huvudman *</p>
+              <p className="text-[13px] font-semibold text-[#0F1B2D]">Verklig huvudman *</p>
               <p className="text-[12px] text-slate-500 -mt-2">
                 Person som äger ≥ 25 % eller har bestämmande inflytande (Lag 2017:631).
               </p>
@@ -1128,7 +1128,7 @@ const QuickOnboarding = () => {
             </div>
 
             <div className="rounded-xl border border-slate-200 bg-slate-50/50 p-4 space-y-3">
-              <p className="text-[13px] font-semibold text-[#0f1f35]">Riskbedömning *</p>
+              <p className="text-[13px] font-semibold text-[#0F1B2D]">Riskbedömning *</p>
 
               <label className="flex items-start gap-3 cursor-pointer">
                 <input
@@ -1224,7 +1224,7 @@ const QuickOnboarding = () => {
               Steg 3 av 6 · Bankkoppling
             </span>
           </div>
-          <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">
+          <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">
             Koppla din företagsbank
           </h2>
           <p className="text-sm text-slate-500 mt-1 mb-4">
@@ -1315,7 +1315,7 @@ const QuickOnboarding = () => {
                       className="flex items-center justify-between rounded-lg bg-white border border-emerald-100 px-3 py-2"
                     >
                       <div className="min-w-0">
-                        <p className="text-[13px] font-medium text-[#0f1f35] truncate">
+                        <p className="text-[13px] font-medium text-[#0F1B2D] truncate">
                           {a.account_name || "Konto"}
                           <span className="ml-2 text-[11px] text-slate-500 font-normal">
                             {a.bank_name || ""}
@@ -1327,7 +1327,7 @@ const QuickOnboarding = () => {
                       </div>
                       <div className="text-right shrink-0 ml-3">
                         {a.balance !== null ? (
-                          <p className="text-[14px] font-semibold tabular-nums text-[#0f1f35]">
+                          <p className="text-[14px] font-semibold tabular-nums text-[#0F1B2D]">
                             {Number(a.balance).toLocaleString("sv-SE", { maximumFractionDigits: 2 })}{" "}
                             <span className="text-[11px] text-slate-500 font-normal">
                               {a.currency || "SEK"}
@@ -1363,7 +1363,7 @@ const QuickOnboarding = () => {
             </div>
           )}
 
-          <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">
+          <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">
             Vad vill du göra först?
           </h2>
           <p className="text-sm text-slate-500 mt-1 mb-6">
@@ -1399,7 +1399,7 @@ const QuickOnboarding = () => {
               Steg 5 av 6 · Signera allt med BankID
             </span>
           </div>
-          <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">
+          <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">
             Signera kundavtal & KYC
           </h2>
           <p className="text-sm text-slate-500 mt-1 mb-5">
@@ -1424,13 +1424,13 @@ const QuickOnboarding = () => {
               <>
                 {signatoryRule && (
                   <p className="text-[12px] text-slate-600 mb-2">
-                    <span className="font-medium text-[#0f1f35]">Teckningsregel:</span> {signatoryRule}
+                    <span className="font-medium text-[#0F1B2D]">Teckningsregel:</span> {signatoryRule}
                   </p>
                 )}
                 <ul className="space-y-1.5">
                   {signatories.slice(0, 8).map((p, i) => (
                     <li key={i} className="text-[13px] text-slate-700 flex items-center justify-between">
-                      <span className="font-medium text-[#0f1f35]">{p.name || "—"}</span>
+                      <span className="font-medium text-[#0F1B2D]">{p.name || "—"}</span>
                       <span className="text-[12px] text-slate-500">{p.role || ""}</span>
                     </li>
                   ))}
@@ -1454,7 +1454,7 @@ const QuickOnboarding = () => {
 
           {/* Avtalstext */}
           <div className="rounded-xl border border-slate-200 bg-white p-4 mb-4 max-h-[200px] overflow-y-auto text-[13px] text-slate-700 leading-relaxed space-y-3">
-            <p className="font-semibold text-[#0f1f35]">Kundavtal Bokfy – version 2025-01</p>
+            <p className="font-semibold text-[#0F1B2D]">Kundavtal Bokfy – version 2025-01</p>
             <p>
               Detta avtal ingås mellan {companyName || "kunden"} (org.nr {orgNumber || "—"})
               och Bokfy AB. Avtalet ger kunden rätt att använda plattformen för bokföring,
@@ -1627,7 +1627,7 @@ const QuickOnboarding = () => {
             <Check className="w-7 h-7 text-[#3b82f6]" strokeWidth={2.5} />
           </div>
 
-          <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">
+          <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">
             Din plattform är aktiverad
           </h2>
           <p className="text-sm text-slate-500 mt-1 mb-2">

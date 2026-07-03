@@ -57,7 +57,7 @@ export function LogoUploader({ firmId, value, onChange, prefix = "logo", label =
         onDrop={(e) => { e.preventDefault(); setDragOver(false); handleFiles(e.dataTransfer.files); }}
         onClick={() => inputRef.current?.click()}
         className={`relative cursor-pointer rounded-2xl border-2 border-dashed p-6 text-center transition ${
-          dragOver ? "border-[#0B4F6C] bg-[#0B4F6C]/5" : "border-[#CBD5E1] hover:border-[#94A3B8] bg-[#F8FAFC]"
+          dragOver ? "border-[#1D4ED8] bg-[#1D4ED8]/5" : "border-[#CBD5E1] hover:border-[#94A3B8] bg-[#F8FAFC]"
         }`}
       >
         {busy ? (

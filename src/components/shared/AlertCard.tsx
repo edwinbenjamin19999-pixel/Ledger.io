@@ -21,10 +21,10 @@ const TONE_STYLES = {
     title: 'text-[#7A1A1A] dark:text-rose-300',
   },
   info: {
-    bg: 'bg-[#0F1F3D] dark:from-cyan-950/20 dark:to-blue-950/10',
-    border: 'border-cyan-200/50 dark:border-[#3b82f6]/30',
+    bg: 'bg-[#0F1F3D] dark:from-blue-950/20 dark:to-blue-950/10',
+    border: 'border-blue-200/50 dark:border-[#3b82f6]/30',
     accent: 'bg-[#3b82f6]',
-    iconBg: 'bg-[#EFF6FF] text-[#3b82f6] dark:bg-cyan-900/30 dark:text-[#1E3A5F]',
+    iconBg: 'bg-[#EFF6FF] text-[#3b82f6] dark:bg-blue-900/30 dark:text-[#1E3A5F]',
     title: 'text-[#3b82f6] dark:text-[#3b82f6]',
   },
   warning: {

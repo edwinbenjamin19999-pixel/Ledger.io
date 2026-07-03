@@ -76,7 +76,7 @@ export function PrimaryValueBlock({
             verdict.tone === "strong" &&
               "from-emerald-50 to-emerald-100/60 text-[#085041] border-[#BFE6D6] dark:from-emerald-950/60 dark:to-emerald-900/40 dark:text-emerald-300 dark:border-emerald-800",
             verdict.tone === "watch" &&
-              "from-cyan-50 to-cyan-100/60 text-[#3b82f6] border-[#C8DDF5] dark:from-cyan-950/60 dark:to-cyan-900/40 dark:text-[#3b82f6] dark:border-[#3b82f6]",
+              "from-blue-50 to-blue-100/60 text-[#3b82f6] border-[#C8DDF5] dark:from-blue-950/60 dark:to-blue-900/40 dark:text-[#3b82f6] dark:border-[#3b82f6]",
             verdict.tone === "attention" &&
               "from-amber-50 to-amber-100/60 text-[#7A5417] border-[#F0DDB7] dark:from-amber-950/60 dark:to-amber-900/40 dark:text-amber-300 dark:border-amber-800",
             verdict.tone === "critical" &&

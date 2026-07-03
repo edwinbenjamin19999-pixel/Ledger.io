@@ -18,7 +18,7 @@ export const RelatedGuides = ({ slugs }: { slugs: string[] }) => {
       <div className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#3b82f6]">
         Fortsätt läsa
       </div>
-      <h2 className="mt-2 text-[26px] font-semibold tracking-tight text-[#0f1f35]">
+      <h2 className="mt-2 text-[26px] font-semibold tracking-tight text-[#0F1B2D]">
         Relaterade guider
       </h2>
       <div className="mt-6 grid sm:grid-cols-2 gap-4">
@@ -31,7 +31,7 @@ export const RelatedGuides = ({ slugs }: { slugs: string[] }) => {
             <div className="inline-flex self-start items-center rounded-full border border-slate-900/[0.08] bg-slate-50 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.14em] font-semibold text-slate-600">
               {intentLabel[g.intent]}
             </div>
-            <div className="mt-4 text-[17px] font-semibold text-[#0f1f35] tracking-tight leading-snug line-clamp-2">
+            <div className="mt-4 text-[17px] font-semibold text-[#0F1B2D] tracking-tight leading-snug line-clamp-2">
               {g.h1.split("—")[0].split("?")[0].trim()}
             </div>
             <p className="mt-2 text-[14px] text-slate-600 leading-relaxed line-clamp-2 flex-1">

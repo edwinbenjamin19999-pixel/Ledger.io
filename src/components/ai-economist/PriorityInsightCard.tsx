@@ -75,7 +75,7 @@ export function PriorityInsightCard({ insight, automationMode, onFix, onIgnore, 
             className={cn(
               "px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all",
               "bg-[#0F1F3D] text-white",
-              "hover:shadow-[0_0_24px_rgba(6,182,212,0.4)]",
+              "hover:shadow-[0_0_24px_rgba(37,99,235,0.4)]",
               "disabled:opacity-60"
             )}
           >

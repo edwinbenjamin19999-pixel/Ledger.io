@@ -32,7 +32,7 @@ interface Invitation {
 
 const ROLE_META: Record<Member["role"], { label: string; icon: typeof Crown; tone: string }> = {
   admin:      { label: "Byråadmin",  icon: Crown,     tone: "text-amber-700 bg-amber-50" },
-  consultant: { label: "Redovisare", icon: Briefcase, tone: "text-[#3b82f6] bg-cyan-50" },
+  consultant: { label: "Redovisare", icon: Briefcase, tone: "text-[#3b82f6] bg-blue-50" },
   viewer:     { label: "Läsare",     icon: Eye,       tone: "text-slate-700 bg-slate-100" },
 };
 

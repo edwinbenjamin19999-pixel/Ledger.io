@@ -11,7 +11,7 @@ const CustomerAgreement = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#0f1f35]">
+    <div className="min-h-screen bg-white text-[#0F1B2D]">
 
       <Header lightBg />
 
@@ -21,7 +21,7 @@ const CustomerAgreement = () => {
             <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-[#0f1f35] mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-[#0F1B2D] mb-3">
               Kundavtal
             </h1>
             <p className="text-base text-slate-600">
@@ -30,7 +30,7 @@ const CustomerAgreement = () => {
             </p>
           </div>
 
-          <article className="prose prose-slate max-w-none prose-headings:text-[#0f1f35] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0f1f35]">
+          <article className="prose prose-slate max-w-none prose-headings:text-[#0F1B2D] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0F1B2D]">
             <h2>1. Parter och definitioner</h2>
             <p>
               Avtalet ingås mellan Bokfy AB, org.nr [556xxx-xxxx] (&quot;Bokfy&quot;) och den
@@ -195,7 +195,7 @@ const CustomerAgreement = () => {
 
             <div className="mt-12 p-5 rounded-2xl bg-slate-50 border border-slate-200 not-prose">
               <p className="text-sm text-slate-600 leading-relaxed">
-                <strong className="text-[#0f1f35]">Frågor?</strong> Kontakta oss på{" "}
+                <strong className="text-[#0F1B2D]">Frågor?</strong> Kontakta oss på{" "}
                 <a href="mailto:legal@bokfy.se" className="text-[#3b82f6] hover:underline">
                   legal@bokfy.se
                 </a>{" "}

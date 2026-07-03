@@ -57,7 +57,7 @@ export default function BlogPage() {
         {/* Popular */}
         <section className="py-16 bg-slate-50/60 border-y border-slate-100">
           <div className="container mx-auto max-w-3xl px-6">
-            <h2 className="text-xl font-bold text-[#0f1f35] tracking-tight mb-1">Populära artiklar</h2>
+            <h2 className="text-xl font-bold text-[#0F1B2D] tracking-tight mb-1">Populära artiklar</h2>
             <p className="text-sm text-[#64748b] mb-4">Det våra läsare återvänder till oftast.</p>
             <div className="divide-y divide-slate-100 bg-white rounded-2xl border border-slate-100 px-6 shadow-sm">
               {popular.map((a) => <CompactArticleCard key={a.slug} article={a} />)}

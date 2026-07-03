@@ -29,8 +29,8 @@ export const ALL_KPIS: KpiDefinition[] = [
   { id: 'budget_variance', label: 'Budgetavvikelse', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#D97706', icon: 'BarChart3', navigateTo: '/budget' },
 
   // LIKVIDITET & BALANS
-  { id: 'cash', label: 'Kassa & Bank', category: 'LIKVIDITET & BALANS', suffix: ' kr', prefix: '', accentColor: '#06B6D4', icon: 'Wallet', navigateTo: '/bank' },
-  { id: 'current_ratio', label: 'Likviditetsgrad', category: 'LIKVIDITET & BALANS', suffix: '', prefix: '', accentColor: '#0891B2', icon: 'BarChart3', navigateTo: '/reports' },
+  { id: 'cash', label: 'Kassa & Bank', category: 'LIKVIDITET & BALANS', suffix: ' kr', prefix: '', accentColor: '#2563EB', icon: 'Wallet', navigateTo: '/bank' },
+  { id: 'current_ratio', label: 'Likviditetsgrad', category: 'LIKVIDITET & BALANS', suffix: '', prefix: '', accentColor: '#2563EB', icon: 'BarChart3', navigateTo: '/reports' },
   { id: 'quick_ratio', label: 'Kassalikviditet', category: 'LIKVIDITET & BALANS', suffix: '', prefix: '', accentColor: '#0E7490', icon: 'BarChart3', navigateTo: '/reports' },
   { id: 'period_cashflow', label: 'Periodens kassaflöde', category: 'LIKVIDITET & BALANS', suffix: ' kr', prefix: '', accentColor: '#14B8A6', icon: 'TrendingUp', navigateTo: '/cash-flow' },
 

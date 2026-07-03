@@ -142,7 +142,7 @@ const KanbanColumn = ({
       className={cn(
         "rounded-xl border-2 bg-slate-50/50 p-3 min-h-[400px] transition-colors",
         accent,
-        isOver && "bg-cyan-50/60 border-[#3b82f6]",
+        isOver && "bg-blue-50/60 border-[#3b82f6]",
       )}
     >
       <div className="flex items-center justify-between mb-3 px-1">

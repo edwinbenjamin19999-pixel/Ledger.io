@@ -31,7 +31,7 @@ const IndustryBadge = () => {
   if (!badge) return null;
   return (
     <span
-      className="hidden md:inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-teal-500/15 text-teal-700 dark:text-teal-300 text-[10px] font-medium tracking-wide shrink-0"
+      className="hidden md:inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-blue-500/15 text-blue-700 dark:text-blue-300 text-[10px] font-medium tracking-wide shrink-0"
       title={badge.label}
     >
       <span aria-hidden>{badge.emoji}</span>

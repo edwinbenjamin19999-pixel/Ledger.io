@@ -21,7 +21,7 @@ export const MemberCard = ({ cap }: { cap: MemberCapacity }) => {
       style={{
         background: "#FFFFFF",
         border: "1px solid rgba(15,23,42,0.06)",
-        boxShadow: isOver ? "0 30px 80px rgba(8,145,178,0.18)" : "0 30px 80px rgba(15,23,42,0.05)",
+        boxShadow: isOver ? "0 30px 80px rgba(37,99,235,0.18)" : "0 30px 80px rgba(15,23,42,0.05)",
       }}
     >
       <div className="flex items-center justify-between mb-3">

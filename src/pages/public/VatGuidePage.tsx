@@ -40,7 +40,7 @@ export default function VatGuidePage() {
               <Calculator className="w-3 h-3" />
               Svensk momsguide
             </div>
-            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#0f1f35]">Allt om svensk moms</h1>
+            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#0F1B2D]">Allt om svensk moms</h1>
             <p className="mt-5 text-lg text-[#475569] leading-relaxed">
               Momssatser, kontoplan, deklaration och vanliga fel — i en guide. Uppdaterad enligt regler 2026.
             </p>
@@ -57,14 +57,14 @@ export default function VatGuidePage() {
             <StickyTOC items={TOC} />
             <article className="max-w-3xl space-y-14">
               <section id="vad-ar-moms" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight">Vad är moms?</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B2D] tracking-tight">Vad är moms?</h2>
                 <p className="mt-4 text-[#334155] leading-[1.8] text-[17px]">
                   Mervärdesskatt (moms) är en konsumtionsskatt som läggs på varor och tjänster. Företag agerar som uppbördsmän — de tar in momsen från kunder och betalar in skillnaden mellan utgående och ingående moms till Skatteverket.
                 </p>
               </section>
 
               <section id="momssatser" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight">Svenska momssatser</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B2D] tracking-tight">Svenska momssatser</h2>
                 <p className="mt-3 text-[#334155] leading-[1.8] text-[17px]">Sverige har tre momssatser plus momsfri försäljning.</p>
                 <div className="mt-6 grid sm:grid-cols-3 gap-4">
                   <VatRateCard rate="25 %" label="Standardsats" examples={["Konsulttjänster", "Mjukvara", "Kontorsmaterial", "De flesta varor"]} accent="text-[#3b82f6]" />
@@ -77,7 +77,7 @@ export default function VatGuidePage() {
               </section>
 
               <section id="sankt-matmoms" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight flex items-center gap-2">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B2D] tracking-tight flex items-center gap-2">
                   <CalendarClock className="w-6 h-6 text-[#7A5417]" />
                   Sänkt matmoms 2026–2027
                 </h2>
@@ -103,7 +103,7 @@ export default function VatGuidePage() {
               </section>
 
               <section id="bokforing" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight">Hur moms bokförs</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B2D] tracking-tight">Hur moms bokförs</h2>
                 <p className="mt-3 text-[#334155] leading-[1.8] text-[17px]">
                   Moms bokförs på BAS-konton i 2600-serien. Varje momssats har egna konton för in- och utgående moms.
                 </p>
@@ -117,7 +117,7 @@ export default function VatGuidePage() {
               </section>
 
               <section id="deklaration" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight">Hur momsdeklaration fungerar</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B2D] tracking-tight">Hur momsdeklaration fungerar</h2>
                 <ol className="mt-4 space-y-3 list-decimal pl-6 text-[#334155] leading-[1.7] text-[17px] marker:text-[#3b82f6] marker:font-bold">
                   <li>Sammanställ utgående moms (rutorna 10–12) från försäljning under perioden</li>
                   <li>Sammanställ ingående moms (ruta 48) från inköp</li>
@@ -128,7 +128,7 @@ export default function VatGuidePage() {
               </section>
 
               <section id="vanliga-fel" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight">Vanliga fel</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B2D] tracking-tight">Vanliga fel</h2>
                 <div className="mt-5 space-y-3">
                   {[
                     "Restaurangnota med alkohol bokförd som 12 % istället för 25 %",
@@ -147,8 +147,8 @@ export default function VatGuidePage() {
               </section>
 
               <section id="automation" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight">Hur Bokfy automatiserar moms</h2>
-                <div className="mt-5 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100 p-6 md:p-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B2D] tracking-tight">Hur Bokfy automatiserar moms</h2>
+                <div className="mt-5 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-50 border border-blue-100 p-6 md:p-8">
                   <Sparkles className="w-6 h-6 text-[#3b82f6]" />
                   <p className="mt-3 text-[#334155] leading-[1.8] text-[17px]">
                     Bokfy väljer momskod automatiskt baserat på leverantör, produkttyp och historik. Vid periodslut sammanställs deklarationen automatiskt med alla rutor på SKV 4700 — du behöver bara godkänna inlämningen.
@@ -162,11 +162,11 @@ export default function VatGuidePage() {
               </section>
 
               <section id="faq" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight mb-5">FAQ</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F1B2D] tracking-tight mb-5">FAQ</h2>
                 <FAQAccordion items={FAQS} />
               </section>
 
-              <section className="rounded-2xl bg-[#0f1f35] p-8 md:p-10 text-white text-center">
+              <section className="rounded-2xl bg-[#0F1B2D] p-8 md:p-10 text-white text-center">
                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Slipp tänka på moms</h3>
                 <p className="mt-2 text-white/70 max-w-md mx-auto">Låt Bokfy sköta kodning, beräkning och inlämning automatiskt.</p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center">

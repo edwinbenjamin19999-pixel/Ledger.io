@@ -522,7 +522,7 @@ export const STATUS_CONFIG: Record<ActionStatus, { label: string; color: string 
   pending_review: { label: "Granskas", color: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-[#1E3A5F]" },
   pending_approval: { label: "Väntar godkännande", color: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-[#1E3A5F]" },
   pending_signing: { label: "Väntar signering", color: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400" },
-  ready_to_execute: { label: "Redo att verkställa", color: "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-400" },
+  ready_to_execute: { label: "Redo att verkställa", color: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400" },
   executed: { label: "Verkställd", color: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-[#1D9E75]" },
   archived: { label: "Arkiverad", color: "bg-muted text-muted-foreground" },
   cancelled: { label: "Avbruten", color: "bg-destructive/10 text-destructive" },

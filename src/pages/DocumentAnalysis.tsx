@@ -82,7 +82,7 @@ function AIPipeline({ analyzing, done }: { analyzing: boolean; done: boolean }) 
           <div key={step} className="flex items-center gap-1">
             <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
               isComplete ? "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]" :
-              isActive ? "bg-[#EFF6FF] text-[#3b82f6] dark:bg-cyan-900/30 dark:text-[#1E3A5F] animate-pulse" :
+              isActive ? "bg-[#EFF6FF] text-[#3b82f6] dark:bg-blue-900/30 dark:text-[#1E3A5F] animate-pulse" :
               "bg-muted text-muted-foreground"
             }`}>
               {isComplete && <CheckCircle2 className="w-3 h-3" />}
@@ -110,7 +110,7 @@ function AIPreviewPanel({ result }: { result: any }) {
   const pct = Math.round((result.confidence || 0) * 100);
 
   return (
-    <Card className="bg-[#0F1F3D] dark:from-cyan-950/20 dark:to-blue-950/20 border-cyan-200/50 dark:border-[#3b82f6]/30">
+    <Card className="bg-[#0F1F3D] dark:from-blue-950/20 dark:to-blue-950/20 border-blue-200/50 dark:border-[#3b82f6]/30">
       <CardContent className="p-5">
         <div className="flex items-center gap-2 mb-4">
           <Sparkles className="w-5 h-5 text-[#3b82f6]" />
@@ -140,7 +140,7 @@ function AIPreviewPanel({ result }: { result: any }) {
           )}
         </div>
 
-        <div className="p-3 rounded-lg bg-white/60 dark:bg-slate-800/40 border border-cyan-100/50 dark:border-[#3b82f6]/20 mb-4">
+        <div className="p-3 rounded-lg bg-white/60 dark:bg-slate-800/40 border border-blue-100/50 dark:border-[#3b82f6]/20 mb-4">
           <p className="text-xs text-muted-foreground mb-1">Föreslagen kontering</p>
           <p className="text-sm font-medium text-foreground">{suggestedAccount}</p>
         </div>
@@ -460,7 +460,7 @@ export default function DocumentAnalysis() {
               key={kpi.label}
               className="relative overflow-hidden bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] p-[16px]"
             >
-              <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0B4F6C]" />
+              <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#1D4ED8]" />
               <div className="flex items-start justify-between gap-2">
                 <div className="min-w-0">
                   <p className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8] leading-tight">{kpi.label}</p>
@@ -476,9 +476,9 @@ export default function DocumentAnalysis() {
 
       <Tabs defaultValue="upload" className="space-y-4">
         <TabsList className="flex-wrap h-auto gap-0 rounded-none bg-transparent p-0 border-b-[0.5px] border-[#E2E8F0] w-full justify-start">
-          <TabsTrigger value="upload" className="rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none -mb-px">Analysera</TabsTrigger>
-          <TabsTrigger value="email" className="rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none -mb-px">Mejlinkorg</TabsTrigger>
-          <TabsTrigger value="archive" className="rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#0B4F6C] data-[state=active]:font-medium data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none -mb-px">
+          <TabsTrigger value="upload" className="rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none -mb-px">Analysera</TabsTrigger>
+          <TabsTrigger value="email" className="rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none -mb-px">Mejlinkorg</TabsTrigger>
+          <TabsTrigger value="archive" className="rounded-none bg-transparent text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] data-[state=active]:bg-transparent data-[state=active]:text-[#1D4ED8] data-[state=active]:font-medium data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none -mb-px">
             Arkiv
             <span className="bg-[#F1F5F9] text-[#475569] rounded-full text-[10px] ml-[5px] px-[6px] py-px">{documents?.length || 0}</span>
           </TabsTrigger>
@@ -488,8 +488,8 @@ export default function DocumentAnalysis() {
           {/* Upload area */}
           <Card className={`group bg-white border-[2px] border-dashed rounded-[12px] transition-all duration-300 shadow-none ${
             dragOver
-              ? "border-[#0B4F6C] bg-[#F5F9FF]"
-              : "border-[#E2E8F0] hover:border-[#0B4F6C] hover:bg-[#F5F9FF]"
+              ? "border-[#1D4ED8] bg-[#F5F9FF]"
+              : "border-[#E2E8F0] hover:border-[#1D4ED8] hover:bg-[#F5F9FF]"
           }`}>
             <CardContent className="p-0">
               <div
@@ -501,13 +501,13 @@ export default function DocumentAnalysis() {
               >
                 {analyzing ? (
                   <>
-                    <Loader2 size={32} strokeWidth={1} className="text-[#0B4F6C] animate-spin mb-3" />
+                    <Loader2 size={32} strokeWidth={1} className="text-[#1D4ED8] animate-spin mb-3" />
                     <p className="text-[14px] font-medium text-[#0F172A]">Analyserar dokument med AI...</p>
                     <p className="text-[12px] text-[#94A3B8] mt-1 animate-pulse">Extraherar data, klassificerar och förbereder kontering</p>
                   </>
                 ) : (
                   <>
-                    <Upload size={32} strokeWidth={1} className={`${dragOver ? "text-[#0B4F6C]" : "text-[#94A3B8] group-hover:text-[#0B4F6C]"} transition-colors`} />
+                    <Upload size={32} strokeWidth={1} className={`${dragOver ? "text-[#1D4ED8]" : "text-[#94A3B8] group-hover:text-[#1D4ED8]"} transition-colors`} />
                     <p className="text-[14px] font-medium text-[#0F172A] mt-[12px] text-center">Släpp valfritt dokument — kvitto, faktura, avtal</p>
                     <p className="text-[12px] text-[#94A3B8] mt-[4px] text-center max-w-md">
                       AI extraherar, kategoriserar och bokför automatiskt
@@ -549,11 +549,11 @@ export default function DocumentAnalysis() {
           ) : !result && (
             <Card className="bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] shadow-none">
               <CardContent className="py-8 text-center flex flex-col items-center">
-                <div className="w-[14px] h-[14px] rounded-full bg-[#0B4F6C] mb-3 flex items-center justify-center">
+                <div className="w-[14px] h-[14px] rounded-full bg-[#1D4ED8] mb-3 flex items-center justify-center">
                   <span className="w-[5px] h-[5px] rounded-full bg-[#E6F4FA]" />
                 </div>
                 <p className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">AI-insikter</p>
-                <div className="w-[32px] h-[32px] rounded-full bg-[#0B4F6C] mt-3 flex items-center justify-center">
+                <div className="w-[32px] h-[32px] rounded-full bg-[#1D4ED8] mt-3 flex items-center justify-center">
                   <span className="w-[12px] h-[12px] rounded-full bg-[#E6F4FA]" />
                 </div>
                 <p className="text-[14px] font-medium text-[#0F172A] mt-[12px]">AI Insights</p>

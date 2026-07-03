@@ -131,7 +131,7 @@ export function AIHero({
             key={c.key}
             type="button"
             onClick={() => onDriverFocus?.(c.key)}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#3b82f6] hover:bg-cyan-50/60 transition-colors"
+            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#3b82f6] hover:bg-blue-50/60 transition-colors"
           >
             {DRIVER_LABELS[c.key] ?? c.key}
           </button>

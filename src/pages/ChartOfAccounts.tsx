@@ -73,7 +73,7 @@ export default function ChartOfAccounts() {
       <KPIFilterCards stats={h.stats} currentFilter={h.kpiFilter} onFilterChange={h.setKpiFilter} />
 
       {/* AI Insights Strip */}
-      <div className="mx-8 mb-2 px-5 py-3.5 rounded-2xl bg-[#0F1F3D] border border-cyan-100/50 flex items-center gap-4">
+      <div className="mx-8 mb-2 px-5 py-3.5 rounded-2xl bg-[#0F1F3D] border border-blue-100/50 flex items-center gap-4">
         <div className="w-8 h-8 rounded-xl bg-[#0F1F3D] flex items-center justify-center flex-shrink-0">
           <Sparkles className="w-4 h-4 text-[#3b82f6]" />
         </div>

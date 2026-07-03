@@ -216,7 +216,7 @@ export const MobileApprovals = ({ onNavigate: _onNavigate }: MobileApprovalsProp
                   className="bg-white border-[0.5px] border-[#E2E8F0] rounded-[12px] p-[14px]"
                 >
                   <div className="flex items-start gap-[10px]">
-                    <span className="inline-flex items-center gap-[4px] text-[10px] font-medium text-[#0B4F6C] bg-[#EFF6FF] px-[8px] py-[3px] rounded-full">
+                    <span className="inline-flex items-center gap-[4px] text-[10px] font-medium text-[#1D4ED8] bg-[#EFF6FF] px-[8px] py-[3px] rounded-full">
                       <TypeIcon size={10} strokeWidth={2} />
                       {typeLabel}
                     </span>

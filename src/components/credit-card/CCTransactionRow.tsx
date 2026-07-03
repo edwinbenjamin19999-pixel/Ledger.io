@@ -128,7 +128,7 @@ export function CCTransactionRow({
           {/* AI account chip row */}
           {suggestion?.debit_account && (
             <div className="flex items-center gap-2 mt-2 pl-[5.25rem] flex-wrap">
-              <span className="inline-flex items-center gap-1.5 text-xs font-mono px-2 py-1 rounded-md bg-[#EFF6FF] text-[#3b82f6] border border-cyan-100">
+              <span className="inline-flex items-center gap-1.5 text-xs font-mono px-2 py-1 rounded-md bg-[#EFF6FF] text-[#3b82f6] border border-blue-100">
                 <Sparkles className="h-3 w-3" />
                 {suggestion.debit_account} {suggestion.debit_account_name}
               </span>

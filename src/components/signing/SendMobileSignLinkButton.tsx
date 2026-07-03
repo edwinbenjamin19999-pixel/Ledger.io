@@ -171,7 +171,7 @@ export const SendMobileSignLinkButton = ({
                   className="h-9"
                 />
               </div>
-              <Alert className="bg-cyan-50 border-cyan-200">
+              <Alert className="bg-blue-50 border-blue-200">
                 <AlertDescription className="text-[12px] text-[#3b82f6]">
                   Länken är personlig, krypterad och fungerar bara en gång.
                   XML-deklarationen lagras säkert tills mottagaren signerat.

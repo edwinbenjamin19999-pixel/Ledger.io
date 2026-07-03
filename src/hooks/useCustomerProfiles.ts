@@ -194,7 +194,7 @@ export function useCustomerProfiles(openInvoices: InvoiceLite[], paidInvoices: I
 
 export const SCORE_COLOR: Record<CustomerProfile["score"], string> = {
   A: "bg-emerald-50 text-emerald-700 border-emerald-200",
-  B: "bg-cyan-50 text-[#3b82f6] border-cyan-200",
+  B: "bg-blue-50 text-[#3b82f6] border-blue-200",
   C: "bg-amber-50 text-amber-700 border-amber-200",
   D: "bg-orange-50 text-orange-700 border-orange-200",
   E: "bg-rose-50 text-rose-700 border-rose-200",

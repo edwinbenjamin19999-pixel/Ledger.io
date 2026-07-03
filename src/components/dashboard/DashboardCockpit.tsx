@@ -530,44 +530,46 @@ export const DashboardCockpit = ({
       ? `kpi-tile group isolate relative w-full min-w-0 max-w-full overflow-hidden rounded-[14px] cursor-pointer transition-colors duration-[120ms] ${compactPadding}`
       : `kpi-tile group isolate relative w-full min-w-0 max-w-full overflow-hidden bg-white border border-black/[0.08] rounded-[14px] cursor-pointer hover:border-black/15 transition-colors duration-[120ms] ${compactPadding}`;
 
-    // Category color for subtle top border + whisper gradient
+    // FLAT kategorifärg — solid 3px topplist, färg som struktur (systempalett):
+    // P&L = blå, kassa/likviditet = emerald, reskontra = ink, varningar = amber
     const getCategoryColor = (id: string): string => {
       const colors: Record<string, string> = {
-        'intakter': '#2DD4BF',
-        'kostnader': '#2DD4BF',
-        'resultat': '#2DD4BF',
-        'bruttomarginal': '#2DD4BF',
-        'rorelsemarginal': '#2DD4BF',
-        'ebitda': '#2DD4BF',
-        'kassa': '#3b82f6',
-        'likviditetsgrad': '#3b82f6',
-        'kassalikviditet': '#3b82f6',
-        'periodens-kassaflode': '#3b82f6',
-        'kundfordringar': '#8b5cf6',
-        'leverantorsskulder': '#8b5cf6',
-        'forfallna': '#8b5cf6',
-        'dso': '#f59e0b',
-        'budgetavvikelse': '#f59e0b',
+        'intakter': '#2563EB',
+        'kostnader': '#2563EB',
+        'resultat': '#2563EB',
+        'bruttomarginal': '#2563EB',
+        'rorelsemarginal': '#2563EB',
+        'ebitda': '#2563EB',
+        'kassa': '#059669',
+        'likviditetsgrad': '#059669',
+        'kassalikviditet': '#059669',
+        'periodens-kassaflode': '#059669',
+        'kundfordringar': '#0F1B2D',
+        'leverantorsskulder': '#0F1B2D',
+        'forfallna': '#0F1B2D',
+        'dso': '#F59E0B',
+        'budgetavvikelse': '#F59E0B',
       };
-      return colors[id] || '#2DD4BF';
+      return colors[id] || '#2563EB';
     };
     const categoryColor = getCategoryColor(kpiId);
 
+    // Flat: solid vit yta — ingen whisper-gradient
     const cardStyle = isHero
       ? {
-          backgroundColor: "rgba(29,217,240,0.04)",
-          border: "1.5px solid rgba(29,217,240,0.35)",
+          backgroundColor: "rgba(37,99,235,0.04)",
+          border: "1.5px solid rgba(37,99,235,0.35)",
           borderTop: `3px solid ${categoryColor}`,
         }
       : {
           borderTop: `3px solid ${categoryColor}`,
-          background: `linear-gradient(to bottom, ${categoryColor}14 0%, #ffffff 40%)`,
+          background: "#ffffff",
         };
 
-    const heroValueColor = value < 0 ? "#EF4444" : "#0B1F2F";
+    const heroValueColor = value < 0 ? "#EF4444" : "#0F1B2D";
     const valueClass = isHero
       ? "relative mt-2 min-w-0 max-w-full pr-1 text-[22px] font-bold leading-none tracking-[-0.03em] tabular-nums"
-      : "relative mt-2 min-w-0 max-w-full pr-1 text-[22px] font-bold leading-none text-[#0B1F2F] tracking-[-0.03em] tabular-nums";
+      : "relative mt-2 min-w-0 max-w-full pr-1 text-[22px] font-bold leading-none text-[#0F1B2D] tracking-[-0.03em] tabular-nums";
 
     const labelClass = "min-w-0 text-[11px] font-medium uppercase text-black/40 leading-snug break-words [overflow-wrap:anywhere]";
 

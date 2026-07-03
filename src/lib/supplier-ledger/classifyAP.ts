@@ -62,10 +62,10 @@ export const CLASS_META: Record<APClass, {
   can_wait: {
     label: "Kan vänta",
     short: "Kan vänta",
-    border: "border-cyan-200",
+    border: "border-blue-200",
     borderL: "border-l-4 border-l-[#3b82f6]",
-    bg: "bg-cyan-50/30",
-    chipBg: "bg-cyan-100",
+    bg: "bg-blue-50/30",
+    chipBg: "bg-blue-100",
     chipText: "text-[#3b82f6]",
     dot: "bg-[#3b82f6]",
     defaultOpen: false,

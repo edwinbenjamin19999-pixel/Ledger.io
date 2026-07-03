@@ -217,7 +217,7 @@ export function APInvoiceAssistantChat({
                     className={cn(
                       "inline-block max-w-[92%] rounded-xl px-3 py-2 text-xs leading-relaxed",
                       m.role === "user"
-                        ? "bg-[#EFF6FF] text-cyan-100 border border-[#C8DDF5]"
+                        ? "bg-[#EFF6FF] text-blue-100 border border-[#C8DDF5]"
                         : "bg-slate-900 text-slate-100 border border-slate-800",
                     )}
                   >

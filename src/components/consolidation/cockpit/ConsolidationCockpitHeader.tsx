@@ -24,8 +24,8 @@ export function ConsolidationCockpitHeader({
 }: Props) {
   return (
     <div className="relative overflow-hidden rounded-3xl mb-6">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a1428] via-[#0f1f35] to-[#1a1442]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,0.15),transparent_50%)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a1428] via-[#0F1B2D] to-[#1a1442]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_50%)]" />
       <div className="relative p-8 backdrop-blur-xl">
         <div className="flex items-start justify-between gap-6 flex-wrap">
           <div className="space-y-3">
@@ -83,7 +83,7 @@ export function ConsolidationCockpitHeader({
               size="sm"
               onClick={onRunConsolidation}
               disabled={isRunning}
-              className="bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-[#3b82f6] text-white border-0 shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+              className="bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-[#3b82f6] text-white border-0 shadow-[0_0_20px_rgba(37,99,235,0.3)]"
             >
               <Play className="w-4 h-4 mr-1.5" />
               {isRunning ? 'Kör…' : 'Kör konsolidering'}

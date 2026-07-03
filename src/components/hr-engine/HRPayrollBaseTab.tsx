@@ -208,7 +208,7 @@ export function HRPayrollBaseTab({ companyId }: Props) {
         className="rounded-[12px] p-4 relative overflow-hidden"
         style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA" }}
       >
-        <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0B4F6C" }} />
+        <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#1D4ED8" }} />
         <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8] mb-3">
           Total arbetsgivarkostnad
         </div>
@@ -232,7 +232,7 @@ export function HRPayrollBaseTab({ companyId }: Props) {
         </div>
         <button
           onClick={() => toast.info("Kontrollerar mot konto 7000-7699...")}
-          className="mt-3 text-[11px] text-[#0B4F6C] hover:underline"
+          className="mt-3 text-[11px] text-[#1D4ED8] hover:underline"
         >
           Kontrollera mot bokföring →
         </button>
@@ -242,7 +242,7 @@ export function HRPayrollBaseTab({ companyId }: Props) {
       <div className="flex flex-wrap items-center gap-2">
         <button
           onClick={exportExcel}
-          className="text-[12px] inline-flex items-center gap-1.5 px-3 py-[7px] rounded-[8px] bg-[#0B4F6C] text-[#E6F4FA]"
+          className="text-[12px] inline-flex items-center gap-1.5 px-3 py-[7px] rounded-[8px] bg-[#1D4ED8] text-[#E6F4FA]"
         >
           <FileSpreadsheet className="h-3.5 w-3.5" /> Exportera lönunderlag (Excel)
         </button>

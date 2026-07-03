@@ -132,10 +132,10 @@ export const CenteredHero = () => {
 
   return (
     <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-[#0B1D2A] pt-[60px] pb-16">
-      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(8,145,178,0.12)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.12)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-[720px] mx-auto px-4 sm:px-6 text-center">
-        <div className="inline-flex items-center gap-2 mb-6 border border-[rgba(34,211,238,0.25)] rounded-full px-4 py-1.5 bg-[rgba(34,211,238,0.06)]">
+        <div className="inline-flex items-center gap-2 mb-6 border border-[rgba(37,99,235,0.25)] rounded-full px-4 py-1.5 bg-[rgba(37,99,235,0.06)]">
           <Sparkles className="w-3.5 h-3.5 text-[#3b82f6]" />
           <span className="text-sm text-[#3b82f6] font-medium">
             Early access — begränsat antal platser
@@ -197,14 +197,14 @@ export const CenteredHero = () => {
               placeholder="Namn"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="h-11 bg-white/[0.07] border-white/[0.12] text-white placeholder:text-white/30 focus:border-[rgba(34,211,238,0.5)] focus-visible:ring-0 rounded-lg"
+              className="h-11 bg-white/[0.07] border-white/[0.12] text-white placeholder:text-white/30 focus:border-[rgba(37,99,235,0.5)] focus-visible:ring-0 rounded-lg"
             />
             <Input
               type="text"
               placeholder="Företag"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
-              className="h-11 bg-white/[0.07] border-white/[0.12] text-white placeholder:text-white/30 focus:border-[rgba(34,211,238,0.5)] focus-visible:ring-0 rounded-lg"
+              className="h-11 bg-white/[0.07] border-white/[0.12] text-white placeholder:text-white/30 focus:border-[rgba(37,99,235,0.5)] focus-visible:ring-0 rounded-lg"
             />
           </div>
           <Input
@@ -213,12 +213,12 @@ export const CenteredHero = () => {
             placeholder="din@email.se"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-13 sm:h-11 bg-white/[0.07] border-white/[0.12] text-white placeholder:text-white/30 focus:border-[rgba(34,211,238,0.5)] focus-visible:ring-0 rounded-lg"
+            className="h-13 sm:h-11 bg-white/[0.07] border-white/[0.12] text-white placeholder:text-white/30 focus:border-[rgba(37,99,235,0.5)] focus-visible:ring-0 rounded-lg"
           />
           <Button
             type="submit"
             disabled={loading}
-            className="w-full h-13 sm:h-12 text-[15px] font-semibold bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] text-white hover:brightness-110 rounded-lg shadow-[0_4px_24px_rgba(6,182,212,0.4)] transition-all duration-200 hover:scale-[1.02]"
+            className="w-full h-13 sm:h-12 text-[15px] font-semibold bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] text-white hover:brightness-110 rounded-lg shadow-[0_4px_24px_rgba(37,99,235,0.4)] transition-all duration-200 hover:scale-[1.02]"
           >
             <span>{loading ? "Skickar..." : "Sätt igång — AI börjar direkt"}</span>
             <ArrowRight className="w-4 h-4 ml-1.5" />
@@ -247,7 +247,7 @@ export const CenteredHero = () => {
 
         {/* AI Demo Card — desktop only */}
         <div className="hidden sm:block relative max-w-[520px] mx-auto mt-6">
-          <div className="absolute -inset-3 rounded-2xl bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.1)_0%,transparent_70%)] blur-xl pointer-events-none" />
+          <div className="absolute -inset-3 rounded-2xl bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.1)_0%,transparent_70%)] blur-xl pointer-events-none" />
           <div className="relative rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
             <div className="flex items-center gap-2 px-4 py-2.5 border-b border-white/[0.06]">
               <div className="flex gap-1.5">

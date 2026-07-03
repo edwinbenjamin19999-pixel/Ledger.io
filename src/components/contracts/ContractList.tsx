@@ -121,7 +121,7 @@ export const ContractList = ({ contracts, loading, onSelect, onDelete }: Props) 
                     {c.customer?.name && <span>· {c.customer.name}</span>}
                     <span>· {intervalLabels[c.billing_interval] || c.billing_interval}</span>
                     {c.next_invoice_date && (
-                      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#EFF6FF] dark:bg-cyan-950/30 text-[#3b82f6] dark:text-[#1E3A5F] border border-cyan-200/60 dark:border-[#3b82f6]/40">
+                      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#EFF6FF] dark:bg-blue-950/30 text-[#3b82f6] dark:text-[#1E3A5F] border border-blue-200/60 dark:border-[#3b82f6]/40">
                         <TrendingUp className="h-3 w-3" />
                         Nästa intäkt {format(new Date(c.next_invoice_date), "d MMM", { locale: sv })} · {Math.round(c.total_amount).toLocaleString("sv-SE")} kr
                       </span>

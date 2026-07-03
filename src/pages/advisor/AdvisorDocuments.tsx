@@ -376,7 +376,7 @@ const AdvisorDocuments = () => {
         className={cn(
           "fixed bottom-6 right-6 z-30 rounded-2xl border-2 border-dashed p-4 transition-all backdrop-blur-md max-w-[280px] shadow-xl",
           dragOver
-            ? "border-[#3b82f6] bg-cyan-50/95 scale-105"
+            ? "border-[#3b82f6] bg-blue-50/95 scale-105"
             : "border-slate-300 bg-white/90 hover:border-[#3b82f6]/50",
           uploadingCount > 0 && "border-[#3b82f6] bg-white",
         )}

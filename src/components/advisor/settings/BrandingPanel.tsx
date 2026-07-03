@@ -15,7 +15,7 @@ interface Props {
 }
 
 const PRESETS: Array<{ hex: string; name: string }> = [
-  { hex: "#0B4F6C", name: "Bokfy Navy" },
+  { hex: "#1D4ED8", name: "Bokfy Navy" },
   { hex: "#1B4332", name: "Forest" },
   { hex: "#3B1F5E", name: "Purple" },
   { hex: "#7B2D00", name: "Burgundy" },
@@ -50,7 +50,7 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
           <MockSidebarPreview
             name={draft.name}
             logoUrl={draft.logo_url}
-            color={validHex ? draft.brand_primary_color : "#0B4F6C"}
+            color={validHex ? draft.brand_primary_color : "#1D4ED8"}
             showPoweredBy={draft.show_powered_by}
           />
         </div>
@@ -78,14 +78,14 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
           <div className="flex items-center gap-3">
             <input
               type="color"
-              value={validHex ? draft.brand_primary_color : "#0B4F6C"}
+              value={validHex ? draft.brand_primary_color : "#1D4ED8"}
               onChange={(e) => set("brand_primary_color", e.target.value)}
               className="h-10 w-14 rounded-lg border border-[#E2E8F0] cursor-pointer"
             />
             <Input
               value={draft.brand_primary_color}
               onChange={(e) => set("brand_primary_color", e.target.value)}
-              placeholder="#0B4F6C"
+              placeholder="#1D4ED8"
               className="font-mono text-sm max-w-[160px]"
             />
             {!validHex && (
@@ -165,7 +165,7 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
             href="https://supabase.com/docs/guides/platform/custom-domains"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1 text-xs font-semibold text-[#0B4F6C] hover:underline"
+            className="inline-flex items-center gap-1 text-xs font-semibold text-[#1D4ED8] hover:underline"
           >
             Konfigurera DNS <ExternalLink className="h-3 w-3" />
           </a>
@@ -210,7 +210,7 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
             onChange={(e) => set("portal_welcome_message", e.target.value || null)}
             rows={3}
             placeholder="Välkommen till din ekonomiportal …"
-            className="w-full rounded-xl border border-[#E2E8F0] px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#0B4F6C]/30"
+            className="w-full rounded-xl border border-[#E2E8F0] px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]/30"
           />
         </div>
       </Section>

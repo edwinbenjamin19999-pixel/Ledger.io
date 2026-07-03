@@ -231,7 +231,7 @@ export const DSCheckbox = ({
       className={cn(
         "inline-flex w-[14px] h-[14px] rounded-[3px] border-[1.5px] items-center justify-center transition-colors",
         isOn
-          ? "bg-[#0B4F6C] border-[#0B4F6C]"
+          ? "bg-[#1D4ED8] border-[#1D4ED8]"
           : "bg-white border-[#D1D5DB]",
         className,
       )}

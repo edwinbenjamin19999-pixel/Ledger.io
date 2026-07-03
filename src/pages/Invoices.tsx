@@ -130,7 +130,7 @@ const KPICard = ({
 const CustomerAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   const colors = [
-    "from-violet-500 to-indigo-500", "from-emerald-500 to-teal-500",
+    "from-violet-500 to-indigo-500", "from-emerald-500 to-blue-500",
     "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
     "from-blue-500 to-[#3b82f6]", "from-fuchsia-500 to-purple-500",
   ];
@@ -482,7 +482,7 @@ const Invoices = () => {
                 <TabsTrigger
                   key={t.v}
                   value={t.v}
-                  className="rounded-none bg-transparent px-[14px] h-[36px] text-[12px] text-[#475569] data-[state=active]:text-[#0B4F6C] data-[state=active]:border-b-2 data-[state=active]:border-[#0B4F6C] data-[state=active]:shadow-none data-[state=active]:bg-transparent"
+                  className="rounded-none bg-transparent px-[14px] h-[36px] text-[12px] text-[#475569] data-[state=active]:text-[#1D4ED8] data-[state=active]:border-b-2 data-[state=active]:border-[#1D4ED8] data-[state=active]:shadow-none data-[state=active]:bg-transparent"
                 >
                   {t.icon && <t.icon className="h-3.5 w-3.5 mr-1" />}
                   {t.label}
@@ -570,7 +570,7 @@ const Invoices = () => {
                   key={s}
                   onClick={() => setStatusFilter(statusFilter === s ? "all" : s)}
                   className={`px-[12px] h-[28px] rounded-full text-[11px] font-medium border-[0.5px] transition-colors ${statusFilter === s
-                    ? "bg-[#0B4F6C] text-[#E6F4FA] border-[#0B4F6C]"
+                    ? "bg-[#1D4ED8] text-[#E6F4FA] border-[#1D4ED8]"
                     : "bg-white text-[#475569] border-[#E2E8F0] hover:bg-[#F8FAFB]"}`}
                 >
                   {s === "all" ? "Alla" : s === "sent" ? "Obetalda" : s === "overdue" ? "Förfallna" : s === "paid" ? "Betalda" : "Utkast"}
@@ -698,7 +698,7 @@ const Invoices = () => {
       {/* ── FLOATING ACTION BUTTON ── */}
       <button
         onClick={() => setShowCreateDialog(true)}
-        className="fixed bottom-20 md:bottom-8 right-8 bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] px-[14px] h-[36px] flex items-center gap-2 font-medium text-[12px] z-50 transition-colors"
+        className="fixed bottom-20 md:bottom-8 right-8 bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] px-[14px] h-[36px] flex items-center gap-2 font-medium text-[12px] z-50 transition-colors"
       >
         <PlusCircle className="h-4 w-4" />
         Ny faktura
@@ -952,7 +952,7 @@ const OutgoingARView = ({
               onClick={() => onSegmentChange(seg)}
               className={`flex items-center gap-2 px-[12px] h-[30px] rounded-full text-[11px] font-medium border-[0.5px] transition-colors ${
                 active
-                  ? "bg-[#0B4F6C] text-[#E6F4FA] border-[#0B4F6C]"
+                  ? "bg-[#1D4ED8] text-[#E6F4FA] border-[#1D4ED8]"
                   : "bg-white text-[#475569] border-[#E2E8F0] hover:bg-[#F8FAFB]"
               }`}
             >

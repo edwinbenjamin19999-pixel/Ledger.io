@@ -72,7 +72,7 @@ const CoSign = () => {
             Bokfy · Medsignering
           </span>
         </div>
-        <h1 className="text-[22px] font-bold text-[#0f1f35] tracking-tight">
+        <h1 className="text-[22px] font-bold text-[#0F1B2D] tracking-tight">
           Signera kundavtal
         </h1>
 
@@ -98,9 +98,9 @@ const CoSign = () => {
         {!state.loading && state.valid && !done && (
           <>
             <p className="text-sm text-slate-600 mt-2 mb-5">
-              <span className="font-semibold text-[#0f1f35]">{state.initiator?.name}</span>
+              <span className="font-semibold text-[#0F1B2D]">{state.initiator?.name}</span>
               {" "}har påbörjat onboarding för{" "}
-              <span className="font-semibold text-[#0f1f35]">
+              <span className="font-semibold text-[#0F1B2D]">
                 {state.company?.name || "ditt bolag"}
               </span>
               {state.company?.org_number ? ` (${state.company.org_number})` : ""}.

@@ -152,7 +152,7 @@ export const PremiumInvoiceRow = ({
               <PopoverTrigger asChild>
                 <button
                   onClick={onPreview}
-                  className="font-mono text-[10px] font-medium text-[#475569] hover:text-[#0B4F6C] transition-colors"
+                  className="font-mono text-[10px] font-medium text-[#475569] hover:text-[#1D4ED8] transition-colors"
                 >
                   {invoice.invoice_number}
                 </button>

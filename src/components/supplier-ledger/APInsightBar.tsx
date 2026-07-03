@@ -32,7 +32,7 @@ export function APInsightBar({ invoices, cashBalance, onOptimize }: Props) {
   const cashAfter7 = cashBalance != null ? cashBalance - due7 : null;
 
   return (
-    <div className="rounded-2xl border border-cyan-200/70 bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
+    <div className="rounded-2xl border border-blue-200/70 bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
       <div className="flex items-start gap-3">
         <div className="h-9 w-9 rounded-xl bg-[#0F1F3D] flex items-center justify-center shrink-0">
           <Brain className="h-4 w-4 text-white" />

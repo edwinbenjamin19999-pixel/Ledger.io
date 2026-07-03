@@ -61,7 +61,7 @@ export const RevenueForecastPanel = ({ contracts, mrr }: Props) => {
     <Card className="rounded-2xl border-slate-200/60 border-l-[3px] border-l-[#3b82f6] shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
       <div className="p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="h-8 w-8 rounded-lg bg-[#EFF6FF] dark:bg-cyan-950/30 flex items-center justify-center">
+          <div className="h-8 w-8 rounded-lg bg-[#EFF6FF] dark:bg-blue-950/30 flex items-center justify-center">
             <Brain className="h-4 w-4 text-[#3b82f6] dark:text-[#1E3A5F]" />
           </div>
           <div>

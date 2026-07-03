@@ -58,7 +58,7 @@ export default function AdvisorProfitability() {
 
       {/* OVERVIEW CARDS — premium surface with top accent */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <KpiCard label="Månadsintäkter" value={fmtSek(totals.revenue)} accent="#0B4F6C" sub="snitt 12m" />
+        <KpiCard label="Månadsintäkter" value={fmtSek(totals.revenue)} accent="#1D4ED8" sub="snitt 12m" />
         <KpiCard label="Lönekostnad" value={fmtSek(totals.cost)} accent="#EF9F27" sub={`${PROFITABILITY_INTERNAL_RATE} kr/h internkostnad`} />
         <KpiCard
           label="Täckningsbidrag"
@@ -70,7 +70,7 @@ export default function AdvisorProfitability() {
         <KpiCard
           label="Marginal"
           value={`${totals.marginPct.toFixed(1)}%`}
-          accent="#0B4F6C"
+          accent="#1D4ED8"
           valueClass={
             totals.marginPct > 30 ? "text-[#0F6E56]"
             : totals.marginPct >= 10 ? "text-[#633806]"
@@ -179,7 +179,7 @@ const KpiCard = ({
   label,
   value,
   valueClass,
-  accent = "#0B4F6C",
+  accent = "#1D4ED8",
   sub,
 }: {
   label: string;

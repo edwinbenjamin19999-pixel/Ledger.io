@@ -346,7 +346,7 @@ const Auth = () => {
       {mode === "signin" && (
         <>
           <div className="mb-8">
-            <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">Välkommen tillbaka</h2>
+            <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">Välkommen tillbaka</h2>
             <p className="text-sm text-slate-500 mt-1">Logga in på ditt konto</p>
           </div>
 
@@ -405,7 +405,7 @@ const Auth = () => {
           <OnboardingProgress current={1} />
 
           <div className="mb-8">
-            <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">Skapa konto</h2>
+            <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">Skapa konto</h2>
             <p className="text-sm text-slate-500 mt-1">Aktivera ditt finansiella operativsystem</p>
           </div>
 
@@ -459,7 +459,7 @@ const Auth = () => {
             >
               ← Tillbaka
             </button>
-            <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">Återställ lösenord</h2>
+            <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">Återställ lösenord</h2>
             <p className="text-sm text-slate-500 mt-1">Vi skickar en länk till din e-post</p>
           </div>
 
@@ -477,7 +477,7 @@ const Auth = () => {
       {mode === "update" && (
         <>
           <div className="mb-8">
-            <h2 className="text-[24px] font-bold tracking-tight text-[#0f1f35]">Nytt lösenord</h2>
+            <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">Nytt lösenord</h2>
             <p className="text-sm text-slate-500 mt-1">Ange ditt nya lösenord nedan</p>
           </div>
 

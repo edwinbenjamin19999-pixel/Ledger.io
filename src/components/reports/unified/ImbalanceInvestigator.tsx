@@ -226,7 +226,7 @@ export function ImbalanceInvestigator({
                     <button
                       key={`${s.accountNumber}-${s.anomalyType}`}
                       onClick={() => onAccountClick?.(s.accountNumber)}
-                      className="w-full text-left rounded-xl border border-border bg-card hover:border-[#3b82f6] hover:bg-cyan-50/30 dark:hover:bg-cyan-950/20 transition-all px-4 py-3"
+                      className="w-full text-left rounded-xl border border-border bg-card hover:border-[#3b82f6] hover:bg-blue-50/30 dark:hover:bg-blue-950/20 transition-all px-4 py-3"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0 flex-1">
@@ -257,7 +257,7 @@ export function ImbalanceInvestigator({
                   {imbalance.fixes.map((f) => (
                     <div
                       key={f.id}
-                      className="rounded-xl border border-cyan-200/70 dark:border-[#3b82f6]/40 bg-cyan-50/40 dark:bg-cyan-950/20 px-4 py-3"
+                      className="rounded-xl border border-blue-200/70 dark:border-[#3b82f6]/40 bg-blue-50/40 dark:bg-blue-950/20 px-4 py-3"
                     >
                       <div className="flex items-start gap-3">
                         <Sparkles className="w-4 h-4 text-[#3b82f6] dark:text-[#1E3A5F] shrink-0 mt-0.5" />

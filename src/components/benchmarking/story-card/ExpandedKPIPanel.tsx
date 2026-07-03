@@ -155,7 +155,7 @@ export function ExpandedKPIPanel({
 
       {/* AI deep dive */}
       {deepDive.length > 0 && (
-        <div className="rounded-xl border bg-gradient-to-br from-cyan-50/60 to-transparent dark:from-cyan-950/20 p-4 space-y-2">
+        <div className="rounded-xl border bg-gradient-to-br from-blue-50/60 to-transparent dark:from-blue-950/20 p-4 space-y-2">
           <div className="flex items-center gap-2 mb-1">
             <Lightbulb className="h-3.5 w-3.5 text-[#3b82f6]" />
             <p className="text-xs font-semibold uppercase tracking-wider text-[#3b82f6] dark:text-[#1E3A5F]">

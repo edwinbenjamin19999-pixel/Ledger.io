@@ -371,7 +371,7 @@ const Companies = () => { const { user, loading } = useAuth();
                       </SelectContent>
                     </Select>
                     {(formData.industry === "restaurant" || formData.industry === "hotel") && (
-                      <div className="mt-2 rounded-md border border-teal-500/30 bg-teal-50 dark:bg-teal-950/20 p-2.5 text-[11px] text-teal-900 dark:text-teal-200 flex items-start gap-2">
+                      <div className="mt-2 rounded-md border border-blue-500/30 bg-blue-50 dark:bg-blue-950/20 p-2.5 text-[11px] text-blue-900 dark:text-blue-200 flex items-start gap-2">
                         <span className="text-base leading-none">{formData.industry === "restaurant" ? "🍽" : "🏨"}</span>
                         <span>
                           <strong>Branschanpassat läge aktiveras</strong> — Bokfy anpassar

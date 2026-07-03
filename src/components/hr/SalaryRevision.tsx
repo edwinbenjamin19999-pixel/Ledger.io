@@ -117,7 +117,7 @@ export const SalaryRevision = ({ companyId, employees }: SalaryRevisionProps) =>
                   <p className="font-medium">{r.name}</p>
                   <div className="flex flex-col items-end">
                     <span className="text-[9px] font-medium uppercase tracking-[0.06em] text-[#94A3B8]">MARKNADSINTERVALL</span>
-                    <span className="text-[12px] font-medium text-[#0B4F6C] tabular-nums">{fmt(r.marketMin)}–{fmt(r.marketMax)} kr</span>
+                    <span className="text-[12px] font-medium text-[#1D4ED8] tabular-nums">{fmt(r.marketMin)}–{fmt(r.marketMax)} kr</span>
                   </div>
                 </div>
 
@@ -179,7 +179,7 @@ export const SalaryRevision = ({ companyId, employees }: SalaryRevisionProps) =>
 
           <Button
             onClick={() => setShowSign(true)}
-            className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] w-full rounded-[8px] text-[12px] font-medium h-[40px] border-0"
+            className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] w-full rounded-[8px] text-[12px] font-medium h-[40px] border-0"
           >
             <LockIcon /> Godkänn lönerevision med BankID
           </Button>

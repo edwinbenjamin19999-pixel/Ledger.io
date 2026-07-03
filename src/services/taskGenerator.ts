@@ -213,7 +213,7 @@ function buildAGIDueSoon(client: ClientLite): AutoTask | null {
     actionLabel: "Förbered AGI",
     actionHref: "/wl/app/agi",
     iconName: "FileCheck",
-    iconColor: "#0B4F6C",
+    iconColor: "#1D4ED8",
     ageMs: 0,
     isAIGenerated: true,
   };

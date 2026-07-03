@@ -40,7 +40,7 @@ function StepCard({ step, index }: { step: WorkflowStep; index: number }) {
 
   const circleClass =
     step.status === "complete" ? "bg-[#1D9E75] text-white" :
-    step.status === "in_progress" ? "bg-[#0B4F6C] text-white" :
+    step.status === "in_progress" ? "bg-[#1D4ED8] text-white" :
     step.status === "awaiting" ? "bg-[#EF9F27] text-white" :
     "bg-[#F1F5F9] text-[#94A3B8]";
 
@@ -106,7 +106,7 @@ function StepBadge({ status, onAction }: { status: StepStatus; onAction?: () => 
       onClick={onAction}
       className={`text-[11px] px-2.5 py-1 rounded-md flex items-center gap-1 transition-colors ${
         status === "in_progress"
-          ? "bg-[#0B4F6C] text-white hover:bg-[#08374b]"
+          ? "bg-[#1D4ED8] text-white hover:bg-[#08374b]"
           : "bg-white border border-[#CBD5E1] text-[#0F172A] hover:bg-[#F8FAFC]"
       }`}
     >

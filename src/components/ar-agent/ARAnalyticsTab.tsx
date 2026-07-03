@@ -402,7 +402,7 @@ function AgingDecisionEngine({ aging, openInvoices, customers }: AgingProps) {
         </div>
 
         {/* Cash Flow Impact */}
-        <div className="rounded-2xl border border-cyan-200/60 bg-gradient-to-br from-cyan-50 to-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
+        <div className="rounded-2xl border border-blue-200/60 bg-gradient-to-br from-blue-50 to-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
           <div className="flex items-center gap-2 mb-2">
             <Wallet className="h-4 w-4 text-[#3b82f6]" />
             <span className="text-[11px] font-semibold uppercase tracking-wider text-[#3b82f6]/80">Om alla förfallna fakturor betalas</span>
@@ -438,7 +438,7 @@ function AgingDecisionEngine({ aging, openInvoices, customers }: AgingProps) {
                 <XAxis dataKey="label" tick={AXIS_TICK} axisLine={false} tickLine={false} />
                 <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} tickFormatter={(v) => `${Math.round(v / 1000)}k`} />
                 <Tooltip
-                  cursor={{ fill: "rgba(8, 145, 178, 0.06)" }}
+                  cursor={{ fill: "rgba(37,99,235, 0.06)" }}
                   content={({ active, payload }: any) => {
                     if (!active || !payload?.length) return null;
                     const d = payload[0].payload as AgingBucket;
@@ -545,7 +545,7 @@ function AgingDecisionEngine({ aging, openInvoices, customers }: AgingProps) {
                       onClick={() => setExpandedBucket(expandedBucket === i ? null : i)}
                       className={cn(
                         "border-b border-slate-100 last:border-0 cursor-pointer transition-colors duration-200",
-                        hoveredBucket === i && "bg-cyan-50/50"
+                        hoveredBucket === i && "bg-blue-50/50"
                       )}
                     >
                       <td className="px-3 py-2.5 text-foreground">

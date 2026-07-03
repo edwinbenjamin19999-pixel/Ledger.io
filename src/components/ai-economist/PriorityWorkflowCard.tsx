@@ -104,7 +104,7 @@ export function PriorityWorkflowCard({ insight, companyId, onPrimary, onIgnore, 
             <span
               className="inline-flex items-center"
               style={{
-                background: "rgba(29,217,240,0.08)",
+                background: "rgba(37,99,235,0.08)",
                 color: "#0D7A8A",
                 borderRadius: 100,
                 padding: "2px 10px",
@@ -217,7 +217,7 @@ export function PriorityWorkflowCard({ insight, companyId, onPrimary, onIgnore, 
             onClick={() => onPrimary(insight, Array.from(selected))}
             className="inline-flex items-center gap-1.5 transition-colors hover:bg-[#1a3550] disabled:opacity-60"
             style={{
-              background: "#0B1F2F",
+              background: "#0F1B2D",
               color: "white",
               borderRadius: 8,
               padding: "8px 16px",

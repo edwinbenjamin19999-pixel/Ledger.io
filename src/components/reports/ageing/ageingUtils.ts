@@ -37,7 +37,7 @@ export const BUCKET_LABELS = [
 /** Mjuk semantisk färgprogression — fresh → neutral → risk → high risk */
 export const BUCKET_COLORS = [
   "hsl(215 25% 75%)", // slate-300 — ej förfallen
-  "hsl(187 75% 55% / 0.75)", // cyan-400/75 — 1-30
+  "hsl(187 75% 55% / 0.75)", // blue-400/75 — 1-30
   "hsl(215 16% 55%)", // slate-400 — 31-60
   "hsl(38 92% 50% / 0.85)", // amber-500/85 — 61-90
   "hsl(0 84% 60% / 0.85)", // rose-500/85 — 90+

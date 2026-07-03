@@ -81,7 +81,7 @@ export function StatusNowCard({ status, onResume }: Props) {
     return (
       <div className={`${base} border-slate-200/70`}>
         <div className="flex items-start gap-3">
-          <div className="mt-0.5 rounded-lg bg-cyan-50 p-2 text-[#3b82f6]">
+          <div className="mt-0.5 rounded-lg bg-blue-50 p-2 text-[#3b82f6]">
             <Loader2 className="h-5 w-5 animate-spin" />
           </div>
           <div className="flex-1">

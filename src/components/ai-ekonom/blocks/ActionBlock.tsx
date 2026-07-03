@@ -24,7 +24,7 @@ export const ActionBlock = ({ data, onApprove, onEdit, onReject }: Props) => {
   return (
     <div className={cn(
       "rounded-xl border bg-white p-4 transition-shadow",
-      auto ? "border-[#C8DDF5] shadow-[0_0_0_3px_rgba(6,182,212,0.06)]" : "border-slate-200"
+      auto ? "border-[#C8DDF5] shadow-[0_0_0_3px_rgba(37,99,235,0.06)]" : "border-slate-200"
     )}>
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="min-w-0">

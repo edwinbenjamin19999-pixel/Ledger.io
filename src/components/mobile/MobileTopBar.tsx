@@ -127,7 +127,7 @@ export const MobileTopBar = ({ user, signOut }: MobileTopBarProps) => {
           className="min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0 relative"
           aria-label="Mitt konto"
         >
-          <div className="w-[32px] h-[32px] rounded-full bg-[#0B4F6C] flex items-center justify-center">
+          <div className="w-[32px] h-[32px] rounded-full bg-[#1D4ED8] flex items-center justify-center">
             <span className="text-[12px] font-medium text-[#E6F4FA]">{initials}</span>
           </div>
         </button>

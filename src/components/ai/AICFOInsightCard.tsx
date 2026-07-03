@@ -94,7 +94,7 @@ export function AICFOInsightCard({ insight }: { insight: CFOInsight }) {
             {insight.ctaRoute && insight.ctaLabel && (
               <button
                 onClick={() => navigate(insight.ctaRoute!)}
-                className="ml-auto bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] h-[32px] flex items-center gap-1 transition-colors"
+                className="ml-auto bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] h-[32px] flex items-center gap-1 transition-colors"
               >
                 {insight.ctaLabel}
                 <ArrowRight size={12} strokeWidth={1.5} />

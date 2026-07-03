@@ -33,7 +33,7 @@ export const FocusGoalPicker = ({ value, onChange }: FocusGoalPickerProps) => {
             onClick={() => onChange(id)}
             className={`group relative text-left p-4 rounded-xl border transition-all duration-150 ${
               active
-                ? "border-[#3b82f6] bg-[#3b82f6]/[0.04] shadow-[0_2px_12px_rgba(8,145,178,0.12)]"
+                ? "border-[#3b82f6] bg-[#3b82f6]/[0.04] shadow-[0_2px_12px_rgba(37,99,235,0.12)]"
                 : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
             }`}
           >
@@ -42,7 +42,7 @@ export const FocusGoalPicker = ({ value, onChange }: FocusGoalPickerProps) => {
             }`}>
               <Icon className="w-[18px] h-[18px]" />
             </div>
-            <div className="text-[14px] font-semibold text-[#0f1f35] leading-tight">{title}</div>
+            <div className="text-[14px] font-semibold text-[#0F1B2D] leading-tight">{title}</div>
             <div className="text-[12px] text-slate-500 mt-1">{description}</div>
           </button>
         );

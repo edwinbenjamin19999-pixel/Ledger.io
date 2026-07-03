@@ -38,10 +38,10 @@ export const WelcomeOverlay = ({ onComplete, durationMs = 2600, companyName }: W
     >
       <div className="flex items-center gap-0 mb-6">
         <span className="text-3xl font-[800] text-[#3b82f6]">Bok</span>
-        <span className="text-3xl font-[800] text-[#0f1f35]">fy</span>
+        <span className="text-3xl font-[800] text-[#0F1B2D]">fy</span>
       </div>
 
-      <h1 className="text-[22px] font-bold text-[#0f1f35] tracking-tight text-center px-6">
+      <h1 className="text-[22px] font-bold text-[#0F1B2D] tracking-tight text-center px-6">
         {greeting}
       </h1>
       <p className="mt-2 text-[14px] text-slate-500 text-center max-w-[320px] px-6">

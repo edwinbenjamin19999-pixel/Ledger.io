@@ -93,7 +93,7 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
 
       {isEmpty ? (
         // ============ EMPTY STATE HERO ============
-        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] border border-slate-800 p-10 md:p-14 shadow-[0_8px_40px_-12px_rgba(8,145,178,0.25)]">
+        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] border border-slate-800 p-10 md:p-14 shadow-[0_8px_40px_-12px_rgba(37,99,235,0.25)]">
           {/* Cyan glow accent */}
           <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#EFF6FF] blur-3xl pointer-events-none" />
           <div className="absolute top-0 left-0 w-1 h-full bg-[#0F1F3D]" />

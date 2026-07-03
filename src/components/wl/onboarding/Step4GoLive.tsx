@@ -111,7 +111,7 @@ export function Step4GoLive({ draft, onLaunch, loading, launched, loginUrl }: Pr
             size="lg"
             onClick={onLaunch}
             disabled={loading}
-            className="w-full h-12 bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold shadow-[0_4px_24px_rgba(8,145,178,0.3)]"
+            className="w-full h-12 bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold shadow-[0_4px_24px_rgba(37,99,235,0.3)]"
           >
             {loading ? "Skapar din plattform..." : "Lansera min plattform"}
           </Button>
@@ -120,7 +120,7 @@ export function Step4GoLive({ draft, onLaunch, loading, launched, loginUrl }: Pr
             <Button
               size="lg"
               asChild
-              className="w-full h-12 bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold shadow-[0_4px_24px_rgba(8,145,178,0.3)]"
+              className="w-full h-12 bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold shadow-[0_4px_24px_rgba(37,99,235,0.3)]"
             >
               <a href={loginUrl} target="_blank" rel="noopener noreferrer">
                 Gå till min plattform <ExternalLink className="h-4 w-4 ml-1.5" />

@@ -15,7 +15,7 @@ const creatorIcon = (createdBy?: string) => {
   switch (createdBy) {
     case 'ai': return <span title="AI-skapad"><Bot className="w-3 h-3 text-[#1E3A5F]" /></span>;
     case 'import': return <span title="Importerad"><Upload className="w-3 h-3 text-[#1E3A5F]" /></span>;
-    case 'bank_sync': return <span title="Banksynk"><Building2 className="w-3 h-3 text-teal-400" /></span>;
+    case 'bank_sync': return <span title="Banksynk"><Building2 className="w-3 h-3 text-blue-400" /></span>;
     default: return null;
   }
 };

@@ -19,7 +19,7 @@ export const WLBusinessModel = () => {
   const fmt = (n: number) => n.toLocaleString("sv-SE");
 
   return (
-    <section className="bg-[#0f1f35] py-24 md:py-32">
+    <section className="bg-[#0F1B2D] py-24 md:py-32">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-[#3b82f6] text-xs font-medium tracking-[0.25em] uppercase mb-3">
@@ -62,7 +62,7 @@ export const WLBusinessModel = () => {
                   onClick={() => setClients(s)}
                   className={`px-5 py-2 text-sm font-medium rounded-md transition-all ${
                     clients === s
-                      ? "bg-[#3b82f6] text-[#0a1525]"
+                      ? "bg-[#3b82f6] text-[#0F1B2D]"
                       : "text-white/55 hover:text-white"
                   }`}
                 >

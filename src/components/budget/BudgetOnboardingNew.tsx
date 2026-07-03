@@ -232,7 +232,7 @@ export const BudgetOnboardingNew = ({ companyId, fiscalYear, onBudgetCreated }: 
     { key: "ai" as const, icon: Sparkles, title: "AI-budget", desc: "AI bygger hela budgeten från historik, tillväxtmål och branschjämförelse", recommended: true, color: "text-purple-500", hover: "hover:border-purple-400" },
     { key: "historical" as const, icon: BarChart3, title: "Basera på historik", desc: "Kopiera förra årets utfall och justera med tillväxtprocent", color: "text-indigo-500", hover: "hover:border-indigo-400" },
     { key: "manual" as const, icon: FileSpreadsheet, title: "Börja blank", desc: "Fyll i manuellt konto för konto", color: "text-slate-500", hover: "hover:border-slate-400" },
-    { key: "excel" as const, icon: Upload, title: "Importera från Excel", desc: "Ladda upp en budget-fil och låt AI mappa den automatiskt", color: "text-teal-500", hover: "hover:border-teal-400" },
+    { key: "excel" as const, icon: Upload, title: "Importera från Excel", desc: "Ladda upp en budget-fil och låt AI mappa den automatiskt", color: "text-blue-500", hover: "hover:border-blue-400" },
   ];
 
   return (

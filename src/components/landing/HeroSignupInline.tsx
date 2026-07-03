@@ -48,7 +48,7 @@ export const HeroSignupInline = () => {
       <Button
         type="submit"
         disabled={loading}
-        className="h-12 px-6 bg-white hover:bg-white/90 text-[#050d1a] font-semibold rounded-lg whitespace-nowrap"
+        className="h-12 px-6 bg-white hover:bg-white/90 text-[#0F1B2D] font-semibold rounded-lg whitespace-nowrap"
       >
         {loading ? "Skickar..." : "Säkra din plats"}
         <ArrowRight className="ml-1 h-4 w-4" />

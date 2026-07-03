@@ -26,7 +26,7 @@ export function PremiumSegmentedControl<T extends string>({ options, value, onCh
             "rounded-lg font-medium transition-all duration-200 whitespace-nowrap",
             size === 'md' ? "px-3.5 py-1.5 text-xs" : "px-2.5 py-1 text-[11px]",
             value === opt.value
-              ? "bg-[#3b82f6] text-white shadow-[0_4px_12px_-4px_rgba(8,145,178,0.5)]"
+              ? "bg-[#3b82f6] text-white shadow-[0_4px_12px_-4px_rgba(37,99,235,0.5)]"
               : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
           )}
         >

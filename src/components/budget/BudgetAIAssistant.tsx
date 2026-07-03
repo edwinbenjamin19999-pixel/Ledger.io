@@ -120,7 +120,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
   const quickActions = [
     { label: "Fyll i hela RR med AI", icon: BarChart3, color: "text-purple-500", action: () => { onFillRR(); sendMessage("Hjälp mig fylla i resultaträkningen. Analysera historisk data och ge mig en komplett RR med intäkter, kostnader och nettoresultat för varje månad."); } },
     { label: "Beräkna kassaflöde", icon: Calculator, color: "text-blue-500", action: () => { onCalcCashFlow(); sendMessage("Beräkna kassaflödet baserat på min resultaträkning. Visa operativt kassaflöde, förändringar i rörelsekapital och slutkassa per månad."); } },
-    { label: "Generera BR-prognos", icon: BarChart3, color: "text-teal-500", action: () => { onGenerateBR(); sendMessage("Generera en balansräkningsprognos baserat på resultaträkningen och kassaflödet. Visa tillgångar, eget kapital och skulder per månad."); } },
+    { label: "Generera BR-prognos", icon: BarChart3, color: "text-blue-500", action: () => { onGenerateBR(); sendMessage("Generera en balansräkningsprognos baserat på resultaträkningen och kassaflödet. Visa tillgångar, eget kapital och skulder per månad."); } },
     { label: "Föreslå sparåtgärder", icon: TrendingDown, color: "text-[#085041]", action: () => sendMessage("Analysera min budget och föreslå sparåtgärder. Var detaljerad med belopp och kontogrupper.") },
   ];
 

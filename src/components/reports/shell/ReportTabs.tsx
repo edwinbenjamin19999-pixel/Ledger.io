@@ -47,7 +47,7 @@ export const ReportTabs = ({
                 "text-slate-600 dark:text-slate-300",
                 "hover:bg-white/60 dark:hover:bg-slate-700/60",
                 "data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white",
-                "data-[state=active]:shadow-[0_2px_6px_rgba(8,145,178,0.25)]",
+                "data-[state=active]:shadow-[0_2px_6px_rgba(37,99,235,0.25)]",
                 "focus-visible:ring-2 focus-visible:ring-[#3b82f6]/40",
               )}
             >

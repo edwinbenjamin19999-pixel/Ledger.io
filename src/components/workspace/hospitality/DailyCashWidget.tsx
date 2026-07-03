@@ -24,7 +24,7 @@ export const DailyCashWidget = () => {
         </Link>
       </CardHeader>
       <CardContent className="space-y-4">
-        <div className="rounded-lg border bg-[#0F1F3D] p-4 dark:from-teal-950/20 dark:to-emerald-950/20">
+        <div className="rounded-lg border bg-[#0F1F3D] p-4 dark:from-blue-950/20 dark:to-emerald-950/20">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs text-muted-foreground">Idag</p>

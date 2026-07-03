@@ -24,7 +24,7 @@ export function HRTabBar({ tabs, value, onChange }: Props) {
             className={cn(
               "px-[14px] py-[8px] text-[12px] -mb-px border-b-2 transition-colors",
               active
-                ? "text-[#0B4F6C] font-medium border-[#0B4F6C]"
+                ? "text-[#1D4ED8] font-medium border-[#1D4ED8]"
                 : "text-[#475569] border-transparent hover:text-[#0F172A]",
             )}
           >

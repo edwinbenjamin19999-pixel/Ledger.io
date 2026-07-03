@@ -27,7 +27,7 @@ const AdvisorDashboard = () => {
       {/* Compact hero */}
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <div>
-          <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-[#0B4F6C]">
+          <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-[#1D4ED8]">
             Operativt kommandocenter
           </p>
           <h1 className="text-xl md:text-2xl font-bold tracking-tight text-[#0F172A]">

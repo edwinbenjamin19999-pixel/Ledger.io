@@ -56,7 +56,7 @@ export function ClosingTaskList({ tasks, isLoading, onResolve }: Props) {
                 {t.status !== "complete" && onResolve && (
                   <button
                     onClick={() => onResolve(t.key)}
-                    className="text-[11px] text-[#0B4F6C] hover:text-[#093d54] flex items-center gap-px opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
+                    className="text-[11px] text-[#1D4ED8] hover:text-[#093d54] flex items-center gap-px opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
                   >
                     Lös <ChevronRight className="h-[12px] w-[12px]" />
                   </button>

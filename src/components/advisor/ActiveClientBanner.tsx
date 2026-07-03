@@ -10,7 +10,7 @@ import { useAdvisorActiveClient } from "@/contexts/AdvisorActiveClientContext";
  * bureau overview at /wl/app/dashboard.
  *
  * Spec (do not restyle):
- *   bg cyan-600 · text white · py-[6px] · px-[16px] · text-[12px]
+ *   bg blue-600 · text white · py-[6px] · px-[16px] · text-[12px]
  */
 export const ActiveClientBanner = () => {
   const { activeClient, clearActiveClient } = useAdvisorActiveClient();

@@ -9,7 +9,7 @@ const nodes = [
 ];
 
 export const AboutSolution = () => (
-  <section className="bg-[#0a1525] py-24 md:py-32">
+  <section className="bg-[#0F1B2D] py-24 md:py-32">
     <div className="container mx-auto max-w-6xl px-6">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-white leading-[1.05]" style={{ letterSpacing: "-0.8px" }}>

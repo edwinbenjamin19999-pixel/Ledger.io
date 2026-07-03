@@ -71,7 +71,7 @@ export const FAQ = () => {
               >
                 <AccordionTrigger className="px-5 py-4 hover:no-underline gap-3 text-left">
                   <div className="flex items-center gap-3 flex-1">
-                    <div className="w-9 h-9 rounded-lg bg-[rgba(8,145,178,0.08)] flex items-center justify-center flex-shrink-0">
+                    <div className="w-9 h-9 rounded-lg bg-[rgba(37,99,235,0.08)] flex items-center justify-center flex-shrink-0">
                       <faq.icon className="w-[18px] h-[18px] text-[#3b82f6]" />
                     </div>
                     <span className="text-[15px] sm:text-base font-semibold text-white/90">{faq.q}</span>
@@ -89,7 +89,7 @@ export const FAQ = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 asChild
-                className="h-11 px-6 bg-white text-[#050d1a] hover:bg-white/90 font-semibold rounded-lg"
+                className="h-11 px-6 bg-white text-[#0F1B2D] hover:bg-white/90 font-semibold rounded-lg"
               >
                 <a href="/auth">
                   Testa Bokfy

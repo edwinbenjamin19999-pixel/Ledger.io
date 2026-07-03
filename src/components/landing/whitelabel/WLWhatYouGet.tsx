@@ -11,7 +11,7 @@ const items = [
 
 export const WLWhatYouGet = () => {
   return (
-    <section className="bg-[#0a1525] py-24 md:py-32">
+    <section className="bg-[#0F1B2D] py-24 md:py-32">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-[#3b82f6] text-xs font-medium tracking-[0.25em] uppercase mb-3">

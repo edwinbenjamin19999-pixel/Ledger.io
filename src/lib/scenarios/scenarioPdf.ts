@@ -61,7 +61,7 @@ export async function exportScenarioPdf(input: ScenarioPdfInput): Promise<void> 
   let y = margin;
 
   // ── Cover ─────────────────────────────────────────────
-  doc.setFillColor(8, 145, 178); // cyan-600
+  doc.setFillColor(8, 145, 178); // blue-600
   doc.rect(0, 0, pageW, 110, "F");
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");

@@ -32,7 +32,7 @@ export const StickyTOC = ({ items }: { items: TocItem[] }) => {
               className={`block pl-4 -ml-px border-l-2 text-sm py-1 transition-colors ${
                 active === i.id
                   ? "border-[#3b82f6] text-[#3b82f6] font-medium"
-                  : "border-transparent text-[#64748b] hover:text-[#0f1f35]"
+                  : "border-transparent text-[#64748b] hover:text-[#0F1B2D]"
               }`}
             >
               {i.label}

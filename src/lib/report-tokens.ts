@@ -20,7 +20,7 @@ export const reportColors = {
   success: "#16A34A",
   warning: "#D97706",
   danger: "#DC2626",
-  accent: "#06B6D4",
+  accent: "#2563EB",
 } as const;
 
 export const reportSpacing = {

@@ -619,10 +619,10 @@ button[class*="bg-primary"]:hover:not(:disabled) {
 /* ── 8. FLOATING AI BUTTON — glow pulse ── */
 @keyframes aiPulse {
   0%, 100% {
-    box-shadow: 0 4px 12px rgba(14,206,206,0.35), 0 2px 4px rgba(0,0,0,0.15), 0 0 0 0 rgba(14,206,206,0.4);
+    box-shadow: 0 4px 12px rgba(37,99,235,0.35), 0 2px 4px rgba(0,0,0,0.15), 0 0 0 0 rgba(37,99,235,0.4);
   }
   50% {
-    box-shadow: 0 4px 12px rgba(14,206,206,0.35), 0 2px 4px rgba(0,0,0,0.15), 0 0 0 8px rgba(14,206,206,0);
+    box-shadow: 0 4px 12px rgba(37,99,235,0.35), 0 2px 4px rgba(0,0,0,0.15), 0 0 0 8px rgba(37,99,235,0);
   }
 }
 .ai-chat-trigger {
@@ -631,7 +631,7 @@ button[class*="bg-primary"]:hover:not(:disabled) {
 }
 .ai-chat-trigger:hover {
   transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 8px 24px rgba(14,206,206,0.45), 0 4px 8px rgba(0,0,0,0.20);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.45), 0 4px 8px rgba(0,0,0,0.20);
   animation: none;
 }
 
@@ -818,8 +818,8 @@ textarea[class*="bg-slate-"]:focus {
 
 /* ── 19. MICRO-ANIMATIONS & PAGE TRANSITIONS ── */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(14,206,206,0.3); }
-  50%      { box-shadow: 0 0 0 8px rgba(14,206,206,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.3); }
+  50%      { box-shadow: 0 0 0 8px rgba(37,99,235,0); }
 }
 
 .animate-fade-in   { animation: fadeInUp 250ms ease-out both; }
@@ -1318,10 +1318,10 @@ textarea[class*="bg-slate-"]:focus {
 @layer base {
   :root {
     /* Brand */
-    --ds-brand-deep:    #0B4F6C;
-    --ds-brand-mid:     #1074A0;
+    --ds-brand-deep:    #1D4ED8;
+    --ds-brand-mid:     #1D4ED8;
     --ds-brand-accent:  #3b82f6;
-    --ds-brand-tint:    #E6F4FA;
+    --ds-brand-tint:    #EFF6FF;
 
     /* Semantic */
     --ds-success:        #1D9E75;
@@ -1520,7 +1520,7 @@ textarea[class*="bg-slate-"]:focus {
 .premium-card.tint-blue::before { background: #2563EB; }
 
 
-/* Dark-section card surface (for cards on #0B1F2F / #0F2A3F) */
+/* Dark-section card surface (for cards on #0F1B2D / #0F2A3F) */
 .dark-surface-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
@@ -1530,7 +1530,7 @@ textarea[class*="bg-slate-"]:focus {
 }
 .dark-surface-card:hover {
   background: rgba(255,255,255,0.08);
-  border-color: rgba(29,217,240,0.18);
+  border-color: rgba(37,99,235,0.18);
 }
 
 /* Homepage section shell — unified background, breathing room, divider */

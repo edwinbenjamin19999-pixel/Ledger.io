@@ -199,7 +199,7 @@ const AdvisorRequests = () => {
         </div>
       )}
 
-      <div className="rounded-2xl border border-[#C8DDF5] bg-cyan-50/40 p-4 flex items-start gap-3">
+      <div className="rounded-2xl border border-[#C8DDF5] bg-blue-50/40 p-4 flex items-start gap-3">
         <MessageSquare className="h-4 w-4 text-[#3b82f6] mt-0.5" />
         <div className="text-xs text-[#3b82f6]">
           <strong>Tips:</strong> {awaitingClient} förfrågningar ligger hos klient — skicka påminnelse om svar dröjer mer än 3 dagar.

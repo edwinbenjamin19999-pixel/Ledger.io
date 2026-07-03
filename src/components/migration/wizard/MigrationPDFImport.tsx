@@ -307,7 +307,7 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
               addFiles(Array.from(e.dataTransfer.files));
             }}
             className={`bg-white border-2 border-dashed rounded-xl p-10 text-center transition-colors ${
-              dragOver ? "border-[#0B4F6C] bg-[#F5F9FF]" : "border-[#E2E8F0]"
+              dragOver ? "border-[#1D4ED8] bg-[#F5F9FF]" : "border-[#E2E8F0]"
             }`}
           >
             <Upload className="h-8 w-8 mx-auto text-muted-foreground mb-3" />
@@ -346,7 +346,7 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
                     size="sm"
                     onClick={handleAnalyze}
                     disabled={analyzing || importing}
-                    className="bg-[#0B4F6C] hover:bg-[#093e56]"
+                    className="bg-[#1D4ED8] hover:bg-[#093e56]"
                   >
                     {analyzing ? (
                       <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Analyserar... {progress}%</>
@@ -559,7 +559,7 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
               <Button
                 onClick={handleImport}
                 disabled={importing}
-                className="bg-[#0B4F6C] hover:bg-[#093e56]"
+                className="bg-[#1D4ED8] hover:bg-[#093e56]"
               >
                 {importing ? (
                   <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Importerar...</>

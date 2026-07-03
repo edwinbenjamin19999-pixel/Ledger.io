@@ -36,7 +36,7 @@ export function DocumentPartsGrid({ parts }: { parts: DocPart[] }) {
 
               <div className="mt-2 h-1 rounded-full bg-[#F1F5F9] overflow-hidden">
                 <div
-                  className={`h-full rounded-full ${p.completion === 100 ? "bg-[#1D9E75]" : p.attention ? "bg-[#EF9F27]" : "bg-[#0B4F6C]"}`}
+                  className={`h-full rounded-full ${p.completion === 100 ? "bg-[#1D9E75]" : p.attention ? "bg-[#EF9F27]" : "bg-[#1D4ED8]"}`}
                   style={{ width: `${p.completion}%` }}
                 />
               </div>
@@ -49,7 +49,7 @@ export function DocumentPartsGrid({ parts }: { parts: DocPart[] }) {
                 {!p.disabled && (
                   <button
                     onClick={p.onEdit}
-                    className="text-[11px] text-[#0B4F6C] hover:underline flex items-center gap-1"
+                    className="text-[11px] text-[#1D4ED8] hover:underline flex items-center gap-1"
                   >
                     <Edit3 className="w-3 h-3" /> Redigera
                   </button>

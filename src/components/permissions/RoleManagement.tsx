@@ -36,7 +36,7 @@ const roles = [
   { id: "project_manager",
     label: "Projektledare",
     description: "Hantera projekt, kostnadsställen och projektredovisning.",
-    color: "bg-teal-600 text-white",
+    color: "bg-blue-600 text-white",
     permissions: ["Projekt", "Kostnadsställen", "Projektrapporter"],
   },
   { id: "board_member",

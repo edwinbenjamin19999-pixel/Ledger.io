@@ -24,7 +24,7 @@ export function AlertsStrip({ companyId }: Props) {
 
   if (items.length === 0) {
     return (
-      <section className="rounded-2xl border border-emerald-200/40 dark:border-emerald-800/30 bg-[#0F1F3D] dark:from-emerald-950/20 dark:to-cyan-950/10 p-5 md:p-6 h-full flex items-center gap-3">
+      <section className="rounded-2xl border border-emerald-200/40 dark:border-emerald-800/30 bg-[#0F1F3D] dark:from-emerald-950/20 dark:to-blue-950/10 p-5 md:p-6 h-full flex items-center gap-3">
         <div className="h-9 w-9 rounded-lg bg-[#E1F5EE] flex items-center justify-center shrink-0">
           <Sparkles className="h-4 w-4 text-[#085041] dark:text-[#1D9E75]" />
         </div>

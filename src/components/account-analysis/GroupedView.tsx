@@ -137,7 +137,7 @@ const GroupRow = ({ group, expanded, onToggle }: { group: GroupedData; expanded:
   <>
     <tr
       onClick={onToggle}
-      className="bg-white dark:bg-slate-800/60 hover:bg-[#EFF6FF] dark:hover:bg-cyan-900/10 cursor-pointer border-b border-slate-200 dark:border-slate-700 transition-colors"
+      className="bg-white dark:bg-slate-800/60 hover:bg-[#EFF6FF] dark:hover:bg-blue-900/10 cursor-pointer border-b border-slate-200 dark:border-slate-700 transition-colors"
     >
       <td className="px-4 py-3">
         <span className="flex items-center gap-2">

@@ -117,7 +117,7 @@ export const ArticleInputForm = ({ allSlugs, loading, onGenerate }: Props) => {
           topic: topic.trim(), keyword: keyword.trim(), difficulty, batchSize,
           availableSlugs: selectedSlugs.length > 0 ? selectedSlugs : allSlugs,
         })}
-        className="w-full bg-gradient-to-br from-[#3b82f6] to-[#3b82f6] text-white hover:from-[#3b82f6] hover:to-[#155e75] shadow-[0_8px_20px_-6px_rgba(8,145,178,0.5)]"
+        className="w-full bg-gradient-to-br from-[#3b82f6] to-[#3b82f6] text-white hover:from-[#3b82f6] hover:to-[#155e75] shadow-[0_8px_20px_-6px_rgba(37,99,235,0.5)]"
         size="lg"
       >
         {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}

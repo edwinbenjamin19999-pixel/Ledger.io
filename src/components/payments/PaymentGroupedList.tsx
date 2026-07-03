@@ -191,7 +191,7 @@ export function PaymentGroupedList(props: Props) {
                         key={inv.id}
                         className={cn(
                           "flex items-center gap-3 px-5 py-3 group hover:bg-slate-50/40",
-                          inv.selected && "bg-cyan-50/40",
+                          inv.selected && "bg-blue-50/40",
                         )}
                       >
                         <Checkbox checked={inv.selected} onCheckedChange={() => props.onToggleOne(inv.id)} />

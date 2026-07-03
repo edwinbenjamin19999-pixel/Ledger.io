@@ -7,7 +7,7 @@ export const ComparisonTable = ({ rows }: { rows: Row[] }) => (
     <table className="w-full text-sm">
       <thead>
         <tr className="border-b border-slate-100 bg-slate-50/60">
-          <th className="text-left font-semibold text-[#0f1f35] px-6 py-4">Funktion</th>
+          <th className="text-left font-semibold text-[#0F1B2D] px-6 py-4">Funktion</th>
           <th className="text-left font-semibold text-[#64748b] px-6 py-4">Traditionellt system</th>
           <th className="text-left font-semibold text-[#3b82f6] px-6 py-4">Bokfy</th>
         </tr>
@@ -15,13 +15,13 @@ export const ComparisonTable = ({ rows }: { rows: Row[] }) => (
       <tbody>
         {rows.map((r, i) => (
           <tr key={i} className="border-b border-slate-100 last:border-0">
-            <td className="px-6 py-4 font-medium text-[#0f1f35]">{r.label}</td>
+            <td className="px-6 py-4 font-medium text-[#0F1B2D]">{r.label}</td>
             <td className="px-6 py-4 text-[#64748b]">
               {typeof r.traditional === "boolean"
                 ? (r.traditional ? <Check className="w-4 h-4 text-[#085041]" /> : <X className="w-4 h-4 text-slate-300" />)
                 : r.traditional}
             </td>
-            <td className="px-6 py-4 text-[#0f1f35]">
+            <td className="px-6 py-4 text-[#0F1B2D]">
               {typeof r.ai === "boolean"
                 ? (r.ai ? <Check className="w-4 h-4 text-[#3b82f6]" /> : <X className="w-4 h-4 text-slate-300" />)
                 : r.ai}

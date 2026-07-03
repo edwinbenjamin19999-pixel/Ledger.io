@@ -9,7 +9,7 @@ interface FeedEvent { type: EventType;
   time: string;
 }
 
-const eventConfig: Record<EventType, { color: string; bgColor: string; icon: typeof ShoppingBag }> = { order: { color: "border-l-teal-500", bgColor: "bg-teal-500", icon: ShoppingBag },
+const eventConfig: Record<EventType, { color: string; bgColor: string; icon: typeof ShoppingBag }> = { order: { color: "border-l-blue-500", bgColor: "bg-blue-500", icon: ShoppingBag },
   payout: { color: "border-l-blue-500", bgColor: "bg-blue-500", icon: Wallet },
   stock: { color: "border-l-orange-500", bgColor: "bg-orange-500", icon: Package },
   return: { color: "border-l-red-500", bgColor: "bg-red-500", icon: RotateCcw },
@@ -53,7 +53,7 @@ export const ActivityFeed = () => { return (
           );
         })}
       </div>
-      <button className="text-xs text-teal-600 hover:text-teal-700 font-medium mt-2">
+      <button className="text-xs text-blue-600 hover:text-blue-700 font-medium mt-2">
         Visa alla händelser →
       </button>
     </div>

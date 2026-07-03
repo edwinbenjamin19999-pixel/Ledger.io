@@ -53,8 +53,8 @@ export const OnboardingChecklist = ({ companyId, employees }: OnboardingChecklis
       aria-pressed={done}
       className={`w-[16px] h-[16px] rounded-[3px] flex items-center justify-center cursor-pointer transition-colors ${
         done
-          ? "bg-[#0B4F6C] border-[1.5px] border-[#0B4F6C]"
-          : "bg-white border-[1.5px] border-[#D1D5DB] hover:border-[#0B4F6C]"
+          ? "bg-[#1D4ED8] border-[1.5px] border-[#1D4ED8]"
+          : "bg-white border-[1.5px] border-[#D1D5DB] hover:border-[#1D4ED8]"
       }`}
     >
       {done && <span className="text-white text-[10px] leading-none">✓</span>}
@@ -97,7 +97,7 @@ export const OnboardingChecklist = ({ companyId, employees }: OnboardingChecklis
                 onClick={() => setSelectedEmployee(e.id)}
                 className={
                   isActive
-                    ? "bg-[#0B4F6C] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] py-[5px]"
+                    ? "bg-[#1D4ED8] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] py-[5px]"
                     : "bg-white border-[0.5px] border-[#E2E8F0] text-[#475569] rounded-[8px] text-[12px] px-[12px] py-[5px] hover:bg-[#F8FAFB]"
                 }
               >
@@ -126,7 +126,7 @@ export const OnboardingChecklist = ({ companyId, employees }: OnboardingChecklis
             {/* Progress bar — navy fill, accurate width */}
             <div className="w-full bg-[#E2E8F0] rounded-full h-[6px] mt-3 overflow-hidden">
               <div
-                className="bg-[#0B4F6C] rounded-full h-[6px] transition-all"
+                className="bg-[#1D4ED8] rounded-full h-[6px] transition-all"
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -153,7 +153,7 @@ export const OnboardingChecklist = ({ companyId, employees }: OnboardingChecklis
             </div>
 
             <Button
-              className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] w-full rounded-[8px] text-[12px] font-medium h-[40px] border-0"
+              className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] w-full rounded-[8px] text-[12px] font-medium h-[40px] border-0"
             >
               <Send className="h-4 w-4 mr-2" />
               Skicka onboardinglänk till {selectedEmp.email || "anställd"}

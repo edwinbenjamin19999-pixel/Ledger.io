@@ -343,7 +343,7 @@ export function AIReconciliation({ account,
             <button
               onClick={bulkApprove}
               disabled={bulkApproving}
-              className="h-[30px] px-[12px] rounded-[8px] bg-[#0B4F6C] text-white text-[11px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[6px] disabled:opacity-50"
+              className="h-[30px] px-[12px] rounded-[8px] bg-[#1D4ED8] text-white text-[11px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[6px] disabled:opacity-50"
             >
               {bulkApproving ? <Loader2 className="h-[12px] w-[12px] animate-spin" /> : <CheckCircle2 className="h-[12px] w-[12px]" />}
               Godkänn alla

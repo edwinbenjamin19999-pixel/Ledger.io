@@ -229,7 +229,7 @@ const AdvisorAGI = () => {
         </div>
       )}
 
-      <div className="rounded-2xl border border-[#C8DDF5] bg-cyan-50/40 p-4 flex items-start gap-3">
+      <div className="rounded-2xl border border-[#C8DDF5] bg-blue-50/40 p-4 flex items-start gap-3">
         <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5" />
         <div className="text-xs text-[#3b82f6]">
           <strong>AI-prioritering:</strong> AGI ska normalt lämnas senast den 12:e månaden efter löneutbetalning.

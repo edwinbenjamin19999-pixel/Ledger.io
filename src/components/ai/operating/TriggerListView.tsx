@@ -134,7 +134,7 @@ export function TriggerListView({ onSelect, selectedKey }: Props) {
                 onClick={() => onSelect(t.key)}
                 className={cn(
                   "cursor-pointer hover:bg-slate-50/70",
-                  selectedKey === t.key && "bg-cyan-50/40"
+                  selectedKey === t.key && "bg-blue-50/40"
                 )}
               >
                 <td className="px-3 py-2.5 font-medium text-slate-900">{t.label}</td>

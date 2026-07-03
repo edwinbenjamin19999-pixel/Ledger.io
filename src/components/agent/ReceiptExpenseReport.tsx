@@ -167,7 +167,7 @@ export function ReceiptExpenseReport({ companyId }: ExpenseReportProps) { const 
 
   return (
     <>
-      <Button onClick={() => setOpen(true)} className="gap-1.5 bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px]">
+      <Button onClick={() => setOpen(true)} className="gap-1.5 bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px]">
         <FileBarChart className="h-4 w-4" /> Generera utgiftsrapport
       </Button>
 

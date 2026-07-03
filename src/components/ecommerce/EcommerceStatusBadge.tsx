@@ -7,7 +7,7 @@ type BadgeType =
 
 const badgeStyles: Record<BadgeType, string> = { betald: "bg-[#E1F5EE] text-[#085041] border border-[#BFE6D6]",
   bokford: "bg-[#E1F5EE] text-[#085041] border border-[#BFE6D6]",
-  matchad: "bg-teal-100 text-teal-700 border border-teal-200",
+  matchad: "bg-blue-100 text-blue-700 border border-blue-200",
   delvis_retur: "bg-[#FAEEDA] text-[#7A5417] border border-[#F0DDB7]",
   returnerad: "bg-[#FCE8E8] text-[#7A1A1A] border border-[#F4C8C8]",
   vantande: "bg-slate-100 text-slate-600 border border-slate-200",

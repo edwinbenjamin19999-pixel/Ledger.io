@@ -42,8 +42,8 @@ export const SEVERITY: Record<FinOSSeverity, SeverityMeta> = {
   watch: {
     label: "Bevaka",
     badge: "bg-[#EFF6FF] text-[#0C447C] border-[0.5px] border-[#C8DDF5] rounded-full text-[10px] font-medium px-[8px] py-px",
-    accent: "bg-[#0B4F6C]",
-    text: "text-[#0B4F6C]",
+    accent: "bg-[#1D4ED8]",
+    text: "text-[#1D4ED8]",
     icon: Eye,
     weight: 2,
   },

@@ -31,7 +31,7 @@ export function Step2Modules({ draft, toggleModule }: Props) {
   return (
     <div className="max-w-5xl mx-auto space-y-8">
       <div>
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-cyan-100 text-[10px] font-semibold text-[#3b82f6] uppercase tracking-wider mb-3">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-blue-100 text-[10px] font-semibold text-[#3b82f6] uppercase tracking-wider mb-3">
           Steg 2 · Plattform
         </div>
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">
@@ -54,8 +54,8 @@ export function Step2Modules({ draft, toggleModule }: Props) {
                 disabled
                   ? "opacity-60 border-slate-100"
                   : enabled
-                    ? "border-[#C8DDF5] shadow-[0_4px_16px_rgba(8,145,178,0.08)]"
-                    : "border-slate-100 hover:border-cyan-200/60 hover:-translate-y-0.5 hover:shadow-md"
+                    ? "border-[#C8DDF5] shadow-[0_4px_16px_rgba(37,99,235,0.08)]"
+                    : "border-slate-100 hover:border-blue-200/60 hover:-translate-y-0.5 hover:shadow-md"
               }`}
               onClick={() => !disabled && toggleModule(m.id)}
               role="button"

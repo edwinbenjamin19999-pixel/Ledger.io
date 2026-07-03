@@ -104,7 +104,7 @@ export function AIReviewPanel({
         className="w-full sm:max-w-2xl p-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-l border-border overflow-hidden flex flex-col"
       >
         {/* Sticky header */}
-        <div className="px-5 py-4 border-b border-border bg-gradient-to-r from-cyan-50/50 to-transparent dark:from-cyan-950/20 sticky top-0 z-10">
+        <div className="px-5 py-4 border-b border-border bg-gradient-to-r from-blue-50/50 to-transparent dark:from-blue-950/20 sticky top-0 z-10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#0F1F3D] flex items-center justify-center shadow-md">

@@ -400,7 +400,7 @@ export const FinancialCommandCenter = ({ companyId }: FinancialCommandProps) => 
               onClick={() => setPeriod(p)}
               className={`px-[10px] h-[26px] text-[11px] font-medium rounded-[6px] transition-colors ${
                 period === p
-                  ? "bg-white text-[#0B4F6C] border-[0.5px] border-[#E2E8F0]"
+                  ? "bg-white text-[#1D4ED8] border-[0.5px] border-[#E2E8F0]"
                   : "text-[#475569] hover:text-[#0F172A]"
               }`}
             >
@@ -467,7 +467,7 @@ export const FinancialCommandCenter = ({ companyId }: FinancialCommandProps) => 
             <span className="text-[12px] font-medium text-[#0F172A]">Fordringar &amp; Skulder</span>
             <button
               onClick={() => navigate("/invoices")}
-              className="text-[11px] text-[#0B4F6C] hover:underline flex items-center gap-[4px]"
+              className="text-[11px] text-[#1D4ED8] hover:underline flex items-center gap-[4px]"
             >
               Visa <ArrowRight className="h-[12px] w-[12px]" />
             </button>
@@ -582,7 +582,7 @@ export const FinancialCommandCenter = ({ companyId }: FinancialCommandProps) => 
                       </div>
                     </div>
                     <div className="h-[4px] bg-[#F1F5F9] rounded-full overflow-hidden">
-                      <div className="h-full rounded-full bg-[#0B4F6C]" style={{ width: `${Math.min(s.percentage, 100)}%` }} />
+                      <div className="h-full rounded-full bg-[#1D4ED8]" style={{ width: `${Math.min(s.percentage, 100)}%` }} />
                     </div>
                   </div>
                 ))}
@@ -610,7 +610,7 @@ export const FinancialCommandCenter = ({ companyId }: FinancialCommandProps) => 
                   onClick={() => setSalesView(v)}
                   className={`px-[8px] h-[22px] text-[10px] font-medium rounded-[6px] transition-colors ${
                     salesView === v
-                      ? "bg-white text-[#0B4F6C] border-[0.5px] border-[#E2E8F0]"
+                      ? "bg-white text-[#1D4ED8] border-[0.5px] border-[#E2E8F0]"
                       : "text-[#475569]"
                   }`}
                 >
@@ -637,7 +637,7 @@ export const FinancialCommandCenter = ({ companyId }: FinancialCommandProps) => 
                     contentStyle={{ background: "#0F172A", border: "none", borderRadius: "6px", fontSize: "11px", color: "#fff" }}
                     formatter={(v: number) => [`${fmtFull(v)} kr`, "Intäkter"]}
                   />
-                  <Line type="monotone" dataKey="revenue" stroke="#0B4F6C" strokeWidth={1.5} dot={{ r: 2.5, fill: "#0B4F6C" }} />
+                  <Line type="monotone" dataKey="revenue" stroke="#1D4ED8" strokeWidth={1.5} dot={{ r: 2.5, fill: "#1D4ED8" }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -693,7 +693,7 @@ export const FinancialCommandCenter = ({ companyId }: FinancialCommandProps) => 
         {/* AI Insights — DSAIInfoCard style */}
         <div className="lg:col-span-2 bg-[#EFF6FF] border-[0.5px] border-[#C8DDF5] rounded-[12px] p-[14px]">
           <div className="flex items-center gap-[8px] mb-[8px]">
-            <span className="w-[18px] h-[18px] rounded-full bg-[#0B4F6C] flex items-center justify-center">
+            <span className="w-[18px] h-[18px] rounded-full bg-[#1D4ED8] flex items-center justify-center">
               <span className="w-[7px] h-[7px] rounded-full bg-[#E6F4FA]" />
             </span>
             <span className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#0C447C]">AI Ekonom</span>

@@ -84,11 +84,11 @@ export default function AccountingGuidesIndexPage() {
         {/* Hero */}
         <section className="pt-32 pb-12 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-cyan-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
               <BookOpen className="w-3 h-3" />
               Bokföringsguider · {allCards.length} guider
             </div>
-            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#0f1f35]">
+            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#0F1B2D]">
               Allt du behöver veta om bokföring
             </h1>
             <p className="mt-5 text-lg text-[#475569] leading-relaxed">
@@ -116,7 +116,7 @@ export default function AccountingGuidesIndexPage() {
               return (
                 <div key={cluster.id} id={cluster.id} className="scroll-mt-24">
                   <div className="mb-6 pb-4 border-b border-slate-100">
-                    <h2 className="text-2xl md:text-[28px] font-bold text-[#0f1f35] tracking-tight">
+                    <h2 className="text-2xl md:text-[28px] font-bold text-[#0F1B2D] tracking-tight">
                       {cluster.label}
                     </h2>
                     <p className="text-sm text-[#64748b] mt-1.5">{cluster.description}</p>
@@ -151,11 +151,11 @@ export default function AccountingGuidesIndexPage() {
         {/* Final CTA */}
         <section className="py-16">
           <div className="container mx-auto max-w-4xl px-6">
-            <div className="rounded-3xl bg-gradient-to-br from-cyan-50 via-white to-slate-50 border border-cyan-100/60 shadow-[0_8px_32px_-12px_rgba(8,145,178,0.18)] p-10 md:p-14 text-center">
+            <div className="rounded-3xl bg-gradient-to-br from-blue-50 via-white to-slate-50 border border-blue-100/60 shadow-[0_8px_32px_-12px_rgba(37,99,235,0.18)] p-10 md:p-14 text-center">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#3b82f6] text-white mb-5">
                 <Sparkles className="w-6 h-6" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0f1f35]">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0F1B2D]">
                 Slipp manuell bokföring
               </h2>
               <p className="mt-4 text-lg text-[#475569] leading-relaxed max-w-xl mx-auto">
@@ -171,7 +171,7 @@ export default function AccountingGuidesIndexPage() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-slate-300 text-[#0f1f35] hover:bg-slate-50"
+                  className="border-slate-300 text-[#0F1B2D] hover:bg-slate-50"
                 >
                   <Link to="/contact">Boka demo</Link>
                 </Button>
@@ -183,7 +183,7 @@ export default function AccountingGuidesIndexPage() {
         {/* White Label CTA for agencies */}
         <section className="pb-16">
           <div className="container mx-auto max-w-4xl px-6">
-            <div className="rounded-2xl bg-gradient-to-br from-[#0f1f35] to-[#0a1525] p-8 md:p-10 text-white">
+            <div className="rounded-2xl bg-gradient-to-br from-[#0F1B2D] to-[#0F1B2D] p-8 md:p-10 text-white">
               <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#3b82f6]">
                 <Building2 className="w-3.5 h-3.5" /> För redovisningsbyråer
               </div>

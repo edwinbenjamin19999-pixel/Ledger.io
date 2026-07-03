@@ -44,7 +44,7 @@ export function EditorToolbar({
           <button
             onClick={onAIFill}
             disabled={aiFillDisabled}
-            className="text-[11px] px-2.5 py-1 rounded-md bg-[#0B4F6C] hover:bg-[#08374b] disabled:opacity-50 disabled:cursor-not-allowed text-white flex items-center gap-1"
+            className="text-[11px] px-2.5 py-1 rounded-md bg-[#1D4ED8] hover:bg-[#08374b] disabled:opacity-50 disabled:cursor-not-allowed text-white flex items-center gap-1"
           >
             <Sparkles className="w-3 h-3" /> AI-fyll avsnitt
           </button>

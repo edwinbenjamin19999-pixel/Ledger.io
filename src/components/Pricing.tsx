@@ -24,7 +24,7 @@ export const Pricing = () => {
   const reveal = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section id="pricing" className="bg-[#0f1f35] py-24 md:py-32">
+    <section id="pricing" className="bg-[#0F1B2D] py-24 md:py-32">
       <div ref={reveal.ref} className={`container mx-auto max-w-3xl px-6 ${reveal.className}`}>
         {/* [1] Trust bar */}
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 pb-2">
@@ -53,7 +53,7 @@ export const Pricing = () => {
           >
             {/* [4] Intro badge */}
             <div className="flex justify-center">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-[rgba(34,211,238,0.1)] text-[#3b82f6] text-[11px] font-medium uppercase tracking-wider">
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-[rgba(37,99,235,0.1)] text-[#3b82f6] text-[11px] font-medium uppercase tracking-wider">
                 Introerbjudande
               </span>
             </div>
@@ -94,7 +94,7 @@ export const Pricing = () => {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-3">
               <Button
                 onClick={() => navigate("/auth")}
-                className="h-12 rounded-xl bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold shadow-[0_2px_8px_rgba(8,145,178,0.2)] hover:shadow-[0_4px_12px_rgba(8,145,178,0.28)] hover:-translate-y-px transition-all duration-150"
+                className="h-12 rounded-xl bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold shadow-[0_2px_8px_rgba(37,99,235,0.2)] hover:shadow-[0_4px_12px_rgba(37,99,235,0.28)] hover:-translate-y-px transition-all duration-150"
               >
                 Kom igång
               </Button>

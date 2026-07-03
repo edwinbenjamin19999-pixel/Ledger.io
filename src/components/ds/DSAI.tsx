@@ -10,7 +10,7 @@ export function DSAISpark({ className, size = 18 }: { className?: string; size?:
   return (
     <span
       className={cn(
-        "inline-flex items-center justify-center rounded-full flex-shrink-0 bg-[#0B4F6C]",
+        "inline-flex items-center justify-center rounded-full flex-shrink-0 bg-[#1D4ED8]",
         className
       )}
       style={{ width: size, height: size }}

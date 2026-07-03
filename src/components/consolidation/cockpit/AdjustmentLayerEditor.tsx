@@ -155,7 +155,7 @@ export function AdjustmentLayerEditor({ periodId, companies }: Props) {
           size="sm"
           onClick={handleSave}
           disabled={!balanced || !description || create.isPending}
-          className={cn('bg-[#3b82f6] hover:bg-[#3b82f6] text-white', balanced && 'shadow-[0_0_12px_rgba(6,182,212,0.3)]')}
+          className={cn('bg-[#3b82f6] hover:bg-[#3b82f6] text-white', balanced && 'shadow-[0_0_12px_rgba(37,99,235,0.3)]')}
         >
           <Save className="w-3.5 h-3.5 mr-1.5" />
           {create.isPending ? 'Sparar…' : 'Spara justering'}

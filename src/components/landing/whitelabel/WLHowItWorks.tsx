@@ -7,7 +7,7 @@ const steps = [
 
 export const WLHowItWorks = () => {
   return (
-    <section id="how-it-works" className="bg-[#0f1f35] py-24 md:py-32">
+    <section id="how-it-works" className="bg-[#0F1B2D] py-24 md:py-32">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="max-w-2xl mb-16">
           <p className="text-[#3b82f6] text-xs font-medium tracking-[0.25em] uppercase mb-3">

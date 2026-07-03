@@ -57,7 +57,7 @@ export function WaterfallChart({ rows, onClick }: Props) {
       <BarChart data={data} margin={{ top: 16, right: 8, left: -8, bottom: 8 }}>
         <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#64748b" }} axisLine={false} tickLine={false} />
         <YAxis tick={{ fontSize: 10, fill: "#94a3b8" }} axisLine={false} tickLine={false} tickFormatter={v => `${(v / 1000).toFixed(0)}k`} />
-        <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(8,145,178,0.06)" }} />
+        <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(37,99,235,0.06)" }} />
         <ReferenceLine y={0} stroke="#cbd5e1" />
         <Bar dataKey="range" radius={[6, 6, 0, 0]} cursor="pointer" onClick={(d: any) => d.row && onClick?.(d.row)}>
           {data.map((d, i) => (

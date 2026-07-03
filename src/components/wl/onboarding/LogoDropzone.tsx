@@ -75,7 +75,7 @@ export function LogoDropzone({ logoUrl, onFile, onClear }: Props) {
           onClick={() => inputRef.current?.click()}
           className={`cursor-pointer rounded-2xl border-2 border-dashed p-6 text-center transition-all ${
             isDragging
-              ? "border-[#3b82f6] bg-cyan-50/40"
+              ? "border-[#3b82f6] bg-blue-50/40"
               : "border-slate-200 hover:border-[#3b82f6]/40 hover:bg-slate-50/50"
           }`}
         >

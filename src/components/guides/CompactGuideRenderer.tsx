@@ -58,11 +58,11 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
       {/* Hero */}
       <section className="pt-20 pb-10 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto max-w-[760px] px-6">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-cyan-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
             <BookOpen className="w-3 h-3" />
             {guide.category}
           </div>
-          <h1 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-[#0f1f35]">
+          <h1 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-[#0F1B2D]">
             {guide.h1}
           </h1>
           <p className="mt-4 text-lg text-[#475569] leading-relaxed">{guide.lead}</p>
@@ -79,7 +79,7 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
       <article className="container mx-auto max-w-[760px] px-6 py-12 text-[17px] leading-[1.75] text-slate-700">
         {guide.sections.map((s, i) => (
           <section key={i} className="mb-10">
-            <h2 className="text-[24px] font-semibold tracking-tight text-[#0f1f35] mb-4">
+            <h2 className="text-[24px] font-semibold tracking-tight text-[#0F1B2D] mb-4">
               {s.heading}
             </h2>
             <div className="space-y-4">
@@ -104,12 +104,12 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
         <section className="my-12 rounded-2xl border border-amber-200/60 bg-amber-50/50 p-7">
           <div className="flex items-center gap-2 mb-4">
             <AlertTriangle className="w-5 h-5 text-[#7A5417]" />
-            <h2 className="text-xl font-semibold text-[#0f1f35]">Vanliga fel</h2>
+            <h2 className="text-xl font-semibold text-[#0F1B2D]">Vanliga fel</h2>
           </div>
           <ul className="space-y-4">
             {guide.mistakes.map((m, i) => (
               <li key={i}>
-                <div className="font-semibold text-[#0f1f35]">{m.title}</div>
+                <div className="font-semibold text-[#0F1B2D]">{m.title}</div>
                 <p className="mt-1 text-sm text-[#475569] leading-relaxed">{m.body}</p>
               </li>
             ))}
@@ -117,12 +117,12 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
         </section>
 
         {/* Bokfy block */}
-        <section className="my-12 rounded-2xl bg-gradient-to-br from-[#0f1f35] to-[#0a1525] p-8 text-white">
+        <section className="my-12 rounded-2xl bg-gradient-to-br from-[#0F1B2D] to-[#0F1B2D] p-8 text-white">
           <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#3b82f6]">
             <Sparkles className="w-3.5 h-3.5" /> Hur Bokfy hjälper
           </div>
           <p className="mt-3 text-white/85 leading-relaxed">{guide.northledgerNote}</p>
-          <Button asChild className="mt-5 bg-white text-[#050d1a] hover:bg-white/90 font-semibold gap-1.5">
+          <Button asChild className="mt-5 bg-white text-[#0F1B2D] hover:bg-white/90 font-semibold gap-1.5">
             <Link to="/auth">
               Testa Bokfy gratis <ArrowRight className="w-3.5 h-3.5" />
             </Link>
@@ -132,7 +132,7 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
         {/* Related */}
         {relatedGuides.length > 0 && (
           <section className="my-12">
-            <h2 className="text-[22px] font-semibold tracking-tight text-[#0f1f35] mb-5">
+            <h2 className="text-[22px] font-semibold tracking-tight text-[#0F1B2D] mb-5">
               Relaterade guider
             </h2>
             <div className="grid md:grid-cols-2 gap-3">
@@ -143,7 +143,7 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
                   className="group flex items-start justify-between gap-4 rounded-xl border border-slate-100 bg-white p-4 hover:border-[#C8DDF5] hover:shadow-sm transition-all"
                 >
                   <div>
-                    <div className="text-[14px] font-semibold text-[#0f1f35] group-hover:text-[#3b82f6] transition-colors">
+                    <div className="text-[14px] font-semibold text-[#0F1B2D] group-hover:text-[#3b82f6] transition-colors">
                       {r.title}
                     </div>
                     <div className="mt-1 text-xs text-[#94a3b8]">{r.readingTime} min läsning</div>

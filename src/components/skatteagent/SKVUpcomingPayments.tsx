@@ -73,7 +73,7 @@ export function SKVUpcomingPayments({ companyId }: { companyId: string | null | 
   }
 
   return (
-    <Card className="border-cyan-200/40">
+    <Card className="border-blue-200/40">
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-base">
           <Bell className="h-4 w-4 text-[#3b82f6]" />

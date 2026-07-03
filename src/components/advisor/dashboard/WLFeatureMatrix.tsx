@@ -118,7 +118,7 @@ export const WLFeatureMatrix = () => {
             key={f.tab}
             disabled={!targetClientId}
             onClick={() => open(f.tab)}
-            className="text-left rounded-xl border border-slate-200 bg-white px-3 py-2.5 hover:border-[#3b82f6] hover:bg-cyan-50/30 disabled:opacity-50 disabled:cursor-not-allowed transition group"
+            className="text-left rounded-xl border border-slate-200 bg-white px-3 py-2.5 hover:border-[#3b82f6] hover:bg-blue-50/30 disabled:opacity-50 disabled:cursor-not-allowed transition group"
           >
             <div className="flex items-start gap-2">
               <div className="h-8 w-8 rounded-lg bg-slate-50 flex items-center justify-center shrink-0 group-hover:bg-white">

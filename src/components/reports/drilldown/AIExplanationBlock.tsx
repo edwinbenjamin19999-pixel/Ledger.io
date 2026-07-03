@@ -94,7 +94,7 @@ export function AIExplanationBlock({ cacheKey, payload, fallback }: AIExplanatio
   }, [cacheKey]);
 
   return (
-    <div className="rounded-xl border border-cyan-200/50 bg-gradient-to-br from-cyan-50/40 to-transparent p-4 dark:border-[#3b82f6]/40 dark:from-cyan-900/10">
+    <div className="rounded-xl border border-blue-200/50 bg-gradient-to-br from-blue-50/40 to-transparent p-4 dark:border-[#3b82f6]/40 dark:from-blue-900/10">
       <div className="mb-2 flex items-center justify-between">
         <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-[#3b82f6] dark:text-[#1E3A5F]">
           <Sparkles className="h-3.5 w-3.5" />

@@ -43,10 +43,10 @@ export function CommandHeader({
   const periodLabel = period ?? new Date().toLocaleDateString("sv-SE", { month: "long", year: "numeric" });
 
   return (
-    <div className="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-800/60 shadow-[0_4px_24px_-12px_rgba(6,182,212,0.15)]">
+    <div className="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-800/60 shadow-[0_4px_24px_-12px_rgba(37,99,235,0.15)]">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between gap-4 flex-wrap">
         <div className="flex items-center gap-3 min-w-0">
-          <div className="h-9 w-9 rounded-xl bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_16px_rgba(6,182,212,0.35)] shrink-0">
+          <div className="h-9 w-9 rounded-xl bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_16px_rgba(37,99,235,0.35)] shrink-0">
             <Building2 className="h-4 w-4 text-white" />
           </div>
           <div className="min-w-0">

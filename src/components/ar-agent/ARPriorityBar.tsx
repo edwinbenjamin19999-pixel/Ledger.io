@@ -57,7 +57,7 @@ export const ARPriorityBar = ({ openInvoices, onViewDetails }: Props) => {
         </div>
         <div className="flex gap-2 md:flex-shrink-0">
           <Button
-            className="bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-blue-500 text-white shadow-[0_2px_8px_rgba(6,182,212,0.25)] h-10"
+            className="bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-blue-500 text-white shadow-[0_2px_8px_rgba(37,99,235,0.25)] h-10"
             onClick={() => toast.success(`${actionable.length} påminnelser köade för utskick`)}
           >
             <Send className="h-4 w-4 mr-2" />

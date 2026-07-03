@@ -36,7 +36,7 @@ const BOOK_STEPS = [
 
 const BookkeepingDemo = ({ step }: { step: number }) => (
   <div className="grid md:grid-cols-2 gap-px bg-white/5">
-    <div className="bg-[#0a1525] p-8">
+    <div className="bg-[#0F1B2D] p-8">
       <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6">
         <div className="text-xs text-white/40 uppercase tracking-wider mb-3">Faktura</div>
         <div className="flex justify-between items-start mb-6">
@@ -62,7 +62,7 @@ const BookkeepingDemo = ({ step }: { step: number }) => (
         </div>
       </div>
     </div>
-    <div className="bg-[#0a1525] p-8">
+    <div className="bg-[#0F1B2D] p-8">
       <div className="space-y-3">
         {BOOK_STEPS.map((s, i) => {
           const active = step >= i;
@@ -103,7 +103,7 @@ const BookkeepingDemo = ({ step }: { step: number }) => (
 
 // ─── Demo 2: Bank reconciliation ──────────────────────────────────────
 const ReconciliationDemo = ({ step }: { step: number }) => (
-  <div className="bg-[#0a1525] p-10 min-h-[420px]">
+  <div className="bg-[#0F1B2D] p-10 min-h-[420px]">
     <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6">
       {/* Bank tx */}
       <div
@@ -171,7 +171,7 @@ const VAT_BOXES = [
 ];
 
 const VatDemo = ({ step }: { step: number }) => (
-  <div className="bg-[#0a1525] p-10 relative">
+  <div className="bg-[#0F1B2D] p-10 relative">
     {/* Success badge top-right */}
     <div
       className={`absolute top-5 right-5 inline-flex items-center gap-1.5 rounded-full border transition-opacity duration-500 ${
@@ -229,8 +229,8 @@ const VatDemo = ({ step }: { step: number }) => (
           step >= VAT_BOXES.length + 1 ? "opacity-100" : "opacity-40"
         }`}
         style={{
-          background: "rgba(29,217,240,0.06)",
-          borderBottom: "2px solid rgba(29,217,240,0.4)",
+          background: "rgba(37,99,235,0.06)",
+          borderBottom: "2px solid rgba(37,99,235,0.4)",
         }}
       >
         <span className="text-white font-semibold" style={{ fontSize: 18 }}>
@@ -270,7 +270,7 @@ const ForecastDemo = ({ step }: { step: number }) => {
   const visibleBars = Math.min(heights.length, step * 3);
 
   return (
-    <div className="bg-[#0a1525] p-10">
+    <div className="bg-[#0F1B2D] p-10">
       <div className="grid md:grid-cols-[260px_1fr] gap-8">
         <div className="space-y-4">
           <div>
@@ -347,7 +347,7 @@ const COMMAND_ITEMS = [
 ];
 
 const CommandDemo = ({ step }: { step: number }) => (
-  <div className="bg-[#0a1525] p-10">
+  <div className="bg-[#0F1B2D] p-10">
     <div className="flex items-center gap-3 mb-6">
       <div className="w-9 h-9 rounded-lg bg-[#3b82f6]/15 text-[#3b82f6] flex items-center justify-center">
         <LayoutDashboard className="w-4.5 h-4.5" />
@@ -477,11 +477,11 @@ export const InteractiveDemoPreview = () => {
         </div>
 
         <div
-          className="overflow-hidden bg-[#0a1525]"
+          className="overflow-hidden bg-[#0F1B2D]"
           style={{
             borderRadius: 20,
             boxShadow:
-              "0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(29,217,240,0.12), inset 0 1px 0 rgba(255,255,255,0.08)",
+              "0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(37,99,235,0.12), inset 0 1px 0 rgba(255,255,255,0.08)",
           }}
         >
           {/* Browser chrome */}

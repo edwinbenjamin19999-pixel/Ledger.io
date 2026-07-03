@@ -35,7 +35,7 @@ export function GlobalErrorBar({ validation, onInvestigate, onAskAI, onReviewIss
         <button
           type="button"
           onClick={onInvestigate}
-          className="bg-[#0B4F6C] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] h-[34px] hover:bg-[#1074A0] transition-colors"
+          className="bg-[#1D4ED8] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] h-[34px] hover:bg-[#1074A0] transition-colors"
         >
           Undersök obalans
         </button>

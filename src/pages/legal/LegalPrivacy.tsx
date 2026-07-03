@@ -11,7 +11,7 @@ const LegalPrivacy = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#0f1f35]">
+    <div className="min-h-screen bg-white text-[#0F1B2D]">
 
       <Header lightBg />
 
@@ -21,7 +21,7 @@ const LegalPrivacy = () => {
             <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-[#0f1f35] mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-[#0F1B2D] mb-3">
               Integritetspolicy
             </h1>
             <p className="text-base text-slate-600">
@@ -31,7 +31,7 @@ const LegalPrivacy = () => {
             </p>
           </div>
 
-          <article className="prose prose-slate max-w-none prose-headings:text-[#0f1f35] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0f1f35]">
+          <article className="prose prose-slate max-w-none prose-headings:text-[#0F1B2D] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0F1B2D]">
             <h2>1. Personuppgiftsansvarig</h2>
             <p>
               Bokfy AB, org.nr [556xxx-xxxx], med säte i Stockholm. Kontakt:{" "}

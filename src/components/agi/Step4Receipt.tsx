@@ -68,7 +68,7 @@ export const Step4Receipt = ({ period, submittedAt, receiptNumber, companyName, 
                 <Download className="w-4 h-4" />
                 Ladda ner kvittens (PDF)
               </Button>
-              <Button onClick={onBack} className="bg-[#0891B2] hover:bg-[#0891B2]/90 text-white gap-2">
+              <Button onClick={onBack} className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white gap-2">
                 Ny deklaration
                 <ArrowRight className="w-4 h-4" />
               </Button>
@@ -80,8 +80,8 @@ export const Step4Receipt = ({ period, submittedAt, receiptNumber, companyName, 
         <Card className="bg-muted/20">
           <CardContent className="py-4 px-5">
             <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-[#0891B2]/10 shrink-0">
-                <Calendar className="w-4 h-4 text-[#0891B2]" />
+              <div className="p-2 rounded-lg bg-[#2563EB]/10 shrink-0">
+                <Calendar className="w-4 h-4 text-[#2563EB]" />
               </div>
               <div className="flex-1">
                 <p className="text-xs text-muted-foreground font-medium">Nästa deklaration</p>

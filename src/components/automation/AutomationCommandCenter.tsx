@@ -369,16 +369,16 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
           <>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
-                { label: "Obokförda transaktioner", value: automationStatus.unbookedBank, icon: CreditCard, route: "/bankavstamning", accent: "#0B4F6C" },
+                { label: "Obokförda transaktioner", value: automationStatus.unbookedBank, icon: CreditCard, route: "/bankavstamning", accent: "#1D4ED8" },
                 { label: "Väntande granskning", value: automationStatus.draftEntries, icon: FileText, route: "/accounting", accent: "#EF9F27" },
                 { label: "Förfallna fakturor", value: automationStatus.overdueInvoices, icon: AlertCircle, route: "/ar-agent", accent: "#E24B4A" },
-                { label: "Väntande utlägg", value: automationStatus.pendingExpenses, icon: Receipt, route: "/expenses", accent: "#0B4F6C" },
+                { label: "Väntande utlägg", value: automationStatus.pendingExpenses, icon: Receipt, route: "/expenses", accent: "#1D4ED8" },
               ].map(kpi => {
                 const Icon = kpi.icon;
                 return (
                   <Card
                     key={kpi.label}
-                    className="cursor-pointer relative overflow-hidden bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] hover:border-[#0B4F6C]/40 transition-all duration-200 shadow-none"
+                    className="cursor-pointer relative overflow-hidden bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] hover:border-[#1D4ED8]/40 transition-all duration-200 shadow-none"
                     onClick={() => navigate(kpi.route)}
                   >
                     <div className="absolute top-0 left-0 right-0 h-[1.5px]" style={{ background: kpi.accent }} />
@@ -401,7 +401,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
               <CardContent className="p-4">
                 <div className="flex items-center justify-between gap-4 flex-wrap">
                   <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-[#0B4F6C]" />
+                    <Sparkles className="w-4 h-4 text-[#1D4ED8]" />
                     <span className="text-[12px] font-medium text-[#0F172A]">Automationsinställningar</span>
                   </div>
                   <div className="flex items-center gap-6">
@@ -412,7 +412,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                           setAutoSubmit(v);
                           toast({ title: v ? "Auto-inlämning aktiverad" : "Auto-inlämning inaktiverad", description: v ? "Systemet skickar in automatiskt efter godkännande" : "Manuell inlämning krävs" });
                         }}
-                        className="data-[state=checked]:bg-[#0B4F6C] data-[state=unchecked]:bg-[#E2E8F0]"
+                        className="data-[state=checked]:bg-[#1D4ED8] data-[state=unchecked]:bg-[#E2E8F0]"
                       />
                       <span className="text-[12px] text-[#0F172A]">Auto-inlämning</span>
                     </label>
@@ -423,7 +423,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                           setManualApproval(v);
                           toast({ title: v ? "Manuellt godkännande aktiverat" : "Manuellt godkännande inaktiverat" });
                         }}
-                        className="data-[state=checked]:bg-[#0B4F6C] data-[state=unchecked]:bg-[#E2E8F0]"
+                        className="data-[state=checked]:bg-[#1D4ED8] data-[state=unchecked]:bg-[#E2E8F0]"
                       />
                       <span className="text-[12px] text-[#0F172A]">Manuellt godkännande</span>
                     </label>
@@ -450,7 +450,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
               <Card className="bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] shadow-none">
                 <CardHeader className="pb-2 pt-4 px-5">
                   <CardTitle className="text-[13px] font-medium text-[#0F172A] flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-[#0B4F6C]" />
+                    <Calendar className="w-4 h-4 text-[#1D4ED8]" />
                     Kommande deadlines
                   </CardTitle>
                 </CardHeader>
@@ -472,7 +472,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                             {daysLeft} dagar
                           </span>
                           <Button
-                            className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[28px]"
+                            className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[28px]"
                             onClick={() => navigate(d.route)}
                           >
                             Förbered
@@ -489,7 +489,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
             <Card className="bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] shadow-none">
               <CardHeader className="pb-2 pt-4 px-5">
                 <CardTitle className="text-[13px] font-medium text-[#0F172A] flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#0B4F6C]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1D4ED8]" />
                   Autonoma åtgärder (Kategori A)
                 </CardTitle>
               </CardHeader>

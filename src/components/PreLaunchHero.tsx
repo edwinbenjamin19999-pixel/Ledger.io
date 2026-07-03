@@ -72,7 +72,7 @@ export const PreLaunchHero = () => {
   ];
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-[#0f1f35] pt-[60px]">
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-[#0F1B2D] pt-[60px]">
       {/* Subtle line pattern */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -83,13 +83,13 @@ export const PreLaunchHero = () => {
       />
 
       {/* Radial glow blobs */}
-      <div className="absolute top-[10%] left-[15%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(8,145,178,0.12)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute bottom-[5%] right-[10%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(34,211,238,0.08)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-[10%] left-[15%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.12)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute bottom-[5%] right-[10%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.08)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-24">
         <div className="max-w-[760px] mx-auto text-center">
           {/* Launch pill */}
-          <div className="inline-flex items-center gap-2.5 mb-8 border border-[rgba(34,211,238,0.25)] rounded-full px-5 py-2 bg-[rgba(34,211,238,0.06)]">
+          <div className="inline-flex items-center gap-2.5 mb-8 border border-[rgba(37,99,235,0.25)] rounded-full px-5 py-2 bg-[rgba(37,99,235,0.06)]">
             <span className="w-2 h-2 rounded-full bg-[#3b82f6] animate-pulse" />
             <span className="text-sm text-[#3b82f6] font-medium">
               Lansering om {countdown.days} dagar — Early access öppen
@@ -138,14 +138,14 @@ export const PreLaunchHero = () => {
                 placeholder="Namn"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="h-11 bg-[rgba(255,255,255,0.07)] border-[rgba(255,255,255,0.12)] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:border-[rgba(34,211,238,0.5)] focus-visible:ring-0 rounded-lg"
+                className="h-11 bg-[rgba(255,255,255,0.07)] border-[rgba(255,255,255,0.12)] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:border-[rgba(37,99,235,0.5)] focus-visible:ring-0 rounded-lg"
               />
               <Input
                 type="text"
                 placeholder="Företag"
                 value={companyName}
                 onChange={(e) => setCompanyName(e.target.value)}
-                className="h-11 bg-[rgba(255,255,255,0.07)] border-[rgba(255,255,255,0.12)] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:border-[rgba(34,211,238,0.5)] focus-visible:ring-0 rounded-lg"
+                className="h-11 bg-[rgba(255,255,255,0.07)] border-[rgba(255,255,255,0.12)] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:border-[rgba(37,99,235,0.5)] focus-visible:ring-0 rounded-lg"
               />
             </div>
             <Input
@@ -154,12 +154,12 @@ export const PreLaunchHero = () => {
               placeholder="din@email.se"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="h-11 bg-[rgba(255,255,255,0.07)] border-[rgba(255,255,255,0.12)] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:border-[rgba(34,211,238,0.5)] focus-visible:ring-0 rounded-lg"
+              className="h-11 bg-[rgba(255,255,255,0.07)] border-[rgba(255,255,255,0.12)] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:border-[rgba(37,99,235,0.5)] focus-visible:ring-0 rounded-lg"
             />
             <Button
               type="submit"
               disabled={loading}
-              className="w-full h-12 text-[15px] font-semibold bg-[#3b82f6] text-white hover:bg-[#3b82f6] rounded-lg shadow-[0_4px_20px_rgba(8,145,178,0.4)]"
+              className="w-full h-12 text-[15px] font-semibold bg-[#3b82f6] text-white hover:bg-[#3b82f6] rounded-lg shadow-[0_4px_20px_rgba(37,99,235,0.4)]"
             >
               {loading ? "Skickar..." : "Säkra din plats"}
               <ArrowRight className="w-4 h-4 ml-1.5" />

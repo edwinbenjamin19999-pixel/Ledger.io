@@ -36,7 +36,7 @@ export function GlobalActionBar({ insights, pending, onFixAllCritical, onImprove
   if (critical.length === 0 && liquidity.length === 0 && reminders.length === 0) return null;
 
   return (
-    <div className="rounded-2xl border border-slate-200/60 dark:border-white/10 bg-gradient-to-br from-white via-cyan-50/30 to-white dark:from-white/[0.04] dark:via-[#3b82f6]/[0.04] dark:to-white/[0.04] backdrop-blur-xl p-3 shadow-sm">
+    <div className="rounded-2xl border border-slate-200/60 dark:border-white/10 bg-gradient-to-br from-white via-blue-50/30 to-white dark:from-white/[0.04] dark:via-[#3b82f6]/[0.04] dark:to-white/[0.04] backdrop-blur-xl p-3 shadow-sm">
       <div className="flex items-center gap-2 flex-wrap">
         <span className="text-[10px] uppercase tracking-wide font-semibold text-slate-700 dark:text-white/70 px-2">Snabbåtgärder</span>
 

@@ -53,10 +53,10 @@ export const DeadlineCalendarSidebar = ({ companyId }: DeadlineCalendarSidebarPr
 
   return (
     <Card className="sticky top-6 relative overflow-hidden bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] shadow-none">
-      <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0B4F6C]" />
+      <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#1D4ED8]" />
       <CardHeader className="pb-2 pt-[14px] px-[14px]">
         <CardTitle className="text-[12px] font-medium text-[#0F172A] flex items-center gap-2">
-          <Calendar size={14} strokeWidth={1.5} className="text-[#0B4F6C]" />
+          <Calendar size={14} strokeWidth={1.5} className="text-[#1D4ED8]" />
           Skattekalender
         </CardTitle>
       </CardHeader>

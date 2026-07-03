@@ -41,7 +41,7 @@ const statusLabel: Record<AgentActivityStatus, string> = {
 const statusTone: Record<AgentActivityStatus, string> = {
   done: "bg-emerald-50 text-emerald-700 border-emerald-200",
   corrected: "bg-amber-50 text-amber-700 border-amber-200",
-  in_progress: "bg-cyan-50 text-[#3b82f6] border-cyan-200",
+  in_progress: "bg-blue-50 text-[#3b82f6] border-blue-200",
 };
 
 function confidenceTone(c?: number) {

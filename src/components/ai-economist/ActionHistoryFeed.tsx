@@ -65,7 +65,7 @@ export function ActionHistoryFeed({ companyId }: Props) {
   return (
     <div className="rounded-[12px] border-[0.5px] border-[#DFE4EA] bg-[#FAFBFC] p-4 shadow-sm">
       <div className="flex items-center gap-2 mb-3">
-        <span className="w-[14px] h-[14px] rounded-full bg-[#0B4F6C] flex items-center justify-center">
+        <span className="w-[14px] h-[14px] rounded-full bg-[#1D4ED8] flex items-center justify-center">
           <span className="w-[5px] h-[5px] rounded-full bg-[#E6F4FA]" />
         </span>
         <h3 className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">AI-aktivitet</h3>
@@ -80,7 +80,7 @@ export function ActionHistoryFeed({ companyId }: Props) {
             return (
               <div key={r.id} className="rounded-[10px] p-2.5 bg-white border-[0.5px] border-[#E2E8F0]">
                 <div className="flex items-start gap-2">
-                  <span className="w-[14px] h-[14px] mt-[2px] rounded-full bg-[#0B4F6C] flex items-center justify-center shrink-0">
+                  <span className="w-[14px] h-[14px] mt-[2px] rounded-full bg-[#1D4ED8] flex items-center justify-center shrink-0">
                     <span className="w-[5px] h-[5px] rounded-full bg-[#E6F4FA]" />
                   </span>
                   <div className="min-w-0 flex-1">

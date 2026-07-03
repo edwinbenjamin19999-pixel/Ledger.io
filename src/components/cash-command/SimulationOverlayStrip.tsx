@@ -27,7 +27,7 @@ export function SimulationOverlayStrip({
   const positive = totalImpact >= 0;
 
   return (
-    <div className="rounded-xl border border-[#3b82f6]/60 dark:border-[#C8DDF5] bg-cyan-50/60 dark:bg-[#EFF6FF] px-3 py-2 flex items-center gap-3 flex-wrap">
+    <div className="rounded-xl border border-[#3b82f6]/60 dark:border-[#C8DDF5] bg-blue-50/60 dark:bg-[#EFF6FF] px-3 py-2 flex items-center gap-3 flex-wrap">
       <div className="flex items-center gap-2 text-xs font-semibold text-[#3b82f6] dark:text-[#3b82f6]">
         <Beaker className="h-3.5 w-3.5" />
         Simulering aktiv

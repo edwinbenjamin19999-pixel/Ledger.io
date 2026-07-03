@@ -30,7 +30,7 @@ export function ForecastModeToggle({ mode, onChange }: Props) {
             className={cn(
               "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-150",
               active
-                ? "bg-[#3b82f6] text-white shadow-[0_2px_8px_rgba(6,182,212,0.25)]"
+                ? "bg-[#3b82f6] text-white shadow-[0_2px_8px_rgba(37,99,235,0.25)]"
                 : "text-slate-600 hover:bg-slate-50",
             )}
             aria-pressed={active}

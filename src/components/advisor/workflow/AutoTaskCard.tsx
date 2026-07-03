@@ -24,7 +24,7 @@ const ICON_MAP: Record<AutoTask["iconName"], LucideIcon> = {
 const ACCENT: Record<AutoTaskPriority, string> = {
   critical: "bg-[#E24B4A]",
   high: "bg-[#EF9F27]",
-  medium: "bg-[#0B4F6C]",
+  medium: "bg-[#1D4ED8]",
 };
 
 function relativeAge(ms: number): string {
@@ -83,7 +83,7 @@ export const AutoTaskCard = ({ task, onDismiss }: Props) => {
           <Button
             type="button"
             onClick={() => navigate(task.actionHref)}
-            className="h-[28px] rounded-[8px] bg-[#0B4F6C] px-[10px] text-[11px] font-medium text-[#E6F4FA] hover:bg-[#0B4F6C]/90"
+            className="h-[28px] rounded-[8px] bg-[#1D4ED8] px-[10px] text-[11px] font-medium text-[#E6F4FA] hover:bg-[#1D4ED8]/90"
           >
             {task.actionLabel}
           </Button>

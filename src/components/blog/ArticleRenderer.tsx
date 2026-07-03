@@ -8,8 +8,8 @@ export const ArticleRenderer = ({ blocks }: { blocks: ContentBlock[] }) => (
       if (b.type === "heading") {
         const Tag = b.level === 2 ? "h2" : "h3";
         const cls = b.level === 2
-          ? "text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight pt-6"
-          : "text-xl font-semibold text-[#0f1f35] tracking-tight pt-4";
+          ? "text-2xl md:text-3xl font-bold text-[#0F1B2D] tracking-tight pt-6"
+          : "text-xl font-semibold text-[#0F1B2D] tracking-tight pt-4";
         return <Tag key={i} className={cls}>{b.text}</Tag>;
       }
       if (b.type === "paragraph") {
@@ -32,8 +32,8 @@ export const ArticleRenderer = ({ blocks }: { blocks: ContentBlock[] }) => (
       }
       if (b.type === "cta") {
         return (
-          <div key={i} className="my-10 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100 p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div className="text-lg font-semibold text-[#0f1f35]">{b.title}</div>
+          <div key={i} className="my-10 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-50 border border-blue-100 p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="text-lg font-semibold text-[#0F1B2D]">{b.title}</div>
             <Link to={b.href} className="inline-flex items-center gap-1.5 rounded-lg bg-[#3b82f6] text-white px-4 py-2 text-sm font-medium hover:bg-[#3b82f6] transition-colors">
               Kom igång <ArrowRight className="w-4 h-4" />
             </Link>

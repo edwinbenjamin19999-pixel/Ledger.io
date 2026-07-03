@@ -13,7 +13,7 @@ function KpiCard({
   value,
   sub,
   variant = "default",
-  topAccent = "#0B4F6C",
+  topAccent = "#1D4ED8",
   progress,
   progressColor,
 }: {
@@ -178,7 +178,7 @@ export function HRKpiRow({ companyId }: Props) {
         sub={data ? `av ${fmt(data.planned)}h planerat` : "—"}
         progress={workedPct}
         progressColor={progressColor}
-        topAccent={workedPct > 90 ? "#5DCAA5" : "#0B4F6C"}
+        topAccent={workedPct > 90 ? "#5DCAA5" : "#1D4ED8"}
       />
       <KpiCard
         label="Väntar godkännande"

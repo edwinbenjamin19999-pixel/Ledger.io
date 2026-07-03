@@ -5,7 +5,7 @@ const pillars = [
 ];
 
 export const AboutVision = () => (
-  <section className="bg-[#0f1f35] py-24 md:py-32 relative overflow-hidden">
+  <section className="bg-[#0F1B2D] py-24 md:py-32 relative overflow-hidden">
     <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#3b82f6]/5 blur-[120px]" />
 
     <div className="relative container mx-auto max-w-3xl px-6 text-center">

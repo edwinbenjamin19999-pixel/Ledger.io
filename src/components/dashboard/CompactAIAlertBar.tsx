@@ -30,7 +30,7 @@ export function CompactAIAlertBar({
   if (!issues.length) return null;
 
   return (
-    <div className="bg-[#0f1f35] border border-white/[0.08] rounded-xl px-5 py-3 flex items-center gap-3 mb-5">
+    <div className="bg-[#0F1B2D] border border-white/[0.08] rounded-xl px-5 py-3 flex items-center gap-3 mb-5">
       <Sparkles className="w-4 h-4 text-[#3b82f6] shrink-0" />
       <div className="text-white/70 text-sm flex-1 min-w-0 truncate">
         {issues.map((i, idx) => (

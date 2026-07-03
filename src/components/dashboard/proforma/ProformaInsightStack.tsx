@@ -5,7 +5,7 @@ import type { ProformaInsightsBundle } from "./useProformaInsights";
 
 const TONE = {
   neutral: { bg: "bg-slate-50/70 dark:bg-slate-900/40", border: "border-slate-200/60 dark:border-slate-800", iconBg: "bg-slate-500/10", iconColor: "text-slate-600 dark:text-slate-300", Icon: Sparkles },
-  positive: { bg: "bg-cyan-50/70 dark:bg-cyan-950/30", border: "border-cyan-200/60 dark:border-[#3b82f6]/40", iconBg: "bg-[#EFF6FF]", iconColor: "text-[#3b82f6] dark:text-[#1E3A5F]", Icon: TrendingUp },
+  positive: { bg: "bg-blue-50/70 dark:bg-blue-950/30", border: "border-blue-200/60 dark:border-[#3b82f6]/40", iconBg: "bg-[#EFF6FF]", iconColor: "text-[#3b82f6] dark:text-[#1E3A5F]", Icon: TrendingUp },
   warning: { bg: "bg-amber-50/70 dark:bg-amber-950/30", border: "border-amber-200/60 dark:border-amber-800/40", iconBg: "bg-[#FAEEDA]", iconColor: "text-[#7A5417] dark:text-[#C28A2B]", Icon: Sparkles },
   critical: { bg: "bg-rose-50/70 dark:bg-rose-950/30", border: "border-rose-200/60 dark:border-rose-800/40", iconBg: "bg-[#FCE8E8]", iconColor: "text-[#7A1A1A] dark:text-[#C73838]", Icon: AlertTriangle },
 } as const;

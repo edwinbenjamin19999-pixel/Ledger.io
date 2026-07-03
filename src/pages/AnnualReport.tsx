@@ -543,7 +543,7 @@ const AnnualReport = () => { const { user, loading } = useAuth();
         {/* Export shortcut */}
         <div className="flex flex-wrap gap-2 pt-2">
           <Button
-            className="bg-[#0B4F6C] hover:bg-[#08374b] text-white"
+            className="bg-[#1D4ED8] hover:bg-[#08374b] text-white"
             onClick={() => { if (!company) return toast.error("Inget företag valt");
               exportAnnualReportPDF({ companyName: company.name, orgNumber: company.org_number, year, regelverk, bsLines, isLines, notes: notes.map((n, i) => ({ id: String(i + 1), title: n.title, content: n.content, required: n.category === "obligatorisk" })), forvaltning });
               toast.success("PDF exporterad!");

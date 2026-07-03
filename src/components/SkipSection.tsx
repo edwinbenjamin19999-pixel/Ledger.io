@@ -24,7 +24,7 @@ export const SkipSection = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section className="py-20 sm:py-28 bg-gradient-to-b from-[#0B1D2A] to-[#0f1f35]">
+    <section className="py-20 sm:py-28 bg-gradient-to-b from-[#0B1D2A] to-[#0F1B2D]">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
           <h2

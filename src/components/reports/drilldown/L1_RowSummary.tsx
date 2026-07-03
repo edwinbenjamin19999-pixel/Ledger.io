@@ -80,7 +80,7 @@ export function L1_RowSummary({ ctx, onSeeAccounts }: Props) {
       <button
         type="button"
         onClick={onSeeAccounts}
-        className="w-full rounded-xl border border-border bg-card px-4 py-3 text-left text-sm font-medium text-foreground transition-colors hover:border-[#3b82f6] hover:bg-cyan-50/40 dark:hover:bg-cyan-900/10"
+        className="w-full rounded-xl border border-border bg-card px-4 py-3 text-left text-sm font-medium text-foreground transition-colors hover:border-[#3b82f6] hover:bg-blue-50/40 dark:hover:bg-blue-900/10"
       >
         Visa kontofördelning ({ctx.accounts.length} konton) →
       </button>

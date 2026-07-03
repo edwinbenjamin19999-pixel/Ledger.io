@@ -88,7 +88,7 @@ export function DSTab({ active, className, ...rest }: DSTabProps) {
       className={cn(
         "px-[14px] py-[8px] text-[12px] cursor-pointer border-b-2 -mb-px transition-colors",
         active
-          ? "text-[#0B4F6C] font-medium border-[#0B4F6C]"
+          ? "text-[#1D4ED8] font-medium border-[#1D4ED8]"
           : "text-[#475569] border-transparent hover:text-[#0F172A]",
         className
       )}
@@ -107,7 +107,7 @@ export const DSSearchInput = React.forwardRef<HTMLInputElement, React.InputHTMLA
         ref={ref}
         type={type}
         className={cn(
-          "bg-[#F8FAFB] border-[0.5px] border-[#E2E8F0] rounded-[8px] text-[12px] text-[#0F172A] placeholder:text-[#94A3B8] px-[10px] h-[34px] focus:outline-none focus:border-[#0B4F6C] focus:bg-white focus:ring-2 focus:ring-[#0B4F6C]/10",
+          "bg-[#F8FAFB] border-[0.5px] border-[#E2E8F0] rounded-[8px] text-[12px] text-[#0F172A] placeholder:text-[#94A3B8] px-[10px] h-[34px] focus:outline-none focus:border-[#1D4ED8] focus:bg-white focus:ring-2 focus:ring-[#1D4ED8]/10",
           className
         )}
         {...rest}
@@ -126,7 +126,7 @@ export const DSDateInput = React.forwardRef<HTMLInputElement, React.InputHTMLAtt
         ref={ref}
         type={type}
         className={cn(
-          "border-[0.5px] border-[#E2E8F0] rounded-[8px] text-[11px] text-[#0F172A] px-[8px] py-[4px] bg-white font-[inherit] focus:outline-none focus:border-[#0B4F6C]",
+          "border-[0.5px] border-[#E2E8F0] rounded-[8px] text-[11px] text-[#0F172A] px-[8px] py-[4px] bg-white font-[inherit] focus:outline-none focus:border-[#1D4ED8]",
           className
         )}
         {...rest}

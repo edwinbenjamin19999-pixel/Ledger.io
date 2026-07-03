@@ -33,7 +33,7 @@ export function LiveBalanceCard({ balance, runwayDays, netFlow30d, burnRateMonth
     <div
       className={cn(
         "rounded-2xl border bg-card p-5 transition-all duration-300",
-        flash && "ring-2 ring-[#3b82f6]/60 shadow-[0_0_24px_rgba(34,211,238,0.25)]",
+        flash && "ring-2 ring-[#3b82f6]/60 shadow-[0_0_24px_rgba(37,99,235,0.25)]",
         isNegative && "ring-2 ring-rose-500/60",
         lowRunway && !isNegative && "ring-1 ring-amber-400/50",
       )}

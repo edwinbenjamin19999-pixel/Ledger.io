@@ -88,7 +88,7 @@ const KPICard = ({ icon: Icon, gradient, title, subtitle, value, extra, delay = 
 const EmpAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   const colors = [
-    "from-violet-500 to-indigo-500", "from-emerald-500 to-teal-500",
+    "from-violet-500 to-indigo-500", "from-emerald-500 to-blue-500",
     "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
     "from-blue-500 to-[#3b82f6]", "from-fuchsia-500 to-purple-500",
   ];
@@ -335,7 +335,7 @@ const HR = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* CARD 1 — Total lönekostnad */}
           <div className="relative overflow-hidden rounded-[12px] p-4" style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA" }}>
-            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0B4F6C" }} />
+            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#1D4ED8" }} />
             <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">TOTAL LÖNEKOSTNAD</div>
             <div className="mt-1 text-[20px] font-medium tracking-[-0.02em] tabular-nums text-[#0F172A]">
               <AnimatedNumber value={totalEmployerCost} /> kr
@@ -368,7 +368,7 @@ const HR = () => {
 
           {/* CARD 4 — Nettöverföringar */}
           <div className="relative overflow-hidden rounded-[12px] p-4" style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA" }}>
-            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0B4F6C" }} />
+            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#1D4ED8" }} />
             <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">NETTÖVERFÖRINGAR</div>
             <div className="mt-1 text-[20px] font-medium tracking-[-0.02em] tabular-nums text-[#0F172A]">
               <AnimatedNumber value={totalNet} /> kr
@@ -383,7 +383,7 @@ const HR = () => {
         {/* ── PAYROLL RUN BANNER ── */}
         {draftRuns.length > 0 && (
           <div className="relative overflow-hidden rounded-[12px]" style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA", padding: "12px 16px" }}>
-            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0B4F6C" }} />
+            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#1D4ED8" }} />
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-[12px]">
                 {/* Step 1 — Löner inmatade (completed) */}
@@ -412,7 +412,7 @@ const HR = () => {
               </div>
               <Button
                 onClick={() => approvePayrollRun(draftRuns[0].id)}
-                className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] border-0"
+                className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] border-0"
               >
                 Godkänn lönekörning
               </Button>
@@ -637,7 +637,7 @@ const HR = () => {
                             <>
                               <Button
                                 onClick={() => approvePayrollRun(run.id)}
-                                className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[30px] border-0"
+                                className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[30px] border-0"
                               >
                                 Godkänn
                               </Button>
@@ -692,7 +692,7 @@ const HR = () => {
                       <YAxis tick={{ fontSize: 10, fill: "#94A3B8" }} tickFormatter={v => `${(v/1000).toFixed(0)}k`} />
                       <RTooltip content={<ChartTooltip />} />
                       <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 10, color: "#94A3B8" }} />
-                      <Bar dataKey="Bruttolön" stackId="a" fill="#0B4F6C" radius={[0, 0, 0, 0]} />
+                      <Bar dataKey="Bruttolön" stackId="a" fill="#1D4ED8" radius={[0, 0, 0, 0]} />
                       <Bar dataKey="Arbetsgivaravgift" stackId="b" fill="#EF9F27" radius={[0, 0, 0, 0]} />
                       <Bar dataKey="Preliminärskatt" stackId="c" fill="#E24B4A" radius={[0, 0, 0, 0]} />
                       <Bar dataKey="Nettolön" stackId="d" fill="#1D9E75" radius={[4, 4, 0, 0]} />

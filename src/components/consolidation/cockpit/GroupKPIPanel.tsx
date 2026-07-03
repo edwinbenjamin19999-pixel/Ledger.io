@@ -28,7 +28,7 @@ export function GroupKPIPanel({ revenue, ebit, totalAssets, groupEquity, cash, u
     { key: 'ebit', label: 'EBIT', value: ebit, icon: ebit >= 0 ? TrendingUp : TrendingDown, accent: ebit >= 0 ? 'from-emerald-500/20 to-emerald-600/5' : 'from-red-500/20 to-red-600/5' },
     { key: 'assets', label: 'Totala tillgångar', value: totalAssets, icon: Building, accent: 'from-blue-500/20 to-blue-600/5' },
     { key: 'equity', label: 'Eget kapital koncern', value: groupEquity, icon: PiggyBank, accent: 'from-purple-500/20 to-purple-600/5' },
-    { key: 'cash', label: 'Likviditet', value: cash, icon: Wallet, accent: 'from-teal-500/20 to-teal-600/5' },
+    { key: 'cash', label: 'Likviditet', value: cash, icon: Wallet, accent: 'from-blue-500/20 to-blue-600/5' },
     {
       key: 'ic',
       label: 'Olösta IC-differenser',

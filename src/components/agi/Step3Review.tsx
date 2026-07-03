@@ -83,11 +83,11 @@ export const Step3Review = ({ individuals, employer, reviewed, onReviewChange, p
                   );
                 })}
                 {/* Total row */}
-                <TableRow className="bg-[#0891B2]/5 font-bold">
+                <TableRow className="bg-[#2563EB]/5 font-bold">
                   <TableCell className="py-2.5 text-sm">Totalt</TableCell>
-                  <TableCell className="py-2.5 text-right font-mono text-xs text-[#0891B2]">{fmt(totalGross)} kr</TableCell>
-                  <TableCell className="py-2.5 text-right font-mono text-xs text-[#0891B2]">{fmt(totalTax)} kr</TableCell>
-                  <TableCell className="py-2.5 text-right font-mono text-xs text-[#0891B2]">{fmt(socialFees)} kr</TableCell>
+                  <TableCell className="py-2.5 text-right font-mono text-xs text-[#2563EB]">{fmt(totalGross)} kr</TableCell>
+                  <TableCell className="py-2.5 text-right font-mono text-xs text-[#2563EB]">{fmt(totalTax)} kr</TableCell>
+                  <TableCell className="py-2.5 text-right font-mono text-xs text-[#2563EB]">{fmt(socialFees)} kr</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -122,10 +122,10 @@ export const Step3Review = ({ individuals, employer, reviewed, onReviewChange, p
                   <span className="text-sm font-medium text-foreground">Summa AGI + SLF</span>
                   <span className="text-xs text-muted-foreground font-mono">487</span>
                 </div>
-                <span className="font-mono font-bold text-[#0891B2]">{fmt(sum487)} kr</span>
+                <span className="font-mono font-bold text-[#2563EB]">{fmt(sum487)} kr</span>
               </div>
               <Collapsible open={showCalc487} onOpenChange={setShowCalc487}>
-                <CollapsibleTrigger className="text-xs text-[#0891B2] hover:underline flex items-center gap-1">
+                <CollapsibleTrigger className="text-xs text-[#2563EB] hover:underline flex items-center gap-1">
                   <ChevronDown className={cn("w-3 h-3 transition-transform", !showCalc487 && "-rotate-90")} />
                   Visa beräkning
                 </CollapsibleTrigger>
@@ -147,10 +147,10 @@ export const Step3Review = ({ individuals, employer, reviewed, onReviewChange, p
                   <span className="text-sm font-medium text-foreground">Summa skatteavdrag</span>
                   <span className="text-xs text-muted-foreground font-mono">497</span>
                 </div>
-                <span className="font-mono font-bold text-[#0891B2]">{fmt(sum497)} kr</span>
+                <span className="font-mono font-bold text-[#2563EB]">{fmt(sum497)} kr</span>
               </div>
               <Collapsible open={showCalc497} onOpenChange={setShowCalc497}>
-                <CollapsibleTrigger className="text-xs text-[#0891B2] hover:underline flex items-center gap-1">
+                <CollapsibleTrigger className="text-xs text-[#2563EB] hover:underline flex items-center gap-1">
                   <ChevronDown className={cn("w-3 h-3 transition-transform", !showCalc497 && "-rotate-90")} />
                   Visa beräkning
                 </CollapsibleTrigger>
@@ -167,12 +167,12 @@ export const Step3Review = ({ individuals, employer, reviewed, onReviewChange, p
       </div>
 
       {/* Total to pay card */}
-      <Card className="border-2 border-[#0891B2]/20 bg-gradient-to-r from-[#0891B2]/5 to-transparent">
+      <Card className="border-2 border-[#2563EB]/20 bg-gradient-to-r from-[#2563EB]/5 to-transparent">
         <CardContent className="py-6 px-6">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div>
               <p className="text-sm text-muted-foreground font-medium mb-1">Totalt att betala till Skatteverket</p>
-              <p className="text-3xl font-bold text-[#0891B2] font-mono">{fmt(totalToPay)} kr</p>
+              <p className="text-3xl font-bold text-[#2563EB] font-mono">{fmt(totalToPay)} kr</p>
             </div>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
               <Badge variant="outline" className="bg-[#FAEEDA] dark:bg-amber-900/20 text-[#7A5417] dark:text-[#C28A2B] border-[#F0DDB7] dark:border-amber-800 gap-1.5 px-3 py-1.5">

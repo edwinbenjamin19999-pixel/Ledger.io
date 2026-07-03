@@ -8,7 +8,7 @@ export const WLHero = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#0a1525] to-[#0f1f35] pt-32 pb-24 md:pt-40 md:pb-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#0F1B2D] to-[#0F1B2D] pt-32 pb-24 md:pt-40 md:pb-32">
       {/* Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-[#3b82f6]/[0.08] blur-[120px]" />
@@ -36,7 +36,7 @@ export const WLHero = () => {
           <Button
             size="lg"
             onClick={() => navigate("/white-label/onboarding")}
-            className="h-12 px-7 bg-[#3b82f6] hover:bg-[#3b82f6] text-[#0a1525] hover:text-white font-semibold rounded-lg group shadow-[0_2px_24px_rgba(34,211,238,0.25)]"
+            className="h-12 px-7 bg-[#3b82f6] hover:bg-[#3b82f6] text-[#0F1B2D] hover:text-white font-semibold rounded-lg group shadow-[0_2px_24px_rgba(37,99,235,0.25)]"
           >
             Lansera min plattform
             <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />

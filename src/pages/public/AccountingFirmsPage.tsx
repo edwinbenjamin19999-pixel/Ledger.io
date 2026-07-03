@@ -40,8 +40,8 @@ export default function AccountingFirmsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero — dark */}
-        <section className="relative overflow-hidden bg-[#0f1f35] pt-32 pb-20 text-white">
-          <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 70% 30%, rgba(34,211,238,0.4), transparent 60%)" }} />
+        <section className="relative overflow-hidden bg-[#0F1B2D] pt-32 pb-20 text-white">
+          <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 70% 30%, rgba(37,99,235,0.4), transparent 60%)" }} />
           <div className="relative container mx-auto max-w-4xl px-6 text-center">
             <div className="inline-flex items-center gap-1.5 rounded-full border border-[#3b82f6]/30 bg-[#3b82f6]/10 px-3 py-1 text-xs font-medium text-[#3b82f6]">
               <Sparkles className="w-3 h-3" />
@@ -68,14 +68,14 @@ export default function AccountingFirmsPage() {
         <section className="py-20">
           <div className="container mx-auto max-w-5xl px-6">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f35] tracking-tight">Verkligheten för svenska byråer 2026</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F1B2D] tracking-tight">Verkligheten för svenska byråer 2026</h2>
               <p className="mt-3 text-[#64748b]">Fyra utmaningar som avgör vem som växer — och vem som faller bort.</p>
             </div>
             <div className="grid md:grid-cols-2 gap-5">
               {PROBLEMS.map((p) => (
                 <div key={p.title} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
                   <AlertTriangle className="w-5 h-5 text-[#7A5417]" />
-                  <h3 className="mt-3 font-semibold text-[#0f1f35]">{p.title}</h3>
+                  <h3 className="mt-3 font-semibold text-[#0F1B2D]">{p.title}</h3>
                   <p className="mt-2 text-sm text-[#64748b] leading-relaxed">{p.desc}</p>
                 </div>
               ))}
@@ -86,7 +86,7 @@ export default function AccountingFirmsPage() {
         {/* Solution */}
         <section className="py-16 bg-slate-50/60 border-y border-slate-100">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f35] tracking-tight">En plattform — under ditt namn</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F1B2D] tracking-tight">En plattform — under ditt namn</h2>
             <p className="mt-4 text-[#475569] leading-relaxed text-lg">
               Bokfy White Label ger dig hela kraften av en modern AI-driven bokföringsplattform — men presenterad som din egen produkt. Du behåller relationen, varumärket och marginalen.
             </p>
@@ -100,7 +100,7 @@ export default function AccountingFirmsPage() {
         <section className="py-20">
           <div className="container mx-auto max-w-6xl px-6">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f35] tracking-tight">Det här ingår</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F1B2D] tracking-tight">Det här ingår</h2>
               <p className="mt-3 text-[#64748b]">Sex byggstenar som gör skillnaden mellan att jaga och att skala.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -109,7 +109,7 @@ export default function AccountingFirmsPage() {
                   <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
                     <f.icon className="w-5 h-5 text-[#3b82f6]" />
                   </div>
-                  <h3 className="mt-4 font-semibold text-[#0f1f35]">{f.title}</h3>
+                  <h3 className="mt-4 font-semibold text-[#0F1B2D]">{f.title}</h3>
                   <p className="mt-2 text-sm text-[#64748b] leading-relaxed">{f.desc}</p>
                 </div>
               ))}
@@ -121,14 +121,14 @@ export default function AccountingFirmsPage() {
         <section className="py-16 bg-slate-50/60 border-y border-slate-100">
           <div className="container mx-auto max-w-5xl px-6">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f35] tracking-tight">Så funkar det</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F1B2D] tracking-tight">Så funkar det</h2>
               <p className="mt-3 text-[#64748b]">Från kontrakt till första klienten på under en vecka.</p>
             </div>
             <div className="grid md:grid-cols-4 gap-4">
               {STEPS.map((s) => (
                 <div key={s.n} className="rounded-2xl bg-white border border-slate-100 p-6">
                   <div className="w-9 h-9 rounded-full bg-[#3b82f6] text-white font-bold flex items-center justify-center">{s.n}</div>
-                  <h3 className="mt-4 font-semibold text-[#0f1f35]">{s.t}</h3>
+                  <h3 className="mt-4 font-semibold text-[#0F1B2D]">{s.t}</h3>
                   <p className="mt-2 text-sm text-[#64748b] leading-relaxed">{s.d}</p>
                 </div>
               ))}
@@ -140,7 +140,7 @@ export default function AccountingFirmsPage() {
         <section className="py-20">
           <div className="container mx-auto max-w-5xl px-6">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f35] tracking-tight">Vad det betyder för din byrå</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F1B2D] tracking-tight">Vad det betyder för din byrå</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
               {BENEFITS.map((b) => (
@@ -167,8 +167,8 @@ export default function AccountingFirmsPage() {
         {/* Final CTA */}
         <section className="py-20">
           <div className="container mx-auto max-w-3xl px-6">
-            <div className="relative overflow-hidden rounded-3xl bg-[#0f1f35] p-10 md:p-14 text-center text-white">
-              <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 50% 0%, rgba(34,211,238,0.4), transparent 60%)" }} />
+            <div className="relative overflow-hidden rounded-3xl bg-[#0F1B2D] p-10 md:p-14 text-center text-white">
+              <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 50% 0%, rgba(37,99,235,0.4), transparent 60%)" }} />
               <div className="relative">
                 <Shield className="w-7 h-7 mx-auto text-[#3b82f6]" />
                 <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-white">Redo att skala din byrå?</h2>

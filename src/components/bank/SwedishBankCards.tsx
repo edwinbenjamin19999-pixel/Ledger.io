@@ -36,7 +36,7 @@ const SWEDISH_BANKS: Omit<BankCardData, "connected" | "accounts">[] = [
   { id: "danske", name: "Danske Bank", initials: "DB", color: "bg-[#F0F9FF] text-[#0369A1] border-[#BAE6FD]" },
   { id: "lansforsakringar", name: "Länsförsäkringar", initials: "LF", color: "bg-[#FEF2F2] text-[#B91C1C] border-[#FECACA]" },
   { id: "ica", name: "ICA Banken", initials: "ICA", color: "bg-[#FEF2F2] text-[#BE185D] border-[#FBCFE8]" },
-  { id: "sparbanken", name: "Sparbanken", initials: "SP", color: "bg-[#ECFEFF] text-[#0E7490] border-[#A5F3FC]" },
+  { id: "sparbanken", name: "Sparbanken", initials: "SP", color: "bg-[#ECFEFF] text-[#0E7490] border-[#BFDBFE]" },
   { id: "avanza", name: "Avanza", initials: "AV", color: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]" },
   { id: "other", name: "Övriga banker", initials: "...", color: "bg-[#F8FAFB] text-[#475569] border-[#E2E8F0]" },
 ];
@@ -91,7 +91,7 @@ export function SwedishBankCards({ connectedBanks, onConnect, onManualImport }: 
               ) : (
                 <button
                   onClick={(e) => { e.stopPropagation(); handleConnect(bank.name); }}
-                  className="mt-[6px] h-[26px] px-[8px] text-[11px] text-[#0B4F6C] hover:bg-[#F8FAFB] rounded-[6px] inline-flex items-center"
+                  className="mt-[6px] h-[26px] px-[8px] text-[11px] text-[#1D4ED8] hover:bg-[#F8FAFB] rounded-[6px] inline-flex items-center"
                 >
                   Anslut <ArrowRight className="h-[12px] w-[12px] ml-[4px]" />
                 </button>

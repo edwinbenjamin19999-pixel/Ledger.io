@@ -29,7 +29,7 @@ export const ControlSafety = () => {
   const visible = expanded ? controls : controls.slice(0, 3);
 
   return (
-    <section className="py-20 sm:py-28 bg-gradient-to-b from-[#0B1D2A] to-[#0f1f35]">
+    <section className="py-20 sm:py-28 bg-gradient-to-b from-[#0B1D2A] to-[#0F1B2D]">
       <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
         <div className="text-center mb-12">
           <h2
@@ -51,9 +51,9 @@ export const ControlSafety = () => {
           {controls.map((c) => (
             <div
               key={c.title}
-              className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 hover:border-[rgba(34,211,238,0.2)] hover:bg-white/[0.04] transition-colors duration-200"
+              className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 hover:border-[rgba(37,99,235,0.2)] hover:bg-white/[0.04] transition-colors duration-200"
             >
-              <div className="w-10 h-10 rounded-xl bg-[rgba(34,211,238,0.08)] border border-[rgba(34,211,238,0.15)] flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-xl bg-[rgba(37,99,235,0.08)] border border-[rgba(37,99,235,0.15)] flex items-center justify-center mb-4">
                 <c.icon className="w-5 h-5 text-[#3b82f6]" />
               </div>
               <h3 className="text-[17px] font-semibold text-white mb-1.5">{c.title}</h3>
@@ -70,7 +70,7 @@ export const ControlSafety = () => {
               className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5"
             >
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-xl bg-[rgba(34,211,238,0.08)] border border-[rgba(34,211,238,0.15)] flex items-center justify-center flex-shrink-0">
+                <div className="w-9 h-9 rounded-xl bg-[rgba(37,99,235,0.08)] border border-[rgba(37,99,235,0.15)] flex items-center justify-center flex-shrink-0">
                   <c.icon className="w-4 h-4 text-[#3b82f6]" />
                 </div>
                 <div className="min-w-0">

@@ -71,7 +71,7 @@ const SECTION_BG: Record<string, string> = {
   C: "bg-amber-50/50 dark:bg-amber-950/20",
   D: "bg-orange-50/50 dark:bg-orange-950/20",
   E: "bg-emerald-50/50 dark:bg-emerald-950/20",
-  F: "bg-cyan-50/50 dark:bg-cyan-950/20",
+  F: "bg-blue-50/50 dark:bg-blue-950/20",
 };
 
 const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"];

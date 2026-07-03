@@ -20,7 +20,7 @@ interface BankNotificationsProps { companyId: string; }
 const SEVERITY: Record<string, { dot: string; bg: string; border: string; iconColor: string; Icon: any }> = {
   error:   { dot: "bg-[#E24B4A]", bg: "bg-[#FCE8E8]", border: "border-[#F4C9C9]", iconColor: "text-[#9C2E2D]", Icon: AlertTriangle },
   warning: { dot: "bg-[#C68316]", bg: "bg-[#FAEEDA]", border: "border-[#EDD9B0]", iconColor: "text-[#8A5A14]", Icon: AlertTriangle },
-  info:    { dot: "bg-[#0B4F6C]", bg: "bg-[#E6F4FA]", border: "border-[#C8DDF5]", iconColor: "text-[#0B4F6C]", Icon: Info },
+  info:    { dot: "bg-[#1D4ED8]", bg: "bg-[#E6F4FA]", border: "border-[#C8DDF5]", iconColor: "text-[#1D4ED8]", Icon: Info },
 };
 
 export function BankNotifications({ companyId }: BankNotificationsProps) {
@@ -133,7 +133,7 @@ export function BankNotifications({ companyId }: BankNotificationsProps) {
                     <div className="flex items-center gap-[6px] mb-[2px]">
                       <p className="text-[12px] font-medium text-[#0F172A]">{n.title}</p>
                       {!n.is_read && (
-                        <span className="inline-flex items-center px-[6px] h-[16px] rounded-full text-[10px] font-medium bg-[#0B4F6C] text-white">Ny</span>
+                        <span className="inline-flex items-center px-[6px] h-[16px] rounded-full text-[10px] font-medium bg-[#1D4ED8] text-white">Ny</span>
                       )}
                     </div>
                     <p className="text-[11px] text-[#475569] line-clamp-2">{n.message}</p>

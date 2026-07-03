@@ -1,90 +1,87 @@
 /**
- * Reusable SVG gradient definitions for all Recharts charts.
- * Light theme: premium gradients on white card backgrounds.
+ * FLAT CHART THEME — återanvändbara defs för alla Recharts-diagram.
+ * Flat design: solida fyllnader (2-stop samma färg så alla url(#grad*)-
+ * konsumenter fungerar oförändrat). Semantik för bokföring:
+ * intäkter = blå, kostnader = röd, resultat = emerald, varning = amber.
  */
 export function ChartGradients() { return (
     <defs>
-      {/* Inbetalningar / Intäkter — Teal */}
+      {/* Inbetalningar / Intäkter — solid blå */}
       <linearGradient id="gradTeal" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#14b8a6" stopOpacity={1} />
-        <stop offset="100%" stopColor="#0d9488" stopOpacity={0.6} />
+        <stop offset="0%" stopColor="#2563EB" stopOpacity={1} />
+        <stop offset="100%" stopColor="#2563EB" stopOpacity={1} />
       </linearGradient>
 
-      {/* Utbetalningar / Kostnader — Rose */}
+      {/* Utbetalningar / Kostnader — solid röd */}
       <linearGradient id="gradRose" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#fb7185" stopOpacity={1} />
-        <stop offset="100%" stopColor="#e11d48" stopOpacity={0.6} />
+        <stop offset="0%" stopColor="#DC2626" stopOpacity={1} />
+        <stop offset="100%" stopColor="#DC2626" stopOpacity={1} />
       </linearGradient>
 
-      {/* Resultat / EBIT — Indigo */}
+      {/* Resultat / EBIT — solid mörkblå */}
       <linearGradient id="gradIndigo" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#818cf8" stopOpacity={1} />
-        <stop offset="100%" stopColor="#6366f1" stopOpacity={0.6} />
+        <stop offset="0%" stopColor="#1D4ED8" stopOpacity={1} />
+        <stop offset="100%" stopColor="#1D4ED8" stopOpacity={1} />
       </linearGradient>
 
-      {/* Amber */}
+      {/* Amber — solid */}
       <linearGradient id="gradAmber" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#fbbf24" stopOpacity={1} />
-        <stop offset="100%" stopColor="#f59e0b" stopOpacity={0.6} />
+        <stop offset="0%" stopColor="#F59E0B" stopOpacity={1} />
+        <stop offset="100%" stopColor="#F59E0B" stopOpacity={1} />
       </linearGradient>
 
-      {/* Violet */}
+      {/* Violet → ink (utanför flat-paletten) */}
       <linearGradient id="gradViolet" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#a78bfa" stopOpacity={1} />
-        <stop offset="100%" stopColor="#8b5cf6" stopOpacity={0.6} />
+        <stop offset="0%" stopColor="#0F1B2D" stopOpacity={1} />
+        <stop offset="100%" stopColor="#0F1B2D" stopOpacity={1} />
       </linearGradient>
 
-      {/* Emerald */}
+      {/* Emerald — solid */}
       <linearGradient id="gradEmerald" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#34d399" stopOpacity={1} />
-        <stop offset="100%" stopColor="#10b981" stopOpacity={0.6} />
+        <stop offset="0%" stopColor="#059669" stopOpacity={1} />
+        <stop offset="100%" stopColor="#059669" stopOpacity={1} />
       </linearGradient>
 
-      {/* Area fill Teal */}
+      {/* Area-fyllnader — platt låg tint, ingen fade */}
       <linearGradient id="areaFillTeal" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#14b8a6" stopOpacity={0.2} />
-        <stop offset="100%" stopColor="#14b8a6" stopOpacity={0} />
+        <stop offset="0%" stopColor="#2563EB" stopOpacity={0.1} />
+        <stop offset="100%" stopColor="#2563EB" stopOpacity={0.1} />
       </linearGradient>
 
-      {/* Area fill Indigo */}
       <linearGradient id="areaFillIndigo" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#6366f1" stopOpacity={0.15} />
-        <stop offset="100%" stopColor="#6366f1" stopOpacity={0} />
+        <stop offset="0%" stopColor="#1D4ED8" stopOpacity={0.1} />
+        <stop offset="100%" stopColor="#1D4ED8" stopOpacity={0.1} />
       </linearGradient>
 
-      {/* Area fill Rose */}
       <linearGradient id="areaFillRose" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#fb7185" stopOpacity={0.15} />
-        <stop offset="100%" stopColor="#fb7185" stopOpacity={0} />
+        <stop offset="0%" stopColor="#DC2626" stopOpacity={0.08} />
+        <stop offset="100%" stopColor="#DC2626" stopOpacity={0.08} />
       </linearGradient>
 
-      {/* Area fill Amber */}
       <linearGradient id="areaFillAmber" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#f59e0b" stopOpacity={0.15} />
-        <stop offset="100%" stopColor="#f59e0b" stopOpacity={0} />
+        <stop offset="0%" stopColor="#F59E0B" stopOpacity={0.1} />
+        <stop offset="100%" stopColor="#F59E0B" stopOpacity={0.1} />
       </linearGradient>
 
-      {/* Area fill Violet */}
       <linearGradient id="areaFillViolet" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#a78bfa" stopOpacity={0.2} />
-        <stop offset="100%" stopColor="#a78bfa" stopOpacity={0} />
+        <stop offset="0%" stopColor="#0F1B2D" stopOpacity={0.08} />
+        <stop offset="100%" stopColor="#0F1B2D" stopOpacity={0.08} />
       </linearGradient>
 
-      {/* Area fill Emerald */}
       <linearGradient id="areaFillEmerald" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#34d399" stopOpacity={0.25} />
-        <stop offset="100%" stopColor="#34d399" stopOpacity={0} />
+        <stop offset="0%" stopColor="#059669" stopOpacity={0.1} />
+        <stop offset="100%" stopColor="#059669" stopOpacity={0.1} />
       </linearGradient>
     </defs>
   );
 }
 
 /** Light theme axis tick props */
-export const AXIS_TICK = { fill: '#94a3b8', fontSize: 11, fontFamily: 'inherit' };
+export const AXIS_TICK = { fill: '#6D7F92', fontSize: 11, fontFamily: 'inherit' };
 
-/** Light theme grid props */
+/** Light theme grid props — låg kontrast så data dominerar */
 export const GRID_PROPS = { strokeDasharray: "4 4",
-  stroke: "#f1f5f9",
+  stroke: "#EEF2F7",
   vertical: false,
 } as const;
 
@@ -94,25 +91,25 @@ export const BAR_ANIMATION = { animationDuration: 800, animationEasing: "ease-ou
 /** Standard animation for lines */
 export const LINE_ANIMATION = { animationDuration: 1200, animationEasing: "ease-out" as const };
 
-/** Color palette for pie/donut charts */
+/** Flat färgpalett för pie/donut — systemfärger, färgblindsäker ordning */
 export const PIE_COLORS = [
-  '#6366f1', '#14b8a6', '#f59e0b', '#f43f5e',
-  '#8b5cf6', '#3b82f6', '#10b981', '#ef4444',
+  '#2563EB', '#059669', '#F59E0B', '#DC2626',
+  '#0F1B2D', '#60A5FA', '#34D399', '#FBBF24',
 ];
 
-/** Color assignments */
-export const NEON = { teal: '#14b8a6',
-  emerald: '#10b981',
-  rose: '#fb7185',
-  indigo: '#6366f1',
-  amber: '#f59e0b',
-  blue: '#3b82f6',
-  violet: '#a78bfa',
-  slate: '#94a3b8',
+/** Color assignments — mappade till flat-systemet */
+export const NEON = { teal: '#2563EB',
+  emerald: '#059669',
+  rose: '#DC2626',
+  indigo: '#1D4ED8',
+  amber: '#F59E0B',
+  blue: '#2563EB',
+  violet: '#0F1B2D',
+  slate: '#94A3B8',
 } as const;
 
 /** Cursor style for tooltips (light theme) */
-export const TOOLTIP_CURSOR = { fill: 'rgba(99,102,241,0.04)', radius: 8 };
+export const TOOLTIP_CURSOR = { fill: 'rgba(37,99,235,0.05)', radius: 8 };
 
-/** Light chart card wrapper className */
-export const CHART_CARD_CLASS = "bg-white rounded-2xl border border-slate-100 shadow-[0_2px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_24px_rgba(0,0,0,0.10)] transition-shadow duration-300 p-6";
+/** Flat chart card wrapper — kant, aldrig skugga */
+export const CHART_CARD_CLASS = "bg-white rounded-lg border border-gray-200 hover:border-[#2563EB]/40 transition-colors duration-200 p-6";

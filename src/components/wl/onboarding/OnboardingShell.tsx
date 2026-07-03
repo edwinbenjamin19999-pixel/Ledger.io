@@ -75,7 +75,7 @@ export function OnboardingShell({
             <Button
               onClick={onNext}
               disabled={!canGoNext || loading}
-              className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white px-6 shadow-[0_2px_12px_rgba(8,145,178,0.25)]"
+              className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white px-6 shadow-[0_2px_12px_rgba(37,99,235,0.25)]"
             >
               {loading ? (
                 <Loader2 className="h-4 w-4 animate-spin" />

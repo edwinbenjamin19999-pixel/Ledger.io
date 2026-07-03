@@ -11,10 +11,10 @@ interface Props {
 export const PremiumGuideCard = ({ to, title, excerpt, readingTime }: Props) => (
   <Link
     to={to}
-    className="group relative flex items-start justify-between gap-4 rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-slate-50/40 p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-200 hover:-translate-y-1 hover:border-[#C8DDF5] hover:shadow-[0_8px_24px_-8px_rgba(8,145,178,0.18)]"
+    className="group relative flex items-start justify-between gap-4 rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-slate-50/40 p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-200 hover:-translate-y-1 hover:border-[#C8DDF5] hover:shadow-[0_8px_24px_-8px_rgba(37,99,235,0.18)]"
   >
     <div className="min-w-0">
-      <h3 className="text-[15px] font-semibold text-[#0f1f35] leading-snug group-hover:text-[#3b82f6] transition-colors">
+      <h3 className="text-[15px] font-semibold text-[#0F1B2D] leading-snug group-hover:text-[#3b82f6] transition-colors">
         {title}
       </h3>
       <p className="mt-1.5 text-sm text-[#64748b] leading-relaxed">{excerpt}</p>

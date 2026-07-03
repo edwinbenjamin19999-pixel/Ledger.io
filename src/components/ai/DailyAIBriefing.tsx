@@ -98,7 +98,7 @@ export function DailyAIBriefing({ companyId, userName }: Props) {
       <div className="flex items-start justify-between gap-6">
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
-            <span className="w-[18px] h-[18px] rounded-full bg-[#0B4F6C] flex items-center justify-center flex-shrink-0">
+            <span className="w-[18px] h-[18px] rounded-full bg-[#1D4ED8] flex items-center justify-center flex-shrink-0">
               <span className="w-[7px] h-[7px] rounded-full bg-[#E6F4FA]" />
             </span>
             <p className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#0C447C]">
@@ -114,7 +114,7 @@ export function DailyAIBriefing({ companyId, userName }: Props) {
             <ul className="mt-4 space-y-1.5">
               {insights.slice(0, 3).map((i) => (
                 <li key={i.id} className="text-[13px] text-[#185FA5] flex items-start">
-                  <span className="text-[#0B4F6C]/60 mr-2">•</span>
+                  <span className="text-[#1D4ED8]/60 mr-2">•</span>
                   <span>{i.title}</span>
                 </li>
               ))}
@@ -134,7 +134,7 @@ export function DailyAIBriefing({ companyId, userName }: Props) {
             navigate("/cfo");
             dismiss();
           }}
-          className="font-medium text-[#0B4F6C] hover:text-[#1074A0] transition-colors"
+          className="font-medium text-[#1D4ED8] hover:text-[#1074A0] transition-colors"
         >
           Visa analys →
         </button>
@@ -160,7 +160,7 @@ export function DailyAIBriefing({ companyId, userName }: Props) {
                 },
               }));
             }}
-            className="font-medium text-[#0B4F6C] hover:text-[#1074A0] transition-colors"
+            className="font-medium text-[#1D4ED8] hover:text-[#1074A0] transition-colors"
           >
             Vill du att jag går igenom dem? →
           </button>

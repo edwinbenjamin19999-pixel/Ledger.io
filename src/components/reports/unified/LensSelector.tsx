@@ -67,7 +67,7 @@ export function LensSelector({
                 "disabled:cursor-not-allowed disabled:opacity-40",
                 isActive
                   ? "bg-[#3b82f6] text-white shadow-sm"
-                  : "text-foreground hover:bg-[#EFF6FF] hover:text-[#3b82f6] dark:hover:bg-cyan-900/20",
+                  : "text-foreground hover:bg-[#EFF6FF] hover:text-[#3b82f6] dark:hover:bg-blue-900/20",
               )}
             >
               {opt.label}

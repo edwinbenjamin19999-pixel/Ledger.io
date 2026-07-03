@@ -38,7 +38,7 @@ const SERIES_COLORS: Record<string, string> = {
   F: "bg-[#EFF6FF] text-[#0C447C] border-[#C8DDF5]",
   L: "bg-[#FAEEDA] text-[#A0570F] border-[#EF9F27]",
   B: "bg-[#E1F5EE] text-[#085041] border-[#5DCAA5]",
-  LB: "bg-[#E6F4FA] text-[#0B4F6C] border-[#9CCFE3]",
+  LB: "bg-[#E6F4FA] text-[#1D4ED8] border-[#9CCFE3]",
   LN: "bg-[#F1F0F8] text-[#5B4E84] border-[#C9C5E0]",
   M: "bg-[#F1F5F9] text-[#475569] border-[#E2E8F0]",
   IB: "bg-[#FAEEDA] text-[#A0570F] border-[#EF9F27]",
@@ -441,7 +441,7 @@ const Verifications = () => {
               </div>
               <button
                 onClick={() => { setStatusFilter("pending_all"); setPage(0); }}
-                className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px]"
+                className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px]"
               >
                 Visa &amp; godkänn
               </button>
@@ -611,7 +611,7 @@ const Verifications = () => {
                   onClick={() => setActivePill(p.key)}
                   className={`text-[11px] px-[10px] h-[28px] rounded-[8px] font-medium transition-colors border-[0.5px] ${
                     activePill === p.key
-                      ? "bg-[#0B4F6C] text-[#E6F4FA] border-[#0B4F6C]"
+                      ? "bg-[#1D4ED8] text-[#E6F4FA] border-[#1D4ED8]"
                       : "bg-white text-[#475569] border-[#E2E8F0] hover:bg-[#F8FAFB]"
                   }`}
                 >
@@ -809,7 +809,7 @@ const Verifications = () => {
                   {(selectedEntry.status === "pending_approval" || selectedEntry.status === "draft") && (
                     <>
                       <button
-                        className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] inline-flex items-center gap-[5px]"
+                        className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] inline-flex items-center gap-[5px]"
                         onClick={async () => {
                           const id = selectedEntry.id;
                           const { data: { user } } = await supabase.auth.getUser();

@@ -421,7 +421,7 @@ export function Predictive90Forecast({ companyId }: Props) {
       <Card className="border-[#B5D4F4] bg-[#EFF6FF]">
         <CardContent className="pt-4 pb-4">
           <div className="flex items-start gap-2">
-            <Sparkles className="w-4 h-4 text-[#0B4F6C] mt-0.5 shrink-0" />
+            <Sparkles className="w-4 h-4 text-[#1D4ED8] mt-0.5 shrink-0" />
             <div>
               <p className="text-[10px] font-medium uppercase tracking-wider text-[#0C447C]">AI-kommentar</p>
               <p className="text-sm text-[#185FA5] mt-1 leading-relaxed">{aiCommentary}</p>

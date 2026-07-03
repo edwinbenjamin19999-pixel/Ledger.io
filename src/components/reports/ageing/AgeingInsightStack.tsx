@@ -12,8 +12,8 @@ interface Props {
 
 const PRIMARY_TONE = {
   neutral: {
-    bg: "bg-cyan-50/70 dark:bg-cyan-950/30",
-    border: "border-cyan-200/60 dark:border-[#3b82f6]/40",
+    bg: "bg-blue-50/70 dark:bg-blue-950/30",
+    border: "border-blue-200/60 dark:border-[#3b82f6]/40",
     iconBg: "bg-[#EFF6FF]",
     iconColor: "text-[#3b82f6] dark:text-[#1E3A5F]",
     Icon: CheckCircle2,

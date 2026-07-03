@@ -23,7 +23,7 @@ export function generateMigrationReportPDF({
   let y = margin;
 
   doc.setFontSize(20);
-  doc.setTextColor("#0B4F6C");
+  doc.setTextColor("#1D4ED8");
   doc.text("Migreringsrapport — Bokfy", margin, y);
   y += 28;
 
@@ -39,7 +39,7 @@ export function generateMigrationReportPDF({
 
   // Summary box
   doc.setFontSize(12);
-  doc.setTextColor("#0B4F6C");
+  doc.setTextColor("#1D4ED8");
   doc.text("Sammanfattning", margin, y);
   y += 16;
   doc.setFontSize(10);
@@ -59,7 +59,7 @@ export function generateMigrationReportPDF({
 
   // AI report body
   doc.setFontSize(12);
-  doc.setTextColor("#0B4F6C");
+  doc.setTextColor("#1D4ED8");
   doc.text("AI-observationer & rekommendationer", margin, y);
   y += 16;
   doc.setFontSize(10);

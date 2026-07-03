@@ -330,7 +330,7 @@ export const ARAgent = ({ companyId, customerFilter, onClearCustomerFilter }: AR
       <ARRecommendationPanel openInvoices={openInvoices} customers={customers} />
 
       {/* Automation Toggle */}
-      <Card className="border-[#C8DDF5] bg-[#0F1F3D] dark:from-cyan-950/20 dark:to-blue-950/10">
+      <Card className="border-[#C8DDF5] bg-[#0F1F3D] dark:from-blue-950/20 dark:to-blue-950/10">
         <CardContent className="py-4 px-5">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">

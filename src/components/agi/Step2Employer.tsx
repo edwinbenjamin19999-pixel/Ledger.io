@@ -34,11 +34,11 @@ const SectionCard = ({ icon: Icon, title, children, defaultOpen = true, isComple
 
   return (
     <Card className="bg-[#F8FAFC] dark:bg-slate-800/50 border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div className="border-l-4 border-[#0891B2]">
+      <div className="border-l-4 border-[#2563EB]">
         <Collapsible open={open} onOpenChange={setOpen}>
           <CollapsibleTrigger className="flex items-center gap-3 w-full px-5 py-4 hover:bg-muted/20 transition-colors">
-            <div className="p-2 rounded-lg bg-[#0891B2]/10 shrink-0">
-              <Icon className="w-4 h-4 text-[#0891B2]" />
+            <div className="p-2 rounded-lg bg-[#2563EB]/10 shrink-0">
+              <Icon className="w-4 h-4 text-[#2563EB]" />
             </div>
             <span className="text-sm font-semibold text-foreground flex-1 text-left">{title}</span>
             <div className="flex items-center gap-2">
@@ -98,9 +98,9 @@ export const Step2Employer = ({ employer, onUpdate, companyName, orgNumber }: St
         {/* 2. Arbetsgivaravgifter */}
         <SectionCard icon={Shield} title="Arbetsgivaravgifter" isComplete={false}>
           <p className="text-xs text-muted-foreground mb-3">Avgifterna beräknas automatiskt från individuppgifterna (31,42%).</p>
-          <div className="p-3 bg-[#0891B2]/5 rounded-lg border border-[#0891B2]/20 flex items-center justify-between">
+          <div className="p-3 bg-[#2563EB]/5 rounded-lg border border-[#2563EB]/20 flex items-center justify-between">
             <span className="text-sm font-medium text-foreground">Totala avgifter beräknas i steg 3</span>
-            <span className="text-sm font-bold text-[#0891B2]">Automatiskt</span>
+            <span className="text-sm font-bold text-[#2563EB]">Automatiskt</span>
           </div>
         </SectionCard>
 
@@ -120,9 +120,9 @@ export const Step2Employer = ({ employer, onUpdate, companyName, orgNumber }: St
           <AGIFieldInput code="477" label="Avdrag för rederier vid regress" value={employer.field_477} onChange={v => updateField("field_477", v)} />
 
           {totalDeductions > 0 && (
-            <div className="mt-3 p-3 bg-[#0891B2]/5 rounded-lg border border-[#0891B2]/20 flex items-center justify-between">
+            <div className="mt-3 p-3 bg-[#2563EB]/5 rounded-lg border border-[#2563EB]/20 flex items-center justify-between">
               <span className="text-sm font-medium">Totala avdrag</span>
-              <span className="text-sm font-bold font-mono text-[#0891B2]">{totalDeductions.toLocaleString("sv-SE")} kr</span>
+              <span className="text-sm font-bold font-mono text-[#2563EB]">{totalDeductions.toLocaleString("sv-SE")} kr</span>
             </div>
           )}
         </SectionCard>

@@ -362,10 +362,10 @@ export function DashboardConfigModal({ open, onClose, config, onSave }: Dashboar
                 <p className="text-sm font-medium text-gray-700 mb-3">Färgtema</p>
                 <div className="flex gap-3">
                   {([
-                    { id: "blue", label: "Standard", swatch: "bg-[#0f1f35]" },
+                    { id: "blue", label: "Standard", swatch: "bg-[#0F1B2D]" },
                     { id: "light", label: "Ljust", swatch: "bg-white border border-gray-200" },
                     { id: "dark", label: "Mörkt", swatch: "bg-gray-900" },
-                    { id: "system", label: "System", swatch: "bg-gradient-to-br from-white to-[#0f1f35]" },
+                    { id: "system", label: "System", swatch: "bg-gradient-to-br from-white to-[#0F1B2D]" },
                   ] as const).map((opt) => {
                     const active = theme === opt.id;
                     return (

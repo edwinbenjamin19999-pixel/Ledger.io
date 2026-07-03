@@ -52,7 +52,7 @@ export function APControlView({ companyId }: Props) {
           <button
             type="button"
             onClick={() => navigate("/supplier-invoices/payment-proposal")}
-            className="bg-[#0B4F6C] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] transition-colors flex items-center gap-[6px]"
+            className="bg-[#1D4ED8] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] transition-colors flex items-center gap-[6px]"
           >
             <CreditCard className="h-3.5 w-3.5" strokeWidth={1.8} />
             Öppna betalförslag

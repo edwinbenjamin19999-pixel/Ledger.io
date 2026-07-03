@@ -13,7 +13,7 @@ interface Props {
 const severityConfig = {
   high:   { Icon: AlertTriangle, label: "Kritisk", pill: "bg-[#FCE8E8] text-[#9C2E2D]", border: "border-[#F4C9C9]" },
   medium: { Icon: AlertTriangle, label: "Varning", pill: "bg-[#FAEEDA] text-[#8A5A14]", border: "border-[#EDD9B0]" },
-  low:    { Icon: Info,           label: "Info",    pill: "bg-[#E6F4FA] text-[#0B4F6C]", border: "border-[#C8DDF5]" },
+  low:    { Icon: Info,           label: "Info",    pill: "bg-[#E6F4FA] text-[#1D4ED8]", border: "border-[#C8DDF5]" },
 } as const;
 
 function severityKey(s: string): keyof typeof severityConfig {
@@ -58,7 +58,7 @@ export function AIInsightsCenterpiece({ annualReportId, companyId, fiscalYear }:
       <div className="flex items-center justify-between mb-[14px]">
         <div className="flex items-center gap-[10px]">
           <div className="w-[34px] h-[34px] rounded-[10px] bg-[#EFF6FF] border-[0.5px] border-[#C8DDF5] flex items-center justify-center">
-            <Brain className="h-[16px] w-[16px] text-[#0B4F6C]" />
+            <Brain className="h-[16px] w-[16px] text-[#1D4ED8]" />
           </div>
           <div>
             <h2 className="text-[14px] font-medium text-[#0F172A]">AI-insikter</h2>
@@ -72,7 +72,7 @@ export function AIInsightsCenterpiece({ annualReportId, companyId, fiscalYear }:
         <button
           onClick={handleDetect}
           disabled={detect.isPending || !companyId}
-          className="h-[30px] px-[12px] rounded-[8px] text-[11px] text-[#0B4F6C] hover:bg-[#F8FAFB] inline-flex items-center gap-[6px] disabled:opacity-50"
+          className="h-[30px] px-[12px] rounded-[8px] text-[11px] text-[#1D4ED8] hover:bg-[#F8FAFB] inline-flex items-center gap-[6px] disabled:opacity-50"
         >
           <Sparkles className={`h-[12px] w-[12px] ${detect.isPending ? "animate-pulse" : ""}`} />
           {detect.isPending ? "Skannar..." : "Kör AI-analys"}
@@ -131,7 +131,7 @@ export function AIInsightsCenterpiece({ annualReportId, companyId, fiscalYear }:
                       <button
                         onClick={() => handleApply(s)}
                         disabled={create.isPending || !s.proposed_adjustment}
-                        className="h-[28px] px-[10px] rounded-[8px] bg-[#0B4F6C] text-white text-[11px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[4px] disabled:opacity-50"
+                        className="h-[28px] px-[10px] rounded-[8px] bg-[#1D4ED8] text-white text-[11px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[4px] disabled:opacity-50"
                       >
                         <Sparkles className="h-[12px] w-[12px]" />
                         Lös automatiskt
@@ -155,7 +155,7 @@ export function AIInsightsCenterpiece({ annualReportId, companyId, fiscalYear }:
 
                 {isExpanded && s.proposed_adjustment && (
                   <div className="mt-[12px] ml-[38px] p-[12px] rounded-[8px] bg-[#F8FAFB] border-[0.5px] border-[#E2E8F0] text-[11px] space-y-[6px]">
-                    <div className="text-[#0B4F6C] font-mono uppercase text-[10px] tracking-[0.07em] mb-[6px]">
+                    <div className="text-[#1D4ED8] font-mono uppercase text-[10px] tracking-[0.07em] mb-[6px]">
                       Föreslagen justering
                     </div>
                     <div className="grid grid-cols-2 gap-[8px] text-[#475569]">
