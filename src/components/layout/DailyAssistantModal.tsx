@@ -79,7 +79,28 @@ export const DailyAssistantModal = () => { const [open, setOpen] = useState(fals
           });
         }
 
-        // 2. Invoices due in next 7 days
+        // 2. Overdue invoices (already past due) — the most urgent thing to surface.
+        //    Must be checked separately: the "due soon" query below excludes anything
+        //    with a due_date in the past, so overdue receivables would otherwise be invisible.
+        const todayStr = new Date().toISOString().split("T")[0];
+        const { data: overdueInvoices } = await supabase
+          .from("invoices")
+          .select("id, total_amount")
+          .eq("company_id", storedId)
+          .eq("status", "sent")
+          .lt("due_date", todayStr);
+
+        if (overdueInvoices?.length) { const overdueTotal = overdueInvoices.reduce((sum, i) => sum + (i.total_amount || 0), 0);
+          const amount = new Intl.NumberFormat("sv-SE").format(overdueTotal);
+          actions.push({ id: "overdue-invoices",
+            icon: FileText,
+            text: `${overdueInvoices.length} ${overdueInvoices.length === 1 ? "förfallen faktura" : "förfallna fakturor"} — ${amount} kr att driva in`,
+            path: "/invoices",
+            severity: "urgent",
+          });
+        }
+
+        // 3. Invoices due in next 7 days
         const inAWeek = new Date();
         inAWeek.setDate(inAWeek.getDate() + 7);
         const { data: dueSoonInvoices } = await supabase
@@ -105,7 +126,7 @@ export const DailyAssistantModal = () => { const [open, setOpen] = useState(fals
           });
         }
 
-        // 3. VAT deadlines (check if any vat_declarations are in draft status)
+        // 4. VAT deadlines (check if any vat_declarations are in draft status)
         const { count: draftVat } = await supabase
           .from("vat_declarations")
           .select("id", { count: "exact", head: true })
@@ -120,7 +141,7 @@ export const DailyAssistantModal = () => { const [open, setOpen] = useState(fals
           });
         }
 
-        // 4. Low cash (check bank accounts balance)
+        // 5. Low cash (check bank accounts balance)
         const { data: bankAccounts } = await supabase
           .from("bank_accounts")
           .select("balance")
@@ -195,7 +216,7 @@ export const DailyAssistantModal = () => { const [open, setOpen] = useState(fals
           {items.length === 0 && (
             <div className="space-y-1">
               <p className="text-sm text-muted-foreground">
-                Allt ser bra ut — inga omedelbara åtgärder krävs.
+                Inga åtgärder att visa just nu — jag hör av mig när något behöver dig.
               </p>
               <p className="text-sm text-muted-foreground">
                 Skriv vad du vill göra så hjälper jag dig. Du kan alltid nå mig via AI-knappen.

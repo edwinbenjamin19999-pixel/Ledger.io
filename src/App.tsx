@@ -89,7 +89,6 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const Consolidation = lazy(() => import("./pages/Consolidation"));
 const EnterpriseOnboarding = lazy(() => import("./pages/EnterpriseOnboarding"));
-const Pricing = lazy(() => import("./pages/Pricing"));
 const KYCVerification = lazy(() => import("./pages/KYCVerification"));
 const TaxRules = lazy(() => import("./pages/TaxRules"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -406,6 +405,8 @@ const App = () => { const [startupError, setStartupError] = useState<Error | nul
                 <Route path="/legal/dpa" element={<LegalDPA />} />
                 <Route path="/contact" element={iframePreview ? previewBackendFallback : <Contact />} />
                 <Route path="/priser" element={<Priser />} />
+                {/* Publik redirect så gissade engelska URL:er inte dumpar besökaren på inloggningen */}
+                <Route path="/pricing" element={<Navigate to="/priser" replace />} />
                 <Route path="/funktioner" element={<Funktioner />} />
                 <Route path="/roadmap" element={<ProductRoadmap />} />
                 
@@ -436,7 +437,6 @@ const App = () => { const [startupError, setStartupError] = useState<Error | nul
                   <Route path="/co-sign" element={<CoSign />} />
                   <Route path="/kyc-verification" element={<KYCVerification />} />
                   <Route path="/agreement-callback" element={<AgreementCallback />} />
-                  <Route path="/pricing" element={<Pricing />} />
                 </Route>
 
                 {/* Advisor (White Label) protected app — fully separate shell, with own provider stack.

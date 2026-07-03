@@ -199,8 +199,17 @@ const Auth = () => {
         },
       });
       if (error) {
-        if (error.message.includes("already registered")) toast.error("E-postadressen är redan registrerad");
-        else toast.error(error.message);
+        const msg = error.message || "";
+        const status = (error as { status?: number }).status;
+        if (msg.includes("already registered")) {
+          toast.error("E-postadressen är redan registrerad");
+        } else if (msg.toLowerCase().includes("database error") || status === 500) {
+          toast.error(
+            "Något gick fel när kontot skulle skapas. Försök igen om en stund — kvarstår felet, kontakta support@ledger.io."
+          );
+        } else {
+          toast.error(msg || "Kunde inte skapa konto. Försök igen.");
+        }
         return;
       }
       if (signUpData.session) {
