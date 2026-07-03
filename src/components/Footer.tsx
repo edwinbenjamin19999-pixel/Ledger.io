@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Shield, CheckCircle, FileText, Eye } from "lucide-react";
+import { Mail, MapPin, Shield, CheckCircle, FileText, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const productLinks = [
@@ -80,10 +80,6 @@ export const Footer = () => {
               AI-driven bokföringsplattform för SME:s och växande företag i Sverige
             </p>
             <div className="space-y-2.5 text-sm text-white/60">
-              <a href="tel:+46761646986" className="flex items-center gap-2 hover:text-[#3b82f6] transition-colors">
-                <Phone className="w-4 h-4 shrink-0" />
-                +46 76 164 69 86
-              </a>
               <a href="mailto:info@ledger.io" className="flex items-center gap-2 hover:text-[#3b82f6] transition-colors">
                 <Mail className="w-4 h-4 shrink-0" />
                 info@ledger.io
