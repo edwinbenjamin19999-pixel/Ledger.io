@@ -9,7 +9,7 @@ export const ComparisonTable = ({ rows }: { rows: Row[] }) => (
         <tr className="border-b border-slate-100 bg-slate-50/60">
           <th className="text-left font-semibold text-[#0f1f35] px-6 py-4">Funktion</th>
           <th className="text-left font-semibold text-[#64748b] px-6 py-4">Traditionellt system</th>
-          <th className="text-left font-semibold text-[#3b82f6] px-6 py-4">Ledger.io</th>
+          <th className="text-left font-semibold text-[#3b82f6] px-6 py-4">Bokfy</th>
         </tr>
       </thead>
       <tbody>

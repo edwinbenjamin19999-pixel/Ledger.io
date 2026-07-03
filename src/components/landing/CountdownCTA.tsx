@@ -65,7 +65,7 @@ export const CountdownCTA = () => {
         </p>
         <p className="text-white/60 text-base mb-8 max-w-lg mx-auto leading-relaxed">
           De flesta ekonomisystem är byggda på 20 år gammal grund — med AI
-          tillagt i efterhand. Ledger.io är byggt från grunden med AI som
+          tillagt i efterhand. Bokfy är byggt från grunden med AI som
           motor. Early access är begränsat.
         </p>
 

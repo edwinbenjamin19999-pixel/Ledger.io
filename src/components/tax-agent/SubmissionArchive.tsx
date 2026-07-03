@@ -344,7 +344,7 @@ export const SubmissionArchive = ({ companyId }: SubmissionArchiveProps) => {
             <FileText className="h-12 w-12 text-muted-foreground/40" />
             <div className="text-center">
               <p className="font-medium text-muted-foreground">Inga deklarationer hittades</p>
-              <p className="text-xs text-muted-foreground/70 mt-1">Deklarationer du skickar in via Ledger.io visas här</p>
+              <p className="text-xs text-muted-foreground/70 mt-1">Deklarationer du skickar in via Bokfy visas här</p>
             </div>
           </CardContent>
         </Card>

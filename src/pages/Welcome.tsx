@@ -167,7 +167,7 @@ const WelcomePage = () => {
   const finish = async () => {
     await persist({ widgets, completed_at: new Date().toISOString(), step: 5 });
     try { window.localStorage.setItem("dashboard_activation_widgets", JSON.stringify(widgets)); } catch { /* ignore */ }
-    toast.success("Allt klart. Här är din Ledger.io.");
+    toast.success("Allt klart. Här är din Bokfy.");
     const { resolveDefaultLanding } = await import("@/lib/auth/resolveDefaultLanding");
     const dest = await resolveDefaultLanding(companyId);
     navigate(dest, { replace: true });
@@ -259,7 +259,7 @@ const WelcomePage = () => {
       <div className="max-w-2xl mx-auto px-6 py-12">
         <div className="flex items-center gap-2 mb-8">
           <div className="h-8 w-8 rounded-lg bg-[#3b82f6] flex items-center justify-center text-white font-bold text-xs">C</div>
-          <span className="text-sm font-semibold text-slate-900">Ledger.io</span>
+          <span className="text-sm font-semibold text-slate-900">Bokfy</span>
           {saving && <Loader2 className="h-3.5 w-3.5 animate-spin text-slate-400 ml-2" />}
         </div>
 
@@ -272,9 +272,9 @@ const WelcomePage = () => {
               <Sparkles className="h-5 w-5" />
               <span className="text-xs uppercase tracking-wider font-medium">Aktivering</span>
             </div>
-            <h1 className="text-3xl font-medium text-slate-900 mb-3">Välkommen till Ledger.io — din AI-ekonom.</h1>
+            <h1 className="text-3xl font-medium text-slate-900 mb-3">Välkommen till Bokfy — din AI-ekonom.</h1>
             <p className="text-slate-600 leading-relaxed mb-8">
-              Ju mer du använder Ledger.io, desto smartare blir den. Vi lär oss ditt företag automatiskt.
+              Ju mer du använder Bokfy, desto smartare blir den. Vi lär oss ditt företag automatiskt.
             </p>
             <Button onClick={goNext} className="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-6">
               Kom igång <ArrowRight className="h-4 w-4 ml-1" />
@@ -449,7 +449,7 @@ const WelcomePage = () => {
               ))}
             </div>
             <div className="mt-8 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20 p-4">
-              <div className="text-sm text-slate-900 font-medium">Allt klart. Här är din Ledger.io.</div>
+              <div className="text-sm text-slate-900 font-medium">Allt klart. Här är din Bokfy.</div>
               <div className="text-xs text-slate-500 mt-1">Du kan ändra dashboardlayouten när som helst.</div>
             </div>
           </Card>

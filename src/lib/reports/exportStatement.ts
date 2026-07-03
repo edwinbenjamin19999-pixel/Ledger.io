@@ -73,7 +73,7 @@ export async function exportStatementXLSX(
   }
 
   const wb = new ExcelJS.Workbook();
-  wb.creator = "Ledger.io";
+  wb.creator = "Bokfy";
   wb.created = new Date();
   wb.company = report.company.name;
 

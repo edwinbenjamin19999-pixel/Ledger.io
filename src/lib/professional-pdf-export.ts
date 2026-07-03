@@ -223,7 +223,7 @@ export function exportProfessionalBalanceSheetPDF(
 
   drawAllFooters(doc, opts.companyName);
   const period = format(opts.toDate, 'yyyy-MM');
-  doc.save(`Ledger.io_BR_${opts.companyName.replace(/\s+/g, '_')}_${period}.pdf`);
+  doc.save(`Bokfy_BR_${opts.companyName.replace(/\s+/g, '_')}_${period}.pdf`);
 }
 
 function buildBRRow(row: TableRowMeta): any[] {
@@ -398,7 +398,7 @@ export function exportProfessionalIncomeStatementPDF(
 
   drawAllFooters(doc, opts.companyName);
   const period = format(opts.toDate, 'yyyy-MM');
-  doc.save(`Ledger.io_RR_${opts.companyName.replace(/\s+/g, '_')}_${period}.pdf`);
+  doc.save(`Bokfy_RR_${opts.companyName.replace(/\s+/g, '_')}_${period}.pdf`);
 }
 
 function buildRRRow(row: TableRowMeta): any[] {

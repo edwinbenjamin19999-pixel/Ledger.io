@@ -15,10 +15,10 @@ export const AboutFinalCTA = () => (
           to="/auth"
           className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white text-[#050d1a] hover:bg-white/90 font-semibold text-sm transition-all"
         >
-          Testa Ledger.io <ArrowRight className="w-4 h-4" />
+          Testa Bokfy <ArrowRight className="w-4 h-4" />
         </Link>
         <a
-          href="mailto:demo@ledger.io?subject=Demo Ledger.io"
+          href="mailto:demo@bokfy.se?subject=Demo Bokfy"
           className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/20 bg-white/[0.03] text-white/90 font-medium text-sm hover:bg-white/[0.08] hover:border-white/30 transition-all"
         >
           Boka demo

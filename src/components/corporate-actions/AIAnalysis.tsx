@@ -237,7 +237,7 @@ export const AIAnalysis = ({ actionType, formData }: AIAnalysisProps) => { const
       <div className="p-3 rounded-lg bg-muted text-xs text-muted-foreground flex items-start gap-2">
         <Sparkles className="h-4 w-4 flex-shrink-0 mt-0.5" />
         <p>
-          Denna analys är genererad av Ledger.io:s juridiska motor baserat på ABL, IL och aktuell praxis.
+          Denna analys är genererad av Bokfy:s juridiska motor baserat på ABL, IL och aktuell praxis.
           Den ersätter inte professionell juridisk rådgivning vid komplexa situationer.
         </p>
       </div>

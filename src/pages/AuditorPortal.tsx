@@ -181,7 +181,7 @@ export default function AuditorPortal() {
       // SIE4 (minimal)
       const sieLines: string[] = [];
       sieLines.push(`#FLAGGA 0`);
-      sieLines.push(`#PROGRAM "Ledger.io" "1.0"`);
+      sieLines.push(`#PROGRAM "Bokfy" "1.0"`);
       sieLines.push(`#FORMAT PC8`);
       sieLines.push(`#GEN ${new Date().toISOString().slice(0,10).replace(/-/g,"")}`);
       sieLines.push(`#FNAMN "${company.name}"`);

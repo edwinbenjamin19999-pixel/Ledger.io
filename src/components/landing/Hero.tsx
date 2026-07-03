@@ -93,7 +93,7 @@ export const Hero = () => {
               <span className="h-2.5 w-2.5 rounded-full bg-gray-300" />
               <span className="h-2.5 w-2.5 rounded-full bg-gray-300" />
               <div className="ml-2 flex h-5 max-w-[260px] flex-grow items-center rounded bg-white px-2.5">
-                <span className="text-[11px] text-gray-400 hero-urlbar-text">app.ledger.io</span>
+                <span className="text-[11px] text-gray-400 hero-urlbar-text">app.bokfy.se</span>
               </div>
             </div>
 

@@ -371,7 +371,7 @@ export const DashboardCockpit = ({
     const CustomTooltip = ({ active, payload }: any) => { if (!active || !payload?.[0]) return null;
       const d = payload[0].payload;
       return (
-        <div className="rounded-lg border border-border bg-card px-3 py-2 text-xs shadow-xl">
+        <div className="rounded-lg border border-border bg-card px-3 py-2 text-xs shadow-none">
           <p className="font-semibold text-foreground">{d.name}</p>
           <p className="text-muted-foreground">{fmt(d.amount)} kr ({d.pct.toFixed(1)}%)</p>
         </div>

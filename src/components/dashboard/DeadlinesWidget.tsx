@@ -87,7 +87,7 @@ export const DeadlinesWidget = ({ companyId }: DeadlinesWidgetProps) => {
   const overdueCount = deadlines.filter(d => d.status === "overdue" || d.status === "urgent").length;
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-lg border-0 overflow-hidden">
+    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-none border-0 overflow-hidden">
       {/* Dark header */}
       <div className="bg-[#0F1F3D] px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">

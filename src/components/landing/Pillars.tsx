@@ -11,7 +11,7 @@ const pillars = [
     tint: "bg-blue-50 hover:bg-blue-100",
     iconCircle: "bg-[#2563EB] text-white",
     title: "Automatiserad bokföring",
-    desc: "Lägg noll tid på bokföring. Ledger.io konterar mot BAS-kontoplanen automatiskt — du fokuserar på företaget.",
+    desc: "Lägg noll tid på bokföring. Bokfy konterar mot BAS-kontoplanen automatiskt — du fokuserar på företaget.",
   },
   {
     icon: Landmark,

@@ -149,7 +149,7 @@ export default function SignSKV() {
           <div className="flex items-center gap-2 text-[#3b82f6] mb-2">
             <ShieldCheck className="h-5 w-5" />
             <span className="text-xs font-semibold uppercase tracking-wider">
-              Ledger.io Signering
+              Bokfy Signering
             </span>
           </div>
           <h1 className="text-lg font-bold text-slate-900">
@@ -183,7 +183,7 @@ export default function SignSKV() {
                 Starta BankID
               </Button>
               <p className="text-[11px] text-slate-400 text-center">
-                Du behöver inget konto i Ledger.io för att signera.
+                Du behöver inget konto i Bokfy för att signera.
               </p>
             </>
           )}
@@ -253,7 +253,7 @@ export default function SignSKV() {
         {/* Footer */}
         <div className="px-6 py-3 border-t bg-slate-50 text-[10px] text-slate-400 flex items-center justify-between">
           <span>Säker signering via BankID</span>
-          <span>ledger.io</span>
+          <span>bokfy.se</span>
         </div>
       </div>
     </div>

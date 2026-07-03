@@ -6,7 +6,7 @@ import { useFirmClients } from "@/hooks/useFirmDashboard";
 /**
  * Firm-wide document feed.
  *
- * Reads from the existing `documents` table (used by the rest of Ledger.io for
+ * Reads from the existing `documents` table (used by the rest of Bokfy for
  * AI document intelligence) and joins it to the firm's clients so the WL
  * portal can:
  *   - browse files per client (folder view)

@@ -13,7 +13,7 @@ const productLinks = [
 ];
 
 const companyLinks = [
-  { label: "Om Ledger.io", to: "/about" },
+  { label: "Om Bokfy", to: "/about" },
   { label: "Kontakt", to: "/contact" },
   { label: "Karriär", to: "/careers" },
   { label: "Redovisningsbyrå-portal", to: "/accounting-firms" },
@@ -73,16 +73,16 @@ export const Footer = () => {
           {/* Brand / Contact */}
           <div className="space-y-5 sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-0">
-              <span className="text-2xl font-[800] text-white tracking-tight">Ledger</span>
-              <span className="text-2xl font-[800] text-[#3b82f6] tracking-tight">.io</span>
+              <span className="text-2xl font-[800] text-white tracking-tight">Bok</span>
+              <span className="text-2xl font-[800] text-[#3b82f6] tracking-tight">fy</span>
             </Link>
             <p className="text-sm text-white/60 max-w-[260px] leading-relaxed">
               AI-driven bokföringsplattform för SME:s och växande företag i Sverige
             </p>
             <div className="space-y-2.5 text-sm text-white/60">
-              <a href="mailto:info@ledger.io" className="flex items-center gap-2 hover:text-[#3b82f6] transition-colors">
+              <a href="mailto:info@bokfy.se" className="flex items-center gap-2 hover:text-[#3b82f6] transition-colors">
                 <Mail className="w-4 h-4 shrink-0" />
-                info@ledger.io
+                info@bokfy.se
               </a>
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
@@ -140,7 +140,7 @@ export const Footer = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-white text-[#050d1a] hover:bg-white/90 font-semibold">
-                <Link to="/auth">Testa Ledger.io</Link>
+                <Link to="/auth">Testa Bokfy</Link>
               </Button>
               <Button asChild variant="glass" size="lg" className="hover:scale-[1.02]">
                 <Link to="/contact">Boka demo</Link>
@@ -155,7 +155,7 @@ export const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 sm:px-6 py-6 flex justify-center items-center">
           <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} Ledger.io. Alla rättigheter förbehållna.
+            © {new Date().getFullYear()} Bokfy. Alla rättigheter förbehållna.
           </p>
         </div>
       </div>

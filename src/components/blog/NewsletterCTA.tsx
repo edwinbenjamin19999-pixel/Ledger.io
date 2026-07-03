@@ -8,14 +8,14 @@ export const NewsletterCTA = () => (
         <Mail className="w-8 h-8 mx-auto text-[#3b82f6]" />
         <h2 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">Få nya insikter om AI och bokföring</h2>
         <p className="mt-3 text-white/70 max-w-lg mx-auto">
-          En kort månadssammanfattning från Ledger.io — produktnyheter, guider och perspektiv. Ingen spam.
+          En kort månadssammanfattning från Bokfy — produktnyheter, guider och perspektiv. Ingen spam.
         </p>
         <form
           className="mt-6 flex flex-col sm:flex-row gap-2 max-w-md mx-auto"
           onSubmit={(e) => {
             e.preventDefault();
             const email = (e.currentTarget.elements.namedItem("email") as HTMLInputElement)?.value;
-            if (email) window.location.href = `mailto:nyhetsbrev@ledger.io?subject=Prenumerera&body=${encodeURIComponent(email)}`;
+            if (email) window.location.href = `mailto:nyhetsbrev@bokfy.se?subject=Prenumerera&body=${encodeURIComponent(email)}`;
           }}
         >
           <input

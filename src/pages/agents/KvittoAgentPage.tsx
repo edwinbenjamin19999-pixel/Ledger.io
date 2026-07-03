@@ -31,7 +31,7 @@ interface KvittoSettings {
 }
 
 const COMPANY_SLUG = "foretag";
-const RECEIPT_EMAIL = `kvitto@${COMPANY_SLUG}.ledger.io`;
+const RECEIPT_EMAIL = `kvitto@${COMPANY_SLUG}.bokfy.se`;
 
 const MOCK_ACTIVITY: AgentActivityRow[] = [
   {

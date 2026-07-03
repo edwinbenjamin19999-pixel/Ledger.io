@@ -10,7 +10,7 @@ interface DemoModeBannerProps {
  * Permanent (non-dismissable) demo-mode banner for modules
  * that require external integrations not yet active.
  */
-export const DemoModeBanner = ({ title, description, contact = "support@ledger.io" }: DemoModeBannerProps) => {
+export const DemoModeBanner = ({ title, description, contact = "support@bokfy.se" }: DemoModeBannerProps) => {
   return (
     <div className="rounded-lg border-2 border-amber-400 bg-[#FAEEDA] dark:bg-amber-950/30 px-4 py-3">
       <div className="flex items-start gap-3">

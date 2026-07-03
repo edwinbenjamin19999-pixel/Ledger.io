@@ -8,7 +8,7 @@ import { ManualActions } from "./ManualActions";
 import type { AgentLayoutProps } from "./types";
 
 /**
- * AgentLayout — shared template for every AI agent page in Ledger.io.
+ * AgentLayout — shared template for every AI agent page in Bokfy.
  *
  * Structure (top to bottom):
  *   1. Header (icon, name, description, status pill, pause/resume switch)

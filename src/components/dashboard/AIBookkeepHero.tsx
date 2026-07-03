@@ -24,7 +24,7 @@ export const AIBookkeepHero = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-violet-100 dark:border-violet-900/50 overflow-hidden">
+    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-none border border-violet-100 dark:border-violet-900/50 overflow-hidden">
       {/* ── Gradient hero band ── */}
       <div className="bg-[#0F1F3D] px-6 py-5 relative overflow-hidden">
         {/* Decorative orbs */}
@@ -44,7 +44,7 @@ export const AIBookkeepHero = () => {
 
           <button
             onClick={() => navigate("/bookkeep")}
-            className="bg-white text-violet-700 font-bold rounded-2xl px-6 py-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center gap-2 flex-shrink-0"
+            className="bg-white text-violet-700 font-bold rounded-2xl px-6 py-3 shadow-none hover:shadow-none hover:scale-105 transition-all duration-200 flex items-center gap-2 flex-shrink-0"
           >
             <Sparkles className="w-4 h-4 text-violet-500" />
             Börja bokföra
@@ -57,7 +57,7 @@ export const AIBookkeepHero = () => {
             <button
               key={pill.label}
               onClick={() => navigate("/bookkeep")}
-              className="bg-white/[0.15] border border-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full px-3 py-1.5 hover:bg-white/25 transition cursor-pointer flex items-center gap-1.5"
+              className="bg-white/[0.15] border border-white/20  text-white text-xs font-medium rounded-full px-3 py-1.5 hover:bg-white/25 transition cursor-pointer flex items-center gap-1.5"
             >
               <pill.icon className="w-3.5 h-3.5" />
               {pill.label}
@@ -91,7 +91,7 @@ export const AIBookkeepHero = () => {
 
           <button
             onClick={() => navigate("/bookkeep")}
-            className="bg-[#0F1F3D] w-11 h-11 rounded-2xl flex items-center justify-center shadow-md shadow-violet-200 dark:shadow-violet-900/50 hover:shadow-lg hover:shadow-violet-300 dark:hover:shadow-violet-800/50 hover:scale-110 transition-all duration-200 flex-shrink-0"
+            className="bg-[#0F1F3D] w-11 h-11 rounded-2xl flex items-center justify-center shadow-md shadow-violet-200 dark:shadow-violet-900/50 hover:shadow-none hover:shadow-violet-300 dark:hover:shadow-violet-800/50 hover:scale-110 transition-all duration-200 flex-shrink-0"
           >
             <ArrowRight className="w-5 h-5 text-white" />
           </button>

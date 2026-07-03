@@ -35,7 +35,7 @@ const SOURCES = [
   },
   { id: "pdf" as const,
     name: "E-postarkiv / PDF-fakturor",
-    description: "Har du fakturor som PDF i din e-post eller på din dator? AI läser dem automatiskt och skapar poster i Ledger.io.",
+    description: "Har du fakturor som PDF i din e-post eller på din dator? AI läser dem automatiskt och skapar poster i Bokfy.",
     methods: ["PDF"],
     exportGuide: "Ladda upp PDF-filer — AI extraherar leverantör, belopp, datum och moms",
     popular: false,

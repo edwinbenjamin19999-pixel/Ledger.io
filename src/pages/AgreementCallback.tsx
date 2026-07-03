@@ -84,7 +84,7 @@ const AgreementCallback = () => { const { user, loading: authLoading } = useAuth
               <div>
                 <p className="font-medium">Tack för att du signerade tjänsteavtalet!</p>
                 <p className="text-muted-foreground mt-2">
-                  Du kan nu använda alla funktioner i Ledger.io.
+                  Du kan nu använda alla funktioner i Bokfy.
                 </p>
               </div>
               <Button onClick={() => navigate('/dashboard')} className="w-full">

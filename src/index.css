@@ -11,7 +11,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ledger.io Design System – Theme-aware with data-theme attribute */
+/* Bokfy Design System – Theme-aware with data-theme attribute */
 
 @layer base {
   /* ═══ TEMA 1: Blått (standard) ═══ */
@@ -140,7 +140,7 @@
      Applied on the WL app shell wrapper (.wl-scope). Overrides the global
      brand tokens with cyan defaults for /wl/app/*. Per-tenant branding from
      useBureauBranding() further overrides --brand-primary at runtime. Standard
-     Ledger.io surfaces (outside .wl-scope) keep navy via --primary. */
+     Bokfy surfaces (outside .wl-scope) keep navy via --primary. */
   .wl-scope {
     --brand-primary: 192 91% 36%;        /* cyan-600  #3b82f6 */
     --brand-primary-hover: 192 91% 30%;  /* cyan-700  #3b82f6 */
@@ -481,10 +481,11 @@ body {
 .rounded-2xl.bg-card::before {
   content: none;
 }
+/* Flat: hover = kantfärgsskifte, aldrig lyft/skugga */
 .rounded-lg.border.bg-card:hover,
 .rounded-xl.bg-card:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-1px);
+  box-shadow: none;
+  border-color: hsl(var(--primary) / 0.35);
 }
 
 /* ── 4. KPI CARD STYLES ── */
@@ -524,13 +525,9 @@ body {
 .kpi-value-wrapper {
   position: relative;
 }
+/* Flat: KPI-glow borttagen */
 .kpi-value-wrapper::after {
-  content: '';
-  position: absolute;
-  inset: -4px -8px;
-  background: radial-gradient(ellipse at center, rgba(14,206,206,0.05) 0%, transparent 70%);
-  border-radius: 8px;
-  pointer-events: none;
+  content: none;
 }
 
 /* ── 5. TAB NAVIGATION — flat block ── */
@@ -1314,7 +1311,7 @@ textarea[class*="bg-slate-"]:focus {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Ledger.io Design System v1 — Linear/Vercel/Stripe-feel
+   Bokfy Design System v1 — Linear/Vercel/Stripe-feel
    Phase 1 foundation. Use ds.* tokens / DS* primitives for all NEW UI.
    See mem://style/northledger-design-system-v1 for rules.
    ═══════════════════════════════════════════════════════════════ */
@@ -1500,18 +1497,18 @@ textarea[class*="bg-slate-"]:focus {
 .premium-card {
   position: relative;
   overflow: hidden;
-  background: #FAFBFC;
-  border: 0.5px solid #DFE4EA;
-  border-radius: 12px;
+  background: hsl(var(--muted));
+  border: none;
+  border-radius: 8px;
   padding: 16px;
 }
+/* Flat: topplist i solid accentfärg — färg som struktur */
 .premium-card::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 1.5px;
-  background: #0B4F6C;
-  border-radius: 12px 12px 0 0;
+  height: 3px;
+  background: hsl(var(--primary));
 }
 .premium-card.tint-green { background: #F2FBF7; border-color: #A7E3C7; }
 .premium-card.tint-green::before { background: #1D9E75; }
@@ -1520,7 +1517,7 @@ textarea[class*="bg-slate-"]:focus {
 .premium-card.tint-amber { background: #FFFBF0; border-color: #F9DFA0; }
 .premium-card.tint-amber::before { background: #EF9F27; }
 .premium-card.tint-blue { background: #F5F9FF; border-color: #C7DCFA; }
-.premium-card.tint-blue::before { background: #0B4F6C; }
+.premium-card.tint-blue::before { background: #2563EB; }
 
 
 /* Dark-section card surface (for cards on #0B1F2F / #0F2A3F) */

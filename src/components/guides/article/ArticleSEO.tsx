@@ -29,7 +29,7 @@ export const ArticleSEO = ({ title, description, canonicalPath, jsonLd }: Articl
       if (created) tags.push(el);
     };
 
-    const url = `https://ledger.io${canonicalPath}`;
+    const url = `https://bokfy.se${canonicalPath}`;
     setMeta('meta[name="description"]', { name: "description", content: description });
     setMeta('link[rel="canonical"]', { rel: "canonical", href: url });
     setMeta('meta[property="og:title"]', { property: "og:title", content: title });

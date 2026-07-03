@@ -17,7 +17,7 @@ const Inner = () => {
 
   if (error || !tenant) {
     const isCustomDomain = typeof window !== "undefined" &&
-      !["ledger.io", "localhost", "app.ledger.io", "www.ledger.io"].includes(window.location.hostname.toLowerCase()) &&
+      !["bokfy.se", "localhost", "app.bokfy.se", "www.bokfy.se"].includes(window.location.hostname.toLowerCase()) &&
       !window.location.hostname.endsWith(".lovable.app") &&
       !window.location.hostname.endsWith(".lovableproject.com");
     return (
@@ -26,8 +26,8 @@ const Inner = () => {
           <h1 className="text-2xl font-bold text-[#0F172A]">Workspace hittades inte</h1>
           <p className="text-[#64748B]">Den här arbetsytan finns inte eller är inte aktiv.</p>
           {!isCustomDomain && (
-            <a href="https://ledger.io" className="inline-block text-sm font-semibold text-[#3b82f6] hover:underline">
-              Gå till Ledger.io →
+            <a href="https://bokfy.se" className="inline-block text-sm font-semibold text-[#3b82f6] hover:underline">
+              Gå till Bokfy →
             </a>
           )}
         </div>

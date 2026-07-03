@@ -8,7 +8,7 @@ interface Props {
 /**
  * Tenant-aware logo block for the sidebar header.
  * Renders the tenant's logo + workspace name when a tenant is resolved,
- * otherwise falls back to the default Ledger.io wordmark.
+ * otherwise falls back to the default Bokfy wordmark.
  */
 export function BrandedLogo({ onClick }: Props) {
   const { tenant } = useTenant();
@@ -43,8 +43,8 @@ export function BrandedLogo({ onClick }: Props) {
 
   return (
     <button onClick={handle} className="text-xl font-bold tracking-tight">
-      <span className="text-white font-bold">Ledger</span>
-      <span className="text-[#3b82f6] font-bold">.io</span>
+      <span className="text-white font-bold">Bok</span>
+      <span className="text-[#3b82f6] font-bold">fy</span>
     </button>
   );
 }

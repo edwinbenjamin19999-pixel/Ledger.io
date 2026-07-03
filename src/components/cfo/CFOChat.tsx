@@ -25,7 +25,7 @@ interface ChatMessage { role: "user" | "assistant";
 
 const fmt = (n: number) => n.toLocaleString("sv-SE", { maximumFractionDigits: 0 });
 
-const CFO_SYSTEM_PROMPT = `Du är Ledger.io CFO — en senior finansiell rådgivare specialiserad på svenska småföretag. Du har djup kunskap om:
+const CFO_SYSTEM_PROMPT = `Du är Bokfy CFO — en senior finansiell rådgivare specialiserad på svenska småföretag. Du har djup kunskap om:
 - Svensk skattelagstiftning (IL, ML, ABL)
 - BAS kontoplan
 - K2/K3 redovisningsstandarder (BFNAR 2016:10 / 2012:1)
@@ -174,7 +174,7 @@ export function CFOChat({ companyId, snapshot }: CFOChatProps) { const [messages
     const { default: jsPDF } = await import('jspdf');
     const doc = new jsPDF();
     doc.setFontSize(16);
-    doc.text("Ledger.io CFO — Konversation", 14, 20);
+    doc.text("Bokfy CFO — Konversation", 14, 20);
     doc.setFontSize(9);
     doc.text(`Exporterad: ${new Date().toLocaleDateString("sv-SE")}`, 14, 28);
     doc.line(14, 31, 196, 31);

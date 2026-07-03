@@ -1,5 +1,5 @@
 /**
- * Ledger.io Governance & Control Layer
+ * Bokfy Governance & Control Layer
  * 
  * Defines AI autonomy boundaries, Category A/B action classification,
  * and shared governance rules enforced across the entire platform.

@@ -11,7 +11,7 @@ import { getActiveTenantSlug } from "@/hooks/useUserTenants";
  * cause an infinite redirect back to /wl/:slug/login).
  *
  * NOTE: AdvisorActiveClientProvider lives globally in App.tsx so the
- * active client follows the advisor into standard Ledger.io routes
+ * active client follows the advisor into standard Bokfy routes
  * (/dashboard, /invoices, etc.) — not just within /wl/app.
  */
 export const AdvisorAppRoot = () => {

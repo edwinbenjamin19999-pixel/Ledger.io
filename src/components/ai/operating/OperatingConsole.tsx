@@ -122,7 +122,7 @@ export function OperatingConsole() {
         <div className="px-6 py-4 flex items-center justify-between gap-4">
           <div className="min-w-0">
             <div className="font-mono text-[10px] tracking-[0.12em] text-slate-400 uppercase">
-              Ledger.io · Operating Layer
+              Bokfy · Operating Layer
             </div>
             <h1 className="text-xl font-semibold text-slate-900 tracking-tight mt-0.5">
               AI Operating Console

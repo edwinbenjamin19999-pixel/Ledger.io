@@ -18,7 +18,7 @@ interface Props {
 
 /**
  * The defining WL UX element: a global dropdown letting the advisor jump
- * between "Byrå-vy" (firm cockpit) and any client (full Ledger.io scoped to that
+ * between "Byrå-vy" (firm cockpit) and any client (full Bokfy scoped to that
  * client). Selecting a client navigates into the standard product surface so
  * every existing module works out of the box.
  */
@@ -69,7 +69,7 @@ export const ClientSwitcherDropdown = ({ variant = "desktop" }: Props) => {
     setOpen(false);
     setQuery("");
     // Selecting a client switches the global company_id context. All standard
-    // Ledger.io modules (invoices, vat, bookkeeping, …) re-scope automatically
+    // Bokfy modules (invoices, vat, bookkeeping, …) re-scope automatically
     // via useCompanyId() listening to the "company-changed" event.
     navigate("/dashboard");
   };

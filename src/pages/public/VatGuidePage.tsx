@@ -14,7 +14,7 @@ const TOC = [
   { id: "bokforing", label: "Hur moms bokförs" },
   { id: "deklaration", label: "Momsdeklaration" },
   { id: "vanliga-fel", label: "Vanliga fel" },
-  { id: "automation", label: "Ledger.io & moms" },
+  { id: "automation", label: "Bokfy & moms" },
   { id: "faq", label: "FAQ" },
 ];
 
@@ -25,7 +25,7 @@ const FAQS = [
   { q: "Vad är skillnaden mellan ingående och utgående moms?", a: "Utgående moms är den du tar betalt av kunder. Ingående är den du betalar till leverantörer. Du betalar mellanskillnaden till Skatteverket." },
   { q: "Får jag dra av moms på representation?", a: "Ja — men begränsat. För måltider får du dra av moms på max 300 kr per person och tillfälle." },
   { q: "Hur fungerar omvänd skattskyldighet?", a: "Vid EU-handel mellan företag fakturerar säljaren utan moms. Köparen redovisar både utgående och ingående moms i sin deklaration — netto noll." },
-  { q: "Kan Ledger.io lämna in min momsdeklaration?", a: "Ja. Med koppling till Skatteverket kan Ledger.io förbereda och lämna in SKV 4700 automatiskt vid varje period." },
+  { q: "Kan Bokfy lämna in min momsdeklaration?", a: "Ja. Med koppling till Skatteverket kan Bokfy förbereda och lämna in SKV 4700 automatiskt vid varje period." },
 ];
 
 export default function VatGuidePage() {
@@ -98,7 +98,7 @@ export default function VatGuidePage() {
                   </p>
                 </div>
                 <p className="mt-4 text-[#334155] leading-[1.8] text-[17px]">
-                  Ledger.io hanterar övergången automatiskt: alla transaktioner med leveransdatum inom perioden bokförs på 6 %-konton (2630/3012), medan transaktioner före och efter perioden använder 12 %-konton (2620/3011). Du behöver inte ställa om något manuellt.
+                  Bokfy hanterar övergången automatiskt: alla transaktioner med leveransdatum inom perioden bokförs på 6 %-konton (2630/3012), medan transaktioner före och efter perioden använder 12 %-konton (2620/3011). Du behöver inte ställa om något manuellt.
                 </p>
               </section>
 
@@ -123,7 +123,7 @@ export default function VatGuidePage() {
                   <li>Sammanställ ingående moms (ruta 48) från inköp</li>
                   <li>Kontrollera EU-handel (rutorna 20, 21, 30, 31)</li>
                   <li>Beräkna nettoskuld (utgående minus ingående) — ruta 49</li>
-                  <li>Lämna in via Skatteverkets e-tjänst eller automatiskt via Ledger.io</li>
+                  <li>Lämna in via Skatteverkets e-tjänst eller automatiskt via Bokfy</li>
                 </ol>
               </section>
 
@@ -147,11 +147,11 @@ export default function VatGuidePage() {
               </section>
 
               <section id="automation" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight">Hur Ledger.io automatiserar moms</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0f1f35] tracking-tight">Hur Bokfy automatiserar moms</h2>
                 <div className="mt-5 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100 p-6 md:p-8">
                   <Sparkles className="w-6 h-6 text-[#3b82f6]" />
                   <p className="mt-3 text-[#334155] leading-[1.8] text-[17px]">
-                    Ledger.io väljer momskod automatiskt baserat på leverantör, produkttyp och historik. Vid periodslut sammanställs deklarationen automatiskt med alla rutor på SKV 4700 — du behöver bara godkänna inlämningen.
+                    Bokfy väljer momskod automatiskt baserat på leverantör, produkttyp och historik. Vid periodslut sammanställs deklarationen automatiskt med alla rutor på SKV 4700 — du behöver bara godkänna inlämningen.
                   </p>
                   <div className="mt-4">
                     <Button asChild className="bg-[#3b82f6] text-white hover:bg-[#3b82f6]">
@@ -168,7 +168,7 @@ export default function VatGuidePage() {
 
               <section className="rounded-2xl bg-[#0f1f35] p-8 md:p-10 text-white text-center">
                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Slipp tänka på moms</h3>
-                <p className="mt-2 text-white/70 max-w-md mx-auto">Låt Ledger.io sköta kodning, beräkning och inlämning automatiskt.</p>
+                <p className="mt-2 text-white/70 max-w-md mx-auto">Låt Bokfy sköta kodning, beräkning och inlämning automatiskt.</p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
                   <Button asChild className="bg-[#3b82f6] text-[#0a1428] hover:bg-[#3b82f6] font-semibold">
                     <Link to="/auth">Testa gratis <ArrowRight className="w-4 h-4 ml-1" /></Link>

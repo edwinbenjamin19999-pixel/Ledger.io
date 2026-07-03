@@ -73,7 +73,7 @@ export const HowItWorks = () => {
         </div>
 
         <p className="mt-12 text-center text-xs font-medium text-[#0F1B2D]/50">
-          Genomsnittlig tid för att bokföra en transaktion med Ledger.io: under 3 sekunder.
+          Genomsnittlig tid för att bokföra en transaktion med Bokfy: under 3 sekunder.
         </p>
       </div>
     </section>

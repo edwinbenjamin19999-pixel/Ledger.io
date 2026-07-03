@@ -310,7 +310,7 @@ export default function SkatteverketSettings() {
               <div className="mt-4 p-3 bg-muted rounded-lg">
                 <p className="text-sm font-medium mb-1">💡 Observera</p>
                 <p className="text-sm text-muted-foreground">
-                  Ledger.io genererar AGI-filen lokalt, så API:et för "Individuppgifter" behövs inte (kräver lagstöd).
+                  Bokfy genererar AGI-filen lokalt, så API:et för "Individuppgifter" behövs inte (kräver lagstöd).
                 </p>
               </div>
             </CardContent>

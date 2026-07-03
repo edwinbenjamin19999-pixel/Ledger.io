@@ -39,8 +39,8 @@ export const Header = (_props: HeaderProps = {}) => {
       <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-0">
-          <span className="text-xl font-extrabold tracking-tight text-[#0F1B2D]">Ledger</span>
-          <span className="text-xl font-extrabold tracking-tight text-primary">.io</span>
+          <span className="text-xl font-extrabold tracking-tight text-[#0F1B2D]">Bok</span>
+          <span className="text-xl font-extrabold tracking-tight text-primary">fy</span>
         </Link>
 
         {/* Desktop nav */}

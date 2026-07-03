@@ -182,7 +182,7 @@ export function MAScenarioSimulator({ mostLikely, ebitda, revenue }: Props) { co
         </TabsContent>
       </Tabs>
 
-      <AccuracyDisclaimer className="mt-2" dataSource="Ledger.io beräkningsmodell" />
+      <AccuracyDisclaimer className="mt-2" dataSource="Bokfy beräkningsmodell" />
       <div className="p-3 bg-muted/30 rounded-lg text-xs text-muted-foreground italic">
         Detta är informationsunderlag, inte investeringsrådgivning. Konsultera M&A-rådgivare vid faktiska transaktioner.
       </div>

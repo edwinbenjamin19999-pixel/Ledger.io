@@ -37,7 +37,7 @@ export function PreviewMockup({ draft }: Props) {
           <div className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
         </div>
         <div className="flex-1 mx-3 px-3 py-1 rounded-md bg-white border border-slate-100 text-[11px] text-slate-500 font-mono text-center">
-          {slug}.ledger.io/dashboard
+          {slug}.bokfy.se/dashboard
         </div>
       </div>
 

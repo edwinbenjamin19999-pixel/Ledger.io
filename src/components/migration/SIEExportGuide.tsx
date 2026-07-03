@@ -82,7 +82,7 @@ const GUIDES: Record<SourceId, Guide> = {
       { title: "Spara filen lokalt", detail: "Filen heter normalt något som SIE_2024.se eller export.si. Filändelsen är .se, .si eller .sie." },
     ],
     fallback: [
-      { title: "Om ditt system saknar SIE-export", detail: "Det är ovanligt — men om du använder ett internationellt system (QuickBooks, Xero, Zoho Books) finns inte SIE. Hör av dig till oss på support@ledger.io så hjälper vi dig konvertera via CSV/Excel." },
+      { title: "Om ditt system saknar SIE-export", detail: "Det är ovanligt — men om du använder ett internationellt system (QuickBooks, Xero, Zoho Books) finns inte SIE. Hör av dig till oss på support@bokfy.se så hjälper vi dig konvertera via CSV/Excel." },
       { title: "Om du bara har papperspärmar", detail: "Inga problem — vi har en separat onboarding där vi börjar bokföra från ingående balanser. Välj 'Manuell start' istället." },
     ],
   },
@@ -202,7 +202,7 @@ export const SIEExportGuide = ({ defaultSource = "fortnox", trigger }: Props) =>
                   <Mail className="h-4 w-4 text-[#085041]" />
                   <AlertTitle className="text-sm">Fastnar du? Vi hjälper till gratis</AlertTitle>
                   <AlertDescription className="text-xs text-muted-foreground">
-                    Mejla <a href="mailto:support@ledger.io" className="text-primary underline">support@ledger.io</a> så hjälper vårt onboarding-team dig att exportera filen — vanligen klart inom 1 arbetsdag. Du kan även bjuda in oss som extern användare i Fortnox/Visma/Bokio så exporterar vi åt dig.
+                    Mejla <a href="mailto:support@bokfy.se" className="text-primary underline">support@bokfy.se</a> så hjälper vårt onboarding-team dig att exportera filen — vanligen klart inom 1 arbetsdag. Du kan även bjuda in oss som extern användare i Fortnox/Visma/Bokio så exporterar vi åt dig.
                   </AlertDescription>
                 </Alert>
 

@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
-  const url = `https://ledger.io${canonicalPath}`;
+  const url = `https://bokfy.se${canonicalPath}`;
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -20,11 +20,11 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
     description: guide.metaDescription,
     datePublished: guide.updatedAt,
     dateModified: guide.updatedAt,
-    author: { "@type": "Organization", name: "Ledger.io" },
+    author: { "@type": "Organization", name: "Bokfy" },
     publisher: {
       "@type": "Organization",
-      name: "Ledger.io",
-      logo: { "@type": "ImageObject", url: "https://ledger.io/og-image.jpg" },
+      name: "Bokfy",
+      logo: { "@type": "ImageObject", url: "https://bokfy.se/og-image.jpg" },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     keywords: guide.keywords.join(", "),
@@ -116,15 +116,15 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
           </ul>
         </section>
 
-        {/* Ledger.io block */}
+        {/* Bokfy block */}
         <section className="my-12 rounded-2xl bg-gradient-to-br from-[#0f1f35] to-[#0a1525] p-8 text-white">
           <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#3b82f6]">
-            <Sparkles className="w-3.5 h-3.5" /> Hur Ledger.io hjälper
+            <Sparkles className="w-3.5 h-3.5" /> Hur Bokfy hjälper
           </div>
           <p className="mt-3 text-white/85 leading-relaxed">{guide.northledgerNote}</p>
           <Button asChild className="mt-5 bg-white text-[#050d1a] hover:bg-white/90 font-semibold gap-1.5">
             <Link to="/auth">
-              Testa Ledger.io gratis <ArrowRight className="w-3.5 h-3.5" />
+              Testa Bokfy gratis <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </Button>
         </section>

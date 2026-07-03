@@ -10,7 +10,7 @@ export const HeroProductMockup = () => {
       <div className="overflow-hidden rounded-lg bg-white p-1.5">
         <img
           src={heroDashboard}
-          alt="Ledger.io dashboardöversikt"
+          alt="Bokfy dashboardöversikt"
           className="block w-full h-auto rounded-md"
           loading="eager"
         />

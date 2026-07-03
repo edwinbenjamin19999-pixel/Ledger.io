@@ -47,8 +47,8 @@ const EmailInboxDiagnostics = () => {
       const { error } = await supabase.functions.invoke("process-email-inbox", {
         body: {
           to: company.email_inbox_address,
-          from: "diagnostics@ledger.io",
-          from_name: "Ledger.io Diagnostics",
+          from: "diagnostics@bokfy.se",
+          from_name: "Bokfy Diagnostics",
           subject: `Testmejl ${new Date().toISOString()}`,
           text: "Detta är ett testmejl från diagnos-vyn.",
           attachments: [],
@@ -122,7 +122,7 @@ const EmailInboxDiagnostics = () => {
           <CardTitle className="text-base">SendGrid Inbound Parse — exakt config</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 text-sm">
-          <p><strong>Receiving Domain:</strong> <code>inbox.ledger.io</code></p>
+          <p><strong>Receiving Domain:</strong> <code>inbox.bokfy.se</code></p>
           <p className="break-all"><strong>Destination URL:</strong> <code>https://gvlzltcwdsglmkiijlie.supabase.co/functions/v1/process-email-inbox</code></p>
           <p><strong>POST raw, full MIME message:</strong> OFF</p>
           <p><strong>Check incoming emails for spam:</strong> ON</p>

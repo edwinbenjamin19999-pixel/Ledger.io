@@ -108,7 +108,7 @@ export const WLFeatureMatrix = () => {
           </p>
         </div>
         <div className="text-[11px] text-slate-500">
-          {FEATURES.length} funktioner · samma motor som Ledger.io standard
+          {FEATURES.length} funktioner · samma motor som Bokfy standard
         </div>
       </div>
 

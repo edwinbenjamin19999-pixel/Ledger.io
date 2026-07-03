@@ -148,7 +148,7 @@ export function CFOAlerts({ snapshot, companyId }: CFOAlertsProps) { const initi
     if (criticalAlerts.length === 0) { toast.info("Inga kritiska varningar att rapportera");
       return;
     }
-    const subject = `Ledger.io Varningsrapport — ${criticalAlerts.length} aktiva varningar`;
+    const subject = `Bokfy Varningsrapport — ${criticalAlerts.length} aktiva varningar`;
     const body = [
       "LEDGER.IO VARNINGSRAPPORT",
       `Datum: ${new Date().toLocaleDateString("sv-SE")}`,
@@ -159,7 +159,7 @@ export function CFOAlerts({ snapshot, companyId }: CFOAlertsProps) { const initi
         `   ${a.message}`,
         "",
       ]).flat(),
-      "— Ledger.io CFO",
+      "— Bokfy CFO",
     ].join("\n");
     window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank");
   };

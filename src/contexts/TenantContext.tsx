@@ -14,9 +14,9 @@ const TenantContext = createContext<TenantContextValue>({ tenant: null, loading:
 export const useTenant = () => useContext(TenantContext);
 
 const isStandardHost = (host: string) =>
-  host === "ledger.io" || host === "localhost" ||
+  host === "bokfy.se" || host === "localhost" ||
   host.endsWith(".lovable.app") || host.endsWith(".lovableproject.com") ||
-  host === "app.ledger.io" || host === "www.ledger.io";
+  host === "app.bokfy.se" || host === "www.bokfy.se";
 
 export const TenantProvider = ({ slug: explicitSlug, children }: { slug?: string; children: ReactNode }) => {
   const [tenant, setTenant] = useState<ResolvedTenant | null>(null);
@@ -34,7 +34,7 @@ export const TenantProvider = ({ slug: explicitSlug, children }: { slug?: string
       if (host && !isStandardHost(host)) {
         resolved = await fetchTenantByDomain(host);
       }
-      // 2. Subdomain on ledger.io (e.g. clientname.ledger.io)
+      // 2. Subdomain on bokfy.se (e.g. clientname.bokfy.se)
       if (!resolved) {
         const slugFromHost = resolveTenantSlugFromHost(host);
         if (slugFromHost) resolved = await fetchTenantBySlug(slugFromHost);
@@ -51,7 +51,7 @@ export const TenantProvider = ({ slug: explicitSlug, children }: { slug?: string
 
       if (!mounted) return;
       if (!resolved) {
-        // Standard host or unresolved — apply Ledger.io default theme
+        // Standard host or unresolved — apply Bokfy default theme
         // (prevents leaked branding from a previous tenant via persisted state)
         applyDefaultTheme();
         setLoading(false);

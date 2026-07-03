@@ -509,7 +509,7 @@ export const InteractiveDemoPreview = () => {
               }}
             >
               <span className="text-[11px] text-white/45 font-mono truncate">
-                app.ledger.io/{active}
+                app.bokfy.se/{active}
               </span>
             </div>
           </div>

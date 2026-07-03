@@ -214,7 +214,7 @@ export const VismaConnectCard = ({ companyId, onFetched }: Props) => {
       <div className="flex items-center gap-1.5">
         <Lock className="h-3 w-3 text-[#94A3B8]" />
         <p className="text-[10px] text-[#94A3B8]">
-          Ledger.io begär endast läsbehörighet. Vi kan aldrig ändra data i Visma.
+          Bokfy begär endast läsbehörighet. Vi kan aldrig ändra data i Visma.
         </p>
       </div>
     </div>

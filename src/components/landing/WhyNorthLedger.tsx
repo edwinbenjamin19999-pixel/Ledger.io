@@ -20,7 +20,7 @@ const CONTO = [
 
 /**
  * FLAT JÄMFÖRELSE — vit sektion. Legacy = grått muted-block,
- * Ledger.io = blue-50-block med tjock blå kant (border-2).
+ * Bokfy = blue-50-block med tjock blå kant (border-2).
  * Färg och kant bär vinnaren — ingen glow.
  */
 export const WhyNorthLedger = () => {
@@ -59,11 +59,11 @@ export const WhyNorthLedger = () => {
             </ul>
           </div>
 
-          {/* Ledger.io — blue-50-block med tjock blå kant */}
+          {/* Bokfy — blue-50-block med tjock blå kant */}
           <div className="rounded-lg border-2 border-[#2563EB] bg-blue-50 p-7">
             <div className="mb-5 flex items-center justify-between">
               <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#2563EB]">
-                Ledger.io
+                Bokfy
               </div>
               <span className="inline-flex items-center gap-1 rounded-full bg-[#2563EB] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
                 <Check className="h-3 w-3" strokeWidth={3} aria-hidden />

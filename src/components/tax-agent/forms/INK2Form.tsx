@@ -205,7 +205,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
   // SRU export
   const exportSRU = () => { const company = companies.find(c => c.id === selectedCompany);
     const orgNr = company?.org_number || "0000000000";
-    const infoContent = `#DATABESKRIVNING\n#ORGNR ${orgNr}\n#UPPGJORD ${new Date().toISOString().split("T")[0]}\n#PROGRAM Ledger.io\n#FILNAMN BLANKETTER.SRU\n`;
+    const infoContent = `#DATABESKRIVNING\n#ORGNR ${orgNr}\n#UPPGJORD ${new Date().toISOString().split("T")[0]}\n#PROGRAM Bokfy\n#FILNAMN BLANKETTER.SRU\n`;
     const blankettLines = [`#BLANKETT INK2`, `#IDENTITET ${orgNr} ${selectedYear}`];
     for (const f of fields) blankettLines.push(`#UPPGIFT ${f.code} ${f.value}`);
     blankettLines.push(`#UPPGIFT 7050 ${taxableIncome}`, `#UPPGIFT 7051 ${tax}`, `#BLANKETTSLUT`, `#FIL_SLUT`);

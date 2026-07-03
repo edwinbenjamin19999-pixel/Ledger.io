@@ -236,7 +236,7 @@ export const InteractiveUseCases = () => {
             className="text-[14px] text-[#3b82f6] hover:text-[#3b82f6] hover:bg-white/[0.06] gap-1.5"
           >
             <Play className="w-3.5 h-3.5" />
-            {autoPlaying ? "Kör demo..." : "Se hur Ledger.io jobbar →"}
+            {autoPlaying ? "Kör demo..." : "Se hur Bokfy jobbar →"}
           </Button>
         </div>
 

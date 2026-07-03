@@ -61,7 +61,7 @@ export const DashboardAIInput = ({ companyId }: Props = {}) => {
 
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-full max-w-[600px] px-4 z-50">
-      <div className="rounded-2xl border border-border bg-card/95 backdrop-blur-xl shadow-[0_8px_40px_rgba(0,0,0,0.15)] overflow-hidden">
+      <div className="rounded-2xl border border-border bg-card/95  shadow-[0_8px_40px_rgba(0,0,0,0.15)] overflow-hidden">
         {(response || loading) && (
           <div className="px-4 pt-3 pb-2 border-b border-border">
             <div className="flex items-start gap-2">

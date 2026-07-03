@@ -218,7 +218,7 @@ export function PayFTaxDialog({
                 active={method === "manual"}
                 icon={CheckCircle2}
                 title="Markera som betald manuellt"
-                description="Endast bokföring. Använd om betalningen redan gjorts utanför Ledger.io."
+                description="Endast bokföring. Använd om betalningen redan gjorts utanför Bokfy."
                 onClick={() => setMethod("manual")}
               />
             </div>
@@ -403,7 +403,7 @@ function buildPain001Xml(p: {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
   <CstmrCdtTrfInitn>
-    <GrpHdr><MsgId>${msgId}</MsgId><CreDtTm>${new Date().toISOString()}</CreDtTm><NbOfTxs>1</NbOfTxs><CtrlSum>${amt}</CtrlSum><InitgPty><Nm>Ledger.io</Nm></InitgPty></GrpHdr>
+    <GrpHdr><MsgId>${msgId}</MsgId><CreDtTm>${new Date().toISOString()}</CreDtTm><NbOfTxs>1</NbOfTxs><CtrlSum>${amt}</CtrlSum><InitgPty><Nm>Bokfy</Nm></InitgPty></GrpHdr>
     <PmtInf>
       <PmtInfId>${msgId}-1</PmtInfId><PmtMtd>TRF</PmtMtd><ReqdExctnDt>${p.executionDate}</ReqdExctnDt>
       <Dbtr><Nm>Företag</Nm></Dbtr>

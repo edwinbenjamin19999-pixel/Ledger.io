@@ -27,7 +27,7 @@ const Privacy = () => { const navigate = useNavigate();
           <CardContent className="prose prose-sm max-w-none dark:prose-invert">
             <h2>1. Personuppgiftsansvarig</h2>
             <p>
-              RE Equity Partners AB, org.nr 559164-8208 ("Ledger.io", "vi", "oss"), är 
+              RE Equity Partners AB, org.nr 559164-8208 ("Bokfy", "vi", "oss"), är 
               personuppgiftsansvarig för behandlingen av dina personuppgifter i enlighet 
               med EU:s allmänna dataskyddsförordning (GDPR) och svensk dataskyddslagstiftning.
             </p>
@@ -36,7 +36,7 @@ const Privacy = () => { const navigate = useNavigate();
               RE Equity Partners AB<br />
               Org.nr: 559164-8208<br />
               Karlsviksgatan 15, Stockholm, Sverige<br />
-              E-post: info@ledger.io
+              E-post: info@bokfy.se
             </p>
 
             <h2>2. Vilka personuppgifter samlar vi in?</h2>
@@ -179,7 +179,7 @@ const Privacy = () => { const navigate = useNavigate();
             </ul>
             <p>
               Utöva dina rättigheter via <a href="/gdpr" className="text-primary hover:underline">GDPR-inställningar</a> i 
-              din profil eller kontakta oss på info@ledger.io. Vi svarar inom 30 dagar.
+              din profil eller kontakta oss på info@bokfy.se. Vi svarar inom 30 dagar.
             </p>
 
             <h2>7. Cookies</h2>
@@ -214,7 +214,7 @@ const Privacy = () => { const navigate = useNavigate();
               Frågor om denna policy? Kontakta oss:<br />
               RE Equity Partners AB<br />
               Karlsviksgatan 15, Stockholm<br />
-              E-post: info@ledger.io
+              E-post: info@bokfy.se
             </p>
           </CardContent>
         </Card>

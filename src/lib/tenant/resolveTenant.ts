@@ -38,17 +38,17 @@ export interface ResolvedTenant {
 
 /**
  * Resolve a tenant from:
- *  1. Subdomain (clientname.ledger.io → slug = "clientname")
+ *  1. Subdomain (clientname.bokfy.se → slug = "clientname")
  *  2. Explicit slug param (e.g. /wl/:slug/login)
- * Standard Ledger.io hosts (ledger.io, app.ledger.io, *.lovable.app) return null.
+ * Standard Bokfy hosts (bokfy.se, app.bokfy.se, *.lovable.app) return null.
  */
 export function resolveTenantSlugFromHost(hostname: string): string | null {
   const RESERVED = new Set(["app", "www", "api", "admin", "id-preview", "preview"]);
   const host = hostname.toLowerCase();
-  if (host === "ledger.io" || host === "localhost") return null;
+  if (host === "bokfy.se" || host === "localhost") return null;
   if (host.endsWith(".lovable.app") || host.endsWith(".lovableproject.com")) return null;
-  if (host.endsWith(".ledger.io")) {
-    const sub = host.replace(".ledger.io", "");
+  if (host.endsWith(".bokfy.se")) {
+    const sub = host.replace(".bokfy.se", "");
     if (RESERVED.has(sub) || sub.includes(".")) return null;
     return sub;
   }
@@ -78,7 +78,7 @@ async function hydrateTenant(tenant: any): Promise<ResolvedTenant> {
       trust_bullets: ["Automatisk bokföring", "Realtidsanalys", "Full revisionslogg", "Spårbar AI"],
       show_bankid: true, show_password_login: true,
       support_email: null, support_url: null,
-      footer_attribution: "Powered by Ledger.io",
+      footer_attribution: "Powered by Bokfy",
     },
   };
 }

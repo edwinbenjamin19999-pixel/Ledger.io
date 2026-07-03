@@ -168,7 +168,7 @@ const AdvisorInvoices = () => {
             Kundfakturering
           </h1>
           <p className="text-[#64748B] mt-1.5">
-            Samma motor som standard-Ledger.io — orkestrerad över alla {clients.length} klienter.
+            Samma motor som standard-Bokfy — orkestrerad över alla {clients.length} klienter.
           </p>
         </div>
         <div className="flex items-center gap-2">

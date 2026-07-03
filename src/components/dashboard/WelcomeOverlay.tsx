@@ -27,18 +27,18 @@ export const WelcomeOverlay = ({ onComplete, durationMs = 2600, companyName }: W
 
   const greeting = companyName
     ? `Välkommen, ${companyName}`
-    : "Välkommen till Ledger.io";
+    : "Välkommen till Bokfy";
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white/95 backdrop-blur-sm transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white/95  transition-opacity duration-300 ${
         fadingOut ? "opacity-0" : "opacity-100"
       }`}
       aria-live="polite"
     >
       <div className="flex items-center gap-0 mb-6">
-        <span className="text-3xl font-[800] text-[#3b82f6]">Ledger</span>
-        <span className="text-3xl font-[800] text-[#0f1f35]">.io</span>
+        <span className="text-3xl font-[800] text-[#3b82f6]">Bok</span>
+        <span className="text-3xl font-[800] text-[#0f1f35]">fy</span>
       </div>
 
       <h1 className="text-[22px] font-bold text-[#0f1f35] tracking-tight text-center px-6">

@@ -18,10 +18,10 @@ export const AIInsightHighlight = ({ companyId }: AIInsightHighlightProps) => {
   if (data.status === "loading" || data.status === "no-data") {
     return (
       <div className="relative rounded-2xl overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3b82f6]/15 to-[#3b82f6]/15 rounded-2xl" />
+        <div className="absolute inset-0 bg-[#3b82f6]/15 rounded-2xl" />
         <div className="absolute inset-[1px] rounded-2xl bg-card" />
         <div className="relative p-5 flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3b82f6]/20 to-[#3b82f6]/20 flex items-center justify-center flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[#3b82f6]/20 flex items-center justify-center flex-shrink-0">
             <Sparkles className="w-5 h-5 text-[#3b82f6]" />
           </div>
           <div className="flex-1 min-w-0">
@@ -39,10 +39,10 @@ export const AIInsightHighlight = ({ companyId }: AIInsightHighlightProps) => {
   if (data.status === "limited") {
     return (
       <div className="relative rounded-2xl overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3b82f6]/15 to-[#3b82f6]/15 rounded-2xl" />
+        <div className="absolute inset-0 bg-[#3b82f6]/15 rounded-2xl" />
         <div className="absolute inset-[1px] rounded-2xl bg-card" />
         <div className="relative p-5 flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3b82f6]/20 to-[#3b82f6]/20 flex items-center justify-center flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[#3b82f6]/20 flex items-center justify-center flex-shrink-0">
             <Sparkles className="w-5 h-5 text-[#3b82f6]" />
           </div>
           <div className="flex-1 min-w-0">
@@ -83,11 +83,11 @@ export const AIInsightHighlight = ({ companyId }: AIInsightHighlightProps) => {
 
   return (
     <div className="relative rounded-2xl overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#3b82f6]/20 to-[#3b82f6]/20 rounded-2xl" />
+      <div className="absolute inset-0 bg-[#3b82f6]/20 rounded-2xl" />
       <div className="absolute inset-[1px] rounded-2xl bg-card" />
       <div className="relative p-5 space-y-3">
         <div className="flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3b82f6]/20 to-[#3b82f6]/20 flex items-center justify-center flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[#3b82f6]/20 flex items-center justify-center flex-shrink-0">
             <TrendIcon className={`w-5 h-5 ${trendColor}`} />
           </div>
           <div className="flex-1 min-w-0">

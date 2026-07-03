@@ -38,7 +38,7 @@ export const AutomationScore = ({ companyId }: AutomationScoreProps) => {
   };
 
   if (loading) return (
-    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-lg border-0 overflow-hidden p-8 flex items-center justify-center">
+    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-none border-0 overflow-hidden p-8 flex items-center justify-center">
       <div className="text-center text-muted-foreground text-sm">Laddar automatiseringsgrad...</div>
     </div>
   );
@@ -64,7 +64,7 @@ export const AutomationScore = ({ companyId }: AutomationScoreProps) => {
   ];
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-lg border-0 overflow-hidden">
+    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-none border-0 overflow-hidden">
       {/* Dark header with grade circle */}
       <div className="bg-[#0F1F3D] px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-3">

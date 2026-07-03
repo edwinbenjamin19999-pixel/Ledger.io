@@ -21,7 +21,7 @@ const SIE_FORMATS = [
 ];
 
 const PREVIEW_LINES = `#FLAGGA 0
-#PROGRAM "Ledger.io" 2.0
+#PROGRAM "Bokfy" 2.0
 #FORMAT PC8
 #GEN 20260410
 #SIETYP 4

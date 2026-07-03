@@ -182,17 +182,17 @@ export default function ClientOnboardingWizard() {
 
         {step === 1 && (
           <>
-            <h2 className="text-lg font-bold text-[#0F172A]">Bjud in klient till Ledger.io</h2>
+            <h2 className="text-lg font-bold text-[#0F172A]">Bjud in klient till Bokfy</h2>
             <div className="rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] p-4 flex items-center justify-between">
               <div>
-                <div className="text-sm font-semibold text-[#0F172A]">Klienten ska ha tillgång till Ledger.io</div>
+                <div className="text-sm font-semibold text-[#0F172A]">Klienten ska ha tillgång till Bokfy</div>
                 <div className="text-xs text-[#64748B]">Klienten får en egen arbetsyta med byråns varumärke.</div>
               </div>
               <Switch checked={data.invite_to_northledger} onCheckedChange={(v) => set("invite_to_northledger", v)} />
             </div>
             {data.invite_to_northledger && (
               <div className="rounded-2xl border border-[#E2E8F0] p-4 text-sm text-[#475569]">
-                En byrå-brandad inbjudan skickas till <span className="font-semibold text-[#0F172A]">{data.contact_email || "—"}</span> som förklarar vad Ledger.io är.
+                En byrå-brandad inbjudan skickas till <span className="font-semibold text-[#0F172A]">{data.contact_email || "—"}</span> som förklarar vad Bokfy är.
               </div>
             )}
           </>

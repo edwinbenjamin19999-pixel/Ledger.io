@@ -68,7 +68,7 @@ const AdminDashboard = () => { const { user, loading } = useAuth();
   }, [user]);
 
   const checkAccessAndLoad = async () => { if (!user) return;
-    // Check if user is a platform admin (internal Ledger.io team only)
+    // Check if user is a platform admin (internal Bokfy team only)
     const { data: isAdmin } = await supabase.rpc("is_platform_admin", { _user_id: user.id,
     });
 
@@ -417,7 +417,7 @@ const AdminDashboard = () => { const { user, loading } = useAuth();
             <div>
               <label className="text-sm font-medium">KAM:s e-postadress</label>
               <Input
-                placeholder="kam@ledger.io"
+                placeholder="kam@bokfy.se"
                 value={kamEmail}
                 onChange={e => setKamEmail(e.target.value)}
               />

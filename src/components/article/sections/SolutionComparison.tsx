@@ -12,7 +12,7 @@ export const SolutionComparison = ({ data }: { data: SolutionComparisonData }) =
       <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#3b82f6]">Automation</span>
     </div>
     <h2 className="!mt-4 !text-[28px] md:!text-[32px] font-semibold tracking-tight !text-white !mb-4">
-      Hur Ledger.io automatiserar detta
+      Hur Bokfy automatiserar detta
     </h2>
     <p className="text-white/70 leading-[1.75] max-w-2xl !mb-0">{data.intro}</p>
 
@@ -32,11 +32,11 @@ export const SolutionComparison = ({ data }: { data: SolutionComparisonData }) =
         </ul>
       </div>
 
-      {/* Med Ledger.io */}
+      {/* Med Bokfy */}
       <div className="relative rounded-2xl border border-[#3b82f6]/20 bg-[#3b82f6]/[0.08] p-5 overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-px bg-[#3b82f6]/40" />
         <div className="inline-flex items-center gap-1.5 rounded-full bg-[#3b82f6]/15 border border-[#3b82f6]/30 px-2.5 py-1 text-[11px] uppercase tracking-[0.14em] font-semibold text-[#3b82f6] shadow-[0_0_20px_-4px_rgba(34,211,238,0.4)]">
-          Med Ledger.io
+          Med Bokfy
         </div>
         <ul className="mt-4 space-y-3">
           {data.comparison.map((row, i) => (

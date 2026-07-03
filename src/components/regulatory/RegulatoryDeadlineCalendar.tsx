@@ -40,7 +40,7 @@ function getDeadlineColor(daysLeft: number, status: string): string { if (status
 function generateICS(deadlines: ComplianceDeadline[]): string { const lines = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Ledger.io//Regelverksbevakning//SV",
+    "PRODID:-//Bokfy//Regelverksbevakning//SV",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
   ];
@@ -53,7 +53,7 @@ function generateICS(deadlines: ComplianceDeadline[]): string { const lines = [
       `SUMMARY:${d.title}`,
       `DESCRIPTION:${d.description}${d.autoAction ? "\\n" + d.autoAction : ""}`,
       `CATEGORIES:${d.category}`,
-      `UID:${d.id}@ledger.io`,
+      `UID:${d.id}@bokfy.se`,
       "END:VEVENT"
     );
   }

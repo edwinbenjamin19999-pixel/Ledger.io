@@ -1,10 +1,10 @@
 /**
- * DS Table v1 — visual primitives for Ledger.io data tables.
+ * DS Table v1 — visual primitives for Bokfy data tables.
  *
  * Pure presentation. No sorting/pagination/filter logic — wire those in the
  * caller (just pass `sortDir` to <DSTh sortDir="asc"> and your own onClick).
  *
- * Spec source: Ledger.io design system — table standard.
+ * Spec source: Bokfy design system — table standard.
  */
 import { ReactNode, ThHTMLAttributes, TdHTMLAttributes, HTMLAttributes, InputHTMLAttributes, forwardRef } from "react";
 import { cn } from "@/lib/utils";

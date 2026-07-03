@@ -67,7 +67,7 @@ const STATUS_TO_STAGE: Record<string, SupplierInvoiceStage> = {
 /**
  * Cross-client supplier-invoice ledger for the WL workspace.
  * Reuses the standard `invoices` table filtered to `invoice_direction = incoming`
- * so nothing is duplicated from the Ledger.io standard supplier engine.
+ * so nothing is duplicated from the Bokfy standard supplier engine.
  *
  * AI risk heuristics (no extra LLM call):
  *  - Amount > 3x supplier median for the same client → "ovanligt belopp"

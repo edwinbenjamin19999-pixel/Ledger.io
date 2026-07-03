@@ -5,12 +5,12 @@ import { toast } from "sonner";
 
 export const DPIATemplate = () => { const handleDownload = () => { const dpiaContent = `
 # Dataskyddskonsekvensbedömning (DPIA)
-# Ledger.io - Automatiserad Bokföringsplattform
+# Bokfy - Automatiserad Bokföringsplattform
 
 ## 1. Beskrivning av behandlingen
 
 ### 1.1 Ändamål
-Ledger.io är en automatiserad bokföringsplattform som behandlar ekonomisk data och personuppgifter för att:
+Bokfy är en automatiserad bokföringsplattform som behandlar ekonomisk data och personuppgifter för att:
 - Tillhandahålla bokförings- och redovisningstjänster
 - Automatisera bokföring med AI-stöd
 - Hantera löner och personaladministration
@@ -161,7 +161,7 @@ Senast: ${new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toLocaleDateString('s
 
 **Kontakt**
 För frågor om denna DPIA:
-E-post: privacy@ledger.io
+E-post: privacy@bokfy.se
 Telefon: [Ditt telefonnummer]
 `;
 
@@ -169,7 +169,7 @@ Telefon: [Ditt telefonnummer]
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `DPIA-Ledger.io-${new Date().toISOString().split('T')[0]}.md`;
+    a.download = `DPIA-Bokfy-${new Date().toISOString().split('T')[0]}.md`;
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);

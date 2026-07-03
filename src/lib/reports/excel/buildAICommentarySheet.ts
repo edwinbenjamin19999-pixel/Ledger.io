@@ -33,7 +33,7 @@ export function buildAICommentarySheet(wb: Workbook, input: AICommentaryInput): 
   r++;
 
   ws.mergeCells(r, 1, r, 2);
-  ws.getCell(r, 1).value = "Genererad av Ledger.io · Validera alltid mot underlag innan extern presentation.";
+  ws.getCell(r, 1).value = "Genererad av Bokfy · Validera alltid mot underlag innan extern presentation.";
   ws.getCell(r, 1).font = FONTS.meta;
   r += 2;
 

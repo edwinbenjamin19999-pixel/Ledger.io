@@ -151,7 +151,7 @@ const AdvisorSupplierInvoices = () => {
             Leverantörsattest
           </h1>
           <p className="text-[#64748B] mt-1.5">
-            Samma leverantörsmotor som Ledger.io standard — orkestrerad över {clients.length}{" "}
+            Samma leverantörsmotor som Bokfy standard — orkestrerad över {clients.length}{" "}
             klienter med obligatorisk klient-attest före betalning.
           </p>
         </div>

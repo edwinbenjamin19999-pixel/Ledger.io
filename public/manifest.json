@@ -1,6 +1,6 @@
 {
-  "name": "Ledger.io",
-  "short_name": "Ledger.io",
+  "name": "Bokfy",
+  "short_name": "Bokfy",
   "description": "AI-driven redovisningsplattform för svenska företag",
   "start_url": "/",
   "display": "standalone",

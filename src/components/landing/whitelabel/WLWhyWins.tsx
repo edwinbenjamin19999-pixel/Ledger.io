@@ -49,7 +49,7 @@ export const WLWhyWins = () => {
 
           <div className="rounded-xl border border-[#3b82f6]/20 bg-[#3b82f6]/[0.04] p-8">
             <div className="text-[11.5px] uppercase tracking-wider text-[#3b82f6] font-medium mb-5">
-              Med Ledger.io White Label
+              Med Bokfy White Label
             </div>
             <ul className="space-y-4">
               {WL.map((t) => (

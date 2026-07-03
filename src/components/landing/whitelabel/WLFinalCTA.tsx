@@ -34,7 +34,7 @@ export const WLFinalCTA = () => {
           <Button
             size="lg"
             variant="glass"
-            onClick={() => (window.location.href = "mailto:demo@ledger.io?subject=White Label demo")}
+            onClick={() => (window.location.href = "mailto:demo@bokfy.se?subject=White Label demo")}
             className="h-12 px-7 rounded-lg"
           >
             Boka demo

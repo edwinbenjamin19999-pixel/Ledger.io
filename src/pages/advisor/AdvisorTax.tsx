@@ -123,7 +123,7 @@ const AdvisorTax = () => {
           </p>
           <h1 className="text-3xl font-bold tracking-tight text-[#0F172A] mt-1">Skatteorkestrering</h1>
           <p className="text-[#64748B] mt-1.5">
-            Samma skattemotor som standard-Ledger.io — orkestrerad över alla {clients.length} klienter.
+            Samma skattemotor som standard-Bokfy — orkestrerad över alla {clients.length} klienter.
           </p>
         </div>
         <div className="flex items-center gap-2">

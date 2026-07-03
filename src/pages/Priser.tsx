@@ -135,7 +135,7 @@ const Priser = () => {
                 </p>
               </div>
               <button
-                onClick={() => (window.location.href = "mailto:kontakt@ledger.io")}
+                onClick={() => (window.location.href = "mailto:kontakt@bokfy.se")}
                 className="mt-6 w-full h-12 rounded-xl bg-transparent hover:bg-white/5 text-white font-semibold border border-white/20 hover:border-white/40 text-[15px] transition-colors"
               >
                 Boka demo →
@@ -204,7 +204,7 @@ const Priser = () => {
               Kom igång gratis →
             </button>
             <button
-              onClick={() => (window.location.href = "mailto:kontakt@ledger.io")}
+              onClick={() => (window.location.href = "mailto:kontakt@bokfy.se")}
               className="h-12 px-8 rounded-xl bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors"
             >
               Boka demo

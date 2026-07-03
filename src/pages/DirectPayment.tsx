@@ -556,7 +556,7 @@ const DirectPayment = () => { const { user, loading } = useAuth();
   }).length;
 
   // ═══════════════ pain.001 generation ═══════════════
-  const generatePain001 = (company: Company, invoicesToPay: PayableInvoice[], execDate: string): string => { const msgId = `Ledger.io-${Date.now()}`;
+  const generatePain001 = (company: Company, invoicesToPay: PayableInvoice[], execDate: string): string => { const msgId = `Bokfy-${Date.now()}`;
     // Calculate net amounts per invoice (after credit matching)
     const netInvoices = invoicesToPay.map(inv => { const credit = matchedCredits.get(inv.id);
       const netAmount = credit ? inv.total_amount + credit.total_amount : inv.total_amount;

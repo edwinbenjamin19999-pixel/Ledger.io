@@ -158,7 +158,7 @@ export default function Funktioner() {
           Allt du behöver. Inget du inte behöver.
         </h1>
         <p className="text-white/50 text-lg max-w-xl mx-auto">
-          Ledger.io sköter hela bokföringen i bakgrunden — från transaktion till deklaration.
+          Bokfy sköter hela bokföringen i bakgrunden — från transaktion till deklaration.
         </p>
       </section>
 

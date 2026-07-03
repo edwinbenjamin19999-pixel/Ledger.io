@@ -2,7 +2,7 @@ import { useTenant } from "@/contexts/TenantContext";
 
 /**
  * Tenant identity strip for the topbar — shows tenant logo + workspace name
- * so users feel they're in their own platform, not standard Ledger.io.
+ * so users feel they're in their own platform, not standard Bokfy.
  * Renders nothing for non-tenant (standard) sessions.
  */
 export function TenantTopbarIdentity() {

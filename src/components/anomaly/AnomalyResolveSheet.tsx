@@ -118,7 +118,7 @@ export function AnomalyResolveSheet({ anomaly, open, companyId, onClose, onResol
 
   const handleEscalateEmail = () => { const subject = `Eskalerad anomali: ${anomaly.title}`;
     const body = [
-      `ANOMALIRAPPORT -- Ledger.io`,
+      `ANOMALIRAPPORT -- Bokfy`,
       ``,
       `Typ: ${anomaly.category}`,
       `Allvarlighetsgrad: ${SEVERITY_LABELS[anomaly.severity]}`,
@@ -132,7 +132,7 @@ export function AnomalyResolveSheet({ anomaly, open, companyId, onClose, onResol
       ``,
       `Vänligen granska och återkoppla med åtgärdsrekommendation.`,
       ``,
-      `-- Ledger.io Anomalidetektion`,
+      `-- Bokfy Anomalidetektion`,
     ].join("\n");
     window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank");
     saveResolution("escalated");

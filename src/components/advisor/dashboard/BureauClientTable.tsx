@@ -192,7 +192,7 @@ export const BureauClientTable = ({ onAddClient }: Props) => {
 
   const open = (s: BureauClientSummary) => {
     setActiveClient({ id: s.company_id, name: s.company_name, orgNumber: s.org_number });
-    // Enter the standard Ledger.io dashboard scoped to this client.
+    // Enter the standard Bokfy dashboard scoped to this client.
     // The cyan "Byråöversikt" banner shown on every standard page lets the
     // advisor jump back to the bureau overview at any time.
     navigate("/dashboard");

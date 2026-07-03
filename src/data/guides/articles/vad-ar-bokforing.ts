@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const vadArBokforing: Article = {
   slug: "vad-ar-bokforing",
   h1: "Vad är bokföring? Enkelt förklarat för småföretagare",
-  metaTitle: "Vad är bokföring? Enkelt förklarat 2026 | Ledger.io",
+  metaTitle: "Vad är bokföring? Enkelt förklarat 2026 | Bokfy",
   metaDescription:
     "En tydlig introduktion till bokföring för småföretagare. Dubbel bokföring, BFL-krav, K2 vs K3 och vad du faktiskt måste göra varje månad.",
   keywords: [
@@ -134,12 +134,12 @@ export const vadArBokforing: Article = {
     },
     {
       q: "Kan jag sköta bokföringen själv?",
-      a: "Ja, men det kräver tid och kunskap. AI-verktyg som Ledger.io kan automatisera 95 % av arbetet — du fokuserar på att granska och godkänna istället för att mata in data manuellt.",
+      a: "Ja, men det kräver tid och kunskap. AI-verktyg som Bokfy kan automatisera 95 % av arbetet — du fokuserar på att granska och godkänna istället för att mata in data manuellt.",
     },
   ],
   internalLinks: {
     related: ["debet-kredit", "bokfora-kvitto", "moms-sverige"],
-    product: { label: "Se hur Ledger.io sköter bokföringen åt dig", href: "/features/accounting-automation" },
+    product: { label: "Se hur Bokfy sköter bokföringen åt dig", href: "/features/accounting-automation" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

@@ -69,7 +69,7 @@ export const INTEGRATIONS_BY_INDUSTRY: Record<string, IntegrationRecommendation[
       description: "Kassasystem med export av Z-rapporter.",
       setupSteps: [
         "I Winpos → Admin → Integrationer",
-        "Aktivera Ledger.io-export",
+        "Aktivera Bokfy-export",
         "Kopiera API-nyckel och klistra in här",
       ],
       apiKeyName: "WINPOS_API_KEY",
@@ -95,9 +95,9 @@ export const INTEGRATIONS_BY_INDUSTRY: Record<string, IntegrationRecommendation[
       id: "fortnox",
       name: "Fortnox",
       category: "booking",
-      description: "Migrera från Fortnox till Ledger.io — all historik följer med.",
+      description: "Migrera från Fortnox till Bokfy — all historik följer med.",
       setupSteps: [
-        "Gå till /migration i Ledger.io",
+        "Gå till /migration i Bokfy",
         "Välj Fortnox → OAuth",
         "Godkänn åtkomst",
       ],
@@ -114,7 +114,7 @@ export const INTEGRATIONS_BY_INDUSTRY: Record<string, IntegrationRecommendation[
       description: "Property Management System — synka bokningar, RevPAR och beläggning.",
       setupSteps: [
         "Kontakta Sitewize support",
-        "Begär API-åtkomst till Ledger.io",
+        "Begär API-åtkomst till Bokfy",
         "Klistra in nyckeln här",
       ],
       apiKeyName: "SITEWIZE_API_KEY",
@@ -196,7 +196,7 @@ export const INTEGRATIONS_BY_INDUSTRY: Record<string, IntegrationRecommendation[
     },
     {
       id: "tidrapportering",
-      name: "Ledger.io Tidrapportering",
+      name: "Bokfy Tidrapportering",
       category: "industry",
       description: "Inbyggd tid + projektredovisning.",
       setupSteps: ["Aktiveras automatiskt — gå till /tidrapportering"],

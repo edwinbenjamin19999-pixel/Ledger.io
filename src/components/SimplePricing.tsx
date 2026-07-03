@@ -58,7 +58,7 @@ export const SimplePricing = () => { const navigate = useNavigate();
         
         <Card className="max-w-md mx-auto border-2 border-primary shadow-lg">
           <CardHeader className="text-center pb-4">
-            <CardTitle className="text-xl">Ledger.io Komplett</CardTitle>
+            <CardTitle className="text-xl">Bokfy Komplett</CardTitle>
             <div className="mt-2">
               <span className="text-5xl font-bold">399</span>
               <span className="text-muted-foreground ml-1">kr/bolag/mån</span>

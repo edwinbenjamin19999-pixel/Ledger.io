@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const debetKredit: Article = {
   slug: "debet-kredit",
   h1: "Debet och kredit — komplett guide med exempel",
-  metaTitle: "Debet och kredit förklarat — komplett guide | Ledger.io",
+  metaTitle: "Debet och kredit förklarat — komplett guide | Bokfy",
   metaDescription:
     "Förstå debet och kredit en gång för alla. Regler per kontoklass, T-konton och fyra konkreta exempel från svensk bokföring.",
   keywords: [
@@ -112,12 +112,12 @@ export const debetKredit: Article = {
     },
     {
       q: "Måste jag förstå debet/kredit för att driva företag?",
-      a: "Det hjälper, men moderna AI-verktyg som Ledger.io hanterar regelverket åt dig. Du behöver främst förstå vad som händer — inte exakt vilket konto som debiteras.",
+      a: "Det hjälper, men moderna AI-verktyg som Bokfy hanterar regelverket åt dig. Du behöver främst förstå vad som händer — inte exakt vilket konto som debiteras.",
     },
   ],
   internalLinks: {
     related: ["vad-ar-bokforing", "bokfora-kvitto", "bokfora-faktura"],
-    product: { label: "Låt Ledger.io hantera kontoval åt dig", href: "/features/accounting-automation" },
+    product: { label: "Låt Bokfy hantera kontoval åt dig", href: "/features/accounting-automation" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

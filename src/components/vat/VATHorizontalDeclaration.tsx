@@ -357,7 +357,7 @@ export const VATHorizontalDeclaration = ({
 
   const exportSRU = () => {
     const orgNr = orgNumber || "0000000000";
-    const infoContent = `#DATABESKRIVNING\n#ORGNR ${orgNr}\n#UPPGJORD ${new Date().toISOString().split("T")[0]}\n#PROGRAM Ledger.io\n#FILNAMN BLANKETTER.SRU\n`;
+    const infoContent = `#DATABESKRIVNING\n#ORGNR ${orgNr}\n#UPPGJORD ${new Date().toISOString().split("T")[0]}\n#PROGRAM Bokfy\n#FILNAMN BLANKETTER.SRU\n`;
     const d = effectiveData;
     const blankettContent = `#BLANKETT SKV4700\n#IDENTITET ${orgNr} ${periodLabel}\n#UPPGIFT 7011 05 ${d.box05}\n#UPPGIFT 7011 06 ${d.box06}\n#UPPGIFT 7011 07 ${d.box07}\n#UPPGIFT 7011 08 ${d.box08}\n#UPPGIFT 7011 10 ${d.box10}\n#UPPGIFT 7011 11 ${d.box11}\n#UPPGIFT 7011 12 ${d.box12}\n#UPPGIFT 7011 20 ${d.box20}\n#UPPGIFT 7011 21 ${d.box21}\n#UPPGIFT 7011 22 ${d.box22}\n#UPPGIFT 7011 23 ${d.box23}\n#UPPGIFT 7011 24 ${d.box24}\n#UPPGIFT 7011 30 ${d.box30}\n#UPPGIFT 7011 31 ${d.box31}\n#UPPGIFT 7011 32 ${d.box32}\n#UPPGIFT 7011 48 ${d.box48}\n#UPPGIFT 7011 49 ${vatToPay}\n#BLANKETTSLUT\n#FIL_SLUT`;
     const a1 = document.createElement("a");

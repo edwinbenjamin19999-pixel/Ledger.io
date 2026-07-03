@@ -11,7 +11,7 @@ const points = [
     icon: CalendarX,
     title: "Missade deadlines",
     description:
-      "Momsdeklarationer, AGI och bokslut — det är lätt att missa. Inte med Ledger.io.",
+      "Momsdeklarationer, AGI och bokslut — det är lätt att missa. Inte med Bokfy.",
   },
   {
     icon: Calculator,
@@ -55,7 +55,7 @@ export const PainPoints = () => {
           Känner du igen dig?
         </h2>
         <p className="text-center text-[16px] text-[#475569] mb-12 max-w-lg mx-auto">
-          De flesta företagare kämpar med samma saker. Ledger.io tar bort dem.
+          De flesta företagare kämpar med samma saker. Bokfy tar bort dem.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">

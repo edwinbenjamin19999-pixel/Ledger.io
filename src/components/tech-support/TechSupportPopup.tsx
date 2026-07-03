@@ -168,7 +168,7 @@ export function TechSupportPopup({ open, plan, onClose, onResult }: Props) {
                 asChild
               >
                 <a
-                  href={`mailto:support@ledger.io?subject=${encodeURIComponent(
+                  href={`mailto:support@bokfy.se?subject=${encodeURIComponent(
                     "Teknisk support: " + (plan.incident.module ?? "okänd modul"),
                   )}&body=${encodeURIComponent(
                     `Incident-ID: ${plan.incident.id}\nKlassificering: ${plan.incident.classification}\nFel: ${plan.incident.errorMessage}`,

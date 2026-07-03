@@ -34,7 +34,7 @@ export const DashboardHeader = () => { const { user, signOut } = useAuth();
             onClick={() => navigate("/dashboard")}
             className="text-2xl font-bold bg-clip-text text-transparent bg-[image:var(--gradient-accent)] cursor-pointer"
           >
-            Ledger.io
+            Bokfy
           </h1>
           
           <nav className="hidden md:flex gap-2">
@@ -131,7 +131,7 @@ export const DashboardHeader = () => { const { user, signOut } = useAuth();
 
             <Button 
               onClick={() => navigate("/bookkeep")}
-              className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground shadow-lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-none"
             >
               <Sparkles className="w-4 h-4 mr-2" />
               AI Bokför
@@ -304,7 +304,7 @@ export const DashboardHeader = () => { const { user, signOut } = useAuth();
                   </Button>
 
                   <Button 
-                    className="justify-start bg-gradient-to-r from-primary to-primary/80"
+                    className="justify-start bg-primary hover:bg-primary/90"
                     onClick={() => handleNavigate("/bookkeep")}
                   >
                     <Sparkles className="w-4 h-4 mr-2" />

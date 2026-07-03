@@ -305,7 +305,7 @@ export const KYCOnboarding = ({ companyId, onComplete }: KYCOnboardingProps) => 
                 Skattefullmakt ingår
               </h4>
               <p className="text-sm text-muted-foreground">
-                Genom att signera ger du Ledger.io fullmakt att skicka in deklarationer åt dig:
+                Genom att signera ger du Bokfy fullmakt att skicka in deklarationer åt dig:
               </p>
               <ul className="text-sm space-y-1">
                 <li className="flex items-center gap-2">

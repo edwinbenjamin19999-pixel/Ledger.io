@@ -300,7 +300,7 @@ export default function ClientPortal() {
         <div className="max-w-[960px] mx-auto px-6 py-4 text-center text-[11px] text-slate-500">
           Sammanställt av {branding?.firmName}
           {branding?.showPoweredBy && <span className="mx-2">·</span>}
-          {branding?.showPoweredBy && <span>Powered by Ledger.io</span>}
+          {branding?.showPoweredBy && <span>Powered by Bokfy</span>}
         </div>
       </footer>
     </div>

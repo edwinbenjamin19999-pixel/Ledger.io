@@ -349,12 +349,12 @@ export const EmailInbox = ({ companyId, companyName }: EmailInboxProps) => { con
               <Input
                 value={inboxAddress}
                 onChange={(e) => setInboxAddress(e.target.value)}
-                placeholder={`faktura-${(companyName || "bolag").toLowerCase().replace(/\s+/g, "-")}@inbox.ledger.io`}
+                placeholder={`faktura-${(companyName || "bolag").toLowerCase().replace(/\s+/g, "-")}@inbox.bokfy.se`}
               />
             </div>
             <div className="bg-muted/50 p-3 rounded text-xs text-muted-foreground space-y-1">
               <p><strong>Så fungerar det:</strong></p>
-              <p>1. Ange en unik e-postadress ovan (t.ex. faktura-ertbolag@inbox.ledger.io)</p>
+              <p>1. Ange en unik e-postadress ovan (t.ex. faktura-ertbolag@inbox.bokfy.se)</p>
               <p>2. Be era leverantörer skicka fakturor till den adressen</p>
               <p>3. Bifogade PDF-fakturor dyker upp här i inkorgen</p>
               <p>4. Klicka "Behandla" för att låta AI läsa av och skapa leverantörsfakturor</p>

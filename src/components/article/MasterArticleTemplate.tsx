@@ -18,7 +18,7 @@ interface Props {
 }
 
 export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
-  const url = `https://ledger.io${canonicalPath}`;
+  const url = `https://bokfy.se${canonicalPath}`;
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -27,11 +27,11 @@ export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
     description: article.metaDescription,
     datePublished: article.updatedAt,
     dateModified: article.updatedAt,
-    author: { "@type": "Organization", name: "Ledger.io" },
+    author: { "@type": "Organization", name: "Bokfy" },
     publisher: {
       "@type": "Organization",
-      name: "Ledger.io",
-      logo: { "@type": "ImageObject", url: "https://ledger.io/og-image.jpg" },
+      name: "Bokfy",
+      logo: { "@type": "ImageObject", url: "https://bokfy.se/og-image.jpg" },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     keywords: article.keywords.join(", "),

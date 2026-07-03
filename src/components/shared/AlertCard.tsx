@@ -1,6 +1,6 @@
 /**
  * Card.Alert — Semantic alert card for opportunities, risks, info, and warnings.
- * Part of the Ledger.io design system. Use instead of ad-hoc colored containers.
+ * Part of the Bokfy design system. Use instead of ad-hoc colored containers.
  */
 import { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';

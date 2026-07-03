@@ -156,9 +156,9 @@ const Auth = () => {
         const { resolveTenantSlugFromHost, fetchTenantByDomain } = await import("@/lib/tenant/resolveTenant");
         const { setActiveTenantSlug } = await import("@/hooks/useUserTenants");
         const host = window.location.hostname.toLowerCase();
-        const isStandard = host === "ledger.io" || host === "localhost" ||
+        const isStandard = host === "bokfy.se" || host === "localhost" ||
           host.endsWith(".lovable.app") || host.endsWith(".lovableproject.com") ||
-          host === "app.ledger.io" || host === "www.ledger.io";
+          host === "app.bokfy.se" || host === "www.bokfy.se";
         let tenantSlug: string | null = resolveTenantSlugFromHost(host);
         if (!tenantSlug && !isStandard) {
           const t = await fetchTenantByDomain(host);
@@ -204,7 +204,7 @@ const Auth = () => {
         return;
       }
       if (signUpData.session) {
-        toast.success("Välkommen till Ledger.io!");
+        toast.success("Välkommen till Bokfy!");
         redirectAfterAuth("/quick-onboarding");
       } else {
         toast.success(
@@ -338,8 +338,8 @@ const Auth = () => {
     <AuthShell>
       {/* Desktop logo (mobile already shown in shell) */}
       <div className="hidden lg:flex items-center gap-0 mb-10">
-        <span className="text-xl font-[800] text-[#3b82f6]">Ledger</span>
-        <span className="text-xl font-[800] text-[#0f1f35]">.io</span>
+        <span className="text-xl font-[800] text-[#3b82f6]">Bok</span>
+        <span className="text-xl font-[800] text-[#0f1f35]">fy</span>
       </div>
 
       {/* SIGN IN */}

@@ -31,7 +31,7 @@ export function exportCashflowPDF(doc: StatementDocument) {
 
 export async function exportCashflowXLSX(doc: StatementDocument) {
   const wb = new ExcelJS.Workbook();
-  wb.creator = "Ledger.io";
+  wb.creator = "Bokfy";
   wb.created = new Date();
   wb.company = doc.header.company;
   renderStatementSheet(wb, doc, "Kassaflödesanalys");

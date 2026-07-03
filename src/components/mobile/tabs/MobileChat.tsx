@@ -587,7 +587,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
             <Sparkles className="h-4 w-4 text-white" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-white font-semibold text-[15px] truncate">Ledger.io Assistent</p>
+            <p className="text-white font-semibold text-[15px] truncate">Bokfy Assistent</p>
             <div className="flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
               <span className="text-slate-400 text-xs truncate">{companyName ? `Inloggad som ${companyName}` : "Redo att hjälpa"}</span>

@@ -167,7 +167,7 @@ export const CenteredHero = () => {
 
         {/* Desktop-only: rich copy */}
         <p className="hidden sm:block text-[17px] text-white/70 mb-3 leading-relaxed max-w-[600px] mx-auto">
-          Ledger.io analyserar, bokför, stämmer av och förbereder deklarationer automatiskt. Du driver bolaget — AI gör jobbet.
+          Bokfy analyserar, bokför, stämmer av och förbereder deklarationer automatiskt. Du driver bolaget — AI gör jobbet.
         </p>
 
         <p className="hidden sm:block text-[16px] text-white/80 mb-3 max-w-[560px] mx-auto leading-relaxed">
@@ -255,7 +255,7 @@ export const CenteredHero = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-white/10" />
                 <span className="w-2.5 h-2.5 rounded-full bg-white/10" />
               </div>
-              <span className="text-[11px] text-white/30 ml-2 font-medium">Ledger.io</span>
+              <span className="text-[11px] text-white/30 ml-2 font-medium">Bokfy</span>
               <span className="ml-auto w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             </div>
 

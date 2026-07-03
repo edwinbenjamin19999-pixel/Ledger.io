@@ -19,7 +19,7 @@ export const CTA = () => { return (
               Logga in
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF] hover:shadow-[0_0_12px_rgba(6,182,212,0.12)] hover:scale-[1.02] transition-all duration-200" onClick={() => window.location.href = 'mailto:kontakt@ledger.io'}>
+            <Button variant="outline" size="lg" className="text-lg px-8 border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF] hover:shadow-[0_0_12px_rgba(6,182,212,0.12)] hover:scale-[1.02] transition-all duration-200" onClick={() => window.location.href = 'mailto:kontakt@bokfy.se'}>
               Boka demo
             </Button>
           </div>

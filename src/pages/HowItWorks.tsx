@@ -64,12 +64,12 @@ const SECTIONS: Section[] = [
 export default function HowItWorks() {
   useEffect(() => {
     const prevTitle = document.title;
-    document.title = "Hur Ledger.io fungerar | Transparens och kontroll";
+    document.title = "Hur Bokfy fungerar | Transparens och kontroll";
     const meta = document.querySelector('meta[name="description"]');
     const prevDesc = meta?.getAttribute("content") || "";
     meta?.setAttribute(
       "content",
-      "Faktisk beskrivning av vilka beslut Ledger.io fattar automatiskt, vilka som alltid kräver din godkänning, och hur korrigeringar hanteras.",
+      "Faktisk beskrivning av vilka beslut Bokfy fattar automatiskt, vilka som alltid kräver din godkänning, och hur korrigeringar hanteras.",
     );
     return () => {
       document.title = prevTitle;
@@ -82,7 +82,7 @@ export default function HowItWorks() {
 
       <PageHeader
         icon={Sparkles}
-        title="Hur Ledger.io fungerar"
+        title="Hur Bokfy fungerar"
         subtitle="Faktisk beskrivning av AI:ns roll, gränser och spårbarhet — skriven för dig som vill förstå systemet innan du litar på det."
       />
 

@@ -4,7 +4,7 @@ import { useAdvisorActiveClient } from "@/contexts/AdvisorActiveClientContext";
 
 /**
  * Cyan "← Byråöversikt · [klientnamn]" strip rendered at the very top of every
- * standard Ledger.io page whenever an advisor is operating inside a client.
+ * standard Bokfy page whenever an advisor is operating inside a client.
  *
  * Clicking the strip clears the active client and returns the advisor to the
  * bureau overview at /wl/app/dashboard.

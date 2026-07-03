@@ -116,7 +116,7 @@ const ProductRoadmap = () => {
             onClick={() => navigate("/")}
             className="text-sm font-semibold tracking-tight text-slate-900 hover:text-slate-700"
           >
-            Ledger.io
+            Bokfy
           </button>
           <Button
             onClick={() => navigate("/dashboard")}
@@ -140,7 +140,7 @@ const ProductRoadmap = () => {
             En levande finansiell plattform — byggd för att skala.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
-            Ledger.io är i produktion och driver bokföring, fakturering och moms för riktiga
+            Bokfy är i produktion och driver bokföring, fakturering och moms för riktiga
             företag. Här är de lager som utgör plattformen idag — och vart vi rör oss härnäst.
           </p>
         </section>
@@ -169,7 +169,7 @@ const ProductRoadmap = () => {
               En stabil grund — och en tydlig riktning.
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-600">
-              Ledger.io är idag en stabil och fungerande plattform för bokföring och
+              Bokfy är idag en stabil och fungerande plattform för bokföring och
               ekonomihantering. Fokus framåt ligger på automation, intelligens och
               skalbarhet — både för företag och redovisningsbyråer.
             </p>
@@ -186,7 +186,7 @@ const ProductRoadmap = () => {
       </main>
 
       <footer className="border-t border-slate-900/[0.06] py-8 text-center text-xs text-slate-500">
-        © {new Date().getFullYear()} Ledger.io · Infrastructure for Swedish finance
+        © {new Date().getFullYear()} Bokfy · Infrastructure for Swedish finance
       </footer>
     </div>
   );

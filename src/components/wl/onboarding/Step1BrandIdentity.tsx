@@ -41,7 +41,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
     trust_bullets: [],
     show_bankid: true,
     show_password_login: true,
-    footer_attribution: "Powered by Ledger.io",
+    footer_attribution: "Powered by Bokfy",
     support_email: null,
     support_url: null,
   };
@@ -58,7 +58,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
             Sätt din identitet
           </h1>
           <p className="text-sm text-slate-500 mt-1.5">
-            Detta är din plattform — inte Ledger.io. Allt uppdateras live till höger.
+            Detta är din plattform — inte Bokfy. Allt uppdateras live till höger.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
                 className="flex-1 px-3 py-2 text-sm font-mono outline-none"
               />
               <span className="bg-slate-50 border-l border-slate-200 px-3 py-2 text-xs text-slate-500 font-mono flex items-center">
-                .ledger.io
+                .bokfy.se
               </span>
             </div>
             {slugError ? (

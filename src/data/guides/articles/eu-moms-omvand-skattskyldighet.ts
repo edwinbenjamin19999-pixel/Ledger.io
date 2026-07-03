@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const euMomsOmvandSkattskyldighet: Article = {
   slug: "eu-moms-omvand-skattskyldighet",
   h1: "EU-moms & omvänd skattskyldighet — så fungerar det",
-  metaTitle: "EU-moms & omvänd skattskyldighet — guide | Ledger.io",
+  metaTitle: "EU-moms & omvänd skattskyldighet — guide | Bokfy",
   metaDescription:
     "Komplett guide till EU-moms, omvänd skattskyldighet (reverse charge), VIES-kontroll och periodisk sammanställning. Med BAS-exempel.",
   keywords: ["eu moms", "omvänd skattskyldighet", "reverse charge", "vies", "periodisk sammanställning"],
@@ -51,7 +51,7 @@ export const euMomsOmvandSkattskyldighet: Article = {
     },
   ],
   northledgerSolution: {
-    intro: "Ledger.io känner igen EU-leverantörer automatiskt, validerar VAT-nummer och bokför omvänd skattskyldighet utan manuell hantering.",
+    intro: "Bokfy känner igen EU-leverantörer automatiskt, validerar VAT-nummer och bokför omvänd skattskyldighet utan manuell hantering.",
     comparison: [
       { manual: "VIES-kontroll varje gång", northledger: "Auto-validering vid fakturering" },
       { manual: "Manuellt boka 2614/2645", northledger: "Reverse charge bokas automatiskt" },
@@ -88,7 +88,7 @@ export const euMomsOmvandSkattskyldighet: Article = {
   ],
   internalLinks: {
     related: ["moms-sverige", "momsdeklaration", "avdragsgill-moms"],
-    product: { label: "Se Ledger.io EU-momsautomation", href: "/auth" },
+    product: { label: "Se Bokfy EU-momsautomation", href: "/auth" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

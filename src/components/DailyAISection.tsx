@@ -43,7 +43,7 @@ export const DailyAISection = () => {
           >
             Så här ser din ekonomi ut{" "}
             <span className="bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] bg-clip-text text-transparent">
-              med Ledger.io
+              med Bokfy
             </span>
           </h2>
           <div className="inline-flex items-center gap-2 mt-3 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.1]">

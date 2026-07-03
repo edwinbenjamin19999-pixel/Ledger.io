@@ -814,7 +814,7 @@ export const ESGReporting = () => { const [companyId, setCompanyId] = useState<s
           <CardContent className="space-y-4">
             {[
               { title: "CSRD/ESRS-rapport", desc: "ESRS E1 (Klimat), S1 (Arbetstagare), G1 (Affärsetik)", icon: FileText },
-              { title: "GRI-kompatibel rapport", desc: "Mappar Ledger.io-data till GRI Universal Standards", icon: FileText },
+              { title: "GRI-kompatibel rapport", desc: "Mappar Bokfy-data till GRI Universal Standards", icon: FileText },
               { title: "VSME-rapport", desc: "Anpassad för små och medelstora bolag", icon: Building2 },
               { title: "Intern ESG-sammanfattning", desc: "1-sidors sammanfattning för styrelsen", icon: Download },
             ].map(report => (

@@ -12,14 +12,14 @@ export const FinalCTABlock = () => (
           Sluta bokföra manuellt
         </h2>
         <p className="mt-4 text-[17px] text-slate-600 leading-[1.75]">
-          Ledger.io automatiserar kvitton, fakturor, moms och bokslut — så att du kan fokusera på företaget.
+          Bokfy automatiserar kvitton, fakturor, moms och bokslut — så att du kan fokusera på företaget.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             to="/auth"
             className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#050d1a] hover:bg-white/90 transition-all duration-200"
           >
-            Testa Ledger.io gratis <ArrowRight className="w-4 h-4" />
+            Testa Bokfy gratis <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             to="/contact"

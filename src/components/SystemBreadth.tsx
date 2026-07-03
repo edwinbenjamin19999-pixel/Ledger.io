@@ -37,7 +37,7 @@ export const SystemBreadth = () => {
           >
             Detta ingår i{" "}
             <span className="bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] bg-clip-text text-transparent">
-              Ledger.io
+              Bokfy
             </span>
           </h2>
         </div>

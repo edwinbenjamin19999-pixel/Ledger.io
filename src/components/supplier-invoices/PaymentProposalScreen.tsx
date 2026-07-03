@@ -1,6 +1,6 @@
 /**
  * PAYMENT PROPOSAL — AI-driven Betalförslag.
- * Phase 2 migration to Ledger.io Design System v1 (mem://style/northledger-design-system-v1).
+ * Phase 2 migration to Bokfy Design System v1 (mem://style/northledger-design-system-v1).
  *
  * Bank-first: only invoices in workflow_state === "APPROVED_FOR_PAYMENT" are listed.
  * Signing happens in the user's bank (BankID). After "Skicka till bank" the batch

@@ -11,7 +11,7 @@ export const DNSInstructions = ({ domain, verificationToken }: Props) => {
   const [copied, setCopied] = useState<string | null>(null);
 
   const records: DNSRecord[] = [
-    { type: "CNAME", name: domain, value: "ledger.io" },
+    { type: "CNAME", name: domain, value: "bokfy.se" },
     { type: "TXT", name: `_northledger-verify.${domain}`, value: `northledger-verify=${verificationToken}` },
   ];
 
@@ -57,7 +57,7 @@ export const DNSInstructions = ({ domain, verificationToken }: Props) => {
         </table>
       </div>
       <p className="text-xs text-muted-foreground">
-        Efter verifiering: kontakta support på <a href="mailto:support@ledger.io" className="underline">support@ledger.io</a> för SSL-aktivering på den anpassade domänen.
+        Efter verifiering: kontakta support på <a href="mailto:support@bokfy.se" className="underline">support@bokfy.se</a> för SSL-aktivering på den anpassade domänen.
       </p>
     </div>
   );

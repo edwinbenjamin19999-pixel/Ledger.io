@@ -31,7 +31,7 @@ const Contact = () => {
       const body = encodeURIComponent(
         `Namn: ${formData.name}\nFöretag: ${formData.company}\nEmail: ${formData.email}\n\nMeddelande:\n${formData.message}`,
       );
-      window.location.href = `mailto:support@ledger.io?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:support@bokfy.se?subject=${subject}&body=${body}`;
       toast.success("E-postklient öppnad. Skicka meddelandet därifrån.");
     } finally {
       setIsSubmitting(false);
@@ -47,7 +47,7 @@ const Contact = () => {
       >
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-[#3b82f6]">
-            Ledger.io
+            Bokfy
           </Link>
           <Link to="/">
             <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/5">
@@ -64,7 +64,7 @@ const Contact = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Kontakta oss</h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Har du frågor om Ledger.io? Vill du boka en demo? Vi hjälper dig gärna!
+              Har du frågor om Bokfy? Vill du boka en demo? Vi hjälper dig gärna!
             </p>
           </div>
 
@@ -77,10 +77,10 @@ const Contact = () => {
                   title: "E-post",
                   content: (
                     <a
-                      href="mailto:support@ledger.io"
+                      href="mailto:support@bokfy.se"
                       className="text-slate-600 hover:text-[#3b82f6] transition-colors"
                     >
-                      support@ledger.io
+                      support@bokfy.se
                     </a>
                   ),
                 },

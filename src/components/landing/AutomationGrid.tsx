@@ -22,13 +22,13 @@ export const AutomationGrid = () => {
       />
       <div className="relative mx-auto max-w-6xl">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#60A5FA]">
-          Vad Ledger.io gör
+          Vad Bokfy gör
         </p>
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
-          Det här gör Ledger.io <span className="text-[#60A5FA]">åt dig</span>
+          Det här gör Bokfy <span className="text-[#60A5FA]">åt dig</span>
         </h2>
         <p className="mt-3 max-w-xl text-base text-white/70">
-          Det som tar 40 timmar manuellt — Ledger.io gör det på sekunder.
+          Det som tar 40 timmar manuellt — Bokfy gör det på sekunder.
         </p>
         <p className="mt-2 max-w-2xl text-base leading-relaxed text-white/60">
           Sex återkommande arbetsmoment som körs automatiskt i bakgrunden — så

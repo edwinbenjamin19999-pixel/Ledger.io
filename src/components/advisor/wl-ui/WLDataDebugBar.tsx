@@ -14,7 +14,7 @@ interface Props {
  * Temporary WL → real-data validation overlay (spec id="wl-real-data-bridge-v1" §10).
  *
  * Renders the SAME firm hooks the page lists below use, so that the counts here
- * always equal the rows on screen. If the count is 0 while Standard Ledger.io shows
+ * always equal the rows on screen. If the count is 0 while Standard Bokfy shows
  * data, the firm-scoped query is the bug — not the UI.
  *
  * Style intentionally subtle / monospace / dashed border = clearly temporary.

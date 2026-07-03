@@ -70,12 +70,12 @@ export const TrialBanner = ({ companyId }: TrialBannerProps) => { const [trialIn
   };
 
   const getMessage = () => { if (!trialInfo.isTrialing) { return { title: "Din provperiod har gått ut",
-        description: "Lägg till en betalningsmetod för att fortsätta använda Ledger.io fullt ut. Du kan fortfarande se din data.",
+        description: "Lägg till en betalningsmetod för att fortsätta använda Bokfy fullt ut. Du kan fortfarande se din data.",
       };
     }
     
     if (trialInfo.daysLeft === 0) { return { title: "Din provperiod avslutas idag!",
-        description: "Lägg till en betalningsmetod nu för att fortsätta använda Ledger.io utan avbrott.",
+        description: "Lägg till en betalningsmetod nu för att fortsätta använda Bokfy utan avbrott.",
       };
     }
     
@@ -85,7 +85,7 @@ export const TrialBanner = ({ companyId }: TrialBannerProps) => { const [trialIn
     }
     
     return { title: `${trialInfo.daysLeft} dagar kvar av din provperiod`,
-      description: "Lägg till en betalningsmetod för att fortsätta använda Ledger.io efter provperioden.",
+      description: "Lägg till en betalningsmetod för att fortsätta använda Bokfy efter provperioden.",
     };
   };
 

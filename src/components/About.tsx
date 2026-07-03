@@ -11,7 +11,7 @@ const values = [
     description: "Små och medelstora företag, redovisningsbyråer och tillväxtbolag som vill ersätta manuellt arbete med en modern, skalbar AI-lösning.",
   },
   { icon: Zap,
-    title: "Varför Ledger.io?",
+    title: "Varför Bokfy?",
     description: "Vi kombinerar 98% automatisering via AI med koncernkonsolidering och PEPPOL/PSD2-integrationer – allt under ett tak.",
   },
   { icon: Award,
@@ -25,7 +25,7 @@ export const About = () => { return (
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Om Ledger.io
+            Om Bokfy
           </h2>
           <p className="text-xl text-muted-foreground">
             Nästa generations bokföringssystem byggt för Nordens tillväxtföretag
@@ -57,7 +57,7 @@ export const About = () => { return (
           <div className="bg-card border border-border rounded-2xl p-8 shadow-[var(--shadow-soft)]">
             <h3 className="text-2xl font-bold mb-4">Beta-Programmet</h3>
             <p className="text-lg text-muted-foreground mb-6">
-              Ledger.io är i beta-fas vilket betyder att du får tillgång till alla funktioner helt gratis under testperioden. 
+              Bokfy är i beta-fas vilket betyder att du får tillgång till alla funktioner helt gratis under testperioden. 
               Din feedback hjälper oss att bygga den bästa bokföringslösningen för svenska företag.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-center">

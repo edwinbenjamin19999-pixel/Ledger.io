@@ -26,7 +26,7 @@ export default function BlogPage() {
       <Header lightBg />
       <main className="flex-1">
         <BlogHero
-          eyebrow="Ledger.io Insikter"
+          eyebrow="Bokfy Insikter"
           title="Insikter inom AI, bokföring och tillväxt"
           subtitle="Artiklar, guider och perspektiv om hur AI förändrar bokföring, moms, rapportering och ekonomistyrning för svenska företag."
         />

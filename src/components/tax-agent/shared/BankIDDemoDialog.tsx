@@ -101,7 +101,7 @@ export const BankIDDemoDialog = ({ open, onOpenChange, title, description, onCom
             </div>
           )}
           <p className="text-xs text-center text-muted-foreground">
-            För produktionssignering: <span className="font-medium">support@ledger.io</span>
+            För produktionssignering: <span className="font-medium">support@bokfy.se</span>
           </p>
         </DialogFooter>
       </DialogContent>

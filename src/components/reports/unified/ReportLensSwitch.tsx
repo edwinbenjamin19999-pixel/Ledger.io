@@ -1,6 +1,6 @@
 /**
  * ReportLensSwitch — page-level tab navigation between RR / BR.
- * Visual: locked to Ledger.io design system (DSTabBar / DSTab).
+ * Visual: locked to Bokfy design system (DSTabBar / DSTab).
  */
 import { cn } from "@/lib/utils";
 import { DSTabBar, DSTab } from "@/components/ds";

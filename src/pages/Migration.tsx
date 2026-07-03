@@ -76,7 +76,7 @@ const Migration = () => { const { user, loading } = useAuth();
       <div className="mb-6">
         <h1 className="text-3xl font-bold">Migrera från annat system</h1>
         <p className="text-muted-foreground mt-1">
-          Byt till Ledger.io smidigt — SIE-import eller direktanslutning, klart på minuter
+          Byt till Bokfy smidigt — SIE-import eller direktanslutning, klart på minuter
         </p>
       </div>
 

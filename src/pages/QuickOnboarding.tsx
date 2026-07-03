@@ -528,7 +528,7 @@ const QuickOnboarding = () => {
       return;
     }
     if (alreadyRegistered) {
-      toast.error("Detta bolag är redan registrerat på Ledger.io. Begär åtkomst istället.");
+      toast.error("Detta bolag är redan registrerat på Bokfy. Begär åtkomst istället.");
       return;
     }
 
@@ -895,8 +895,8 @@ const QuickOnboarding = () => {
   return (
     <AuthShell compact>
       <div className="hidden lg:flex items-center gap-0 mb-10">
-        <span className="text-xl font-[800] text-[#3b82f6]">Ledger</span>
-        <span className="text-xl font-[800] text-[#0f1f35]">.io</span>
+        <span className="text-xl font-[800] text-[#3b82f6]">Bok</span>
+        <span className="text-xl font-[800] text-[#0f1f35]">fy</span>
       </div>
 
       <OnboardingProgress current={step} total={6} />
@@ -948,7 +948,7 @@ const QuickOnboarding = () => {
                   <Info className="w-5 h-5 text-[#7A5417] flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="text-[14px] font-semibold text-[#7A5417]">
-                      {alreadyRegistered.name} är redan registrerat på Ledger.io
+                      {alreadyRegistered.name} är redan registrerat på Bokfy
                     </p>
                     <p className="text-[13px] text-[#7A5417] mt-1">
                       Begär åtkomst från en befintlig administratör för att gå med.
@@ -1454,10 +1454,10 @@ const QuickOnboarding = () => {
 
           {/* Avtalstext */}
           <div className="rounded-xl border border-slate-200 bg-white p-4 mb-4 max-h-[200px] overflow-y-auto text-[13px] text-slate-700 leading-relaxed space-y-3">
-            <p className="font-semibold text-[#0f1f35]">Kundavtal Ledger.io – version 2025-01</p>
+            <p className="font-semibold text-[#0f1f35]">Kundavtal Bokfy – version 2025-01</p>
             <p>
               Detta avtal ingås mellan {companyName || "kunden"} (org.nr {orgNumber || "—"})
-              och Ledger.io AB. Avtalet ger kunden rätt att använda plattformen för bokföring,
+              och Bokfy AB. Avtalet ger kunden rätt att använda plattformen för bokföring,
               fakturering, momsdeklaration, lönehantering och relaterade tjänster.
             </p>
             <p>
@@ -1465,7 +1465,7 @@ const QuickOnboarding = () => {
               för svensk redovisning enligt BAS, K2/K3 och gällande lagstiftning (BFL, ÅRL, ML).
             </p>
             <p>
-              <span className="font-semibold">2. GDPR.</span> Ledger.io agerar
+              <span className="font-semibold">2. GDPR.</span> Bokfy agerar
               personuppgiftsbiträde åt kunden. Personuppgifter lagras inom EU/EES.
             </p>
             <p>
@@ -1479,7 +1479,7 @@ const QuickOnboarding = () => {
             <p>
               Fullständigt avtal:{" "}
               <a href="/legal/customer-agreement" target="_blank" rel="noreferrer" className="text-[#3b82f6] underline">
-                ledger.io/legal/customer-agreement
+                bokfy.se/legal/customer-agreement
               </a>.
             </p>
             <p className="text-[12px] text-slate-500 leading-relaxed pt-1 border-t border-slate-200/70 mt-2">

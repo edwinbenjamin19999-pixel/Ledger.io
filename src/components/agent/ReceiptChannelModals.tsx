@@ -19,7 +19,7 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
   const [emailStatus, setEmailStatus] = useState<ChannelStatus>({ active: false, lastReceived: null });
   const [whatsappStatus, setWhatsappStatus] = useState<ChannelStatus>({ active: false, lastReceived: null });
 
-  const emailAddress = `kvitton@${companyId.slice(0, 8)}.ledger.io`;
+  const emailAddress = `kvitton@${companyId.slice(0, 8)}.bokfy.se`;
   const whatsappNumber = "+46 70 123 45 67";
   const whatsappLink = "https://wa.me/46701234567";
 
@@ -208,7 +208,7 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
                 </div>
               </div>
               <p className="font-mono text-sm font-semibold">{whatsappNumber}</p>
-              <p className="text-xs text-muted-foreground mt-1">Ledger.io Bot</p>
+              <p className="text-xs text-muted-foreground mt-1">Bokfy Bot</p>
             </div>
 
             {/* Channel status */}

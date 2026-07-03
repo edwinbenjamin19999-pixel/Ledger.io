@@ -60,7 +60,7 @@ function writeHeader(ws: Worksheet, doc: StatementDocument): number {
   // Generated meta
   ws.mergeCells(r, 1, r, lastCol);
   const meta = ws.getCell(r, 1);
-  meta.value = `Genererad ${formatDate(doc.header.generated, "yyyy-MM-dd HH:mm")} · Ledger.io`;
+  meta.value = `Genererad ${formatDate(doc.header.generated, "yyyy-MM-dd HH:mm")} · Bokfy`;
   meta.font = { name: FONT_NAME, size: 9, italic: true, color: { argb: C.slate400 } };
   ws.getRow(r).height = 16;
   r += 2;

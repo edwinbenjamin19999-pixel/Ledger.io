@@ -28,7 +28,7 @@ export const PilotCTA = () => {
           onboarding, direktlinje till teamet och påverkar produkten.
         </p>
         <a
-          href="mailto:pilot@ledger.io"
+          href="mailto:pilot@bokfy.se"
           className="mt-8 inline-flex h-14 items-center gap-2 rounded-md bg-[#0F1B2D] px-8 text-base font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#1a2c46] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F1B2D] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F59E0B]"
         >
           Ansök om pilotplats

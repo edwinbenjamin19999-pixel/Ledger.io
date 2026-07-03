@@ -7,7 +7,7 @@ const EFFECTIVE_DATE = "2025-01-15";
 
 const LegalDPA = () => {
   useEffect(() => {
-    document.title = `Personuppgiftsbiträdesavtal (DPA) ${VERSION} – Ledger.io`;
+    document.title = `Personuppgiftsbiträdesavtal (DPA) ${VERSION} – Bokfy`;
   }, []);
 
   return (
@@ -25,7 +25,7 @@ const LegalDPA = () => {
               Personuppgiftsbiträdesavtal (DPA)
             </h1>
             <p className="text-base text-slate-600">
-              Detta avtal reglerar Ledger.io:s behandling av personuppgifter för Kundens räkning
+              Detta avtal reglerar Bokfy:s behandling av personuppgifter för Kundens räkning
               enligt GDPR artikel 28. Avtalet utgör en integrerad del av kundavtalet.
             </p>
           </div>
@@ -34,13 +34,13 @@ const LegalDPA = () => {
             <h2>1. Roller</h2>
             <p>
               <strong>Kunden</strong> är personuppgiftsansvarig för de uppgifter som behandlas
-              i Tjänsten. <strong>Ledger.io</strong> är personuppgiftsbiträde och behandlar
+              i Tjänsten. <strong>Bokfy</strong> är personuppgiftsbiträde och behandlar
               uppgifterna endast enligt Kundens dokumenterade instruktioner.
             </p>
 
             <h2>2. Föremål, varaktighet och syfte</h2>
             <ul>
-              <li><strong>Föremål:</strong> tillhandahållande av Ledger.io:s plattform för bokföring, fakturering, lön, AI-analys och tillhörande tjänster.</li>
+              <li><strong>Föremål:</strong> tillhandahållande av Bokfy:s plattform för bokföring, fakturering, lön, AI-analys och tillhörande tjänster.</li>
               <li><strong>Varaktighet:</strong> under kundavtalets löptid samt 90 dagar efter dess upphörande för export och radering.</li>
               <li><strong>Syfte:</strong> fullgörande av kundavtalet.</li>
             </ul>
@@ -51,7 +51,7 @@ const LegalDPA = () => {
               <li><strong>Uppgifter:</strong> namn, kontaktuppgifter, personnummer (vid behov), bankuppgifter, lön, transaktionsdata, dokument bifogade verifikationer.</li>
             </ul>
 
-            <h2>4. Ledger.io:s skyldigheter</h2>
+            <h2>4. Bokfy:s skyldigheter</h2>
             <ul>
               <li>Behandla personuppgifter endast enligt Kundens instruktioner.</li>
               <li>Säkerställa att personal med tillgång till uppgifterna omfattas av sekretess.</li>
@@ -74,7 +74,7 @@ const LegalDPA = () => {
 
             <h2>6. Underbiträden</h2>
             <p>
-              Kunden ger generell förhandstillåtelse för Ledger.io att anlita underbiträden
+              Kunden ger generell förhandstillåtelse för Bokfy att anlita underbiträden
               enligt nedanstående lista. Tillkommande eller ersättande underbiträden meddelas
               med 30 dagars varsel; Kunden har då rätt att göra invändning.
             </p>
@@ -132,7 +132,7 @@ const LegalDPA = () => {
 
             <h2>8. Granskningsrätt</h2>
             <p>
-              Ledger.io tillhandahåller på Kundens begäran den information som behövs för att
+              Bokfy tillhandahåller på Kundens begäran den information som behövs för att
               visa efterlevnad. Kunden har rätt att en gång per år utföra revision, vilken
               normalt sker via ifyllda säkerhetsfrågeformulär (SOC 2-rapport eller motsvarande)
               för att minimera störning i driften.
@@ -149,8 +149,8 @@ const LegalDPA = () => {
             <p className="tabular-nums">
               Denna version: <strong>{VERSION}</strong>, ikraftträdande{" "}
               <strong>{EFFECTIVE_DATE}</strong>. Frågor:{" "}
-              <a href="mailto:dpo@ledger.io" className="text-[#3b82f6] no-underline hover:underline">
-                dpo@ledger.io
+              <a href="mailto:dpo@bokfy.se" className="text-[#3b82f6] no-underline hover:underline">
+                dpo@bokfy.se
               </a>
               .
             </p>

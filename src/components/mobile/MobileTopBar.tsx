@@ -92,8 +92,8 @@ export const MobileTopBar = ({ user, signOut }: MobileTopBarProps) => {
       >
         {/* LEFT: logo */}
         <div className="flex items-center shrink-0">
-          <span className="text-white font-medium text-[18px] leading-none">Ledger</span>
-          <span className="text-[#3b82f6] font-medium text-[18px] leading-none">.io</span>
+          <span className="text-white font-medium text-[18px] leading-none">Bok</span>
+          <span className="text-[#3b82f6] font-medium text-[18px] leading-none">fy</span>
         </div>
 
         {/* CENTER: company selector */}

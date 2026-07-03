@@ -27,7 +27,7 @@ const PrivacyPolicy = () => { const navigate = useNavigate();
           <CardContent className="prose prose-sm max-w-none dark:prose-invert">
             <h2>1. Introduktion</h2>
             <p>
-              Ledger.io AB, org.nr 559196-8208 ("vi", "oss", "vår") respekterar din integritet och är 
+              Bokfy AB, org.nr 559196-8208 ("vi", "oss", "vår") respekterar din integritet och är 
               engagerade i att skydda dina personuppgifter. Denna integritetspolicy förklarar hur vi 
               samlar in, använder, lagrar och skyddar din information i enlighet med EU:s allmänna 
               dataskyddsförordning (GDPR) och svensk dataskyddslagstiftning.
@@ -35,14 +35,14 @@ const PrivacyPolicy = () => { const navigate = useNavigate();
 
             <h2>2. Personuppgiftsansvarig</h2>
             <p>
-              Ledger.io AB är personuppgiftsansvarig för behandlingen av dina personuppgifter.
+              Bokfy AB är personuppgiftsansvarig för behandlingen av dina personuppgifter.
             </p>
             <p>
               <strong>Kontaktuppgifter:</strong><br />
-              Ledger.io AB<br />
+              Bokfy AB<br />
               Org.nr: 559196-8208<br />
               Karl Viedegangs gata 15, Stockholms innerstad<br />
-              E-post: privacy@ledger.io
+              E-post: privacy@bokfy.se
             </p>
 
             <h2>3. Vilka personuppgifter samlar vi in?</h2>
@@ -212,7 +212,7 @@ const PrivacyPolicy = () => { const navigate = useNavigate();
               <strong>Så utövar du dina rättigheter:</strong> Gå till{" "}
               <a href="/gdpr" className="text-primary hover:underline">GDPR-inställningar</a> i din profil 
               för dataexport, radering och samtyckshantering. Du kan också kontakta oss direkt 
-              på privacy@ledger.io. Vi svarar inom 30 dagar.
+              på privacy@bokfy.se. Vi svarar inom 30 dagar.
             </p>
 
             <h2>9. Säkerhetsåtgärder</h2>
@@ -262,7 +262,7 @@ const PrivacyPolicy = () => { const navigate = useNavigate();
 
             <h2>11. AI-behandling</h2>
             <p>
-              Ledger.io använder artificiell intelligens för att automatisera bokföring. Detta innebär att:
+              Bokfy använder artificiell intelligens för att automatisera bokföring. Detta innebär att:
             </p>
             <ul>
               <li>Kvitton och fakturor analyseras av AI för att extrahera belopp, datum och kontoinformation</li>
@@ -304,8 +304,8 @@ const PrivacyPolicy = () => { const navigate = useNavigate();
               personuppgifter? Kontakta oss:
             </p>
             <p>
-              Ledger.io AB<br />
-              E-post: privacy@ledger.io<br />
+              Bokfy AB<br />
+              E-post: privacy@bokfy.se<br />
               Karl Viedegangs gata 15, Stockholms innerstad
             </p>
           </CardContent>

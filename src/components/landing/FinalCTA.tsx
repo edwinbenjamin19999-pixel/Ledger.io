@@ -22,7 +22,7 @@ export const FinalCTA = () => {
           <Button
             size="lg"
             variant="ghost"
-            onClick={() => (window.location.href = "mailto:kontakt@ledger.io")}
+            onClick={() => (window.location.href = "mailto:kontakt@bokfy.se")}
             className="h-12 px-8 text-white/80 hover:text-white hover:bg-white/5 rounded-lg"
           >
             Kontakta oss
