@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Reveal } from "@/components/landing/Reveal";
 import { AIEngineSection } from "@/components/landing/AIEngineSection";
+import { ReceiptFlowSection } from "@/components/landing/ReceiptFlowSection";
 import { Pillars } from "@/components/landing/Pillars";
 
 import { HowItWorks } from "@/components/landing/HowItWorks";
@@ -43,6 +44,7 @@ const Index = () => {
         </NavyBlock>
         <Reveal><Pillars /></Reveal>
         <AIEngineSection />
+        <Reveal><ReceiptFlowSection /></Reveal>
         <Reveal><HowItWorks /></Reveal>
         <Reveal><AutomationGrid /></Reveal>
         <Reveal><WhyNorthLedger /></Reveal>

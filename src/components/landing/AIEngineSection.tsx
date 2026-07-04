@@ -52,14 +52,18 @@ export const AIEngineSection = () => {
           {/* 3D-kärna (svävar; videoloop ersätter bilden när den finns) */}
           <div aria-hidden className="relative flex items-center justify-center">
             <div className="ai-core-ring absolute h-[320px] w-[320px] rounded-full border border-dashed border-white/15 md:h-[420px] md:w-[420px]" />
-            <img
-              src={aiCore}
-              alt=""
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster={aiCore}
               width={1024}
               height={1024}
-              loading="lazy"
-              className="ai-core-float relative z-10 w-full max-w-[440px]"
-            />
+              className="ai-core-float relative z-10 w-full max-w-[440px] mix-blend-screen"
+            >
+              <source src="/ai-core.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>
