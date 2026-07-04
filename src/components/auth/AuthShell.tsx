@@ -44,7 +44,7 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
         <div className="relative z-10">
           <span className="font-display text-2xl tracking-tight text-background">
             <span className="font-bold">Bok</span>
-            <span className="font-medium italic">fy</span>
+            <span className="font-light">fy</span>
           </span>
         </div>
 
@@ -89,7 +89,7 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
           <div className="flex lg:hidden items-center gap-0 mb-8">
             <span className="font-display text-xl tracking-tight text-foreground">
               <span className="font-bold">Bok</span>
-              <span className="font-medium italic">fy</span>
+              <span className="font-light">fy</span>
             </span>
           </div>
           {children}

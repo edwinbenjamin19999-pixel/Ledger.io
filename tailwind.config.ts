@@ -112,10 +112,10 @@ export default {
         "0.5": "0.5px",
       },
       fontFamily: {
-        // Minimalist Monochrome: serif bär hela systemet
-        sans: ["Source Serif 4", "Georgia", "serif"],
-        serif: ["Source Serif 4", "Georgia", "serif"],
-        display: ["Playfair Display", "Georgia", "serif"],
+        // Minimalist Monochrome: stram grotesk (Helvetica-karaktär) + mono-etiketter
+        sans: ["Inter", "Helvetica Neue", "Arial", "sans-serif"],
+        serif: ["Inter", "Helvetica Neue", "Arial", "sans-serif"],
+        display: ["Inter Tight", "Helvetica Neue", "Arial", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },
       borderRadius: {

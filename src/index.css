@@ -1444,18 +1444,18 @@ textarea[class*="bg-slate-"]:focus {
    ═══════════════════════════════════════════════ */
 @layer base {
   html, body {
-    /* Minimalist Monochrome: body i högläslig serif */
-    font-family: 'Source Serif 4', Georgia, serif;
+    /* Minimalist Monochrome: stram grotesk — schweizisk precision */
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 13px;
   }
 
-  /* Rubriker i Playfair Display — typografin ÄR det visuella elementet */
+  /* Rubriker i Inter Tight — typografin ÄR det visuella elementet */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.03em;
   }
   b, strong {
     font-weight: 600;

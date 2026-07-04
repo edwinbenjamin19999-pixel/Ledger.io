@@ -32,11 +32,11 @@ export const Hero = () => {
           </span>
         </div>
 
-        {/* Oversized display headline */}
-        <h1 className="mt-10 font-display font-black leading-[0.92] tracking-tighter text-foreground text-[clamp(56px,13vw,168px)]">
-          Ekonomin
+        {/* Oversized display headline — stram grotesk, enhetlig vikt */}
+        <h1 className="mt-10 font-display font-semibold leading-[0.95] tracking-[-0.04em] text-foreground text-[clamp(52px,11vw,148px)]">
+          Ekonomin på
           <br />
-          på <span className="italic font-medium">autopilot.</span>
+          autopilot
         </h1>
 
         {/* Thick rule + bordered square (decorative punctuation) */}
