@@ -24,7 +24,7 @@ export const ExecutiveSummaryBlock = ({
     <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-10">
       <div className="flex items-center gap-2 mb-6">
         <Sparkles className="h-4 w-4 text-[#1E3A5F]" />
-        <span className="text-xs uppercase tracking-[0.2em] text-[#000000]/80 font-medium">
+        <span className="text-xs uppercase tracking-[0.2em] text-[#3b82f6]/80 font-medium">
           Executive Summary
         </span>
         <span className={cn(
@@ -32,7 +32,7 @@ export const ExecutiveSummaryBlock = ({
           pulsing && "text-[#1D9E75]"
         )}>
           <span className={cn(
-            "w-1.5 h-1.5 rounded-full bg-neutral-700 transition-all",
+            "w-1.5 h-1.5 rounded-full bg-emerald-400 transition-all",
             pulsing && "shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse"
           )} />
           {timeStr}

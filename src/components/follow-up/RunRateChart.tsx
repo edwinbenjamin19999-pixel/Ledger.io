@@ -57,15 +57,15 @@ export function RunRateChart({ actual, forecast, target, latestActualMonth, onPo
               formatter={(v: any) => (v == null ? "—" : `${formatSEKCompact(v)} kr`)}
             />
             <ReferenceLine x={MONTH_LABELS[Math.max(0, latestActualMonth)]} stroke="hsl(215 16% 47%)" strokeDasharray="2 4" />
-            <Line type="monotone" dataKey="actual" name="Utfall" stroke="#000000" strokeWidth={2.5} dot={{ r: 3 }} activeDot={{ r: 5 }} />
-            <Line type="monotone" dataKey="forecast" name="Prognos" stroke="#000000" strokeWidth={2} strokeDasharray="6 4" dot={{ r: 2 }} />
+            <Line type="monotone" dataKey="actual" name="Utfall" stroke="#3b82f6" strokeWidth={2.5} dot={{ r: 3 }} activeDot={{ r: 5 }} />
+            <Line type="monotone" dataKey="forecast" name="Prognos" stroke="#3b82f6" strokeWidth={2} strokeDasharray="6 4" dot={{ r: 2 }} />
             <Line type="monotone" dataKey="target" name="Mål" stroke="hsl(215 20% 65%)" strokeWidth={1.5} strokeDasharray="2 3" dot={false} />
           </ComposedChart>
         </ResponsiveContainer>
       </div>
       <div className="mt-3 flex flex-wrap gap-4 text-xs text-slate-600">
-        <span className="inline-flex items-center gap-1.5"><span className="h-0.5 w-4 bg-[#000000]" /> Utfall</span>
-        <span className="inline-flex items-center gap-1.5"><span className="h-0.5 w-4 bg-[#000000] [border-top:1px_dashed]" /> Prognos</span>
+        <span className="inline-flex items-center gap-1.5"><span className="h-0.5 w-4 bg-[#3b82f6]" /> Utfall</span>
+        <span className="inline-flex items-center gap-1.5"><span className="h-0.5 w-4 bg-[#3b82f6] [border-top:1px_dashed]" /> Prognos</span>
         <span className="inline-flex items-center gap-1.5"><span className="h-0.5 w-4 bg-slate-400 [border-top:1px_dotted]" /> Mål</span>
       </div>
     </div>

@@ -16,9 +16,9 @@ interface Props {
 }
 
 const riskGradient: Record<string, string> = {
-  high: "border-l-rose-500 bg-gradient-to-br from-neutral-700/15 via-rose-500/5 to-transparent",
-  medium: "border-l-amber-500 bg-gradient-to-br from-neutral-700/15 via-amber-500/5 to-transparent",
-  low: "border-l-emerald-500 bg-gradient-to-br from-neutral-700/15 via-emerald-500/5 to-transparent",
+  high: "border-l-rose-500 bg-gradient-to-br from-rose-500/15 via-rose-500/5 to-transparent",
+  medium: "border-l-amber-500 bg-gradient-to-br from-amber-500/15 via-amber-500/5 to-transparent",
+  low: "border-l-emerald-500 bg-gradient-to-br from-emerald-500/15 via-emerald-500/5 to-transparent",
 };
 const riskAccent: Record<string, string> = {
   high: "text-[#7A1A1A]",
@@ -45,7 +45,7 @@ export function PriorityActionStack({ insights, companyId, arInvoices, apInvoice
 
   if (insights.length === 0) {
     return (
-      <Card className="p-6 text-center bg-gradient-to-br from-neutral-100 to-transparent border-[#BFE6D6]">
+      <Card className="p-6 text-center bg-gradient-to-br from-emerald-50 to-transparent border-[#BFE6D6]">
         <Sparkles className="w-6 h-6 text-[#085041] mx-auto mb-2" />
         <h3 className="font-semibold text-sm">Inga akuta åtgärder</h3>
         <p className="text-xs text-muted-foreground mt-1">

@@ -15,9 +15,9 @@ export const BoardCanvas = ({ children }: { children: ReactNode }) => {
         <div className="flex justify-center pt-8">
           <Link
             to="/ai-ekonom"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-xs transition-all border-gray-200 bg-white text-gray-500 hover:text-gray-800 hover:border-[#000000]/50"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-xs transition-all border-gray-200 bg-white text-gray-500 hover:text-gray-800 hover:border-[#3b82f6]/50"
           >
-            <Sparkles className="h-3 w-3 text-[#000000]" />
+            <Sparkles className="h-3 w-3 text-[#3b82f6]" />
             Powered by AI CFO — öppna fullständig analys
           </Link>
         </div>

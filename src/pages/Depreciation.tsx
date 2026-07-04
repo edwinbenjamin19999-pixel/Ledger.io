@@ -327,7 +327,7 @@ const Depreciation = () => { const { user, loading } = useAuth();
                 </p>
               </div>
               <div className="bg-[#E1F5EE] dark:bg-emerald-950/20 rounded-lg p-3 text-xs space-y-1">
-                <p className="font-medium text-[#085041] dark:text-neutral-300">Samlat verifikat skapas:</p>
+                <p className="font-medium text-[#085041] dark:text-emerald-300">Samlat verifikat skapas:</p>
                 <p className="font-mono text-[#085041] dark:text-[#1D9E75]">
                   Debet 7832 (Avskrivningar inventarier): {kpis.monthlyDepreciation.toLocaleString("sv-SE")} kr
                 </p>

@@ -16,7 +16,7 @@ const isValidPlausibleDomain = (v?: string) => !!v && /^[a-z0-9.-]{3,253}$/i.tes
 
 export const MarketingPixels = ({ metaPixelId: rawMetaPixelId,
   tiktokPixelId: rawTiktokPixelId,
-  plausibleDomain: rawPlausibleDomain = 'bokfy.se',
+  plausibleDomain: rawPlausibleDomain = 'cogniq.se',
   googleAnalyticsId: rawGoogleAnalyticsId,
 }: MarketingPixelsProps) => { const location = useLocation();
   const metaPixelId = isValidMetaPixelId(rawMetaPixelId) ? rawMetaPixelId : undefined;

@@ -39,12 +39,12 @@ export function APIIntegrationRoadmap({ companyId }: Props) {
   };
 
   return (
-    <Card className="border-[#F0DDB7] bg-neutral-100/50 dark:bg-amber-950/10 dark:border-neutral-700">
+    <Card className="border-[#F0DDB7] bg-amber-50/50 dark:bg-amber-950/10 dark:border-amber-900">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Clock className="w-5 h-5 text-[#7A5417]" />
           Direkt API-migrering
-          <Badge variant="outline" className="ml-2 border-[#F0DDB7] text-[#7A5417] dark:text-neutral-300">
+          <Badge variant="outline" className="ml-2 border-[#F0DDB7] text-[#7A5417] dark:text-amber-300">
             Under utveckling
           </Badge>
         </CardTitle>
@@ -114,7 +114,7 @@ export function APIIntegrationRoadmap({ companyId }: Props) {
             </div>
           </div>
         ) : (
-          <div className="flex items-center gap-2 p-3 rounded-md bg-[#E1F5EE] dark:bg-emerald-950/30 text-[#085041] dark:text-neutral-300 text-sm">
+          <div className="flex items-center gap-2 p-3 rounded-md bg-[#E1F5EE] dark:bg-emerald-950/30 text-[#085041] dark:text-emerald-300 text-sm">
             <CheckCircle2 className="w-4 h-4" />
             <span>Du står på listan. Vi mejlar så fort {platform === "fortnox" ? "Fortnox" : "Visma"}-integrationen är live.</span>
           </div>

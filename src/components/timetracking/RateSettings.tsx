@@ -45,7 +45,7 @@ export function RateSettings() { const { rates, upsertRate } = useTimeRates();
                     <p className="text-sm font-medium">
                       {rate.rate_label}
                       {rate.is_default && (
-                        <span className="ml-2 text-[10px] bg-[#000000]/10 text-[#000000] px-1.5 py-0.5 rounded-full font-semibold">
+                        <span className="ml-2 text-[10px] bg-[#3b82f6]/10 text-[#3b82f6] px-1.5 py-0.5 rounded-full font-semibold">
                           Standard
                         </span>
                       )}
@@ -82,7 +82,7 @@ export function RateSettings() { const { rates, upsertRate } = useTimeRates();
               <Switch checked={newDefault} onCheckedChange={setNewDefault} id="is-default" />
               <Label htmlFor="is-default" className="text-sm cursor-pointer">Standardpris</Label>
             </div>
-            <Button onClick={handleAdd} disabled={!newRate} className="gap-1.5 bg-[#000000] hover:bg-[#000000]/90 text-white">
+            <Button onClick={handleAdd} disabled={!newRate} className="gap-1.5 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
               <Plus className="h-4 w-4" />
               Lägg till
             </Button>

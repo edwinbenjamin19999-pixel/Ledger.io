@@ -39,11 +39,11 @@ interface INK2Section {
 }
 
 const SECTION_DEFS: Omit<INK2Section, "fieldIndices">[] = [
-  { id: "a", letter: "A", title: "Intäkter", color: "bg-[#000000] text-white", bgColor: "border-l-[#000000]" },
-  { id: "b", letter: "B", title: "Kostnader", color: "bg-neutral-700 text-white", bgColor: "border-l-violet-500" },
-  { id: "c", letter: "C", title: "Bokslutsdispositioner", color: "bg-neutral-700 text-white", bgColor: "border-l-emerald-500" },
-  { id: "d", letter: "D", title: "Obeskattade reserver", color: "bg-neutral-700 text-white", bgColor: "border-l-amber-500" },
-  { id: "e", letter: "E", title: "Skattemässiga justeringar", color: "bg-neutral-700 text-white", bgColor: "border-l-rose-500" },
+  { id: "a", letter: "A", title: "Intäkter", color: "bg-[#0052FF] text-white", bgColor: "border-l-[#0052FF]" },
+  { id: "b", letter: "B", title: "Kostnader", color: "bg-violet-500 text-white", bgColor: "border-l-violet-500" },
+  { id: "c", letter: "C", title: "Bokslutsdispositioner", color: "bg-emerald-500 text-white", bgColor: "border-l-emerald-500" },
+  { id: "d", letter: "D", title: "Obeskattade reserver", color: "bg-amber-500 text-white", bgColor: "border-l-amber-500" },
+  { id: "e", letter: "E", title: "Skattemässiga justeringar", color: "bg-rose-500 text-white", bgColor: "border-l-rose-500" },
   { id: "f", letter: "F", title: "Skattepliktigt resultat", color: "bg-slate-800 text-white dark:bg-slate-600", bgColor: "border-l-slate-800 dark:border-l-slate-500" },
 ];
 
@@ -205,7 +205,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
   // SRU export
   const exportSRU = () => { const company = companies.find(c => c.id === selectedCompany);
     const orgNr = company?.org_number || "0000000000";
-    const infoContent = `#DATABESKRIVNING\n#ORGNR ${orgNr}\n#UPPGJORD ${new Date().toISOString().split("T")[0]}\n#PROGRAM Bokfy\n#FILNAMN BLANKETTER.SRU\n`;
+    const infoContent = `#DATABESKRIVNING\n#ORGNR ${orgNr}\n#UPPGJORD ${new Date().toISOString().split("T")[0]}\n#PROGRAM Cogniq\n#FILNAMN BLANKETTER.SRU\n`;
     const blankettLines = [`#BLANKETT INK2`, `#IDENTITET ${orgNr} ${selectedYear}`];
     for (const f of fields) blankettLines.push(`#UPPGIFT ${f.code} ${f.value}`);
     blankettLines.push(`#UPPGIFT 7050 ${taxableIncome}`, `#UPPGIFT 7051 ${tax}`, `#BLANKETTSLUT`, `#FIL_SLUT`);
@@ -232,8 +232,8 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
         <CardContent className="pt-5 pb-5">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-[#000000]/10 flex items-center justify-center">
-                <FileText className="h-5 w-5 text-[#000000]" />
+              <div className="w-10 h-10 rounded-lg bg-[#0052FF]/10 flex items-center justify-center">
+                <FileText className="h-5 w-5 text-[#0052FF]" />
               </div>
               <div>
                 <h2 className="text-lg font-bold">INK2 — Inkomstdeklaration 2</h2>
@@ -282,7 +282,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
 
       {/* Diagnostics */}
       {engine.diagnostics.length > 0 && (
-        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-neutral-700">
+        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-amber-800">
           <AlertTriangle className="h-4 w-4 text-[#7A5417] mt-0.5 shrink-0" />
           <div className="space-y-0.5">
             {engine.diagnostics.map((d, i) => <p key={i} className="text-xs text-muted-foreground">{d}</p>)}
@@ -292,7 +292,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
 
       {engine.loading ? (
         <Card><CardContent className="py-16 flex flex-col items-center gap-3">
-          <Loader2 className="h-8 w-8 animate-spin text-[#000000]" />
+          <Loader2 className="h-8 w-8 animate-spin text-[#0052FF]" />
           <p className="text-sm text-muted-foreground">Hämtar bokföringsdata...</p>
         </CardContent></Card>
       ) : (
@@ -309,14 +309,14 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                   className={cn(
                     "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-left text-sm transition-all",
                     isActive
-                      ? "bg-[#000000]/10 text-[#000000] border-l-2 border-[#000000]"
+                      ? "bg-[#0052FF]/10 text-[#0052FF] border-l-2 border-[#0052FF]"
                       : "hover:bg-muted/50 text-muted-foreground hover:text-foreground"
                   )}
                 >
                   <div className={cn(
                     "w-2 h-2 rounded-full shrink-0",
-                    comp.status === "complete" ? "bg-neutral-700" :
-                      comp.status === "progress" ? "bg-neutral-700" : "bg-muted-foreground/30"
+                    comp.status === "complete" ? "bg-green-500" :
+                      comp.status === "progress" ? "bg-amber-500" : "bg-muted-foreground/30"
                   )} />
                   <span className="font-bold">{sec.letter}</span>
                   <span className="truncate">{sec.title}</span>
@@ -335,7 +335,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                   onClick={() => scrollToSection(sec.id)}
                   className={cn(
                     "px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap shrink-0 transition-all",
-                    isActive ? "bg-[#000000] text-white" : "bg-muted/60 text-muted-foreground"
+                    isActive ? "bg-[#0052FF] text-white" : "bg-muted/60 text-muted-foreground"
                   )}
                 >
                   {sec.letter}
@@ -388,7 +388,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                                 <div className={cn(
                                   "grid grid-cols-[70px_1fr_120px_130px_80px] gap-2 items-center px-4 py-3 border-b border-border/30 transition-colors",
                                   f.type === "calculated" ? "bg-muted/30 dark:bg-slate-700/40" : "hover:bg-muted/10",
-                                  isModified && f.editable && "bg-neutral-100/50 dark:bg-amber-950/10 border-l-[3px] border-l-amber-400"
+                                  isModified && f.editable && "bg-amber-50/50 dark:bg-amber-950/10 border-l-[3px] border-l-amber-400"
                                 )}>
                                   {/* SRU Code */}
                                   <span className="font-mono text-[11px] bg-muted/60 dark:bg-slate-700/60 text-muted-foreground px-2 py-0.5 rounded text-center">
@@ -420,7 +420,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                                   <div className="flex items-center justify-end gap-1">
                                     {f.editable ? (
                                       <div className="relative">
-                                        {isModified && <span className="absolute -left-3 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-neutral-700" />}
+                                        {isModified && <span className="absolute -left-3 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-amber-500" />}
                                         <Input
                                           type="number"
                                           value={f.value || ""}
@@ -428,7 +428,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                                           placeholder={f.aiValue ? String(f.aiValue) : "0"}
                                           className={cn(
                                             "h-8 w-[120px] text-right font-mono text-sm",
-                                            "focus:ring-2 focus:ring-[#000000]/20 focus:border-[#000000]",
+                                            "focus:ring-2 focus:ring-[#0052FF]/20 focus:border-[#0052FF]",
                                             "dark:bg-slate-900 dark:border-slate-600"
                                           )}
                                         />
@@ -483,12 +483,12 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
 
             {/* ─── AI INSIGHTS ─── */}
             <Collapsible open={insightsOpen} onOpenChange={setInsightsOpen}>
-              <Card className="border-[#000000]/20">
+              <Card className="border-[#0052FF]/20">
                 <CollapsibleTrigger asChild>
                   <CardHeader className="cursor-pointer hover:bg-muted/30 transition-colors py-3">
                     <CardTitle className="text-sm flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <Sparkles className="h-4 w-4 text-[#000000]" />
+                        <Sparkles className="h-4 w-4 text-[#0052FF]" />
                         AI-analys
                       </div>
                       {insightsOpen ? <ChevronUp className="h-4 w-4 text-muted-foreground" /> : <ChevronDown className="h-4 w-4 text-muted-foreground" />}
@@ -499,7 +499,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                   <CardContent className="pt-0 space-y-2">
                     <p className="text-xs text-muted-foreground mb-3">Agenten jämförde dina siffror med föregående år och hittade följande:</p>
                     {[
-                      { icon: Info, color: "text-black", bg: "bg-[#EFF6FF] dark:bg-blue-950/20", text: "Personalkostnaderna matchar föregående års nivå — ingen avvikelse." },
+                      { icon: Info, color: "text-blue-500", bg: "bg-[#EFF6FF] dark:bg-blue-950/20", text: "Personalkostnaderna matchar föregående års nivå — ingen avvikelse." },
                       { icon: AlertTriangle, color: "text-[#7A5417]", bg: "bg-[#FAEEDA] dark:bg-amber-950/20", text: "Avskrivningarna verkar höga relativt omsättning — kontrollera anläggningsregistret." },
                       { icon: CheckCircle, color: "text-[#085041]", bg: "bg-[#E1F5EE] dark:bg-green-950/20", text: "Räntekostnader matchar externa låneavtal." },
                     ].map((insight, i) => (
@@ -517,7 +517,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
             <Card className="dark:bg-slate-800">
               <CardHeader className="pb-3">
                 <CardTitle className="text-sm flex items-center gap-2">
-                  <Calculator className="h-4 w-4 text-[#000000]" />
+                  <Calculator className="h-4 w-4 text-[#0052FF]" />
                   Taxerad inkomst och skatt
                 </CardTitle>
               </CardHeader>
@@ -527,7 +527,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                     <p className="text-xs text-muted-foreground">Resultat före skatt</p>
                     <p className="text-xl font-bold tabular-nums">{fmt(fields[0]?.value || 0)} kr</p>
                   </div>
-                  <div className="p-4 rounded-lg bg-neutral-100/50 dark:bg-amber-950/20">
+                  <div className="p-4 rounded-lg bg-amber-50/50 dark:bg-amber-950/20">
                     <p className="text-xs text-muted-foreground">Skattemässiga justeringar</p>
                     <p className="text-xl font-bold text-[#7A5417] dark:text-[#C28A2B] tabular-nums">{adjustments >= 0 ? "+" : ""}{fmt(adjustments)} kr</p>
                   </div>
@@ -544,20 +544,20 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between p-4 rounded-lg bg-[#000000]/5 border border-[#000000]/20">
+                <div className="flex items-center justify-between p-4 rounded-lg bg-[#0052FF]/5 border border-[#0052FF]/20">
                   <div>
                     <p className="text-sm font-semibold">Netto att betala</p>
                     <p className="text-xs text-muted-foreground">Förfaller: 1 juli {selectedYear + 1}</p>
                   </div>
-                  <p className="text-2xl font-bold text-[#000000] tabular-nums">{fmt(tax)} kr</p>
+                  <p className="text-2xl font-bold text-[#0052FF] tabular-nums">{fmt(tax)} kr</p>
                 </div>
               </CardContent>
             </Card>
 
             {/* BankID Submit */}
-            <div className="rounded-xl border border-[#C8DDF5] dark:border-black/40 bg-neutral-100/50 dark:bg-blue-950/20 p-5 space-y-3">
+            <div className="rounded-xl border border-[#C8DDF5] dark:border-blue-800/40 bg-blue-50/50 dark:bg-blue-950/20 p-5 space-y-3">
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-black" />
+                <Shield className="h-5 w-5 text-blue-600" />
                 <span className="text-sm font-semibold">Lämna in till Skatteverket</span>
               </div>
               <p className="text-xs text-muted-foreground">
@@ -587,7 +587,7 @@ export const INK2Form = ({ companyId: initialCompanyId, taxYear: initialTaxYear 
               label="Skicka in"
               authority="Skatteverket"
               size="sm"
-              className="text-xs h-8 bg-[#000000] hover:bg-[#000000]/90 text-white"
+              className="text-xs h-8 bg-[#0052FF] hover:bg-[#0052FF]/90 text-white"
               icon={<Lock className="h-3.5 w-3.5" />}
               onDemoSubmit={async () => {
                 await saveDraft(fields);

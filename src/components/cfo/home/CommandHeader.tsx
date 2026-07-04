@@ -43,10 +43,10 @@ export function CommandHeader({
   const periodLabel = period ?? new Date().toLocaleDateString("sv-SE", { month: "long", year: "numeric" });
 
   return (
-    <div className="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-800/60 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.15)]">
+    <div className="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-800/60 shadow-[0_4px_24px_-12px_rgba(0,82,255,0.15)]">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between gap-4 flex-wrap">
         <div className="flex items-center gap-3 min-w-0">
-          <div className="h-9 w-9 rounded-xl bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_16px_rgba(0,0,0,0.35)] shrink-0">
+          <div className="h-9 w-9 rounded-xl bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_16px_rgba(0,82,255,0.35)] shrink-0">
             <Building2 className="h-4 w-4 text-white" />
           </div>
           <div className="min-w-0">
@@ -58,15 +58,15 @@ export function CommandHeader({
               {updated && (
                 <span className="flex items-center gap-1.5">
                   <span className="relative flex h-1.5 w-1.5">
-                    <span className="absolute inline-flex h-full w-full rounded-full bg-neutral-700 opacity-75 animate-ping" />
-                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-neutral-700" />
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
                   </span>
                   Uppdaterad {relTime(updated)}
                 </span>
               )}
               {typeof confidencePct === "number" && (
                 <span className="flex items-center gap-1">
-                  <ShieldCheck className="h-3 w-3 text-[#000000]" />
+                  <ShieldCheck className="h-3 w-3 text-[#3b82f6]" />
                   AI-konfidens {Math.round(confidencePct)}%
                 </span>
               )}
@@ -100,9 +100,9 @@ export function CommandHeader({
             <Button
               size="sm"
               className="gap-1.5 relative text-white border-0 transition-colors"
-              style={{ background: "#525252" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#525252"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "#525252"; }}
+              style={{ background: "#EF4444" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#DC2626"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "#EF4444"; }}
               onClick={() => {
                 const el = document.getElementById("cfo-priorities");
                 if (el) {
@@ -112,7 +112,7 @@ export function CommandHeader({
                 }
               }}
             >
-              <span className="absolute -inset-0.5 rounded-md bg-neutral-700/40 blur-sm animate-pulse pointer-events-none -z-10" aria-hidden />
+              <span className="absolute -inset-0.5 rounded-md bg-rose-500/40 blur-sm animate-pulse pointer-events-none -z-10" aria-hidden />
               <Wrench className="h-4 w-4" />
               Åtgärda kritiskt
               <Badge className="ml-1 bg-white/20 text-white border-0 h-5 px-1.5 hover:bg-white/20">{criticalCount}</Badge>

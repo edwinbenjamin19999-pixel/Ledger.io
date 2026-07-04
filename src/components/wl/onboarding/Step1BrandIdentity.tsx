@@ -41,7 +41,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
     trust_bullets: [],
     show_bankid: true,
     show_password_login: true,
-    footer_attribution: "Powered by Bokfy",
+    footer_attribution: "Powered by Cogniq",
     support_email: null,
     support_url: null,
   };
@@ -51,14 +51,14 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
       {/* LEFT: Form */}
       <div className="space-y-6">
         <div>
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-black text-[10px] font-semibold text-[#000000] uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-blue-100 text-[10px] font-semibold text-[#3b82f6] uppercase tracking-wider mb-3">
             <Sparkles className="h-3 w-3" /> Steg 1 · Brand identity
           </div>
           <h1 className="text-2xl font-bold text-slate-900 leading-tight">
             Sätt din identitet
           </h1>
           <p className="text-sm text-slate-500 mt-1.5">
-            Detta är din plattform — inte Bokfy. Allt uppdateras live till höger.
+            Detta är din plattform — inte Cogniq. Allt uppdateras live till höger.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
 
           <div className="space-y-2">
             <label className="text-xs font-medium text-slate-700">Adress</label>
-            <div className="flex items-stretch rounded-md border border-slate-200 bg-white overflow-hidden focus-within:ring-2 focus-within:ring-[#000000]/30 focus-within:border-[#000000]">
+            <div className="flex items-stretch rounded-md border border-slate-200 bg-white overflow-hidden focus-within:ring-2 focus-within:ring-[#3b82f6]/30 focus-within:border-[#3b82f6]">
               <input
                 value={draft.slug}
                 onChange={(e) => update("slug", slugify(e.target.value))}
@@ -95,7 +95,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
                 className="flex-1 px-3 py-2 text-sm font-mono outline-none"
               />
               <span className="bg-slate-50 border-l border-slate-200 px-3 py-2 text-xs text-slate-500 font-mono flex items-center">
-                .bokfy.se
+                .cogniq.se
               </span>
             </div>
             {slugError ? (

@@ -15,7 +15,7 @@ interface Props {
 }
 
 const PRESETS: Array<{ hex: string; name: string }> = [
-  { hex: "#000000", name: "Bokfy Navy" },
+  { hex: "#0040CC", name: "Cogniq Navy" },
   { hex: "#1B4332", name: "Forest" },
   { hex: "#3B1F5E", name: "Purple" },
   { hex: "#7B2D00", name: "Burgundy" },
@@ -50,7 +50,7 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
           <MockSidebarPreview
             name={draft.name}
             logoUrl={draft.logo_url}
-            color={validHex ? draft.brand_primary_color : "#000000"}
+            color={validHex ? draft.brand_primary_color : "#0040CC"}
             showPoweredBy={draft.show_powered_by}
           />
         </div>
@@ -78,23 +78,23 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
           <div className="flex items-center gap-3">
             <input
               type="color"
-              value={validHex ? draft.brand_primary_color : "#000000"}
+              value={validHex ? draft.brand_primary_color : "#0040CC"}
               onChange={(e) => set("brand_primary_color", e.target.value)}
               className="h-10 w-14 rounded-lg border border-[#E2E8F0] cursor-pointer"
             />
             <Input
               value={draft.brand_primary_color}
               onChange={(e) => set("brand_primary_color", e.target.value)}
-              placeholder="#000000"
+              placeholder="#0040CC"
               className="font-mono text-sm max-w-[160px]"
             />
             {!validHex && (
-              <span className="text-xs text-[#525252]">Ogiltigt hex-format</span>
+              <span className="text-xs text-[#DC2626]">Ogiltigt hex-format</span>
             )}
           </div>
           {validHex && (
             <div className={`flex items-center gap-2 text-xs px-3 py-2 rounded-lg ${
-              wcagOk ? "bg-neutral-100 text-neutral-700" : "bg-neutral-100 text-neutral-700"
+              wcagOk ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"
             }`}>
               {wcagOk ? <CheckCircle2 className="h-4 w-4" /> : <AlertTriangle className="h-4 w-4" />}
               Kontrast mot vit text: {contrast.toFixed(2)}:1 — {wcagOk ? "uppfyller WCAG AA" : "uppfyller ej WCAG AA (4.5:1)"}
@@ -126,11 +126,11 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
       </Section>
 
       {/* === POWERED BY === */}
-      <Section title="Powered by Bokfy">
+      <Section title="Powered by Cogniq">
         <div className="rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] p-4 flex items-center justify-between">
           <div>
             <div className="text-sm font-semibold text-[#0F172A]">
-              Visa "Powered by Bokfy" i sidebar-footer
+              Visa "Powered by Cogniq" i sidebar-footer
             </div>
             <div className="text-xs text-[#64748B] mt-0.5">
               Kan stängas av i Premium White Label-plan
@@ -165,7 +165,7 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
             href="https://supabase.com/docs/guides/platform/custom-domains"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1 text-xs font-semibold text-[#000000] hover:underline"
+            className="inline-flex items-center gap-1 text-xs font-semibold text-[#0040CC] hover:underline"
           >
             Konfigurera DNS <ExternalLink className="h-3 w-3" />
           </a>
@@ -210,7 +210,7 @@ export function BrandingPanel({ firm, onSave, isSaving }: Props) {
             onChange={(e) => set("portal_welcome_message", e.target.value || null)}
             rows={3}
             placeholder="Välkommen till din ekonomiportal …"
-            className="w-full rounded-xl border border-[#E2E8F0] px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#000000]/30"
+            className="w-full rounded-xl border border-[#E2E8F0] px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#0040CC]/30"
           />
         </div>
       </Section>
@@ -285,9 +285,9 @@ function Toggle({
 
 function DomainStatusBadge({ status }: { status: FirmSettings["custom_domain_status"] }) {
   if (status === "verified")
-    return <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-neutral-100 text-neutral-700">Aktiv ✓</span>;
+    return <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-emerald-100 text-emerald-700">Aktiv ✓</span>;
   if (status === "pending")
-    return <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-neutral-100 text-neutral-700">Väntar DNS</span>;
+    return <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-amber-100 text-amber-700">Väntar DNS</span>;
   if (status === "failed")
     return <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-red-100 text-red-700">Misslyckades</span>;
   return null;
@@ -328,7 +328,7 @@ function MockSidebarPreview({
           </div>
           {showPoweredBy && (
             <div className="px-3 py-2 text-[8px] uppercase tracking-widest text-white/30 font-bold border-t border-white/5">
-              Powered by Bokfy
+              Powered by Cogniq
             </div>
           )}
         </div>

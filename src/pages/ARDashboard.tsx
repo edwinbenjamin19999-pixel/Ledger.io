@@ -33,9 +33,9 @@ const BUCKET_LABELS: Record<ARRow["bucket"], string> = {
 
 const LEVEL_BADGE: Record<0 | 1 | 2 | 3, { label: string; className: string }> = {
   0: { label: "Inom tid", className: "bg-slate-100 text-slate-700" },
-  1: { label: "Nivå 1 – Vänlig", className: "bg-neutral-200 text-black" },
-  2: { label: "Nivå 2 – Uppföljning", className: "bg-neutral-100 text-neutral-700" },
-  3: { label: "Nivå 3 – Inkassovarsel", className: "bg-neutral-100 text-neutral-700" },
+  1: { label: "Nivå 1 – Vänlig", className: "bg-blue-100 text-blue-700" },
+  2: { label: "Nivå 2 – Uppföljning", className: "bg-amber-100 text-amber-700" },
+  3: { label: "Nivå 3 – Inkassovarsel", className: "bg-rose-100 text-rose-700" },
 };
 
 interface ReminderSettings {
@@ -249,7 +249,7 @@ export default function ARDashboard() {
         <Card>
           <CardContent className="pt-6">
             <div className="text-xs text-muted-foreground">Total förfallen</div>
-            <div className="text-2xl font-semibold tabular-nums text-neutral-700">{formatSEK(summary.totalOverdue)}</div>
+            <div className="text-2xl font-semibold tabular-nums text-rose-600">{formatSEK(summary.totalOverdue)}</div>
           </CardContent>
         </Card>
         <Card>
@@ -261,7 +261,7 @@ export default function ARDashboard() {
       </div>
 
       {selected.size > 0 && (
-        <Card className="border-black bg-neutral-100/40">
+        <Card className="border-blue-300 bg-blue-50/40">
           <CardContent className="py-3 flex items-center justify-between">
             <span className="text-sm">{selected.size} markerade</span>
             <div className="flex gap-2">
@@ -322,7 +322,7 @@ export default function ARDashboard() {
                           <td className="px-2 py-2 font-mono text-xs">{r.invoice_number || "—"}</td>
                           <td className="px-2 py-2">{r.due_date}</td>
                           <td className="px-2 py-2 text-right tabular-nums">
-                            {r.daysOverdue > 0 ? <span className="text-neutral-700">{r.daysOverdue}</span> : "—"}
+                            {r.daysOverdue > 0 ? <span className="text-rose-600">{r.daysOverdue}</span> : "—"}
                           </td>
                           <td className="px-2 py-2 text-right tabular-nums">{formatSEK(r.total_amount)}</td>
                           <td className="px-2 py-2">
@@ -346,12 +346,12 @@ export default function ARDashboard() {
                               </Button>
                             )}
                             {r.reminderLevel === 2 && (
-                              <Button size="sm" variant="outline" className="border-neutral-700 text-neutral-700" onClick={() => openPreview(r)}>
+                              <Button size="sm" variant="outline" className="border-amber-400 text-amber-700" onClick={() => openPreview(r)}>
                                 <AlertTriangle className="h-3.5 w-3.5 mr-1" /> Granska
                               </Button>
                             )}
                             {r.reminderLevel === 3 && (
-                              <Button size="sm" variant="outline" className="border-neutral-700 text-neutral-700" onClick={() => openPreview(r)}>
+                              <Button size="sm" variant="outline" className="border-rose-400 text-rose-700" onClick={() => openPreview(r)}>
                                 <Gavel className="h-3.5 w-3.5 mr-1" /> Godkänn
                               </Button>
                             )}
@@ -393,7 +393,7 @@ export default function ARDashboard() {
                 <Textarea value={previewBody} onChange={e => setPreviewBody(e.target.value)} rows={12} />
               </div>
               {previewRow.reminderLevel === 3 && (
-                <div className="text-xs text-neutral-700 bg-neutral-100 border border-neutral-300 rounded p-2">
+                <div className="text-xs text-rose-700 bg-rose-50 border border-rose-200 rounded p-2">
                   Detta är en formell inkassovarning enligt inkassolagen (1974:182). Säkerställ att uppgifterna stämmer innan utskick.
                 </div>
               )}

@@ -213,7 +213,7 @@ export const InvoicePreviewDrawer = ({ open, onOpenChange, invoiceId, companyId,
     vatByRate[rate] = (vatByRate[rate] || 0) + lineVat;
   });
 
-  const getStamp = () => { if (invoice?.status === "paid") return { text: `BETALD ${invoice.paid_at?.substring(0, 10) || ""}`, color: "text-[#085041] border-neutral-700" };
+  const getStamp = () => { if (invoice?.status === "paid") return { text: `BETALD ${invoice.paid_at?.substring(0, 10) || ""}`, color: "text-[#085041] border-green-600" };
     if (invoice?.status === "cancelled") return { text: "ANNULLERAD", color: "text-destructive border-destructive" };
     return null;
   };
@@ -419,7 +419,7 @@ export const InvoicePreviewDrawer = ({ open, onOpenChange, invoiceId, companyId,
                       size="sm"
                       onClick={handleAutoFix}
                       disabled={autoFixing}
-                      className="h-8 text-xs bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA]"
+                      className="h-8 text-xs bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA]"
                     >
                       {autoFixing ? <Loader2 className="h-3 w-3 animate-spin mr-1" /> : null}
                       Korrigera automatiskt

@@ -19,7 +19,7 @@ export function DocumentPartsGrid({ parts }: { parts: DocPart[] }) {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
         {parts.map(p => {
           const Icon = p.completion === 100 ? Check : p.attention ? AlertCircle : Circle;
-          const iconColor = p.completion === 100 ? "text-[#1D9E75]" : p.attention ? "text-[#525252]" : "text-[#CBD5E1]";
+          const iconColor = p.completion === 100 ? "text-[#1D9E75]" : p.attention ? "text-[#EF9F27]" : "text-[#CBD5E1]";
           return (
             <div
               key={p.id}
@@ -36,7 +36,7 @@ export function DocumentPartsGrid({ parts }: { parts: DocPart[] }) {
 
               <div className="mt-2 h-1 rounded-full bg-[#F1F5F9] overflow-hidden">
                 <div
-                  className={`h-full rounded-full ${p.completion === 100 ? "bg-[#1D9E75]" : p.attention ? "bg-[#525252]" : "bg-[#000000]"}`}
+                  className={`h-full rounded-full ${p.completion === 100 ? "bg-[#1D9E75]" : p.attention ? "bg-[#EF9F27]" : "bg-[#0040CC]"}`}
                   style={{ width: `${p.completion}%` }}
                 />
               </div>
@@ -49,7 +49,7 @@ export function DocumentPartsGrid({ parts }: { parts: DocPart[] }) {
                 {!p.disabled && (
                   <button
                     onClick={p.onEdit}
-                    className="text-[11px] text-[#000000] hover:underline flex items-center gap-1"
+                    className="text-[11px] text-[#0040CC] hover:underline flex items-center gap-1"
                   >
                     <Edit3 className="w-3 h-3" /> Redigera
                   </button>

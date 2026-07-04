@@ -30,8 +30,8 @@ function calcHealthScore(totalRevenue: number, totalCost: number, project: Proje
   return Math.max(0, Math.min(100, score));
 }
 
-const healthBg = (score: number) => { if (score >= 80) return "text-[#085041] bg-[#E1F5EE] dark:bg-neutral-700/30";
-  if (score >= 60) return "text-[#7A5417] bg-[#FAEEDA] dark:bg-neutral-700/30";
+const healthBg = (score: number) => { if (score >= 80) return "text-[#085041] bg-[#E1F5EE] dark:bg-emerald-900/30";
+  if (score >= 60) return "text-[#7A5417] bg-[#FAEEDA] dark:bg-amber-900/30";
   if (score >= 40) return "text-orange-600 bg-orange-100 dark:bg-orange-900/30";
   return "text-destructive bg-[#FCE8E8] dark:bg-red-900/30";
 };
@@ -89,12 +89,12 @@ export function ProjectDetailView({ project, onBack }: Props) { const { totalRev
       </div>
 
       {/* AI Insight Banner */}
-      <Card className={cn("border-l-4", costOverpacing ? "border-l-amber-500 bg-neutral-100/50 dark:bg-amber-950/20" : "border-l-[#000000] bg-[#000000]/5")}>
+      <Card className={cn("border-l-4", costOverpacing ? "border-l-amber-500 bg-amber-50/50 dark:bg-amber-950/20" : "border-l-[#3b82f6] bg-[#3b82f6]/5")}>
         <CardContent className="py-3 px-4 flex items-center gap-3">
           {costOverpacing ? (
             <AlertTriangle className="h-5 w-5 text-[#7A5417] flex-shrink-0" />
           ) : (
-            <Sparkles className="h-5 w-5 text-[#000000] flex-shrink-0" />
+            <Sparkles className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
           )}
           <p className="text-sm font-medium">{getInsight()}</p>
         </CardContent>

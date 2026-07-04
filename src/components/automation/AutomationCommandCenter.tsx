@@ -308,7 +308,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
               AI övervakar deadlines och förbereder allt — du granskar och signerar
             </p>
           </div>
-          <Badge variant="default" className="text-xs bg-neutral-700 hover:bg-neutral-700">
+          <Badge variant="default" className="text-xs bg-emerald-600 hover:bg-emerald-600">
             Skarp miljö
           </Badge>
         </div>
@@ -332,13 +332,13 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                       <div key={item.id} className="flex items-center gap-2 text-[12px] text-white/70">
                         <span className={`w-2 h-2 rounded-full shrink-0 ${
                           item.priority === 'critical' ? 'bg-[#F87171] animate-pulse' :
-                          item.priority === 'important' ? 'bg-[#525252]' : 'bg-[#6EE7B7]'
+                          item.priority === 'important' ? 'bg-[#EF9F27]' : 'bg-[#6EE7B7]'
                         }`} />
                         <span className="font-medium text-white">{item.title}</span>
                         <span className="text-white/50">—</span>
                         <span className={`text-[11px] ${
                           (item.daysRemaining ?? 999) <= 3 ? 'text-[#F87171] font-semibold' :
-                          (item.daysRemaining ?? 999) <= 7 ? 'text-[#525252]' : 'text-[#6EE7B7]'
+                          (item.daysRemaining ?? 999) <= 7 ? 'text-[#EF9F27]' : 'text-[#6EE7B7]'
                         }`}>
                           {item.daysRemaining !== undefined
                             ? item.daysRemaining <= 1 ? 'förfaller idag/imorgon' : `${item.daysRemaining} dagar kvar`
@@ -369,16 +369,16 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
           <>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
-                { label: "Obokförda transaktioner", value: automationStatus.unbookedBank, icon: CreditCard, route: "/bankavstamning", accent: "#000000" },
-                { label: "Väntande granskning", value: automationStatus.draftEntries, icon: FileText, route: "/accounting", accent: "#525252" },
+                { label: "Obokförda transaktioner", value: automationStatus.unbookedBank, icon: CreditCard, route: "/bankavstamning", accent: "#0040CC" },
+                { label: "Väntande granskning", value: automationStatus.draftEntries, icon: FileText, route: "/accounting", accent: "#EF9F27" },
                 { label: "Förfallna fakturor", value: automationStatus.overdueInvoices, icon: AlertCircle, route: "/ar-agent", accent: "#E24B4A" },
-                { label: "Väntande utlägg", value: automationStatus.pendingExpenses, icon: Receipt, route: "/expenses", accent: "#000000" },
+                { label: "Väntande utlägg", value: automationStatus.pendingExpenses, icon: Receipt, route: "/expenses", accent: "#0040CC" },
               ].map(kpi => {
                 const Icon = kpi.icon;
                 return (
                   <Card
                     key={kpi.label}
-                    className="cursor-pointer relative overflow-hidden bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] hover:border-[#000000]/40 transition-all duration-200 shadow-none"
+                    className="cursor-pointer relative overflow-hidden bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] hover:border-[#0040CC]/40 transition-all duration-200 shadow-none"
                     onClick={() => navigate(kpi.route)}
                   >
                     <div className="absolute top-0 left-0 right-0 h-[1.5px]" style={{ background: kpi.accent }} />
@@ -401,7 +401,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
               <CardContent className="p-4">
                 <div className="flex items-center justify-between gap-4 flex-wrap">
                   <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-[#000000]" />
+                    <Sparkles className="w-4 h-4 text-[#0040CC]" />
                     <span className="text-[12px] font-medium text-[#0F172A]">Automationsinställningar</span>
                   </div>
                   <div className="flex items-center gap-6">
@@ -412,7 +412,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                           setAutoSubmit(v);
                           toast({ title: v ? "Auto-inlämning aktiverad" : "Auto-inlämning inaktiverad", description: v ? "Systemet skickar in automatiskt efter godkännande" : "Manuell inlämning krävs" });
                         }}
-                        className="data-[state=checked]:bg-[#000000] data-[state=unchecked]:bg-[#E2E8F0]"
+                        className="data-[state=checked]:bg-[#0040CC] data-[state=unchecked]:bg-[#E2E8F0]"
                       />
                       <span className="text-[12px] text-[#0F172A]">Auto-inlämning</span>
                     </label>
@@ -423,7 +423,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                           setManualApproval(v);
                           toast({ title: v ? "Manuellt godkännande aktiverat" : "Manuellt godkännande inaktiverat" });
                         }}
-                        className="data-[state=checked]:bg-[#000000] data-[state=unchecked]:bg-[#E2E8F0]"
+                        className="data-[state=checked]:bg-[#0040CC] data-[state=unchecked]:bg-[#E2E8F0]"
                       />
                       <span className="text-[12px] text-[#0F172A]">Manuellt godkännande</span>
                     </label>
@@ -450,7 +450,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
               <Card className="bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] shadow-none">
                 <CardHeader className="pb-2 pt-4 px-5">
                   <CardTitle className="text-[13px] font-medium text-[#0F172A] flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-[#000000]" />
+                    <Calendar className="w-4 h-4 text-[#0040CC]" />
                     Kommande deadlines
                   </CardTitle>
                 </CardHeader>
@@ -472,7 +472,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                             {daysLeft} dagar
                           </span>
                           <Button
-                            className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[28px]"
+                            className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[28px]"
                             onClick={() => navigate(d.route)}
                           >
                             Förbered
@@ -489,7 +489,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
             <Card className="bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] shadow-none">
               <CardHeader className="pb-2 pt-4 px-5">
                 <CardTitle className="text-[13px] font-medium text-[#0F172A] flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#000000]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#0040CC]" />
                   Autonoma åtgärder (Kategori A)
                 </CardTitle>
               </CardHeader>
@@ -608,7 +608,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                         <div className="flex items-center gap-2 shrink-0">
                           <Button
                             size="sm"
-                            className="bg-[#0F1F3D] text-white hover:from-neutral-700 hover:to-neutral-700 text-xs"
+                            className="bg-[#0F1F3D] text-white hover:from-violet-700 hover:to-indigo-700 text-xs"
                             onClick={(e) => {
                               e.stopPropagation();
                               setExpandedItem(item.id);
@@ -731,7 +731,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
         )}
 
         {/* COMPLETED */}
-        <Card className="border-neutral-700/20">
+        <Card className="border-green-500/20">
           <button onClick={() => setShowCompleted(!showCompleted)} className="w-full text-left">
             <CardHeader className="pb-2">
               <CardTitle className="text-base flex items-center justify-between">
@@ -740,7 +740,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                   SLUTFÖRT
                 </span>
                 <div className="flex items-center gap-2">
-                  <Badge variant="outline" className="text-xs text-[#085041] border-neutral-700/30">
+                  <Badge variant="outline" className="text-xs text-[#085041] border-green-500/30">
                     {completedCount} åtgärder
                   </Badge>
                   {showCompleted ? <ChevronUp className="w-4 h-4 text-muted-foreground" /> : <ChevronDown className="w-4 h-4 text-muted-foreground" />}

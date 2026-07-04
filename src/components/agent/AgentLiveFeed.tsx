@@ -90,9 +90,9 @@ export function AgentLiveFeed({ companyId }: LiveFeedProps) { const [transaction
       .subscribe();
   };
 
-  const getCircleColor = (confidence: number) => { if (confidence >= 0.92) return "#000000";
-    if (confidence >= 0.60) return "#525252";
-    return "#525252";
+  const getCircleColor = (confidence: number) => { if (confidence >= 0.92) return "#22c55e";
+    if (confidence >= 0.60) return "#f59e0b";
+    return "#ef4444";
   };
 
   if (loading) { return (
@@ -122,7 +122,7 @@ export function AgentLiveFeed({ companyId }: LiveFeedProps) { const [transaction
     <Card>
       <CardHeader className="pb-2">
         <CardTitle className="text-sm flex items-center gap-2">
-          <Radio className="h-4 w-4 text-[#000000] animate-pulse" />
+          <Radio className="h-4 w-4 text-[#22c55e] animate-pulse" />
           Live-feed — senaste transaktioner
         </CardTitle>
       </CardHeader>
@@ -173,7 +173,7 @@ export function AgentLiveFeed({ companyId }: LiveFeedProps) { const [transaction
                 </Badge>
               )}
 
-              <span className={`text-xs font-mono tabular-nums shrink-0 ${tx.amount > 0 ? "text-[#000000]" : ""}`}>
+              <span className={`text-xs font-mono tabular-nums shrink-0 ${tx.amount > 0 ? "text-[#22c55e]" : ""}`}>
                 {tx.amount > 0 ? "+" : ""}{tx.amount.toLocaleString("sv-SE")} {tx.currency}
               </span>
 

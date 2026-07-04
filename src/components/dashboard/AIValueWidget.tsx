@@ -42,8 +42,8 @@ export const AIValueWidget = ({ companyId }: Props) => {
       {/* Header */}
       <div className="px-6 pt-5 pb-3 flex items-start justify-between gap-3">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-xl bg-[#000000]/10 flex items-center justify-center">
-            <Sparkles className="h-4 w-4 text-[#000000]" />
+          <div className="w-8 h-8 rounded-xl bg-[#3b82f6]/10 flex items-center justify-center">
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
           </div>
           <div>
             <h3 className="text-[15px] font-medium text-slate-900">Vad AI har gjort åt dig</h3>
@@ -108,7 +108,7 @@ export const AIValueWidget = ({ companyId }: Props) => {
                       <Line
                         type="monotone"
                         dataKey="rate"
-                        stroke="#000000"
+                        stroke="#3b82f6"
                         strokeWidth={1.5}
                         dot={false}
                         isAnimationActive={false}

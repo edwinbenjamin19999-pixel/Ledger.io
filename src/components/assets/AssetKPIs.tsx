@@ -10,7 +10,7 @@ interface AssetKPIsProps { totalValue: number;
 
 export const AssetKPIs = ({ totalValue, totalAssets, monthlyDepreciation, needsAction }: AssetKPIsProps) => { const cards = [
     { label: "Totalt bokfört värde", value: `${totalValue.toLocaleString("sv-SE")} kr`, icon: Package, color: "text-primary" },
-    { label: "Antal tillgångar", value: String(totalAssets), icon: Layers, color: "text-black" },
+    { label: "Antal tillgångar", value: String(totalAssets), icon: Layers, color: "text-blue-600" },
     { label: "Månatlig avskrivning", value: `${monthlyDepreciation.toLocaleString("sv-SE")} kr`, icon: TrendingDown, color: "text-[#7A5417]" },
     { label: "Kräver åtgärd", value: String(needsAction), icon: AlertTriangle, color: needsAction > 0 ? "text-destructive" : "text-[#085041]" },
   ];

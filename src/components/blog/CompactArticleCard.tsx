@@ -7,7 +7,7 @@ export const CompactArticleCard = ({ article }: { article: Article }) => {
   return (
     <Link to={`/blog/${article.slug}`} className="group block py-4 border-b border-slate-100 last:border-0">
       <div className={`text-[10px] uppercase tracking-wider font-medium ${cat.text}`}>{cat.label}</div>
-      <div className="mt-1 text-sm font-semibold text-[#000000] group-hover:text-[#000000] transition-colors leading-snug">
+      <div className="mt-1 text-sm font-semibold text-[#0F172A] group-hover:text-[#3b82f6] transition-colors leading-snug">
         {article.title}
       </div>
       <div className="mt-1 text-xs text-[#94a3b8]">{article.readingTime} min läsning</div>

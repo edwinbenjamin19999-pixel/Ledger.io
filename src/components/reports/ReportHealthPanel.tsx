@@ -72,7 +72,7 @@ export const ReportHealthPanel = ({ open,
           ? "bg-[#E1F5EE] text-[#085041]"
           : "bg-destructive/10 text-destructive"
       }`}>
-        <span className={`w-2 h-2 rounded-full ${Math.abs(balanceDiff) <= 1 ? "bg-neutral-700" : "bg-destructive"}`} />
+        <span className={`w-2 h-2 rounded-full ${Math.abs(balanceDiff) <= 1 ? "bg-emerald-500" : "bg-destructive"}`} />
         {Math.abs(balanceDiff) <= 1
           ? "Balansen stämmer"
           : `Differens: ${balanceDiff.toLocaleString("sv-SE")} kr`

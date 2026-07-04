@@ -145,7 +145,7 @@ const AuditorDashboard = () => { const { user, loading } = useAuth();
 
     const percent = confidence * 100;
     if (percent >= 95) { return (
-        <Badge variant="outline" className="text-[#085041] border-neutral-700">
+        <Badge variant="outline" className="text-[#085041] border-green-600">
           {percent.toFixed(0)}% säkerhet
         </Badge>
       );

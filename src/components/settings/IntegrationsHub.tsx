@@ -141,13 +141,13 @@ export function IntegrationsHub({ companyId }: Props) {
   const renderStatus = (i: Integration) => {
     if (i.status === "connected") {
       return (
-        <Badge className="bg-neutral-700 gap-1">
+        <Badge className="bg-emerald-600 gap-1">
           <CheckCircle2 className="h-3 w-3" />Ansluten
         </Badge>
       );
     }
     if (i.status === "error") return <Badge variant="destructive" className="gap-1"><XCircle className="h-3 w-3" />Fel</Badge>;
-    if (i.status === "always_on") return <Badge className="bg-black gap-1"><CheckCircle2 className="h-3 w-3" />Aktiv</Badge>;
+    if (i.status === "always_on") return <Badge className="bg-blue-600 gap-1"><CheckCircle2 className="h-3 w-3" />Aktiv</Badge>;
     if (i.status === "coming_soon") return <Badge variant="secondary">Snart tillgänglig</Badge>;
     return <Badge variant="outline">Ej ansluten</Badge>;
   };
@@ -200,7 +200,7 @@ export function IntegrationsHub({ companyId }: Props) {
                       </div>
 
                       {i.meta && (
-                        <div className={`text-xs flex items-center gap-1 ${isStaleBank ? "text-neutral-700" : "text-muted-foreground"}`}>
+                        <div className={`text-xs flex items-center gap-1 ${isStaleBank ? "text-amber-600" : "text-muted-foreground"}`}>
                           {isStaleBank ? <AlertTriangle className="h-3 w-3" /> : <Clock className="h-3 w-3" />}
                           {i.meta}
                         </div>

@@ -88,16 +88,16 @@ export const BudgetCashFlow = ({ rrRows, cfData, onCFChange, isLocked, driverKF 
           <AreaChart data={cashChartData}>
             <defs>
               <linearGradient id="cashGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#525252" stopOpacity={0.3} />
-                <stop offset="100%" stopColor="#525252" stopOpacity={0.05} />
+                <stop offset="0%" stopColor="#6366f1" stopOpacity={0.3} />
+                <stop offset="100%" stopColor="#6366f1" stopOpacity={0.05} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" vertical={false} opacity={0.2} />
             <XAxis dataKey="name" tick={{ fontSize: 10 }} axisLine={false} tickLine={false} />
             <YAxis tick={{ fontSize: 10 }} axisLine={false} tickLine={false} tickFormatter={v => `${(v / 1000).toFixed(0)}k`} />
             <Tooltip formatter={(v: number) => `${formatSEK(v)} kr`} />
-            <ReferenceLine y={0} stroke="#525252" strokeDasharray="4 4" strokeWidth={1.5} />
-            <Area type="monotone" dataKey="cash" fill="url(#cashGrad)" stroke="#525252" strokeWidth={2} name="Kassa" />
+            <ReferenceLine y={0} stroke="#ef4444" strokeDasharray="4 4" strokeWidth={1.5} />
+            <Area type="monotone" dataKey="cash" fill="url(#cashGrad)" stroke="#6366f1" strokeWidth={2} name="Kassa" />
           </AreaChart>
         </ResponsiveContainer>
         {negativeMonth >= 0 && (

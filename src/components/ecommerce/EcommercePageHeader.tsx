@@ -36,7 +36,7 @@ export const EcommercePageHeader = ({ icon: Icon,
         <Button
           onClick={onAction}
           disabled={actionDisabled}
-          className="bg-[#0F1F3D] hover:from-blue-600 hover:to-neutral-700 text-white border-0 gap-2"
+          className="bg-[#0F1F3D] hover:from-blue-600 hover:to-emerald-700 text-white border-0 gap-2"
         >
           {ActionIcon && <ActionIcon className="h-4 w-4" />}
           {actionLabel}

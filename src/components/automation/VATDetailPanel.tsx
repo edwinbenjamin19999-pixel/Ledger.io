@@ -62,26 +62,26 @@ const SECTION_COLORS: Record<string, string> = {
   C: "border-l-amber-500",
   D: "border-l-orange-500",
   E: "border-l-emerald-500",
-  F: "border-l-[#000000]",
+  F: "border-l-[#3b82f6]",
 };
 
 const SECTION_BG: Record<string, string> = {
-  A: "bg-neutral-100/50 dark:bg-blue-950/20",
-  B: "bg-neutral-100/50 dark:bg-violet-950/20",
-  C: "bg-neutral-100/50 dark:bg-amber-950/20",
+  A: "bg-blue-50/50 dark:bg-blue-950/20",
+  B: "bg-violet-50/50 dark:bg-violet-950/20",
+  C: "bg-amber-50/50 dark:bg-amber-950/20",
   D: "bg-orange-50/50 dark:bg-orange-950/20",
-  E: "bg-neutral-100/50 dark:bg-emerald-950/20",
-  F: "bg-neutral-100/50 dark:bg-blue-950/20",
+  E: "bg-emerald-50/50 dark:bg-emerald-950/20",
+  F: "bg-blue-50/50 dark:bg-blue-950/20",
 };
 
 const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"];
 const QUARTER_NAMES = ["Q1", "Q2", "Q3", "Q4"];
 
 const STATUS_CONFIG: Record<string, { label: string; color: string }> = {
-  draft: { label: "Ej inskickad", color: "bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/30 dark:text-neutral-300" },
+  draft: { label: "Ej inskickad", color: "bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/30 dark:text-amber-300" },
   submitted: { label: "Inskickad", color: "bg-[#EFF6FF] text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
-  approved: { label: "Godkänd", color: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-neutral-300" },
-  corrected: { label: "Korrigerad", color: "bg-[#F1F5F9] text-neutral-700 dark:bg-neutral-700/30 dark:text-neutral-300" },
+  approved: { label: "Godkänd", color: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-emerald-300" },
+  corrected: { label: "Korrigerad", color: "bg-[#F1F5F9] text-violet-800 dark:bg-violet-900/30 dark:text-violet-300" },
 };
 
 export const VATDetailPanel = ({ companyId, environment, onComplete }: VATDetailPanelProps) => {
@@ -477,10 +477,10 @@ export const VATDetailPanel = ({ companyId, environment, onComplete }: VATDetail
               <ClipboardCheck className="h-3.5 w-3.5" />
               Kör avstämning
               {reconciliationStatus === "balanced" && (
-                <Badge variant="secondary" className="text-[9px] px-1 py-0 bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-neutral-300">Avstämd ✓</Badge>
+                <Badge variant="secondary" className="text-[9px] px-1 py-0 bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-emerald-300">Avstämd ✓</Badge>
               )}
               {reconciliationStatus === "unbalanced" && (
-                <Badge variant="secondary" className="text-[9px] px-1 py-0 bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/30 dark:text-neutral-300">Ej avstämd ⚠️</Badge>
+                <Badge variant="secondary" className="text-[9px] px-1 py-0 bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/30 dark:text-amber-300">Ej avstämd ⚠️</Badge>
               )}
             </Button>
           )}
@@ -511,9 +511,9 @@ export const VATDetailPanel = ({ companyId, environment, onComplete }: VATDetail
         <>
         {/* Submitted banner */}
         {isSubmitted && selectedPeriod?.dbRow && (
-          <div className="rounded-lg border border-[#C8DDF5] bg-[#EFF6FF] dark:bg-blue-950/20 dark:border-black p-3 space-y-2">
+          <div className="rounded-lg border border-[#C8DDF5] bg-[#EFF6FF] dark:bg-blue-950/20 dark:border-blue-800 p-3 space-y-2">
             <div className="flex items-center gap-2 text-sm">
-              <Lock className="h-4 w-4 text-black" />
+              <Lock className="h-4 w-4 text-blue-600" />
               <span className="font-medium text-blue-800 dark:text-blue-300">
                 Inskickad {selectedPeriod.dbRow.submitted_at
                   ? new Date(selectedPeriod.dbRow.submitted_at).toLocaleDateString("sv-SE")
@@ -525,7 +525,7 @@ export const VATDetailPanel = ({ companyId, environment, onComplete }: VATDetail
                 </Badge>
               )}
             </div>
-            <Button variant="outline" size="sm" className="text-xs gap-1.5 border-[#F0DDB7] text-[#7A5417] hover:bg-[#FAEEDA] dark:text-[#C28A2B] dark:border-neutral-700" onClick={handleCorrection}>
+            <Button variant="outline" size="sm" className="text-xs gap-1.5 border-[#F0DDB7] text-[#7A5417] hover:bg-[#FAEEDA] dark:text-[#C28A2B] dark:border-amber-700" onClick={handleCorrection}>
               <RotateCcw className="h-3 w-3" />
               Skicka korrigeringsdeklaration
             </Button>
@@ -675,7 +675,7 @@ const RutaRow = ({ ruta, label, data, overrides, formula, editable, readOnly, on
         {hasMissing && (
           <Tooltip>
             <TooltipTrigger asChild>
-              <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/30 dark:text-neutral-300 shrink-0">
+              <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/30 dark:text-amber-300 shrink-0">
                 <AlertTriangle className="w-2.5 h-2.5" />
                 Saknas
               </span>
@@ -686,7 +686,7 @@ const RutaRow = ({ ruta, label, data, overrides, formula, editable, readOnly, on
       </div>
       <div className="flex items-center gap-2 shrink-0">
         {isAuto && value !== 0 && (
-          <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-neutral-300">Huvudbok</span>
+          <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-emerald-300">Huvudbok</span>
         )}
         {editable && onChange && !readOnly ? (
           <Input

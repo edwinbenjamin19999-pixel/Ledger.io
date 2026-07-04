@@ -17,9 +17,9 @@ const FILTER_MAP: Record<string, string | null> = {
 };
 
 const DOT_COLOR: Record<InsightSeverity, string> = {
-  red: "bg-[#525252]",
-  yellow: "bg-[#525252]",
-  green: "bg-neutral-700",
+  red: "bg-[#EF4444]",
+  yellow: "bg-[#F59E0B]",
+  green: "bg-emerald-500",
 };
 
 /** Extract a "Nd" urgency from detail strings like "93 dagar förfallna" */
@@ -68,7 +68,7 @@ export function WLRiskControlCenter({ companyId }: Props) {
           <p className="text-[10px] uppercase tracking-[0.07em] font-medium text-black/40">
             Kontrollpanel
           </p>
-          <h3 className="mt-1 text-[#000000] font-medium text-base tracking-tight">
+          <h3 className="mt-1 text-[#0F172A] font-medium text-base tracking-tight">
             Risk &amp; Kontrollcenter
           </h3>
           <p className="text-black/50 text-[11px] mt-0.5">
@@ -92,8 +92,8 @@ export function WLRiskControlCenter({ companyId }: Props) {
             className={cn(
               "px-3 py-1 text-[12px] transition-colors",
               activeFilter === cat
-                ? "bg-[#000000] text-white font-medium"
-                : "text-black/50 hover:text-[#000000]",
+                ? "bg-[#0F172A] text-white font-medium"
+                : "text-black/50 hover:text-[#0F172A]",
             )}
             style={{ borderRadius: 6 }}
           >
@@ -125,7 +125,7 @@ export function WLRiskControlCenter({ companyId }: Props) {
                     style={{ width: 8, height: 8 }}
                   />
                   <div className="min-w-0 flex-1">
-                    <p className="text-[13px] font-medium text-[#000000] truncate">{insight.title}</p>
+                    <p className="text-[13px] font-medium text-[#0F172A] truncate">{insight.title}</p>
                     <p className="text-[11px] text-black/50 truncate mt-0.5">{insight.detail}</p>
                   </div>
                   {urgency && (
@@ -133,7 +133,7 @@ export function WLRiskControlCenter({ companyId }: Props) {
                       className="shrink-0 tabular-nums"
                       style={{
                         backgroundColor: "#FEF2F2",
-                        color: "#525252",
+                        color: "#EF4444",
                         border: "1px solid #FEE2E2",
                         borderRadius: 100,
                         padding: "2px 8px",
@@ -155,7 +155,7 @@ export function WLRiskControlCenter({ companyId }: Props) {
       {insights.length > 0 && (
         <button
           onClick={() => navigate("/audit-log")}
-          className="mt-4 w-full border-t border-black/5 pt-3 text-black/50 hover:text-[#000000] text-[11px] font-medium uppercase tracking-[0.07em] transition-colors text-left"
+          className="mt-4 w-full border-t border-black/5 pt-3 text-black/50 hover:text-[#0F172A] text-[11px] font-medium uppercase tracking-[0.07em] transition-colors text-left"
         >
           Visa fullständig logg →
         </button>

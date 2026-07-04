@@ -44,7 +44,7 @@ export const AppSidebar = () => { const location = useLocation();
   const sidebarMenuButtonClass = "flex items-center gap-2 px-3 text-[13px] font-medium text-white/70 border-l-2 border-transparent hover:text-white hover:bg-white/[0.06] cursor-pointer transition-colors rounded-md whitespace-normal h-9 min-h-0 leading-tight !overflow-visible [&>span:last-child]:!overflow-visible [&>span:last-child]:!whitespace-normal [&>span:last-child]:!text-clip";
   const sidebarMenuButtonActiveClass = tenant
     ? "font-semibold border"
-    : "!text-white !font-semibold !bg-[#000000]/[0.18] !border-l-2 !border-[#000000]";
+    : "!text-white !font-semibold !bg-[#0052FF]/[0.18] !border-l-2 !border-[#3b82f6]";
   const tenantActiveStyle = tenant
     ? {
         backgroundColor: `hsl(var(--brand-primary) / 0.18)`,
@@ -85,7 +85,7 @@ export const AppSidebar = () => { const location = useLocation();
     : filteredGroups;
 
   return (
-    <Sidebar className="bg-[#000000] border-r [border-width:0.5px] border-white/[0.06]">
+    <Sidebar className="bg-[#0F172A] border-r [border-width:0.5px] border-white/[0.06]">
       {/* Logo header (tenant-aware) */}
       <SidebarHeader className="p-4 border-b [border-width:0.5px] border-white/[0.06]">
         <BrandedLogo />
@@ -214,7 +214,7 @@ export const AppSidebar = () => { const location = useLocation();
                               <span className="flex-1 whitespace-normal break-words">{item.label}</span>
                               {showPendingBadge && (
                                 <span
-                                  className="ml-auto bg-[#525252] text-white rounded-full text-[9px] font-bold px-[5px] py-px tabular-nums"
+                                  className="ml-auto bg-[#DC2626] text-white rounded-full text-[9px] font-bold px-[5px] py-px tabular-nums"
                                   title={`${pendingApprovalCount} verifikation${pendingApprovalCount === 1 ? "" : "er"} väntar på godkännande`}
                                 >
                                   {pendingApprovalCount > 99 ? "99+" : pendingApprovalCount}
@@ -264,7 +264,7 @@ export const AppSidebar = () => { const location = useLocation();
           className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-white/40 hover:text-white/60 hover:bg-white/[0.04] transition-colors"
         >
           <Sparkles size={14} strokeWidth={2} />
-          Hur Bokfy fungerar
+          Hur Cogniq fungerar
         </button>
         <button
           onClick={() => setCustomizeOpen(true)}
@@ -274,7 +274,7 @@ export const AppSidebar = () => { const location = useLocation();
           Anpassa
         </button>
         <AddCompanyDialog
-          trigger={ <button className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-[#000000] hover:underline transition-colors">
+          trigger={ <button className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-[#3b82f6] hover:underline transition-colors">
               <Plus className="h-3.5 w-3.5" />
               Lägg till företag
             </button>
@@ -290,7 +290,7 @@ export const AppSidebar = () => { const location = useLocation();
           </button>
         )}
         <p className="text-[10px] text-white/15 text-center pb-3 pt-2">
-          {tenant ? (tenant.login.footer_attribution || "Powered by Bokfy") : "Bokfy © 2026"}
+          {tenant ? (tenant.login.footer_attribution || "Powered by Cogniq") : "Cogniq © 2026"}
         </p>
       </SidebarFooter>
 

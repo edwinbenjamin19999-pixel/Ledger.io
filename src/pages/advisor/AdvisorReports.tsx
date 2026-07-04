@@ -168,7 +168,7 @@ export default function AdvisorReports() {
             <ReportPage title="Nästa månads åtgärder" subtitle="Moms-deadline 12:e samt rekommenderad fakturapåminnelse." />
           </div>
           <p className="text-[10px] text-slate-400 mt-3 text-center">
-            Sammanställt med Bokfy · Watermark "UTKAST" tas bort vid godkännande
+            Sammanställt med Cogniq · Watermark "UTKAST" tas bort vid godkännande
           </p>
         </div>
       )}
@@ -201,7 +201,7 @@ export default function AdvisorReports() {
                   <td className="px-4 py-2.5 text-slate-500">{s.recipient}</td>
                   <td className="px-4 py-2.5"><StatusBadge status={s.status === "opened" ? "review" : "sent"} /></td>
                   <td className="px-4 py-2.5 text-right">
-                    <a className="text-black inline-flex items-center text-[12px]"><Download className="h-3 w-3 mr-1" /> Hämta</a>
+                    <a className="text-blue-600 inline-flex items-center text-[12px]"><Download className="h-3 w-3 mr-1" /> Hämta</a>
                   </td>
                 </tr>
               ))}
@@ -216,9 +216,9 @@ export default function AdvisorReports() {
 const StatusBadge = ({ status }: { status: ReportRow["status"] }) => {
   const map: Record<string, { label: string; cls: string }> = {
     idle: { label: "Vilande", cls: "bg-slate-100 text-slate-600" },
-    generating: { label: "Genererar…", cls: "bg-neutral-100 text-black" },
-    review: { label: "Inväntar granskning", cls: "bg-neutral-100 text-neutral-700" },
-    sent: { label: "Skickad", cls: "bg-neutral-100 text-neutral-700" },
+    generating: { label: "Genererar…", cls: "bg-blue-50 text-blue-700" },
+    review: { label: "Inväntar granskning", cls: "bg-amber-50 text-amber-700" },
+    sent: { label: "Skickad", cls: "bg-emerald-50 text-emerald-700" },
     error: { label: "Fel", cls: "bg-red-50 text-red-700" },
   };
   const m = map[status];

@@ -159,15 +159,15 @@ export function BolagsverketSubmissionPanel({
   const isLate = !isSubmitted && daysLeft !== null && daysLeft < 0;
 
   let badge = (
-    <Badge className="bg-neutral-100 text-neutral-700 border-neutral-300">
+    <Badge className="bg-amber-100 text-amber-900 border-amber-300">
       <Clock className="h-3 w-3 mr-1" />
       Ej inlämnad{daysLeft !== null ? ` — ${Math.max(daysLeft, 0)} dagar kvar` : ""}
     </Badge>
   );
   if (isSubmitted && status === "accepted") {
-    badge = <Badge className="bg-neutral-100 text-neutral-700 border-neutral-300"><CheckCircle2 className="h-3 w-3 mr-1" />Registrerad av Bolagsverket</Badge>;
+    badge = <Badge className="bg-emerald-100 text-emerald-900 border-emerald-300"><CheckCircle2 className="h-3 w-3 mr-1" />Registrerad av Bolagsverket</Badge>;
   } else if (isSubmitted) {
-    badge = <Badge className="bg-neutral-200 text-blue-900 border-black"><CheckCircle2 className="h-3 w-3 mr-1" />Inlämnad{report?.bolagsverket_manual_reference ? ` — diarie ${report.bolagsverket_manual_reference}` : ""}</Badge>;
+    badge = <Badge className="bg-blue-100 text-blue-900 border-blue-300"><CheckCircle2 className="h-3 w-3 mr-1" />Inlämnad{report?.bolagsverket_manual_reference ? ` — diarie ${report.bolagsverket_manual_reference}` : ""}</Badge>;
   } else if (isLate) {
     badge = <Badge className="bg-red-100 text-red-900 border-red-300"><AlertTriangle className="h-3 w-3 mr-1" />Förfallen — lämna in omedelbart</Badge>;
   }
@@ -179,7 +179,7 @@ export function BolagsverketSubmissionPanel({
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between gap-3 flex-wrap">
             <CardTitle className="flex items-center gap-2 text-base">
-              <Building2 className="h-5 w-5 text-black" />
+              <Building2 className="h-5 w-5 text-blue-600" />
               Inlämning till Bolagsverket
             </CardTitle>
             {badge}
@@ -193,7 +193,7 @@ export function BolagsverketSubmissionPanel({
             <Info label="Avgift" value={`${BV_FEE_KR} kr`} hint="(Bolagsverkets registreringsavgift)" />
           </div>
           {daysLeft !== null && !isSubmitted && (
-            <div className={`rounded-md p-3 text-sm ${isLate ? "bg-red-50 text-red-900" : daysLeft <= 14 ? "bg-orange-50 text-orange-900" : daysLeft <= 30 ? "bg-neutral-100 text-neutral-700" : "bg-neutral-100 text-blue-900"}`}>
+            <div className={`rounded-md p-3 text-sm ${isLate ? "bg-red-50 text-red-900" : daysLeft <= 14 ? "bg-orange-50 text-orange-900" : daysLeft <= 30 ? "bg-amber-50 text-amber-900" : "bg-blue-50 text-blue-900"}`}>
               {isLate
                 ? <>Inlämningen är försenad med {Math.abs(daysLeft)} dagar. Förseningsavgift på 5 000 kr tillkommer.</>
                 : <>{daysLeft} dagar kvar till sista inlämningsdag.</>}
@@ -214,7 +214,7 @@ export function BolagsverketSubmissionPanel({
             </li>
             <li>
               Gå till{" "}
-              <a href="https://www.bolagsverket.se/foretagochorganisationer/aktiebolag/arsredovisning/skickainsenast.4.html" target="_blank" rel="noopener noreferrer" className="text-black hover:underline inline-flex items-center gap-1">
+              <a href="https://www.bolagsverket.se/foretagochorganisationer/aktiebolag/arsredovisning/skickainsenast.4.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline inline-flex items-center gap-1">
                 Bolagsverkets e-tjänst <ExternalLink className="h-3 w-3" />
               </a>{" "}
               och logga in med BankID.
@@ -244,7 +244,7 @@ export function BolagsverketSubmissionPanel({
           </div>
 
           <div className="flex gap-2 pt-1">
-            <Button onClick={saveSubmission} disabled={saving || loading} className="bg-black hover:bg-black">
+            <Button onClick={saveSubmission} disabled={saving || loading} className="bg-blue-600 hover:bg-blue-700">
               <Save className="h-4 w-4 mr-2" />
               {saving ? "Sparar..." : isSubmitted ? "Uppdatera inlämning" : "Registrera inlämning"}
             </Button>

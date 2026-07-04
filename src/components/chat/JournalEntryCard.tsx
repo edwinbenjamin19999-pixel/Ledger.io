@@ -165,7 +165,7 @@ export function JournalEntryCard({ entry, companyId, onUpdate }: Props) {
   };
 
   return (
-    <Card className="p-4 bg-[#E1F5EE] dark:bg-green-950/30 border-[#BFE6D6] dark:border-neutral-700">
+    <Card className="p-4 bg-[#E1F5EE] dark:bg-green-950/30 border-[#BFE6D6] dark:border-green-800">
       {/* Header */}
       <div className="flex items-center gap-2 mb-3">
         <CheckCircle2 className="w-5 h-5 text-[#085041]" />

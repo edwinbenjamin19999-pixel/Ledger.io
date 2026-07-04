@@ -23,7 +23,7 @@ export const ContextPanel = ({ companyId, context }: Props) => {
       {/* Active context */}
       {context.type !== "general" && (
         <section className="rounded-2xl bg-[#0F1F3D] border border-[#C8DDF5] p-4">
-          <div className="text-xs font-bold uppercase tracking-wider text-[#000000] dark:text-[#000000] mb-2">Aktiv kontext</div>
+          <div className="text-xs font-bold uppercase tracking-wider text-[#3b82f6] dark:text-[#3b82f6] mb-2">Aktiv kontext</div>
           {context.kpi && (
             <>
               <div className="text-3xl font-bold tabular-nums text-slate-900 dark:text-white">
@@ -51,7 +51,7 @@ export const ContextPanel = ({ companyId, context }: Props) => {
       {/* Live KPIs */}
       <section>
         <div className="flex items-center gap-2 mb-3">
-          <Activity className="h-4 w-4 text-[#000000]" />
+          <Activity className="h-4 w-4 text-[#3b82f6]" />
           <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Live-data</h3>
         </div>
         {!kpis.loaded ? (
@@ -69,7 +69,7 @@ export const ContextPanel = ({ companyId, context }: Props) => {
       {/* Top suggestions */}
       <section>
         <div className="flex items-center gap-2 mb-3">
-          <Target className="h-4 w-4 text-[#000000]" />
+          <Target className="h-4 w-4 text-[#3b82f6]" />
           <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Föreslagna åtgärder</h3>
         </div>
         {loading ? (
@@ -82,7 +82,7 @@ export const ContextPanel = ({ companyId, context }: Props) => {
               <li key={p.id}>
                 <button
                   onClick={() => navigate("/cfo")}
-                  className="w-full text-left rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 hover:border-[#000000] transition-colors group"
+                  className="w-full text-left rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 hover:border-[#3b82f6] transition-colors group"
                 >
                   <div className="flex items-start gap-2">
                     <span className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 ${
@@ -94,7 +94,7 @@ export const ContextPanel = ({ companyId, context }: Props) => {
                         <p className="text-[11px] text-slate-500 tabular-nums mt-0.5">{formatSEK(p.impact_sek)}</p>
                       )}
                     </div>
-                    <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#000000] shrink-0 mt-1" />
+                    <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#3b82f6] shrink-0 mt-1" />
                   </div>
                 </button>
               </li>

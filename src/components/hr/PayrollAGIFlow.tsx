@@ -158,7 +158,7 @@ export const PayrollAGIFlow = ({ companyId, payrollRunId, periodStart, periodEnd
           {steps.map((s, i) => (
             <div key={s.key} className="flex items-center gap-1">
               <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs ${ step === s.key ? "bg-primary text-primary-foreground" :
-                steps.findIndex(st => st.key === step) > i ? "bg-neutral-700 text-white" :
+                steps.findIndex(st => st.key === step) > i ? "bg-green-600 text-white" :
                 "bg-muted text-muted-foreground"
               }`}>
                 {steps.findIndex(st => st.key === step) > i ? <CheckCircle className="w-4 h-4" /> : <s.icon className="w-3.5 h-3.5" />}

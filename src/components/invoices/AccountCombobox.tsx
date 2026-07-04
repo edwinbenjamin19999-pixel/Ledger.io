@@ -108,9 +108,9 @@ export function AccountCombobox({
         const conf = (suggestion.confidence ?? 0) > 1 ? (suggestion.confidence ?? 0) / 100 : (suggestion.confidence ?? 0);
         const tier = conf >= 0.9 ? "done" : conf >= 0.6 ? "review" : "input_needed";
         const tone =
-          tier === "done" ? "bg-neutral-100 text-neutral-700 border-neutral-300"
-          : tier === "review" ? "bg-neutral-100 text-neutral-700 border-neutral-300"
-          : "bg-neutral-100 text-neutral-700 border-neutral-300";
+          tier === "done" ? "bg-emerald-50 text-emerald-700 border-emerald-200"
+          : tier === "review" ? "bg-amber-50 text-amber-700 border-amber-200"
+          : "bg-rose-50 text-rose-700 border-rose-200";
         return (
           <button
             type="button"

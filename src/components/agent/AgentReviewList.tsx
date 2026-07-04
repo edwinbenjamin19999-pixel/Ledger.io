@@ -207,7 +207,7 @@ export function AgentReviewList({ companyId, onAction }: AgentReviewListProps) {
 }
 
 function ConfidenceBadge({ confidence }: { confidence: number }) { const pct = (confidence * 100).toFixed(0);
-  if (confidence >= 0.92) { return <Badge className="gap-1 text-xs bg-[#E1F5EE] text-[#085041] border-neutral-700/20"><Sparkles className="h-3 w-3" />{pct}%</Badge>;
+  if (confidence >= 0.92) { return <Badge className="gap-1 text-xs bg-[#E1F5EE] text-[#085041] border-green-500/20"><Sparkles className="h-3 w-3" />{pct}%</Badge>;
   }
   if (confidence >= 0.75) { return <Badge variant="secondary" className="gap-1 text-xs"><Sparkles className="h-3 w-3" />{pct}%</Badge>;
   }

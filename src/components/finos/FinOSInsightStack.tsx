@@ -22,7 +22,7 @@ export function FinOSInsightStack({ insights, limit, dense, emptyState, classNam
 
   if (visible.length === 0) {
     return emptyState ? <>{emptyState}</> : (
-      <div className="rounded-2xl border border-neutral-300/60 bg-neutral-100/40 p-6 text-center text-sm text-neutral-700">
+      <div className="rounded-2xl border border-emerald-200/60 bg-emerald-50/40 p-6 text-center text-sm text-emerald-900">
         Allt är uppdaterat. Jag säger till om något behöver uppmärksamhet.
       </div>
     );

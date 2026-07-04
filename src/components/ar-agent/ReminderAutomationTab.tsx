@@ -29,7 +29,7 @@ const DEFAULT_STEPS: Step[] = [
 ];
 
 const TONE_COLORS: Record<string, string> = { neutral: "bg-muted text-muted-foreground",
-  friendly: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]",
+  friendly: "bg-[#E1F5EE] text-[#085041] dark:bg-green-900/30 dark:text-[#1D9E75]",
   firm: "bg-[#FAEEDA] text-[#7A5417] dark:bg-yellow-900/30 dark:text-[#C28A2B]",
   serious: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400",
   legal: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400",

@@ -11,142 +11,144 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Bokfy Design System – Theme-aware with data-theme attribute */
+/* Cogniq Design System – Theme-aware with data-theme attribute */
 
 @layer base {
   /* ═══ TEMA 1: Blått (standard) ═══ */
   :root,
   :root[data-theme="blue"] {
-    /* ═══ MINIMALIST MONOCHROME ═══
-       Rent svartvitt. Svart ÄR accenten. Hierarki via skala, kontrast,
-       linjer och negativ yta — aldrig färg, gradient eller skugga.
-       Grått endast för sekundärtext (#525252) och hårlinjer (#E5E5E5). */
-    --background: 0 0% 100%;      /* pure white */
-    --foreground: 0 0% 0%;        /* pure black */
+    /* FLAT DESIGN TOKENS — hierarchy via färg/skala/typografi, aldrig djup.
+       Ink = navy (#0F172A) istället för grå — nordisk, ownable ton. */
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Svart är accenten */
-    --primary: 0 0% 0%;
+    /* Action-blå: blue-600 (#0052FF) — klarar WCAG AA med vit text (blue-500 gör det inte) */
+    --primary: 224 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Sekundär = off-white block, svart text */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    /* Emerald-600 — stödaccent, AA med vit text */
+    --secondary: 161 94% 30%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 96%;            /* #F5F5F5 */
-    --muted-foreground: 0 0% 32%; /* #525252 */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    /* Accent = subtil off-white yta (inversion sker i komponenterna) */
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 0%;
+    /* Accent = interaktions-tint (ghost/hover-ytor), inte dekor */
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
 
-    --brand: 0 0% 0%;
+    --brand: 224 100% 50%;
     --brand-foreground: 0 0% 100%;
 
-    /* Monokrom: destruktiv = svart emphasis (guardas av confirm-dialoger).
-       Semantik bärs av etikett + minustecken, inte av färg. */
-    --destructive: 0 0% 0%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --success: 0 0% 0%;
+    --success: 161 94% 30%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 0 0% 0%;
-    --warning-foreground: 0 0% 100%;
+    /* Amber kräver mörk text för AA */
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 11%;
 
-    --border: 0 0% 90%;           /* #E5E5E5 hårlinje — svart appliceras avsiktligt i komponenter */
-    --input: 0 0% 0%;             /* inputs får svart kant */
-    --ring: 0 0% 0%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 224 100% 50%;
 
-    --radius: 0rem;               /* skarpa 90°-hörn överallt */
+    --radius: 0.75rem;
 
-    /* Inga gradienter — solida svartvita ytor */
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 0%) 100%);
+    /* Minimalist Modern: sekundärt gradientstopp */
+    --accent-2: 225 100% 65%;
+
+    /* Flat: gradienter neutraliserade till solida ytor (2-stop samma färg
+       så background-image-konsumenter inte går sönder) */
+    --gradient-hero: linear-gradient(135deg, hsl(224 100% 50%) 0%, hsl(225 100% 65%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 100%) 100%);
-    --gradient-accent: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 0%) 100%);
-    --gradient-dashboard-header: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(224 100% 50%) 0%, hsl(225 100% 65%) 100%);
+    --gradient-dashboard-header: linear-gradient(180deg, hsl(220 14% 96%) 0%, hsl(220 14% 96%) 100%);
 
-    --shadow-soft: none;
-    --shadow-hover: none;
-    --shadow-glow: none;
+    /* Flat: inga skuggor på element */
+    --shadow-soft: 0 1px 3px rgba(15,23,42,0.06);
+    --shadow-hover: 0 10px 15px rgba(15,23,42,0.08), 0 4px 6px rgba(15,23,42,0.05);
+    --shadow-glow: 0 8px 24px rgba(0,82,255,0.30);
 
-    --transition-smooth: all 0.1s ease;
+    --transition-smooth: all 0.2s ease;
 
-    /* Sidebar — inverterat svart block, vit text (editoriell drama) */
-    --sidebar-background: 0 0% 0%;
+    /* Sidebar — solitt navy-block (flat) med blå accent */
+    --sidebar-background: 222 47% 11%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 100%;
-    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 225 100% 65%;
+    --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 100%;
-    --sidebar-ring: 0 0% 100%;
+    --sidebar-ring: 225 100% 65%;
 
-    --sidebar-menu-text: 0 0% 100% / 0.65;
-    --sidebar-menu-hover-bg: 0 0% 100% / 0.1;
-    --sidebar-menu-active-bg: 0 0% 100% / 1;
-    --sidebar-menu-active-border: 0 0% 100%;
+    --sidebar-menu-text: 0 0% 100% / 0.7;
+    --sidebar-menu-hover-bg: 0 0% 100% / 0.07;
+    --sidebar-menu-active-bg: 225 100% 65% / 0.18;
+    --sidebar-menu-active-border: 225 100% 65%;
     --sidebar-section-text: 0 0% 100% / 0.4;
-    --sidebar-logo-accent: 0 0% 100%;
+    --sidebar-logo-accent: 225 100% 65%;
     --sidebar-logo-text: 0 0% 100%;
-    --sidebar-divider: 0 0% 100% / 0.15;
+    --sidebar-divider: 0 0% 100% / 0.07;
     --sidebar-footer-text: 0 0% 100% / 0.4;
 
     /* Topbar */
     --topbar-bg: 0 0% 100%;
-    --topbar-border-bottom: 0 0% 0%;
-    --topbar-border-top: 0 0% 0%;
-    --topbar-has-top-border: 0;
+    --topbar-border-bottom: 220 13% 91%;
+    --topbar-border-top: 224 100% 50%;
+    --topbar-has-top-border: 1;
 
-    /* Value colors — monokrom: negativt nedtonat grått, positivt svart.
-       Tecknet (−) bär betydelsen, inte färgen (editoriell finanstypografi). */
-    --value-negative: 0 0% 32%;
-    --value-positive: 0 0% 0%;
+    /* Value colors — semantik för bokföring: grönt positivt, rött negativt */
+    --value-negative: 0 72% 45%;
+    --value-positive: 161 94% 30%;
 
-    /* ═══ White-label defaults — monokroma (överskrivs per tenant i runtime) ═══ */
-    --brand-primary: 0 0% 0%;
-    --brand-accent: 0 0% 0%;
+    /* ═══ White-label theme defaults (overridden at runtime by tenantTheme.ts) ═══ */
+    --brand-primary: 192 91% 36%;
+    --brand-accent: 222 47% 18%;
     --brand-on-primary: #ffffff;
-    --brand-ring: 0 0% 0%;
-    --brand-tint-soft: 0 0% 0%;
-    --brand-50: 0 0% 96%;
-    --brand-100: 0 0% 92%;
-    --brand-200: 0 0% 85%;
-    --brand-300: 0 0% 70%;
-    --brand-400: 0 0% 55%;
-    --brand-500: 0 0% 40%;
-    --brand-600: 0 0% 25%;
-    --brand-700: 0 0% 15%;
-    --brand-800: 0 0% 10%;
-    --brand-900: 0 0% 6%;
-    --brand-950: 0 0% 3%;
-    --brand-grad-revenue: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 0%) 100%);
-    --brand-grad-cash: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 0%) 100%);
-    --brand-grad-result: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 0%) 100%);
-    --brand-grad-cost: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 0%) 100%);
-    --brand-surface-dark: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 0%) 100%);
+    --brand-ring: 192 91% 44%;
+    --brand-tint-soft: 192 91% 36%;
+    --brand-50: 192 60% 96%;
+    --brand-100: 192 65% 92%;
+    --brand-200: 192 70% 85%;
+    --brand-300: 192 75% 72%;
+    --brand-400: 192 85% 55%;
+    --brand-500: 192 90% 44%;
+    --brand-600: 192 91% 36%;
+    --brand-700: 192 95% 28%;
+    --brand-800: 192 95% 20%;
+    --brand-900: 192 95% 14%;
+    --brand-950: 192 95% 8%;
+    --brand-grad-revenue: linear-gradient(135deg, hsl(192 95% 28%) 0%, hsl(192 95% 14%) 100%);
+    --brand-grad-cash: linear-gradient(135deg, hsl(192 91% 36%) 0%, hsl(192 95% 20%) 100%);
+    --brand-grad-result: linear-gradient(135deg, hsl(222 47% 18%) 0%, hsl(222 47% 10%) 100%);
+    --brand-grad-cost: linear-gradient(135deg, #7F1D1D 0%, #991B1B 100%);
+    --brand-surface-dark: linear-gradient(135deg, hsl(192 35% 8%) 0%, hsl(222 47% 9%) 50%, hsl(222 35% 12%) 100%);
 
-    --brand-bubble: 0 0% 0%;
-    --brand-tint-bg: 0 0% 96%;
-    --brand-tint-border: 0 0% 0%;
-    --brand-text-soft: 0 0% 0%;
+    /* Semantic accent shortcuts (chat bubbles, hover tints, focus rings, soft text) */
+    --brand-bubble: 192 91% 36%;
+    --brand-tint-bg: 192 91% 36%;
+    --brand-tint-border: 192 91% 36%;
+    --brand-text-soft: 192 91% 36%;
   }
 
   /* ═══ White-Label scope override ═══
      Applied on the WL app shell wrapper (.wl-scope). Overrides the global
      brand tokens with cyan defaults for /wl/app/*. Per-tenant branding from
      useBureauBranding() further overrides --brand-primary at runtime. Standard
-     Bokfy surfaces (outside .wl-scope) keep navy via --primary. */
+     Cogniq surfaces (outside .wl-scope) keep navy via --primary. */
   .wl-scope {
-    --brand-primary: 192 91% 36%;        /* cyan-600  #000000 */
-    --brand-primary-hover: 192 91% 30%;  /* cyan-700  #000000 */
+    --brand-primary: 192 91% 36%;        /* cyan-600  #3b82f6 */
+    --brand-primary-hover: 192 91% 30%;  /* cyan-700  #3b82f6 */
     --brand-sidebar: 197 94% 14%;        /* cyan-950  #083344 */
-    --brand-accent: 174 72% 56%;         /* teal-400  #000000 */
+    --brand-accent: 174 72% 56%;         /* teal-400  #3b82f6 */
     --brand-ring: 192 91% 44%;
     --brand-on-primary: #ffffff;
   }
@@ -214,7 +216,7 @@
     --sidebar-menu-active-bg: 180 87% 43% / 0.10;
     --sidebar-menu-active-border: 180 87% 43%;
     --sidebar-section-text: 0 0% 36%;
-    --sidebar-logo-accent: 217 91% 60%;
+    --sidebar-logo-accent: 225 100% 65%;
     --sidebar-logo-text: 0 0% 10%;
     --sidebar-divider: 0 0% 0% / 0.08;
     --sidebar-footer-text: 0 0% 34%;
@@ -291,7 +293,7 @@
     --sidebar-menu-active-bg: 180 87% 43% / 0.15;
     --sidebar-menu-active-border: 180 87% 43%;
     --sidebar-section-text: 215 20% 42%;
-    --sidebar-logo-accent: 217 91% 60%;
+    --sidebar-logo-accent: 225 100% 65%;
     --sidebar-logo-text: 210 40% 96%;
     --sidebar-divider: 217 33% 18%;
     --sidebar-footer-text: 215 20% 50%;
@@ -359,21 +361,21 @@
   --border-color: hsl(0 0% 100% / 0.15);
 }
 
-/* ── Status badges — monokrom: linje/inversion/off-white, aldrig färg eller pill ── */
+/* ── Status badges ── */
 .badge-paid {
-  background: #000; color: #fff; border-radius: 0;
+  background: #DCFCE7; color: #15803D; border-radius: 99px;
 }
 .badge-overdue {
-  background: #fff; color: #000; border: 1px solid #000; border-radius: 0;
+  background: #FEE2E2; color: #DC2626; border-radius: 99px;
 }
 .badge-cancelled {
-  background: #F5F5F5; color: #525252; border-radius: 0;
+  background: #FEF3C7; color: #D97706; border-radius: 99px;
 }
 .badge-draft {
-  background: #F5F5F5; color: #525252; border-radius: 0;
+  background: #F1F5F9; color: #64748B; border-radius: 99px;
 }
 .badge-sent {
-  background: #fff; color: #000; border: 1px solid #000; border-radius: 0;
+  background: #DBEAFE; color: #0040CC; border-radius: 99px;
 }
 
 /* ── Tables ── */
@@ -420,14 +422,14 @@ table tbody td,
 
 /* ── 0. FLAT CSS VARIABLES — skuggor avstängda i hela lagret ── */
 :root {
-  --shadow-card: none;
-  --shadow-card-hover: none;
-  --shadow-button: none;
-  --shadow-button-hover: none;
+  --shadow-card: 0 4px 6px rgba(15,23,42,0.07), 0 1px 3px rgba(15,23,42,0.05);
+  --shadow-card-hover: 0 20px 25px rgba(15,23,42,0.10), 0 8px 10px rgba(15,23,42,0.04);
+  --shadow-button: 0 4px 14px rgba(0,82,255,0.25);
+  --shadow-button-hover: 0 8px 24px rgba(0,82,255,0.35);
   --transition-smooth: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-lift: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  --glow-accent: none;
-  --glow-accent-strong: none;
+  --glow-accent: 0 0 24px rgba(0,82,255,0.15);
+  --glow-accent-strong: 0 0 40px rgba(0,82,255,0.25);
 }
 
 /* ── 1. GLOBAL NUMERIC DESIGN SYSTEM ── */
@@ -482,18 +484,17 @@ body {
 .rounded-2xl.bg-card::before {
   content: none;
 }
-/* Flat: hover = kantfärgsskifte, aldrig lyft/skugga */
+/* Minimalist Modern: hover = fördjupad skugga */
 .rounded-lg.border.bg-card:hover,
 .rounded-xl.bg-card:hover {
-  box-shadow: none;
-  border-color: hsl(var(--primary) / 0.35);
+  box-shadow: var(--shadow-card-hover);
 }
 
 /* ── 4. KPI CARD STYLES ── */
 .kpi-card-red    { border-left: 3px solid hsl(0 84% 60%); }
 .kpi-card-orange { border-left: 3px solid hsl(25 95% 53%); }
 .kpi-card-green  { border-left: 3px solid hsl(142 71% 45%); }
-.kpi-card-blue   { border-left: 3px solid hsl(217 91% 60%); }
+.kpi-card-blue   { border-left: 3px solid hsl(225 100% 65%); }
 
 .kpi-value {
   font-size: 1.65rem;
@@ -567,6 +568,8 @@ body {
 /* ── 6. SIDEBAR — solitt navy-block, flat aktiv-markör ── */
 [data-sidebar] {
   background: hsl(var(--sidebar-background)) !important;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px) !important;
+  background-size: 28px 28px !important;
   box-shadow: none;
 }
 [data-sidebar] [data-active="true"] {
@@ -620,10 +623,10 @@ button[class*="bg-primary"]:hover:not(:disabled) {
 /* ── 8. FLOATING AI BUTTON — glow pulse ── */
 @keyframes aiPulse {
   0%, 100% {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35), 0 2px 4px rgba(0,0,0,0.15), 0 0 0 0 rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0,82,255,0.35), 0 2px 4px rgba(0,0,0,0.15), 0 0 0 0 rgba(0,82,255,0.4);
   }
   50% {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35), 0 2px 4px rgba(0,0,0,0.15), 0 0 0 8px rgba(0,0,0,0);
+    box-shadow: 0 4px 12px rgba(0,82,255,0.35), 0 2px 4px rgba(0,0,0,0.15), 0 0 0 8px rgba(0,82,255,0);
   }
 }
 .ai-chat-trigger {
@@ -632,7 +635,7 @@ button[class*="bg-primary"]:hover:not(:disabled) {
 }
 .ai-chat-trigger:hover {
   transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 4px 8px rgba(0,0,0,0.20);
+  box-shadow: 0 8px 24px rgba(0,82,255,0.45), 0 4px 8px rgba(0,0,0,0.20);
   animation: none;
 }
 
@@ -774,9 +777,12 @@ textarea[class*="bg-slate-"]:focus {
   outline: none;
 }
 
-/* ── 15. ELEVATION + GLOWS — neutraliserade (flat) ── */
-.elevation-1, .elevation-2, .elevation-3,
-.glow-green, .glow-red, .glow-blue, .glow-amber, .glow-accent { box-shadow: none; }
+/* ── 15. ELEVATION (MM-skala) ── */
+.elevation-1 { box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
+.elevation-2 { box-shadow: 0 4px 6px rgba(15,23,42,0.07); }
+.elevation-3 { box-shadow: 0 10px 15px rgba(15,23,42,0.08); }
+.glow-green, .glow-red, .glow-blue, .glow-amber { box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
+.glow-accent { box-shadow: var(--glow-accent); }
 
 /* ── 16. SCROLLBAR ── */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
@@ -813,14 +819,14 @@ textarea[class*="bg-slate-"]:focus {
 @keyframes auth-ai-pulse { 0%, 100% { box-shadow: 0 0 0 0 hsl(var(--accent) / 0.4); } 50% { box-shadow: 0 0 0 6px hsl(var(--accent) / 0); } }
 .auth-ai-dot { width: 7px; height: 7px; border-radius: 50%; background: hsl(var(--accent)); animation: auth-ai-pulse 2.5s ease-in-out infinite; }
 .auth-btn-primary { background: hsl(var(--primary)); box-shadow: none; transition: all 0.2s ease; }
-.auth-btn-primary:hover:not(:disabled) { background: hsl(224 76% 48%); transform: scale(1.03); }
+.auth-btn-primary:hover:not(:disabled) { background: hsl(224 100% 42%); transform: scale(1.03); }
 .auth-btn-primary:active:not(:disabled) { transform: scale(0.98); }
 .auth-input input:focus { box-shadow: none !important; border-color: hsl(var(--primary)) !important; }
 
 /* ── 19. MICRO-ANIMATIONS & PAGE TRANSITIONS ── */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0,0,0,0.3); }
-  50%      { box-shadow: 0 0 0 8px rgba(0,0,0,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,82,255,0.3); }
+  50%      { box-shadow: 0 0 0 8px rgba(0,82,255,0); }
 }
 
 .animate-fade-in   { animation: fadeInUp 250ms ease-out both; }
@@ -1276,11 +1282,11 @@ textarea[class*="bg-slate-"]:focus {
 .board-mode-light .border-white\/20 {
   border-color: hsl(220 20% 88%) !important;
 }
-.board-mode-light .text-[#000000],
-.board-mode-light .text-[#000000]\/90,
-.board-mode-light .text-[#000000]\/80,
-.board-mode-light .text-[#000000]\/70,
-.board-mode-light .text-[#000000] {
+.board-mode-light .text-[#3b82f6],
+.board-mode-light .text-[#3b82f6]\/90,
+.board-mode-light .text-[#3b82f6]\/80,
+.board-mode-light .text-[#3b82f6]\/70,
+.board-mode-light .text-[#3b82f6] {
   color: hsl(192 91% 36%) !important;
 }
 .board-mode-light .text-rose-400,
@@ -1298,30 +1304,30 @@ textarea[class*="bg-slate-"]:focus {
 .board-mode-light .bg-emerald-500\/\[0\.04\] { background-color: hsl(160 84% 39% / 0.06) !important; }
 .board-mode-light .bg-rose-500\/10 { background-color: hsl(0 72% 51% / 0.12) !important; }
 .board-mode-light .border-emerald-500\/10 { border-color: hsl(160 84% 39% / 0.25) !important; }
-.board-mode-light .from-[#000000]\/\[0\.06\],
-.board-mode-light .from-[#000000]\/\[0\.04\] {
+.board-mode-light .from-[#3b82f6]\/\[0\.06\],
+.board-mode-light .from-[#3b82f6]\/\[0\.04\] {
   --tw-gradient-from: hsl(192 91% 36% / 0.05) !important;
 }
 .board-mode-light .to-purple-500\/\[0\.04\] {
   --tw-gradient-to: hsl(280 60% 50% / 0.04) !important;
 }
-.board-mode-light .border-[#000000]\/20 { border-color: hsl(192 91% 36% / 0.30) !important; }
-.board-mode-light .hover\:border-[#000000]\/30:hover,
-.board-mode-light .hover\:border-[#000000]\/40:hover {
+.board-mode-light .border-[#3b82f6]\/20 { border-color: hsl(192 91% 36% / 0.30) !important; }
+.board-mode-light .hover\:border-[#3b82f6]\/30:hover,
+.board-mode-light .hover\:border-[#3b82f6]\/40:hover {
   border-color: hsl(192 91% 36% / 0.50) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Bokfy Design System v1 — Linear/Vercel/Stripe-feel
+   Cogniq Design System v1 — Linear/Vercel/Stripe-feel
    Phase 1 foundation. Use ds.* tokens / DS* primitives for all NEW UI.
    See mem://style/northledger-design-system-v1 for rules.
    ═══════════════════════════════════════════════════════════════ */
 @layer base {
   :root {
     /* Brand */
-    --ds-brand-deep:    #000000;
-    --ds-brand-mid:     #000000;
-    --ds-brand-accent:  #000000;
+    --ds-brand-deep:    #0040CC;
+    --ds-brand-mid:     #0040CC;
+    --ds-brand-accent:  #3b82f6;
     --ds-brand-tint:    #EFF6FF;
 
     /* Semantic */
@@ -1329,9 +1335,9 @@ textarea[class*="bg-slate-"]:focus {
     --ds-success-bg:     #E1F5EE;
     --ds-success-border: #5DCAA5;
     --ds-success-text:   #085041;
-    --ds-warning:        #525252;
+    --ds-warning:        #EF9F27;
     --ds-warning-bg:     #FAEEDA;
-    --ds-warning-border: #525252;
+    --ds-warning-border: #EF9F27;
     --ds-warning-text:   #412402;
     --ds-danger:         #E24B4A;
     --ds-danger-bg:      #FCEBEB;
@@ -1444,32 +1450,32 @@ textarea[class*="bg-slate-"]:focus {
    ═══════════════════════════════════════════════ */
 @layer base {
   html, body {
-    /* Minimalist Monochrome: stram grotesk — schweizisk precision */
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 13px;
   }
 
-  /* Rubriker i Inter Tight — typografin ÄR det visuella elementet */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif;
+  /* Minimalist Modern: Calistoga bär rubrikpersonligheten (endast vikt 400),
+     Inter tar h3–h6 */
+  h1, h2 {
+    font-family: 'Calistoga', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  h3, h4, h5, h6 {
     font-weight: 600;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
   b, strong {
     font-weight: 600;
   }
 
-  /* Etiketter/data/metadata i mono */
-  .font-mono, [class*="tabular"], time, code, kbd {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-  }
-
-  /* Focus ring — svart, hög kontrast (spec: 3px solid, offset) */
+  /* Focus ring — hög kontrast, ersätter skuggbaserad fokus */
   :focus-visible {
-    outline: 3px solid hsl(var(--ring));
-    outline-offset: 3px;
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
   :focus:not(:focus-visible) {
     outline: none;
@@ -1523,12 +1529,12 @@ textarea[class*="bg-slate-"]:focus {
 .premium-card.tint-red { background: #FFF5F5; border-color: #FBBEBE; }
 .premium-card.tint-red::before { background: #E24B4A; }
 .premium-card.tint-amber { background: #FFFBF0; border-color: #F9DFA0; }
-.premium-card.tint-amber::before { background: #525252; }
+.premium-card.tint-amber::before { background: #EF9F27; }
 .premium-card.tint-blue { background: #F5F9FF; border-color: #C7DCFA; }
-.premium-card.tint-blue::before { background: #000000; }
+.premium-card.tint-blue::before { background: #0052FF; }
 
 
-/* Dark-section card surface (for cards on #000000 / #0F2A3F) */
+/* Dark-section card surface (for cards on #0F172A / #0F2A3F) */
 .dark-surface-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
@@ -1538,7 +1544,7 @@ textarea[class*="bg-slate-"]:focus {
 }
 .dark-surface-card:hover {
   background: rgba(255,255,255,0.08);
-  border-color: rgba(0,0,0,0.18);
+  border-color: rgba(0,82,255,0.18);
 }
 
 /* Homepage section shell — unified background, breathing room, divider */
@@ -1560,7 +1566,7 @@ textarea[class*="bg-slate-"]:focus {
 }
 /* Typographic rhythm inside sections */
 .section-label {
-  color: #000000;
+  color: #3b82f6;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.18em;
@@ -1691,7 +1697,7 @@ textarea[class*="bg-slate-"]:focus {
      Accounting surfaces: neutral white/light (default).
      Analytics surfaces: subtle blue-tinted background to signal a different mode. */
   .surface-accounting {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     background-color: hsl(var(--background));
   }
   .surface-analytics {

@@ -53,7 +53,7 @@ export const ActivityFeed = () => { return (
           );
         })}
       </div>
-      <button className="text-xs text-black hover:text-black font-medium mt-2">
+      <button className="text-xs text-blue-600 hover:text-blue-700 font-medium mt-2">
         Visa alla händelser →
       </button>
     </div>

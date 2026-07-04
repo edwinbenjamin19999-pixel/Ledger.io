@@ -27,17 +27,17 @@ export function LockUnlockBar({ isLocked, isEditMode, onToggle }: Props) {
           </>
         ) : (
           <>
-            <div className="w-9 h-9 rounded-lg bg-[#000000] flex items-center justify-center">
+            <div className="w-9 h-9 rounded-lg bg-[#3b82f6] flex items-center justify-center">
               <Edit3 className="w-4 h-4 text-white" />
             </div>
             <div>
-              <p className="text-sm font-medium text-[#000000] flex items-center gap-2">
+              <p className="text-sm font-medium text-[#3b82f6] flex items-center gap-2">
                 Redigeringsläge aktivt
-                <span className="px-2 py-0.5 rounded-md bg-[#EFF6FF] text-[#000000] text-[10px] font-semibold uppercase tracking-wider">
+                <span className="px-2 py-0.5 rounded-md bg-[#EFF6FF] text-[#3b82f6] text-[10px] font-semibold uppercase tracking-wider">
                   Manual Adjustment
                 </span>
               </p>
-              <p className="text-xs text-[#000000]/80">Manuella ändringar går till adjustment-lagret — bolagens grundbokföring rörs aldrig.</p>
+              <p className="text-xs text-[#3b82f6]/80">Manuella ändringar går till adjustment-lagret — bolagens grundbokföring rörs aldrig.</p>
             </div>
           </>
         )}
@@ -46,7 +46,7 @@ export function LockUnlockBar({ isLocked, isEditMode, onToggle }: Props) {
         variant={isLocked ? 'default' : 'outline'}
         size="sm"
         onClick={onToggle}
-        className={isLocked ? 'bg-[#000000] hover:bg-[#000000] text-white' : ''}
+        className={isLocked ? 'bg-[#3b82f6] hover:bg-[#3b82f6] text-white' : ''}
       >
         {isLocked ? <><Unlock className="w-4 h-4 mr-1.5" />Lås upp konsolidering</> : <><Lock className="w-4 h-4 mr-1.5" />Lås konsolidering</>}
       </Button>

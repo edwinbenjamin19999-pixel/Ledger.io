@@ -25,7 +25,7 @@ const CFOWorkspacePage = () => {
   }, [user]);
 
   if (loading || loadingCompany) {
-    return <div className="flex items-center justify-center h-64"><Loader2 className="h-8 w-8 animate-spin text-[#000000]" /></div>;
+    return <div className="flex items-center justify-center h-64"><Loader2 className="h-8 w-8 animate-spin text-[#3b82f6]" /></div>;
   }
   if (!companyId) {
     return <div className="p-6 text-center text-muted-foreground"><p>Inget bolag anslutet.</p></div>;

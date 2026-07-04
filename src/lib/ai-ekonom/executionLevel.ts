@@ -25,13 +25,13 @@ export function executionLevel(
 }
 
 export const LEVEL_META: Record<ExecutionLevel, { label: string; tone: string; ring: string; desc: string }> = {
-  AUTO:     { label: "AUTO",     tone: "text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-[#E1F5EE] border-neutral-300 dark:border-[#BFE6D6]", ring: "ring-neutral-300/40", desc: "Säker att utföras automatiskt" },
-  ASSISTED: { label: "ASSISTERAD", tone: "text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-[#FAEEDA] border-neutral-300 dark:border-[#F0DDB7]", ring: "ring-neutral-300/40", desc: "Granska och godkänn först" },
-  MANUAL:   { label: "MANUELL",  tone: "text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-[#FCE8E8] border-neutral-300 dark:border-[#F4C8C8]", ring: "ring-neutral-300/40", desc: "Kräver fullt manuellt beslut" },
+  AUTO:     { label: "AUTO",     tone: "text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#E1F5EE] border-emerald-200 dark:border-[#BFE6D6]", ring: "ring-emerald-300/40", desc: "Säker att utföras automatiskt" },
+  ASSISTED: { label: "ASSISTERAD", tone: "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-[#FAEEDA] border-amber-200 dark:border-[#F0DDB7]", ring: "ring-amber-300/40", desc: "Granska och godkänn först" },
+  MANUAL:   { label: "MANUELL",  tone: "text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-[#FCE8E8] border-rose-200 dark:border-[#F4C8C8]", ring: "ring-rose-300/40", desc: "Kräver fullt manuellt beslut" },
 };
 
 export function confidenceTone(c: number): { label: string; cls: string } {
-  if (c >= 0.85) return { label: "Hög", cls: "text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-[#E1F5EE] border-neutral-300 dark:border-[#BFE6D6]" };
-  if (c >= 0.6)  return { label: "Medel", cls: "text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-[#FAEEDA] border-neutral-300 dark:border-[#F0DDB7]" };
-  return { label: "Låg", cls: "text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-[#FCE8E8] border-neutral-300 dark:border-[#F4C8C8]" };
+  if (c >= 0.85) return { label: "Hög", cls: "text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#E1F5EE] border-emerald-200 dark:border-[#BFE6D6]" };
+  if (c >= 0.6)  return { label: "Medel", cls: "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-[#FAEEDA] border-amber-200 dark:border-[#F0DDB7]" };
+  return { label: "Låg", cls: "text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-[#FCE8E8] border-rose-200 dark:border-[#F4C8C8]" };
 }

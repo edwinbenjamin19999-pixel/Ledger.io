@@ -33,15 +33,15 @@ export function LiveBalanceCard({ balance, runwayDays, netFlow30d, burnRateMonth
     <div
       className={cn(
         "rounded-2xl border bg-card p-5 transition-all duration-300",
-        flash && "ring-2 ring-[#000000]/60 shadow-[0_0_24px_rgba(0,0,0,0.25)]",
-        isNegative && "ring-2 ring-neutral-700/60",
-        lowRunway && !isNegative && "ring-1 ring-neutral-700/50",
+        flash && "ring-2 ring-[#3b82f6]/60 shadow-[0_0_24px_rgba(0,82,255,0.25)]",
+        isNegative && "ring-2 ring-rose-500/60",
+        lowRunway && !isNegative && "ring-1 ring-amber-400/50",
       )}
     >
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-2 min-w-0">
           <div className="p-1.5 rounded-lg bg-[#EFF6FF] border border-[#C8DDF5]">
-            <Wallet className="h-4 w-4 text-[#000000]" />
+            <Wallet className="h-4 w-4 text-[#3b82f6]" />
           </div>
           <div>
             <div className="text-xs text-muted-foreground">Likvid kassa</div>

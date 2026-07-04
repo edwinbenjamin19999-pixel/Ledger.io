@@ -32,7 +32,7 @@ export function VarianceBarChart({ rows, onClick }: Props) {
         <ReferenceLine x={0} stroke="#cbd5e1" />
         <Bar dataKey="value" radius={[0, 6, 6, 0]} onClick={(d: any) => onClick?.(d.ref)} cursor="pointer">
           {data.map((d, i) => (
-            <Cell key={i} fill={d.favorable ? '#000000' : '#525252'} />
+            <Cell key={i} fill={d.favorable ? '#10b981' : '#f43f5e'} />
           ))}
         </Bar>
       </BarChart>

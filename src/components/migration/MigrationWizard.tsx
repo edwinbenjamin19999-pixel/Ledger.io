@@ -102,7 +102,7 @@ export const MigrationWizard = ({ companyId, onComplete }: Props) => { const [cu
                       <p className="text-[10px] text-muted-foreground">{step.description}</p>
                     </div>
                   </div>
-                  {i < STEPS.length - 1 && <div className={`flex-1 h-px mx-1 ${isDone ? "bg-neutral-700" : "bg-border"}`} />}
+                  {i < STEPS.length - 1 && <div className={`flex-1 h-px mx-1 ${isDone ? "bg-emerald-400" : "bg-border"}`} />}
                 </div>
               );
             })}

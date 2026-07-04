@@ -119,7 +119,7 @@ export function KpiStrip({
             onClick={() => onSelect(isSel ? null : it.key)}
             className={cn(
               "text-left transition-all duration-200 rounded-2xl",
-              isSel ? "ring-2 ring-[#000000] ring-offset-2 ring-offset-background -translate-y-0.5" : "",
+              isSel ? "ring-2 ring-[#3b82f6] ring-offset-2 ring-offset-background -translate-y-0.5" : "",
             )}
           >
             <Card className="p-4 h-full bg-gradient-to-br from-card to-card/60 border-border/60">

@@ -150,7 +150,7 @@ export function ManualEntryDialog({ open, onOpenChange }: Props) { const { user 
 
           <div className="flex justify-end gap-2 pt-2">
             <Button variant="outline" onClick={() => onOpenChange(false)}>Avbryt</Button>
-            <Button onClick={handleSubmit} disabled={createEntry.isPending || !hours} className="bg-[#000000] hover:bg-[#000000]/90 text-white">
+            <Button onClick={handleSubmit} disabled={createEntry.isPending || !hours} className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
               {createEntry.isPending ? "Sparar..." : "Spara"}
             </Button>
           </div>

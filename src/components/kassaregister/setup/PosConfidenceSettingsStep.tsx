@@ -24,14 +24,14 @@ export function PosConfidenceSettingsStep({ onBack, onFinish, isPending, thresho
   ];
 
   const colorMap: Record<string, string> = {
-    emerald: "border-[#BFE6D6] bg-neutral-100/50 text-[#085041]",
-    amber: "border-[#F0DDB7] bg-neutral-100/50 text-[#7A5417]",
-    rose: "border-[#F4C8C8] bg-neutral-100/50 text-[#7A1A1A]",
+    emerald: "border-[#BFE6D6] bg-emerald-50/50 text-[#085041]",
+    amber: "border-[#F0DDB7] bg-amber-50/50 text-[#7A5417]",
+    rose: "border-[#F4C8C8] bg-rose-50/50 text-[#7A1A1A]",
   };
 
   return (
     <div className="space-y-5 animate-fade-in">
-      <Card className="border-l-[3px] border-l-[#000000]">
+      <Card className="border-l-[3px] border-l-[#3b82f6]">
         <CardHeader>
           <CardTitle className="text-lg">AI Konfidensregler</CardTitle>
           <p className="text-sm text-slate-500 mt-1">Varje Z-rapport får ett tillförlitlighetsbetyg som styr om den bokförs automatiskt</p>
@@ -53,7 +53,7 @@ export function PosConfidenceSettingsStep({ onBack, onFinish, isPending, thresho
           <div className="rounded-xl border border-slate-200 p-4 bg-white space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-slate-700">Auto-bokföringströskel</span>
-              <span className="text-sm font-semibold text-[#000000] tabular-nums">{threshold}%</span>
+              <span className="text-sm font-semibold text-[#3b82f6] tabular-nums">{threshold}%</span>
             </div>
             <Slider value={[threshold]} min={50} max={100} step={1} onValueChange={(v) => setThreshold(v[0])} />
             <p className="text-xs text-slate-500">Z-rapporter med konfidens ≥ {threshold}% bokförs automatiskt om aktiverat nedan.</p>
@@ -95,10 +95,10 @@ export function PosConfidenceSettingsStep({ onBack, onFinish, isPending, thresho
       </Card>
 
       {/* Result preview */}
-      <Card className="border-l-[3px] border-l-[#000000] bg-[#0F1F3D]">
+      <Card className="border-l-[3px] border-l-[#3b82f6] bg-[#0F1F3D]">
         <CardHeader>
           <CardTitle className="text-base flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-[#000000]" /> Så här kommer det att fungera
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" /> Så här kommer det att fungera
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-2">
@@ -122,7 +122,7 @@ export function PosConfidenceSettingsStep({ onBack, onFinish, isPending, thresho
 
       <div className="flex justify-between gap-2">
         <Button variant="ghost" onClick={onBack}>Tillbaka</Button>
-        <Button onClick={onFinish} disabled={isPending} size="lg" className="bg-[#000000] hover:bg-[#000000] text-white gap-1.5">
+        <Button onClick={onFinish} disabled={isPending} size="lg" className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white gap-1.5">
           <Sparkles className="h-4 w-4" />
           {isPending ? "Aktiverar..." : "Aktivera automatisering"}
         </Button>

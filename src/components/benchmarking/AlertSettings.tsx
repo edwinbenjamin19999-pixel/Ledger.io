@@ -73,9 +73,9 @@ export function AlertSettings() {
   return (
     <div className="space-y-4">
       {/* Info banner */}
-      <Alert className="border-[#C8DDF5] bg-[#EFF6FF] dark:bg-blue-950/20 dark:border-black">
-        <Info className="h-4 w-4 text-black dark:text-[#1E3A5F]" />
-        <AlertDescription className="text-black dark:text-blue-300 text-sm">
+      <Alert className="border-[#C8DDF5] bg-[#EFF6FF] dark:bg-blue-950/20 dark:border-blue-800">
+        <Info className="h-4 w-4 text-blue-600 dark:text-[#1E3A5F]" />
+        <AlertDescription className="text-blue-700 dark:text-blue-300 text-sm">
           Benchmarking mot branschdata (SNI-kod) aktiveras när vi byggt ut datapartnerskapen.
           Dina egna tröskelvärden fungerar redan nu.
         </AlertDescription>

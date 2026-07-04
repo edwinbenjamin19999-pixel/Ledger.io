@@ -38,7 +38,7 @@ export function CommentBubble({ entity, className, compact }: Props) {
       className={cn(
         "inline-flex items-center gap-1 rounded-full border border-transparent px-1.5 py-0.5 text-[10px] font-medium transition-colors",
         hasComments
-          ? "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5] hover:bg-[#EFF6FF]"
+          ? "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5] hover:bg-[#EFF6FF]"
           : "text-muted-foreground/60 hover:text-foreground hover:bg-muted",
         compact && "px-1",
         className,

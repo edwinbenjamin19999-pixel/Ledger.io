@@ -23,7 +23,7 @@ export const WhatChangedPanel = ({ changes }: { changes: BoardChange[] }) => (
               <Icon
                 className={cn(
                   "h-4 w-4 shrink-0 mt-0.5",
-                  positive ? "text-neutral-700" : "text-red-400"
+                  positive ? "text-emerald-500" : "text-red-400"
                 )}
               />
               <div className="flex-1 min-w-0">
@@ -33,7 +33,7 @@ export const WhatChangedPanel = ({ changes }: { changes: BoardChange[] }) => (
                 <span
                   className={cn(
                     "text-xs font-mono font-medium tabular-nums shrink-0 mt-0.5",
-                    positive ? "text-neutral-700" : "text-red-500"
+                    positive ? "text-emerald-500" : "text-red-500"
                   )}
                 >
                   {positive ? "+" : ""}{c.delta_pct.toFixed(1)}%

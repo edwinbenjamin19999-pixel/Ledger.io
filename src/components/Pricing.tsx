@@ -24,7 +24,7 @@ export const Pricing = () => {
   const reveal = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section id="pricing" className="bg-[#000000] py-24 md:py-32">
+    <section id="pricing" className="bg-[#0F172A] py-24 md:py-32">
       <div ref={reveal.ref} className={`container mx-auto max-w-3xl px-6 ${reveal.className}`}>
         {/* [1] Trust bar */}
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 pb-2">
@@ -53,7 +53,7 @@ export const Pricing = () => {
           >
             {/* [4] Intro badge */}
             <div className="flex justify-center">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-[rgba(0,0,0,0.1)] text-[#000000] text-[11px] font-medium uppercase tracking-wider">
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-[rgba(0,82,255,0.1)] text-[#3b82f6] text-[11px] font-medium uppercase tracking-wider">
                 Introerbjudande
               </span>
             </div>
@@ -83,7 +83,7 @@ export const Pricing = () => {
               <ul className="mt-4 space-y-3">
                 {includedFeatures.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#000000] shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <Check className="w-4 h-4 text-[#3b82f6] shrink-0 mt-0.5" strokeWidth={2.5} />
                     <span className="text-sm text-white/60">{feature}</span>
                   </li>
                 ))}
@@ -94,13 +94,13 @@ export const Pricing = () => {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-3">
               <Button
                 onClick={() => navigate("/auth")}
-                className="h-12 rounded-xl bg-[#000000] hover:bg-[#000000] text-white font-semibold shadow-[0_2px_8px_rgba(0,0,0,0.2)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.28)] hover:-translate-y-px transition-all duration-150"
+                className="h-12 rounded-xl bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold shadow-[0_2px_8px_rgba(0,82,255,0.2)] hover:shadow-[0_4px_12px_rgba(0,82,255,0.28)] hover:-translate-y-px transition-all duration-150"
               >
                 Kom igång
               </Button>
               <Button
                 variant="outline"
-                onClick={() => (window.location.href = "mailto:kontakt@bokfy.se")}
+                onClick={() => (window.location.href = "mailto:kontakt@cogniq.se")}
                 className="h-12 rounded-xl border-white/15 bg-transparent text-white/80 hover:bg-white/5 hover:text-white font-medium"
               >
                 Boka demo

@@ -78,7 +78,7 @@ export const BudgetPageHeader = ({ companies, selectedCompany, onCompanyChange,
 
         <div className="flex-1" />
 
-        <Button variant="outline" size="sm" onClick={onAIClick} className="bg-[#0F1F3D] text-white border-0 hover:from-purple-700 hover:to-neutral-700 gap-1.5">
+        <Button variant="outline" size="sm" onClick={onAIClick} className="bg-[#0F1F3D] text-white border-0 hover:from-purple-700 hover:to-indigo-700 gap-1.5">
           <Sparkles className="w-3.5 h-3.5" />
           AI-förslag
         </Button>

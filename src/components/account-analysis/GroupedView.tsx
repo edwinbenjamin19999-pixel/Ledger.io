@@ -101,7 +101,7 @@ export const GroupedView = ({ details, accounts }: GroupedViewProps) => {
             onClick={() => setGroupBy(opt.key)}
             className={`text-xs px-3 py-1 rounded-full transition-colors ${
               groupBy === opt.key
-                ? 'bg-[#000000] text-white'
+                ? 'bg-[#3b82f6] text-white'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
             }`}
           >
@@ -155,7 +155,7 @@ const GroupRow = ({ group, expanded, onToggle }: { group: GroupedData; expanded:
       <td className="px-4 py-3">
         <div className="flex items-center gap-2">
           <div className="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-1.5">
-            <div className="bg-[#000000] h-1.5 rounded-full transition-all" style={{ width: `${Math.min(group.pct, 100)}%` }} />
+            <div className="bg-[#3b82f6] h-1.5 rounded-full transition-all" style={{ width: `${Math.min(group.pct, 100)}%` }} />
           </div>
           <span className="text-xs text-slate-500 w-10 text-right tabular-nums">{group.pct.toFixed(1)}%</span>
         </div>

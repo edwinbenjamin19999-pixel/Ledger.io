@@ -9,7 +9,7 @@ import { ACTIVE_COMPANY_STORAGE_KEY } from "@/lib/company-selection";
  * the `company-changed` custom event so every existing `useCompanyId()` hook
  * across the platform automatically scopes its queries to that client.
  *
- * This is what lets the WL portal reuse the entire Bokfy feature set
+ * This is what lets the WL portal reuse the entire Cogniq feature set
  * without duplicating any routes or queries.
  */
 
@@ -128,7 +128,7 @@ export const AdvisorActiveClientProvider = ({ children }: { children: React.Reac
 export function useAdvisorActiveClient(): Ctx {
   const ctx = useContext(AdvisorActiveClientContext);
   if (!ctx) {
-    // Outside the provider (e.g. standard Bokfy pages) — read-only fallback so
+    // Outside the provider (e.g. standard Cogniq pages) — read-only fallback so
     // the ActiveClientBanner can still show on /dashboard etc.
     const persisted = readPersisted();
     return {

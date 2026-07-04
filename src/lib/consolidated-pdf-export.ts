@@ -84,7 +84,7 @@ const addFooter = (doc: jsPDF) => {
     doc.setFontSize(8);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(100, 116, 139);
-    doc.text(`Bokfy – Koncernkonsolidering`, 14, pageHeight - 5);
+    doc.text(`Cogniq – Koncernkonsolidering`, 14, pageHeight - 5);
     doc.text(`Sida ${i} av ${pageCount}`, pageWidth - 14, pageHeight - 5, { align: 'right' });
   }
 };

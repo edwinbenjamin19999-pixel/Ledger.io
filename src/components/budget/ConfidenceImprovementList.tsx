@@ -27,7 +27,7 @@ export function ConfidenceImprovementList({ suggestions, onApplyDriverPatch, cla
       {suggestions.map((s) => (
         <div
           key={s.id}
-          className="flex items-start gap-3 p-3 rounded-lg border border-slate-200 bg-white hover:border-[#000000] transition-colors"
+          className="flex items-start gap-3 p-3 rounded-lg border border-slate-200 bg-white hover:border-[#3b82f6] transition-colors"
         >
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
@@ -41,7 +41,7 @@ export function ConfidenceImprovementList({ suggestions, onApplyDriverPatch, cla
           <Button
             size="sm"
             variant="ghost"
-            className="h-7 px-2 text-xs gap-1 text-[#000000] hover:text-[#000000] hover:bg-[#EFF6FF]"
+            className="h-7 px-2 text-xs gap-1 text-[#3b82f6] hover:text-[#3b82f6] hover:bg-[#EFF6FF]"
             onClick={() => {
               if (s.action.driverPatch && onApplyDriverPatch) {
                 onApplyDriverPatch(s.action.driverPatch);

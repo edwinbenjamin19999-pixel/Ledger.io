@@ -13,11 +13,11 @@ interface Props {
 }
 
 const TYPE_STYLES: Record<string, string> = {
-  asset: "bg-[#EFF6FF] text-black",
+  asset: "bg-[#EFF6FF] text-blue-700",
   liability: "bg-[#FCE8E8] text-[#7A1A1A]",
   income: "bg-[#E1F5EE] text-[#085041]",
   expense: "bg-[#FAEEDA] text-[#7A5417]",
-  equity: "bg-[#F1F5F9] text-neutral-700",
+  equity: "bg-[#F1F5F9] text-violet-700",
 };
 
 const LEFT_BORDER: Record<string, string> = {
@@ -29,8 +29,8 @@ const LEFT_BORDER: Record<string, string> = {
 };
 
 const NUM_BADGE: Record<string, string> = {
-  blue: "bg-[#EFF6FF] text-black",
-  violet: "bg-[#F1F5F9] text-neutral-700",
+  blue: "bg-[#EFF6FF] text-blue-700",
+  violet: "bg-[#F1F5F9] text-violet-700",
   emerald: "bg-[#E1F5EE] text-[#085041]",
   amber: "bg-[#FAEEDA] text-[#7A5417]",
   orange: "bg-orange-50 text-orange-700",
@@ -53,7 +53,7 @@ function highlightMatch(text: string, query: string) {
   return (
     <>
       {text.slice(0, idx)}
-      <mark className="bg-[#EFF6FF] text-neutral-700 rounded px-0.5">{text.slice(idx, idx + query.length)}</mark>
+      <mark className="bg-[#EFF6FF] text-indigo-800 rounded px-0.5">{text.slice(idx, idx + query.length)}</mark>
       {text.slice(idx + query.length)}
     </>
   );
@@ -100,7 +100,7 @@ export function AccountRow({ account, classColor, search, onEdit, onToggle }: Pr
       </td>
       <td className="px-4 py-5 w-28 text-center">
         <div className="flex items-center justify-center gap-2">
-          <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${account.is_active ? "bg-neutral-700" : "bg-slate-300"}`} />
+          <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${account.is_active ? "bg-emerald-400" : "bg-slate-300"}`} />
           <span className={`text-xs font-medium ${account.is_active ? "text-[#085041]" : "text-slate-400"}`}>
             {account.is_active ? "Aktiv" : "Inaktiv"}
           </span>
@@ -112,7 +112,7 @@ export function AccountRow({ account, classColor, search, onEdit, onToggle }: Pr
           <button onClick={onEdit} className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" title="Redigera">
             <Pencil className="w-3.5 h-3.5" />
           </button>
-          <button onClick={() => navigate('/account-analysis')} className="p-1.5 rounded-lg text-slate-400 hover:text-[#000000] hover:bg-[#EFF6FF] transition-colors" title="Analysera">
+          <button onClick={() => navigate('/account-analysis')} className="p-1.5 rounded-lg text-slate-400 hover:text-[#3b82f6] hover:bg-[#EFF6FF] transition-colors" title="Analysera">
             <BarChart3 className="w-3.5 h-3.5" />
           </button>
           <button className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" title="Fler alternativ">

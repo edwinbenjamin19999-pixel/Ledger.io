@@ -18,11 +18,11 @@ export const AIInsightHighlight = ({ companyId }: AIInsightHighlightProps) => {
   if (data.status === "loading" || data.status === "no-data") {
     return (
       <div className="relative rounded-2xl overflow-hidden">
-        <div className="absolute inset-0 bg-[#000000]/15 rounded-2xl" />
+        <div className="absolute inset-0 bg-[#3b82f6]/15 rounded-2xl" />
         <div className="absolute inset-[1px] rounded-2xl bg-card" />
         <div className="relative p-5 flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-[#000000]/20 flex items-center justify-center flex-shrink-0">
-            <Sparkles className="w-5 h-5 text-[#000000]" />
+          <div className="w-10 h-10 rounded-xl bg-[#3b82f6]/20 flex items-center justify-center flex-shrink-0">
+            <Sparkles className="w-5 h-5 text-[#3b82f6]" />
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-semibold text-foreground">AI analyserar din ekonomi</p>
@@ -39,11 +39,11 @@ export const AIInsightHighlight = ({ companyId }: AIInsightHighlightProps) => {
   if (data.status === "limited") {
     return (
       <div className="relative rounded-2xl overflow-hidden">
-        <div className="absolute inset-0 bg-[#000000]/15 rounded-2xl" />
+        <div className="absolute inset-0 bg-[#3b82f6]/15 rounded-2xl" />
         <div className="absolute inset-[1px] rounded-2xl bg-card" />
         <div className="relative p-5 flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-[#000000]/20 flex items-center justify-center flex-shrink-0">
-            <Sparkles className="w-5 h-5 text-[#000000]" />
+          <div className="w-10 h-10 rounded-xl bg-[#3b82f6]/20 flex items-center justify-center flex-shrink-0">
+            <Sparkles className="w-5 h-5 text-[#3b82f6]" />
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-semibold text-foreground">AI analyserar din ekonomi</p>
@@ -59,7 +59,7 @@ export const AIInsightHighlight = ({ companyId }: AIInsightHighlightProps) => {
   // ---- READY: real comparison ----
   const isPositive = data.delta >= 0;
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
-  const trendColor = isPositive ? "text-[#000000]" : "text-[#7A5417]";
+  const trendColor = isPositive ? "text-[#3b82f6]" : "text-[#7A5417]";
   const deltaColor = isPositive ? "text-[#085041]" : "text-[#7A5417]";
   const pctText = data.deltaPct !== null
     ? `${isPositive ? "+" : ""}${data.deltaPct.toFixed(0)}%`
@@ -83,11 +83,11 @@ export const AIInsightHighlight = ({ companyId }: AIInsightHighlightProps) => {
 
   return (
     <div className="relative rounded-2xl overflow-hidden">
-      <div className="absolute inset-0 bg-[#000000]/20 rounded-2xl" />
+      <div className="absolute inset-0 bg-[#3b82f6]/20 rounded-2xl" />
       <div className="absolute inset-[1px] rounded-2xl bg-card" />
       <div className="relative p-5 space-y-3">
         <div className="flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-[#000000]/20 flex items-center justify-center flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[#3b82f6]/20 flex items-center justify-center flex-shrink-0">
             <TrendIcon className={`w-5 h-5 ${trendColor}`} />
           </div>
           <div className="flex-1 min-w-0">
@@ -119,7 +119,7 @@ export const AIInsightHighlight = ({ companyId }: AIInsightHighlightProps) => {
           <Button
             variant="ghost"
             size="sm"
-            className="text-[#000000] hover:text-[#000000] hover:bg-[rgba(0,0,0,0.1)] flex-shrink-0 h-7 text-xs"
+            className="text-[#3b82f6] hover:text-[#3b82f6] hover:bg-[rgba(0,82,255,0.1)] flex-shrink-0 h-7 text-xs"
             onClick={() => navigate("/cfo")}
           >
             Se detaljer

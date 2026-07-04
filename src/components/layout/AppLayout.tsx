@@ -34,7 +34,7 @@ import { useSubscription } from "@/hooks/useSubscription";
 import { AccountLockedScreen } from "@/components/subscription/AccountLockedScreen";
 import { TechSupportProvider } from "@/components/tech-support/TechSupportProvider";
 // NOTE: Tenant identity (TenantTopbarIdentity, TenantSwitcher, PoweredByNorthLedger)
-// belongs to WhiteLabelAppShell — NOT to the standard Bokfy shell.
+// belongs to WhiteLabelAppShell — NOT to the standard Cogniq shell.
 
 export const AppLayout = () => { const { user, loading, signOut } = useAuth();
   const navigate = useNavigate();

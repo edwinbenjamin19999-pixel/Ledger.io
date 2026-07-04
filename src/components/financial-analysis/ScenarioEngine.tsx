@@ -29,16 +29,16 @@ const ACCENTS: Record<ScenarioResult['key'], { border: string; bg: string; chip:
     chip: 'bg-slate-100 text-slate-700',
   },
   improved: {
-    border: 'border-neutral-300/70',
-    bg: 'bg-gradient-to-br from-neutral-100/60 to-white',
+    border: 'border-emerald-200/70',
+    bg: 'bg-gradient-to-br from-emerald-50/60 to-white',
     chip: 'bg-[#E1F5EE] text-[#085041]',
-    cta: 'bg-neutral-700 hover:bg-neutral-700 text-white',
+    cta: 'bg-emerald-600 hover:bg-emerald-700 text-white',
   },
   worst: {
-    border: 'border-neutral-300/70',
-    bg: 'bg-gradient-to-br from-neutral-100/40 to-white',
+    border: 'border-rose-200/70',
+    bg: 'bg-gradient-to-br from-rose-50/40 to-white',
     chip: 'bg-[#FCE8E8] text-[#7A1A1A]',
-    cta: 'bg-neutral-700 hover:bg-neutral-700 text-white',
+    cta: 'bg-rose-600 hover:bg-rose-700 text-white',
   },
 };
 

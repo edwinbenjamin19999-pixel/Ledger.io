@@ -45,10 +45,10 @@ export const BUCKET_COLORS = [
 
 export const BUCKET_BG_CLASSES = [
   "bg-slate-300",
-  "bg-[#000000]/70",
+  "bg-[#3b82f6]/70",
   "bg-slate-400",
-  "bg-neutral-700/80",
-  "bg-neutral-700/80",
+  "bg-amber-500/80",
+  "bg-rose-500/80",
 ] as const;
 
 export const getBucketIdx = (dueDate: string): number => {

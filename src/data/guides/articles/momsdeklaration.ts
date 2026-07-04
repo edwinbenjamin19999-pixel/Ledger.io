@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const momsdeklaration: Article = {
   slug: "momsdeklaration",
   h1: "Momsdeklaration steg för steg (SKV 4700)",
-  metaTitle: "Momsdeklaration steg för steg — SKV 4700 | Bokfy",
+  metaTitle: "Momsdeklaration steg för steg — SKV 4700 | Cogniq",
   metaDescription:
     "Komplett guide till svensk momsdeklaration: rutorna 05–49, periodicitet, deadlines och hur du undviker böter. Med exempel.",
   keywords: ["momsdeklaration", "skv 4700", "moms inlämning", "momsperiod", "skatteverket moms"],
@@ -55,7 +55,7 @@ export const momsdeklaration: Article = {
     },
   ],
   northledgerSolution: {
-    intro: "Bokfy sammanställer SKV 4700 automatiskt från huvudboken och kan lämna in via Skatteverkets API direkt — du godkänner med BankID.",
+    intro: "Cogniq sammanställer SKV 4700 automatiskt från huvudboken och kan lämna in via Skatteverkets API direkt — du godkänner med BankID.",
     comparison: [
       { manual: "Plocka ihop saldon från Excel", northledger: "Auto-sammanställning från huvudboken" },
       { manual: "Manuellt fylla 50 rutor", northledger: "Färdigifylld deklaration på 30 sekunder" },
@@ -91,7 +91,7 @@ export const momsdeklaration: Article = {
   ],
   internalLinks: {
     related: ["moms-sverige", "eu-moms-omvand-skattskyldighet", "avdragsgill-moms"],
-    product: { label: "Se Bokfy momsautomation", href: "/resources/vat-guide" },
+    product: { label: "Se Cogniq momsautomation", href: "/resources/vat-guide" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

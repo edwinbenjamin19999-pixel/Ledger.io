@@ -50,7 +50,7 @@ export const MobileDocuments = () => {
           onClick={() => cameraRef.current?.click()}
           className="w-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-5 flex items-center gap-4 active:scale-[0.97] transition-all duration-200 min-h-[44px] shadow-lg shadow-slate-900/10"
         >
-          <div className="rounded-xl bg-gradient-to-br from-[#000000] to-blue-500 p-3 shadow-lg shadow-[#000000]/20"><Camera className="h-6 w-6 text-white" /></div>
+          <div className="rounded-xl bg-gradient-to-br from-[#3b82f6] to-blue-500 p-3 shadow-lg shadow-[#3b82f6]/20"><Camera className="h-6 w-6 text-white" /></div>
           <div className="text-left">
             <p className="text-white font-bold text-base">Fota dokument</p>
             <p className="text-slate-400 text-sm">Snabbast — direkt från mobilen</p>
@@ -62,7 +62,7 @@ export const MobileDocuments = () => {
           onClick={() => fileRef.current?.click()}
           className="w-full bg-card border border-border rounded-2xl p-5 flex items-center gap-4 active:scale-[0.97] transition-all duration-200 min-h-[44px] shadow-sm"
         >
-          <div className="rounded-xl bg-neutral-700/10 p-3"><Upload className="h-6 w-6 text-neutral-700" /></div>
+          <div className="rounded-xl bg-violet-500/10 p-3"><Upload className="h-6 w-6 text-violet-600" /></div>
           <div className="text-left">
             <p className="text-foreground font-semibold">Välj från telefonen</p>
             <p className="text-muted-foreground text-sm">Flera filer · alla format</p>

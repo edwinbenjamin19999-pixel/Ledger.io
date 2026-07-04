@@ -53,8 +53,8 @@ const MAIntelligencePage = () => {
         <div className="space-y-4 mb-10">
           {features.map((f) => (
             <div key={f.title} className="flex items-start gap-4 p-5 rounded-xl border bg-card">
-              <div className="w-10 h-10 rounded-lg bg-[#EFF6FF] dark:bg-neutral-700/30 flex items-center justify-center shrink-0">
-                <f.icon className="w-5 h-5 text-neutral-700 dark:text-neutral-700" />
+              <div className="w-10 h-10 rounded-lg bg-[#EFF6FF] dark:bg-indigo-900/30 flex items-center justify-center shrink-0">
+                <f.icon className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
               </div>
               <div>
                 <div className="text-sm font-semibold text-foreground">{f.title}</div>
@@ -65,15 +65,15 @@ const MAIntelligencePage = () => {
         </div>
 
         {/* CTA */}
-        <div className="rounded-2xl bg-[#EFF6FF] dark:bg-indigo-950/20 border border-[#C8DDF5] dark:border-neutral-700 p-6 text-center">
-          <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+        <div className="rounded-2xl bg-[#EFF6FF] dark:bg-indigo-950/20 border border-[#C8DDF5] dark:border-indigo-800 p-6 text-center">
+          <p className="text-sm font-medium text-indigo-800 dark:text-indigo-300 mb-1">
             Tillgängligt för Enterprise-kunder
           </p>
-          <p className="text-xs text-neutral-700 dark:text-neutral-700 mb-4">
+          <p className="text-xs text-indigo-600 dark:text-indigo-400 mb-4">
             Kontakta oss för early access och demo
           </p>
           <Button
-            className="bg-neutral-700 hover:bg-neutral-700 text-white"
+            className="bg-indigo-600 hover:bg-indigo-700 text-white"
             onClick={() => toast.success("Tack! Vi kontaktar dig inom kort.")}
           >
             Kontakta säljteam

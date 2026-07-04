@@ -169,7 +169,7 @@ const EcommerceInventory = () => {
                     <EcommerceStatusBadge type={getStatusBadge(level)} />
                   </div>
                   <div className="w-full bg-muted rounded-full h-2 mb-2">
-                    <div className={`h-2 rounded-full transition-all ${pct > 50 ? 'bg-neutral-700' : pct > 20 ? 'bg-neutral-700' : 'bg-red-500'}`} style={{ width: `${pct}%` }} />
+                    <div className={`h-2 rounded-full transition-all ${pct > 50 ? 'bg-emerald-500' : pct > 20 ? 'bg-amber-400' : 'bg-red-500'}`} style={{ width: `${pct}%` }} />
                   </div>
                   <div className="flex justify-between text-xs text-muted-foreground">
                     <span>{available} tillgängliga</span>

@@ -37,8 +37,8 @@ export function ModeBanner({ automationMode, personaMode, pendingCount, readyCou
       message: pendingCount > 0
         ? `Du beslutar — ${pendingCount} förslag väntar på din granskning.`
         : "Du beslutar — AI föreslår, du klickar Granska & godkänn.",
-      ring: "border-neutral-300/60 dark:border-[#F0DDB7] bg-neutral-100/60 dark:bg-[#FAEEDA]",
-      iconWrap: "bg-[#FAEEDA] text-[#7A5417] dark:text-neutral-300",
+      ring: "border-amber-300/60 dark:border-[#F0DDB7] bg-amber-50/60 dark:bg-[#FAEEDA]",
+      iconWrap: "bg-[#FAEEDA] text-[#7A5417] dark:text-amber-200",
     },
     assisted: {
       Icon: Handshake,

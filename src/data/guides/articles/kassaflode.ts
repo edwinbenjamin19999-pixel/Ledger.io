@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const kassaflode: Article = {
   slug: "kassaflode",
   h1: "Kassaflöde — förstå och förbättra ditt företags likviditet",
-  metaTitle: "Kassaflöde — komplett guide för småföretag | Bokfy",
+  metaTitle: "Kassaflöde — komplett guide för småföretag | Cogniq",
   metaDescription:
     "Lär dig läsa kassaflödesanalysen, förstå skillnaden mellan resultat och likviditet, och konkreta sätt att förbättra kassaflödet i ditt företag.",
   keywords: ["kassaflöde", "likviditet", "kassaflödesanalys", "rörelsekapital", "cash flow"],
@@ -52,7 +52,7 @@ export const kassaflode: Article = {
     },
   ],
   northledgerSolution: {
-    intro: "Bokfy byggde kassaflödesprognosen direkt in i bokföringen. Den uppdateras live i takt med att fakturor skickas, betalas och avstäms.",
+    intro: "Cogniq byggde kassaflödesprognosen direkt in i bokföringen. Den uppdateras live i takt med att fakturor skickas, betalas och avstäms.",
     comparison: [
       { manual: "Bygga Excel-mall för kassaflöde varje månad", northledger: "Live 12-månadersprognos uppdateras automatiskt" },
       { manual: "Manuellt jaga sena betalare via mail", northledger: "AR-agenten skickar automatiska påminnelser och eskalerar" },
@@ -83,12 +83,12 @@ export const kassaflode: Article = {
   ],
   faq: [
     { q: "Vad är skillnaden mellan kassaflöde och vinst?", a: "Vinst bokförs när intäkten uppstår (fakturan skickas). Kassaflöde är när pengarna faktiskt rör sig på kontot. Skillnaden = förändring i kundfordringar, leverantörsskulder och lager." },
-    { q: "Hur ofta ska jag göra en kassaflödesprognos?", a: "Minst varje månad — och vid större beslut. Bokfy uppdaterar prognosen i realtid så du alltid ser 12 månader framåt." },
+    { q: "Hur ofta ska jag göra en kassaflödesprognos?", a: "Minst varje månad — och vid större beslut. Cogniq uppdaterar prognosen i realtid så du alltid ser 12 månader framåt." },
     { q: "Vad är en bra DSO (Days Sales Outstanding)?", a: "B2B i Sverige: 30 dagar är normalt, under 25 är bra, över 45 är en varningssignal. Räkna: (Kundfordringar / Årets omsättning) × 365." },
   ],
   internalLinks: {
     related: ["nyckeltal-smaforetag", "resultatrapport", "bruttomarginal-lonsamhet"],
-    product: { label: "Se Bokfy kassaflödesprognos", href: "/auth" },
+    product: { label: "Se Cogniq kassaflödesprognos", href: "/auth" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

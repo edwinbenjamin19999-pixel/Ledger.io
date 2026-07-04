@@ -58,7 +58,7 @@ export default function BrandSettings() {
       <div className="min-h-screen flex flex-col items-center justify-center gap-3 p-8 text-center">
         <h1 className="text-xl font-bold">Ingen tenant hittades</h1>
         <p className="text-muted-foreground text-sm max-w-md">
-          Brand Settings är tillgängligt på din egen subdomän (t.ex. <span className="font-mono">dittnamn.bokfy.se</span>). Den här sidan är inte tillgänglig på huvuddomänen.
+          Brand Settings är tillgängligt på din egen subdomän (t.ex. <span className="font-mono">dittnamn.cogniq.se</span>). Den här sidan är inte tillgänglig på huvuddomänen.
         </p>
         <Button onClick={() => navigate("/")}>Tillbaka</Button>
       </div>

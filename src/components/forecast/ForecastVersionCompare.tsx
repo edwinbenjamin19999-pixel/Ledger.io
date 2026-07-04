@@ -81,8 +81,8 @@ export function ForecastVersionCompare({ open, onClose, versions }: Props) {
                 <XAxis dataKey="month" tick={AXIS_TICK} tickLine={false} />
                 <YAxis tick={AXIS_TICK} tickLine={false} tickFormatter={(v) => formatSEK(Number(v))} />
                 <Tooltip contentStyle={{ borderRadius: 8, fontSize: 12 }} formatter={(v: unknown) => formatSEK(typeof v === "number" ? v : 0)} />
-                <Line type="monotone" dataKey="A" stroke="#000000" strokeWidth={2} dot={false} name={a?.label ?? "A"} />
-                <Line type="monotone" dataKey="B" stroke="#525252" strokeWidth={2} strokeDasharray="4 3" dot={false} name={b?.label ?? "B"} />
+                <Line type="monotone" dataKey="A" stroke="#3b82f6" strokeWidth={2} dot={false} name={a?.label ?? "A"} />
+                <Line type="monotone" dataKey="B" stroke="#f59e0b" strokeWidth={2} strokeDasharray="4 3" dot={false} name={b?.label ?? "B"} />
               </LineChart>
             </ResponsiveContainer>
           </div>

@@ -108,7 +108,7 @@ const KYCVerification = () => {
       <div className="min-h-screen flex items-center justify-center bg-background p-4">
         <Card className="max-w-md w-full">
           <CardHeader className="text-center">
-            <div className="mx-auto p-3 rounded-full bg-[#FAEEDA] dark:bg-neutral-700/30 w-fit mb-3">
+            <div className="mx-auto p-3 rounded-full bg-[#FAEEDA] dark:bg-amber-900/30 w-fit mb-3">
               <Clock className="h-8 w-8 text-[#7A5417]" />
             </div>
             <CardTitle>Väntar på verifiering</CardTitle>
@@ -118,7 +118,7 @@ const KYCVerification = () => {
               Dina uppgifter är inlämnade och granskas. Detta tar normalt 1–2 bankdagar.
             </p>
             <div className="flex items-center justify-center gap-2">
-              <Badge variant="outline" className="bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/20 dark:text-[#C28A2B]">
+              <Badge variant="outline" className="bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/20 dark:text-[#C28A2B]">
                 <Clock className="h-3 w-3 mr-1" /> Väntar på granskning
               </Badge>
             </div>
@@ -128,7 +128,7 @@ const KYCVerification = () => {
                 <CheckCircle2 className="h-5 w-5 text-[#085041]" />
                 <span className="text-xs text-muted-foreground">Inlämnad</span>
               </div>
-              <div className="h-px w-8 bg-neutral-700" />
+              <div className="h-px w-8 bg-amber-400" />
               <div className="flex items-center gap-1">
                 <Clock className="h-5 w-5 text-[#7A5417]" />
                 <span className="text-xs font-medium">Granskas</span>
@@ -150,7 +150,7 @@ const KYCVerification = () => {
       <div className="min-h-screen flex items-center justify-center bg-background p-4">
         <Card className="max-w-md w-full">
           <CardHeader className="text-center">
-            <div className="mx-auto p-3 rounded-full bg-[#E1F5EE] dark:bg-neutral-700/30 w-fit mb-3">
+            <div className="mx-auto p-3 rounded-full bg-[#E1F5EE] dark:bg-emerald-900/30 w-fit mb-3">
               <CheckCircle2 className="h-8 w-8 text-[#085041]" />
             </div>
             <CardTitle>KYC Verifierad</CardTitle>
@@ -159,7 +159,7 @@ const KYCVerification = () => {
             <p className="text-muted-foreground text-sm">
               Ditt företag är verifierat och redo att använda alla funktioner.
             </p>
-            <Badge variant="outline" className="bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/20 dark:text-[#1D9E75]">
+            <Badge variant="outline" className="bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/20 dark:text-[#1D9E75]">
               <CheckCircle2 className="h-3 w-3 mr-1" /> Verifierad
             </Badge>
           </CardContent>

@@ -154,7 +154,7 @@ export const PayrollAgentDashboard = ({ companyId }: PayrollAgentDashboardProps)
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {cards.map(c => (
               <div key={c.label} className="relative overflow-hidden rounded-[12px]" style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA", padding: "14px 16px" }}>
-                <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#000000" }} />
+                <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0040CC" }} />
                 <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">{c.label}</div>
                 <div className="mt-1 text-[18px] font-medium tracking-[-0.02em] tabular-nums text-[#0F172A]">{c.value}</div>
                 <div className="mt-[2px] text-[10px] text-[#94A3B8]">{c.sub}</div>
@@ -177,7 +177,7 @@ export const PayrollAgentDashboard = ({ companyId }: PayrollAgentDashboardProps)
             <TabsTrigger
               key={t.v}
               value={t.v}
-              className="rounded-none bg-transparent px-[12px] py-[7px] text-[11px] text-[#475569] border-b-2 border-transparent -mb-px data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              className="rounded-none bg-transparent px-[12px] py-[7px] text-[11px] text-[#475569] border-b-2 border-transparent -mb-px data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               {t.l}
             </TabsTrigger>

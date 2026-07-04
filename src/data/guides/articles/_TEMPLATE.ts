@@ -55,13 +55,13 @@ export const TEMPLATE_ARTICLE: Article = {
     { title: "TODO step 3", body: "TODO explanation." },
   ],
 
-  // === 6. Bokfy Solution ===
+  // === 6. Cogniq Solution ===
   northledgerSolution: {
-    intro: "TODO — one paragraph on how Bokfy removes the work.",
+    intro: "TODO — one paragraph on how Cogniq removes the work.",
     comparison: [
-      { manual: "TODO manual pain", northledger: "TODO Bokfy benefit" },
-      { manual: "TODO manual pain", northledger: "TODO Bokfy benefit" },
-      { manual: "TODO manual pain", northledger: "TODO Bokfy benefit" },
+      { manual: "TODO manual pain", northledger: "TODO Cogniq benefit" },
+      { manual: "TODO manual pain", northledger: "TODO Cogniq benefit" },
+      { manual: "TODO manual pain", northledger: "TODO Cogniq benefit" },
     ],
   },
 
@@ -104,7 +104,7 @@ export const TEMPLATE_ARTICLE: Article = {
   // === 11. Internal linking ===
   internalLinks: {
     related: ["bokfora-kvitto", "moms-sverige"], // ≥2 slugs from ARTICLES
-    product: { label: "Se Bokfy bokföring", href: "/auth" },
+    product: { label: "Se Cogniq bokföring", href: "/auth" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

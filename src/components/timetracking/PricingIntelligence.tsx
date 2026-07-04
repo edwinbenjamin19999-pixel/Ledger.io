@@ -79,7 +79,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
         <Card>
           <CardHeader className="pb-2">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-[#000000]" />
+              <Sparkles className="h-4 w-4 text-[#3b82f6]" />
               <CardTitle className="text-base">Lönsamhet per kund (kr/h)</CardTitle>
             </div>
             <p className="text-xs text-muted-foreground mt-1">
@@ -103,7 +103,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
                   />
                   <Bar dataKey="profit" radius={[0, 4, 4, 0]}>
                     {profitabilityData.map((d, i) => (
-                      <Cell key={i} fill={d.isProfitable ? "#000000" : "#525252"} />
+                      <Cell key={i} fill={d.isProfitable ? "#10b981" : "#ef4444"} />
                     ))}
                   </Bar>
                 </BarChart>
@@ -142,7 +142,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
                       <p className="text-sm font-medium">
                         {rate.rate_label}
                         {rate.is_default && (
-                          <span className="ml-2 text-[10px] bg-[#000000]/10 text-[#000000] px-1.5 py-0.5 rounded-full font-semibold">
+                          <span className="ml-2 text-[10px] bg-[#3b82f6]/10 text-[#3b82f6] px-1.5 py-0.5 rounded-full font-semibold">
                             Standard
                           </span>
                         )}
@@ -156,7 +156,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
 
                   <div className="bg-accent/50 rounded-lg p-3 space-y-2">
                     <div className="flex items-center gap-1.5">
-                      <Sparkles className="h-3.5 w-3.5 text-[#000000]" />
+                      <Sparkles className="h-3.5 w-3.5 text-[#3b82f6]" />
                       <span className="text-xs font-medium text-muted-foreground">AI-analys</span>
                     </div>
 
@@ -183,7 +183,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
 
                     {stats && totalHours > 80 && (
                       <div className="flex items-start gap-1.5 pt-1 border-t border-border/50 mt-1">
-                        <TrendingUp className="h-3.5 w-3.5 text-black mt-0.5 flex-shrink-0" />
+                        <TrendingUp className="h-3.5 w-3.5 text-blue-600 mt-0.5 flex-shrink-0" />
                         <p className="text-xs text-muted-foreground">
                           {rate.client_name} har anlitat dig för {totalHours.toFixed(0)}h totalt. 
                           Förslag: Erbjud 5% rabatt vid &gt;100h/kvartal för att behålla kunden och öka volym.
@@ -219,7 +219,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
               <Switch checked={newDefault} onCheckedChange={setNewDefault} id="is-default-new" />
               <Label htmlFor="is-default-new" className="text-sm cursor-pointer">Standardpris</Label>
             </div>
-            <Button onClick={handleAdd} disabled={!newRate} className="gap-1.5 bg-[#000000] hover:bg-[#000000]/90 text-foreground">
+            <Button onClick={handleAdd} disabled={!newRate} className="gap-1.5 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground">
               <Plus className="h-4 w-4" />
               Lägg till
             </Button>

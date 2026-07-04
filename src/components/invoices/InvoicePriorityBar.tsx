@@ -32,7 +32,7 @@ export const InvoicePriorityBar = ({
 
   if (n === 0) {
     return (
-      <div className="rounded-2xl bg-white border border-neutral-300/70 border-l-[3px] border-l-emerald-500 shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5 flex items-center gap-4">
+      <div className="rounded-2xl bg-white border border-emerald-200/70 border-l-[3px] border-l-emerald-500 shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5 flex items-center gap-4">
         <div className="h-10 w-10 rounded-xl bg-[#E1F5EE] flex items-center justify-center shrink-0">
           <ShieldCheck className="h-5 w-5 text-[#085041]" />
         </div>

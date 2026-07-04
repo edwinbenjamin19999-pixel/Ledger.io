@@ -68,7 +68,7 @@ export function ZReportArchive() { const { reports, isLoading, addReport } = use
             className="pl-9"
           />
         </div>
-        <Button onClick={() => setShowAdd(true)} className="gap-1.5 bg-[#000000] hover:bg-[#000000]/90 text-white">
+        <Button onClick={() => setShowAdd(true)} className="gap-1.5 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
           <Plus className="h-4 w-4" />
           Ladda upp Z-rapport
         </Button>
@@ -148,7 +148,7 @@ export function ZReportArchive() { const { reports, isLoading, addReport } = use
             </div>
             <div className="flex justify-end gap-2 pt-2">
               <Button variant="outline" onClick={() => setShowAdd(false)}>Avbryt</Button>
-              <Button onClick={handleAdd} disabled={addReport.isPending || !totalSales} className="bg-[#000000] hover:bg-[#000000]/90 text-white">
+              <Button onClick={handleAdd} disabled={addReport.isPending || !totalSales} className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
                 {addReport.isPending ? "Sparar..." : "Spara"}
               </Button>
             </div>

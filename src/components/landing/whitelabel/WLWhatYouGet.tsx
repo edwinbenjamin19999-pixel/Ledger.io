@@ -11,10 +11,10 @@ const items = [
 
 export const WLWhatYouGet = () => {
   return (
-    <section className="bg-[#000000] py-24 md:py-32">
+    <section className="bg-[#0F172A] py-24 md:py-32">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-[#000000] text-xs font-medium tracking-[0.25em] uppercase mb-3">
+          <p className="text-[#3b82f6] text-xs font-medium tracking-[0.25em] uppercase mb-3">
             Det här ingår
           </p>
           <h2
@@ -29,14 +29,14 @@ export const WLWhatYouGet = () => {
           {items.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="relative rounded-xl border border-white/[0.06] bg-white/[0.02] p-7 hover:border-[#000000]/20 hover:bg-white/[0.03] transition-all"
+              className="relative rounded-xl border border-white/[0.06] bg-white/[0.02] p-7 hover:border-[#3b82f6]/20 hover:bg-white/[0.03] transition-all"
             >
-              <div className="absolute top-5 right-5 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#000000]/10">
-                <Check className="w-3 h-3 text-[#000000]" strokeWidth={3} />
-                <span className="text-[10px] font-medium text-[#000000] tracking-wide uppercase">Ingår</span>
+              <div className="absolute top-5 right-5 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#3b82f6]/10">
+                <Check className="w-3 h-3 text-[#3b82f6]" strokeWidth={3} />
+                <span className="text-[10px] font-medium text-[#3b82f6] tracking-wide uppercase">Ingår</span>
               </div>
               <div className="w-10 h-10 rounded-lg bg-white/[0.04] flex items-center justify-center mb-5">
-                <Icon className="w-5 h-5 text-[#000000]" />
+                <Icon className="w-5 h-5 text-[#3b82f6]" />
               </div>
               <h3 className="text-white font-semibold mb-2 text-[15px]">{title}</h3>
               <p className="text-white/55 text-sm leading-relaxed">{desc}</p>

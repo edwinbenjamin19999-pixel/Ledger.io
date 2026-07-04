@@ -65,7 +65,7 @@ export function OverviewHeaderCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="px-2 py-0.5 rounded bg-white/10 text-[11px]">{status}</span>
             {balanced && (
-              <span className="px-2 py-0.5 rounded bg-neutral-700/20 text-neutral-300 text-[11px] flex items-center gap-1 border border-neutral-700/20">
+              <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-200 text-[11px] flex items-center gap-1 border border-emerald-400/20">
                 <CheckCircle className="w-3 h-3" /> Balans OK
               </span>
             )}
@@ -86,16 +86,16 @@ export function OverviewHeaderCard({
                 <p className="text-[9px] uppercase tracking-[0.07em] text-white/40">{d.label}</p>
                 <div className="flex items-center gap-1.5 mt-1">
                   {done || past ? (
-                    <CheckCircle className="w-3 h-3 text-neutral-300" />
+                    <CheckCircle className="w-3 h-3 text-emerald-300" />
                   ) : (
-                    <Clock className="w-3 h-3 text-neutral-300" />
+                    <Clock className="w-3 h-3 text-amber-300" />
                   )}
                   <span className="text-[14px] font-medium text-white tabular-nums">
                     {d.date.toLocaleDateString("sv-SE")}
                   </span>
                 </div>
                 {!done && d.countdown !== undefined && (
-                  <p className="text-[10px] text-neutral-300/80 mt-0.5">Om {d.countdown} dagar</p>
+                  <p className="text-[10px] text-amber-200/80 mt-0.5">Om {d.countdown} dagar</p>
                 )}
               </div>
             );

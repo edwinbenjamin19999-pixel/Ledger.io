@@ -38,7 +38,7 @@ function TreeNode({ node, depth = 0 }: { node: DifferenceTreeNode; depth?: numbe
       <div
         className={cn(
           "flex items-center justify-between py-2 px-3 rounded-lg",
-          node.highlight ? "bg-[#FCE8E8] dark:bg-rose-950/30 border border-neutral-300/60 dark:border-neutral-700/40" : "",
+          node.highlight ? "bg-[#FCE8E8] dark:bg-rose-950/30 border border-rose-200/60 dark:border-rose-800/40" : "",
           depth === 0 && "font-semibold text-slate-900 dark:text-slate-100",
           depth > 0 && "text-sm text-slate-700 dark:text-slate-300",
         )}
@@ -105,11 +105,11 @@ export function ImbalanceInvestigator({
           <div className="space-y-5 pb-2">
             {/* Headline numbers */}
             <div className="grid grid-cols-3 gap-3">
-              <div className="rounded-xl border border-neutral-300/60 dark:border-neutral-700/40 bg-neutral-100/70 dark:bg-rose-950/30 px-4 py-3">
-                <p className="text-[10px] font-bold uppercase tracking-wider text-[#7A1A1A] dark:text-neutral-300">
+              <div className="rounded-xl border border-rose-200/60 dark:border-rose-800/40 bg-rose-50/70 dark:bg-rose-950/30 px-4 py-3">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-[#7A1A1A] dark:text-rose-300">
                   Differens
                 </p>
-                <p className="text-xl font-bold tabular-nums mt-1 text-[#7A1A1A] dark:text-neutral-300">
+                <p className="text-xl font-bold tabular-nums mt-1 text-[#7A1A1A] dark:text-rose-300">
                   {formatSEK(Math.abs(diff))}
                 </p>
               </div>
@@ -176,9 +176,9 @@ export function ImbalanceInvestigator({
                       key={e.entryId}
                       onClick={() => onEntryClick?.(e.entryId)}
                       className={cn(
-                        "w-full text-left rounded-xl border bg-card hover:border-[#000000] transition-all px-4 py-3",
+                        "w-full text-left rounded-xl border bg-card hover:border-[#3b82f6] transition-all px-4 py-3",
                         e.match === "exact"
-                          ? "border-neutral-300/70 bg-neutral-100/40 dark:bg-rose-950/20"
+                          ? "border-rose-300/70 bg-rose-50/40 dark:bg-rose-950/20"
                           : "border-border",
                       )}
                     >
@@ -226,11 +226,11 @@ export function ImbalanceInvestigator({
                     <button
                       key={`${s.accountNumber}-${s.anomalyType}`}
                       onClick={() => onAccountClick?.(s.accountNumber)}
-                      className="w-full text-left rounded-xl border border-border bg-card hover:border-[#000000] hover:bg-neutral-100/30 dark:hover:bg-blue-950/20 transition-all px-4 py-3"
+                      className="w-full text-left rounded-xl border border-border bg-card hover:border-[#3b82f6] hover:bg-blue-50/30 dark:hover:bg-blue-950/20 transition-all px-4 py-3"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0 flex-1">
-                          <p className="text-sm font-semibold text-[#000000] dark:text-[#000000]">
+                          <p className="text-sm font-semibold text-[#3b82f6] dark:text-[#3b82f6]">
                             {s.accountNumber} · {s.accountName}
                           </p>
                           <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
@@ -257,10 +257,10 @@ export function ImbalanceInvestigator({
                   {imbalance.fixes.map((f) => (
                     <div
                       key={f.id}
-                      className="rounded-xl border border-black/70 dark:border-[#000000]/40 bg-neutral-100/40 dark:bg-blue-950/20 px-4 py-3"
+                      className="rounded-xl border border-blue-200/70 dark:border-[#3b82f6]/40 bg-blue-50/40 dark:bg-blue-950/20 px-4 py-3"
                     >
                       <div className="flex items-start gap-3">
-                        <Sparkles className="w-4 h-4 text-[#000000] dark:text-[#1E3A5F] shrink-0 mt-0.5" />
+                        <Sparkles className="w-4 h-4 text-[#3b82f6] dark:text-[#1E3A5F] shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">{f.title}</p>
                           <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">

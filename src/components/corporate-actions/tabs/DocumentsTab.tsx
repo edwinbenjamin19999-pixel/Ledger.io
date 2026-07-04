@@ -19,7 +19,7 @@ export const DocumentsTab = () => { const [search, setSearch] = useState("");
   const [documents] = useState<Document[]>([]);
 
   const statusConfig = { draft: { label: "Utkast", cls: "bg-muted text-muted-foreground" },
-    ready: { label: "Klar", cls: "bg-[#EFF6FF] text-black border-[#C8DDF5]" },
+    ready: { label: "Klar", cls: "bg-[#EFF6FF] text-blue-600 border-[#C8DDF5]" },
     signed: { label: "Signerad", cls: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]" },
   };
 

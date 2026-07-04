@@ -11,13 +11,13 @@ const expectations = [
 export const WLFinalCTA = () => {
   const navigate = useNavigate();
   return (
-    <section className="bg-[#000000] py-24 md:py-32 border-t border-white/5">
+    <section className="bg-[#0F172A] py-24 md:py-32 border-t border-white/5">
       <div className="container mx-auto max-w-3xl px-6 text-center">
         <h2
           className="text-4xl md:text-5xl font-[700] text-white leading-[1.05]"
           style={{ letterSpacing: "-0.8px" }}
         >
-          Redo att lansera <span className="text-[#000000]">din egen plattform?</span>
+          Redo att lansera <span className="text-[#3b82f6]">din egen plattform?</span>
         </h2>
         <p className="mt-6 text-white/55 text-base leading-relaxed">
           Boka en demo. Vi visar hur snabbt du kan vara igång under ditt varumärke.
@@ -26,7 +26,7 @@ export const WLFinalCTA = () => {
           <Button
             size="lg"
             onClick={() => navigate("/white-label/onboarding")}
-            className="h-12 px-7 bg-[#000000] hover:bg-[#000000] text-[#000000] hover:text-white font-semibold rounded-lg group shadow-[0_2px_24px_rgba(0,0,0,0.25)]"
+            className="h-12 px-7 bg-[#3b82f6] hover:bg-[#3b82f6] text-[#0F172A] hover:text-white font-semibold rounded-lg group shadow-[0_2px_24px_rgba(0,82,255,0.25)]"
           >
             Lansera min plattform
             <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
@@ -34,7 +34,7 @@ export const WLFinalCTA = () => {
           <Button
             size="lg"
             variant="glass"
-            onClick={() => (window.location.href = "mailto:demo@bokfy.se?subject=White Label demo")}
+            onClick={() => (window.location.href = "mailto:demo@cogniq.se?subject=White Label demo")}
             className="h-12 px-7 rounded-lg"
           >
             Boka demo
@@ -48,7 +48,7 @@ export const WLFinalCTA = () => {
             {expectations.map((e) => (
               <div key={e.step} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-left">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="w-7 h-7 rounded-full bg-[#000000]/10 text-[#000000] text-xs font-semibold flex items-center justify-center">
+                  <span className="w-7 h-7 rounded-full bg-[#3b82f6]/10 text-[#3b82f6] text-xs font-semibold flex items-center justify-center">
                     {e.step}
                   </span>
                   <span className="text-white text-sm font-semibold">{e.label}</span>

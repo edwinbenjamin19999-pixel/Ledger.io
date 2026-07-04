@@ -65,9 +65,9 @@ export function ProjectMilestonesTab({ project, totalRevenue }: Props) { const b
   return (
     <div className="space-y-6 mt-4">
       {/* AI suggestion */}
-      <Card className="border-l-4 border-l-[#000000] bg-[#000000]/5">
+      <Card className="border-l-4 border-l-[#3b82f6] bg-[#3b82f6]/5">
         <CardContent className="py-3 px-4 flex items-start gap-3">
-          <Sparkles className="h-4 w-4 text-[#000000] flex-shrink-0 mt-0.5" />
+          <Sparkles className="h-4 w-4 text-[#3b82f6] flex-shrink-0 mt-0.5" />
           <div className="text-xs text-muted-foreground">
             <p className="font-medium text-foreground text-sm">AI-rekommendation: Milstolpefakturering</p>
             <p className="mt-1">
@@ -106,7 +106,7 @@ export function ProjectMilestonesTab({ project, totalRevenue }: Props) { const b
           <CardTitle className="text-base">Milstolpar</CardTitle>
           <Dialog open={showAdd} onOpenChange={setShowAdd}>
             <DialogTrigger asChild>
-              <Button size="sm" className="bg-[#000000] hover:bg-[#000000]/90 text-white">
+              <Button size="sm" className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
                 <Plus className="h-3.5 w-3.5 mr-1" />
                 Lägg till milstolpe
               </Button>
@@ -127,7 +127,7 @@ export function ProjectMilestonesTab({ project, totalRevenue }: Props) { const b
                     = {fmt(budgetRev * ((parseFloat(newPercent) || 0) / 100))} av {fmt(budgetRev)}
                   </p>
                 </div>
-                <Button onClick={handleAdd} disabled={!newName.trim()} className="w-full bg-[#000000] hover:bg-[#000000]/90 text-white">
+                <Button onClick={handleAdd} disabled={!newName.trim()} className="w-full bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
                   Lägg till
                 </Button>
               </div>
@@ -146,7 +146,7 @@ export function ProjectMilestonesTab({ project, totalRevenue }: Props) { const b
                   key={m.id}
                   className={cn(
                     "flex items-center gap-3 p-3 rounded-lg border transition-colors",
-                    m.completed ? "bg-neutral-100/50 border-[#BFE6D6] dark:bg-emerald-950/20 dark:border-neutral-700" : "bg-background"
+                    m.completed ? "bg-emerald-50/50 border-[#BFE6D6] dark:bg-emerald-950/20 dark:border-emerald-800" : "bg-background"
                   )}
                 >
                   <button onClick={() => toggleComplete(m.id)} className="flex-shrink-0">

@@ -49,7 +49,7 @@ export function PosOnboardingAssistant({ step }: { step: keyof typeof COPY }) {
 
 function Section({ icon: Icon, color, title, text }: { icon: any; color: string; title: string; text: string }) {
   const colorMap: Record<string, string> = {
-    cyan: "text-[#000000] bg-[#EFF6FF]",
+    cyan: "text-[#3b82f6] bg-[#EFF6FF]",
     slate: "text-slate-700 bg-slate-100",
     emerald: "text-[#085041] bg-[#E1F5EE]",
   };

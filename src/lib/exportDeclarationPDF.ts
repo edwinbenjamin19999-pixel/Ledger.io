@@ -100,7 +100,7 @@ export function exportDeclarationPDF(options: ExportOptions) {
     doc.setFontSize(7);
     doc.setTextColor(160, 160, 160);
     doc.text(
-      `${title} — Sida ${i} av ${pageCount} — Genererad av Bokfy AI`,
+      `${title} — Sida ${i} av ${pageCount} — Genererad av Cogniq AI`,
       14,
       doc.internal.pageSize.height - 8
     );

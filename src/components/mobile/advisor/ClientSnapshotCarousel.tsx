@@ -8,9 +8,9 @@ interface ClientSnapshotCarouselProps {
 }
 
 const TAG_BY_URGENCY: Record<FirmClientEnriched["urgency"], { label: string; tone: string; Icon: typeof TrendingUp }> = {
-  high: { label: "Behöver granskning", tone: "bg-neutral-700/15 text-neutral-300 border-neutral-700/30", Icon: TrendingDown },
-  medium: { label: "Risk ökar", tone: "bg-neutral-700/15 text-neutral-300 border-neutral-700/30", Icon: Minus },
-  low: { label: "Stabil", tone: "bg-neutral-700/15 text-neutral-300 border-neutral-700/30", Icon: TrendingUp },
+  high: { label: "Behöver granskning", tone: "bg-rose-500/15 text-rose-300 border-rose-400/30", Icon: TrendingDown },
+  medium: { label: "Risk ökar", tone: "bg-amber-500/15 text-amber-300 border-amber-400/30", Icon: Minus },
+  low: { label: "Stabil", tone: "bg-emerald-500/15 text-emerald-300 border-emerald-400/30", Icon: TrendingUp },
 };
 
 export const ClientSnapshotCarousel = ({ clients, onTap }: ClientSnapshotCarouselProps) => {
@@ -63,7 +63,7 @@ const SnapKpi = ({ label, value, accent }: { label: string; value: string; accen
     <div className="text-[9px] uppercase text-white/35 tracking-wider">{label}</div>
     <div className={cn(
       "text-sm font-bold tabular-nums",
-      accent ? "text-neutral-300" : "text-white/90",
+      accent ? "text-rose-300" : "text-white/90",
     )}>{value}</div>
   </div>
 );

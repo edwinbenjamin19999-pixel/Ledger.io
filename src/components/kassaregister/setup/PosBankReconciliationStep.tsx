@@ -32,7 +32,7 @@ export function PosBankReconciliationStep({ onBack, onNext, enabled, setEnabled 
 
   return (
     <div className="space-y-5 animate-fade-in">
-      <Card className="border-l-[3px] border-l-[#000000]">
+      <Card className="border-l-[3px] border-l-[#3b82f6]">
         <CardHeader>
           <CardTitle className="text-lg">Automatisk bankavstämning</CardTitle>
           <p className="text-sm text-slate-500 mt-1">Vi matchar dina POS-data med dina banktransaktioner i realtid</p>
@@ -43,7 +43,7 @@ export function PosBankReconciliationStep({ onBack, onNext, enabled, setEnabled 
             {["Z-rapport", "Förväntad insättning", "Bank­transaktion", "Match-status"].map((s, i) => (
               <div key={s} className="flex items-center gap-2 flex-1">
                 <span className="font-medium text-slate-700 text-center flex-1">{s}</span>
-                {i < 3 && <ArrowRight className="h-3.5 w-3.5 text-[#000000] shrink-0" />}
+                {i < 3 && <ArrowRight className="h-3.5 w-3.5 text-[#3b82f6] shrink-0" />}
               </div>
             ))}
           </div>
@@ -55,8 +55,8 @@ export function PosBankReconciliationStep({ onBack, onNext, enabled, setEnabled 
               const isResolved = s.status === "accepted" || s.status === "adjusted";
               const isMatch = s.status === "match";
               const tone = isMatch || isResolved
-                ? "border-[#BFE6D6] bg-neutral-100/40"
-                : "border-[#F0DDB7] bg-neutral-100/40";
+                ? "border-[#BFE6D6] bg-emerald-50/40"
+                : "border-[#F0DDB7] bg-amber-50/40";
               return (
                 <div key={s.date} className={`p-3 rounded-xl border ${tone}`}>
                   <div className="flex items-center justify-between gap-3 flex-wrap">
@@ -84,7 +84,7 @@ export function PosBankReconciliationStep({ onBack, onNext, enabled, setEnabled 
                       <Button size="sm" variant="outline" className="h-7 text-xs" onClick={() => setInvestigateDate(investigateDate === s.date ? null : s.date)}>
                         <Search className="h-3 w-3 mr-1" /> Undersök
                       </Button>
-                      <Button size="sm" className="h-7 text-xs bg-[#000000] hover:bg-[#000000] text-white" onClick={() => handleAutoAdjust(s.date, diff)}>Auto-justera</Button>
+                      <Button size="sm" className="h-7 text-xs bg-[#3b82f6] hover:bg-[#3b82f6] text-white" onClick={() => handleAutoAdjust(s.date, diff)}>Auto-justera</Button>
                     </div>
                   )}
                   {investigateDate === s.date && (
@@ -112,9 +112,9 @@ export function PosBankReconciliationStep({ onBack, onNext, enabled, setEnabled 
           </div>
 
           {/* Toggle */}
-          <div className="flex items-center justify-between p-3 rounded-xl border border-[#C8DDF5] bg-neutral-100/40">
+          <div className="flex items-center justify-between p-3 rounded-xl border border-[#C8DDF5] bg-blue-50/40">
             <div className="flex items-center gap-2">
-              <Landmark className="h-4 w-4 text-[#000000]" />
+              <Landmark className="h-4 w-4 text-[#3b82f6]" />
               <div>
                 <p className="text-sm font-medium text-slate-800">Aktivera automatisk bankavstämning</p>
                 <p className="text-xs text-slate-500">Matchar Z-rapporter mot bankinsättningar dagligen</p>
@@ -127,7 +127,7 @@ export function PosBankReconciliationStep({ onBack, onNext, enabled, setEnabled 
 
       <div className="flex justify-between gap-2">
         <Button variant="ghost" onClick={onBack}>Tillbaka</Button>
-        <Button onClick={onNext} className="bg-[#000000] hover:bg-[#000000] text-white">Fortsätt</Button>
+        <Button onClick={onNext} className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white">Fortsätt</Button>
       </div>
     </div>
   );

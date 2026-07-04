@@ -12,7 +12,7 @@ export function WordCount({
   const below = w > 0 && w < recommendedMin;
   return (
     <div className={`text-[10px] flex items-center gap-1 tabular-nums ${below ? "text-[#7A5417]" : "text-[#94A3B8]"}`}>
-      {below && <AlertTriangle className="w-2.5 h-2.5 text-[#525252]" />}
+      {below && <AlertTriangle className="w-2.5 h-2.5 text-[#EF9F27]" />}
       <span>{w} ord</span>
       {below && <span>· rek. min {recommendedMin}</span>}
     </div>

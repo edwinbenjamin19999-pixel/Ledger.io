@@ -142,7 +142,7 @@ export const SIE4Import = ({ companyId, onComplete }: SIE4ImportProps) => { cons
         {/* What gets imported */}
         <Alert className="border-[#BFE6D6] bg-[#E1F5EE] dark:bg-green-950/20">
           <CheckCircle className="w-4 h-4 text-[#085041]" />
-          <AlertDescription className="text-[#085041] dark:text-neutral-300">
+          <AlertDescription className="text-[#085041] dark:text-green-200">
             <strong>Allt importeras automatiskt:</strong> Kontoplan, ingående/utgående balanser, 
             resultaträkning, alla verifikationer — även från <strong>tidigare räkenskapsår</strong>. 
             Ingen ombokföring behövs!
@@ -176,8 +176,8 @@ export const SIE4Import = ({ companyId, onComplete }: SIE4ImportProps) => { cons
 
         {/* Import result summary */}
         {summary && (
-          <div className="bg-[#E1F5EE] dark:bg-green-950/20 border border-[#BFE6D6] dark:border-neutral-700 rounded-lg p-4 space-y-3">
-            <p className="font-medium text-[#085041] dark:text-neutral-300 flex items-center gap-2">
+          <div className="bg-[#E1F5EE] dark:bg-green-950/20 border border-[#BFE6D6] dark:border-green-800 rounded-lg p-4 space-y-3">
+            <p className="font-medium text-[#085041] dark:text-green-200 flex items-center gap-2">
               <CheckCircle className="w-4 h-4" />
               Import slutförd!
             </p>

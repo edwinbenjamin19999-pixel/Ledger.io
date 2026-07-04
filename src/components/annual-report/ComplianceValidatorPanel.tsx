@@ -70,7 +70,7 @@ function ChecklistRow({ check, onNavigate }: { check: ComplianceCheck; onNavigat
   const Icon = check.status === "complete" ? Check : check.status === "attention" ? AlertCircle : Circle;
   const tone =
     check.status === "complete" ? "text-[#1D9E75]" :
-    check.status === "attention" ? "text-[#525252]" :
+    check.status === "attention" ? "text-[#EF9F27]" :
     "text-[#CBD5E1]";
   const cta =
     check.status === "complete" ? null :
@@ -88,7 +88,7 @@ function ChecklistRow({ check, onNavigate }: { check: ComplianceCheck; onNavigat
           {check.label}
         </p>
         {cta && (
-          <p className="text-[10px] text-[#000000] opacity-0 group-hover:opacity-100 transition-opacity">{cta}</p>
+          <p className="text-[10px] text-[#0040CC] opacity-0 group-hover:opacity-100 transition-opacity">{cta}</p>
         )}
       </div>
     </button>
@@ -105,7 +105,7 @@ function CircularProgress({ pct }: { pct: number }) {
         <circle cx="22" cy="22" r={r} fill="none" stroke="#F1F5F9" strokeWidth="4" />
         <circle
           cx="22" cy="22" r={r} fill="none"
-          stroke={pct === 100 ? "#1D9E75" : "#000000"}
+          stroke={pct === 100 ? "#1D9E75" : "#0040CC"}
           strokeWidth="4"
           strokeDasharray={`${dash} ${c}`}
           strokeLinecap="round"

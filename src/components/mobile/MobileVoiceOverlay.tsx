@@ -99,12 +99,12 @@ export const MobileVoiceOverlay = ({ open, onClose, onConfirm }: MobileVoiceOver
       <div className="relative w-40 h-40 flex items-center justify-center mb-10">
         {listening && (
           <>
-            <div className="absolute inset-0 rounded-full bg-neutral-700/20 animate-ping" style={{ animationDuration: "2s" }} />
-            <div className="absolute inset-4 rounded-full bg-neutral-700/30 animate-ping" style={{ animationDuration: "1.5s", animationDelay: "0.3s" }} />
-            <div className="absolute inset-8 rounded-full bg-neutral-700/40 animate-ping" style={{ animationDuration: "1s", animationDelay: "0.6s" }} />
+            <div className="absolute inset-0 rounded-full bg-indigo-500/20 animate-ping" style={{ animationDuration: "2s" }} />
+            <div className="absolute inset-4 rounded-full bg-indigo-500/30 animate-ping" style={{ animationDuration: "1.5s", animationDelay: "0.3s" }} />
+            <div className="absolute inset-8 rounded-full bg-indigo-500/40 animate-ping" style={{ animationDuration: "1s", animationDelay: "0.6s" }} />
           </>
         )}
-        <div className="relative bg-neutral-700 rounded-full p-6 shadow-lg shadow-indigo-500/40">
+        <div className="relative bg-indigo-600 rounded-full p-6 shadow-lg shadow-indigo-500/40">
           <Mic className="h-10 w-10 text-white" />
         </div>
       </div>

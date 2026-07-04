@@ -218,7 +218,7 @@ export default function AdvisorCapacity() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
           {staff.map((s) => {
             const pct = (s.loggedHours / s.capacityHours) * 100;
-            const accent = pct < 70 ? "bg-neutral-700" : pct < 90 ? "bg-neutral-700" : "bg-red-500";
+            const accent = pct < 70 ? "bg-emerald-500" : pct < 90 ? "bg-amber-500" : "bg-red-500";
             return (
               <div key={s.id} className="bg-white border border-slate-200 rounded-[12px] overflow-hidden">
                 <div className={`h-[3px] ${accent}`} />
@@ -256,7 +256,7 @@ export default function AdvisorCapacity() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <div><p className="text-[10px] uppercase text-white/50">Total kapacitet</p><p className="text-[18px] font-medium tabular-nums">{staff.length === 0 ? "—" : `${totals.cap.toFixed(0)}h`}</p></div>
           <div><p className="text-[10px] uppercase text-white/50">Använt</p><p className="text-[18px] font-medium tabular-nums">{staff.length === 0 ? "—" : `${totals.used.toFixed(0)}h`}</p></div>
-          <div><p className="text-[10px] uppercase text-white/50">Tillgängligt</p><p className="text-[18px] font-medium text-neutral-300 tabular-nums">{staff.length === 0 ? "—" : `${totals.available.toFixed(0)}h`}</p></div>
+          <div><p className="text-[10px] uppercase text-white/50">Tillgängligt</p><p className="text-[18px] font-medium text-emerald-300 tabular-nums">{staff.length === 0 ? "—" : `${totals.available.toFixed(0)}h`}</p></div>
           <div><p className="text-[10px] uppercase text-white/50">Beläggning</p><p className="text-[18px] font-medium tabular-nums">{staff.length === 0 ? "—" : `${totals.util.toFixed(0)}%`}</p></div>
         </div>
         <p className="mt-3 text-[12px] text-white/60 flex items-center gap-1.5">
@@ -286,7 +286,7 @@ export default function AdvisorCapacity() {
             {byClient.map((r) => {
               const diff = r.loggedHours - r.estimatedHours;
               const diffPct = r.estimatedHours > 0 ? (diff / r.estimatedHours) * 100 : 0;
-              const diffColor = diff > 1 ? "text-red-600" : diff < -1 ? "text-neutral-700" : "text-slate-500";
+              const diffColor = diff > 1 ? "text-red-600" : diff < -1 ? "text-emerald-600" : "text-slate-500";
               return (
                 <tr key={r.companyId} className="border-t border-slate-100">
                   <td className="px-4 py-2.5 font-medium">{r.name}</td>

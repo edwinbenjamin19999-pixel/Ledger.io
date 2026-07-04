@@ -24,17 +24,17 @@ const iconFor = {
 } as const;
 
 const statusRing = {
-  good: "ring-neutral-700/30 hover:ring-neutral-700/50",
-  warning: "ring-neutral-700/30 hover:ring-neutral-700/50",
-  critical: "ring-neutral-700/40 hover:ring-neutral-700/60",
-  neutral: "ring-border hover:ring-[#000000]/40",
+  good: "ring-emerald-500/30 hover:ring-emerald-500/50",
+  warning: "ring-amber-500/30 hover:ring-amber-500/50",
+  critical: "ring-rose-500/40 hover:ring-rose-500/60",
+  neutral: "ring-border hover:ring-[#3b82f6]/40",
   unavailable: "ring-border opacity-90",
 };
 const statusDot = {
-  good: "bg-neutral-700",
-  warning: "bg-neutral-700",
-  critical: "bg-neutral-700",
-  neutral: "bg-[#000000]",
+  good: "bg-emerald-500",
+  warning: "bg-amber-500",
+  critical: "bg-rose-500",
+  neutral: "bg-[#3b82f6]",
   unavailable: "bg-muted-foreground/40",
 };
 const statusText = {
@@ -100,7 +100,7 @@ function KPICard({ k }: { k: CashflowKPI }) {
       </div>
       {k.microInsight && k.status !== "unavailable" ? (
         <p className="mt-3 line-clamp-2 text-[11px] leading-snug text-muted-foreground">
-          <span className="font-medium text-[#000000] dark:text-[#000000]">AI · </span>
+          <span className="font-medium text-[#3b82f6] dark:text-[#3b82f6]">AI · </span>
           {k.microInsight}
         </p>
       ) : null}

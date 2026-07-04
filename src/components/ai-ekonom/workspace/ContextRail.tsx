@@ -117,7 +117,7 @@ export function ContextRail({ companyId, conversations, activeId, onSelect, refr
             <ul className="space-y-2">
               {agents.map((a) => (
                 <li key={a.id} className="flex items-start gap-2 text-[12px] text-foreground">
-                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-neutral-700 animate-pulse shrink-0" />
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
                   <span className="leading-snug">{a.text}</span>
                 </li>
               ))}
@@ -154,7 +154,7 @@ export function ContextRail({ companyId, conversations, activeId, onSelect, refr
           )}
           <button
             onClick={() => navigate("/agent")}
-            className="w-full text-[11px] text-[#000000] hover:underline px-3 py-2 border-t border-border text-left"
+            className="w-full text-[11px] text-[#3b82f6] hover:underline px-3 py-2 border-t border-border text-left"
           >
             Se hela aktivitetsloggen →
           </button>
@@ -175,9 +175,9 @@ export function ContextRail({ companyId, conversations, activeId, onSelect, refr
                   <li key={c.id}>
                     <button
                       onClick={() => onSelect(c.id)}
-                      className={`w-full text-left px-3 py-2 text-[12px] hover:bg-muted transition flex items-center gap-2 ${isActive ? "bg-[#000000]/10" : ""}`}
+                      className={`w-full text-left px-3 py-2 text-[12px] hover:bg-muted transition flex items-center gap-2 ${isActive ? "bg-[#3b82f6]/10" : ""}`}
                     >
-                      <span className={`flex-1 truncate leading-snug ${isActive ? "text-[#000000] font-medium" : "text-foreground"}`}>
+                      <span className={`flex-1 truncate leading-snug ${isActive ? "text-[#3b82f6] font-medium" : "text-foreground"}`}>
                         {c.title}
                       </span>
                       <span className="text-[10px] text-muted-foreground shrink-0">{relTime(c.updated_at)}</span>

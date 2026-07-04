@@ -273,7 +273,7 @@ export const MobileHome = ({ user, onNavigate, onNavigateToExpense }: MobileHome
       {/* ─── TOP — Greeting & AI summary ─── */}
       <section className="bg-white border-[0.5px] border-[#E2E8F0] rounded-2xl p-4 shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
         <div className="flex items-center gap-2 mb-1">
-          <Sparkles size={18} color="#000000" strokeWidth={1.75} />
+          <Sparkles size={18} color="#3b82f6" strokeWidth={1.75} />
           <span className="text-[13px] text-[#64748B] leading-[1.6]">AI-sammanfattning</span>
         </div>
         <h1 className="text-[20px] font-semibold text-[#0F172A] leading-tight">
@@ -293,7 +293,7 @@ export const MobileHome = ({ user, onNavigate, onNavigateToExpense }: MobileHome
                     onClick={() => onNavigate(b.tab)}
                     className="w-full flex items-start gap-2 text-left active:opacity-60 transition-opacity min-h-[44px] py-1"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#000000] mt-[10px] flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#3b82f6] mt-[10px] flex-shrink-0" />
                     <span className="flex-1 text-[15px] text-[#0F172A] leading-[1.6]">{b.text}</span>
                     <ChevronRight size={16} color="#CBD5E1" className="mt-1 flex-shrink-0" />
                   </button>
@@ -318,8 +318,8 @@ export const MobileHome = ({ user, onNavigate, onNavigateToExpense }: MobileHome
                     a.tone === "critical" ? "bg-[#FEF2F2]" :
                     a.tone === "warning" ? "bg-[#FFFBEB]" : "bg-[#EFF6FF]";
                   const toneFg =
-                    a.tone === "critical" ? "#525252" :
-                    a.tone === "warning" ? "#525252" : "#000000";
+                    a.tone === "critical" ? "#DC2626" :
+                    a.tone === "warning" ? "#D97706" : "#3b82f6";
                   return (
                     <div
                       key={a.id}
@@ -333,7 +333,7 @@ export const MobileHome = ({ user, onNavigate, onNavigateToExpense }: MobileHome
                       </div>
                       <button
                         onClick={a.onAction}
-                        className="w-full h-[44px] rounded-xl bg-[#000000] active:bg-[#000000] text-white text-[15px] font-medium transition-colors"
+                        className="w-full h-[44px] rounded-xl bg-[#3b82f6] active:bg-[#0052FF] text-white text-[15px] font-medium transition-colors"
                       >
                         {a.actionLabel}
                       </button>
@@ -343,7 +343,7 @@ export const MobileHome = ({ user, onNavigate, onNavigateToExpense }: MobileHome
             {moreAttention && (
               <button
                 onClick={() => onNavigate("approvals")}
-                className="w-full text-[13px] text-[#000000] font-medium py-2 active:opacity-60"
+                className="w-full text-[13px] text-[#3b82f6] font-medium py-2 active:opacity-60"
               >
                 Visa alla {attention.length} →
               </button>
@@ -401,7 +401,7 @@ export const MobileHome = ({ user, onNavigate, onNavigateToExpense }: MobileHome
           <div className="px-5 pb-6">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
-                <openSheet.icon size={20} color="#000000" strokeWidth={1.75} />
+                <openSheet.icon size={20} color="#3b82f6" strokeWidth={1.75} />
               </div>
               <h3 className="text-[20px] font-semibold text-[#0F172A]">{openSheet.label}</h3>
             </div>
@@ -418,7 +418,7 @@ export const MobileHome = ({ user, onNavigate, onNavigateToExpense }: MobileHome
             </dl>
             <button
               onClick={() => { setOpenSheet(null); onNavigate("approvals"); }}
-              className="mt-6 w-full h-[48px] rounded-xl bg-[#000000] active:bg-[#000000] text-white text-[15px] font-medium"
+              className="mt-6 w-full h-[48px] rounded-xl bg-[#3b82f6] active:bg-[#0052FF] text-white text-[15px] font-medium"
             >
               Öppna detaljvy
             </button>

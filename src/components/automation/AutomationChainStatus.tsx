@@ -34,11 +34,11 @@ export const AutomationChainStatus = ({ companyId }: AutomationChainStatusProps)
     { type: "agi", label: "AGI-deklaration", icon: Users,
       status: (settings?.agi_auto_prepare !== false ? "active" : "disabled") as "active" | "disabled",
       detail: settings?.agi_auto_prepare !== false ? (settings?.agi_auto_submit ? "Helautomatisk" : "Förbereds automatiskt") : "Manuell",
-      iconColor: "text-neutral-300" },
+      iconColor: "text-emerald-300" },
     { type: "annual", label: "Bokslut", icon: BookOpen,
       status: (settings?.annual_report_auto_prepare !== false ? "active" : "disabled") as "active" | "disabled",
       detail: settings?.annual_report_auto_prepare !== false ? "Vid räkenskapsårets slut" : "Manuellt",
-      iconColor: "text-neutral-300" },
+      iconColor: "text-amber-300" },
   ];
 
   return (
@@ -55,8 +55,8 @@ export const AutomationChainStatus = ({ companyId }: AutomationChainStatusProps)
           <span className="text-white font-semibold text-[15px] tracking-[-0.01em]">Automatiseringskedja</span>
         </div>
         <div className="flex items-center gap-1.5">
-          <div className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
-          <span className="text-neutral-300/80 text-xs font-medium">Aktiv</span>
+          <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+          <span className="text-emerald-300/80 text-xs font-medium">Aktiv</span>
         </div>
       </div>
 
@@ -87,7 +87,7 @@ export const AutomationChainStatus = ({ companyId }: AutomationChainStatusProps)
                     </div>
                     <div className={cn(
                       "absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full",
-                      isActive ? "bg-neutral-700" : "bg-slate-500"
+                      isActive ? "bg-emerald-400" : "bg-slate-500"
                     )} />
                   </div>
 
@@ -110,7 +110,7 @@ export const AutomationChainStatus = ({ companyId }: AutomationChainStatusProps)
           <span className={cn(
             "text-xs rounded-full px-2 py-0.5 font-medium shrink-0 ml-auto",
             recentTasks[0]?.status === "completed"
-              ? "bg-[#E1F5EE] text-neutral-300"
+              ? "bg-[#E1F5EE] text-emerald-300"
               : "bg-white/[0.06] text-white/50"
           )}>
             {recentTasks[0]?.status === "completed" ? "Klar" : recentTasks[0]?.status}

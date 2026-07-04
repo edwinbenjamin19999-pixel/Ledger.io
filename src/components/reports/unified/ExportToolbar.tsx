@@ -119,11 +119,11 @@ export function ExportToolbar({
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handle("RR", "xlsx")} className="gap-2 text-sm">
-            <FileSpreadsheet className="w-4 h-4 text-neutral-700/70" />
+            <FileSpreadsheet className="w-4 h-4 text-emerald-600/70" />
             Endast Resultaträkning (Excel)
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handle("BR", "xlsx")} className="gap-2 text-sm">
-            <FileSpreadsheet className="w-4 h-4 text-neutral-700/70" />
+            <FileSpreadsheet className="w-4 h-4 text-emerald-600/70" />
             Endast Balansräkning (Excel)
           </DropdownMenuItem>
 

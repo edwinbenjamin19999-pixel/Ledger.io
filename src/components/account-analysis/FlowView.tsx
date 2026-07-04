@@ -69,7 +69,7 @@ export const FlowView = ({ details, accountName, accounts }: FlowViewProps) => {
           Pengarnas rörelse — {accountName}
         </h3>
         <div className={`text-sm font-bold px-3 py-1 rounded-full ${
-          netFlow >= 0 ? 'bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/40 dark:text-[#1D9E75]' : 'bg-[#FCE8E8] text-[#7A1A1A] dark:bg-neutral-700/40 dark:text-[#C73838]'
+          netFlow >= 0 ? 'bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/40 dark:text-[#1D9E75]' : 'bg-[#FCE8E8] text-[#7A1A1A] dark:bg-rose-900/40 dark:text-[#C73838]'
         }`}>
           Netto: {netFlow >= 0 ? '+' : ''}{formatSEK(netFlow)}
         </div>
@@ -93,7 +93,7 @@ export const FlowView = ({ details, accountName, accounts }: FlowViewProps) => {
               </div>
               <div className="h-5 bg-slate-100 dark:bg-slate-700 rounded overflow-hidden">
                 <div
-                  className="h-full bg-neutral-700 dark:bg-neutral-700 rounded transition-all"
+                  className="h-full bg-emerald-400 dark:bg-emerald-500 rounded transition-all"
                   style={{ width: `${Math.min(item.pct, 100)}%` }}
                 />
               </div>
@@ -119,7 +119,7 @@ export const FlowView = ({ details, accountName, accounts }: FlowViewProps) => {
               </div>
               <div className="h-5 bg-slate-100 dark:bg-slate-700 rounded overflow-hidden">
                 <div
-                  className="h-full bg-neutral-700 dark:bg-neutral-700 rounded transition-all"
+                  className="h-full bg-rose-400 dark:bg-rose-500 rounded transition-all"
                   style={{ width: `${Math.min(item.pct, 100)}%` }}
                 />
               </div>

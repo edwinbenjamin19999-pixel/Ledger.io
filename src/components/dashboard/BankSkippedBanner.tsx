@@ -51,27 +51,27 @@ export const BankSkippedBanner = ({ companyId }: Props) => {
   if (!visible || dismissed) return null;
 
   return (
-    <div className="rounded-xl border border-[#F0DDB7] bg-[#FAEEDA] dark:bg-amber-950/30 dark:border-neutral-700/50 p-4 mb-4 flex items-start gap-3">
-      <div className="p-2 rounded-lg bg-[#FAEEDA] dark:bg-neutral-700/40">
+    <div className="rounded-xl border border-[#F0DDB7] bg-[#FAEEDA] dark:bg-amber-950/30 dark:border-amber-900/50 p-4 mb-4 flex items-start gap-3">
+      <div className="p-2 rounded-lg bg-[#FAEEDA] dark:bg-amber-900/40">
         <Landmark className="h-5 w-5 text-[#7A5417] dark:text-[#C28A2B]" />
       </div>
       <div className="flex-1">
-        <p className="font-semibold text-[#7A5417] dark:text-neutral-300 text-sm">
+        <p className="font-semibold text-[#7A5417] dark:text-amber-200 text-sm">
           Aktivera bankkoppling
         </p>
-        <p className="text-[#7A5417] dark:text-neutral-300 text-sm mt-0.5">
+        <p className="text-[#7A5417] dark:text-amber-300 text-sm mt-0.5">
           Koppla din bank för att få full nytta av AI-bokföring, automatisk avstämning och betalningar.
         </p>
         <Link
           to="/bank-integration"
-          className="inline-flex items-center gap-1.5 mt-2 text-sm font-semibold text-[#7A5417] dark:text-neutral-300 hover:text-[#7A5417] dark:hover:text-neutral-100"
+          className="inline-flex items-center gap-1.5 mt-2 text-sm font-semibold text-[#7A5417] dark:text-amber-200 hover:text-[#7A5417] dark:hover:text-amber-100"
         >
           Koppla bank nu <ArrowRight className="h-3.5 w-3.5" />
         </Link>
       </div>
       <button
         onClick={() => setDismissed(true)}
-        className="p-1 rounded hover:bg-[#FAEEDA] dark:hover:bg-neutral-700/40 text-[#7A5417] dark:text-[#C28A2B]"
+        className="p-1 rounded hover:bg-[#FAEEDA] dark:hover:bg-amber-900/40 text-[#7A5417] dark:text-[#C28A2B]"
         aria-label="Stäng"
       >
         <X className="h-4 w-4" />

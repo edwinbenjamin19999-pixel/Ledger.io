@@ -81,7 +81,7 @@ function generateTemplates(): Template[] { const templates: Template[] = [];
   }));
 
   const moderna = [
-    { name: "Bokfy Default", p: "#1F3864", s: "#FFFFFF", a: "#000000" },
+    { name: "Cogniq Default", p: "#1F3864", s: "#FFFFFF", a: "#3b82f6" },
     { name: "Gradient Flow", p: "#6A1B9A", s: "#E1BEE7", a: "#42A5F5" },
     { name: "Neo Mint", p: "#00C853", s: "#F1F8E9", a: "#FFFFFF" },
     { name: "Tech Dark", p: "#121212", s: "#1E1E1E", a: "#00E676" },
@@ -131,7 +131,7 @@ function generateTemplates(): Template[] { const templates: Template[] = [];
   const bransch = [
     { name: "Startup", p: "#6C63FF", s: "#F0EFFF", a: "#FF6584", tag: "Tech" },
     { name: "Developer", p: "#1E1E1E", s: "#252525", a: "#569CD6", tag: "Tech" },
-    { name: "SaaS Blue", p: "#1976D2", s: "#E3F2FD", a: "#000000", tag: "Tech" },
+    { name: "SaaS Blue", p: "#1976D2", s: "#E3F2FD", a: "#3b82f6", tag: "Tech" },
     { name: "AI Company", p: "#1A237E", s: "#E8EAF6", a: "#7C4DFF", tag: "Tech" },
     { name: "Fintech", p: "#004D40", s: "#E0F2F1", a: "#00E676", tag: "Tech" },
     { name: "Retail Pro", p: "#C62828", s: "#FFFFFF", a: "#EF5350", tag: "Handel" },
@@ -196,7 +196,7 @@ export function CFOBoardPresentation({ companyId, snapshot }: BoardPresentationP
   const [genStep, setGenStep] = useState("");
   const [slideData, setSlideData] = useState<SlideData | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [selectedTemplate, setSelectedTemplate] = useState<Template>(ALL_TEMPLATES[20]); // Bokfy Default
+  const [selectedTemplate, setSelectedTemplate] = useState<Template>(ALL_TEMPLATES[20]); // Cogniq Default
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [search, setSearch] = useState("");
   const [previewTemplate, setPreviewTemplate] = useState<Template | null>(null);
@@ -261,8 +261,8 @@ export function CFOBoardPresentation({ companyId, snapshot }: BoardPresentationP
       const openingCash = snapshot.cashBalance - totalInflows + totalOutflows;
       const waterfallData = [
         { name: "Ingaende kassa", value: Math.round(openingCash), fill: selectedTemplate.colorPrimary },
-        { name: "Inbetalningar", value: Math.round(totalInflows), fill: "#000000" },
-        { name: "Utbetalningar", value: Math.round(-totalOutflows), fill: "#525252" },
+        { name: "Inbetalningar", value: Math.round(totalInflows), fill: "#22c55e" },
+        { name: "Utbetalningar", value: Math.round(-totalOutflows), fill: "#ef4444" },
         { name: "Utgaende kassa", value: Math.round(snapshot.cashBalance), fill: selectedTemplate.colorPrimary },
       ];
 
@@ -364,7 +364,7 @@ export function CFOBoardPresentation({ companyId, snapshot }: BoardPresentationP
                 <h2 className="text-3xl md:text-4xl font-bold">Finansiell rapport</h2>
                 <p className="text-xl mt-2 opacity-80">{period}</p>
                 <div className="w-24 h-0.5 my-4" style={{ backgroundColor: selectedTemplate.colorAccent }} />
-                <p className="text-sm opacity-60">Genererad {new Date().toLocaleDateString("sv-SE")} | Bokfy CFO</p>
+                <p className="text-sm opacity-60">Genererad {new Date().toLocaleDateString("sv-SE")} | Cogniq CFO</p>
               </div>
             )}
 

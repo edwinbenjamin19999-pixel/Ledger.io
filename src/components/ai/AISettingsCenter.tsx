@@ -121,15 +121,15 @@ export function AISettingsCenter() {
       {/* Header */}
       <div>
         <div className="flex items-center gap-2 mb-1">
-          <Brain className="w-5 h-5 text-[#000000]" />
+          <Brain className="w-5 h-5 text-[#3b82f6]" />
           <h1 className="text-2xl font-bold tracking-tight text-slate-900">AI-inställningar</h1>
         </div>
         <p className="text-sm text-slate-500">Bestäm hur självständigt AI ska arbeta. Du kan när som helst ändra.</p>
       </div>
 
       {/* Summary card */}
-      <div className="rounded-2xl border border-black/60 bg-[#0F1F3D] p-5">
-        <p className="text-[11px] uppercase font-semibold text-[#000000] tracking-wide">Nuvarande AI-läge</p>
+      <div className="rounded-2xl border border-blue-200/60 bg-[#0F1F3D] p-5">
+        <p className="text-[11px] uppercase font-semibold text-[#3b82f6] tracking-wide">Nuvarande AI-läge</p>
         <h2 className="text-xl font-bold text-slate-900 mt-1">{summary}</h2>
         <ul className="text-sm text-slate-700 mt-3 space-y-1">
           <li>• Auto-bokför vid {settings.autoBookThreshold}%+ konfidens</li>
@@ -155,7 +155,7 @@ export function AISettingsCenter() {
               className={cn(
                 "text-left rounded-xl border p-3 transition-all",
                 settings.level === opt.v
-                  ? "border-[#000000] bg-[#EFF6FF] ring-2 ring-black"
+                  ? "border-[#3b82f6] bg-[#EFF6FF] ring-2 ring-blue-100"
                   : "border-slate-200 hover:border-slate-300"
               )}
             >
@@ -287,7 +287,7 @@ export function AISettingsCenter() {
               key={opt.v}
               className={cn(
                 "flex items-center gap-3 rounded-xl border p-3 cursor-pointer transition-colors",
-                settings.safety === opt.v ? "border-[#000000] bg-[#EFF6FF]" : "border-slate-200 hover:bg-slate-50"
+                settings.safety === opt.v ? "border-[#3b82f6] bg-[#EFF6FF]" : "border-slate-200 hover:bg-slate-50"
               )}
             >
               <input

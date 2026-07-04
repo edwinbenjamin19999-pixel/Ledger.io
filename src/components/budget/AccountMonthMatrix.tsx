@@ -77,7 +77,7 @@ function rowSource(r: BudgetRowData, baseline?: BudgetRowData, ai?: AISuggestion
 const SOURCE_META: Record<Source, { label: string; icon: any; cls: string }> = {
   original: { label: "Original", icon: Check, cls: "bg-white text-slate-500 border-slate-200" },
   manual:   { label: "Manuell",  icon: Hand, cls: "bg-slate-100 text-slate-700 border-slate-200" },
-  ai:       { label: "AI",       icon: Sparkles, cls: "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5]" },
+  ai:       { label: "AI",       icon: Sparkles, cls: "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]" },
 };
 
 export function AccountMonthMatrix({
@@ -212,7 +212,7 @@ export function AccountMonthMatrix({
                             className="h-6 text-[11px] gap-1"
                             onClick={() => acceptAllAIInSection(sec.items)}
                           >
-                            <Sparkles className="w-3 h-3 text-[#000000]" />
+                            <Sparkles className="w-3 h-3 text-[#3b82f6]" />
                             Acceptera alla AI
                           </Button>
                         )}
@@ -263,7 +263,7 @@ export function AccountMonthMatrix({
                               onClick={() => acceptAI(idx, ai)}
                               disabled={isLocked}
                               title={ai.reasoning}
-                              className="inline-flex items-center gap-1 text-[#000000] hover:bg-[#EFF6FF] rounded px-1.5 py-0.5 tabular-nums"
+                              className="inline-flex items-center gap-1 text-[#3b82f6] hover:bg-[#EFF6FF] rounded px-1.5 py-0.5 tabular-nums"
                             >
                               <Sparkles className="w-3 h-3" />
                               {formatSEK(ai.yearly)}

@@ -71,20 +71,20 @@ export default function Funktioner() {
       <Header />
 
       {/* Blått poster-huvud */}
-      <section className="relative overflow-hidden bg-[#000000] pt-[60px]">
+      <section className="relative overflow-hidden bg-[#0052FF] pt-[60px]">
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <div className="absolute -top-32 -right-32 h-[380px] w-[380px] rounded-full bg-white/5" />
           <div className="absolute -bottom-24 left-[10%] h-[200px] w-[200px] rotate-12 bg-white/5" />
         </div>
         <div className="relative mx-auto max-w-3xl px-6 pt-20 pb-20 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-blue-100">
             Funktioner
           </p>
           <h1 className="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight text-white">
             Allt du behöver. Inget du inte behöver.
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-white">
-            Bokfy sköter hela bokföringen i bakgrunden — från transaktion till deklaration.
+          <p className="mx-auto mt-4 max-w-xl text-lg text-blue-50">
+            Cogniq sköter hela bokföringen i bakgrunden — från transaktion till deklaration.
           </p>
         </div>
       </section>
@@ -98,11 +98,11 @@ export default function Funktioner() {
                 key={title}
                 className="group rounded-lg bg-gray-100 p-7 transition-all duration-200 hover:scale-[1.02] hover:bg-gray-200"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#000000] text-white transition-transform duration-200 group-hover:scale-110">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0052FF] text-white transition-transform duration-200 group-hover:scale-110">
                   <Icon className="h-5 w-5" strokeWidth={2.5} aria-hidden />
                 </div>
-                <h3 className="mt-5 text-base font-bold text-[#000000]">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#000000]/60">{body}</p>
+                <h3 className="mt-5 text-base font-bold text-[#0F172A]">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#0F172A]/60">{body}</p>
               </div>
             ))}
           </div>
@@ -110,21 +110,21 @@ export default function Funktioner() {
       </section>
 
       {/* Amber CTA-block */}
-      <section className="relative overflow-hidden bg-[#525252] py-20">
+      <section className="relative overflow-hidden bg-[#F59E0B] py-20">
         <div
           aria-hidden
           className="pointer-events-none absolute -right-20 -top-20 h-[280px] w-[280px] rounded-full bg-white/10"
         />
         <div className="relative mx-auto max-w-2xl px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#000000]">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F172A]">
             Redo att sluta bokföra manuellt?
           </h2>
-          <p className="mt-3 text-base text-[#000000]/80">
+          <p className="mt-3 text-base text-[#0F172A]/80">
             Pilotfas pågår — begränsat antal platser.
           </p>
           <button
             onClick={() => navigate("/auth")}
-            className="mt-8 inline-flex h-14 items-center gap-2 rounded-md bg-[#000000] px-8 text-base font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#000000] focus-visible:ring-offset-2 focus-visible:ring-offset-[#525252]"
+            className="mt-8 inline-flex h-14 items-center gap-2 rounded-md bg-[#0F172A] px-8 text-base font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#1a2c46] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F172A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F59E0B]"
           >
             Säkra din plats
             <ArrowRight className="h-5 w-5" aria-hidden />

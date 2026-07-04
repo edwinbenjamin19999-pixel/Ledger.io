@@ -63,8 +63,8 @@ export function PaymentMethodBadge({ result, onMethodChange, compact = false }: 
                   variant="outline"
                   className={cn(
                     "text-xs gap-1.5 cursor-pointer transition-all",
-                    "border-[#BFE6D6] text-[#085041] bg-neutral-100/60",
-                    "dark:border-neutral-700 dark:text-neutral-300 dark:bg-emerald-950/20",
+                    "border-[#BFE6D6] text-[#085041] bg-emerald-50/60",
+                    "dark:border-emerald-700 dark:text-emerald-300 dark:bg-emerald-950/20",
                     "hover:bg-[#E1F5EE] dark:hover:bg-emerald-950/40"
                   )}
                   onClick={() => setShowOptions(!showOptions)}
@@ -89,7 +89,7 @@ export function PaymentMethodBadge({ result, onMethodChange, compact = false }: 
           </div>
 
           {showEvidence && (
-            <p className="text-xs text-muted-foreground pl-3 border-l-2 border-[#BFE6D6] dark:border-neutral-700 animate-fade-in">
+            <p className="text-xs text-muted-foreground pl-3 border-l-2 border-[#BFE6D6] dark:border-emerald-800 animate-fade-in">
               {result.evidence}
             </p>
           )}
@@ -108,24 +108,24 @@ export function PaymentMethodBadge({ result, onMethodChange, compact = false }: 
   if (result.confidence >= 0.5 && !result.needsClarification) {
     return (
       <div className="space-y-2 animate-fade-in">
-        <div className="bg-neutral-100/60 dark:bg-amber-950/15 border border-neutral-300/60 dark:border-neutral-700/30 rounded-xl p-3 backdrop-blur-sm">
+        <div className="bg-amber-50/60 dark:bg-amber-950/15 border border-amber-200/60 dark:border-amber-800/30 rounded-xl p-3 backdrop-blur-sm">
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-[#FAEEDA] dark:bg-neutral-700/40 flex items-center justify-center">
+              <div className="w-7 h-7 rounded-lg bg-[#FAEEDA] dark:bg-amber-900/40 flex items-center justify-center">
                 <Icon className="h-3.5 w-3.5 text-[#7A5417] dark:text-[#C28A2B]" />
               </div>
               <div>
-                <p className="text-xs font-medium text-[#7A5417] dark:text-neutral-300">
+                <p className="text-xs font-medium text-[#7A5417] dark:text-amber-200">
                   Troligen {getMethodLabel(result.method).toLowerCase()}
                 </p>
-                <p className="text-[10px] text-neutral-700/80 dark:text-neutral-700/60">
+                <p className="text-[10px] text-amber-600/80 dark:text-amber-400/60">
                   {(result.confidence * 100).toFixed(0)}% säkerhet → {result.balancingAccount}
                 </p>
               </div>
             </div>
             <button
               onClick={() => setShowOptions(!showOptions)}
-              className="text-xs text-[#7A5417] dark:text-neutral-300 hover:underline font-medium"
+              className="text-xs text-[#7A5417] dark:text-amber-300 hover:underline font-medium"
             >
               Ändra
             </button>
@@ -133,14 +133,14 @@ export function PaymentMethodBadge({ result, onMethodChange, compact = false }: 
 
           <button
             onClick={() => setShowEvidence(!showEvidence)}
-            className="text-[10px] text-neutral-700/70 dark:text-neutral-700/50 hover:text-[#7A5417] dark:hover:text-neutral-300 mt-1.5 flex items-center gap-1 transition-colors"
+            className="text-[10px] text-amber-600/70 dark:text-amber-400/50 hover:text-[#7A5417] dark:hover:text-amber-300 mt-1.5 flex items-center gap-1 transition-colors"
           >
             <Info className="h-2.5 w-2.5" />
             Varför detta förslag?
           </button>
 
           {showEvidence && (
-            <p className="text-xs text-neutral-700/80 dark:text-neutral-300/70 mt-1.5 pl-3 border-l-2 border-neutral-300/50 dark:border-neutral-700/50 animate-fade-in">
+            <p className="text-xs text-amber-700/80 dark:text-amber-300/70 mt-1.5 pl-3 border-l-2 border-amber-300/50 dark:border-amber-700/50 animate-fade-in">
               {result.evidence}
             </p>
           )}
@@ -158,10 +158,10 @@ export function PaymentMethodBadge({ result, onMethodChange, compact = false }: 
   // ─── Low confidence / needs clarification ───────
   return (
     <div className="animate-fade-in space-y-2">
-      <div className="bg-neutral-100/60 dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-neutral-700/40 rounded-xl p-3 space-y-2.5">
+      <div className="bg-amber-50/60 dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-amber-800/40 rounded-xl p-3 space-y-2.5">
         <div className="flex items-center gap-1.5">
           <HelpCircle className="h-3.5 w-3.5 text-[#7A5417] shrink-0" />
-          <span className="text-xs text-[#7A5417] dark:text-neutral-300 font-medium">
+          <span className="text-xs text-[#7A5417] dark:text-amber-200 font-medium">
             Hur betalades detta?
           </span>
         </div>
@@ -173,7 +173,7 @@ export function PaymentMethodBadge({ result, onMethodChange, compact = false }: 
                 key={opt.method}
                 size="sm"
                 variant="outline"
-                className="h-8 text-xs border-neutral-300/60 hover:bg-[#FAEEDA] dark:border-neutral-700/50 dark:hover:bg-neutral-700/30 gap-1.5 justify-start"
+                className="h-8 text-xs border-amber-300/60 hover:bg-[#FAEEDA] dark:border-amber-700/50 dark:hover:bg-amber-900/30 gap-1.5 justify-start"
                 onClick={() => handleSelect(opt.method)}
               >
                 <OptIcon className="h-3.5 w-3.5" />

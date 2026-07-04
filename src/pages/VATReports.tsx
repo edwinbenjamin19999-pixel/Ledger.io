@@ -387,7 +387,7 @@ const VATReports = () => {
             <section>
               <div className="flex items-center justify-between mb-3 px-1">
                 <h2 className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-                  <Sparkles className="h-3.5 w-3.5 text-[#000000]" />
+                  <Sparkles className="h-3.5 w-3.5 text-[#3b82f6]" />
                   AI-insikter · Moms
                 </h2>
                 <span className="text-[11px] text-muted-foreground">{findings.length} fynd · sorterade efter allvar</span>
@@ -548,7 +548,7 @@ const VATReports = () => {
                             <div className="flex justify-between"><span className="text-muted-foreground">Ingående moms (deklaration: ruta 48)</span><span className="font-mono text-foreground">{declInput.toLocaleString("sv-SE")} kr</span></div>
                           </div>
                           {hasRoundingDiff && (
-                            <div className="rounded-xl border border-[#F0DDB7] dark:border-neutral-700 p-4 bg-neutral-100/50 dark:bg-amber-950/20 text-sm space-y-1 mt-2">
+                            <div className="rounded-xl border border-[#F0DDB7] dark:border-amber-800 p-4 bg-amber-50/50 dark:bg-amber-950/20 text-sm space-y-1 mt-2">
                               <div className="flex items-center gap-2 font-medium text-[#7A5417] dark:text-[#C28A2B]">
                                 <AlertTriangle className="h-4 w-4" />
                                 Öresavrundning (SKV avrundning till heltal)

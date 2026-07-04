@@ -27,7 +27,7 @@ interface AuditEntry { id: string;
 interface Props { companyId: string;
 }
 
-const STATUS_COLORS: Record<string, string> = { completed: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]",
+const STATUS_COLORS: Record<string, string> = { completed: "bg-[#E1F5EE] text-[#085041] dark:bg-green-900/30 dark:text-[#1D9E75]",
   failed: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]",
   cancelled: "bg-muted text-muted-foreground",
 };

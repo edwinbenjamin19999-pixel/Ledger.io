@@ -17,9 +17,9 @@ export function getVerdict(percentile: number, smartWarning?: string | null): Ve
       tone: "critical",
       label: "Kritisk",
       badgeClass:
-        "bg-neutral-100 text-neutral-700 border-neutral-300 dark:bg-rose-950/40 dark:text-neutral-300 dark:border-neutral-700",
+        "bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/40 dark:text-rose-300 dark:border-rose-900",
       accentClass: "border-l-4 border-l-rose-500",
-      markerColor: "#525252",
+      markerColor: "#e11d48",
     };
   }
   if (percentile < 40) {
@@ -27,7 +27,7 @@ export function getVerdict(percentile: number, smartWarning?: string | null): Ve
       tone: "attention",
       label: "Behöver åtgärd",
       badgeClass:
-        "bg-neutral-100 text-neutral-700 border-neutral-300 dark:bg-amber-950/40 dark:text-neutral-300 dark:border-neutral-700",
+        "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-900",
       accentClass: "border-l-4 border-l-amber-500",
       markerColor: "#d97706",
     };
@@ -37,18 +37,18 @@ export function getVerdict(percentile: number, smartWarning?: string | null): Ve
       tone: "watch",
       label: "Bevaka",
       badgeClass:
-        "bg-neutral-100 text-[#000000] border-black dark:bg-blue-950/40 dark:text-[#000000] dark:border-[#000000]",
-      accentClass: "border-l-4 border-l-[#000000]",
-      markerColor: "#000000",
+        "bg-blue-50 text-[#3b82f6] border-blue-200 dark:bg-blue-950/40 dark:text-[#3b82f6] dark:border-[#3b82f6]",
+      accentClass: "border-l-4 border-l-[#3b82f6]",
+      markerColor: "#3b82f6",
     };
   }
   return {
     tone: "strong",
     label: "Stark",
     badgeClass:
-      "bg-neutral-100 text-neutral-700 border-neutral-300 dark:bg-emerald-950/40 dark:text-neutral-300 dark:border-neutral-700",
+      "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-900",
     accentClass: "border-l-4 border-l-emerald-500",
-    markerColor: "#000000",
+    markerColor: "#10b981",
   };
 }
 

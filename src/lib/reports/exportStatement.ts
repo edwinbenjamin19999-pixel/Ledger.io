@@ -73,7 +73,7 @@ export async function exportStatementXLSX(
   }
 
   const wb = new ExcelJS.Workbook();
-  wb.creator = "Bokfy";
+  wb.creator = "Cogniq";
   wb.created = new Date();
   wb.company = report.company.name;
 

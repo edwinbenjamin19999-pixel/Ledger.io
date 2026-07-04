@@ -30,7 +30,7 @@ export function AIFillPlaceholder({
       <button
         onClick={trigger}
         disabled={loading}
-        className="inline-flex items-center gap-1 text-[#000000] hover:underline font-medium disabled:opacity-60"
+        className="inline-flex items-center gap-1 text-[#0040CC] hover:underline font-medium disabled:opacity-60"
       >
         {loading ? <Loader2 className="w-3 h-3 animate-spin" /> : <Sparkles className="w-3 h-3" />}
         AI-fyll
@@ -38,7 +38,7 @@ export function AIFillPlaceholder({
       {onManual && (
         <>
           <span className="text-[#CBD5E1]">eller</span>
-          <button onClick={onManual} className="text-[#000000] hover:underline font-medium">
+          <button onClick={onManual} className="text-[#0040CC] hover:underline font-medium">
             skriv manuellt
           </button>
         </>

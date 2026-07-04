@@ -58,7 +58,7 @@ export function ActivationHero({
           <div className="h-8 w-8 rounded-lg bg-[#EFF6FF] border border-[#C8DDF5] flex items-center justify-center">
             <Icon className="h-4 w-4 text-[#1E3A5F]" />
           </div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-[#000000]/80">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#3b82f6]/80">
             Aktivera
           </span>
         </div>
@@ -70,7 +70,7 @@ export function ActivationHero({
         <div className="flex flex-wrap items-center gap-2 mt-5">
           <button
             onClick={onPrimaryCta}
-            className="inline-flex items-center gap-1.5 rounded-xl bg-[#000000] px-4 py-2.5 text-sm font-semibold text-slate-950 hover:bg-[#000000] transition-colors"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-[#3b82f6] px-4 py-2.5 text-sm font-semibold text-slate-950 hover:bg-[#3b82f6] transition-colors"
           >
             {primaryCtaLabel}
             <ArrowRight className="h-4 w-4" />

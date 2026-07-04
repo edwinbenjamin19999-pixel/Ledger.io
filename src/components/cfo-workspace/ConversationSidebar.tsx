@@ -29,7 +29,7 @@ export const ConversationSidebar = ({ companyId, activeId }: Props) => {
     <aside className="h-full overflow-y-auto bg-slate-50 dark:bg-slate-950/30 border-r border-slate-200 dark:border-slate-800 p-3">
       <button
         onClick={() => navigate("/cfo/workspace")}
-        className="w-full mb-3 rounded-lg bg-[#000000] hover:bg-[#000000] text-white text-sm font-medium px-3 py-2 transition-colors"
+        className="w-full mb-3 rounded-lg bg-[#3b82f6] hover:bg-[#3b82f6] text-white text-sm font-medium px-3 py-2 transition-colors"
       >
         + Ny dialog
       </button>
@@ -46,7 +46,7 @@ export const ConversationSidebar = ({ companyId, activeId }: Props) => {
                   onClick={() => navigate(`/cfo/workspace?conversation=${c.id}`)}
                   className={cn(
                     "w-full text-left rounded-md px-2 py-1.5 text-xs flex items-start gap-2 hover:bg-slate-200/60 dark:hover:bg-slate-800/60 transition-colors",
-                    activeId === c.id && "bg-[#EFF6FF] text-[#000000] dark:text-[#000000] font-medium",
+                    activeId === c.id && "bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6] font-medium",
                   )}
                 >
                   <MessageSquare className="h-3 w-3 mt-0.5 shrink-0 opacity-60" />

@@ -55,7 +55,7 @@ export function BudgetNarrativeCard({ companyId, budgetId, context, onTodoFocus 
   return (
     <div className="rounded-2xl border bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] p-5">
       <div className="flex items-center gap-2 mb-3">
-        <Sparkles className="w-4 h-4 text-[#000000]" />
+        <Sparkles className="w-4 h-4 text-[#3b82f6]" />
         <h3 className="text-sm font-semibold text-slate-900">AI CFO — Sammanfattning</h3>
         {loading && <Loader2 className="w-3 h-3 animate-spin text-slate-400" />}
       </div>
@@ -64,7 +64,7 @@ export function BudgetNarrativeCard({ companyId, budgetId, context, onTodoFocus 
 
       {narrative && (
         <div className="space-y-3">
-          <Row icon={<Sparkles className="w-3.5 h-3.5 text-[#000000]" />} label="Vad" text={narrative.what} />
+          <Row icon={<Sparkles className="w-3.5 h-3.5 text-[#3b82f6]" />} label="Vad" text={narrative.what} />
           <Row icon={<AlertCircle className="w-3.5 h-3.5 text-[#7A5417]" />} label="Varför" text={narrative.why} />
           <div className="flex items-start gap-3">
             <Lightbulb className="w-3.5 h-3.5 text-[#085041] mt-1" />

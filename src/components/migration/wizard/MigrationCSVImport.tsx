@@ -862,8 +862,8 @@ export const MigrationCSVImport = ({ companyId, onImported }: Props) => {
                 </Button>
                 {recon && (
                   recon.matches ? (
-                    <Alert className="border-neutral-700/40 bg-neutral-700/5">
-                      <CheckCircle2 className="h-4 w-4 text-neutral-700" />
+                    <Alert className="border-emerald-500/40 bg-emerald-500/5">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
                       <AlertDescription className="text-xs">
                         <span className="font-medium">Reskontra stämmer mot huvudbok</span>{" "}
                         — Filsumma {recon.fileSum.toLocaleString("sv-SE")} kr vs konto {recon.account}-saldo {recon.ledgerBalance.toLocaleString("sv-SE")} kr per {recon.cutoverDate}.

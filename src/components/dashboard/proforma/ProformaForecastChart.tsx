@@ -36,7 +36,7 @@ export const ProformaForecastChart = ({ data, confidenceBand, riskMonths, avgCon
 
   const confidenceBadgeTone =
     avgConfidence >= 0.7
-      ? "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5]"
+      ? "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]"
       : avgConfidence >= 0.5
       ? "bg-slate-50 text-slate-700 border-slate-200"
       : "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]";
@@ -142,7 +142,7 @@ export const ProformaForecastChart = ({ data, confidenceBand, riskMonths, avgCon
 
       {riskMonths.size > 0 && (
         <p className="text-[11px] text-slate-500 mt-3 flex items-center gap-1.5">
-          <span className="inline-block w-3 h-3 rounded bg-[#FCE8E8] border border-neutral-300" />
+          <span className="inline-block w-3 h-3 rounded bg-[#FCE8E8] border border-rose-300" />
           Markerade månader = marginal under 10% eller negativt resultat
         </p>
       )}

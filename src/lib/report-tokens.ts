@@ -17,10 +17,10 @@ export const reportColors = {
   textSecondary: "#64748B",
   textMuted: "#94A3B8",
   textBody: "#334155",
-  success: "#000000",
-  warning: "#525252",
-  danger: "#525252",
-  accent: "#000000",
+  success: "#16A34A",
+  warning: "#D97706",
+  danger: "#DC2626",
+  accent: "#0052FF",
 } as const;
 
 export const reportSpacing = {

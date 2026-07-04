@@ -66,7 +66,7 @@ function Row({ side, account, name, amount, variant }: {
       <div className="flex items-center gap-2 min-w-0">
         <span className={cn(
           "w-5 text-center font-semibold",
-          variant === "debit" ? "text-[#085041] dark:text-[#1D9E75]" : "text-black dark:text-[#1E3A5F]"
+          variant === "debit" ? "text-[#085041] dark:text-[#1D9E75]" : "text-blue-600 dark:text-[#1E3A5F]"
         )}>
           {side}
         </span>

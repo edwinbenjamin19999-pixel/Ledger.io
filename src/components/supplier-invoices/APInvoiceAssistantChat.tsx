@@ -175,7 +175,7 @@ export function APInvoiceAssistantChat({
   };
 
   return (
-    <div className="rounded-2xl bg-slate-950 text-slate-100 border-t-2 border-[#000000] overflow-hidden shadow-lg">
+    <div className="rounded-2xl bg-slate-950 text-slate-100 border-t-2 border-[#3b82f6] overflow-hidden shadow-lg">
       {/* Header */}
       <button
         type="button"
@@ -184,7 +184,7 @@ export function APInvoiceAssistantChat({
       >
         <div className="flex items-center gap-2">
           <Sparkles className="h-4 w-4 text-[#1E3A5F]" />
-          <span className="text-sm font-semibold">Bokfy Assistent</span>
+          <span className="text-sm font-semibold">Cogniq Assistent</span>
           <span className="text-[10px] text-slate-400 font-mono hidden sm:inline">
             #{invoiceNumber}
           </span>
@@ -217,7 +217,7 @@ export function APInvoiceAssistantChat({
                     className={cn(
                       "inline-block max-w-[92%] rounded-xl px-3 py-2 text-xs leading-relaxed",
                       m.role === "user"
-                        ? "bg-[#EFF6FF] text-white border border-[#C8DDF5]"
+                        ? "bg-[#EFF6FF] text-blue-100 border border-[#C8DDF5]"
                         : "bg-slate-900 text-slate-100 border border-slate-800",
                     )}
                   >
@@ -269,13 +269,13 @@ export function APInvoiceAssistantChat({
               onChange={(e) => setInput(e.target.value)}
               placeholder={`Ställ en fråga om fakturan från ${supplierName}…`}
               disabled={streaming}
-              className="bg-slate-900 border-slate-800 text-slate-100 placeholder:text-slate-500 text-xs h-9 focus-visible:ring-[#000000]/40"
+              className="bg-slate-900 border-slate-800 text-slate-100 placeholder:text-slate-500 text-xs h-9 focus-visible:ring-[#3b82f6]/40"
             />
             <Button
               type="submit"
               size="sm"
               disabled={streaming || !input.trim()}
-              className="bg-[#000000] hover:bg-[#000000] text-slate-950 h-9"
+              className="bg-[#3b82f6] hover:bg-[#3b82f6] text-slate-950 h-9"
             >
               <Send className="h-3.5 w-3.5" />
             </Button>

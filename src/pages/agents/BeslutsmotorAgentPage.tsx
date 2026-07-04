@@ -59,8 +59,8 @@ export default function BeslutsmotorAgentPage() {
   const [confirmDefaults, setConfirmDefaults] = useState(false);
 
   const pill = isActive
-    ? { dot: "bg-neutral-700", text: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300", label: "Aktiv" }
-    : { dot: "bg-neutral-700", text: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300", label: "Pausad" };
+    ? { dot: "bg-emerald-500", text: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200", label: "Aktiv" }
+    : { dot: "bg-amber-500", text: "text-amber-700", bg: "bg-amber-50 border-amber-200", label: "Pausad" };
 
   const updateThreshold = (key: string, value: number) =>
     updateThresholdStore(key as DecisionThresholdKey, value);
@@ -83,7 +83,7 @@ export default function BeslutsmotorAgentPage() {
       {/* HEADER */}
       <header className="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
         <div className="flex items-start gap-4">
-          <div className="rounded-xl border border-slate-200/70 bg-white p-2.5 text-[#000000]">
+          <div className="rounded-xl border border-slate-200/70 bg-white p-2.5 text-[#3b82f6]">
             <BrainCircuit size={32} strokeWidth={1.6} />
           </div>
           <div>
@@ -118,9 +118,9 @@ export default function BeslutsmotorAgentPage() {
         <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-500">
           Globala AI-inställningar
         </div>
-        <div className="rounded-2xl border border-[#000000]/20 bg-gradient-to-br from-[#000000]/5 to-transparent p-5">
+        <div className="rounded-2xl border border-[#3b82f6]/20 bg-gradient-to-br from-[#3b82f6]/5 to-transparent p-5">
           <div className="flex items-start gap-3">
-            <BrainCircuit className="h-5 w-5 text-[#000000] mt-0.5" />
+            <BrainCircuit className="h-5 w-5 text-[#3b82f6] mt-0.5" />
             <div>
               <div className="text-sm font-medium text-slate-900 dark:text-slate-100">
                 AI agerar autonomt vid konfidens ≥ {Math.round(autonomy + 20)}% — i övrigt frågar den först.
@@ -181,7 +181,7 @@ export default function BeslutsmotorAgentPage() {
                   type="monotone"
                   dataKey="accuracy"
                   name="Träffsäkerhet"
-                  stroke="#000000"
+                  stroke="#10b981"
                   strokeWidth={2.5}
                   dot={{ r: 3 }}
                   isAnimationActive={false}
@@ -191,7 +191,7 @@ export default function BeslutsmotorAgentPage() {
                   type="monotone"
                   dataKey="autonomy"
                   name="Autonomi-grad"
-                  stroke="#000000"
+                  stroke="#3b82f6"
                   strokeWidth={2.5}
                   dot={{ r: 3 }}
                   isAnimationActive={false}
@@ -201,7 +201,7 @@ export default function BeslutsmotorAgentPage() {
             </ResponsiveContainer>
           </div>
           <div className="mt-3 border-t border-slate-100 pt-3 text-sm text-slate-700 dark:text-slate-300">
-            AI har förbättrats med <span className="font-semibold text-neutral-700">+27%</span> sedan starten.
+            AI har förbättrats med <span className="font-semibold text-emerald-600">+27%</span> sedan starten.
           </div>
         </div>
       </section>
@@ -231,7 +231,7 @@ export default function BeslutsmotorAgentPage() {
               className="flex-1"
             />
             <span className="text-xs text-slate-500 whitespace-nowrap">Agera självständigt</span>
-            <span className="w-12 text-right text-sm font-semibold text-[#000000] tabular-nums">
+            <span className="w-12 text-right text-sm font-semibold text-[#3b82f6] tabular-nums">
               {autonomy}%
             </span>
           </div>

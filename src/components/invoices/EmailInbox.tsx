@@ -30,7 +30,7 @@ interface EmailInboxProps { companyId: string;
   companyName?: string;
 }
 
-const STATUS_MAP: Record<string, { label: string; color: string; icon: any }> = { new: { label: "Ny", color: "text-black", icon: Mail },
+const STATUS_MAP: Record<string, { label: string; color: string; icon: any }> = { new: { label: "Ny", color: "text-blue-600", icon: Mail },
   processing: { label: "Bearbetas", color: "text-[#7A5417]", icon: Loader2 },
   processed: { label: "Behandlad", color: "text-[#085041]", icon: CheckCircle2 },
   failed: { label: "Misslyckad", color: "text-destructive", icon: AlertTriangle },
@@ -349,12 +349,12 @@ export const EmailInbox = ({ companyId, companyName }: EmailInboxProps) => { con
               <Input
                 value={inboxAddress}
                 onChange={(e) => setInboxAddress(e.target.value)}
-                placeholder={`faktura-${(companyName || "bolag").toLowerCase().replace(/\s+/g, "-")}@inbox.bokfy.se`}
+                placeholder={`faktura-${(companyName || "bolag").toLowerCase().replace(/\s+/g, "-")}@inbox.cogniq.se`}
               />
             </div>
             <div className="bg-muted/50 p-3 rounded text-xs text-muted-foreground space-y-1">
               <p><strong>Så fungerar det:</strong></p>
-              <p>1. Ange en unik e-postadress ovan (t.ex. faktura-ertbolag@inbox.bokfy.se)</p>
+              <p>1. Ange en unik e-postadress ovan (t.ex. faktura-ertbolag@inbox.cogniq.se)</p>
               <p>2. Be era leverantörer skicka fakturor till den adressen</p>
               <p>3. Bifogade PDF-fakturor dyker upp här i inkorgen</p>
               <p>4. Klicka "Behandla" för att låta AI läsa av och skapa leverantörsfakturor</p>

@@ -149,14 +149,14 @@ export const AccountingPreview = ({ actionType, formData }: AccountingPreviewPro
 
       <div className="space-y-4">
         {entries.map((entry, i) => (
-          <Card key={i} className="border-[#BFE6D6] dark:border-neutral-700">
+          <Card key={i} className="border-[#BFE6D6] dark:border-emerald-800">
             <CardContent className="p-4">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#085041]" />
                   <span className="font-medium text-sm">{entry.description}</span>
                 </div>
-                <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]">
+                <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]">
                   {entry.amount.toLocaleString("sv-SE")} kr
                 </Badge>
               </div>

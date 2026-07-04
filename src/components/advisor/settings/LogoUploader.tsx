@@ -57,7 +57,7 @@ export function LogoUploader({ firmId, value, onChange, prefix = "logo", label =
         onDrop={(e) => { e.preventDefault(); setDragOver(false); handleFiles(e.dataTransfer.files); }}
         onClick={() => inputRef.current?.click()}
         className={`relative cursor-pointer rounded-2xl border-2 border-dashed p-6 text-center transition ${
-          dragOver ? "border-[#000000] bg-[#000000]/5" : "border-[#CBD5E1] hover:border-[#94A3B8] bg-[#F8FAFC]"
+          dragOver ? "border-[#0040CC] bg-[#0040CC]/5" : "border-[#CBD5E1] hover:border-[#94A3B8] bg-[#F8FAFC]"
         }`}
       >
         {busy ? (
@@ -88,7 +88,7 @@ export function LogoUploader({ firmId, value, onChange, prefix = "logo", label =
           variant="ghost"
           size="sm"
           onClick={() => onChange(null)}
-          className="text-[#525252] hover:text-[#B91C1C] hover:bg-[#FEE2E2] h-7 text-xs"
+          className="text-[#DC2626] hover:text-[#B91C1C] hover:bg-[#FEE2E2] h-7 text-xs"
         >
           <Trash2 className="h-3 w-3 mr-1" /> Ta bort logotyp
         </Button>

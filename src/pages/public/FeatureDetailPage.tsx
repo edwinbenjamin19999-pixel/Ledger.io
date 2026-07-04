@@ -3,7 +3,7 @@ import { Bot, Zap, BarChart3 } from "lucide-react";
 import { useParams } from "react-router-dom";
 
 const featureMap: Record<string, { title: string; description: string; icon: typeof Bot }> = {
-  "ai-assistant": { title: "AI-assistent", description: "Bokfy:s AI-assistent hjälper dig med bokföringsfrågor, konterar automatiskt och ger intelligenta förslag baserat på ditt företags historik.", icon: Bot },
+  "ai-assistant": { title: "AI-assistent", description: "Cogniq:s AI-assistent hjälper dig med bokföringsfrågor, konterar automatiskt och ger intelligenta förslag baserat på ditt företags historik.", icon: Bot },
   "accounting-automation": { title: "Automatiserad bokföring", description: "Låt AI hantera kontering, bankavstämning och momsberäkning automatiskt. Spara timmar varje månad med smart automation.", icon: Zap },
   "budget-forecast": { title: "Budget & Prognos", description: "Skapa AI-drivna budgetar och prognoser baserade på historisk data. Jämför scenarier och fatta bättre affärsbeslut.", icon: BarChart3 },
 };

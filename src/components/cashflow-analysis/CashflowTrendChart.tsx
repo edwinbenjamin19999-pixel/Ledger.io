@@ -62,7 +62,7 @@ export function CashflowTrendChart({ data, onPointClick }: Props) {
               className={cn(
                 "rounded-md px-2.5 py-1 font-medium transition-colors",
                 mode === m
-                  ? "bg-background text-foreground shadow-sm ring-1 ring-[#000000]/40"
+                  ? "bg-background text-foreground shadow-sm ring-1 ring-[#3b82f6]/40"
                   : "text-muted-foreground hover:text-foreground",
               )}
             >

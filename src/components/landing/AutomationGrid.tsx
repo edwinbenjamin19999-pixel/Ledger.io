@@ -15,20 +15,20 @@ const ITEMS = [
  */
 export const AutomationGrid = () => {
   return (
-    <section className="relative overflow-hidden bg-[#000000] py-24 px-6">
+    <section className="relative overflow-hidden bg-[#0F172A] py-24 px-6">
       <div
         aria-hidden
         className="pointer-events-none absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-white/5"
       />
       <div className="relative mx-auto max-w-6xl">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#FFFFFF]">
-          Vad Bokfy gör
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#4D7CFF]">
+          Vad Cogniq gör
         </p>
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
-          Det här gör Bokfy <span className="text-[#FFFFFF]">åt dig</span>
+          Det här gör Cogniq <span className="text-[#4D7CFF]">åt dig</span>
         </h2>
         <p className="mt-3 max-w-xl text-base text-white/70">
-          Det som tar 40 timmar manuellt — Bokfy gör det på sekunder.
+          Det som tar 40 timmar manuellt — Cogniq gör det på sekunder.
         </p>
         <p className="mt-2 max-w-2xl text-base leading-relaxed text-white/60">
           Sex återkommande arbetsmoment som körs automatiskt i bakgrunden — så
@@ -41,7 +41,7 @@ export const AutomationGrid = () => {
               key={title}
               className="group rounded-lg bg-white/[0.07] p-7 transition-all duration-200 hover:scale-[1.02] hover:bg-white/[0.12]"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#000000] text-white transition-transform duration-200 group-hover:scale-110">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0052FF] text-white transition-transform duration-200 group-hover:scale-110">
                 <Icon className="h-5 w-5" strokeWidth={2.5} aria-hidden />
               </div>
               <h3 className="mt-5 text-base font-bold text-white">{title}</h3>

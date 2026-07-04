@@ -18,8 +18,8 @@ const severityStyle = {
     label: "KRITISK",
   },
   insight: {
-    ring: "border-l-[3px] border-l-[#525252]",
-    chip: "bg-[#FAEEDA] text-[#412402] border-[0.5px] border-[#525252]",
+    ring: "border-l-[3px] border-l-[#EF9F27]",
+    chip: "bg-[#FAEEDA] text-[#412402] border-[0.5px] border-[#EF9F27]",
     iconBg: "bg-[#FAEEDA] text-[#412402]",
     icon: Lightbulb,
     label: "VARNING",
@@ -94,7 +94,7 @@ export function AICFOInsightCard({ insight }: { insight: CFOInsight }) {
             {insight.ctaRoute && insight.ctaLabel && (
               <button
                 onClick={() => navigate(insight.ctaRoute!)}
-                className="ml-auto bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] h-[32px] flex items-center gap-1 transition-colors"
+                className="ml-auto bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] h-[32px] flex items-center gap-1 transition-colors"
               >
                 {insight.ctaLabel}
                 <ArrowRight size={12} strokeWidth={1.5} />

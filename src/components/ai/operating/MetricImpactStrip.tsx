@@ -17,10 +17,10 @@ function Tile({
 }) {
   const toneMap = {
     neutral: "text-slate-700 bg-slate-50 border-slate-200/60",
-    emerald: "text-[#085041] bg-neutral-100/60 border-neutral-300/60",
-    amber: "text-[#7A5417] bg-neutral-100/60 border-neutral-300/60",
-    rose: "text-[#7A1A1A] bg-neutral-100/60 border-neutral-300/60",
-    cyan: "text-[#000000] bg-neutral-100/60 border-black/60",
+    emerald: "text-[#085041] bg-emerald-50/60 border-emerald-200/60",
+    amber: "text-[#7A5417] bg-amber-50/60 border-amber-200/60",
+    rose: "text-[#7A1A1A] bg-rose-50/60 border-rose-200/60",
+    cyan: "text-[#3b82f6] bg-blue-50/60 border-blue-200/60",
   };
   return (
     <div className={`rounded-xl border px-4 py-3 ${toneMap[tone]}`}>
@@ -62,11 +62,11 @@ export function MetricImpactStrip({ health }: Props) {
       />
       <Link
         to="/agents/review"
-        className={`rounded-xl border px-4 py-3 text-left group focus:outline-none focus:ring-2 focus:ring-[#000000]/40 transition hover:-translate-y-px hover:shadow-sm ${
+        className={`rounded-xl border px-4 py-3 text-left group focus:outline-none focus:ring-2 focus:ring-[#0052FF]/40 transition hover:-translate-y-px hover:shadow-sm ${
           health.pendingReviews > 20
-            ? "text-[#7A1A1A] bg-neutral-100/60 border-neutral-300/60"
+            ? "text-[#7A1A1A] bg-rose-50/60 border-rose-200/60"
             : health.pendingReviews > 0
-            ? "text-[#7A5417] bg-neutral-100/60 border-neutral-300/60"
+            ? "text-[#7A5417] bg-amber-50/60 border-amber-200/60"
             : "text-slate-700 bg-slate-50 border-slate-200/60"
         }`}
       >

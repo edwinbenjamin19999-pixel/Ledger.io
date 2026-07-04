@@ -90,7 +90,7 @@ export const AGIDetailPanel = ({ companyId, environment, onComplete }: AGIDetail
         onClick={handleSign}
         disabled={signing}
         className="w-full h-11"
-        style={{ backgroundColor: '#000000', color: '#0F2137' }}
+        style={{ backgroundColor: '#3b82f6', color: '#0F2137' }}
       >
         {signing ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Signerar...</> :
          <><Lock className="w-4 h-4 mr-2" />Signera och skicka AGI med BankID</>}

@@ -43,17 +43,17 @@ const FALLBACK_BANKS: BankInfo[] = [
 
 // Bank-specific brand colors used as fallback initial-tile when no logo
 const BRAND_COLORS: Record<string, string> = {
-  Nordea: "bg-black",
-  SEB: "bg-neutral-700",
+  Nordea: "bg-blue-600",
+  SEB: "bg-emerald-700",
   Swedbank: "bg-orange-500",
   Handelsbanken: "bg-sky-700",
   Länsförsäkringar: "bg-blue-800",
-  Skandiabanken: "bg-neutral-700",
-  Danske: "bg-black",
+  Skandiabanken: "bg-green-600",
+  Danske: "bg-blue-700",
   ICA: "bg-red-600",
-  Sparbanken: "bg-neutral-700",
+  Sparbanken: "bg-amber-600",
   Forex: "bg-yellow-600",
-  Marginalen: "bg-neutral-700",
+  Marginalen: "bg-rose-600",
   Resurs: "bg-purple-600",
 };
 
@@ -361,7 +361,7 @@ export function BankLinking({ companyId, onSuccess, flow = "standalone" }: BankL
                         <Info className="h-4 w-4" />
                         <AlertDescription className="text-xs">
                           <strong>{search}</strong> är under aktivering hos vår bankpartner.
-                          Kontakta <a href="mailto:support@bokfy.se" className="underline font-medium">support@bokfy.se</a> för manuell setup.
+                          Kontakta <a href="mailto:support@cogniq.se" className="underline font-medium">support@cogniq.se</a> för manuell setup.
                         </AlertDescription>
                       </Alert>
                     )}

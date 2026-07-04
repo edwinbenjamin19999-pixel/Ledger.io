@@ -8,7 +8,7 @@ import { sv } from "date-fns/locale";
 export const ActivityFeed = () => { const { useActivity } = useCollaboration();
   const { data: activities = [], isLoading } = useActivity();
 
-  const activityIcon = (type: string) => { switch (type) { case "comment": return <MessageSquare className="h-4 w-4 text-black" />;
+  const activityIcon = (type: string) => { switch (type) { case "comment": return <MessageSquare className="h-4 w-4 text-blue-500" />;
       case "task_created": return <ClipboardList className="h-4 w-4 text-[#085041]" />;
       case "task_completed": return <ClipboardList className="h-4 w-4 text-[#085041]" />;
       case "mention": return <AtSign className="h-4 w-4 text-purple-500" />;

@@ -65,7 +65,7 @@ export const DashboardAIInput = ({ companyId }: Props = {}) => {
         {(response || loading) && (
           <div className="px-4 pt-3 pb-2 border-b border-border">
             <div className="flex items-start gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#000000] mt-0.5 flex-shrink-0" />
+              <Sparkles className="w-3.5 h-3.5 text-[#3b82f6] mt-0.5 flex-shrink-0" />
               <p className="text-sm text-foreground flex-1 whitespace-pre-wrap">
                 {response || (loading ? "Tänker..." : "")}
                 {loading && response && <span className="inline-block w-1 h-3 bg-foreground/60 ml-0.5 animate-pulse" />}
@@ -95,7 +95,7 @@ export const DashboardAIInput = ({ companyId }: Props = {}) => {
             type="submit"
             size="icon"
             disabled={loading || !query.trim()}
-            className="w-8 h-8 rounded-lg bg-gradient-to-r from-[#000000] to-[#000000] text-white hover:brightness-110 flex-shrink-0"
+            className="w-8 h-8 rounded-lg bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] text-white hover:brightness-110 flex-shrink-0"
           >
             {loading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Send className="w-3.5 h-3.5" />}
           </Button>

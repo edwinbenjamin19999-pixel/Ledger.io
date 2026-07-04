@@ -161,7 +161,7 @@ function PortfolioContent({ projects }: { projects: Project[] }) { const data = 
                   <div className="flex items-center gap-3">
                     <span className={cn(
                       "text-sm font-bold w-6 h-6 rounded-full flex items-center justify-center",
-                      i === 0 ? "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]" :
+                      i === 0 ? "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]" :
                       i === ranked.length - 1 && ranked.length > 1 ? "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]" :
                       "bg-muted text-muted-foreground"
                     )}>
@@ -206,9 +206,9 @@ function PortfolioContent({ projects }: { projects: Project[] }) { const data = 
                   <YAxis tickFormatter={(v) => fmt(v)} tick={{ fontSize: 11 }} />
                   <Tooltip formatter={(v: number) => fmt(v) + " kr"} />
                   <Legend content={<CustomLegend />} />
-                  <Bar dataKey="revenue" name="Intäkter" fill="#000000" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="revenue" name="Intäkter" fill="#3b82f6" radius={[6, 6, 0, 0]} />
                   <Bar dataKey="cost" name="Kostnader" fill="hsl(var(--muted-foreground))" radius={[6, 6, 0, 0]} opacity={0.5} />
-                  <Bar dataKey="result" name="Resultat" fill="#000000" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="result" name="Resultat" fill="#10b981" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>

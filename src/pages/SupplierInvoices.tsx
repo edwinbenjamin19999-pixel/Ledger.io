@@ -82,7 +82,7 @@ const KPICard = ({
   delay?: number;
 }) => {
   const accentMap = {
-    cyan: "border-l-[#000000] bg-[#EFF6FF] text-[#000000]",
+    cyan: "border-l-[#3b82f6] bg-[#EFF6FF] text-[#3b82f6]",
     rose: "border-l-rose-500 bg-[#FCE8E8] text-[#7A1A1A]",
     emerald: "border-l-emerald-500 bg-[#E1F5EE] text-[#085041]",
     amber: "border-l-amber-500 bg-[#FAEEDA] text-[#7A5417]",
@@ -115,9 +115,9 @@ const KPICard = ({
 const SupplierAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   const colors = [
-    "from-neutral-700 to-neutral-700", "from-neutral-700 to-blue-500",
-    "from-neutral-700 to-pink-500", "from-neutral-700 to-orange-500",
-    "from-blue-500 to-[#000000]", "from-fuchsia-500 to-purple-500",
+    "from-violet-500 to-indigo-500", "from-emerald-500 to-blue-500",
+    "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
+    "from-blue-500 to-[#3b82f6]", "from-fuchsia-500 to-purple-500",
   ];
   const idx = (name?.charCodeAt(0) ?? 0) % colors.length;
   return (
@@ -139,8 +139,8 @@ const STATUS_BORDER: Record<string, { border: string; bg: string; dot?: boolean 
 
 const STATUS_CONFIG: Record<string, { label: string; icon: any; color: string }> = {
   draft: { label: "Utkast", icon: Clock, color: "text-muted-foreground" },
-  sent: { label: "Obetald", icon: ArrowDownRight, color: "text-neutral-700" },
-  attested: { label: "Attesterad", icon: CheckCircle2, color: "text-black" },
+  sent: { label: "Obetald", icon: ArrowDownRight, color: "text-violet-500" },
+  attested: { label: "Attesterad", icon: CheckCircle2, color: "text-blue-500" },
   paid: { label: "Betald", icon: CheckCircle2, color: "text-[#085041]" },
   overdue: { label: "Förfallen", icon: AlertTriangle, color: "text-[#7A1A1A]" },
   rejected: { label: "Avvisad", icon: Ban, color: "text-[#C73838]" },
@@ -289,7 +289,7 @@ const SupplierInvoices = () => {
     const Icon = cfg.icon;
     return (
       <Badge variant="outline" className={`${cfg.color} border-current/30 gap-1`}>
-        {status === "overdue" && <span className="h-1.5 w-1.5 rounded-full bg-neutral-700 animate-pulse" />}
+        {status === "overdue" && <span className="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse" />}
         <Icon className="h-3 w-3" />
         {cfg.label}
       </Badge>
@@ -359,19 +359,19 @@ const SupplierInvoices = () => {
           <TabsList className="bg-transparent p-0 h-auto border-b-[0.5px] border-[#E2E8F0] rounded-none w-full justify-start gap-0">
             <TabsTrigger
               value="list"
-              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors"
+              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors"
             >
               Inkommande
             </TabsTrigger>
             <TabsTrigger
               value="ageing"
-              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors flex items-center gap-[5px]"
+              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors flex items-center gap-[5px]"
             >
               <TrendingUp className="h-3 w-3" strokeWidth={1.8} />Åldersanalys
             </TabsTrigger>
             <TabsTrigger
               value="inbox"
-              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors flex items-center gap-[5px]"
+              className="px-[14px] py-[8px] text-[12px] text-[#475569] border-b-2 border-transparent -mb-px rounded-none data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none hover:text-[#0F172A] transition-colors flex items-center gap-[5px]"
             >
               <Mail className="h-3 w-3" strokeWidth={1.8} />E-postinkorg
             </TabsTrigger>
@@ -433,7 +433,7 @@ const SupplierInvoices = () => {
 
       <button
         onClick={() => setShowCreateDialog(true)}
-        className="fixed bottom-20 md:bottom-8 right-8 bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[36px] transition-colors flex items-center gap-[6px] z-50"
+        className="fixed bottom-20 md:bottom-8 right-8 bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[36px] transition-colors flex items-center gap-[6px] z-50"
       >
         <PlusCircle className="h-3.5 w-3.5" strokeWidth={1.8} />
         Registrera faktura
@@ -461,10 +461,10 @@ const SupplierInvoiceList = ({
   if (invoices.length === 0) {
     return (
       <Card className="overflow-hidden">
-        <div className="h-[3px] bg-[#000000]" />
+        <div className="h-[3px] bg-[#3b82f6]" />
         <CardContent className="py-16 text-center">
           <div className="rounded-2xl bg-[#EFF6FF] dark:bg-blue-900/30 p-3 inline-block mb-4">
-            <FileText className="w-12 h-12 text-[#000000] dark:text-[#000000]" />
+            <FileText className="w-12 h-12 text-[#3b82f6] dark:text-[#3b82f6]" />
           </div>
           <p className="text-slate-500 font-medium">
             Inga leverantörsfakturor matchar filtret
@@ -499,7 +499,7 @@ const SupplierInvoiceList = ({
                     {invoice.invoice_number}
                   </span>
                   {getStatusBadge(invoice)}
-                  {borderStyle.dot && <span className="h-2 w-2 rounded-full bg-neutral-700 animate-pulse" />}
+                  {borderStyle.dot && <span className="h-2 w-2 rounded-full bg-rose-500 animate-pulse" />}
                 </div>
                 <p className="text-sm text-foreground truncate">{invoice.counterparty_name}</p>
                 <div className="flex items-center gap-3 mt-0.5">

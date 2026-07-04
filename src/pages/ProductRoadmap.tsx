@@ -116,7 +116,7 @@ const ProductRoadmap = () => {
             onClick={() => navigate("/")}
             className="text-sm font-semibold tracking-tight text-slate-900 hover:text-slate-700"
           >
-            Bokfy
+            Cogniq
           </button>
           <Button
             onClick={() => navigate("/dashboard")}
@@ -133,14 +133,14 @@ const ProductRoadmap = () => {
         {/* Hero */}
         <section className="max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-slate-900/[0.06] bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600 shadow-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-neutral-700" />
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
             Product Evolution
           </span>
           <h1 className="mt-5 text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl md:leading-[1.1]">
             En levande finansiell plattform — byggd för att skala.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
-            Bokfy är i produktion och driver bokföring, fakturering och moms för riktiga
+            Cogniq är i produktion och driver bokföring, fakturering och moms för riktiga
             företag. Här är de lager som utgör plattformen idag — och vart vi rör oss härnäst.
           </p>
         </section>
@@ -169,14 +169,14 @@ const ProductRoadmap = () => {
               En stabil grund — och en tydlig riktning.
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-600">
-              Bokfy är idag en stabil och fungerande plattform för bokföring och
+              Cogniq är idag en stabil och fungerande plattform för bokföring och
               ekonomihantering. Fokus framåt ligger på automation, intelligens och
               skalbarhet — både för företag och redovisningsbyråer.
             </p>
             <ul className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {summaryBullets.map((b) => (
                 <li key={b} className="flex items-start gap-3 text-sm text-slate-700">
-                  <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#000000]" />
+                  <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#0d9488]" />
                   <span>{b}</span>
                 </li>
               ))}
@@ -186,7 +186,7 @@ const ProductRoadmap = () => {
       </main>
 
       <footer className="border-t border-slate-900/[0.06] py-8 text-center text-xs text-slate-500">
-        © {new Date().getFullYear()} Bokfy · Infrastructure for Swedish finance
+        © {new Date().getFullYear()} Cogniq · Infrastructure for Swedish finance
       </footer>
     </div>
   );

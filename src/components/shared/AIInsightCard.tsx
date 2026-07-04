@@ -39,8 +39,8 @@ export function AIInsightCard({ data, className }: { data: AIInsightData; classN
     <div className={cn(
       "rounded-2xl border p-5 transition-all duration-200",
       data.isFavorable
-        ? "border-neutral-300/60 bg-neutral-100/30 dark:border-neutral-700/40 dark:bg-emerald-950/20"
-        : "border-neutral-300/60 bg-neutral-100/30 dark:border-neutral-700/40 dark:bg-rose-950/20",
+        ? "border-emerald-200/60 bg-emerald-50/30 dark:border-emerald-800/40 dark:bg-emerald-950/20"
+        : "border-rose-200/60 bg-rose-50/30 dark:border-rose-800/40 dark:bg-rose-950/20",
       className
     )}>
       {/* Headline */}

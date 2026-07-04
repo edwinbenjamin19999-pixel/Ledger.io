@@ -11,7 +11,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
 
 const TONE_MAP = {
   neutral: { iconBg: "bg-slate-100 dark:bg-slate-800", iconColor: "text-slate-600 dark:text-slate-300" },
-  positive: { iconBg: "bg-[#EFF6FF] dark:bg-blue-950/40", iconColor: "text-[#000000] dark:text-[#1E3A5F]" },
+  positive: { iconBg: "bg-[#EFF6FF] dark:bg-blue-950/40", iconColor: "text-[#3b82f6] dark:text-[#1E3A5F]" },
   warning: { iconBg: "bg-[#FAEEDA] dark:bg-amber-950/40", iconColor: "text-[#7A5417] dark:text-[#C28A2B]" },
   critical: { iconBg: "bg-[#FCE8E8] dark:bg-rose-950/40", iconColor: "text-[#7A1A1A] dark:text-[#C73838]" },
 } as const;

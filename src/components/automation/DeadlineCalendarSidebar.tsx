@@ -45,7 +45,7 @@ export const DeadlineCalendarSidebar = ({ companyId }: DeadlineCalendarSidebarPr
     return groups;
   }, [deadlines]);
 
-  const typeColor: Record<string, string> = { agi: 'bg-[#EFF6FF] text-black border-[#C8DDF5]',
+  const typeColor: Record<string, string> = { agi: 'bg-[#EFF6FF] text-blue-700 border-[#C8DDF5]',
     vat: 'bg-primary/15 text-primary border-primary/30',
     annual: 'bg-orange-500/15 text-orange-700 border-orange-500/30',
     ink2: 'bg-[#F1F5F9] text-purple-700 border-[#E2E8F0]',
@@ -53,10 +53,10 @@ export const DeadlineCalendarSidebar = ({ companyId }: DeadlineCalendarSidebarPr
 
   return (
     <Card className="sticky top-6 relative overflow-hidden bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] shadow-none">
-      <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#000000]" />
+      <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0040CC]" />
       <CardHeader className="pb-2 pt-[14px] px-[14px]">
         <CardTitle className="text-[12px] font-medium text-[#0F172A] flex items-center gap-2">
-          <Calendar size={14} strokeWidth={1.5} className="text-[#000000]" />
+          <Calendar size={14} strokeWidth={1.5} className="text-[#0040CC]" />
           Skattekalender
         </CardTitle>
       </CardHeader>

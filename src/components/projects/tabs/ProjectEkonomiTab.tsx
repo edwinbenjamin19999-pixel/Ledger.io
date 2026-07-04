@@ -113,7 +113,7 @@ export function ProjectEkonomiTab({ project, totalRevenue, totalCost }: Props) {
                 <Tooltip formatter={(v: number) => fmt(v) + " kr"} />
                 <Legend content={<CustomLegend />} />
                 <Bar dataKey="Budget" fill="hsl(var(--muted-foreground))" radius={[6, 6, 0, 0]} opacity={0.4} />
-                <Bar dataKey="Utfall" fill="#000000" radius={[6, 6, 0, 0]} />
+                <Bar dataKey="Utfall" fill="#3b82f6" radius={[6, 6, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -122,9 +122,9 @@ export function ProjectEkonomiTab({ project, totalRevenue, totalCost }: Props) {
 
       {/* AI Prognosis */}
       {totalRevenue > 0 && (
-        <Card className="border-l-4 border-l-[#000000] bg-[#000000]/5">
+        <Card className="border-l-4 border-l-[#3b82f6] bg-[#3b82f6]/5">
           <CardContent className="py-3 px-4 flex items-start gap-3">
-            <Sparkles className="h-4 w-4 text-[#000000] flex-shrink-0 mt-0.5" />
+            <Sparkles className="h-4 w-4 text-[#3b82f6] flex-shrink-0 mt-0.5" />
             <div className="text-sm">
               <p className="font-medium">AI Lönsamhetsprognos</p>
               <p className="text-xs text-muted-foreground mt-1">

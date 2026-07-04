@@ -19,10 +19,10 @@ export const WLBusinessModel = () => {
   const fmt = (n: number) => n.toLocaleString("sv-SE");
 
   return (
-    <section className="bg-[#000000] py-24 md:py-32">
+    <section className="bg-[#0F172A] py-24 md:py-32">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-[#000000] text-xs font-medium tracking-[0.25em] uppercase mb-3">
+          <p className="text-[#3b82f6] text-xs font-medium tracking-[0.25em] uppercase mb-3">
             Affärsmodell
           </p>
           <h2
@@ -42,8 +42,8 @@ export const WLBusinessModel = () => {
               key={title}
               className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 hover:bg-white/[0.04] transition-colors"
             >
-              <div className="w-10 h-10 rounded-lg bg-[#000000]/10 flex items-center justify-center mb-5">
-                <Icon className="w-5 h-5 text-[#000000]" />
+              <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/10 flex items-center justify-center mb-5">
+                <Icon className="w-5 h-5 text-[#3b82f6]" />
               </div>
               <h3 className="text-white font-semibold mb-2 text-[15px]">{title}</h3>
               <p className="text-white/55 text-sm leading-relaxed">{desc}</p>
@@ -52,7 +52,7 @@ export const WLBusinessModel = () => {
         </div>
 
         {/* Revenue calculator */}
-        <div className="rounded-2xl border border-[#000000]/20 bg-gradient-to-br from-[#000000]/[0.06] to-transparent p-8 md:p-10">
+        <div className="rounded-2xl border border-[#3b82f6]/20 bg-gradient-to-br from-[#3b82f6]/[0.06] to-transparent p-8 md:p-10">
           {/* Scale toggle */}
           <div className="flex justify-center mb-8">
             <div className="inline-flex p-1 rounded-lg bg-white/[0.04] border border-white/[0.06]">
@@ -62,7 +62,7 @@ export const WLBusinessModel = () => {
                   onClick={() => setClients(s)}
                   className={`px-5 py-2 text-sm font-medium rounded-md transition-all ${
                     clients === s
-                      ? "bg-[#000000] text-[#000000]"
+                      ? "bg-[#3b82f6] text-[#0F172A]"
                       : "text-white/55 hover:text-white"
                   }`}
                 >
@@ -77,7 +77,7 @@ export const WLBusinessModel = () => {
               <div className="text-white/50 text-xs uppercase tracking-wider mb-2">Klienter</div>
               <div className="text-4xl font-[700] text-white">{clients}</div>
             </div>
-            <div className="text-[#000000] text-2xl font-light">×</div>
+            <div className="text-[#3b82f6] text-2xl font-light">×</div>
             <div>
               <div className="text-white/50 text-xs uppercase tracking-wider mb-2">Per månad</div>
               <div className="text-4xl font-[700] text-white">{PRICE_PER_CLIENT} kr</div>
@@ -86,14 +86,14 @@ export const WLBusinessModel = () => {
 
           <div className="mt-8 pt-8 border-t border-white/[0.06] text-center">
             <div className="text-white/50 text-xs uppercase tracking-wider mb-2">Återkommande månadsintäkt</div>
-            <div className="text-5xl md:text-6xl font-[700] text-[#000000]" style={{ letterSpacing: "-1px" }}>
+            <div className="text-5xl md:text-6xl font-[700] text-[#3b82f6]" style={{ letterSpacing: "-1px" }}>
               {fmt(monthly)} kr
             </div>
             <p className="text-white/40 text-sm mt-3">
               = {fmt(arr)} kr ARR · {fmt(threeYear)} kr över 3 år
             </p>
             <div className="mt-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.06]">
-              <TrendingUp className="w-3.5 h-3.5 text-[#000000]" />
+              <TrendingUp className="w-3.5 h-3.5 text-[#3b82f6]" />
               <span className="text-white/60 text-xs">Marginal: ~85% efter plattformskostnad</span>
             </div>
           </div>

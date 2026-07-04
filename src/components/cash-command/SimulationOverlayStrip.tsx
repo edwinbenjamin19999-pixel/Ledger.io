@@ -27,11 +27,11 @@ export function SimulationOverlayStrip({
   const positive = totalImpact >= 0;
 
   return (
-    <div className="rounded-xl border border-[#000000]/60 dark:border-[#C8DDF5] bg-neutral-100/60 dark:bg-[#EFF6FF] px-3 py-2 flex items-center gap-3 flex-wrap">
-      <div className="flex items-center gap-2 text-xs font-semibold text-[#000000] dark:text-[#000000]">
+    <div className="rounded-xl border border-[#3b82f6]/60 dark:border-[#C8DDF5] bg-blue-50/60 dark:bg-[#EFF6FF] px-3 py-2 flex items-center gap-3 flex-wrap">
+      <div className="flex items-center gap-2 text-xs font-semibold text-[#3b82f6] dark:text-[#3b82f6]">
         <Beaker className="h-3.5 w-3.5" />
         Simulering aktiv
-        <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#000000] dark:text-[#000000]">
+        <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6]">
           {pending.length} {pending.length === 1 ? "åtgärd" : "åtgärder"}
         </span>
       </div>
@@ -55,11 +55,11 @@ export function SimulationOverlayStrip({
       </div>
 
       <div className="flex items-center gap-3 text-xs">
-        <span className={cn("tabular-nums font-semibold", positive ? "text-[#085041] dark:text-neutral-300" : "text-[#7A1A1A] dark:text-neutral-300")}>
+        <span className={cn("tabular-nums font-semibold", positive ? "text-[#085041] dark:text-emerald-300" : "text-[#7A1A1A] dark:text-rose-300")}>
           {positive ? "+" : "−"}{fmt(totalImpact)} kr
         </span>
         {runwayDelta !== 0 && (
-          <span className="tabular-nums font-medium text-[#000000] dark:text-[#000000]">
+          <span className="tabular-nums font-medium text-[#3b82f6] dark:text-[#3b82f6]">
             Runway {runwayDelta > 0 ? "+" : ""}{runwayDelta} d
           </span>
         )}
@@ -75,7 +75,7 @@ export function SimulationOverlayStrip({
         </button>
         <button
           onClick={onExecuteAll}
-          className="text-xs px-3 py-1 rounded-md bg-[#000000] hover:bg-[#000000] text-white font-semibold inline-flex items-center gap-1"
+          className="text-xs px-3 py-1 rounded-md bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold inline-flex items-center gap-1"
         >
           <Play className="h-3 w-3" />
           Utför alla

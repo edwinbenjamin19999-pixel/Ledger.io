@@ -52,9 +52,9 @@ const RESOLVE_REASONS: Record<string, { label: string; value: string }[]> = { du
   ],
 };
 
-const SEVERITY_COLORS: Record<string, string> = { high: "bg-[#525252] text-white",
+const SEVERITY_COLORS: Record<string, string> = { high: "bg-[#EF4444] text-white",
   medium: "bg-[#EAB308] text-white",
-  low: "bg-[#000000] text-white",
+  low: "bg-[#3B82F6] text-white",
 };
 
 const SEVERITY_LABELS: Record<string, string> = { high: "Kritisk",
@@ -118,7 +118,7 @@ export function AnomalyResolveSheet({ anomaly, open, companyId, onClose, onResol
 
   const handleEscalateEmail = () => { const subject = `Eskalerad anomali: ${anomaly.title}`;
     const body = [
-      `ANOMALIRAPPORT -- Bokfy`,
+      `ANOMALIRAPPORT -- Cogniq`,
       ``,
       `Typ: ${anomaly.category}`,
       `Allvarlighetsgrad: ${SEVERITY_LABELS[anomaly.severity]}`,
@@ -132,7 +132,7 @@ export function AnomalyResolveSheet({ anomaly, open, companyId, onClose, onResol
       ``,
       `Vänligen granska och återkoppla med åtgärdsrekommendation.`,
       ``,
-      `-- Bokfy Anomalidetektion`,
+      `-- Cogniq Anomalidetektion`,
     ].join("\n");
     window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank");
     saveResolution("escalated");
@@ -370,8 +370,8 @@ export function AnomalyResolveSheet({ anomaly, open, companyId, onClose, onResol
                   {history.map(h => (
                     <div key={h.id} className="flex items-start gap-2 p-2 rounded-md bg-muted/30 text-xs">
                       <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-muted">
-                        {h.resolution_type === "resolved" && <CheckCircle className="h-3 w-3 text-[#000000]" />}
-                        {h.resolution_type === "false_positive" && <XCircle className="h-3 w-3 text-[#000000]" />}
+                        {h.resolution_type === "resolved" && <CheckCircle className="h-3 w-3 text-[#22c55e]" />}
+                        {h.resolution_type === "false_positive" && <XCircle className="h-3 w-3 text-[#3B82F6]" />}
                         {h.resolution_type === "escalated" && <Mail className="h-3 w-3 text-[#F97316]" />}
                         {h.resolution_type === "ignored" && <AlertTriangle className="h-3 w-3 text-muted-foreground" />}
                       </div>

@@ -63,7 +63,7 @@ export default function ChartOfAccounts() {
           </button>
           <button
             onClick={h.openAddDrawer}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0F1F3D] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#000000]/20 hover:-translate-y-0.5 transition-all duration-200 shadow-md"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0F1F3D] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#3b82f6]/20 hover:-translate-y-0.5 transition-all duration-200 shadow-md"
           >
             <Plus className="w-4 h-4" /> Lägg till konto
           </button>
@@ -73,14 +73,14 @@ export default function ChartOfAccounts() {
       <KPIFilterCards stats={h.stats} currentFilter={h.kpiFilter} onFilterChange={h.setKpiFilter} />
 
       {/* AI Insights Strip */}
-      <div className="mx-8 mb-2 px-5 py-3.5 rounded-2xl bg-[#0F1F3D] border border-black/50 flex items-center gap-4">
+      <div className="mx-8 mb-2 px-5 py-3.5 rounded-2xl bg-[#0F1F3D] border border-blue-100/50 flex items-center gap-4">
         <div className="w-8 h-8 rounded-xl bg-[#0F1F3D] flex items-center justify-center flex-shrink-0">
-          <Sparkles className="w-4 h-4 text-[#000000]" />
+          <Sparkles className="w-4 h-4 text-[#3b82f6]" />
         </div>
         <div className="flex items-center gap-6 text-sm">
           {AI_INSIGHTS.map((insight, i) => (
             <span key={i} className="text-slate-600 flex items-center gap-2">
-              <span className="w-1 h-1 rounded-full bg-[#000000] flex-shrink-0" />
+              <span className="w-1 h-1 rounded-full bg-[#3b82f6] flex-shrink-0" />
               {insight}
             </span>
           ))}

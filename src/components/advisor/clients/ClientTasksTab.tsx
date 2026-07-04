@@ -189,9 +189,9 @@ export const ClientTasksTab = ({ companyId, firmId }: Props) => {
                     <td className="px-4 py-2.5">
                       <span className={`px-2 py-0.5 rounded text-[11px] font-medium ${
                         t.status === "done"
-                          ? "bg-neutral-100 text-neutral-700"
+                          ? "bg-emerald-50 text-emerald-700"
                           : t.status === "in_progress"
-                          ? "bg-neutral-100 text-black"
+                          ? "bg-blue-50 text-blue-700"
                           : "bg-slate-100 text-slate-600"
                       }`}>
                         {t.status === "done" ? "Klar" : t.status === "in_progress" ? "Pågår" : "Att göra"}

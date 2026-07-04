@@ -25,19 +25,19 @@ export function CashRunwayCard({ cash, netResult }: CashRunwayCardProps) {
   let Icon = Shield;
 
   if (runway > 12 || (avgBurn === 0 && currentCash > 0)) {
-    gradient = "from-neutral-700 to-neutral-700";
+    gradient = "from-emerald-600 to-green-700";
     label = "Kassaposition stark";
     Icon = Shield;
   } else if (runway >= 6) {
-    gradient = "from-[#000000] to-[#000000]";
+    gradient = "from-[#3b82f6] to-[#3b82f6]";
     label = `${runway} månader kvar`;
     Icon = Clock;
   } else if (runway >= 3) {
-    gradient = "from-neutral-700 to-orange-500";
+    gradient = "from-amber-500 to-orange-500";
     label = `⚠ ${runway} månader kvar — planera finansiering`;
     Icon = AlertTriangle;
   } else {
-    gradient = "from-neutral-700 to-red-700";
+    gradient = "from-rose-600 to-red-700";
     label = `🚨 Kassabrist om ${runway} månader`;
     Icon = AlertTriangle;
   }
@@ -46,7 +46,7 @@ export function CashRunwayCard({ cash, netResult }: CashRunwayCardProps) {
     <div className={cn(
       "bg-gradient-to-r rounded-2xl p-5 shadow-md relative overflow-hidden text-white",
       gradient,
-      runway < 3 && "animate-pulse border border-neutral-300"
+      runway < 3 && "animate-pulse border border-rose-300"
     )}>
       <div className="flex items-center gap-1.5">
         <Icon className="w-3.5 h-3.5 text-white/70" />

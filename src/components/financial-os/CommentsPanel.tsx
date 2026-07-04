@@ -108,7 +108,7 @@ export function CommentsPanel() {
                 key={c.id}
                 className={cn(
                   "rounded-xl border bg-background p-3 text-sm shadow-sm",
-                  isAi && "border-[#C8DDF5] bg-neutral-100/40",
+                  isAi && "border-[#C8DDF5] bg-blue-50/40",
                   c.resolved_at && "opacity-60",
                 )}
               >

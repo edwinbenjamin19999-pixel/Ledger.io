@@ -155,7 +155,7 @@ export default function DeferredTaxWorkspace({ annualReportId, resultBeforeTax =
                           onChange={e => setDiffs(prev => prev.map((x, j) => j === i ? { ...x, taxValue: Number(e.target.value) } : x))} />
                       </td>
                       <td className="py-2 px-2 text-right tabular-nums">{fmt(td)}</td>
-                      <td className={`py-2 px-2 text-right tabular-nums ${tax >= 0 ? "text-neutral-700" : "text-neutral-700"}`}>{fmt(tax)}</td>
+                      <td className={`py-2 px-2 text-right tabular-nums ${tax >= 0 ? "text-amber-700" : "text-emerald-700"}`}>{fmt(tax)}</td>
                       <td className="py-2 pl-2">
                         <Button variant="ghost" size="icon" onClick={() => setDiffs(prev => prev.filter((_, j) => j !== i))}>
                           <Trash2 className="h-4 w-4" />
@@ -168,12 +168,12 @@ export default function DeferredTaxWorkspace({ annualReportId, resultBeforeTax =
               <tfoot>
                 <tr>
                   <td colSpan={3} className="pt-3 text-right text-xs text-muted-foreground">Netto uppskjuten skattefordran:</td>
-                  <td colSpan={2} className="pt-3 text-right font-semibold tabular-nums text-neutral-700">{fmt(totals.netAsset)}</td>
+                  <td colSpan={2} className="pt-3 text-right font-semibold tabular-nums text-emerald-700">{fmt(totals.netAsset)}</td>
                   <td></td>
                 </tr>
                 <tr>
                   <td colSpan={3} className="text-right text-xs text-muted-foreground">Netto uppskjuten skatteskuld:</td>
-                  <td colSpan={2} className="text-right font-semibold tabular-nums text-neutral-700">{fmt(totals.netLiability)}</td>
+                  <td colSpan={2} className="text-right font-semibold tabular-nums text-amber-700">{fmt(totals.netLiability)}</td>
                   <td></td>
                 </tr>
               </tfoot>

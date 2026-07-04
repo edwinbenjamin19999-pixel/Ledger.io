@@ -20,7 +20,7 @@ export function WelcomeState({ onPick, hasBank, onConnectBank, onUploadSie }: Pr
       <div
         className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5"
         style={{
-          background: "linear-gradient(135deg, #000000, #525252)",
+          background: "linear-gradient(135deg, #3b82f6, #6366f1)",
           boxShadow: "0 10px 30px -10px rgba(59,130,246,0.5)",
         }}
       >
@@ -40,7 +40,7 @@ export function WelcomeState({ onPick, hasBank, onConnectBank, onUploadSie }: Pr
         <div className="w-full mb-6 rounded-xl border border-border bg-card p-4 flex items-center justify-center gap-2">
           <button
             onClick={onConnectBank}
-            className="h-9 px-3 rounded-lg bg-[#000000] text-white text-[13px] font-medium hover:bg-[#000000] transition"
+            className="h-9 px-3 rounded-lg bg-[#3b82f6] text-white text-[13px] font-medium hover:bg-[#0052FF] transition"
           >
             Anslut bank
           </button>
@@ -58,7 +58,7 @@ export function WelcomeState({ onPick, hasBank, onConnectBank, onUploadSie }: Pr
           <button
             key={q}
             onClick={() => onPick(q)}
-            className="text-left px-4 py-3 rounded-xl border border-border bg-card text-[13px] text-foreground hover:border-[#000000]/50 hover:bg-[#000000]/5 transition"
+            className="text-left px-4 py-3 rounded-xl border border-border bg-card text-[13px] text-foreground hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/5 transition"
           >
             {q}
           </button>

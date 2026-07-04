@@ -572,7 +572,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
       <Card>
         <CardHeader>
           <CardTitle className="text-base flex items-center gap-2">
-            <Bot className="h-4 w-4 text-[#000000]" />
+            <Bot className="h-4 w-4 text-[#0052FF]" />
             Arbetsgivardeklaration (AGI) — Zero-touch
           </CardTitle>
           <CardDescription>AI förbereder hela deklarationen automatiskt. Du granskar och godkänner.</CardDescription>
@@ -585,7 +585,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
                 {MONTH_NAMES.map((m, i) => <SelectItem key={i} value={String(i)}>{m} {taxYear}</SelectItem>)}
               </SelectContent>
             </Select>
-            <Button onClick={runAIPrepare} className="bg-[#000000] hover:bg-[#000000]/90 text-white">
+            <Button onClick={runAIPrepare} className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-white">
               <Sparkles className="h-4 w-4 mr-2" />Kör AI nu
             </Button>
             <Button
@@ -639,9 +639,9 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
         <CardContent className="py-12">
           <div className="max-w-md mx-auto text-center space-y-6">
             <div className="relative w-20 h-20 mx-auto">
-              <div className="absolute inset-0 rounded-full border-4 border-[#000000]/20" />
-              <div className="absolute inset-0 rounded-full border-4 border-[#000000] border-t-transparent animate-spin" />
-              <Bot className="absolute inset-0 m-auto h-8 w-8 text-[#000000]" />
+              <div className="absolute inset-0 rounded-full border-4 border-[#0052FF]/20" />
+              <div className="absolute inset-0 rounded-full border-4 border-[#0052FF] border-t-transparent animate-spin" />
+              <Bot className="absolute inset-0 m-auto h-8 w-8 text-[#0052FF]" />
             </div>
             <div>
               <h3 className="font-semibold text-base mb-1">AI förbereder AGI för {MONTH_NAMES[selectedMonth]} {taxYear}</h3>
@@ -651,7 +651,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
             <div className="flex flex-col gap-1.5 text-left">
               {PREPARE_STEPS.slice(0, prepareStep + 1).map((s, i) => (
                 <div key={i} className="flex items-center gap-2 text-xs">
-                  {i < prepareStep ? <CheckCircle className="h-3.5 w-3.5 text-[#085041]" /> : <Loader2 className="h-3.5 w-3.5 animate-spin text-[#000000]" />}
+                  {i < prepareStep ? <CheckCircle className="h-3.5 w-3.5 text-[#085041]" /> : <Loader2 className="h-3.5 w-3.5 animate-spin text-[#0052FF]" />}
                   <span className={i < prepareStep ? "text-muted-foreground" : "font-medium"}>{s}</span>
                 </div>
               ))}
@@ -666,7 +666,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
   if (step === "submitting") { return (
       <Card>
         <CardContent className="py-16 text-center space-y-4">
-          <Shield className="h-12 w-12 mx-auto text-[#000000] animate-pulse" />
+          <Shield className="h-12 w-12 mx-auto text-[#0052FF] animate-pulse" />
           <h3 className="font-semibold text-lg">Lämnar in AGI till Skatteverket...</h3>
           <p className="text-sm text-muted-foreground">BankID-signering pågår</p>
           <Progress value={60} className="max-w-xs mx-auto h-2" />
@@ -721,7 +721,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
     return (
       <div className="max-w-lg mx-auto space-y-6">
         <div className="text-center pt-8">
-          <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-[#E1F5EE] dark:bg-neutral-700/30 flex items-center justify-center animate-scale-in">
+          <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-[#E1F5EE] dark:bg-green-900/30 flex items-center justify-center animate-scale-in">
             <CheckCircle className="h-10 w-10 text-[#085041]" />
           </div>
           <h2 className="text-2xl font-bold">AGI inlämnad</h2>
@@ -746,7 +746,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
           </CardContent>
         </Card>
         {paid ? (
-          <div className="flex items-center justify-center gap-2 rounded-md border border-[#BFE6D6] dark:border-neutral-700/50 bg-[#E1F5EE] dark:bg-neutral-700/20 px-4 py-3 text-sm text-[#085041] dark:text-[#1D9E75]">
+          <div className="flex items-center justify-center gap-2 rounded-md border border-[#BFE6D6] dark:border-green-900/50 bg-[#E1F5EE] dark:bg-green-900/20 px-4 py-3 text-sm text-[#085041] dark:text-[#1D9E75]">
             <CheckCircle className="h-4 w-4" />
             <span className="font-medium">Betalning bokförd i huvudboken</span>
           </div>
@@ -802,10 +802,10 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
     <div className="space-y-6 pb-24">
       {/* ─── CORRECTION BANNER ─── */}
       {isCorrection && (
-        <div className="rounded-lg border-2 border-neutral-700 bg-[#FAEEDA] dark:bg-amber-950/20 dark:border-neutral-700 p-4 space-y-1">
+        <div className="rounded-lg border-2 border-amber-400 bg-[#FAEEDA] dark:bg-amber-950/20 dark:border-amber-700 p-4 space-y-1">
           <div className="flex items-center gap-2">
             <FileEdit className="h-5 w-5 text-[#7A5417]" />
-            <span className="font-semibold text-sm text-[#7A5417] dark:text-neutral-300">Du redigerar en RÄTTELSEDEKLARATION för {MONTH_NAMES[selectedMonth]} {taxYear}</span>
+            <span className="font-semibold text-sm text-[#7A5417] dark:text-amber-300">Du redigerar en RÄTTELSEDEKLARATION för {MONTH_NAMES[selectedMonth]} {taxYear}</span>
           </div>
           <p className="text-xs text-muted-foreground ml-7">Ändra bara de fält som var felaktiga. Alla andra fält behåller originalvärden.</p>
         </div>
@@ -834,7 +834,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
           <div className="flex flex-col items-center gap-1 shrink-0">
             <svg width="80" height="80" viewBox="0 0 80 80">
               <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="6" />
-              <circle cx="40" cy="40" r="34" fill="none" stroke="#000000" strokeWidth="6"
+              <circle cx="40" cy="40" r="34" fill="none" stroke="#0052FF" strokeWidth="6"
                 strokeDasharray={`${(confidenceScore / 100) * 213.6} 213.6`}
                 strokeLinecap="round" transform="rotate(-90 40 40)"
                 className="transition-all duration-1000" />
@@ -878,21 +878,21 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
 
         {/* CARD 2 — Arbetsgivaravgifter */}
         <div className="relative overflow-hidden rounded-[12px]" style={{ background: "#FFFBF0", border: "0.5px solid #F9DFA0", padding: "14px 16px" }}>
-          <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#525252" }} />
+          <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#EF9F27" }} />
           <div className="flex items-center gap-2 mb-1">
             <Shield className="h-3.5 w-3.5 text-[#633806]" />
             <span className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">ARBETSGIVARAVGIFTER</span>
           </div>
           <div className="flex items-center">
             <p className="text-[20px] font-medium text-[#633806] tabular-nums">{fmt(totalContributions)} kr</p>
-            <span className="bg-[#FAEEDA] text-[#412402] rounded-full text-[10px] font-medium px-[7px] py-px ml-[6px]" style={{ border: "0.5px solid #525252" }}>31.42%</span>
+            <span className="bg-[#FAEEDA] text-[#412402] rounded-full text-[10px] font-medium px-[7px] py-px ml-[6px]" style={{ border: "0.5px solid #EF9F27" }}>31.42%</span>
           </div>
           {comparison && <CompBadge current={totalContributions} prev={comparison.prevContributions} />}
         </div>
 
         {/* CARD 3 — Netto att betala till SKV */}
         <div className="relative overflow-hidden rounded-[12px]" style={{ background: "#F5F9FF", border: "0.5px solid #C7DCFA", padding: "14px 16px" }}>
-          <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#000000" }} />
+          <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0040CC" }} />
           <div className="flex items-center gap-2 mb-1">
             <CalendarDays className="h-3.5 w-3.5 text-[#0C447C]" />
             <span className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">NETTO ATT BETALA TILL SKV</span>
@@ -907,7 +907,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
         <Card className={cn(
           "border-l-4",
           kontrollsumma.balanced2710 && kontrollsumma.balanced2730
-            ? "border-l-green-500 bg-neutral-100/50 dark:bg-green-950/20"
+            ? "border-l-green-500 bg-green-50/50 dark:bg-green-950/20"
             : "border-l-red-500 bg-red-50/50 dark:bg-red-950/20"
         )}>
           <CardContent className="pt-4 pb-4 space-y-2">
@@ -920,7 +920,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
               <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Kontrollsumma — Huvudbok</span>
             </div>
             {/* 2710 check */}
-            <div className={cn("flex items-center justify-between text-sm rounded-md px-3 py-2", kontrollsumma.balanced2710 ? "bg-neutral-100/50 dark:bg-neutral-700/20" : "bg-red-100/50 dark:bg-red-900/20")}>
+            <div className={cn("flex items-center justify-between text-sm rounded-md px-3 py-2", kontrollsumma.balanced2710 ? "bg-green-100/50 dark:bg-green-900/20" : "bg-red-100/50 dark:bg-red-900/20")}>
               <span>Ruta 062 (skatteavdrag) vs konto 2710</span>
               <div className="flex items-center gap-3 tabular-nums">
                 <span>{fmt(kontrollsumma.agiSkatteavdrag)} kr</span>
@@ -934,7 +934,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
               </div>
             </div>
             {/* 2730 check */}
-            <div className={cn("flex items-center justify-between text-sm rounded-md px-3 py-2", kontrollsumma.balanced2730 ? "bg-neutral-100/50 dark:bg-neutral-700/20" : "bg-red-100/50 dark:bg-red-900/20")}>
+            <div className={cn("flex items-center justify-between text-sm rounded-md px-3 py-2", kontrollsumma.balanced2730 ? "bg-green-100/50 dark:bg-green-900/20" : "bg-red-100/50 dark:bg-red-900/20")}>
               <span>Ruta 487 (avgifter) vs konto 2730</span>
               <div className="flex items-center gap-3 tabular-nums">
                 <span>{fmt(kontrollsumma.agiAvgifter)} kr</span>
@@ -958,7 +958,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
 
       {/* ─── NEGATIVE VALUES BANNER ─── */}
       {hasNegativeValues && (
-        <div className={cn("rounded-lg border-2 p-4 space-y-3", negativeOverridden ? "border-[#F0DDB7] bg-neutral-100/50 dark:bg-amber-950/20 dark:border-neutral-700" : "border-red-400 bg-[#FCE8E8] dark:bg-red-950/20 dark:border-red-800")}>
+        <div className={cn("rounded-lg border-2 p-4 space-y-3", negativeOverridden ? "border-[#F0DDB7] bg-amber-50/50 dark:bg-amber-950/20 dark:border-amber-800" : "border-red-400 bg-[#FCE8E8] dark:bg-red-950/20 dark:border-red-800")}>
           <div className="flex items-start gap-3">
             <AlertTriangle className="h-5 w-5 text-[#7A1A1A] mt-0.5 shrink-0" />
             <div className="space-y-1 flex-1">
@@ -975,7 +975,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
                 <Button
                   variant="outline"
                   size="sm"
-                  className="mt-2 text-xs h-7 bg-[#FAEEDA] hover:bg-neutral-300 text-[#7A5417] border-[#F0DDB7]"
+                  className="mt-2 text-xs h-7 bg-[#FAEEDA] hover:bg-amber-200 text-[#7A5417] border-[#F0DDB7]"
                   onClick={() => setNegativeOverridden(true)}
                 >
                   Jag förstår risken — fortsätt ändå
@@ -994,12 +994,12 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
         const missingBirthCount = employees.filter(e => e.birthYear === null).length;
         if (missingBirthCount === 0) return null;
         return (
-          <div className="flex items-start gap-3 rounded-[12px]" style={{ background: "#FAEEDA", border: "0.5px solid #525252", padding: "12px 14px" }}>
-            <AlertTriangle className="h-4 w-4 text-[#525252] mt-0.5 shrink-0" />
+          <div className="flex items-start gap-3 rounded-[12px]" style={{ background: "#FAEEDA", border: "0.5px solid #EF9F27", padding: "12px 14px" }}>
+            <AlertTriangle className="h-4 w-4 text-[#EF9F27] mt-0.5 shrink-0" />
             <div className="space-y-0">
               <p className="text-[12px] font-medium text-[#412402]">{missingBirthCount} anställd{missingBirthCount > 1 ? "a" : ""} saknar födelsedatum — standardavgiften 31,42% används.</p>
               <p className="text-[11px] text-[#633806] mt-[2px]">Lägg till födelsedatum i personalregistret för korrekt beräkning av åldersdifferentierade arbetsgivaravgifter.</p>
-              <a href="/hr" className="text-[#000000] text-[11px] font-medium underline cursor-pointer mt-[4px] inline-block">Gå till personalregistret →</a>
+              <a href="/hr" className="text-[#0040CC] text-[11px] font-medium underline cursor-pointer mt-[4px] inline-block">Gå till personalregistret →</a>
             </div>
           </div>
         );
@@ -1012,7 +1012,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
             <CollapsibleTrigger asChild>
               <div className="cursor-pointer hover:bg-[#F8FAFB] transition-colors flex items-center justify-between" style={{ padding: "14px 16px" }}>
                 <div className="text-[13px] font-medium text-[#0F172A] flex items-center gap-2">
-                  <AlertTriangle className={cn("h-3.5 w-3.5", errorWarnings.length > 0 ? "text-[#E24B4A]" : "text-[#525252]")} />
+                  <AlertTriangle className={cn("h-3.5 w-3.5", errorWarnings.length > 0 ? "text-[#E24B4A]" : "text-[#EF9F27]")} />
                   Agenten hittade {warnings.length} {warnings.length === 1 ? "sak" : "saker"} att granska
                 </div>
                 {warningsOpen ? <ChevronUp className="h-4 w-4 text-[#94A3B8]" /> : <ChevronDown className="h-4 w-4 text-[#94A3B8]" />}
@@ -1024,7 +1024,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
                   <div key={i} className="flex items-start gap-[8px] py-[5px]">
                     <div className={cn(
                       "w-[7px] h-[7px] rounded-full flex-shrink-0 mt-[4px]",
-                      w.severity === "error" ? "bg-[#E24B4A]" : w.severity === "warning" ? "bg-[#525252]" : "bg-[#000000]"
+                      w.severity === "error" ? "bg-[#E24B4A]" : w.severity === "warning" ? "bg-[#EF9F27]" : "bg-[#0040CC]"
                     )} />
                     <div className="flex-1 min-w-0">
                       <p className="text-[12px] text-[#475569] leading-[1.5]">{w.message}</p>
@@ -1082,12 +1082,12 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
                   // Rate chip
                   const rateChip = age === null ? (
                     <TooltipProvider><Tooltip><TooltipTrigger asChild>
-                      <Badge variant="outline" className="text-[10px] bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-neutral-700/30 dark:text-neutral-300 dark:border-neutral-700">?</Badge>
+                      <Badge variant="outline" className="text-[10px] bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-800">?</Badge>
                     </TooltipTrigger><TooltipContent className="text-xs max-w-[200px]">Födelsedatum saknas — standardavgift 31,42% används</TooltipContent></Tooltip></TooltipProvider>
                   ) : age < 18 ? (
-                    <Badge variant="outline" className="text-[10px] bg-[#000000]/10 text-[#000000] border-[#000000]/30">10,21% <span className="opacity-70 ml-0.5">(ung)</span></Badge>
+                    <Badge variant="outline" className="text-[10px] bg-[#0052FF]/10 text-[#0052FF] border-[#0052FF]/30">10,21% <span className="opacity-70 ml-0.5">(ung)</span></Badge>
                   ) : age > 65 ? (
-                    <Badge variant="outline" className="text-[10px] bg-[#F1F5F9] text-neutral-700 border-[#E2E8F0] dark:bg-neutral-700/30 dark:text-neutral-300 dark:border-neutral-700">10,21% <span className="opacity-70 ml-0.5">(65+)</span></Badge>
+                    <Badge variant="outline" className="text-[10px] bg-[#F1F5F9] text-violet-700 border-[#E2E8F0] dark:bg-violet-900/30 dark:text-violet-300 dark:border-violet-800">10,21% <span className="opacity-70 ml-0.5">(65+)</span></Badge>
                   ) : (
                     <span className="text-[10px] text-muted-foreground">31,42%</span>
                   );
@@ -1099,10 +1099,10 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
                           "border-b border-border/50 cursor-pointer transition-colors",
                           "hover:bg-muted/30 dark:hover:bg-slate-700/30",
                           hasNegative && "border-l-[3px] border-l-red-500 bg-red-50/30 dark:bg-red-950/10",
-                          !hasNegative && hasWarning && "border-l-[3px] border-l-amber-400 bg-neutral-100/30 dark:bg-amber-950/10"
+                          !hasNegative && hasWarning && "border-l-[3px] border-l-amber-400 bg-amber-50/30 dark:bg-amber-950/10"
                         )}>
                           <td className="px-4 py-3">
-                            <div className="w-9 h-9 rounded-full bg-[#000000]/10 text-[#000000] flex items-center justify-center text-xs font-bold">
+                            <div className="w-9 h-9 rounded-full bg-[#0052FF]/10 text-[#0052FF] flex items-center justify-center text-xs font-bold">
                               {initials}
                             </div>
                           </td>
@@ -1133,11 +1133,11 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
                                 <X className="h-3 w-3 mr-0.5" />Fel
                               </Badge>
                             ) : hasWarning ? (
-                              <Badge variant="outline" className="text-[10px] bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-neutral-700/30 dark:text-neutral-300 dark:border-neutral-700">
+                              <Badge variant="outline" className="text-[10px] bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-800">
                                 <Clock className="h-3 w-3 mr-0.5" />Granskas
                               </Badge>
                             ) : (
-                              <Badge variant="outline" className="text-[10px] bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-neutral-700/30 dark:text-neutral-300 dark:border-neutral-700">
+                              <Badge variant="outline" className="text-[10px] bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-green-900/30 dark:text-green-300 dark:border-green-800">
                                 <Check className="h-3 w-3 mr-0.5" />OK
                               </Badge>
                             )}
@@ -1178,10 +1178,10 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
         </div>
 
       {/* ─── ARBETSGIVARNIVÅ ─── */}
-      <Card className="border-l-4 border-l-[#000000]">
+      <Card className="border-l-4 border-l-[#0052FF]">
         <CardHeader className="pb-3">
           <CardTitle className="text-sm flex items-center gap-2">
-            <Building2 className="h-4 w-4 text-[#000000]" />
+            <Building2 className="h-4 w-4 text-[#0052FF]" />
             Arbetsgivarnivå sammanfattning
           </CardTitle>
         </CardHeader>
@@ -1198,10 +1198,10 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
                   </div>
                   <div className="flex items-center gap-2">
                     {isImportant ? (
-                      <span className="text-sm font-bold text-[#000000]">{fmt(val)} kr</span>
+                      <span className="text-sm font-bold text-[#0052FF]">{fmt(val)} kr</span>
                     ) : (
                       <button onClick={() => { /* inline edit */ }}
-                        className="text-sm font-medium text-right hover:text-[#000000] hover:underline cursor-pointer transition-colors flex items-center gap-1 group">
+                        className="text-sm font-medium text-right hover:text-[#0052FF] hover:underline cursor-pointer transition-colors flex items-center gap-1 group">
                         {fmt(val)} kr
                         <Pencil className="h-3 w-3 opacity-0 group-hover:opacity-100 text-muted-foreground" />
                       </button>
@@ -1244,7 +1244,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
             <CardHeader className="cursor-pointer hover:bg-muted/30 transition-colors pb-3">
               <CardTitle className="text-sm flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Shield className="h-4 w-4 text-neutral-700" />
+                  <Shield className="h-4 w-4 text-violet-500" />
                   Uppgifter till Försäkringskassan (FK)
                 </div>
                 <ChevronDown className="h-4 w-4" />
@@ -1342,15 +1342,15 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
                         </TableCell>
                         <TableCell className="text-xs font-mono">{sub.skv_reference_number || "—"}</TableCell>
                         <TableCell>
-                          <Badge variant="outline" className={cn("text-[10px]", sub.is_correction ? "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-neutral-700/30 dark:text-neutral-300" : "bg-[#EFF6FF] text-black border-[#C8DDF5] dark:bg-blue-900/30 dark:text-blue-300")}>
+                          <Badge variant="outline" className={cn("text-[10px]", sub.is_correction ? "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-900/30 dark:text-amber-300" : "bg-[#EFF6FF] text-blue-700 border-[#C8DDF5] dark:bg-blue-900/30 dark:text-blue-300")}>
                             {sub.is_correction ? "Rättelse" : "Original"}
                           </Badge>
                         </TableCell>
                         <TableCell>
                           <Badge variant="outline" className={cn("text-[10px]",
-                            sub.status === "submitted" ? "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-neutral-700/30 dark:text-neutral-300" :
-                            sub.status === "corrected" ? "bg-[#F1F5F9] text-neutral-700 border-[#E2E8F0] dark:bg-neutral-700/30 dark:text-neutral-300" :
-                            sub.status === "ready" ? "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-neutral-700/30 dark:text-neutral-300" :
+                            sub.status === "submitted" ? "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-emerald-900/30 dark:text-emerald-300" :
+                            sub.status === "corrected" ? "bg-[#F1F5F9] text-violet-700 border-[#E2E8F0] dark:bg-violet-900/30 dark:text-violet-300" :
+                            sub.status === "ready" ? "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-900/30 dark:text-amber-300" :
                             "bg-muted text-muted-foreground"
                           )}>
                             {sub.status === "submitted" ? "Inlämnad" : sub.status === "corrected" ? "Korrigerad" : sub.status === "ready" ? "Redo" : sub.status}
@@ -1394,7 +1394,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
           </DialogHeader>
           <DialogFooter className="gap-2">
             <Button variant="outline" onClick={() => setCorrectionDialogOpen(false)}>Avbryt</Button>
-            <Button onClick={handleCreateCorrection} className="gap-1.5 bg-neutral-700 hover:bg-neutral-700 text-amber-950">
+            <Button onClick={handleCreateCorrection} className="gap-1.5 bg-amber-500 hover:bg-amber-600 text-amber-950">
               <FileEdit className="h-3.5 w-3.5" />Skapa rättelse
             </Button>
           </DialogFooter>
@@ -1414,7 +1414,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
             </div>
           </div>
           <div className="text-sm font-bold">
-            Totalt att betala: <span className="text-[#000000]">{fmt(totalToPay)} kr</span>
+            Totalt att betala: <span className="text-[#0040CC]">{fmt(totalToPay)} kr</span>
           </div>
           <div className="flex items-center gap-2">
             <Button
@@ -1429,7 +1429,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
               authority="Skatteverket"
               size="sm"
               disabled={!canSubmit}
-              className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[16px] h-[36px] border-0"
+              className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[16px] h-[36px] border-0"
               icon={<Lock className="h-3.5 w-3.5" />}
               onDemoSubmit={() => { setConfirmChecked(false); setConfirmOpen(true); }}
             />
@@ -1449,7 +1449,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
               <CardContent className="pt-4 pb-4 space-y-2 text-sm">
                 <div className="flex justify-between"><span className="text-muted-foreground">Period</span><span className="font-medium">{MONTH_NAMES[selectedMonth]} {taxYear}</span></div>
                 <div className="flex justify-between"><span className="text-muted-foreground">Betalningsmottagare</span><span className="font-medium">{employees.length}</span></div>
-                <div className="flex justify-between"><span className="text-muted-foreground">Totalt belopp</span><span className="font-bold text-[#000000]">{fmt(totalToPay)} kr</span></div>
+                <div className="flex justify-between"><span className="text-muted-foreground">Totalt belopp</span><span className="font-bold text-[#0052FF]">{fmt(totalToPay)} kr</span></div>
                 <div className="flex justify-between"><span className="text-muted-foreground">Förfallodag</span><span className="font-medium">{deadlineStr}</span></div>
               </CardContent>
             </Card>
@@ -1469,7 +1469,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
               monthLabel={MONTH_NAMES[selectedMonth]}
             />
             <Button onClick={handleSubmit} disabled={!confirmChecked}
-              className="bg-neutral-700 hover:bg-neutral-700 text-amber-950 gap-1.5">
+              className="bg-amber-500 hover:bg-amber-600 text-amber-950 gap-1.5">
               <Send className="h-3.5 w-3.5" />Spara (demo — skickas ej)
             </Button>
           </DialogFooter>
@@ -1513,7 +1513,7 @@ function InlineField({ code, label, value, onSave }: { code: string; label: stri
         </div>
       ) : (
         <button onClick={() => { setEditVal(value); setEditing(true); }}
-          className="text-sm font-medium text-right hover:text-[#000000] hover:underline cursor-pointer transition-colors flex items-center gap-1 group">
+          className="text-sm font-medium text-right hover:text-[#0052FF] hover:underline cursor-pointer transition-colors flex items-center gap-1 group">
           {fmt(value)} kr
           <Pencil className="h-3 w-3 opacity-0 group-hover:opacity-100 text-muted-foreground" />
         </button>

@@ -35,21 +35,21 @@ const KIND_META: Record<ActionKind, {
   label: string;
 }> = {
   financial: {
-    edge: "bg-[#000000]/60",
+    edge: "bg-[#3b82f6]/60",
     iconBg: "bg-[#EFF6FF]",
-    iconColor: "text-[#000000] dark:text-[#1E3A5F]",
+    iconColor: "text-[#3b82f6] dark:text-[#1E3A5F]",
     Icon: Banknote,
     label: "Finansiell åtgärd",
   },
   risk: {
-    edge: "bg-neutral-700/70",
+    edge: "bg-amber-500/70",
     iconBg: "bg-[#FAEEDA]",
     iconColor: "text-[#7A5417] dark:text-[#C28A2B]",
     Icon: ShieldAlert,
     label: "Risk",
   },
   optimization: {
-    edge: "bg-neutral-700/60",
+    edge: "bg-emerald-500/60",
     iconBg: "bg-[#E1F5EE]",
     iconColor: "text-[#085041] dark:text-[#1D9E75]",
     Icon: Sparkles,
@@ -208,7 +208,7 @@ export function AIActionCard({ action, onDismiss, className }: Props) {
           loading={busy}
           onClick={handlePrimary}
           size="sm"
-          className="bg-[#000000] hover:bg-[#000000] text-white h-8 text-xs"
+          className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white h-8 text-xs"
         >
           {action.primary.label}
           <ArrowRight className="ml-1 h-3 w-3" />

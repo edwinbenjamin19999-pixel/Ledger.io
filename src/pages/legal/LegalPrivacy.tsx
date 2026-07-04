@@ -7,36 +7,36 @@ const EFFECTIVE_DATE = "2025-01-15";
 
 const LegalPrivacy = () => {
   useEffect(() => {
-    document.title = `Integritetspolicy ${VERSION} – Bokfy`;
+    document.title = `Integritetspolicy ${VERSION} – Cogniq`;
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#000000]">
+    <div className="min-h-screen bg-white text-[#0F172A]">
 
       <Header lightBg />
 
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="mb-10 pb-6 border-b border-slate-200">
-            <p className="text-sm text-[#000000] font-semibold tabular-nums mb-2">
+            <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-[#000000] mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-[#0F172A] mb-3">
               Integritetspolicy
             </h1>
             <p className="text-base text-slate-600">
-              Denna policy beskriver hur Bokfy AB behandlar personuppgifter i egenskap av
+              Denna policy beskriver hur Cogniq AB behandlar personuppgifter i egenskap av
               personuppgiftsansvarig — främst för kontaktpersoner hos våra B2B-kunder, besökare
               på vår webbplats och prospects.
             </p>
           </div>
 
-          <article className="prose prose-slate max-w-none prose-headings:text-[#000000] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#000000]">
+          <article className="prose prose-slate max-w-none prose-headings:text-[#0F172A] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0F172A]">
             <h2>1. Personuppgiftsansvarig</h2>
             <p>
-              Bokfy AB, org.nr [556xxx-xxxx], med säte i Stockholm. Kontakt:{" "}
-              <a href="mailto:dpo@bokfy.se" className="text-[#000000] no-underline hover:underline">
-                dpo@bokfy.se
+              Cogniq AB, org.nr [556xxx-xxxx], med säte i Stockholm. Kontakt:{" "}
+              <a href="mailto:dpo@cogniq.se" className="text-[#3b82f6] no-underline hover:underline">
+                dpo@cogniq.se
               </a>
               .
             </p>
@@ -48,8 +48,8 @@ const LegalPrivacy = () => {
               <li><strong>Faktura- och betalningsuppgifter:</strong> organisationsnummer, fakturaadress, transaktionshistorik.</li>
               <li><strong>Tekniska uppgifter:</strong> IP-adress, enhetsinformation, loggar, cookies (se separat cookiepolicy).</li>
               <li><strong>Bokföringsdata:</strong> behandlas separat under{" "}
-                <a href="/legal/dpa" className="text-[#000000] no-underline hover:underline">DPA</a>
-                {" "}— Bokfy är då personuppgiftsbiträde, inte ansvarig.
+                <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">DPA</a>
+                {" "}— Cogniq är då personuppgiftsbiträde, inte ansvarig.
               </li>
             </ul>
 
@@ -73,7 +73,7 @@ const LegalPrivacy = () => {
             <h2>5. Mottagare</h2>
             <p>
               Personuppgifter delas med våra underleverantörer (drift, AI, e-post — se{" "}
-              <a href="/legal/dpa" className="text-[#000000] no-underline hover:underline">DPA</a>
+              <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">DPA</a>
               ), myndigheter när lag kräver det (Skatteverket, Bolagsverket,
               Finansinspektionen) samt revisorer och rådgivare under sekretessavtal.
               All behandling sker inom EU/EES.
@@ -93,8 +93,8 @@ const LegalPrivacy = () => {
             <p>
               För frågor om personuppgiftsbehandling eller för att utöva dina rättigheter,
               kontakta vårt dataskyddsombud på{" "}
-              <a href="mailto:dpo@bokfy.se" className="text-[#000000] no-underline hover:underline">
-                dpo@bokfy.se
+              <a href="mailto:dpo@cogniq.se" className="text-[#3b82f6] no-underline hover:underline">
+                dpo@cogniq.se
               </a>
               .
             </p>

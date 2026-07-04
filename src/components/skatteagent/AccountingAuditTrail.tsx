@@ -72,7 +72,7 @@ export function AccountingAuditTrail({
                         {fmt(l.debit)} kr
                       </td>
                       <td className="px-4 py-2.5 text-right">
-                        <Link to="/verifications" className="text-neutral-700 hover:text-neutral-700 inline-flex items-center text-xs">
+                        <Link to="/verifications" className="text-indigo-600 hover:text-indigo-700 inline-flex items-center text-xs">
                           Öppna <ArrowUpRight className="w-3 h-3" />
                         </Link>
                       </td>
@@ -92,7 +92,7 @@ export function AccountingAuditTrail({
           {skvConnected ? (
             <div className="rounded-xl border border-slate-200 p-4 text-sm">
               <div className="flex items-center gap-2 text-[#085041] font-medium">
-                <span className="w-2 h-2 rounded-full bg-neutral-700" />
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                 Anslutning aktiv
               </div>
               <div className="text-slate-500 mt-2">

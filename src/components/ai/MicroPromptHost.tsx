@@ -75,7 +75,7 @@ export function MicroPromptHost() {
       <div className="flex items-center gap-2 mt-3">
         <button
           onClick={dismiss}
-          className="h-7 px-3 text-[11px] font-medium rounded-md bg-[#000000] text-white hover:bg-[#000000]"
+          className="h-7 px-3 text-[11px] font-medium rounded-md bg-[#3b82f6] text-white hover:bg-[#0052FF]"
         >
           Ja, tack
         </button>

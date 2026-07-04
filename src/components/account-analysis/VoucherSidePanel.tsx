@@ -131,7 +131,7 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
   return (
     <div
       className={`fixed right-0 top-0 h-full w-[480px] bg-slate-950 shadow-lg
-                  border-l-2 border-[#000000]/60 z-50 transform transition-transform duration-300 ease-out
+                  border-l-2 border-[#3b82f6]/60 z-50 transform transition-transform duration-300 ease-out
                   ${detail ? 'translate-x-0' : 'translate-x-full'}`}
     >
       {detail && (
@@ -265,7 +265,7 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
             {detail.anomalyType && (
               <Section title="Avvikelse">
                 <div className="bg-[#FAEEDA] border border-[#F0DDB7] rounded-xl p-4">
-                  <p className="text-xs text-neutral-300 leading-relaxed">{detail.anomalyReason}</p>
+                  <p className="text-xs text-amber-300 leading-relaxed">{detail.anomalyReason}</p>
                 </div>
               </Section>
             )}
@@ -306,7 +306,7 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
           {!detail.isVirtualRow && (
             <div className="absolute bottom-0 left-0 right-0 border-t border-slate-800 bg-slate-950/95 backdrop-blur px-6 py-3 flex items-center gap-2">
               {meta?.document_id && (
-                <button className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#EFF6FF] hover:bg-[#EFF6FF] border border-[#C8DDF5] text-[#000000] text-xs font-medium transition-colors">
+                <button className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#EFF6FF] hover:bg-[#EFF6FF] border border-[#C8DDF5] text-[#3b82f6] text-xs font-medium transition-colors">
                   <ExternalLink className="w-3.5 h-3.5" /> Visa underlag
                 </button>
               )}
@@ -346,7 +346,7 @@ const TraceItem = ({ icon: Icon, label, meta, pill, action }: { icon: any; label
       <div className="flex items-center gap-2">
         <span className="text-xs font-medium text-slate-200">{label}</span>
         {pill && (
-          <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#000000] border border-[#C8DDF5] tabular-nums font-mono">{pill}</span>
+          <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#3b82f6] border border-[#C8DDF5] tabular-nums font-mono">{pill}</span>
         )}
       </div>
       {meta && <p className="text-[11px] text-slate-500 mt-0.5">{meta}</p>}
@@ -356,7 +356,7 @@ const TraceItem = ({ icon: Icon, label, meta, pill, action }: { icon: any; label
 );
 
 const TimelineNode = ({ color, label, timestamp, actor }: { color: 'cyan' | 'emerald' | 'slate'; label: string; timestamp: string; actor: string }) => {
-  const dotColor = color === 'cyan' ? 'bg-[#000000] ring-[#000000]/30' : color === 'emerald' ? 'bg-neutral-700 ring-neutral-700/30' : 'bg-slate-500 ring-slate-600/30';
+  const dotColor = color === 'cyan' ? 'bg-[#3b82f6] ring-[#3b82f6]/30' : color === 'emerald' ? 'bg-emerald-400 ring-emerald-500/30' : 'bg-slate-500 ring-slate-600/30';
   return (
     <li className="ml-4 relative">
       <span className={`absolute -left-[22px] top-1 w-2.5 h-2.5 rounded-full ${dotColor} ring-4`} />

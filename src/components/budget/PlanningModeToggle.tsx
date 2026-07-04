@@ -18,7 +18,7 @@ export function PlanningModeToggle({ value, onChange, overriddenCount = 0 }: Pro
             onClick={() => onChange(m)}
             className={cn(
               "px-3 py-1 rounded-full text-xs font-medium transition-colors",
-              value === m ? "bg-[#000000] text-white" : "text-slate-600 hover:text-slate-900"
+              value === m ? "bg-[#3b82f6] text-white" : "text-slate-600 hover:text-slate-900"
             )}
           >
             {m === "simple" ? "Simple" : "Advanced"}

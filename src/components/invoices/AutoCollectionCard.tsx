@@ -85,7 +85,7 @@ export const AutoCollectionCard = ({ overdueInvoices, customerInsights, onBulkRe
                 onClick={() => setMode(m)}
                 className={`px-[10px] h-[24px] rounded-full text-[11px] font-medium transition-colors ${
                   mode === m
-                    ? "bg-white text-[#000000] border-[0.5px] border-[#E2E8F0]"
+                    ? "bg-white text-[#0040CC] border-[0.5px] border-[#E2E8F0]"
                     : "text-[#475569] hover:text-[#0F172A]"
                 }`}
               >
@@ -143,7 +143,7 @@ export const AutoCollectionCard = ({ overdueInvoices, customerInsights, onBulkRe
                 size="sm"
                 onClick={() => onBulkRemind(ranked.map(i => i.id))}
                 disabled={isBulkActing || mode === "off"}
-                className="h-[34px] text-[12px] bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] px-[14px] font-medium"
+                className="h-[34px] text-[12px] bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] px-[14px] font-medium"
               >
                 {isBulkActing ? <Loader2 className="h-3 w-3 animate-spin mr-1" /> : <Send className="h-3 w-3 mr-1" />}
                 Kör {ranked.length} påminnelser

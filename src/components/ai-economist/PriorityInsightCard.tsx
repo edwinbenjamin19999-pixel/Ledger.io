@@ -5,10 +5,10 @@ import type { CFOPriority } from "@/hooks/useCFOPriorities";
 import type { AutomationMode } from "@/hooks/useAIEconomistSettings";
 
 const tierStyles: Record<CFOPriority["tier"], { bar: string; chip: string; label: string }> = {
-  critical: { bar: "from-neutral-700 to-neutral-700", chip: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-[#FCE8E8] dark:text-neutral-300 dark:border-[#F4C8C8]", label: "Kritisk" },
+  critical: { bar: "from-rose-500 to-rose-600", chip: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-[#FCE8E8] dark:text-rose-200 dark:border-[#F4C8C8]", label: "Kritisk" },
   high:     { bar: "from-orange-500 to-orange-600", chip: "bg-orange-100 text-orange-700 border-orange-200 dark:bg-orange-500/20 dark:text-orange-200 dark:border-orange-400/30", label: "Hög" },
   medium:   { bar: "from-yellow-500 to-yellow-600", chip: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-[#FAEEDA] dark:text-yellow-200 dark:border-[#F0DDB7]", label: "Medel" },
-  low:      { bar: "from-neutral-700 to-neutral-700", chip: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-[#E1F5EE] dark:text-neutral-300 dark:border-[#BFE6D6]", label: "Låg" },
+  low:      { bar: "from-emerald-500 to-emerald-600", chip: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-[#E1F5EE] dark:text-emerald-200 dark:border-[#BFE6D6]", label: "Låg" },
 };
 
 interface Props {
@@ -49,7 +49,7 @@ export function PriorityInsightCard({ insight, automationMode, onFix, onIgnore, 
             <div className="mt-3 flex items-baseline gap-2">
               <span className={cn(
                 "text-2xl font-bold tabular-nums tracking-tight",
-                isNeg ? "text-[#7A1A1A] dark:text-neutral-300" : "text-[#085041] dark:text-neutral-300"
+                isNeg ? "text-[#7A1A1A] dark:text-rose-300" : "text-[#085041] dark:text-emerald-300"
               )}>
                 {isNeg ? "−" : "+"}{fmtSEK(insight.impact_sek)}
               </span>
@@ -75,7 +75,7 @@ export function PriorityInsightCard({ insight, automationMode, onFix, onIgnore, 
             className={cn(
               "px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all",
               "bg-[#0F1F3D] text-white",
-              "hover:shadow-[0_0_24px_rgba(0,0,0,0.4)]",
+              "hover:shadow-[0_0_24px_rgba(0,82,255,0.4)]",
               "disabled:opacity-60"
             )}
           >

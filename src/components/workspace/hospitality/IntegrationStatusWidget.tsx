@@ -63,7 +63,7 @@ export const IntegrationStatusWidget = () => {
                   </div>
                 </div>
                 {connected ? (
-                  <Badge className="gap-1 bg-neutral-700">
+                  <Badge className="gap-1 bg-emerald-600">
                     <CheckCircle2 className="h-3 w-3" /> Ansluten
                   </Badge>
                 ) : (
@@ -105,7 +105,7 @@ export const IntegrationStatusWidget = () => {
                 </div>
 
                 {selected.apiKeyName && (
-                  <div className="rounded-lg border border-[#F0DDB7] bg-[#FAEEDA] p-3 text-sm dark:border-neutral-700 dark:bg-amber-950/20">
+                  <div className="rounded-lg border border-[#F0DDB7] bg-[#FAEEDA] p-3 text-sm dark:border-amber-900 dark:bg-amber-950/20">
                     <div className="flex gap-2">
                       <AlertCircle className="h-4 w-4 shrink-0 text-[#7A5417]" />
                       <div>

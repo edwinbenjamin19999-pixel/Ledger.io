@@ -104,7 +104,7 @@ export const FirmTeam = ({ firmId }: FirmTeamProps) => { const { user } = useAut
                 </Select>
               </div>
               <p className="text-xs text-muted-foreground">
-                En inbjudan skickas till personen. De måste ha ett konto på Bokfy för att kunna ansluta.
+                En inbjudan skickas till personen. De måste ha ett konto på Cogniq för att kunna ansluta.
               </p>
               <ComingSoonButton tooltipText="E-postinbjudan aktiveras i kommande version">
                 <Mail className="h-4 w-4 mr-1" /> Skicka inbjudan

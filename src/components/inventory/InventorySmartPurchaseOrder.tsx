@@ -71,8 +71,8 @@ export const InventorySmartPurchaseOrder = () => { const [selectedOrders, setSel
   return (
     <div className="space-y-4">
       {/* Summary */}
-      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20">
-        <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
+        <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
         <div className="text-sm">
           <p className="font-medium">AI föreslår konsoliderade inköpsordrar</p>
           <p className="text-xs text-muted-foreground mt-1">
@@ -84,7 +84,7 @@ export const InventorySmartPurchaseOrder = () => { const [selectedOrders, setSel
 
       {/* Suggested consolidated orders */}
       {suggestedOrders.map((order, idx) => (
-        <Card key={idx} className={selectedOrders.has(idx) ? "border-[#000000]/50 ring-1 ring-[#000000]/20" : ""}>
+        <Card key={idx} className={selectedOrders.has(idx) ? "border-[#3b82f6]/50 ring-1 ring-[#3b82f6]/20" : ""}>
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -140,7 +140,7 @@ export const InventorySmartPurchaseOrder = () => { const [selectedOrders, setSel
                 Frakt: {order.shippingCost === 0 ? "0 kr" : `${order.shippingCost} kr`}
                 {order.shippingSaved > 0 && ` (sparar ${order.shippingSaved} kr vs separat)`}
               </p>
-              <Button size="sm" className="bg-[#000000] hover:bg-[#000000]/90 text-foreground gap-1.5">
+              <Button size="sm" className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground gap-1.5">
                 <Package className="h-3.5 w-3.5" />
                 Skicka inköpsorder
               </Button>
@@ -160,7 +160,7 @@ export const InventorySmartPurchaseOrder = () => { const [selectedOrders, setSel
           </CardHeader>
           <CardContent className="space-y-3">
             {volumeNegotiations.map((v) => (
-              <div key={v.articleNr} className="p-3 rounded-lg bg-neutral-100/50 dark:bg-emerald-950/10 border border-neutral-300/50 dark:border-neutral-700/30">
+              <div key={v.articleNr} className="p-3 rounded-lg bg-emerald-50/50 dark:bg-emerald-950/10 border border-emerald-200/50 dark:border-emerald-800/30">
                 <p className="text-sm font-medium">{v.name} ({v.articleNr})</p>
                 <p className="text-xs text-muted-foreground mt-1">
                   Du beställer denna artikel {v.ordersPerYear} gånger per år från {v.supplier}.

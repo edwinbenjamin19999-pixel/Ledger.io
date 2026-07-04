@@ -60,7 +60,7 @@ const totalSaving = comparisons.reduce((s, c) => s + c.annualSaving, 0);
 export const InventorySupplierComparison = () => { return (
     <div className="space-y-4">
       {/* Summary */}
-      <div className="flex items-start gap-2 p-3 rounded-lg bg-neutral-100/50 dark:bg-emerald-950/10 border border-[#BFE6D6] dark:border-neutral-700/30">
+      <div className="flex items-start gap-2 p-3 rounded-lg bg-emerald-50/50 dark:bg-emerald-950/10 border border-[#BFE6D6] dark:border-emerald-800/30">
         <TrendingDown className="h-4 w-4 text-[#085041] mt-0.5 flex-shrink-0" />
         <p className="text-sm">
           <span className="font-medium">Potentiell årsbesparing: {totalSaving.toLocaleString("sv-SE")} kr</span>
@@ -91,7 +91,7 @@ export const InventorySupplierComparison = () => { return (
                   className={cn(
                     "flex items-center justify-between p-2.5 rounded-lg border",
                     s.isBest && !s.isCurrent
-                      ? "border-[#BFE6D6] bg-neutral-100/50 dark:bg-emerald-950/10"
+                      ? "border-[#BFE6D6] bg-emerald-50/50 dark:bg-emerald-950/10"
                       : s.isCurrent
                       ? "border-border bg-muted/30"
                       : "border-border"
@@ -107,7 +107,7 @@ export const InventorySupplierComparison = () => { return (
                     </span>
                     <span className="text-xs text-muted-foreground">Ledtid: {s.leadTime} d</span>
                     {s.isBest && !s.isCurrent && (
-                      <Button size="sm" className="text-xs h-7 bg-[#000000] hover:bg-[#000000]/90 text-white">
+                      <Button size="sm" className="text-xs h-7 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
                         <ShoppingCart className="h-3 w-3 mr-1" />
                         Bestall från B
                       </Button>

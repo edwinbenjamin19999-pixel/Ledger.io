@@ -173,7 +173,7 @@ export const BudgetBalanceSheet = ({ rrRows, cfData, driverBR }: BudgetBalanceSh
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4 px-3">
         {[
           { label: "Totala tillgångar", value: formatSEK(totalAssets[11]), gradient: "from-slate-700 to-slate-800", sub: `December ${new Date().getFullYear()}` },
-          { label: "Eget kapital", value: formatSEK(totalEquity[11]), gradient: totalEquity[11] >= 0 ? "from-neutral-700 to-neutral-700" : "from-neutral-700 to-red-700", sub: `Soliditet: ${soliditetCalc[11].toFixed(1)}%` },
+          { label: "Eget kapital", value: formatSEK(totalEquity[11]), gradient: totalEquity[11] >= 0 ? "from-emerald-600 to-green-700" : "from-rose-600 to-red-700", sub: `Soliditet: ${soliditetCalc[11].toFixed(1)}%` },
         ].map(card => (
           <div key={card.label} className={cn("bg-gradient-to-r rounded-2xl p-3 sm:p-5 shadow-md relative overflow-hidden text-white", card.gradient)}>
             <span className="text-white/70 text-[10px] sm:text-xs font-medium uppercase tracking-widest">{card.label}</span>
@@ -203,7 +203,7 @@ export const BudgetBalanceSheet = ({ rrRows, cfData, driverBR }: BudgetBalanceSh
           ))}
           <div>
             <label className="text-xs text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1">
-              <Clock className="w-3 h-3 text-[#000000]" /> DSO (dagar)
+              <Clock className="w-3 h-3 text-[#3b82f6]" /> DSO (dagar)
             </label>
             <Input type="number" value={dso} onChange={e => setDso(parseInt(e.target.value) || 30)}
               className="mt-1 text-sm font-mono text-right h-8" />
@@ -225,14 +225,14 @@ export const BudgetBalanceSheet = ({ rrRows, cfData, driverBR }: BudgetBalanceSh
 
       {/* Balance status */}
       {isDifferenceZero ? (
-        <div className="mx-3 mb-4 bg-[#E1F5EE] dark:bg-neutral-700/20 border border-[#BFE6D6] dark:border-neutral-700 rounded-xl">
+        <div className="mx-3 mb-4 bg-[#E1F5EE] dark:bg-emerald-900/20 border border-[#BFE6D6] dark:border-emerald-800 rounded-xl">
           <div className="flex items-center gap-2 px-4 py-3">
             <CheckCircle className="w-4 h-4 text-[#085041]" />
             <span className="text-sm font-semibold text-[#085041] dark:text-[#1D9E75]">✓ Balansräkningen är i balans</span>
           </div>
         </div>
       ) : (
-        <div className="mx-3 mb-4 px-4 py-2 text-xs text-[#7A1A1A] dark:text-[#C73838] bg-[#FCE8E8] dark:bg-neutral-700/20 border border-[#F4C8C8] dark:border-neutral-700 rounded-xl flex items-center gap-2">
+        <div className="mx-3 mb-4 px-4 py-2 text-xs text-[#7A1A1A] dark:text-[#C73838] bg-[#FCE8E8] dark:bg-rose-900/20 border border-[#F4C8C8] dark:border-rose-800 rounded-xl flex items-center gap-2">
           <AlertTriangle className="w-4 h-4" />
           Kontrollera ingående balansvärden och att alla tillgångar är korrekt mappade
         </div>

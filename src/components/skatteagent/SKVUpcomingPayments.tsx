@@ -73,10 +73,10 @@ export function SKVUpcomingPayments({ companyId }: { companyId: string | null | 
   }
 
   return (
-    <Card className="border-black/40">
+    <Card className="border-blue-200/40">
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-base">
-          <Bell className="h-4 w-4 text-[#000000]" />
+          <Bell className="h-4 w-4 text-[#3b82f6]" />
           Kommande SKV-betalningar
         </CardTitle>
       </CardHeader>
@@ -105,14 +105,14 @@ export function SKVUpcomingPayments({ companyId }: { companyId: string | null | 
                     {days < 0 ? `Försenad ${Math.abs(days)}d` : days === 0 ? "Idag" : `Om ${days} dagar`}
                   </Badge>
                   {o.status === "scheduled" && (
-                    <Badge className="bg-[#000000] text-xs">AI betalar automatiskt</Badge>
+                    <Badge className="bg-[#3b82f6] text-xs">AI betalar automatiskt</Badge>
                   )}
                 </div>
                 <div className="text-xs text-muted-foreground">
                   Förfaller {o.due_date} · <span className="font-mono tabular-nums">{fmtSEK(Number(o.amount))}</span>
                 </div>
               </div>
-              <Button size="sm" onClick={() => handlePayNow(o)} className="bg-[#000000] hover:bg-[#000000]">
+              <Button size="sm" onClick={() => handlePayNow(o)} className="bg-[#3b82f6] hover:bg-[#3b82f6]">
                 <Banknote className="h-3.5 w-3.5 mr-1" /> Betala nu
               </Button>
             </div>

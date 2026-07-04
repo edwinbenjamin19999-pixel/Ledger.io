@@ -27,8 +27,8 @@ interface Props {
 }
 
 const KIND_COLOR: Record<EventMarker["kind"], string> = {
-  payment: "#525252",
-  invoice: "#000000",
+  payment: "#dc2626",
+  invoice: "#3b82f6",
   tax: "#7c3aed",
 };
 
@@ -73,13 +73,13 @@ export function DailyTimeline({ data, riskDate, events = [], onPointClick }: Pro
         <h3 className="text-sm font-semibold">Likviditet per dag</h3>
         <div className="flex items-center gap-3 text-[11px] text-muted-foreground">
           <span className="inline-flex items-center gap-1">
-            <span className="h-1.5 w-3 rounded-sm bg-[#000000]" /> Saldo
+            <span className="h-1.5 w-3 rounded-sm bg-[#3b82f6]" /> Saldo
           </span>
           <span className="inline-flex items-center gap-1">
-            <span className="h-2 w-2 rounded-full bg-neutral-700" /> Negativ kassa
+            <span className="h-2 w-2 rounded-full bg-rose-600" /> Negativ kassa
           </span>
           <span className="inline-flex items-center gap-1">
-            <span className="h-2 w-2 rounded-full bg-[#000000]" /> Inbetalning
+            <span className="h-2 w-2 rounded-full bg-[#3b82f6]" /> Inbetalning
           </span>
           <span className="inline-flex items-center gap-1">
             <span className="h-2 w-2 rounded-full" style={{ background: KIND_COLOR.tax }} /> Skatt
@@ -97,8 +97,8 @@ export function DailyTimeline({ data, riskDate, events = [], onPointClick }: Pro
           >
             <defs>
               <linearGradient id="balFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#000000" stopOpacity={0.4} />
-                <stop offset="95%" stopColor="#000000" stopOpacity={0} />
+                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.4} />
+                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
@@ -133,14 +133,14 @@ export function DailyTimeline({ data, riskDate, events = [], onPointClick }: Pro
             {/* Negative cash threshold — dashed red */}
             <ReferenceLine
               y={0}
-              stroke="#525252"
+              stroke="#dc2626"
               strokeDasharray="4 4"
               strokeWidth={1.5}
-              label={{ value: "Kassa = 0", position: "insideBottomLeft", fill: "#525252", fontSize: 10 }}
+              label={{ value: "Kassa = 0", position: "insideBottomLeft", fill: "#dc2626", fontSize: 10 }}
             />
 
             {/* Risk date marker */}
-            {riskDate && <ReferenceLine x={riskDate} stroke="#525252" strokeWidth={2} />}
+            {riskDate && <ReferenceLine x={riskDate} stroke="#dc2626" strokeWidth={2} />}
 
             {/* First negative point */}
             {firstNegative && (
@@ -148,7 +148,7 @@ export function DailyTimeline({ data, riskDate, events = [], onPointClick }: Pro
                 x={firstNegative.date}
                 y={firstNegative.balance}
                 r={6}
-                fill="#525252"
+                fill="#dc2626"
                 stroke="#fff"
                 strokeWidth={2}
                 ifOverflow="extendDomain"
@@ -172,7 +172,7 @@ export function DailyTimeline({ data, riskDate, events = [], onPointClick }: Pro
             <Area
               type="monotone"
               dataKey="balance"
-              stroke="#000000"
+              stroke="#3b82f6"
               strokeWidth={2}
               fill="url(#balFill)"
             />

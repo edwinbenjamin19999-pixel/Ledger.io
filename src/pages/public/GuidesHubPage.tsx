@@ -17,11 +17,11 @@ export default function GuidesHubPage() {
         {/* Hero */}
         <section className="pt-32 pb-12 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-black/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#000000]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
               <BookOpen className="w-3 h-3" />
               Bokföringsguider
             </div>
-            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#000000]">
+            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#0F172A]">
               Allt du behöver veta om bokföring
             </h1>
             <p className="mt-5 text-lg text-[#475569] leading-relaxed">
@@ -51,7 +51,7 @@ export default function GuidesHubPage() {
                 <div key={cat.id} id={cat.id} className="scroll-mt-24">
                   <div className="flex items-center justify-between mb-5">
                     <div>
-                      <h2 className="text-2xl font-bold text-[#000000] tracking-tight">{cat.label}</h2>
+                      <h2 className="text-2xl font-bold text-[#0F172A] tracking-tight">{cat.label}</h2>
                       <p className="text-sm text-[#64748b] mt-1">{cat.description}</p>
                     </div>
                     <span className="text-xs text-[#94a3b8]">{items.length} guider</span>
@@ -70,11 +70,11 @@ export default function GuidesHubPage() {
         {/* CTA */}
         <section className="py-16">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <h2 className="text-3xl font-bold text-[#000000]">Slipp läsa — låt AI göra jobbet</h2>
-            <p className="mt-3 text-[#64748b]">Bokfy tillämpar reglerna automatiskt så att du kan fokusera på företaget.</p>
+            <h2 className="text-3xl font-bold text-[#0F172A]">Slipp läsa — låt AI göra jobbet</h2>
+            <p className="mt-3 text-[#64748b]">Cogniq tillämpar reglerna automatiskt så att du kan fokusera på företaget.</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild className="bg-white text-[#000000] hover:bg-white/90 font-semibold">
-                <Link to="/auth">Testa Bokfy <ArrowRight className="w-4 h-4 ml-1" /></Link>
+              <Button asChild className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold">
+                <Link to="/auth">Testa Cogniq <ArrowRight className="w-4 h-4 ml-1" /></Link>
               </Button>
               <Button asChild variant="outline">
                 <Link to="/contact">Boka demo</Link>
@@ -83,7 +83,7 @@ export default function GuidesHubPage() {
           </div>
         </section>
       </main>
-      <div className="bg-[#000000]">
+      <div className="bg-[#0F172A]">
         <Footer />
       </div>
     </div>

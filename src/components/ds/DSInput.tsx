@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const fieldBase =
   "w-full bg-white border-[0.5px] border-[#E2E8F0] rounded-[8px] px-[10px] h-[36px] " +
   "text-[12px] text-[#0F172A] font-[inherit] placeholder:text-[#94A3B8] " +
-  "focus:outline-none focus:border-[#000000] focus:ring-2 focus:ring-[#000000]/10 transition-colors " +
+  "focus:outline-none focus:border-[#0040CC] focus:ring-2 focus:ring-[#0040CC]/10 transition-colors " +
   "disabled:bg-[#F8FAFB] disabled:text-[#94A3B8] disabled:cursor-not-allowed " +
   "read-only:bg-[#F8FAFB] read-only:text-[#94A3B8] read-only:cursor-not-allowed";
 
@@ -138,7 +138,7 @@ export function DSFormCardBody({ className, ...rest }: React.HTMLAttributes<HTML
  * ============================================================ */
 const journalBase =
   "bg-transparent border-[0.5px] border-transparent rounded-[4px] px-[6px] py-[5px] text-[12px] " +
-  "focus:outline-none focus:border-[#000000] focus:bg-white focus:ring-1 focus:ring-[#000000]/10 transition-colors";
+  "focus:outline-none focus:border-[#0040CC] focus:bg-white focus:ring-1 focus:ring-[#0040CC]/10 transition-colors";
 
 interface DSJournalInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   amount?: boolean;
@@ -170,7 +170,7 @@ export const DSAddLineButton = React.forwardRef<HTMLButtonElement, React.ButtonH
       ref={ref}
       type="button"
       className={cn(
-        "text-[12px] text-[#000000] cursor-pointer hover:underline bg-transparent border-0 p-0 shadow-none",
+        "text-[12px] text-[#0040CC] cursor-pointer hover:underline bg-transparent border-0 p-0 shadow-none",
         className
       )}
       {...rest}

@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 const SNOOZE_KEY = "wl:priority-batch:snoozed-until";
 
 const TIER_DOT: Record<ClientPriority["tier"], string> = {
-  critical: "bg-neutral-700 shadow-[0_0_0_4px_rgba(244,63,94,0.18)]",
-  warning: "bg-neutral-700 shadow-[0_0_0_4px_rgba(245,158,11,0.18)]",
-  stable: "bg-neutral-700 shadow-[0_0_0_4px_rgba(16,185,129,0.18)]",
+  critical: "bg-rose-500 shadow-[0_0_0_4px_rgba(244,63,94,0.18)]",
+  warning: "bg-amber-500 shadow-[0_0_0_4px_rgba(245,158,11,0.18)]",
+  stable: "bg-emerald-500 shadow-[0_0_0_4px_rgba(16,185,129,0.18)]",
 };
 
 const TIER_LABEL: Record<ClientPriority["tier"], string> = {
@@ -118,10 +118,10 @@ export const ClientPriorityBatchPanel = () => {
       >
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-xl bg-white/15 flex items-center justify-center">
-            <Sparkles className="h-5 w-5 text-neutral-300" />
+            <Sparkles className="h-5 w-5 text-emerald-200" />
           </div>
           <div>
-            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-300/80">
+            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-emerald-200/80">
               Dagens prioriteringar
             </p>
             <p className="text-sm font-semibold">Inga kritiska klienter — fokusera på tillväxt.</p>
@@ -148,10 +148,10 @@ export const ClientPriorityBatchPanel = () => {
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center">
-              <Flame className="h-5 w-5 text-neutral-300 animate-pulse" />
+              <Flame className="h-5 w-5 text-rose-300 animate-pulse" />
             </div>
             <div>
-              <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-300/80">
+              <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-rose-200/80">
                 AI-dirigerad batch
               </p>
               <h3 className="text-base font-bold tracking-tight">Dagens prioriteringar</h3>
@@ -201,8 +201,8 @@ export const ClientPriorityBatchPanel = () => {
                     className={cn(
                       "text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider",
                       cp.tier === "critical"
-                        ? "bg-[#FCE8E8] text-neutral-300"
-                        : "bg-[#FAEEDA] text-neutral-300",
+                        ? "bg-[#FCE8E8] text-rose-200"
+                        : "bg-[#FAEEDA] text-amber-200",
                     )}
                   >
                     {TIER_LABEL[cp.tier]}

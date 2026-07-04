@@ -126,7 +126,7 @@ export function RankedDriversList({ drivers, rows, onDrill }: Props) {
                   </div>
                   <div className="h-1.5 rounded-full bg-slate-100 overflow-hidden">
                     <div
-                      className={cn("h-full rounded-full", item.isFavorable ? "bg-neutral-700" : "bg-neutral-700")}
+                      className={cn("h-full rounded-full", item.isFavorable ? "bg-emerald-400" : "bg-rose-400")}
                       style={{ width: `${barWidth}%` }}
                     />
                   </div>

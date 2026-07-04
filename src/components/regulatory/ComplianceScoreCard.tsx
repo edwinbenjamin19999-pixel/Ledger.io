@@ -11,7 +11,7 @@ interface Props { totalDeadlines: number;
 export function ComplianceScoreCard({ totalDeadlines, completedDeadlines, overdueDeadlines, activeAlerts, dismissedAlerts }: Props) { // Score: 100 - (overdue * 15) - (activeAlerts * 5), min 0
   const score = Math.max(0, Math.min(100, 100 - overdueDeadlines * 15 - activeAlerts * 3));
   const grade = score >= 90 ? "A" : score >= 75 ? "B" : score >= 50 ? "C" : "D";
-  const gradeColor = score >= 90 ? "text-primary" : score >= 75 ? "text-black" : score >= 50 ? "text-[#7A5417]" : "text-destructive";
+  const gradeColor = score >= 90 ? "text-primary" : score >= 75 ? "text-blue-600" : score >= 50 ? "text-[#7A5417]" : "text-destructive";
   const bgRing = score >= 90 ? "stroke-primary" : score >= 75 ? "stroke-blue-500" : score >= 50 ? "stroke-amber-500" : "stroke-destructive";
 
   return (

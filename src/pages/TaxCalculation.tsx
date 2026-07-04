@@ -467,7 +467,7 @@ const TaxCalculation = () => {
                       <div key={i} className="grid grid-cols-12 gap-2 items-center py-1.5 border-t border-slate-100">
                         <span className="col-span-4 text-[13px] text-slate-800">{row.label}</span>
                         <span className="col-span-2 text-[11px] text-slate-500 font-mono">{row.accountRange || "–"}</span>
-                        <span className="col-span-3 text-right text-[13px] font-mono text-[#000000]">{fmt(row.autoValue)}</span>
+                        <span className="col-span-3 text-right text-[13px] font-mono text-[#3b82f6]">{fmt(row.autoValue)}</span>
                         <div className="col-span-3"><Input type="text" value={row.adjustedValue} onChange={e => updateResultRow(i, parseFloat(e.target.value.replace(/\s/g, "").replace(",", ".")) || 0)} className="text-right font-mono h-7 text-[13px]" /></div>
                       </div>
                     ))}
@@ -486,7 +486,7 @@ const TaxCalculation = () => {
                         <span className="col-span-4 text-[13px] text-slate-800">{row.label}</span>
                         <Badge variant="outline" className="col-span-1 text-[10px] justify-center">{row.sign}</Badge>
                         <span className="col-span-2 text-[11px] text-slate-500 font-mono">{row.accountRange || "Man."}</span>
-                        <span className="col-span-2 text-right text-[13px] font-mono text-[#000000]">{fmt(row.autoValue)}</span>
+                        <span className="col-span-2 text-right text-[13px] font-mono text-[#3b82f6]">{fmt(row.autoValue)}</span>
                         <div className="col-span-3"><Input type="text" value={row.adjustedValue} onChange={e => updateAdjustmentRow(i, parseFloat(e.target.value.replace(/\s/g, "").replace(",", ".")) || 0)} className="text-right font-mono h-7 text-[13px]" /></div>
                       </div>
                     ))}
@@ -556,16 +556,16 @@ const TaxCalculation = () => {
                   <div>
                     <h4 className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2">Utgående moms</h4>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5">
-                      {vatBoxes.outgoing.map(b => <VATBox key={b.ruta} {...b} color="border-[#C8DDF5] bg-neutral-100/50" />)}
+                      {vatBoxes.outgoing.map(b => <VATBox key={b.ruta} {...b} color="border-[#C8DDF5] bg-blue-50/50" />)}
                     </div>
                   </div>
                   <div>
                     <h4 className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2">Ingående moms</h4>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5">
-                      {vatBoxes.incoming.map(b => <VATBox key={b.ruta} {...b} color="border-[#BFE6D6] bg-neutral-100/50" />)}
+                      {vatBoxes.incoming.map(b => <VATBox key={b.ruta} {...b} color="border-[#BFE6D6] bg-emerald-50/50" />)}
                     </div>
                   </div>
-                  <div className="rounded-xl border-2 border-[#F0DDB7] bg-neutral-100/60 px-4 py-3 flex items-center justify-between">
+                  <div className="rounded-xl border-2 border-[#F0DDB7] bg-amber-50/60 px-4 py-3 flex items-center justify-between">
                     <div>
                       <div className="text-base font-bold text-[#7A5417] font-mono">Ruta 49</div>
                       <div className="text-xs text-slate-600">Moms att betala / få tillbaka</div>
@@ -573,7 +573,7 @@ const TaxCalculation = () => {
                     <div className="text-2xl font-bold font-mono text-slate-900 tabular-nums">{fmt(vatBoxes.net)} kr</div>
                   </div>
                   {vatBoxes.hasData && (
-                    <Link to="/vat-reports" className="inline-flex items-center gap-1 text-xs text-[#000000] hover:text-[#000000] font-medium">
+                    <Link to="/vat-reports" className="inline-flex items-center gap-1 text-xs text-[#3b82f6] hover:text-[#3b82f6] font-medium">
                       <Link2 className="h-3 w-3" />Öppna Momsmodulen
                     </Link>
                   )}

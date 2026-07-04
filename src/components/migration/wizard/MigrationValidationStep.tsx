@@ -90,7 +90,7 @@ export const MigrationValidationStep = ({ state, updateState }: Props) => { cons
         <>
           {/* Summary */}
           <div className="grid grid-cols-3 gap-3">
-            <Card className={allGood ? "border-[#BFE6D6] dark:border-neutral-700" : ""}>
+            <Card className={allGood ? "border-[#BFE6D6] dark:border-emerald-800" : ""}>
               <CardContent className="p-3 flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-[#085041]" />
                 <div>
@@ -120,7 +120,7 @@ export const MigrationValidationStep = ({ state, updateState }: Props) => { cons
           </div>
 
           {/* Overall status */}
-          <Card className={allGood ? "border-[#BFE6D6] dark:border-neutral-700 bg-neutral-100/50 dark:bg-emerald-950/20" : "border-[#F4C8C8] bg-red-50/50 dark:bg-red-950/20"}>
+          <Card className={allGood ? "border-[#BFE6D6] dark:border-emerald-800 bg-emerald-50/50 dark:bg-emerald-950/20" : "border-[#F4C8C8] bg-red-50/50 dark:bg-red-950/20"}>
             <CardContent className="p-4 flex items-center gap-3">
               {allGood ? <ShieldCheck className="h-6 w-6 text-[#085041]" /> : <XCircle className="h-6 w-6 text-[#7A1A1A]" />}
               <div>

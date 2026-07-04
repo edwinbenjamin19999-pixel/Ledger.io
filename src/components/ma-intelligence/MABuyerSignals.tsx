@@ -45,11 +45,11 @@ export function MABuyerSignals({ ebitda, revenue, revenueGrowth, ebitdaMargin }:
     growth: TrendingUp,
   };
 
-  const typeColors = { market: "bg-[#EFF6FF] text-black dark:bg-blue-900/30 dark:text-blue-300",
-    valuation: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-neutral-300",
+  const typeColors = { market: "bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
+    valuation: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-emerald-300",
     buyer: "bg-[#F1F5F9] text-purple-700 dark:bg-purple-900/30 dark:text-purple-300",
-    match: "bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/30 dark:text-neutral-300",
-    growth: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-neutral-300",
+    match: "bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/30 dark:text-amber-300",
+    growth: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-emerald-300",
   };
 
   return (

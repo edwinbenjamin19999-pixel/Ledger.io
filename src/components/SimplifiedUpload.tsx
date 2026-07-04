@@ -42,7 +42,7 @@ export const SimplifiedUpload = ({ companyId, onUploadComplete }: SimplifiedUplo
         setEmailAddress(data.email_inbox_address);
       } else {
         const uniqueId = companyId.slice(0, 8);
-        const generatedEmail = `bokföring-${uniqueId}@bokfy.se`;
+        const generatedEmail = `bokföring-${uniqueId}@cogniq.se`;
         await supabase
           .from("companies")
           .update({ email_inbox_address: generatedEmail })

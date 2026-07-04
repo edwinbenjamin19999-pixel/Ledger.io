@@ -36,12 +36,12 @@ const SERIES_OPTIONS = [
 
 const SERIES_COLORS: Record<string, string> = {
   F: "bg-[#EFF6FF] text-[#0C447C] border-[#C8DDF5]",
-  L: "bg-[#FAEEDA] text-[#A0570F] border-[#525252]",
+  L: "bg-[#FAEEDA] text-[#A0570F] border-[#EF9F27]",
   B: "bg-[#E1F5EE] text-[#085041] border-[#5DCAA5]",
-  LB: "bg-[#E6F4FA] text-[#000000] border-[#9CCFE3]",
+  LB: "bg-[#E6F4FA] text-[#0040CC] border-[#9CCFE3]",
   LN: "bg-[#F1F0F8] text-[#5B4E84] border-[#C9C5E0]",
   M: "bg-[#F1F5F9] text-[#475569] border-[#E2E8F0]",
-  IB: "bg-[#FAEEDA] text-[#A0570F] border-[#525252]",
+  IB: "bg-[#FAEEDA] text-[#A0570F] border-[#EF9F27]",
   HB: "bg-[#FCE8E8] text-[#791F1F] border-[#E5A8A8]",
 };
 
@@ -98,7 +98,7 @@ function KPICard({
       </div>
       <div className="flex items-center gap-[8px]">
         <p className="text-[20px] font-medium tracking-[-0.02em] tabular-nums text-[#0F172A] leading-tight">{value}</p>
-        {pulse && <span className="h-[7px] w-[7px] rounded-full bg-[#525252]" />}
+        {pulse && <span className="h-[7px] w-[7px] rounded-full bg-[#EF9F27]" />}
       </div>
       <p className="text-[11px] text-[#94A3B8]">{subtitle}</p>
       {trend && <div className="text-[11px] text-[#475569]">{trend}</div>}
@@ -342,7 +342,7 @@ const Verifications = () => {
 
   const getStatusBadge = useCallback((status: string) => {
     const config: Record<string, { label: string; className: string }> = {
-      draft: { label: "Utkast", className: "bg-[#FAEEDA] text-[#A0570F] border-[#525252]" },
+      draft: { label: "Utkast", className: "bg-[#FAEEDA] text-[#A0570F] border-[#EF9F27]" },
       pending_approval: { label: "Väntar", className: "bg-[#EFF6FF] text-[#0C447C] border-[#C8DDF5]" },
       approved: { label: "Godkänd", className: "bg-[#E1F5EE] text-[#085041] border-[#5DCAA5]" },
       rejected: { label: "Avvisad", className: "bg-[#FCE8E8] text-[#791F1F] border-[#E5A8A8]" },
@@ -427,7 +427,7 @@ const Verifications = () => {
           );
           if (pending.length === 0 || ["pending_approval", "draft", "pending_all"].includes(statusFilter)) return null;
           return (
-            <div className="flex items-center justify-between gap-[12px] rounded-[8px] bg-[#FAEEDA] border-[0.5px] border-[#525252] px-[14px] py-[10px]">
+            <div className="flex items-center justify-between gap-[12px] rounded-[8px] bg-[#FAEEDA] border-[0.5px] border-[#EF9F27] px-[14px] py-[10px]">
               <div className="flex items-center gap-[12px]">
                 <Clock className="h-[14px] w-[14px] text-[#A0570F] shrink-0" />
                 <div>
@@ -441,7 +441,7 @@ const Verifications = () => {
               </div>
               <button
                 onClick={() => { setStatusFilter("pending_all"); setPage(0); }}
-                className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px]"
+                className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px]"
               >
                 Visa &amp; godkänn
               </button>
@@ -522,7 +522,7 @@ const Verifications = () => {
                     placeholder="Beskrivning, ver.nr, konto..."
                     value={search}
                     onChange={e => setSearch(e.target.value)}
-                    className="pl-10 focus-visible:ring-neutral-700"
+                    className="pl-10 focus-visible:ring-violet-500"
                   />
                 </div>
               </div>
@@ -611,7 +611,7 @@ const Verifications = () => {
                   onClick={() => setActivePill(p.key)}
                   className={`text-[11px] px-[10px] h-[28px] rounded-[8px] font-medium transition-colors border-[0.5px] ${
                     activePill === p.key
-                      ? "bg-[#000000] text-[#E6F4FA] border-[#000000]"
+                      ? "bg-[#0040CC] text-[#E6F4FA] border-[#0040CC]"
                       : "bg-white text-[#475569] border-[#E2E8F0] hover:bg-[#F8FAFB]"
                   }`}
                 >
@@ -809,7 +809,7 @@ const Verifications = () => {
                   {(selectedEntry.status === "pending_approval" || selectedEntry.status === "draft") && (
                     <>
                       <button
-                        className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] inline-flex items-center gap-[5px]"
+                        className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] inline-flex items-center gap-[5px]"
                         onClick={async () => {
                           const id = selectedEntry.id;
                           const { data: { user } } = await supabase.auth.getUser();

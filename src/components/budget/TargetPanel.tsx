@@ -133,7 +133,7 @@ export function TargetPanel({ companyId, budgetId, rr, kf, drivers, onApplyGap }
       {/* Form */}
       <div className="lg:col-span-1 rounded-2xl border bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] p-5 space-y-4">
         <div className="flex items-center gap-2">
-          <Target className="w-4 h-4 text-[#000000]" />
+          <Target className="w-4 h-4 text-[#3b82f6]" />
           <h3 className="text-sm font-semibold">Sätt mål</h3>
         </div>
 
@@ -211,7 +211,7 @@ export function TargetPanel({ companyId, budgetId, rr, kf, drivers, onApplyGap }
 
             <div className="flex items-center justify-between pt-2 border-t">
               <h4 className="text-sm font-semibold flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-[#000000]" />
+                <Sparkles className="w-3.5 h-3.5 text-[#3b82f6]" />
                 AI-förslag per period
               </h4>
               <Button size="sm" variant="outline" onClick={fetchAI} disabled={aiLoading} className="text-xs">

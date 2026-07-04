@@ -73,7 +73,7 @@ const Pricing = () => { const { user, loading } = useAuth();
 
         <Card className="max-w-md mx-auto border-primary shadow-lg">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl">Bokfy Komplett</CardTitle>
+            <CardTitle className="text-2xl">Cogniq Komplett</CardTitle>
             <div className="mt-4">
               <span className="text-5xl font-bold">399 kr</span>
               <span className="text-muted-foreground">/bolag/månad</span>
@@ -108,7 +108,7 @@ const Pricing = () => { const { user, loading } = useAuth();
           </p>
           <p className="text-sm text-muted-foreground">
             Behöver du Enterprise?{" "}
-            <a href="mailto:info@bokfy.se" className="text-primary hover:underline">
+            <a href="mailto:info@cogniq.se" className="text-primary hover:underline">
               Kontakta oss
             </a>
           </p>

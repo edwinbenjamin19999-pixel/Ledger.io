@@ -177,8 +177,8 @@ ${incoming.map((r) => `<tr><td>${r.rate}%</td><td class="num">${fmt(r.base)}</td
       </header>
 
       {uncertainCount > 0 && (
-        <div className="rounded-xl border border-neutral-700/30 bg-neutral-700/5 p-4 flex items-start gap-3">
-          <AlertTriangle className="h-4 w-4 text-neutral-700 mt-0.5" />
+        <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-4 flex items-start gap-3">
+          <AlertTriangle className="h-4 w-4 text-amber-500 mt-0.5" />
           <div className="flex-1">
             <p className="text-sm font-medium text-foreground">
               {uncertainCount} transaktion{uncertainCount === 1 ? "" : "er"} har osäker
@@ -309,8 +309,8 @@ ${incoming.map((r) => `<tr><td>${r.rate}%</td><td class="num">${fmt(r.base)}</td
       <Card
         className={
           netToPay >= 0
-            ? "border-black/30 bg-blue-500/5"
-            : "border-neutral-700/30 bg-neutral-700/5"
+            ? "border-blue-500/30 bg-blue-500/5"
+            : "border-emerald-500/30 bg-emerald-500/5"
         }
       >
         <CardContent className="p-5 flex items-center justify-between">
@@ -387,7 +387,7 @@ ${incoming.map((r) => `<tr><td>${r.rate}%</td><td class="num">${fmt(r.base)}</td
                   </div>
                 </div>
                 {l.uncertain && (
-                  <div className="mt-2 text-xs text-neutral-700 flex items-center gap-1">
+                  <div className="mt-2 text-xs text-amber-500 flex items-center gap-1">
                     <AlertTriangle className="h-3 w-3" />
                     AI-konfidens &lt; 80% — granska innan låsning
                   </div>

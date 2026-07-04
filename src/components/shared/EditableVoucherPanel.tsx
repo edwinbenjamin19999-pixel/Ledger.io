@@ -63,7 +63,7 @@ const AccountCombo = ({ accounts, value, onChange }: { accounts: Account[]; valu
       <PopoverTrigger asChild>
         <button
           type="button"
-          className="h-8 w-full text-xs flex items-center justify-start px-2 rounded-md border border-slate-200 bg-white hover:border-[#000000] transition-colors text-left truncate"
+          className="h-8 w-full text-xs flex items-center justify-start px-2 rounded-md border border-slate-200 bg-white hover:border-[#3b82f6] transition-colors text-left truncate"
         >
           {selected ? (
             <span className="truncate">
@@ -292,7 +292,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
           <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200">
             <div className="flex items-center gap-3 min-w-0">
               <div className="w-9 h-9 rounded-xl bg-[#EFF6FF] border border-[#C8DDF5] flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-[#000000]" />
+                <Sparkles className="w-4 h-4 text-[#3b82f6]" />
               </div>
               <div className="min-w-0">
                 <h3 className="font-semibold text-slate-900 text-sm truncate">
@@ -356,16 +356,16 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                   <div
                     className="rounded-xl p-3.5"
                     style={{
-                      background: "rgba(0,0,0,0.08)",
-                      border: "1px solid rgba(0,0,0,0.2)",
+                      background: "rgba(0,82,255,0.08)",
+                      border: "1px solid rgba(0,82,255,0.2)",
                     }}
                   >
                     <div className="flex items-start gap-3">
                       <div
                         className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
                         style={{
-                          background: "rgba(0,0,0,0.15)",
-                          border: "1px solid rgba(0,0,0,0.25)",
+                          background: "rgba(0,82,255,0.15)",
+                          border: "1px solid rgba(0,82,255,0.25)",
                         }}
                       >
                         <Sparkles className="w-3.5 h-3.5" style={{ color: "#0D7A8A" }} />
@@ -379,8 +379,8 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                           <span
                             className="ml-2 text-[10px] px-1.5 py-0.5 rounded tabular-nums"
                             style={{
-                              background: "rgba(0,0,0,0.12)",
-                              border: "1px solid rgba(0,0,0,0.25)",
+                              background: "rgba(0,82,255,0.12)",
+                              border: "1px solid rgba(0,82,255,0.25)",
                               color: "#0D7A8A",
                             }}
                           >
@@ -394,7 +394,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                         className="text-xs font-medium px-2.5 py-1 rounded-md transition-colors flex-shrink-0"
                         style={{
                           background: "white",
-                          border: "1px solid rgba(0,0,0,0.35)",
+                          border: "1px solid rgba(0,82,255,0.35)",
                           color: "#0D7A8A",
                         }}
                       >
@@ -412,7 +412,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                       <button
                         type="button"
                         onClick={addLine}
-                        className="inline-flex items-center gap-1 text-xs text-[#000000] hover:text-[#000000] font-medium"
+                        className="inline-flex items-center gap-1 text-xs text-[#3b82f6] hover:text-[#3b82f6] font-medium"
                       >
                         <Plus className="w-3.5 h-3.5" /> Lägg till rad
                       </button>
@@ -481,7 +481,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                     {/* Balance footer */}
                     <div className={cn(
                       "grid grid-cols-[1fr_90px_110px_110px_30px] gap-2 px-3 py-2.5 border-t-2 text-xs font-semibold tabular-nums items-center",
-                      totals.balanced ? "border-[#BFE6D6] bg-neutral-100/50" : "border-[#F4C8C8] bg-neutral-100/50"
+                      totals.balanced ? "border-[#BFE6D6] bg-emerald-50/50" : "border-[#F4C8C8] bg-rose-50/50"
                     )}>
                       <span className={cn("text-[11px] uppercase tracking-wider", totals.balanced ? "text-[#085041]" : "text-[#7A1A1A]")}>
                         {totals.balanced ? "Balanserad" : `Diff: ${formatSEK(Math.abs(totals.diff))}`}
@@ -525,7 +525,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
               <Button
                 onClick={() => handleSave(false)}
                 disabled={saving || !totals.balanced}
-                className="flex-1 bg-[#000000] hover:bg-[#000000] text-white text-xs h-9"
+                className="flex-1 bg-[#3b82f6] hover:bg-[#3b82f6] text-white text-xs h-9"
               >
                 <Save className="w-3.5 h-3.5 mr-1.5" />
                 {saving ? "Sparar…" : "Spara ändring"}
@@ -536,7 +536,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                 variant="outline"
                 className="text-xs h-9"
               >
-                <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#000000]" />
+                <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#3b82f6]" />
                 Spara & lär AI
               </Button>
               <Button

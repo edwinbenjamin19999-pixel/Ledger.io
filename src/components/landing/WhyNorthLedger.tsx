@@ -20,7 +20,7 @@ const CONTO = [
 
 /**
  * FLAT JÄMFÖRELSE — vit sektion. Legacy = grått muted-block,
- * Bokfy = blue-50-block med tjock blå kant (border-2).
+ * Cogniq = blue-50-block med tjock blå kant (border-2).
  * Färg och kant bär vinnaren — ingen glow.
  */
 export const WhyNorthLedger = () => {
@@ -29,14 +29,14 @@ export const WhyNorthLedger = () => {
   return (
     <section className="bg-white py-24 px-6">
       <div ref={reveal.ref} className={`mx-auto max-w-5xl ${reveal.className}`}>
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#000000]">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
           Jämförelse
         </p>
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] text-[#000000]">
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] text-[#0F172A]">
           Inte ett bokföringsprogram.{" "}
-          <span className="text-[#000000]">Ett ekonomisystem.</span>
+          <span className="text-[#0052FF]">Ett ekonomisystem.</span>
         </h2>
-        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[#000000]/60">
+        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[#0F172A]/60">
           Skillnaden mellan att lappa ett gammalt system med AI — och att bygga
           ett nytt från grunden.
         </p>
@@ -44,28 +44,28 @@ export const WhyNorthLedger = () => {
         <div className="mt-12 grid grid-cols-1 items-start gap-5 md:grid-cols-2">
           {/* Legacy — muted grått block */}
           <div className="rounded-lg bg-gray-100 p-7">
-            <div className="mb-5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#000000]/50">
+            <div className="mb-5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0F172A]/50">
               Legacy-system + AI-tillägg
             </div>
             <ul className="space-y-4">
               {TRADITIONAL.map((t) => (
                 <li key={t} className="flex items-start gap-3">
                   <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md bg-white">
-                    <X className="h-3 w-3 text-[#525252]" strokeWidth={3} aria-hidden />
+                    <X className="h-3 w-3 text-[#DC2626]" strokeWidth={3} aria-hidden />
                   </div>
-                  <span className="text-sm leading-relaxed text-[#000000]/60">{t}</span>
+                  <span className="text-sm leading-relaxed text-[#0F172A]/60">{t}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Bokfy — blue-50-block med tjock blå kant */}
-          <div className="rounded-lg border-2 border-[#000000] bg-neutral-100 p-7">
+          {/* Cogniq — blue-50-block med tjock blå kant */}
+          <div className="rounded-lg border-2 border-[#0052FF] bg-blue-50 p-7">
             <div className="mb-5 flex items-center justify-between">
-              <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#000000]">
-                Bokfy
+              <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
+                Cogniq
               </div>
-              <span className="inline-flex items-center gap-1 rounded-full bg-[#000000] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#0052FF] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
                 <Check className="h-3 w-3" strokeWidth={3} aria-hidden />
                 Rekommenderas
               </span>
@@ -73,10 +73,10 @@ export const WhyNorthLedger = () => {
             <ul className="space-y-4">
               {CONTO.map((t) => (
                 <li key={t} className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md bg-[#000000]">
+                  <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md bg-[#0052FF]">
                     <Check className="h-3 w-3 text-white" strokeWidth={3} aria-hidden />
                   </div>
-                  <span className="text-sm font-medium leading-relaxed text-[#000000]">{t}</span>
+                  <span className="text-sm font-medium leading-relaxed text-[#0F172A]">{t}</span>
                 </li>
               ))}
             </ul>
@@ -88,7 +88,7 @@ export const WhyNorthLedger = () => {
           <button
             type="button"
             onClick={() => navigate("/auth")}
-            className="inline-flex h-14 items-center gap-2 rounded-md bg-[#000000] px-8 text-[15px] font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#000000] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#000000] focus-visible:ring-offset-2"
+            className="inline-flex h-14 items-center gap-2 rounded-md bg-[#0052FF] px-8 text-[15px] font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#0040CC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2"
           >
             Säkra din plats — 14 dagar utan kostnad vid lansering
             <ArrowRight className="h-4 w-4" aria-hidden />

@@ -35,7 +35,7 @@ const COMPARE = [
 ];
 
 const FAQS = [
-  { q: "Är AI-bokföring säkert?", a: "Ja. Bokfy följer svensk redovisningsstandard, BAS-kontoplan och K2/K3. All data är krypterad och GDPR-säkrad." },
+  { q: "Är AI-bokföring säkert?", a: "Ja. Cogniq följer svensk redovisningsstandard, BAS-kontoplan och K2/K3. All data är krypterad och GDPR-säkrad." },
   { q: "Vad händer om AI:n gör fel?", a: "Vid osäkerhet stannar AI:n och frågar dig. Allt är spårbart och korrigerbart i revisionsloggen." },
   { q: "Behöver jag fortfarande revisor?", a: "Ja, om du har revisionsplikt. AI:n underlättar arbetet men ersätter inte den oberoende granskningen." },
   { q: "Hur snabbt kommer jag igång?", a: "30 minuter. Vi importerar din historik från Fortnox, Visma eller Bokio automatiskt." },
@@ -49,11 +49,11 @@ export default function AIBookkeepingPage() {
         {/* Hero */}
         <section className="pt-32 pb-16 bg-gradient-to-b from-blue-50/40 to-white">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-black/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#000000]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
               <Sparkles className="w-3 h-3" />
               AI-bokföring förklarat
             </div>
-            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#000000]">
+            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#0F172A]">
               Bokföring som sköter sig själv
             </h1>
             <p className="mt-5 text-lg text-[#475569] leading-relaxed">
@@ -65,7 +65,7 @@ export default function AIBookkeepingPage() {
         {/* What */}
         <section className="py-12">
           <div className="container mx-auto max-w-3xl px-6">
-            <h2 className="text-3xl font-bold text-[#000000] tracking-tight">Vad är AI-bokföring?</h2>
+            <h2 className="text-3xl font-bold text-[#0F172A] tracking-tight">Vad är AI-bokföring?</h2>
             <p className="mt-4 text-[#334155] leading-[1.8] text-[17px]">
               AI-bokföring är ett system där artificiell intelligens automatiskt tolkar dokument, föreslår konton, hanterar moms och bokför verifikationer. Till skillnad från regelbaserad automation lär sig AI:n av varje korrigering och blir bättre över tid.
             </p>
@@ -76,7 +76,7 @@ export default function AIBookkeepingPage() {
         <section className="py-12 bg-slate-50/60 border-y border-slate-100">
           <div className="container mx-auto max-w-5xl px-6">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <h2 className="text-3xl font-bold text-[#000000] tracking-tight">Hur det fungerar</h2>
+              <h2 className="text-3xl font-bold text-[#0F172A] tracking-tight">Hur det fungerar</h2>
               <p className="mt-2 text-[#64748b]">Ett kvitto in — bokfört, momshanterat och rapporterat ut.</p>
             </div>
             <AutomationFlow steps={FLOW} />
@@ -87,16 +87,16 @@ export default function AIBookkeepingPage() {
         <section className="py-16">
           <div className="container mx-auto max-w-6xl px-6">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <h2 className="text-3xl font-bold text-[#000000] tracking-tight">Vad som automatiseras</h2>
+              <h2 className="text-3xl font-bold text-[#0F172A] tracking-tight">Vad som automatiseras</h2>
               <p className="mt-2 text-[#64748b]">Sex moment som tidigare krävde manuellt arbete.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {AUTO.map((a) => (
                 <div key={a.title} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
-                    <a.icon className="w-5 h-5 text-[#000000]" />
+                    <a.icon className="w-5 h-5 text-[#3b82f6]" />
                   </div>
-                  <h3 className="mt-4 font-semibold text-[#000000]">{a.title}</h3>
+                  <h3 className="mt-4 font-semibold text-[#0F172A]">{a.title}</h3>
                   <p className="mt-2 text-sm text-[#64748b] leading-relaxed">{a.desc}</p>
                 </div>
               ))}
@@ -108,7 +108,7 @@ export default function AIBookkeepingPage() {
         <section className="py-16 bg-slate-50/60 border-y border-slate-100">
           <div className="container mx-auto max-w-4xl px-6">
             <div className="text-center max-w-xl mx-auto mb-8">
-              <h2 className="text-3xl font-bold text-[#000000] tracking-tight">AI vs traditionellt system</h2>
+              <h2 className="text-3xl font-bold text-[#0F172A] tracking-tight">AI vs traditionellt system</h2>
               <p className="mt-2 text-[#64748b]">Vad skillnaden faktiskt blir i vardagen.</p>
             </div>
             <ComparisonTable rows={COMPARE} />
@@ -120,8 +120,8 @@ export default function AIBookkeepingPage() {
           <div className="container mx-auto max-w-4xl px-6 grid sm:grid-cols-3 gap-4 text-center">
             {[{i: Shield, t: "GDPR-säker", d: "Krypterad data, EU-hosting"}, {i: Zap, t: "30 min onboarding", d: "Vi importerar din historik"}, {i: Clock, t: "10+ h/mån sparat", d: "Genomsnitt SME-kund"}].map((x) => (
               <div key={x.t} className="rounded-2xl border border-slate-100 p-6">
-                <x.i className="w-5 h-5 mx-auto text-[#000000]" />
-                <div className="mt-3 font-semibold text-[#000000]">{x.t}</div>
+                <x.i className="w-5 h-5 mx-auto text-[#3b82f6]" />
+                <div className="mt-3 font-semibold text-[#0F172A]">{x.t}</div>
                 <div className="text-sm text-[#64748b]">{x.d}</div>
               </div>
             ))}
@@ -131,7 +131,7 @@ export default function AIBookkeepingPage() {
         {/* FAQ */}
         <section className="py-16">
           <div className="container mx-auto max-w-3xl px-6">
-            <h2 className="text-3xl font-bold text-[#000000] tracking-tight mb-6">Vanliga frågor</h2>
+            <h2 className="text-3xl font-bold text-[#0F172A] tracking-tight mb-6">Vanliga frågor</h2>
             <FAQAccordion items={FAQS} />
           </div>
         </section>
@@ -139,12 +139,12 @@ export default function AIBookkeepingPage() {
         {/* CTA */}
         <section className="py-16">
           <div className="container mx-auto max-w-3xl px-6">
-            <div className="rounded-3xl bg-[#000000] p-10 md:p-14 text-center text-white">
+            <div className="rounded-3xl bg-[#0F172A] p-10 md:p-14 text-center text-white">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">Redo att släppa det manuella?</h2>
               <p className="mt-3 text-white/70">Onboarding på 30 minuter. Ingen bindning.</p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-                <Button asChild className="bg-white text-[#000000] hover:bg-white/90 font-semibold">
-                  <Link to="/auth">Testa Bokfy <ArrowRight className="w-4 h-4 ml-1" /></Link>
+                <Button asChild className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold">
+                  <Link to="/auth">Testa Cogniq <ArrowRight className="w-4 h-4 ml-1" /></Link>
                 </Button>
                 <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">
                   <Link to="/contact">Boka demo</Link>

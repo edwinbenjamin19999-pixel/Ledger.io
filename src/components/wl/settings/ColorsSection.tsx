@@ -43,13 +43,13 @@ export function ColorsSection({ draft, update }: Props) {
               <Sparkles className="h-4 w-4 shrink-0 mt-0.5" />
               <div className="space-y-1">
                 <p className="font-semibold">Färgen tonades ned för premium-standard</p>
-                <p className="text-neutral-700/90">
+                <p className="text-amber-700/90">
                   Original: <span className="font-mono">{quality.adjustedHex !== draft.primary_color ? draft.primary_color : theme.meta.originalPrimary}</span>
                   {" → "}
                   Använd: <span className="font-mono">{theme.meta.finalPrimaryHex}</span>
                 </p>
                 {quality.warnings.map((w, i) => (
-                  <p key={i} className="text-neutral-700/80">• {w}</p>
+                  <p key={i} className="text-amber-700/80">• {w}</p>
                 ))}
               </div>
             </div>
@@ -75,7 +75,7 @@ export function ColorsSection({ draft, update }: Props) {
             <Input
               value={draft.accent_color || ""}
               onChange={(e) => update("accent_color", e.target.value || null)}
-              placeholder="#000000"
+              placeholder="#3b82f6"
               className="font-mono"
             />
           </div>
@@ -95,7 +95,7 @@ export function ColorsSection({ draft, update }: Props) {
                 <TrendingUp className="h-4 w-4 text-white/25" />
               </div>
               <p className="relative mt-2 text-xl font-bold text-white tabular-nums tracking-tight">1 240 800</p>
-              <p className="relative mt-1 text-[10px] text-neutral-300">↑ +12.4%</p>
+              <p className="relative mt-1 text-[10px] text-emerald-300">↑ +12.4%</p>
             </div>
             <div
               className="relative overflow-hidden rounded-xl p-4 border border-white/[0.08] shadow-[0_10px_30px_rgba(2,6,23,0.25)]"
@@ -107,7 +107,7 @@ export function ColorsSection({ draft, update }: Props) {
                 <Wallet className="h-4 w-4 text-white/25" />
               </div>
               <p className="relative mt-2 text-xl font-bold text-white tabular-nums tracking-tight">486 200</p>
-              <p className="relative mt-1 text-[10px] text-neutral-300">↑ +3.1%</p>
+              <p className="relative mt-1 text-[10px] text-emerald-300">↑ +3.1%</p>
             </div>
           </div>
           <button

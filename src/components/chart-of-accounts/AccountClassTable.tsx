@@ -77,7 +77,7 @@ export function AccountClassTable({
   }
 
   const COLOR_CLASSES: Record<string, string> = {
-    blue: "text-black", violet: "text-neutral-700", emerald: "text-[#085041]",
+    blue: "text-blue-600", violet: "text-violet-600", emerald: "text-[#085041]",
     amber: "text-[#7A5417]", orange: "text-orange-600", rose: "text-[#7A1A1A]",
     pink: "text-pink-600", slate: "text-slate-600",
   };

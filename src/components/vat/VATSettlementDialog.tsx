@@ -68,8 +68,8 @@ export function VATSettlementDialog({
           <div className={cn(
             "rounded-[10px] border p-4 flex items-center justify-between",
             proposal.direction === "payable"
-              ? "bg-[#FCE8E8] border-[#F4C8C8] dark:bg-rose-950/20 dark:border-neutral-700"
-              : "bg-[#E1F5EE] border-[#BFE6D6] dark:bg-emerald-950/20 dark:border-neutral-700"
+              ? "bg-[#FCE8E8] border-[#F4C8C8] dark:bg-rose-950/20 dark:border-rose-900"
+              : "bg-[#E1F5EE] border-[#BFE6D6] dark:bg-emerald-950/20 dark:border-emerald-900"
           )}>
             <div>
               <div className="text-xs uppercase tracking-wider font-semibold text-muted-foreground">

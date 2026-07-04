@@ -30,8 +30,8 @@ export function CompactAIAlertBar({
   if (!issues.length) return null;
 
   return (
-    <div className="bg-[#000000] border border-white/[0.08] rounded-xl px-5 py-3 flex items-center gap-3 mb-5">
-      <Sparkles className="w-4 h-4 text-[#000000] shrink-0" />
+    <div className="bg-[#0F172A] border border-white/[0.08] rounded-xl px-5 py-3 flex items-center gap-3 mb-5">
+      <Sparkles className="w-4 h-4 text-[#3b82f6] shrink-0" />
       <div className="text-white/70 text-sm flex-1 min-w-0 truncate">
         {issues.map((i, idx) => (
           <span key={idx}>
@@ -43,7 +43,7 @@ export function CompactAIAlertBar({
       <button
         type="button"
         onClick={() => navigate(actionHref)}
-        className="text-[#000000] text-sm font-medium hover:text-[#000000]/80 inline-flex items-center gap-1 shrink-0"
+        className="text-[#3b82f6] text-sm font-medium hover:text-[#3b82f6]/80 inline-flex items-center gap-1 shrink-0"
       >
         {actionLabel} <ArrowRight className="w-3.5 h-3.5" />
       </button>

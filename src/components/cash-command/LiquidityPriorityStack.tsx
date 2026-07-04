@@ -34,12 +34,12 @@ export function LiquidityPriorityStack({
 
   if (sorted.length === 0) {
     return (
-      <div className="rounded-2xl border border-[#BFE6D6] bg-neutral-100/40 dark:bg-[#E1F5EE] dark:border-[#BFE6D6] p-6 text-center">
+      <div className="rounded-2xl border border-[#BFE6D6] bg-emerald-50/40 dark:bg-[#E1F5EE] dark:border-[#BFE6D6] p-6 text-center">
         <ShieldCheck className="w-6 h-6 text-[#085041] mx-auto mb-2" />
-        <h3 className="font-semibold text-sm text-[#085041] dark:text-neutral-300">
+        <h3 className="font-semibold text-sm text-[#085041] dark:text-emerald-200">
           Inga akuta åtgärder
         </h3>
-        <p className="text-xs text-neutral-700/80 dark:text-neutral-300/70 mt-1">
+        <p className="text-xs text-emerald-700/80 dark:text-emerald-300/70 mt-1">
           Likviditeten är under kontroll — AI bevakar utvecklingen kontinuerligt.
         </p>
       </div>
@@ -49,9 +49,9 @@ export function LiquidityPriorityStack({
   return (
     <section className="space-y-3">
       <div className="flex items-center gap-2">
-        <Sparkles className="w-4 h-4 text-[#000000]" />
+        <Sparkles className="w-4 h-4 text-[#3b82f6]" />
         <h2 className="text-sm font-semibold">Topprioriteringar</h2>
-        <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#000000] font-medium">
+        <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#3b82f6] font-medium">
           {sorted.length}
         </span>
         <span className="text-xs text-muted-foreground ml-1">

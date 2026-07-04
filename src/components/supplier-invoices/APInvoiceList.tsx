@@ -300,7 +300,7 @@ export function APInvoiceList({ companyId, onSelect, onPay, activeId = null, com
           <button
             type="button"
             onClick={() => onPay(new Set())}
-            className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] transition-colors flex items-center gap-[6px] shrink-0"
+            className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] transition-colors flex items-center gap-[6px] shrink-0"
           >
             <CreditCard className="h-3.5 w-3.5" strokeWidth={1.8} />
             Öppna betalförslag
@@ -425,7 +425,7 @@ export function APInvoiceList({ companyId, onSelect, onPay, activeId = null, com
                     : fade === "reject"
                       ? "!bg-[#FCE8E8] opacity-0 border-[#F1A1A0]"
                       : isActive
-                        ? "border-[#000000] bg-[#F8FAFB]"
+                        ? "border-[#0040CC] bg-[#F8FAFB]"
                         : isKb
                           ? "border-[#85B7EB] bg-[#EFF6FF]"
                           : isOverdue
@@ -596,7 +596,7 @@ function RowKebab({
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuItem onClick={onOpen}>
-          <ChevronRight className="h-3.5 w-3.5 mr-2 text-[#000000]" />
+          <ChevronRight className="h-3.5 w-3.5 mr-2 text-[#0040CC]" />
           Öppna granskning
         </DropdownMenuItem>
         <DropdownMenuSeparator />
@@ -728,16 +728,16 @@ function KpiCard({
       : variant === "red"
         ? { bg: "bg-[#FFF5F5]", border: "border-[#FBBEBE]", line: "bg-[#E24B4A]", value: "text-[#791F1F]" }
         : variant === "amber"
-          ? { bg: "bg-[#FFFBF0]", border: "border-[#F9DFA0]", line: "bg-[#525252]", value: "text-[#633806]" }
+          ? { bg: "bg-[#FFFBF0]", border: "border-[#F9DFA0]", line: "bg-[#EF9F27]", value: "text-[#633806]" }
           : variant === "blue"
-            ? { bg: "bg-[#F5F9FF]", border: "border-[#C7DCFA]", line: "bg-[#000000]", value: "text-[#0C447C]" }
-            : { bg: "bg-[#FAFBFC]", border: "border-[#DFE4EA]", line: "bg-[#000000]", value: "text-[#0F172A]" };
+            ? { bg: "bg-[#F5F9FF]", border: "border-[#C7DCFA]", line: "bg-[#0040CC]", value: "text-[#0C447C]" }
+            : { bg: "bg-[#FAFBFC]", border: "border-[#DFE4EA]", line: "bg-[#0040CC]", value: "text-[#0F172A]" };
   return (
     <button
       onClick={onClick}
       disabled={!onClick}
       className={`relative overflow-hidden text-left ${styles.bg} border-[0.5px] rounded-[12px] p-[16px] transition-colors duration-[100ms] ${
-        active ? "border-[#000000]" : styles.border
+        active ? "border-[#0040CC]" : styles.border
       }`}
     >
       <span aria-hidden className={`absolute top-0 left-0 right-0 h-[1.5px] ${styles.line} rounded-t-[12px]`} />

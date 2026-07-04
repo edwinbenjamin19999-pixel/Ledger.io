@@ -11,10 +11,10 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 const CATEGORY_META: Record<string, { label: string; color: string }> = {
-  health: { label: "Portföljhälsa", color: "bg-neutral-700/20 text-neutral-300" },
+  health: { label: "Portföljhälsa", color: "bg-emerald-500/20 text-emerald-200" },
   industry: { label: "Branschanalys", color: "bg-blue-500/20 text-blue-200" },
   automation: { label: "Automation", color: "bg-purple-500/20 text-purple-200" },
-  deadlines: { label: "Deadlines", color: "bg-neutral-700/20 text-neutral-300" },
+  deadlines: { label: "Deadlines", color: "bg-amber-500/20 text-amber-200" },
   anomaly: { label: "Anomalier", color: "bg-red-500/20 text-red-200" },
 };
 
@@ -74,7 +74,7 @@ export default function AdvisorInsights() {
             <Sparkles className="h-5 w-5 text-purple-600" /> AI-insikter
           </h1>
           <p className="text-[12px] text-slate-500 mt-0.5">
-            Portföljanalys genererad av Bokfy · Senast uppdaterad{" "}
+            Portföljanalys genererad av Cogniq · Senast uppdaterad{" "}
             {aiUpdatedAt
               ? format(aiUpdatedAt, "yyyy-MM-dd HH:mm")
               : format(new Date(), "yyyy-MM-dd HH:mm")}
@@ -147,7 +147,7 @@ export default function AdvisorInsights() {
                   <div className="mt-3 pt-2 flex items-center gap-2">
                     <button
                       onClick={() => navigate("/wl/app/workflow")}
-                      className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
+                      className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
                     >
                       Åtgärda
                     </button>
@@ -252,7 +252,7 @@ export default function AdvisorInsights() {
                   <div className="mt-3 pt-2 flex items-center gap-2">
                     <button
                       onClick={() => navigate(i.fixRoute ?? "/wl/app/workflow")}
-                      className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
+                      className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
                     >
                       Åtgärda
                     </button>

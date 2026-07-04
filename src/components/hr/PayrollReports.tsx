@@ -168,7 +168,7 @@ export const PayrollReports = ({ companyId, employees, payrollRuns }: PayrollRep
               <AccuracyDisclaimer dataSource={`Lönekörning ${monthName}, senast uppdaterat ${now.toLocaleDateString("sv-SE")}`} />
 
               <div className="flex gap-2">
-                <Button onClick={() => setShowAgiSign(true)} className="bg-[#000000] text-foreground hover:bg-[#000000]/90">
+                <Button onClick={() => setShowAgiSign(true)} className="bg-[#3b82f6] text-foreground hover:bg-[#3b82f6]/90">
                   <LockIcon /> Granska och signera AGI
                 </Button>
                 <Button variant="outline">
@@ -215,7 +215,7 @@ export const PayrollReports = ({ companyId, employees, payrollRuns }: PayrollRep
               </Table>
 
               <div className="flex gap-2">
-                <Button onClick={() => setShowKu10Sign(true)} className="bg-[#000000] text-foreground hover:bg-[#000000]/90">
+                <Button onClick={() => setShowKu10Sign(true)} className="bg-[#3b82f6] text-foreground hover:bg-[#3b82f6]/90">
                   <LockIcon /> Skicka KU10 till Skatteverket
                 </Button>
                 <Button variant="outline">
@@ -241,8 +241,8 @@ export const PayrollReports = ({ companyId, employees, payrollRuns }: PayrollRep
                   <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} tickFormatter={v => `${Math.round(v / 1000)}k`} />
                   <Tooltip formatter={(v: number) => `${fmt(v)} kr`} />
                   <Legend content={<CustomLegend />} />
-                  <Bar dataKey="brutto" name="Bruttolön" fill="#000000" radius={[6, 6, 0, 0]} />
-                  <Bar dataKey="arbetsgivaravgift" name="Arbetsgivaravgifter" fill="#737373" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="brutto" name="Bruttolön" fill="#3b82f6" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="arbetsgivaravgift" name="Arbetsgivaravgifter" fill="#8b5cf6" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </CardContent>

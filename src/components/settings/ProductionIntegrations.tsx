@@ -7,28 +7,28 @@ const PRODUCTION_INTEGRATIONS = [
     name: 'BankID via Signicat',
     status: 'demo' as const,
     requirement: 'Signicat API-avtal + mTLS-certifikat',
-    contact: 'support@bokfy.se',
+    contact: 'support@cogniq.se',
     icon: Shield,
   },
   {
     name: 'Swish Handel',
     status: 'coming_soon' as const,
     requirement: 'Swish Handel-avtal via din bank',
-    contact: 'support@bokfy.se',
+    contact: 'support@cogniq.se',
     icon: Smartphone,
   },
   {
     name: 'Skatteverket AGI/Moms (live)',
     status: 'active' as const,
     requirement: 'Ansluten via mTLS-certifikat',
-    contact: 'support@bokfy.se',
+    contact: 'support@cogniq.se',
     icon: FileText,
   },
 ];
 
 const statusConfig = {
   demo: { label: 'Demo-läge', variant: 'outline' as const, className: 'bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]' },
-  coming_soon: { label: 'Kommande', variant: 'outline' as const, className: 'bg-[#EFF6FF] text-black border-[#C8DDF5]' },
+  coming_soon: { label: 'Kommande', variant: 'outline' as const, className: 'bg-[#EFF6FF] text-blue-700 border-[#C8DDF5]' },
   active: { label: 'Aktiv', variant: 'default' as const, className: '' },
 };
 

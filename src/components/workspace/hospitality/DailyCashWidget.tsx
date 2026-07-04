@@ -36,7 +36,7 @@ export const DailyCashWidget = () => {
               </p>
             </div>
             {todaySale?.is_booked ? (
-              <Badge variant="default" className="gap-1 bg-neutral-700">
+              <Badge variant="default" className="gap-1 bg-emerald-600">
                 <CheckCircle2 className="h-3 w-3" /> Bokförd
               </Badge>
             ) : (

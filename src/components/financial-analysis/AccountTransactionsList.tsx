@@ -70,13 +70,13 @@ export function AccountTransactionsList({ companyId, accountNumbers, fromDate, t
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
               <span className="text-[10px] font-mono text-muted-foreground">{tx.date}</span>
-              <span className="text-[10px] font-medium text-[#000000]">#{tx.entry_number}</span>
+              <span className="text-[10px] font-medium text-[#3b82f6]">#{tx.entry_number}</span>
             </div>
             <div className="text-xs text-foreground truncate mt-0.5">{tx.desc || tx.account}</div>
           </div>
           <div className="flex items-center gap-2 shrink-0 ml-3">
             <span className="text-xs font-semibold tabular-nums">{formatSEK(tx.amount)}</span>
-            <ExternalLink className="h-3 w-3 text-muted-foreground/50 group-hover:text-[#000000]" />
+            <ExternalLink className="h-3 w-3 text-muted-foreground/50 group-hover:text-[#3b82f6]" />
           </div>
         </button>
       ))}

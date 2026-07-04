@@ -34,8 +34,8 @@ export function KpiStrip({ kpis }: Props) {
         const trendColor =
           k.trend && k.trend !== "flat"
             ? k.trendIsPositive
-              ? "text-neutral-700"
-              : "text-neutral-700"
+              ? "text-emerald-600"
+              : "text-rose-600"
             : "text-slate-400";
         const interactive = !!(k.href || k.onClick);
         return (

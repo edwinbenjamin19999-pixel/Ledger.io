@@ -13,9 +13,9 @@ interface Props {
 }
 
 const STATUS = {
-  green: { label: "Sund likviditet", icon: CheckCircle2, ring: "ring-neutral-700/30", bg: "bg-[#E1F5EE]", text: "text-[#1D9E75]" },
-  yellow: { label: "Tunn marginal", icon: AlertTriangle, ring: "ring-neutral-700/30", bg: "bg-[#FAEEDA]", text: "text-[#C28A2B]" },
-  red: { label: "Kapitalunderskott", icon: TrendingDown, ring: "ring-neutral-700/30", bg: "bg-[#FCE8E8]", text: "text-[#C73838]" },
+  green: { label: "Sund likviditet", icon: CheckCircle2, ring: "ring-emerald-500/30", bg: "bg-[#E1F5EE]", text: "text-[#1D9E75]" },
+  yellow: { label: "Tunn marginal", icon: AlertTriangle, ring: "ring-amber-500/30", bg: "bg-[#FAEEDA]", text: "text-[#C28A2B]" },
+  red: { label: "Kapitalunderskott", icon: TrendingDown, ring: "ring-rose-500/30", bg: "bg-[#FCE8E8]", text: "text-[#C73838]" },
   unknown: { label: "Otillräckliga data", icon: Wallet, ring: "ring-slate-500/30", bg: "bg-slate-500/10", text: "text-slate-400" },
 };
 
@@ -42,7 +42,7 @@ export function StatusHero({ monthLabel, openingCash, totalOutflow, totalInflow,
         </div>
 
         {riskDate && (
-          <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#FCE8E8] border border-[#F4C8C8] px-3 py-2 text-sm text-neutral-300">
+          <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#FCE8E8] border border-[#F4C8C8] px-3 py-2 text-sm text-rose-300">
             <AlertTriangle className="h-4 w-4" />
             Saldot går negativt {new Date(riskDate).toLocaleDateString("sv-SE", { day: "numeric", month: "long" })}
           </div>

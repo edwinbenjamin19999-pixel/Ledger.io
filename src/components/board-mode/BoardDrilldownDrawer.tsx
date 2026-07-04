@@ -91,7 +91,7 @@ export const BoardDrilldownDrawer = ({
                       <p className="text-white/90 font-medium">{r.invoice_number}</p>
                       <p className="text-white/50 text-xs">{r.customer_name} · förfaller {r.due_date}</p>
                     </div>
-                    <span className="tabular-nums text-[#000000]">{fmt(Number(r.total_amount || 0))} kr</span>
+                    <span className="tabular-nums text-[#3b82f6]">{fmt(Number(r.total_amount || 0))} kr</span>
                   </div>
                 ) : r.entry_number ? (
                   <div className="flex justify-between items-center">

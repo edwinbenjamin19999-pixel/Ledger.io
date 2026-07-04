@@ -31,7 +31,7 @@ interface KvittoSettings {
 }
 
 const COMPANY_SLUG = "foretag";
-const RECEIPT_EMAIL = `kvitto@${COMPANY_SLUG}.bokfy.se`;
+const RECEIPT_EMAIL = `kvitto@${COMPANY_SLUG}.cogniq.se`;
 
 const MOCK_ACTIVITY: AgentActivityRow[] = [
   {

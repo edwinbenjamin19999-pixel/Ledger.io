@@ -15,9 +15,9 @@ interface PO { id: string;
 }
 
 const statusConfig: Record<PO["status"], { label: string; cls: string }> = { draft: { label: "Utkast", cls: "bg-muted text-muted-foreground" },
-  sent: { label: "Skickad", cls: "bg-[#EFF6FF] text-black border-[#C8DDF5]" },
+  sent: { label: "Skickad", cls: "bg-[#EFF6FF] text-blue-600 border-[#C8DDF5]" },
   confirmed: { label: "Bekräftad", cls: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]" },
-  received: { label: "Mottagen", cls: "bg-[#F1F5F9] text-neutral-700 border-[#E2E8F0]" },
+  received: { label: "Mottagen", cls: "bg-[#F1F5F9] text-violet-600 border-[#E2E8F0]" },
   invoiced: { label: "Fakturerad", cls: "bg-muted text-muted-foreground" },
 };
 

@@ -16,10 +16,10 @@ export const AuthInput = React.forwardRef<HTMLInputElement, AuthInputProps>(
       <input
         ref={ref}
         className={cn(
-          "w-full px-4 bg-gray-100 text-[#000000] text-[15px]",
+          "w-full px-4 bg-gray-100 text-[#0F172A] text-[15px]",
           "border-2 border-transparent rounded-md",
-          "placeholder:text-[#000000]/40",
-          "focus:outline-none focus:border-[#000000] focus:bg-white",
+          "placeholder:text-[#0F172A]/40",
+          "focus:outline-none focus:border-[#0052FF] focus:bg-white",
           "disabled:opacity-50 disabled:cursor-not-allowed",
           "transition-colors duration-200",
           inputSize === "lg" ? "h-[56px] text-base" : "h-[52px]",

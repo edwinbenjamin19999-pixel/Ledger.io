@@ -193,18 +193,18 @@ export function useCustomerProfiles(openInvoices: InvoiceLite[], paidInvoices: I
 }
 
 export const SCORE_COLOR: Record<CustomerProfile["score"], string> = {
-  A: "bg-neutral-100 text-neutral-700 border-neutral-300",
-  B: "bg-neutral-100 text-[#000000] border-black",
-  C: "bg-neutral-100 text-neutral-700 border-neutral-300",
+  A: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  B: "bg-blue-50 text-[#3b82f6] border-blue-200",
+  C: "bg-amber-50 text-amber-700 border-amber-200",
   D: "bg-orange-50 text-orange-700 border-orange-200",
-  E: "bg-neutral-100 text-neutral-700 border-neutral-300",
-  F: "bg-neutral-100 text-neutral-700 border-neutral-300",
+  E: "bg-rose-50 text-rose-700 border-rose-200",
+  F: "bg-rose-100 text-rose-800 border-rose-300",
 };
 
 export const RISK_COLOR: Record<CustomerProfile["risk"], string> = {
-  low: "bg-neutral-100 text-neutral-700 border-neutral-300",
-  medium: "bg-neutral-100 text-neutral-700 border-neutral-300",
-  high: "bg-neutral-100 text-neutral-700 border-neutral-300",
+  low: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  medium: "bg-amber-50 text-amber-700 border-amber-200",
+  high: "bg-rose-50 text-rose-700 border-rose-200",
 };
 
 export const RISK_LABEL: Record<CustomerProfile["risk"], string> = {

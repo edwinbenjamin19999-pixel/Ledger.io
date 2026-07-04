@@ -34,8 +34,8 @@ export function SwishAnalytics({ payments, summary }: Props) {
   const unmatched = payments.filter((p) => p.match_status === "unmatched").length;
   const dismissed = payments.filter((p) => p.match_status === "dismissed").length;
   const pieData = [
-    { name: "Matchade", value: matched, color: "#000000" },
-    { name: "Omatchade", value: unmatched, color: "#525252" },
+    { name: "Matchade", value: matched, color: "#10b981" },
+    { name: "Omatchade", value: unmatched, color: "#f59e0b" },
     { name: "Avvisade", value: dismissed, color: "#94a3b8" },
   ].filter((d) => d.value > 0);
 

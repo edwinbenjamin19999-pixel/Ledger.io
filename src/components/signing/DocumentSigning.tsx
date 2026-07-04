@@ -157,7 +157,7 @@ export const DocumentSigning = ({ documentType,
               </CardDescription>
             </div>
             {allRequiredSigned ? (
-              <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700 dark:text-neutral-300">
+              <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-green-900 dark:text-green-200">
                 <CheckCircle2 className="h-3 w-3 mr-1" /> Alla har signerat
               </Badge>
             ) : (
@@ -371,7 +371,7 @@ const SignatoryCard = ({ signatory,
 }) => { const statusBadge = { pending: <Badge variant="outline" className="text-[10px]"><Clock className="h-2.5 w-2.5 mr-1" />Väntar</Badge>,
     invited: <Badge variant="secondary" className="text-[10px]"><Mail className="h-2.5 w-2.5 mr-1" />Inbjudan skickad</Badge>,
     signing: <Badge className="text-[10px] bg-[#EFF6FF] text-blue-800"><Loader2 className="h-2.5 w-2.5 mr-1 animate-spin" />Signerar</Badge>,
-    signed: <Badge className="text-[10px] bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700 dark:text-neutral-300"><CheckCircle2 className="h-2.5 w-2.5 mr-1" />Signerat</Badge>,
+    signed: <Badge className="text-[10px] bg-[#E1F5EE] text-[#085041] dark:bg-green-900 dark:text-green-200"><CheckCircle2 className="h-2.5 w-2.5 mr-1" />Signerat</Badge>,
   }[signatory.status];
 
   return (

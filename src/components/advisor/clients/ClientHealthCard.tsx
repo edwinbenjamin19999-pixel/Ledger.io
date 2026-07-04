@@ -21,11 +21,11 @@ interface Props {
 }
 
 const dotColor = (s: HealthStatus) =>
-  s === "ok" ? "bg-neutral-700" : s === "warning" ? "bg-neutral-700" : "bg-red-500";
+  s === "ok" ? "bg-emerald-400" : s === "warning" ? "bg-amber-400" : "bg-red-500";
 
 const riskBucket = (score: number) => {
   if (score >= 70) return { label: "Kritisk", text: "text-[#E24B4A]", bg: "bg-[#3D0A0A]" };
-  if (score >= 40) return { label: "Varning", text: "text-[#525252]", bg: "bg-[#3D2000]" };
+  if (score >= 40) return { label: "Varning", text: "text-[#EF9F27]", bg: "bg-[#3D2000]" };
   return { label: "Säker", text: "text-[#1D9E75]", bg: "bg-[#0A2D1A]" };
 };
 
@@ -51,9 +51,9 @@ export const ClientHealthCard = ({ riskScore, indicators, signals, lastScanAt }:
             <span
               className={
                 ind.status === "ok"
-                  ? "text-neutral-300"
+                  ? "text-emerald-300"
                   : ind.status === "warning"
-                  ? "text-neutral-300"
+                  ? "text-amber-300"
                   : "text-red-400"
               }
             >
@@ -74,7 +74,7 @@ export const ClientHealthCard = ({ riskScore, indicators, signals, lastScanAt }:
               <li key={i} className="flex items-start gap-2 text-[12px] text-white/80">
                 <span
                   className={`mt-1.5 h-[6px] w-[6px] rounded-full shrink-0 ${
-                    s.level === "critical" ? "bg-red-500" : "bg-neutral-700"
+                    s.level === "critical" ? "bg-red-500" : "bg-amber-400"
                   }`}
                 />
                 <span>{s.message}</span>

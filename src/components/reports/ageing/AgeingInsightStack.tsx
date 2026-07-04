@@ -12,22 +12,22 @@ interface Props {
 
 const PRIMARY_TONE = {
   neutral: {
-    bg: "bg-neutral-100/70 dark:bg-blue-950/30",
-    border: "border-black/60 dark:border-[#000000]/40",
+    bg: "bg-blue-50/70 dark:bg-blue-950/30",
+    border: "border-blue-200/60 dark:border-[#3b82f6]/40",
     iconBg: "bg-[#EFF6FF]",
-    iconColor: "text-[#000000] dark:text-[#1E3A5F]",
+    iconColor: "text-[#3b82f6] dark:text-[#1E3A5F]",
     Icon: CheckCircle2,
   },
   warning: {
-    bg: "bg-neutral-100/70 dark:bg-amber-950/30",
-    border: "border-neutral-300/60 dark:border-neutral-700/40",
+    bg: "bg-amber-50/70 dark:bg-amber-950/30",
+    border: "border-amber-200/60 dark:border-amber-800/40",
     iconBg: "bg-[#FAEEDA]",
     iconColor: "text-[#7A5417] dark:text-[#C28A2B]",
     Icon: Sparkles,
   },
   critical: {
-    bg: "bg-neutral-100/70 dark:bg-rose-950/30",
-    border: "border-neutral-300/60 dark:border-neutral-700/40",
+    bg: "bg-rose-50/70 dark:bg-rose-950/30",
+    border: "border-rose-200/60 dark:border-rose-800/40",
     iconBg: "bg-[#FCE8E8]",
     iconColor: "text-[#7A1A1A] dark:text-[#C73838]",
     Icon: AlertTriangle,
@@ -85,7 +85,7 @@ export const AgeingInsightStack = ({ bundle, companyId, type }: Props) => {
             <button
               type="button"
               onClick={() => handleSendReminder(targets, companyId, type)}
-              className="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-[#000000] hover:bg-[#000000] text-white text-sm font-medium transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-[#3b82f6] hover:bg-[#3b82f6] text-white text-sm font-medium transition-colors shadow-sm"
             >
               {primary.actionLabel ??
                 (type === "AR" ? "Skicka påminnelse" : "Markera för betalning")}

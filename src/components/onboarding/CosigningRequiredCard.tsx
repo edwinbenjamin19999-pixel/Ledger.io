@@ -38,7 +38,7 @@ export const CosigningRequiredCard = ({ feature }: { feature: string }) => {
   };
 
   return (
-    <div className="rounded-2xl border border-[#F0DDB7] bg-neutral-100/70 p-5">
+    <div className="rounded-2xl border border-[#F0DDB7] bg-amber-50/70 p-5">
       <div className="flex items-start gap-3">
         <ShieldAlert className="w-5 h-5 text-[#7A5417] mt-0.5 shrink-0" />
         <div className="flex-1">
@@ -53,7 +53,7 @@ export const CosigningRequiredCard = ({ feature }: { feature: string }) => {
           <button
             onClick={sendReminder}
             disabled={sending}
-            className="mt-3 h-9 px-3 rounded-lg bg-neutral-700 hover:bg-neutral-700 text-white text-[13px] font-semibold inline-flex items-center gap-2 disabled:opacity-60"
+            className="mt-3 h-9 px-3 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-[13px] font-semibold inline-flex items-center gap-2 disabled:opacity-60"
           >
             {sending ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Mail className="w-3.5 h-3.5" />}
             Skicka påminnelse

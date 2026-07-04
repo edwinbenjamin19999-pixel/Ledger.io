@@ -29,7 +29,7 @@ const fmt = (n: number) =>
   new Intl.NumberFormat("sv-SE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(n);
 
 export const InvoiceTemplatePreview = ({ settings, logoUrl, companyName = "Ditt företag AB" }: InvoiceTemplatePreviewProps) => {
-  const accent = settings.accent_color || "#000000";
+  const accent = settings.accent_color || "#0052FF";
   const logoSizePct = settings.logo_size_pct ?? 100;
   const logoWidthMm = 42 * (logoSizePct / 100);
 

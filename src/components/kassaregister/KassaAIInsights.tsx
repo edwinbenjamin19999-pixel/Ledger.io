@@ -96,7 +96,7 @@ export function KassaAIInsights({ sales, todaySales }: Props) {
         <Card>
           <CardHeader className="pb-2">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-[#000000]" />
+              <Sparkles className="h-4 w-4 text-[#3b82f6]" />
               <CardTitle className="text-sm">Forsaljning per timme</CardTitle>
             </div>
           </CardHeader>
@@ -113,8 +113,8 @@ export function KassaAIInsights({ sales, todaySales }: Props) {
                     type="monotone"
                     dataKey="idag"
                     name="Idag"
-                    stroke="#000000"
-                    fill="#000000"
+                    stroke="#3b82f6"
+                    fill="#3b82f6"
                     fillOpacity={0.15}
                     strokeWidth={2}
                   />
@@ -144,7 +144,7 @@ export function KassaAIInsights({ sales, todaySales }: Props) {
                 ? "border-l-emerald-500"
                 : insight.type === "warning"
                 ? "border-l-red-500"
-                : "border-l-[#000000]";
+                : "border-l-[#3b82f6]";
             return (
               <div
                 key={i}

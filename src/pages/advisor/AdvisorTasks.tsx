@@ -19,8 +19,8 @@ const STATUS_TABS: Array<{ key: TaskStatus | "all"; label: string }> = [
 ];
 
 const PRIORITY_META: Record<TaskPriority, { label: string; tone: string }> = {
-  urgent: { label: "Akut", tone: "bg-[#FCE8E8] text-[#7A1A1A] ring-neutral-300" },
-  high: { label: "Hög", tone: "bg-[#FAEEDA] text-[#7A5417] ring-neutral-300" },
+  urgent: { label: "Akut", tone: "bg-[#FCE8E8] text-[#7A1A1A] ring-rose-200" },
+  high: { label: "Hög", tone: "bg-[#FAEEDA] text-[#7A5417] ring-amber-200" },
   medium: { label: "Medel", tone: "bg-slate-100 text-slate-700 ring-slate-200" },
   low: { label: "Låg", tone: "bg-slate-50 text-slate-500 ring-slate-200" },
 };
@@ -216,9 +216,9 @@ const AdvisorTasks = () => {
       )}
 
       {/* AI hint */}
-      <div className="rounded-2xl border border-[#C8DDF5] bg-neutral-100/40 p-4 flex items-start gap-3">
-        <Sparkles className="h-4 w-4 text-[#000000] mt-0.5" />
-        <div className="text-xs text-[#000000]">
+      <div className="rounded-2xl border border-[#C8DDF5] bg-blue-50/40 p-4 flex items-start gap-3">
+        <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5" />
+        <div className="text-xs text-[#3b82f6]">
           <strong>AI-prioritering:</strong> {dueSoon} uppgifter har deadline inom 7 dagar — fokusera på dessa först för att undvika eskalering.
         </div>
       </div>

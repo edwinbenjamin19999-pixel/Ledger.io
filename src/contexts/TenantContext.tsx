@@ -14,9 +14,9 @@ const TenantContext = createContext<TenantContextValue>({ tenant: null, loading:
 export const useTenant = () => useContext(TenantContext);
 
 const isStandardHost = (host: string) =>
-  host === "bokfy.se" || host === "localhost" ||
+  host === "cogniq.se" || host === "localhost" ||
   host.endsWith(".lovable.app") || host.endsWith(".lovableproject.com") ||
-  host === "app.bokfy.se" || host === "www.bokfy.se";
+  host === "app.cogniq.se" || host === "www.cogniq.se";
 
 export const TenantProvider = ({ slug: explicitSlug, children }: { slug?: string; children: ReactNode }) => {
   const [tenant, setTenant] = useState<ResolvedTenant | null>(null);
@@ -34,7 +34,7 @@ export const TenantProvider = ({ slug: explicitSlug, children }: { slug?: string
       if (host && !isStandardHost(host)) {
         resolved = await fetchTenantByDomain(host);
       }
-      // 2. Subdomain on bokfy.se (e.g. clientname.bokfy.se)
+      // 2. Subdomain on cogniq.se (e.g. clientname.cogniq.se)
       if (!resolved) {
         const slugFromHost = resolveTenantSlugFromHost(host);
         if (slugFromHost) resolved = await fetchTenantBySlug(slugFromHost);
@@ -51,7 +51,7 @@ export const TenantProvider = ({ slug: explicitSlug, children }: { slug?: string
 
       if (!mounted) return;
       if (!resolved) {
-        // Standard host or unresolved — apply Bokfy default theme
+        // Standard host or unresolved — apply Cogniq default theme
         // (prevents leaked branding from a previous tenant via persisted state)
         applyDefaultTheme();
         setLoading(false);

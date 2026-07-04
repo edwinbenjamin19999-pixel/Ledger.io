@@ -556,7 +556,7 @@ const DirectPayment = () => { const { user, loading } = useAuth();
   }).length;
 
   // ═══════════════ pain.001 generation ═══════════════
-  const generatePain001 = (company: Company, invoicesToPay: PayableInvoice[], execDate: string): string => { const msgId = `Bokfy-${Date.now()}`;
+  const generatePain001 = (company: Company, invoicesToPay: PayableInvoice[], execDate: string): string => { const msgId = `Cogniq-${Date.now()}`;
     // Calculate net amounts per invoice (after credit matching)
     const netInvoices = invoicesToPay.map(inv => { const credit = matchedCredits.get(inv.id);
       const netAmount = credit ? inv.total_amount + credit.total_amount : inv.total_amount;
@@ -1148,11 +1148,11 @@ const DirectPayment = () => { const { user, loading } = useAuth();
             </CardContent>
           </Card>
 
-          <Card className="border-[#F0DDB7] bg-neutral-100/50 dark:bg-amber-950/10 dark:border-neutral-700">
+          <Card className="border-[#F0DDB7] bg-amber-50/50 dark:bg-amber-950/10 dark:border-amber-800">
             <CardContent className="py-3 flex items-start gap-3">
               <AlertTriangle className="h-4 w-4 text-[#7A5417] mt-0.5 flex-shrink-0" />
               <div>
-                <p className="text-sm font-medium text-[#7A5417] dark:text-neutral-300">Separat betalfil</p>
+                <p className="text-sm font-medium text-[#7A5417] dark:text-amber-300">Separat betalfil</p>
                 <p className="text-xs text-[#7A5417] dark:text-[#C28A2B]">
                   Utläggsbetalningar hanteras alltid i en separat betalfil från leverantörsbetalningar. Bokföring sker mot konto 2893 (Löneskulder/utlägg).
                 </p>
@@ -1191,7 +1191,7 @@ const DirectPayment = () => { const { user, loading } = useAuth();
                   <TableBody>
                     {proposals.map(p => (
                       <React.Fragment key={p.id}>
-                        <TableRow className={`cursor-pointer hover:bg-accent/30 ${canReview(p) ? "bg-neutral-100/50 dark:bg-amber-950/10" : ""}`} onClick={() => canReview(p) ? openReview(p) : toggleExpandProposal(p.id)}>
+                        <TableRow className={`cursor-pointer hover:bg-accent/30 ${canReview(p) ? "bg-amber-50/50 dark:bg-amber-950/10" : ""}`} onClick={() => canReview(p) ? openReview(p) : toggleExpandProposal(p.id)}>
                           <TableCell className="text-xs">{format(new Date(p.created_at), "yyyy-MM-dd HH:mm")}</TableCell>
                           <TableCell className="font-mono text-xs">{p.pain001_filename || "–"}</TableCell>
                           <TableCell className="text-center">{p.invoice_count}</TableCell>
@@ -1522,7 +1522,7 @@ const DirectPayment = () => { const { user, loading } = useAuth();
         <DialogContent className="max-w-lg">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Link2 className="h-5 w-5 text-black" />
+              <Link2 className="h-5 w-5 text-blue-500" />
               Matcha kreditfaktura
             </DialogTitle>
             <DialogDescription>
@@ -1536,13 +1536,13 @@ const DirectPayment = () => { const { user, loading } = useAuth();
             <p className="text-sm text-muted-foreground">Tillgängliga kreditfakturor från samma leverantör:</p>
             {creditMatchInvoice && getAvailableCreditsForSupplier(creditMatchInvoice.supplier_name).map(credit => { const netAfter = creditMatchInvoice.total_amount + credit.total_amount;
               return (
-                <div key={credit.id} className="flex items-center justify-between p-3 rounded-lg border hover:border-black hover:bg-neutral-100/50 dark:hover:bg-blue-950/20 transition-colors">
+                <div key={credit.id} className="flex items-center justify-between p-3 rounded-lg border hover:border-blue-300 hover:bg-blue-50/50 dark:hover:bg-blue-950/20 transition-colors">
                   <div>
                     <p className="text-sm font-medium font-mono">{credit.invoice_number}</p>
                     <p className="text-xs text-muted-foreground">{credit.invoice_date} · {credit.supplier_name}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-mono text-black font-semibold">{fmt(Math.abs(credit.total_amount))} kr</p>
+                    <p className="text-sm font-mono text-blue-600 font-semibold">{fmt(Math.abs(credit.total_amount))} kr</p>
                     <p className="text-[10px] text-muted-foreground">Netto: {fmt(netAfter)} kr</p>
                   </div>
                   <Button size="sm" variant="outline" className="ml-3 gap-1" onClick={() => matchCredit(creditMatchInvoice.id, credit.id)}>

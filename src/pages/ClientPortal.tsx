@@ -216,7 +216,7 @@ export default function ClientPortal() {
                   <YAxis stroke="#94A3B8" fontSize={11} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
                   <Tooltip formatter={(v: number) => fmt(v)} />
                   <Legend wrapperStyle={{ fontSize: 11 }} />
-                  <Bar dataKey="revenue" name="Intäkter" fill="#000000" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="revenue" name="Intäkter" fill="#3b82f6" radius={[4, 4, 0, 0]} />
                   <Bar dataKey="costs" name="Kostnader" fill="#1e293b" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
@@ -234,7 +234,7 @@ export default function ClientPortal() {
           <h2 className="text-[16px] font-medium text-slate-900 mb-4">Att göra</h2>
           {actions.length === 0 ? (
             <div className="bg-white border border-slate-200 rounded-[12px] p-6 text-center">
-              <CheckCircle2 className="h-8 w-8 text-neutral-700 mx-auto mb-2" />
+              <CheckCircle2 className="h-8 w-8 text-emerald-500 mx-auto mb-2" />
               <p className="text-[13px] text-slate-600">Allt är klart just nu.</p>
             </div>
           ) : (
@@ -264,14 +264,14 @@ export default function ClientPortal() {
                   <div
                     className={`max-w-[70%] rounded-2xl px-3.5 py-2 text-[13px] ${
                       m.sender_side === "client"
-                        ? "bg-black text-white"
+                        ? "bg-blue-600 text-white"
                         : m.sender_side === "system"
                         ? "bg-slate-100 text-slate-600 italic text-[12px]"
                         : "bg-slate-100 text-slate-800"
                     }`}
                   >
                     <p className="whitespace-pre-wrap">{m.body}</p>
-                    <p className={`text-[10px] mt-1 ${m.sender_side === "client" ? "text-white" : "text-slate-400"}`}>
+                    <p className={`text-[10px] mt-1 ${m.sender_side === "client" ? "text-blue-100" : "text-slate-400"}`}>
                       {format(new Date(m.created_at), "d MMM HH:mm", { locale: sv })}
                     </p>
                   </div>
@@ -300,7 +300,7 @@ export default function ClientPortal() {
         <div className="max-w-[960px] mx-auto px-6 py-4 text-center text-[11px] text-slate-500">
           Sammanställt av {branding?.firmName}
           {branding?.showPoweredBy && <span className="mx-2">·</span>}
-          {branding?.showPoweredBy && <span>Powered by Bokfy</span>}
+          {branding?.showPoweredBy && <span>Powered by Cogniq</span>}
         </div>
       </footer>
     </div>
@@ -310,7 +310,7 @@ export default function ClientPortal() {
 const KpiCard = ({ label, value, positive }: { label: string; value: string; positive?: boolean }) => (
   <div className="bg-white border border-slate-200 rounded-[12px] p-4 shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
     <p className="text-[11px] uppercase tracking-wider text-slate-500 mb-1">{label}</p>
-    <p className={`text-[20px] font-medium tabular-nums ${positive ? "text-neutral-700" : "text-slate-900"}`}>
+    <p className={`text-[20px] font-medium tabular-nums ${positive ? "text-emerald-600" : "text-slate-900"}`}>
       {value}
     </p>
   </div>
@@ -323,7 +323,7 @@ const ActionCard = ({ item, onComplete }: { item: ActionItem; onComplete: () => 
     : MessageSquare;
   return (
     <div className="bg-white border border-slate-200 rounded-[12px] p-4 flex items-start gap-3">
-      <div className="h-9 w-9 rounded-md bg-neutral-100 flex items-center justify-center text-black shrink-0">
+      <div className="h-9 w-9 rounded-md bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
         <Icon className="h-4 w-4" />
       </div>
       <div className="flex-1 min-w-0">

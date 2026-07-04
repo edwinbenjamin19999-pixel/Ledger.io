@@ -8,12 +8,12 @@ import { format, startOfWeek, endOfWeek, addWeeks, eachDayOfInterval, isToday, i
 import { sv } from "date-fns/locale";
 
 const PROJECT_COLORS = [
-  "bg-[#000000]/20 border-[#000000]/40 text-[#000000]",
-  "bg-[#EFF6FF] border-black text-black dark:bg-blue-900/30 dark:border-black dark:text-[#1E3A5F]",
-  "bg-[#E1F5EE] border-[#BFE6D6] text-[#085041] dark:bg-neutral-700/30 dark:border-neutral-700 dark:text-[#1D9E75]",
+  "bg-[#3b82f6]/20 border-[#3b82f6]/40 text-[#3b82f6]",
+  "bg-[#EFF6FF] border-blue-300 text-blue-700 dark:bg-blue-900/30 dark:border-blue-700 dark:text-[#1E3A5F]",
+  "bg-[#E1F5EE] border-[#BFE6D6] text-[#085041] dark:bg-emerald-900/30 dark:border-emerald-700 dark:text-[#1D9E75]",
   "bg-[#F1F5F9] border-purple-300 text-purple-700 dark:bg-purple-900/30 dark:border-purple-700 dark:text-[#1E3A5F]",
-  "bg-[#FAEEDA] border-[#F0DDB7] text-[#7A5417] dark:bg-neutral-700/30 dark:border-neutral-700 dark:text-[#C28A2B]",
-  "bg-[#FCE8E8] border-neutral-300 text-[#7A1A1A] dark:bg-neutral-700/30 dark:border-neutral-700 dark:text-[#C73838]",
+  "bg-[#FAEEDA] border-[#F0DDB7] text-[#7A5417] dark:bg-amber-900/30 dark:border-amber-700 dark:text-[#C28A2B]",
+  "bg-[#FCE8E8] border-rose-300 text-[#7A1A1A] dark:bg-rose-900/30 dark:border-rose-700 dark:text-[#C73838]",
 ];
 
 export function WeekView() { const [weekOffset, setWeekOffset] = useState(0);
@@ -85,14 +85,14 @@ export function WeekView() { const [weekOffset, setWeekOffset] = useState(0);
                 key={key}
                 className={cn(
                   "rounded-lg border p-2 min-h-[120px] flex flex-col",
-                  today ? "border-[#000000] bg-[#000000]/5" : "border-border"
+                  today ? "border-[#3b82f6] bg-[#3b82f6]/5" : "border-border"
                 )}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <span className={cn("text-xs font-medium", today ? "text-[#000000]" : "text-muted-foreground")}>
+                  <span className={cn("text-xs font-medium", today ? "text-[#3b82f6]" : "text-muted-foreground")}>
                     {format(day, "EEE", { locale: sv })}
                   </span>
-                  <span className={cn("text-[10px]", today ? "text-[#000000] font-bold" : "text-muted-foreground")}>
+                  <span className={cn("text-[10px]", today ? "text-[#3b82f6] font-bold" : "text-muted-foreground")}>
                     {format(day, "d")}
                   </span>
                 </div>
@@ -134,7 +134,7 @@ export function WeekView() { const [weekOffset, setWeekOffset] = useState(0);
           </span>
           <div className="flex gap-3 text-xs text-muted-foreground">
             <span className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-full bg-[#000000]" /> Fakturerbar
+              <span className="w-2 h-2 rounded-full bg-[#3b82f6]" /> Fakturerbar
             </span>
             <span className="flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-muted-foreground/30" /> Ej fakturerbar

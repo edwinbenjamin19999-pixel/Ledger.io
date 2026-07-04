@@ -17,16 +17,16 @@ export function ModeToggle({ mode, onModeChange, monthIndex, onMonthChange, late
     <div className="flex items-center gap-3">
       <Tabs value={mode} onValueChange={(v) => onModeChange(v as FollowUpMode)}>
         <TabsList className="bg-slate-100">
-          <TabsTrigger value="live" className="data-[state=active]:bg-[#000000] data-[state=active]:text-white">
+          <TabsTrigger value="live" className="data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white">
             Live
           </TabsTrigger>
           <TabsTrigger
             value="live_forecast"
-            className="data-[state=active]:bg-[#000000] data-[state=active]:text-white"
+            className="data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white"
           >
             Live Forecast
           </TabsTrigger>
-          <TabsTrigger value="month" className="data-[state=active]:bg-[#000000] data-[state=active]:text-white">
+          <TabsTrigger value="month" className="data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white">
             Månad
           </TabsTrigger>
         </TabsList>

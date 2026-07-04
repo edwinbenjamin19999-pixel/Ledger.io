@@ -13,7 +13,7 @@ const productLinks = [
 ];
 
 const companyLinks = [
-  { label: "Om Bokfy", to: "/about" },
+  { label: "Om Cogniq", to: "/about" },
   { label: "Kontakt", to: "/contact" },
   { label: "Karriär", to: "/careers" },
   { label: "Redovisningsbyrå-portal", to: "/accounting-firms" },
@@ -55,7 +55,7 @@ const FooterLinkColumn = ({ title, links }: { title: string; links: { label: str
     <ul className="space-y-2.5">
       {links.map((link) => (
         <li key={link.to + link.label}>
-          <Link to={link.to} className="text-sm text-white/70 hover:text-[#000000] transition-colors">
+          <Link to={link.to} className="text-sm text-white/70 hover:text-[#3b82f6] transition-colors">
             {link.label}
           </Link>
         </li>
@@ -73,23 +73,23 @@ export const Footer = () => {
           {/* Brand / Contact */}
           <div className="space-y-5 sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-0">
-              <span className="text-2xl font-[800] text-white tracking-tight">Bok</span>
-              <span className="text-2xl font-[800] text-[#000000] tracking-tight">fy</span>
+              <span className="text-2xl font-[800] text-white tracking-tight">Cog</span>
+              <span className="text-2xl font-[800] text-[#3b82f6] tracking-tight">niq</span>
             </Link>
             <p className="text-sm text-white/60 max-w-[260px] leading-relaxed">
               AI-driven bokföringsplattform för SME:s och växande företag i Sverige
             </p>
             <div className="space-y-2.5 text-sm text-white/60">
-              <a href="mailto:info@bokfy.se" className="flex items-center gap-2 hover:text-[#000000] transition-colors">
+              <a href="mailto:info@cogniq.se" className="flex items-center gap-2 hover:text-[#3b82f6] transition-colors">
                 <Mail className="w-4 h-4 shrink-0" />
-                info@bokfy.se
+                info@cogniq.se
               </a>
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <span>Stockholm, Sverige</span>
               </div>
             </div>
-            <Link to="/contact" className="inline-flex items-center gap-1 text-sm text-[#000000] hover:text-[#FFFFFF] transition-colors font-medium">
+            <Link to="/contact" className="inline-flex items-center gap-1 text-sm text-[#3b82f6] hover:text-[#4D7CFF] transition-colors font-medium">
               Boka demo →
             </Link>
           </div>
@@ -107,7 +107,7 @@ export const Footer = () => {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {trustItems.map((item) => (
               <div key={item.text} className="flex items-center gap-2 text-xs text-white/60">
-                <item.icon className="w-3.5 h-3.5 text-[#000000]" />
+                <item.icon className="w-3.5 h-3.5 text-[#3b82f6]" />
                 <span>{item.text}</span>
               </div>
             ))}
@@ -139,8 +139,8 @@ export const Footer = () => {
               Låt AI hantera det repetitiva arbetet så att du kan fokusera på ditt företag.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild size="lg" className="bg-white text-[#000000] hover:bg-white/90 font-semibold">
-                <Link to="/auth">Testa Bokfy</Link>
+              <Button asChild size="lg" className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold">
+                <Link to="/auth">Testa Cogniq</Link>
               </Button>
               <Button asChild variant="glass" size="lg" className="hover:scale-[1.02]">
                 <Link to="/contact">Boka demo</Link>
@@ -155,7 +155,7 @@ export const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 sm:px-6 py-6 flex justify-center items-center">
           <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} Bokfy. Alla rättigheter förbehållna.
+            © {new Date().getFullYear()} Cogniq. Alla rättigheter förbehållna.
           </p>
         </div>
       </div>

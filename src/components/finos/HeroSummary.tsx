@@ -28,8 +28,8 @@ interface Props {
 }
 
 const deltaToneClass = {
-  positive: "text-[#085041] dark:text-neutral-300",
-  negative: "text-[#7A1A1A] dark:text-neutral-300",
+  positive: "text-[#085041] dark:text-emerald-300",
+  negative: "text-[#7A1A1A] dark:text-rose-300",
   neutral: "text-muted-foreground",
 } as const;
 

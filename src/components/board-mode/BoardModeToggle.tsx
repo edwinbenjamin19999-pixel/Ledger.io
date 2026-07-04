@@ -10,7 +10,7 @@ export const BoardModeToggle = ({ className }: { className?: string }) => {
       onClick={toggle}
       className={cn(
         "gap-2 rounded-lg px-5 py-2 text-sm font-medium shadow-none",
-        "bg-[#000000] hover:bg-[#26bfac] text-white border-0",
+        "bg-[#3b82f6] hover:bg-[#26bfac] text-white border-0",
         className
       )}
     >

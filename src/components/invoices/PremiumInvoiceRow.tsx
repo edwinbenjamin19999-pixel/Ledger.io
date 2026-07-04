@@ -152,7 +152,7 @@ export const PremiumInvoiceRow = ({
               <PopoverTrigger asChild>
                 <button
                   onClick={onPreview}
-                  className="font-mono text-[10px] font-medium text-[#475569] hover:text-[#000000] transition-colors"
+                  className="font-mono text-[10px] font-medium text-[#475569] hover:text-[#0040CC] transition-colors"
                 >
                   {invoice.invoice_number}
                 </button>
@@ -321,7 +321,7 @@ const TimelineDot = ({
   const toneClass =
     tone === "emerald" ? "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]" :
     tone === "rose" ? "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]" :
-    tone === "cyan" ? "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5]" :
+    tone === "cyan" ? "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]" :
     done ? "bg-slate-100 text-slate-600 border-slate-200" : "bg-white text-slate-400 border-slate-200 border-dashed";
   return (
     <div className="flex items-center gap-3">

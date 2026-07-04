@@ -27,7 +27,7 @@ export function ViewModeToggle({ value, onChange }: Props) {
             className={cn(
               "px-2.5 py-1 rounded-md text-[11px] font-medium transition-all inline-flex items-center gap-1.5",
               active
-                ? "bg-[#000000] text-white shadow-[0_2px_6px_-2px_rgba(0,0,0,0.5)]"
+                ? "bg-[#3b82f6] text-white shadow-[0_2px_6px_-2px_rgba(0,82,255,0.5)]"
                 : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
             )}
           >

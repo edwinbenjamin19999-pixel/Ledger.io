@@ -40,15 +40,15 @@ const AGENT_TABS: { key: AgentKey | "all"; label: string }[] = [
 ];
 
 const severityStyle: Record<ReviewSeverity, { dot: string; chip: string; label: string }> = {
-  critical: { dot: "bg-neutral-700", chip: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]", label: "Kritisk" },
-  important: { dot: "bg-neutral-700", chip: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]", label: "Viktig" },
+  critical: { dot: "bg-rose-500", chip: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]", label: "Kritisk" },
+  important: { dot: "bg-amber-500", chip: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]", label: "Viktig" },
   info: { dot: "bg-slate-400", chip: "bg-slate-100 text-slate-700 border-slate-200", label: "Info" },
 };
 
 function confidenceTone(c: number) {
-  if (c >= 90) return "text-[#085041] bg-neutral-100 border-neutral-300";
-  if (c >= 75) return "text-[#7A5417] bg-neutral-100 border-neutral-300";
-  return "text-[#7A1A1A] bg-neutral-100 border-neutral-300";
+  if (c >= 90) return "text-[#085041] bg-emerald-50 border-emerald-200";
+  if (c >= 75) return "text-[#7A5417] bg-amber-50 border-amber-200";
+  return "text-[#7A1A1A] bg-rose-50 border-rose-200";
 }
 
 function relative(d: Date) {
@@ -176,12 +176,12 @@ export default function ReviewQueuePage() {
       <header className="bg-white border-b border-slate-200/70">
         <div className="px-6 py-5 max-w-[1400px] mx-auto">
           <div className="font-mono text-[10px] tracking-[0.12em] text-slate-400 uppercase">
-            Bokfy · Exception workspace
+            Cogniq · Exception workspace
           </div>
           <div className="flex items-start justify-between gap-4 mt-0.5">
             <div className="min-w-0">
               <h1 className="text-xl font-semibold text-slate-900 tracking-tight flex items-center gap-2">
-                <ListChecks className="w-5 h-5 text-[#000000]" />
+                <ListChecks className="w-5 h-5 text-[#0052FF]" />
                 Att granska
               </h1>
               <p className="text-sm text-slate-500 mt-1 max-w-2xl">
@@ -229,7 +229,7 @@ export default function ReviewQueuePage() {
                 onClick={() => { setView(v.k); setTab("all"); }}
                 className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition inline-flex items-center gap-1.5 ${
                   active
-                    ? "bg-[#000000] text-white border-[#000000]"
+                    ? "bg-[#0052FF] text-white border-[#0052FF]"
                     : "bg-white text-slate-600 border-slate-200 hover:border-slate-300"
                 }`}
               >
@@ -277,7 +277,7 @@ export default function ReviewQueuePage() {
 
           {filtered.length === 0 ? (
             <div className="px-6 py-16 text-center">
-              <Check className="w-10 h-10 text-neutral-700 mx-auto mb-3" />
+              <Check className="w-10 h-10 text-emerald-500 mx-auto mb-3" />
               <h3 className="text-base font-semibold text-slate-900">
                 {view === "auto" ? "Inga auto-bokförda poster ännu" : "Inget kvar att granska"}
               </h3>
@@ -308,7 +308,7 @@ export default function ReviewQueuePage() {
                         </span>
                         <span className="text-[11px] text-slate-400 tabular-nums">{relative(item.createdAt)}</span>
                         {auto && (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-[#085041] bg-neutral-100 border border-neutral-300 px-1.5 py-0.5 rounded-full">
+                          <span className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-[#085041] bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded-full">
                             <Zap className="w-2.5 h-2.5" />
                             Auto ≥ {auto.threshold}%
                           </span>
@@ -327,7 +327,7 @@ export default function ReviewQueuePage() {
                     </div>
                     <Link
                       to={`/agents/${item.agentKey}`}
-                      className="text-xs font-medium text-slate-700 hover:text-[#000000] truncate"
+                      className="text-xs font-medium text-slate-700 hover:text-[#0052FF] truncate"
                     >
                       {item.agentName}
                     </Link>
@@ -346,8 +346,8 @@ export default function ReviewQueuePage() {
                         <span
                           className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
                             decision === "approved"
-                              ? "bg-neutral-100 text-[#085041] border border-neutral-300"
-                              : "bg-neutral-100 text-[#7A1A1A] border border-neutral-300"
+                              ? "bg-emerald-50 text-[#085041] border border-emerald-200"
+                              : "bg-rose-50 text-[#7A1A1A] border border-rose-200"
                           }`}
                         >
                           {decision === "approved" ? "Godkänd" : "Avvisad"}
@@ -357,7 +357,7 @@ export default function ReviewQueuePage() {
                           <Button
                             size="sm"
                             variant="outline"
-                            className="h-8 px-3 border-slate-200 text-slate-700 hover:bg-neutral-100 hover:text-[#7A1A1A] hover:border-neutral-300"
+                            className="h-8 px-3 border-slate-200 text-slate-700 hover:bg-rose-50 hover:text-[#7A1A1A] hover:border-rose-200"
                             onClick={() => decide(item, "rejected")}
                           >
                             <X className="w-3.5 h-3.5 mr-1" />
@@ -365,7 +365,7 @@ export default function ReviewQueuePage() {
                           </Button>
                           <Button
                             size="sm"
-                            className="h-8 px-3 bg-[#000000] hover:bg-[#1D4FD8] text-white"
+                            className="h-8 px-3 bg-[#0052FF] hover:bg-[#1D4FD8] text-white"
                             onClick={() => decide(item, "approved")}
                           >
                             <Check className="w-3.5 h-3.5 mr-1" />
@@ -409,8 +409,8 @@ function ConfidencePill({ item }: { item: ReviewItem }) {
               <span
                 className={`mt-[2px] inline-flex items-center justify-center w-4 h-4 rounded-full text-[10px] font-bold ${
                   f.direction === "+"
-                    ? "bg-neutral-100 text-[#085041] border border-neutral-300"
-                    : "bg-neutral-100 text-[#7A1A1A] border border-neutral-300"
+                    ? "bg-emerald-50 text-[#085041] border border-emerald-200"
+                    : "bg-rose-50 text-[#7A1A1A] border border-rose-200"
                 }`}
               >
                 {f.direction}
@@ -488,9 +488,9 @@ function SummaryTile({
 }) {
   const tones = {
     neutral: "text-slate-700 bg-slate-50 border-slate-200",
-    emerald: "text-[#085041] bg-neutral-100/60 border-neutral-300/60",
-    amber: "text-[#7A5417] bg-neutral-100/60 border-neutral-300/60",
-    rose: "text-[#7A1A1A] bg-neutral-100/60 border-neutral-300/60",
+    emerald: "text-[#085041] bg-emerald-50/60 border-emerald-200/60",
+    amber: "text-[#7A5417] bg-amber-50/60 border-amber-200/60",
+    rose: "text-[#7A1A1A] bg-rose-50/60 border-rose-200/60",
   } as const;
   return (
     <div className={`rounded-xl border px-4 py-3 ${tones[tone]}`}>

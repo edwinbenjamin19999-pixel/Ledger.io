@@ -67,7 +67,7 @@ export const FilterToolbar = ({
           value={search}
           onChange={e => onSearchChange(e.target.value)}
           className="w-full pl-9 pr-4 py-2 rounded-lg border border-slate-200 dark:border-slate-600
-                     text-sm focus:ring-2 focus:ring-[#000000] focus:outline-none
+                     text-sm focus:ring-2 focus:ring-[#3b82f6] focus:outline-none
                      bg-slate-50 dark:bg-slate-800"
         />
       </div>
@@ -104,7 +104,7 @@ export const FilterToolbar = ({
             onClick={() => onTypeFilterChange(t)}
             className={`text-xs px-3 py-1.5 rounded-full transition-colors ${
               typeFilter === t
-                ? 'bg-[#000000] text-white'
+                ? 'bg-[#3b82f6] text-white'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
             }`}
           >
@@ -117,13 +117,13 @@ export const FilterToolbar = ({
         onClick={onToggleAnomalies}
         className={`text-xs px-3 py-1.5 rounded-full flex items-center gap-1 transition-colors ${
           showAnomalies
-            ? 'bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/40 dark:text-[#C28A2B]'
+            ? 'bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/40 dark:text-[#C28A2B]'
             : 'bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-400'
         }`}
       >
         ⚠ Avvikelser
         {anomalyCount > 0 && (
-          <span className="bg-neutral-700 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]">
+          <span className="bg-amber-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]">
             {anomalyCount}
           </span>
         )}

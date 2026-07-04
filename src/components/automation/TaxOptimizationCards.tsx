@@ -20,7 +20,7 @@ interface Opt { title: string;
   route?: string;
 }
 
-const riskColor: Record<string, string> = { Låg: 'bg-[#E1F5EE] text-[#085041] border-neutral-700/30',
+const riskColor: Record<string, string> = { Låg: 'bg-[#E1F5EE] text-[#085041] border-green-500/30',
   Medel: 'bg-orange-500/15 text-orange-700 border-orange-500/30',
 };
 

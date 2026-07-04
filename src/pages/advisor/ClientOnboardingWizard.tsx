@@ -146,7 +146,7 @@ export default function ClientOnboardingWizard() {
           return (
             <li key={s.key} className="flex-1 flex items-center gap-2 min-w-0">
               <div className={`h-9 w-9 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
-                done ? "bg-neutral-100 text-neutral-700" : active ? "bg-[hsl(var(--brand-primary))] text-white" : "bg-slate-100 text-slate-400"
+                done ? "bg-emerald-100 text-emerald-700" : active ? "bg-[hsl(var(--brand-primary))] text-white" : "bg-slate-100 text-slate-400"
               }`}>
                 {done ? <CheckCircle2 className="h-4 w-4" /> : <Icon className="h-4 w-4" />}
               </div>
@@ -182,17 +182,17 @@ export default function ClientOnboardingWizard() {
 
         {step === 1 && (
           <>
-            <h2 className="text-lg font-bold text-[#0F172A]">Bjud in klient till Bokfy</h2>
+            <h2 className="text-lg font-bold text-[#0F172A]">Bjud in klient till Cogniq</h2>
             <div className="rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] p-4 flex items-center justify-between">
               <div>
-                <div className="text-sm font-semibold text-[#0F172A]">Klienten ska ha tillgång till Bokfy</div>
+                <div className="text-sm font-semibold text-[#0F172A]">Klienten ska ha tillgång till Cogniq</div>
                 <div className="text-xs text-[#64748B]">Klienten får en egen arbetsyta med byråns varumärke.</div>
               </div>
               <Switch checked={data.invite_to_northledger} onCheckedChange={(v) => set("invite_to_northledger", v)} />
             </div>
             {data.invite_to_northledger && (
               <div className="rounded-2xl border border-[#E2E8F0] p-4 text-sm text-[#475569]">
-                En byrå-brandad inbjudan skickas till <span className="font-semibold text-[#0F172A]">{data.contact_email || "—"}</span> som förklarar vad Bokfy är.
+                En byrå-brandad inbjudan skickas till <span className="font-semibold text-[#0F172A]">{data.contact_email || "—"}</span> som förklarar vad Cogniq är.
               </div>
             )}
           </>
@@ -240,7 +240,7 @@ export default function ClientOnboardingWizard() {
 
         {step === 4 && (
           <div className="text-center py-8 space-y-4">
-            <div className="h-16 w-16 rounded-full bg-neutral-100 text-neutral-700 flex items-center justify-center mx-auto">
+            <div className="h-16 w-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
               <PartyPopper className="h-8 w-8" />
             </div>
             <h2 className="text-2xl font-bold text-[#0F172A]">Klart!</h2>

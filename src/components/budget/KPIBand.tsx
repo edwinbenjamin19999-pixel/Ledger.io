@@ -8,7 +8,7 @@ export function KPIBand({ grossMargin, ebitMargin, netMargin }: KPIBandProps) {
   const items = [
     { label: "Bruttomarginal", value: grossMargin, color: "text-[#C28A2B]" },
     { label: "EBIT-marginal", value: ebitMargin, color: "text-[#1E3A5F]" },
-    { label: "Nettomarginal", value: netMargin, color: "text-neutral-700" },
+    { label: "Nettomarginal", value: netMargin, color: "text-indigo-400" },
   ];
 
   return (

@@ -123,8 +123,8 @@ export function AIAccuracyWidget({ companyId, className }: Props) {
   return (
     <div className={`rounded-2xl border border-slate-200 bg-white p-5 ${className ?? ""}`}>
       <div className="flex items-center gap-2 mb-3">
-        <div className="w-7 h-7 rounded-lg bg-neutral-100 flex items-center justify-center">
-          <Sparkles className="w-4 h-4 text-[#000000]" />
+        <div className="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center">
+          <Sparkles className="w-4 h-4 text-[#3b82f6]" />
         </div>
         <h3 className="text-[13px] font-semibold text-slate-900">AI-precision</h3>
       </div>
@@ -150,7 +150,7 @@ export function AIAccuracyWidget({ companyId, className }: Props) {
           </div>
           <ResponsiveContainer width="100%" height={44}>
             <LineChart data={stats.trend}>
-              <Line type="monotone" dataKey="accuracy" stroke="#000000" strokeWidth={2} dot={false} />
+              <Line type="monotone" dataKey="accuracy" stroke="#3b82f6" strokeWidth={2} dot={false} />
             </LineChart>
           </ResponsiveContainer>
         </div>

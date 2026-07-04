@@ -29,8 +29,8 @@ const TAB_PATHS: Record<string, string> = {
 
 const getTypeIcon = (type: string) => {
   const t = type.toLowerCase();
-  if (t.includes("f-skatt") || t.includes("fskatt")) return { icon: Zap, bg: "bg-[#F1F5F9]", color: "text-neutral-700" };
-  if (t.includes("moms") || t === "vat") return { icon: Calculator, bg: "bg-[#EFF6FF]", color: "text-[#000000]" };
+  if (t.includes("f-skatt") || t.includes("fskatt")) return { icon: Zap, bg: "bg-[#F1F5F9]", color: "text-violet-600" };
+  if (t.includes("moms") || t === "vat") return { icon: Calculator, bg: "bg-[#EFF6FF]", color: "text-[#3b82f6]" };
   if (t.includes("agi")) return { icon: Users, bg: "bg-[#E1F5EE]", color: "text-[#085041]" };
   if (t.includes("ink2") || t.includes("deklaration")) return { icon: FileText, bg: "bg-[#FAEEDA]", color: "text-[#7A5417]" };
   if (t.includes("k10")) return { icon: PieChart, bg: "bg-[#FCE8E8]", color: "text-[#7A1A1A]" };
@@ -140,7 +140,7 @@ export const DeadlinesWidget = ({ companyId }: DeadlinesWidgetProps) => {
                   </span>
                 )}
                 {d.daysLeft > 0 && d.daysLeft <= 7 && (
-                  <span className="bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/30 dark:text-[#C28A2B] font-semibold text-xs px-3 py-1 rounded-full">
+                  <span className="bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/30 dark:text-[#C28A2B] font-semibold text-xs px-3 py-1 rounded-full">
                     {d.daysLeft}d kvar
                   </span>
                 )}

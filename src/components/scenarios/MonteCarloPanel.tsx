@@ -59,8 +59,8 @@ export function MonteCarloPanel({ result, running }: Props) {
               <ComposedChart data={data} margin={{ top: 10, right: 12, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="mcBand" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#000000" stopOpacity={0.25} />
-                    <stop offset="100%" stopColor="#000000" stopOpacity={0.05} />
+                    <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.25} />
+                    <stop offset="100%" stopColor="#3b82f6" stopOpacity={0.05} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
@@ -69,7 +69,7 @@ export function MonteCarloPanel({ result, running }: Props) {
                 <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid #e2e8f0", fontSize: 12 }} formatter={(v: number) => formatSEKCompact(v)} />
                 <Area type="monotone" dataKey="p10" stackId="band" stroke="transparent" fill="transparent" />
                 <Area type="monotone" dataKey="band" stackId="band" stroke="transparent" fill="url(#mcBand)" name="P10–P90" />
-                <Line type="monotone" dataKey="p50" stroke="#000000" strokeWidth={2} dot={false} name="P50" />
+                <Line type="monotone" dataKey="p50" stroke="#3b82f6" strokeWidth={2} dot={false} name="P50" />
               </ComposedChart>
             </ResponsiveContainer>
           </div>

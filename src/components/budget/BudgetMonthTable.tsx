@@ -71,7 +71,7 @@ function InlineEditableCell({ value, onSave, hasOverride }: { value: number; onS
         autoFocus
         type="number"
         defaultValue={value || ""}
-        className="w-full text-right bg-[#EFF6FF] dark:bg-indigo-950/30 border-2 border-neutral-700 dark:border-neutral-700 rounded px-2 py-1 text-sm text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-neutral-300 tabular-nums font-mono [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+        className="w-full text-right bg-[#EFF6FF] dark:bg-indigo-950/30 border-2 border-indigo-400 dark:border-indigo-500 rounded px-2 py-1 text-sm text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-indigo-300 tabular-nums font-mono [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
         onBlur={e => { onSave(parseFloat(e.target.value) || 0); setEditing(false); }}
         onKeyDown={e => {
           if (e.key === "Enter") { onSave(parseFloat(e.currentTarget.value) || 0); setEditing(false); }
@@ -85,13 +85,13 @@ function InlineEditableCell({ value, onSave, hasOverride }: { value: number; onS
   return (
     <div
       onClick={() => setEditing(true)}
-      className="text-right px-2 py-1 cursor-text rounded hover:bg-[#EFF6FF] dark:hover:bg-indigo-950/20 hover:ring-1 hover:ring-neutral-300 dark:hover:ring-neutral-700 transition-all group relative"
+      className="text-right px-2 py-1 cursor-text rounded hover:bg-[#EFF6FF] dark:hover:bg-indigo-950/20 hover:ring-1 hover:ring-indigo-200 dark:hover:ring-indigo-700 transition-all group relative"
     >
       {value === 0 ? <span className="text-slate-300 dark:text-slate-600">—</span> : formatValue(value)}
       {hasOverride && (
-        <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-neutral-700" title="Manuellt värde" />
+        <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-indigo-400" title="Manuellt värde" />
       )}
-      <span className="absolute right-1 top-1/2 -translate-y-1/2 text-[9px] text-neutral-300 opacity-0 group-hover:opacity-100 transition-opacity">✏</span>
+      <span className="absolute right-1 top-1/2 -translate-y-1/2 text-[9px] text-indigo-300 opacity-0 group-hover:opacity-100 transition-opacity">✏</span>
     </div>
   );
 }
@@ -111,22 +111,22 @@ function getRowClasses(variant: RowVariant, row: BudgetRow): string {
     case "milestone": {
       const k = row.key.toLowerCase();
       if (k.includes("brutto") || k === "gross_profit")
-        return "bg-[#EFF6FF] dark:bg-indigo-950/20 text-neutral-700 dark:text-neutral-300 font-bold text-sm border-l-4 border-l-indigo-500 dark:border-l-indigo-400";
+        return "bg-[#EFF6FF] dark:bg-indigo-950/20 text-indigo-900 dark:text-indigo-200 font-bold text-sm border-l-4 border-l-indigo-500 dark:border-l-indigo-400";
       if (k.includes("ebit") && !k.includes("margin") && !k.includes("ebt"))
-        return "bg-[#F1F5F9] dark:bg-violet-950/20 text-neutral-700 dark:text-neutral-300 font-bold text-sm border-l-4 border-l-violet-500 dark:border-l-violet-400";
+        return "bg-[#F1F5F9] dark:bg-violet-950/20 text-violet-900 dark:text-violet-200 font-bold text-sm border-l-4 border-l-violet-500 dark:border-l-violet-400";
       return "bg-slate-50 dark:bg-slate-800/50 text-slate-800 dark:text-slate-200 font-bold text-sm border-l-4 border-l-slate-400 dark:border-l-slate-500";
     }
     case "result": {
       const total = getYearTotal(row.values);
       return total >= 0
-        ? "bg-[#E1F5EE] dark:bg-emerald-950/20 border-t-4 border-neutral-700 dark:border-neutral-700 text-[#085041] dark:text-neutral-300 font-black text-base"
-        : "bg-[#FCE8E8] dark:bg-rose-950/20 border-t-4 border-neutral-700 dark:border-neutral-700 text-[#7A1A1A] dark:text-neutral-300 font-black text-base";
+        ? "bg-[#E1F5EE] dark:bg-emerald-950/20 border-t-4 border-emerald-400 dark:border-emerald-500 text-[#085041] dark:text-emerald-200 font-black text-base"
+        : "bg-[#FCE8E8] dark:bg-rose-950/20 border-t-4 border-rose-400 dark:border-rose-500 text-[#7A1A1A] dark:text-rose-200 font-black text-base";
     }
     case "total": {
       const colorMap: Record<string, string> = {
-        rose: "bg-[#FCE8E8] dark:bg-rose-950/20 text-[#7A1A1A] dark:text-neutral-300 font-bold text-sm border-t-2 border-neutral-300 dark:border-neutral-700",
-        emerald: "bg-[#E1F5EE] dark:bg-emerald-950/20 text-[#085041] dark:text-neutral-300 font-bold text-sm border-t-2 border-[#BFE6D6] dark:border-neutral-700",
-        indigo: "bg-[#EFF6FF] dark:bg-indigo-950/20 text-neutral-700 dark:text-neutral-300 font-bold text-sm border-t-2 border-neutral-300 dark:border-neutral-700",
+        rose: "bg-[#FCE8E8] dark:bg-rose-950/20 text-[#7A1A1A] dark:text-rose-200 font-bold text-sm border-t-2 border-rose-300 dark:border-rose-600",
+        emerald: "bg-[#E1F5EE] dark:bg-emerald-950/20 text-[#085041] dark:text-emerald-200 font-bold text-sm border-t-2 border-[#BFE6D6] dark:border-emerald-600",
+        indigo: "bg-[#EFF6FF] dark:bg-indigo-950/20 text-indigo-900 dark:text-indigo-200 font-bold text-sm border-t-2 border-indigo-300 dark:border-indigo-600",
       };
       return colorMap[row.color || ""] || "bg-slate-50 dark:bg-slate-800/50 text-slate-800 dark:text-slate-200 font-bold text-sm border-t-2 border-slate-300 dark:border-slate-700";
     }
@@ -180,12 +180,12 @@ function getCellColor(value: number, variant: RowVariant, row?: BudgetRow): stri
   if (variant === "milestone") {
     if (value < 0) return "text-[#7A1A1A] dark:text-[#C73838] font-bold";
     const k = row?.key?.toLowerCase() || "";
-    if (k.includes("brutto") || k === "gross_profit") return "text-neutral-700 dark:text-neutral-300 font-bold";
-    if (k.includes("ebit") && !k.includes("margin") && !k.includes("ebt")) return "text-neutral-700 dark:text-neutral-300 font-bold";
+    if (k.includes("brutto") || k === "gross_profit") return "text-indigo-700 dark:text-indigo-300 font-bold";
+    if (k.includes("ebit") && !k.includes("margin") && !k.includes("ebt")) return "text-violet-700 dark:text-violet-300 font-bold";
     return "text-slate-800 dark:text-slate-200 font-bold";
   }
 
-  if (variant === "result") return value < 0 ? "text-[#7A1A1A] dark:text-neutral-300 font-black" : "text-[#085041] dark:text-neutral-300 font-black";
+  if (variant === "result") return value < 0 ? "text-[#7A1A1A] dark:text-rose-300 font-black" : "text-[#085041] dark:text-emerald-300 font-black";
   if (variant === "total") return value < 0 ? "text-[#7A1A1A] dark:text-[#C73838] font-semibold" : "text-slate-800 dark:text-slate-200 font-semibold";
   if (variant === "subtotal") return value < 0 ? "text-[#7A1A1A] dark:text-[#C73838] font-semibold" : "text-slate-800 dark:text-slate-200 font-semibold";
 
@@ -213,13 +213,13 @@ export function BudgetMonthTable({ rows, selectedMonth, onMonthSelect, title, ed
                   onClick={() => onMonthSelect?.(m.idx)}
                   className={cn(
                     "text-right px-2 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer transition-colors hover:bg-slate-700/50",
-                    selectedMonth === m.idx ? "bg-neutral-700/50 text-neutral-300" : "text-slate-300"
+                    selectedMonth === m.idx ? "bg-indigo-800/50 text-indigo-200" : "text-slate-300"
                   )}
                 >
                   {m.label}
                 </th>
               ))}
-              <th className="text-right px-3 py-3 text-xs font-semibold text-neutral-300 uppercase tracking-wider bg-neutral-700 dark:bg-indigo-950 border-l border-neutral-700">
+              <th className="text-right px-3 py-3 text-xs font-semibold text-indigo-200 uppercase tracking-wider bg-indigo-900 dark:bg-indigo-950 border-l border-indigo-700">
                 Helår
               </th>
             </tr>
@@ -262,7 +262,7 @@ export function BudgetMonthTable({ rows, selectedMonth, onMonthSelect, title, ed
                             key={m.key}
                             className={cn(
                               "text-sm tabular-nums font-mono p-0",
-                              selectedMonth === m.idx && "bg-neutral-100/60 dark:bg-indigo-950/30",
+                              selectedMonth === m.idx && "bg-indigo-50/60 dark:bg-indigo-950/30",
                               getCellColor(val, v, row)
                             )}
                           >
@@ -280,7 +280,7 @@ export function BudgetMonthTable({ rows, selectedMonth, onMonthSelect, title, ed
                           key={m.key}
                           className={cn(
                             "text-right px-2 py-2 tabular-nums font-mono text-sm",
-                            selectedMonth === m.idx && "bg-neutral-100/60 dark:bg-indigo-950/30",
+                            selectedMonth === m.idx && "bg-indigo-50/60 dark:bg-indigo-950/30",
                             getCellColor(val, v, row)
                           )}
                         >
@@ -290,7 +290,7 @@ export function BudgetMonthTable({ rows, selectedMonth, onMonthSelect, title, ed
                     })}
                     <td
                       className={cn(
-                        "text-right px-3 py-2 font-semibold tabular-nums font-mono text-sm border-l border-[#C8DDF5] dark:border-neutral-700",
+                        "text-right px-3 py-2 font-semibold tabular-nums font-mono text-sm border-l border-[#C8DDF5] dark:border-indigo-800",
                         ["milestone", "result", "total", "subtotal"].includes(v)
                           ? "bg-[#EFF6FF] dark:bg-indigo-950/40"
                           : "bg-[#EFF6FF] dark:bg-indigo-950/20",
@@ -298,7 +298,7 @@ export function BudgetMonthTable({ rows, selectedMonth, onMonthSelect, title, ed
                           ? "text-slate-300 dark:text-slate-600"
                           : yearTotal < 0
                             ? "text-[#7A1A1A] dark:text-[#C73838]"
-                            : "text-neutral-700 dark:text-neutral-300"
+                            : "text-indigo-700 dark:text-indigo-300"
                       )}
                     >
                       {formatValue(yearTotal)}

@@ -35,7 +35,7 @@ export const OverviewTab = ({ onNewEvent, onViewTimeline }: OverviewTabProps) =>
     { label: "Tillskjutet kapital", value: totalEquity, icon: Landmark, color: "text-primary" },
     { label: "Kapitalinsatser", value: totalEquity, icon: ArrowDownToLine, color: "text-[#085041]" },
     { label: "Utdelningar", value: totalDividends, icon: Banknote, color: "text-[#7A5417]" },
-    { label: "Lån ägare", value: totalLoans, icon: ArrowUpFromLine, color: "text-black" },
+    { label: "Lån ägare", value: totalLoans, icon: ArrowUpFromLine, color: "text-blue-600" },
   ];
 
   const pipeline = [

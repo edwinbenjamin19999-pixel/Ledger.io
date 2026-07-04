@@ -29,7 +29,7 @@ export function ActionsQueue({ companyId }: Props) {
     <section className="rounded-2xl border border-slate-200/60 dark:border-slate-700/60 bg-white dark:bg-slate-900/60 shadow-sm h-full flex flex-col">
       <div className="p-5 md:p-6 border-b border-slate-200/60 dark:border-slate-700/60 flex items-center gap-2.5">
         <div className="h-8 w-8 rounded-lg bg-[#EFF6FF] flex items-center justify-center">
-          <ListChecks className="h-4 w-4 text-[#000000]" />
+          <ListChecks className="h-4 w-4 text-[#3b82f6]" />
         </div>
         <div>
           <h3 className="font-semibold tracking-tight">Beslutskö</h3>

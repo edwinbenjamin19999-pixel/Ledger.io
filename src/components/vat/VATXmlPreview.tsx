@@ -15,7 +15,7 @@ export function VATXmlPreview({ xml }: VATXmlPreviewProps) {
         <span>{xml.split("\n").length} rader</span>
       </div>
       <ScrollArea className="h-[360px]">
-        <pre className="text-[12px] leading-relaxed font-mono text-neutral-300 p-4 whitespace-pre">
+        <pre className="text-[12px] leading-relaxed font-mono text-emerald-300 p-4 whitespace-pre">
 {xml}
         </pre>
       </ScrollArea>

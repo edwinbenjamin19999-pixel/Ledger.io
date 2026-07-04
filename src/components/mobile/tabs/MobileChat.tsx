@@ -53,10 +53,10 @@ function InvoicePreviewCard({ data }: { data: InvoiceData }) {
 
   if (sent) {
     return (
-      <div className="bg-emerald-950 border border-neutral-700 rounded-2xl p-5 text-center">
-        <CheckCircle className="h-10 w-10 text-neutral-700 mx-auto mb-2" />
-        <p className="text-neutral-300 font-semibold">Faktura {data.invoiceNumber} skickad!</p>
-        <p className="text-neutral-700/60 text-xs mt-1">{data.customer}</p>
+      <div className="bg-emerald-950 border border-emerald-800 rounded-2xl p-5 text-center">
+        <CheckCircle className="h-10 w-10 text-emerald-400 mx-auto mb-2" />
+        <p className="text-emerald-200 font-semibold">Faktura {data.invoiceNumber} skickad!</p>
+        <p className="text-emerald-400/60 text-xs mt-1">{data.customer}</p>
       </div>
     );
   }
@@ -67,7 +67,7 @@ function InvoicePreviewCard({ data }: { data: InvoiceData }) {
       <div className="p-4 border-b border-slate-800">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="bg-neutral-700 rounded-xl p-2">
+            <div className="bg-indigo-600 rounded-xl p-2">
               <FileText className="h-5 w-5 text-white" />
             </div>
             <div>
@@ -113,7 +113,7 @@ function InvoicePreviewCard({ data }: { data: InvoiceData }) {
           </div>
           <div className="flex justify-between text-sm font-bold pt-1 border-t border-slate-700">
             <span className="text-white">Totalt att betala</span>
-            <span className="text-neutral-700 text-base">{formatSEK(total)}</span>
+            <span className="text-emerald-400 text-base">{formatSEK(total)}</span>
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@ function InvoicePreviewCard({ data }: { data: InvoiceData }) {
         <button
           onClick={handleSend}
           disabled={sending}
-          className="flex-1 bg-neutral-700 text-white rounded-xl py-3 text-sm font-semibold min-h-[52px] active:scale-95 transition-transform flex items-center justify-center gap-1"
+          className="flex-1 bg-indigo-600 text-white rounded-xl py-3 text-sm font-semibold min-h-[52px] active:scale-95 transition-transform flex items-center justify-center gap-1"
         >
           {sending ? <Loader2 className="h-4 w-4 animate-spin" /> : <>Skicka faktura →</>}
         </button>
@@ -178,14 +178,14 @@ function ExpensePreviewCard({ data, companyId, userId }: { data: ExpenseData; co
 
   if (approved) {
     return (
-      <div className="bg-emerald-950 border border-neutral-700 rounded-2xl p-5 text-center">
-        <CheckCircle className="h-10 w-10 text-neutral-700 mx-auto mb-2" />
-        <p className="text-neutral-300 font-semibold">Utlägg sparat</p>
-        <p className="text-neutral-700/60 text-xs mt-1">{data.category} — {formatSEK(numericAmount)}</p>
+      <div className="bg-emerald-950 border border-emerald-800 rounded-2xl p-5 text-center">
+        <CheckCircle className="h-10 w-10 text-emerald-400 mx-auto mb-2" />
+        <p className="text-emerald-200 font-semibold">Utlägg sparat</p>
+        <p className="text-emerald-400/60 text-xs mt-1">{data.category} — {formatSEK(numericAmount)}</p>
         {savedId && (
           <a
             href={`/expenses?id=${savedId}`}
-            className="inline-block mt-3 text-neutral-300 text-xs font-medium underline"
+            className="inline-block mt-3 text-emerald-300 text-xs font-medium underline"
           >
             Öppna i Utlägg →
           </a>
@@ -198,7 +198,7 @@ function ExpensePreviewCard({ data, companyId, userId }: { data: ExpenseData; co
     <div className="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden">
       <div className="p-4 border-b border-slate-800">
         <div className="flex items-center gap-2">
-          <div className="bg-neutral-700 rounded-xl p-2">
+          <div className="bg-emerald-600 rounded-xl p-2">
             <Receipt className="h-5 w-5 text-white" />
           </div>
           <div>
@@ -220,18 +220,18 @@ function ExpensePreviewCard({ data, companyId, userId }: { data: ExpenseData; co
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             placeholder="Ange belopp i kr"
-            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-white text-sm focus:outline-none focus:border-neutral-700"
+            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-white text-sm focus:outline-none focus:border-emerald-500"
           />
         </div>
         <button
           onClick={handleApprove}
           disabled={!canSave || saving}
-          className="w-full bg-neutral-700 text-white rounded-xl py-3 text-sm font-semibold min-h-[52px] active:scale-95 transition-transform flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-emerald-600 text-white rounded-xl py-3 text-sm font-semibold min-h-[52px] active:scale-95 transition-transform flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : "Godkänn & registrera"}
         </button>
         {!companyId && (
-          <p className="text-neutral-700 text-xs text-center">Inget bolag valt — välj bolag i toppmenyn först.</p>
+          <p className="text-amber-400 text-xs text-center">Inget bolag valt — välj bolag i toppmenyn först.</p>
         )}
       </div>
     </div>
@@ -245,7 +245,7 @@ function WaveformBars() {
       {[...Array(20)].map((_, i) => (
         <div
           key={i}
-          className="w-[3px] rounded-full bg-neutral-700"
+          className="w-[3px] rounded-full bg-indigo-500"
           style={{
             animation: `waveform 1s ease-in-out ${i * 0.05}s infinite alternate`,
             height: `${8 + Math.random() * 20}px`,
@@ -583,13 +583,13 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
               <ArrowLeft className="h-5 w-5" />
             </button>
           )}
-          <div className="bg-neutral-700 rounded-full w-9 h-9 flex items-center justify-center flex-shrink-0">
+          <div className="bg-indigo-600 rounded-full w-9 h-9 flex items-center justify-center flex-shrink-0">
             <Sparkles className="h-4 w-4 text-white" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-white font-semibold text-[15px] truncate">Bokfy Assistent</p>
+            <p className="text-white font-semibold text-[15px] truncate">Cogniq Assistent</p>
             <div className="flex items-center gap-1.5">
-              <div className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
+              <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
               <span className="text-slate-400 text-xs truncate">{companyName ? `Inloggad som ${companyName}` : "Redo att hjälpa"}</span>
             </div>
           </div>
@@ -619,7 +619,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
               <div className={cn("flex w-full", m.role === "user" ? "justify-end" : "justify-start")}>
                 {m.role === "assistant" && (
                   <div className="flex-shrink-0 mr-2 mt-1">
-                    <div className="bg-neutral-700 rounded-full p-1.5">
+                    <div className="bg-indigo-600 rounded-full p-1.5">
                       <Sparkles className="h-3.5 w-3.5 text-white" />
                     </div>
                   </div>
@@ -635,19 +635,19 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
                   {m.role === "assistant" ? (
                     showThinking ? (
                       <div className="bg-slate-800 rounded-2xl px-4 py-3 text-[15px] leading-[1.5] text-slate-300 flex items-center gap-2">
-                        <Loader2 className="h-3.5 w-3.5 animate-spin text-neutral-700" />
+                        <Loader2 className="h-3.5 w-3.5 animate-spin text-indigo-400" />
                         <span className="text-slate-400">Tänker</span>
                         <span className="flex gap-1">
-                          <span className="w-1 h-1 rounded-full bg-neutral-700 animate-bounce" style={{ animationDelay: "0ms" }} />
-                          <span className="w-1 h-1 rounded-full bg-neutral-700 animate-bounce" style={{ animationDelay: "150ms" }} />
-                          <span className="w-1 h-1 rounded-full bg-neutral-700 animate-bounce" style={{ animationDelay: "300ms" }} />
+                          <span className="w-1 h-1 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: "0ms" }} />
+                          <span className="w-1 h-1 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: "150ms" }} />
+                          <span className="w-1 h-1 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: "300ms" }} />
                         </span>
                       </div>
                     ) : (
                       renderAssistantMsg(m)
                     )
                   ) : (
-                    <div className="bg-[#000000] text-white rounded-2xl px-4 py-3 text-[15px] leading-[1.5] whitespace-pre-wrap break-words">{m.content}</div>
+                    <div className="bg-[#3b82f6] text-white rounded-2xl px-4 py-3 text-[15px] leading-[1.5] whitespace-pre-wrap break-words">{m.content}</div>
                   )}
                 </div>
               </div>
@@ -664,7 +664,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
         {showNewActivity && (
           <button
             onClick={() => scrollBottom()}
-            className="sticky bottom-2 mx-auto block bg-[#000000] text-white text-[13px] font-medium px-4 h-9 rounded-full shadow-lg active:scale-95 transition-transform flex items-center gap-1.5"
+            className="sticky bottom-2 mx-auto block bg-[#3b82f6] text-white text-[13px] font-medium px-4 h-9 rounded-full shadow-lg active:scale-95 transition-transform flex items-center gap-1.5"
           >
             <ArrowDown className="h-3.5 w-3.5" />
             Ny aktivitet
@@ -711,7 +711,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
           aria-label="Röstinmatning"
           className={cn(
             "min-h-[44px] min-w-[44px] rounded-xl flex items-center justify-center active:scale-[0.97] transition-transform flex-shrink-0",
-            isListening ? "bg-neutral-700 text-white" : "bg-slate-800 text-slate-300"
+            isListening ? "bg-rose-600 text-white" : "bg-slate-800 text-slate-300"
           )}
         >
           <Mic className="h-5 w-5" />
@@ -740,8 +740,8 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
           autoCorrect="off"
           autoCapitalize="sentences"
           spellCheck={false}
-          className="flex-1 bg-slate-800 placeholder:text-slate-500 outline-none min-w-0 min-h-[44px] max-h-[140px] rounded-2xl px-4 py-3 border border-slate-700 focus:border-neutral-700 transition-colors resize-none leading-[1.4]"
-          style={{ fontSize: "16px", color: "#ffffff", WebkitTextFillColor: "#ffffff", caretColor: "#525252" }}
+          className="flex-1 bg-slate-800 placeholder:text-slate-500 outline-none min-w-0 min-h-[44px] max-h-[140px] rounded-2xl px-4 py-3 border border-slate-700 focus:border-indigo-500 transition-colors resize-none leading-[1.4]"
+          style={{ fontSize: "16px", color: "#ffffff", WebkitTextFillColor: "#ffffff", caretColor: "#818cf8" }}
         />
 
         {/* Send button — always visible (per spec), 44×44 px */}
@@ -752,7 +752,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
           className={cn(
             "min-h-[44px] min-w-[44px] rounded-xl flex items-center justify-center transition-all flex-shrink-0 active:scale-[0.97]",
             input.trim() && !streaming
-              ? "bg-[#000000] text-white"
+              ? "bg-[#3b82f6] text-white"
               : "bg-slate-800 text-slate-600 cursor-not-allowed"
           )}
         >

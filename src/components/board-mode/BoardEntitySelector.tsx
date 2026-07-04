@@ -89,7 +89,7 @@ export const BoardEntitySelector = ({
               >
                 <span className={cn(
                   "w-4 h-4 rounded border flex items-center justify-center shrink-0",
-                  selected ? "bg-[#000000] border-[#000000]" : "border-white/30"
+                  selected ? "bg-[#3b82f6] border-[#3b82f6]" : "border-white/30"
                 )}>
                   {selected && <Check className="h-3 w-3 text-white" />}
                 </span>
@@ -99,7 +99,7 @@ export const BoardEntitySelector = ({
           })}
         </div>
         {selectedIds.length > 1 && (
-          <p className="text-[11px] text-[#000000]/80 px-2 pt-2 border-t border-white/5 mt-1">
+          <p className="text-[11px] text-[#3b82f6]/80 px-2 pt-2 border-t border-white/5 mt-1">
             Koncernvy aktiv — KPI:er aggregeras
           </p>
         )}

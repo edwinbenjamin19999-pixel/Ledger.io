@@ -8,7 +8,7 @@ interface Props {
 /**
  * Tenant-aware logo block for the sidebar header.
  * Renders the tenant's logo + workspace name when a tenant is resolved,
- * otherwise falls back to the default Bokfy wordmark.
+ * otherwise falls back to the default Cogniq wordmark.
  */
 export function BrandedLogo({ onClick }: Props) {
   const { tenant } = useTenant();
@@ -42,9 +42,9 @@ export function BrandedLogo({ onClick }: Props) {
   }
 
   return (
-    <button onClick={handle} className="font-display text-xl tracking-tight text-white">
-      <span className="font-bold">Bok</span>
-      <span className="font-light">fy</span>
+    <button onClick={handle} className="text-xl font-bold tracking-tight">
+      <span className="text-white font-bold">Cog</span>
+      <span className="text-[#3b82f6] font-bold">niq</span>
     </button>
   );
 }

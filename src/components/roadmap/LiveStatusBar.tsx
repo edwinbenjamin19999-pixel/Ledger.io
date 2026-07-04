@@ -21,8 +21,8 @@ const StatusCard = ({ icon: Icon, label, value, descriptor, showDot }: MetricPro
     <div className="mt-3 flex items-center gap-2">
       {showDot && (
         <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neutral-700 opacity-60" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-neutral-700" />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
         </span>
       )}
       <div className="text-2xl font-semibold tracking-tight text-slate-900 tabular-nums">

@@ -28,53 +28,47 @@ const STATS = [
 export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-white">
-      {/* LEFT — inverterat svart editoriellt block, dolt på mobil */}
-      <div className="hidden lg:flex flex-1 bg-foreground text-background relative overflow-hidden flex-col justify-between p-12 xl:p-16">
-        {/* Vertikalt linjemönster (spec: inverted section texture) */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(90deg, transparent, transparent 1px, #fff 1px, #fff 2px)",
-            backgroundSize: "4px 100%",
-          }}
-        />
+      {/* LEFT — flat blått poster-block, dolt på mobil */}
+      <div className="hidden lg:flex flex-1 bg-[#0F172A] relative overflow-hidden flex-col justify-between p-12 xl:p-16">
+        {/* Geometrisk dekoration — platta former i låg opacitet */}
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "32px 32px", opacity: 0.04 }} />
+          <div className="absolute -top-32 -right-24 h-[440px] w-[440px] rounded-full bg-[#0052FF] opacity-30 blur-[140px]" />
+          <div className="absolute bottom-[-10%] left-[-10%] h-[300px] w-[300px] rounded-full bg-[#4D7CFF] opacity-20 blur-[120px]" />
+        </div>
 
         <div className="relative z-10">
-          <span className="font-display text-2xl tracking-tight text-background">
-            <span className="font-bold">Bok</span>
-            <span className="font-light">fy</span>
-          </span>
+          <span className="text-2xl font-extrabold tracking-tight text-white">Cogniq</span>
         </div>
 
         <div className="relative z-10 space-y-8">
           <h2
-            className={`font-display ${compact ? "text-[44px]" : "text-[56px]"} font-medium text-background leading-[1.05] tracking-tight`}
+            className={`${compact ? "text-[36px]" : "text-[44px]"} font-extrabold text-white leading-[1.15] tracking-tight`}
           >
             Bokföring.
             <br />
-            {/* Inversion för emphasis: vit ruta, svart text */}
-            <span className="mt-2 inline-block bg-background px-3 text-foreground">
+            <span className="bg-gradient-to-r from-[#4D7CFF] to-[#9DB8FF] bg-clip-text text-transparent">
               Automatiserad.
             </span>
           </h2>
 
-          <div className="space-y-4 border-t border-background/20 pt-6">
+          <div className="space-y-4">
             {FEATURES.map((f) => (
               <div key={f} className="flex items-center gap-3">
-                <span className="font-mono text-xs text-background/50">—</span>
-                <span className="font-serif text-[15px] text-background/90">{f}</span>
+                <div className="flex h-[26px] w-[26px] flex-shrink-0 items-center justify-center rounded-md bg-white">
+                  <Check className="h-3.5 w-3.5 text-[#0052FF]" strokeWidth={3} aria-hidden />
+                </div>
+                <span className="text-sm font-medium text-white/90">{f}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="relative z-10 flex gap-10 border-t border-background/20 pt-6">
+        <div className="relative z-10 flex gap-10">
           {STATS.map((s) => (
             <div key={s.label}>
-              <div className="font-display text-[24px] font-bold text-background">{s.value}</div>
-              <div className="mt-0.5 font-mono text-[10px] uppercase tracking-widest text-background/50">
+              <div className="text-[22px] font-extrabold text-white">{s.value}</div>
+              <div className="mt-0.5 text-[11.5px] uppercase tracking-wider text-white/60">
                 {s.label}
               </div>
             </div>
@@ -83,14 +77,12 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
       </div>
 
       {/* RIGHT — minimal form slot */}
-      <div className="w-full lg:w-1/2 xl:w-[560px] flex-shrink-0 bg-background flex items-center justify-center px-6 sm:px-8 py-12 min-h-screen border-l-4 border-foreground">
+      <div className="w-full lg:w-1/2 xl:w-[560px] flex-shrink-0 bg-white flex items-center justify-center px-6 sm:px-8 py-12 min-h-screen">
         <div className="w-full max-w-sm mx-auto">
           {/* Mobile-only logo */}
           <div className="flex lg:hidden items-center gap-0 mb-8">
-            <span className="font-display text-xl tracking-tight text-foreground">
-              <span className="font-bold">Bok</span>
-              <span className="font-light">fy</span>
-            </span>
+            <span className="text-xl font-extrabold tracking-tight text-[#0F172A]">Cog</span>
+            <span className="text-xl font-extrabold tracking-tight text-[#0052FF]">niq</span>
           </div>
           {children}
         </div>

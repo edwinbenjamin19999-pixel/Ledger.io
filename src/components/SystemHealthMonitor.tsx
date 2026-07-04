@@ -118,7 +118,7 @@ export function SystemHealthMonitor() { const [health, setHealth] = useState<Hea
 
         {health.fixes && health.fixes.length > 0 && (
           <div className="space-y-1">
-            <p className="text-xs font-medium text-black">Auto-fixes applied:</p>
+            <p className="text-xs font-medium text-blue-500">Auto-fixes applied:</p>
             {health.fixes.map((fix, idx) => (
               <div key={idx} className="text-xs text-muted-foreground">
                 • {fix.action}: {fix.message}

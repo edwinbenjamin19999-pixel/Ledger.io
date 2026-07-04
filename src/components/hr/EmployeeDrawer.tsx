@@ -604,7 +604,7 @@ export const EmployeeDrawer = ({ employee, open, onClose, companyId, onUpdate }:
                 <XAxis dataKey="month" tick={AXIS_TICK} axisLine={false} tickLine={false} />
                 <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} tickFormatter={v => `${Math.round(v / 1000)}k`} domain={["dataMin - 2000", "dataMax + 2000"]} />
                 <RechartsTooltip formatter={(v: number) => `${fmt(v)} kr`} />
-                <Line type="monotone" dataKey="salary" stroke="#000000" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="salary" stroke="#3b82f6" strokeWidth={2} dot={false} />
               </LineChart>
             </ResponsiveContainer>
 

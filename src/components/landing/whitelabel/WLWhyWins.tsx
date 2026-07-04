@@ -16,17 +16,17 @@ const WL = [
 
 export const WLWhyWins = () => {
   return (
-    <section className="bg-[#000000] py-24 md:py-32">
+    <section className="bg-[#0F172A] py-24 md:py-32">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-[#000000] text-xs font-medium tracking-[0.25em] uppercase mb-3">
+          <p className="text-[#3b82f6] text-xs font-medium tracking-[0.25em] uppercase mb-3">
             Varför vinner du
           </p>
           <h2
             className="text-4xl md:text-5xl font-[700] text-white leading-[1.05]"
             style={{ letterSpacing: "-0.8px" }}
           >
-            En modell byggd för <span className="text-[#000000]">tillväxt.</span>
+            En modell byggd för <span className="text-[#3b82f6]">tillväxt.</span>
           </h2>
         </div>
 
@@ -47,15 +47,15 @@ export const WLWhyWins = () => {
             </ul>
           </div>
 
-          <div className="rounded-xl border border-[#000000]/20 bg-[#000000]/[0.04] p-8">
-            <div className="text-[11.5px] uppercase tracking-wider text-[#000000] font-medium mb-5">
-              Med Bokfy White Label
+          <div className="rounded-xl border border-[#3b82f6]/20 bg-[#3b82f6]/[0.04] p-8">
+            <div className="text-[11.5px] uppercase tracking-wider text-[#3b82f6] font-medium mb-5">
+              Med Cogniq White Label
             </div>
             <ul className="space-y-4">
               {WL.map((t) => (
                 <li key={t} className="flex items-start gap-3">
-                  <div className="mt-0.5 w-5 h-5 rounded-md bg-[#000000]/[0.12] flex items-center justify-center flex-shrink-0">
-                    <Check className="w-3 h-3 text-[#000000]" />
+                  <div className="mt-0.5 w-5 h-5 rounded-md bg-[#3b82f6]/[0.12] flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-[#3b82f6]" />
                   </div>
                   <span className="text-[14px] text-white/80 leading-relaxed">{t}</span>
                 </li>

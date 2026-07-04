@@ -47,10 +47,10 @@ export const AdvisorFloatingActionBar = ({
 };
 
 const TONES = {
-  emerald: "text-neutral-300 hover:bg-neutral-700/15",
-  cyan: "text-[#000000] hover:bg-[#000000]/15",
-  amber: "text-neutral-300 hover:bg-neutral-700/15",
-  violet: "text-neutral-300 hover:bg-neutral-700/15",
+  emerald: "text-emerald-300 hover:bg-emerald-500/15",
+  cyan: "text-[#3b82f6] hover:bg-[#3b82f6]/15",
+  amber: "text-amber-300 hover:bg-amber-500/15",
+  violet: "text-violet-300 hover:bg-violet-500/15",
 } as const;
 
 const ActionButton = ({

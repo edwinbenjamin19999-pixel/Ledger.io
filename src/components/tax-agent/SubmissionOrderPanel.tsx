@@ -28,7 +28,7 @@ const getDeadlineBadge = (deadline?: string) => { if (!deadline) return null;
   const urgency = getDeadlineUrgency(form?.deadlineDate);
   const colorMap = { red: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]",
     orange: "bg-orange-500/10 text-orange-600 border-orange-500/30",
-    green: "bg-[#E1F5EE] text-[#085041] border-neutral-700/30",
+    green: "bg-[#E1F5EE] text-[#085041] border-green-500/30",
     none: "bg-muted text-muted-foreground",
   };
   return (

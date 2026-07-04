@@ -82,9 +82,9 @@ function KPICard({ gradient, icon: Icon, value, label, subtitle, badge, extra }:
 
 // ── Project Card ───────────────────────────
 const PROJECT_GRADIENTS = [
-  "from-neutral-700 to-purple-600", "from-blue-500 to-neutral-700",
-  "from-neutral-700 to-blue-600", "from-neutral-700 to-pink-600",
-  "from-neutral-700 to-orange-600", "from-[#000000] to-blue-600",
+  "from-violet-500 to-purple-600", "from-blue-500 to-indigo-600",
+  "from-emerald-500 to-blue-600", "from-rose-500 to-pink-600",
+  "from-amber-500 to-orange-600", "from-[#3b82f6] to-blue-600",
 ];
 
 function ProjectCard({ project, index, timeEntries }: { project: Project; index: number; timeEntries: TimeEntry[] }) {
@@ -99,8 +99,8 @@ function ProjectCard({ project, index, timeEntries }: { project: Project; index:
   const statusColors: Record<string, string> = {
     active: "bg-[#E1F5EE] text-[#085041] dark:text-[#1D9E75]",
     paused: "bg-[#FAEEDA] text-[#7A5417] dark:text-[#C28A2B]",
-    completed: "bg-[#EFF6FF] text-black dark:text-[#1E3A5F]",
-    offer: "bg-[#F1F5F9] text-neutral-700 dark:text-[#1E3A5F]",
+    completed: "bg-[#EFF6FF] text-blue-700 dark:text-[#1E3A5F]",
+    offer: "bg-[#F1F5F9] text-violet-700 dark:text-[#1E3A5F]",
   };
   const statusLabel: Record<string, string> = {
     active: "Aktiv", paused: "Pausat", completed: "Avslutat", offer: "Offertfas",
@@ -127,7 +127,7 @@ function ProjectCard({ project, index, timeEntries }: { project: Project; index:
               <span>{progressPct.toFixed(0)}%</span>
             </div>
             <div className="h-2 bg-muted rounded-full overflow-hidden">
-              <div className={cn("h-full rounded-full transition-all duration-500", progressPct > 100 ? "bg-neutral-700" : progressPct > 80 ? "bg-neutral-700" : "bg-neutral-700")}
+              <div className={cn("h-full rounded-full transition-all duration-500", progressPct > 100 ? "bg-rose-500" : progressPct > 80 ? "bg-amber-500" : "bg-emerald-500")}
                 style={{ width: `${Math.min(progressPct, 100)}%` }} />
             </div>
           </div>
@@ -136,7 +136,7 @@ function ProjectCard({ project, index, timeEntries }: { project: Project; index:
         {/* Team initials */}
         <div className="flex items-center gap-1">
           {["A", "B"].map((init, i) => (
-            <div key={i} className={cn("h-6 w-6 rounded-full flex items-center justify-center text-[10px] font-bold text-white", i === 0 ? "bg-neutral-700" : "bg-blue-500")}>
+            <div key={i} className={cn("h-6 w-6 rounded-full flex items-center justify-center text-[10px] font-bold text-white", i === 0 ? "bg-violet-500" : "bg-blue-500")}>
               {init}
             </div>
           ))}
@@ -157,8 +157,8 @@ function ProjectCard({ project, index, timeEntries }: { project: Project; index:
 function TimeEntryRow({ entry }: { entry: TimeEntry }) {
   return (
     <div className="flex items-center gap-3 py-2 px-3 hover:bg-muted/30 rounded-lg transition-colors">
-      <span className={cn("h-2.5 w-2.5 rounded-full flex-shrink-0", entry.is_billable ? "bg-neutral-700" : "bg-muted-foreground/30")} />
-      <span className="text-xs text-muted-foreground font-mono w-14 flex-shrink-0 text-neutral-700 dark:text-[#1E3A5F]">{formatHours(entry.duration_minutes)}h</span>
+      <span className={cn("h-2.5 w-2.5 rounded-full flex-shrink-0", entry.is_billable ? "bg-emerald-500" : "bg-muted-foreground/30")} />
+      <span className="text-xs text-muted-foreground font-mono w-14 flex-shrink-0 text-violet-500 dark:text-[#1E3A5F]">{formatHours(entry.duration_minutes)}h</span>
       <span className="text-sm truncate flex-1">{entry.description || entry.client_name || "Ingen beskrivning"}</span>
       {entry.client_name && <span className="text-xs text-muted-foreground truncate max-w-[120px]">{entry.client_name}</span>}
     </div>
@@ -275,27 +275,27 @@ const TimeTrackingPage = () => {
         {/* ── HERO KPI ROW ───────────────── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <KPICard
-            gradient="from-neutral-700 to-purple-700"
+            gradient="from-violet-600 to-purple-700"
             icon={Briefcase}
             value={<AnimatedNumber value={activeProjects.length} />}
             label="Aktiva projekt"
             subtitle="Pågående uppdrag"
           />
           <KPICard
-            gradient="from-blue-500 to-neutral-700"
+            gradient="from-blue-500 to-indigo-600"
             icon={Clock}
             value={<AnimatedNumber value={Math.round(weekHours * 10) / 10} suffix="h" />}
             label="Timmar denna vecka"
             subtitle={`Av ${displayName || "dig"} och team`}
             badge={weekTrend !== 0 ? (
               <span className={cn("text-[10px] font-semibold px-1.5 py-0.5 rounded-full mt-1 inline-block",
-                weekTrend > 0 ? "bg-[#E1F5EE] text-neutral-300" : "bg-[#FCE8E8] text-neutral-300")}>
+                weekTrend > 0 ? "bg-[#E1F5EE] text-emerald-300" : "bg-[#FCE8E8] text-rose-300")}>
                 {weekTrend > 0 ? "+" : ""}{weekTrend}% vs förra veckan
               </span>
             ) : undefined}
           />
           <KPICard
-            gradient="from-neutral-700 to-blue-600"
+            gradient="from-emerald-500 to-blue-600"
             icon={DollarSign}
             value={<AnimatedNumber value={billablePct} suffix="%" />}
             label="Fakturerbar tid"
@@ -303,7 +303,7 @@ const TimeTrackingPage = () => {
             extra={<MiniDonut percent={billablePct} />}
           />
           <KPICard
-            gradient="from-neutral-700 to-orange-600"
+            gradient="from-amber-500 to-orange-600"
             icon={AlertTriangle}
             value={<AnimatedNumber value={Math.round(overBudgetHours)} suffix="h" />}
             label="Obudgeterade timmar"

@@ -50,12 +50,12 @@ export const RecurringRevenueOverview = ({ contracts, stats }: Props) => {
   const deltaUp = mrrDelta >= 0;
 
   return (
-    <Card className="rounded-2xl border-slate-200/60 border-l-[3px] border-l-[#000000] shadow-[0_1px_2px_rgba(15,23,42,0.04)] overflow-hidden">
+    <Card className="rounded-2xl border-slate-200/60 border-l-[3px] border-l-[#3b82f6] shadow-[0_1px_2px_rgba(15,23,42,0.04)] overflow-hidden">
       <div className="p-6">
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-2">
-            <Zap className="h-4 w-4 text-[#000000] dark:text-[#1E3A5F]" />
-            <span className="text-[11px] font-semibold tracking-wider text-[#000000] dark:text-[#000000] uppercase">Recurring revenue</span>
+            <Zap className="h-4 w-4 text-[#3b82f6] dark:text-[#1E3A5F]" />
+            <span className="text-[11px] font-semibold tracking-wider text-[#3b82f6] dark:text-[#3b82f6] uppercase">Recurring revenue</span>
           </div>
           <span className="text-[11px] text-muted-foreground">Senaste 30 dagar</span>
         </div>
@@ -106,8 +106,8 @@ export const RecurringRevenueOverview = ({ contracts, stats }: Props) => {
   function prior30Display(pct: number, up: boolean) {
     const Icon = up ? TrendingUp : TrendingDown;
     const cls = up
-      ? 'bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-emerald-950/30 dark:text-neutral-300 dark:border-neutral-700/40'
-      : 'bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-rose-950/30 dark:text-neutral-300 dark:border-neutral-700/40';
+      ? 'bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-emerald-950/30 dark:text-emerald-300 dark:border-emerald-900/40'
+      : 'bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-rose-950/30 dark:text-rose-300 dark:border-rose-900/40';
     return (
       <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border text-[10px] font-medium ${cls}`}>
         <Icon className="h-3 w-3" />

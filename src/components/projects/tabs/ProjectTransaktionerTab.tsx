@@ -41,7 +41,7 @@ export function ProjectTransaktionerTab({ project }: { project: Project }) { con
         <CardTitle className="text-base">Transaktioner</CardTitle>
         <Dialog open={showAdd} onOpenChange={setShowAdd}>
           <DialogTrigger asChild>
-            <Button size="sm" className="bg-[#000000] hover:bg-[#000000]/90 text-white">
+            <Button size="sm" className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
               <Plus className="h-3.5 w-3.5 mr-1" />
               Lägg till
             </Button>
@@ -71,7 +71,7 @@ export function ProjectTransaktionerTab({ project }: { project: Project }) { con
                 <Label>Datum</Label>
                 <Input type="date" value={txDate} onChange={(e) => setTxDate(e.target.value)} />
               </div>
-              <Button onClick={handleAdd} disabled={addTransaction.isPending || !txAmount} className="w-full bg-[#000000] hover:bg-[#000000]/90 text-white">
+              <Button onClick={handleAdd} disabled={addTransaction.isPending || !txAmount} className="w-full bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
                 Lägg till
               </Button>
             </div>
@@ -101,7 +101,7 @@ export function ProjectTransaktionerTab({ project }: { project: Project }) { con
                     <td className="py-2 pr-4 text-xs">{tx.transaction_date}</td>
                     <td className="py-2 pr-4">{tx.description || "—"}</td>
                     <td className="py-2 pr-4">
-                      <span className={cn("text-xs font-medium px-1.5 py-0.5 rounded", tx.transaction_type === "revenue" ? "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]" : "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]")}>
+                      <span className={cn("text-xs font-medium px-1.5 py-0.5 rounded", tx.transaction_type === "revenue" ? "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]" : "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]")}>
                         {tx.transaction_type === "revenue" ? "Intäkt" : "Kostnad"}
                       </span>
                     </td>

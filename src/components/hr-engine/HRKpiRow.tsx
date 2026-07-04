@@ -13,7 +13,7 @@ function KpiCard({
   value,
   sub,
   variant = "default",
-  topAccent = "#000000",
+  topAccent = "#0040CC",
   progress,
   progressColor,
 }: {
@@ -161,7 +161,7 @@ export function HRKpiRow({ companyId }: Props) {
   });
 
   const workedPct = data && data.planned > 0 ? (data.worked / data.planned) * 100 : 0;
-  const progressColor = workedPct > 90 ? "#5DCAA5" : workedPct >= 70 ? "#525252" : "#E07171";
+  const progressColor = workedPct > 90 ? "#5DCAA5" : workedPct >= 70 ? "#EF9F27" : "#E07171";
   const overtimeDelta = data ? data.overtime - data.prevOvertime : 0;
   const pendingCount = data?.pending ?? 0;
 
@@ -178,14 +178,14 @@ export function HRKpiRow({ companyId }: Props) {
         sub={data ? `av ${fmt(data.planned)}h planerat` : "—"}
         progress={workedPct}
         progressColor={progressColor}
-        topAccent={workedPct > 90 ? "#5DCAA5" : "#000000"}
+        topAccent={workedPct > 90 ? "#5DCAA5" : "#0040CC"}
       />
       <KpiCard
         label="Väntar godkännande"
         value={pendingCount}
         sub={pendingCount > 0 ? "tidsrapporter" : "Allt godkänt ✓"}
         variant={pendingCount > 0 ? "amber" : "green"}
-        topAccent={pendingCount > 0 ? "#525252" : "#5DCAA5"}
+        topAccent={pendingCount > 0 ? "#EF9F27" : "#5DCAA5"}
       />
       <KpiCard
         label="Övertid denna månad"

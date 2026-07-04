@@ -5,17 +5,17 @@ const pillars = [
 ];
 
 export const AboutVision = () => (
-  <section className="bg-[#000000] py-24 md:py-32 relative overflow-hidden">
-    <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#000000]/5 blur-[120px]" />
+  <section className="bg-[#0F172A] py-24 md:py-32 relative overflow-hidden">
+    <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#3b82f6]/5 blur-[120px]" />
 
     <div className="relative container mx-auto max-w-3xl px-6 text-center">
       <div className="inline-flex items-center justify-center">
-        <div className="h-px w-12 bg-[#000000]/40" />
-        <span className="px-3 text-[11px] uppercase tracking-wider text-[#000000] font-medium">Vision</span>
-        <div className="h-px w-12 bg-[#000000]/40" />
+        <div className="h-px w-12 bg-[#3b82f6]/40" />
+        <span className="px-3 text-[11px] uppercase tracking-wider text-[#3b82f6] font-medium">Vision</span>
+        <div className="h-px w-12 bg-[#3b82f6]/40" />
       </div>
       <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-[1.05]" style={{ letterSpacing: "-0.8px" }}>
-        Framtiden för bokföring är <span className="text-[#000000]">autonom.</span>
+        Framtiden för bokföring är <span className="text-[#3b82f6]">autonom.</span>
       </h2>
       <p className="mt-6 text-[15px] text-white/60 leading-relaxed max-w-xl mx-auto">
         Vi bygger en värld där ekonomi inte längre är ett administrativt arbete, utan en realtidsspegel av ditt företag.

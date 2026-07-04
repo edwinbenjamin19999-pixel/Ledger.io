@@ -50,7 +50,7 @@ const TYPE_LABELS: Record<string, string> = { capital: "Kapitalkonsolidering",
   other: "Övrigt",
 };
 
-const STATUS_COLORS: Record<string, string> = { approved: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]",
+const STATUS_COLORS: Record<string, string> = { approved: "bg-[#E1F5EE] text-[#085041] dark:bg-green-900/30 dark:text-[#1D9E75]",
   proposed: "bg-[#FAEEDA] text-[#7A5417] dark:bg-yellow-900/30 dark:text-[#C28A2B]",
   rejected: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]",
 };

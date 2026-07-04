@@ -22,7 +22,7 @@ export function OpenBankingProvidersCard({ companyId }: Props = {}) {
       companyId,
       amount: 1.0,
       currency: "SEK",
-      creditorName: "Bokfy Sandbox AB",
+      creditorName: "Cogniq Sandbox AB",
       creditorIban: "SE45 5000 0000 0583 9825 7466",
       reference: "Sandbox testbetalning",
       returnUrl: window.location.origin + "/direct-payment?sandbox=ok",
@@ -109,7 +109,7 @@ export function OpenBankingProvidersCard({ companyId }: Props = {}) {
             </DialogTitle>
             <DialogDescription>
               Open Banking-integrationen är under uppsättning. Den möjliggör hämtning av kontoinformation
-              och bankgodkännande av betalningar via en licensierad leverantör — utan att Bokfy någonsin
+              och bankgodkännande av betalningar via en licensierad leverantör — utan att Cogniq någonsin
               hanterar dina banknycklar.
             </DialogDescription>
           </DialogHeader>

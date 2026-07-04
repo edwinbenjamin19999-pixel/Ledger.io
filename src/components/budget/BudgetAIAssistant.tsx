@@ -119,8 +119,8 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
 
   const quickActions = [
     { label: "Fyll i hela RR med AI", icon: BarChart3, color: "text-purple-500", action: () => { onFillRR(); sendMessage("Hjälp mig fylla i resultaträkningen. Analysera historisk data och ge mig en komplett RR med intäkter, kostnader och nettoresultat för varje månad."); } },
-    { label: "Beräkna kassaflöde", icon: Calculator, color: "text-black", action: () => { onCalcCashFlow(); sendMessage("Beräkna kassaflödet baserat på min resultaträkning. Visa operativt kassaflöde, förändringar i rörelsekapital och slutkassa per månad."); } },
-    { label: "Generera BR-prognos", icon: BarChart3, color: "text-black", action: () => { onGenerateBR(); sendMessage("Generera en balansräkningsprognos baserat på resultaträkningen och kassaflödet. Visa tillgångar, eget kapital och skulder per månad."); } },
+    { label: "Beräkna kassaflöde", icon: Calculator, color: "text-blue-500", action: () => { onCalcCashFlow(); sendMessage("Beräkna kassaflödet baserat på min resultaträkning. Visa operativt kassaflöde, förändringar i rörelsekapital och slutkassa per månad."); } },
+    { label: "Generera BR-prognos", icon: BarChart3, color: "text-blue-500", action: () => { onGenerateBR(); sendMessage("Generera en balansräkningsprognos baserat på resultaträkningen och kassaflödet. Visa tillgångar, eget kapital och skulder per månad."); } },
     { label: "Föreslå sparåtgärder", icon: TrendingDown, color: "text-[#085041]", action: () => sendMessage("Analysera min budget och föreslå sparåtgärder. Var detaljerad med belopp och kontogrupper.") },
   ];
 
@@ -150,7 +150,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
                 <div className={cn(
                   "max-w-[85%] rounded-2xl px-4 py-2.5 text-sm",
                   msg.role === "user"
-                    ? "bg-neutral-700 text-white rounded-br-md"
+                    ? "bg-indigo-600 text-white rounded-br-md"
                     : "bg-muted rounded-bl-md"
                 )}>
                   {msg.role === "assistant" ? (
@@ -158,7 +158,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
                       <ReactMarkdown>{msg.content}</ReactMarkdown>
                     </div>
                   ) : msg.content}
-                  <p className={cn("text-[10px] mt-1", msg.role === "user" ? "text-neutral-300" : "text-muted-foreground")}>
+                  <p className={cn("text-[10px] mt-1", msg.role === "user" ? "text-indigo-200" : "text-muted-foreground")}>
                     {msg.timestamp.toLocaleTimeString("sv-SE", { hour: "2-digit", minute: "2-digit" })}
                   </p>
                 </div>
@@ -176,9 +176,9 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
                 </div>
                 <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                   <div className="flex gap-1">
-                    <div className="w-2 h-2 rounded-full bg-neutral-700 animate-bounce" style={{ animationDelay: "0ms" }} />
-                    <div className="w-2 h-2 rounded-full bg-neutral-700 animate-bounce" style={{ animationDelay: "150ms" }} />
-                    <div className="w-2 h-2 rounded-full bg-neutral-700 animate-bounce" style={{ animationDelay: "300ms" }} />
+                    <div className="w-2 h-2 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: "0ms" }} />
+                    <div className="w-2 h-2 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: "150ms" }} />
+                    <div className="w-2 h-2 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: "300ms" }} />
                   </div>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
               <button
                 key={q}
                 onClick={() => sendMessage(q)}
-                className="text-[10px] px-2 py-1 rounded-full border border-[#C8DDF5] text-neutral-700 hover:bg-[#EFF6FF] transition-colors"
+                className="text-[10px] px-2 py-1 rounded-full border border-[#C8DDF5] text-indigo-600 hover:bg-[#EFF6FF] transition-colors"
               >
                 {q}
               </button>
@@ -220,7 +220,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
               onKeyDown={e => e.key === "Enter" && sendMessage()}
               className="flex-1"
             />
-            <Button size="icon" onClick={() => sendMessage()} disabled={!input.trim() || loading} className="bg-[#0F1F3D] hover:from-neutral-700 hover:to-purple-700">
+            <Button size="icon" onClick={() => sendMessage()} disabled={!input.trim() || loading} className="bg-[#0F1F3D] hover:from-indigo-700 hover:to-purple-700">
               <Send className="w-4 h-4" />
             </Button>
           </div>

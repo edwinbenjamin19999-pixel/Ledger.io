@@ -54,7 +54,7 @@ const MARKETPLACE_CATEGORIES: MarketplaceCategory[] = [
   },
   { label: "AP Automation & Fakturahantering",
     integrations: [
-      { id: "rillion", name: "Rillion", description: "Importera attesterade leverantörsfakturor direkt från Rillion till Bokfy. Eliminera dubbelinmatning — fakturan bokförs automatiskt när den är attesterad.", tagline: "Automatisera fakturaattest och leverantörsflöde", status: "config", icon: FileText, badge: "enterprise" },
+      { id: "rillion", name: "Rillion", description: "Importera attesterade leverantörsfakturor direkt från Rillion till Cogniq. Eliminera dubbelinmatning — fakturan bokförs automatiskt när den är attesterad.", tagline: "Automatisera fakturaattest och leverantörsflöde", status: "config", icon: FileText, badge: "enterprise" },
       { id: "medius", name: "Medius", description: "AP automation för medelstora och stora bolag", tagline: "AP automation för medelstora och stora bolag", status: "coming", icon: FileText, badge: "enterprise" },
     ],
   },
@@ -84,7 +84,7 @@ const MARKETPLACE_CATEGORIES: MarketplaceCategory[] = [
   },
   { label: "Lön & HR-system",
     integrations: [
-      { id: "quinyx", name: "Quinyx", description: "Synkar timesheet-data från Quinyx API → Bokfy Tidrapportering → Lönekörning. Eliminerar manuell timeregistrering.", tagline: "Importera scheman och arbetade timmar direkt till lön", status: "config", icon: Clock },
+      { id: "quinyx", name: "Quinyx", description: "Synkar timesheet-data från Quinyx API → Cogniq Tidrapportering → Lönekörning. Eliminerar manuell timeregistrering.", tagline: "Importera scheman och arbetade timmar direkt till lön", status: "config", icon: Clock },
       { id: "hogia-lon", name: "Hogia Lön", description: "Migrera lönhistorik och medarbetardata", tagline: "Migrera lönhistorik och medarbetardata", status: "coming", icon: Users },
       { id: "aditro", name: "Aditro", description: "HR och lön för större organisationer", tagline: "HR och lön för större organisationer", status: "coming", icon: Users },
     ],
@@ -100,7 +100,7 @@ const MARKETPLACE_CATEGORIES: MarketplaceCategory[] = [
   },
   { label: "Lagerhantering",
     integrations: [
-      { id: "ongoing-wms", name: "Ongoing WMS", description: "Webhook från Ongoing → uppdaterar Lagerredovisning i Bokfy med inleveranser, utleveranser, lagervärde. Dubbel-bokföring sker automatiskt.", tagline: "Synka lagersaldon och transaktioner i realtid", status: "config", icon: Package },
+      { id: "ongoing-wms", name: "Ongoing WMS", description: "Webhook från Ongoing → uppdaterar Lagerredovisning i Cogniq med inleveranser, utleveranser, lagervärde. Dubbel-bokföring sker automatiskt.", tagline: "Synka lagersaldon och transaktioner i realtid", status: "config", icon: Package },
     ],
   },
   { label: "CRM & Affärssystem",
@@ -114,13 +114,13 @@ const MARKETPLACE_CATEGORIES: MarketplaceCategory[] = [
   },
   { label: "Automation & Webhooks",
     integrations: [
-      { id: "zapier", name: "Zapier", description: "Bokfy Zapier App med triggers: ny_verifikation, ny_faktura, betalning_mottagen, anomali_detekterad, lönekörning_klar. Actions: skapa_faktura, bokför_kvitto.", tagline: "Koppla Bokfy till 5000+ appar utan kod", status: "config", icon: Zap },
+      { id: "zapier", name: "Zapier", description: "Cogniq Zapier App med triggers: ny_verifikation, ny_faktura, betalning_mottagen, anomali_detekterad, lönekörning_klar. Actions: skapa_faktura, bokför_kvitto.", tagline: "Koppla Cogniq till 5000+ appar utan kod", status: "config", icon: Zap },
       { id: "make", name: "Make (Integromat)", description: "Avancerad automatisering med visuellt flödesbygge", tagline: "Avancerad automatisering med visuellt flödesbygge", status: "coming", icon: Bot },
     ],
   },
   { label: "Kommunikation & Notifieringar",
     integrations: [
-      { id: "slack", name: "Slack", description: "Bokfy skickar Slack-meddelanden vid: förfallen faktura, anomali, likviditetsprognos under gränsvärde, lönedeadline, momsdeklaration. Konfigurerbara kanalval per alert-typ.", tagline: "Skicka ekonomialerts direkt till ditt Slack-workspace", status: "config", icon: MessageSquare },
+      { id: "slack", name: "Slack", description: "Cogniq skickar Slack-meddelanden vid: förfallen faktura, anomali, likviditetsprognos under gränsvärde, lönedeadline, momsdeklaration. Konfigurerbara kanalval per alert-typ.", tagline: "Skicka ekonomialerts direkt till ditt Slack-workspace", status: "config", icon: MessageSquare },
       { id: "ms-teams", name: "Microsoft Teams", description: "Teams-notifieringar för ekonomiteamet", tagline: "Teams-notifieringar för ekonomiteamet", status: "coming", icon: Bell },
     ],
   },
@@ -193,7 +193,7 @@ const IntegrationPlatformPage = () => { const { user } = useAuth();
       <PageHeader
         icon={Blocks}
         title="Integrationsplattform"
-        subtitle="Koppla Bokfy till dina system, hantera API-nycklar och övervaka trafik"
+        subtitle="Koppla Cogniq till dina system, hantera API-nycklar och övervaka trafik"
       />
       <div className="px-8 space-y-6">
 
@@ -388,7 +388,7 @@ const ApiKeysTab = ({ companyId, userId }: { companyId: string; userId: string }
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-sm font-semibold">API-nycklar</h3>
-          <p className="text-xs text-muted-foreground">Hantera åtkomst till Bokfy API</p>
+          <p className="text-xs text-muted-foreground">Hantera åtkomst till Cogniq API</p>
         </div>
         <Dialog open={showDialog} onOpenChange={v => { setShowDialog(v); if (!v) { setGeneratedKey(""); setNewName(""); } }}>
           <DialogTrigger asChild>

@@ -76,7 +76,7 @@ export const ConversationThread = ({ companyId, conversationId, context, onConve
 
         {sending && (
           <div className="flex items-center gap-2 text-sm text-slate-500">
-            <Loader2 className="h-4 w-4 animate-spin text-[#000000]" />
+            <Loader2 className="h-4 w-4 animate-spin text-[#3b82f6]" />
             AI CFO analyserar…
           </div>
         )}
@@ -93,7 +93,7 @@ export const ConversationThread = ({ companyId, conversationId, context, onConve
             className="resize-none"
             disabled={sending}
           />
-          <Button onClick={onSend} disabled={sending || !input.trim()} className="h-auto py-3 bg-[#000000] hover:bg-[#000000] text-white gap-1.5">
+          <Button onClick={onSend} disabled={sending || !input.trim()} className="h-auto py-3 bg-[#3b82f6] hover:bg-[#3b82f6] text-white gap-1.5">
             {sending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
           </Button>
         </div>

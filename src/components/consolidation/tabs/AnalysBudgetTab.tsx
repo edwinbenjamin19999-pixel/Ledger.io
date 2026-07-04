@@ -109,8 +109,8 @@ const ExecutiveDashboard = ({ kpiData, groupName }: { kpiData: KPIData | null; g
   const cards = [
     { label: "Omsättning", value: kpiData.revenue, accent: "hsl(var(--status-green))", icon: DollarSign, sub: "Koncerntotal" },
     { label: "Resultat (EBIT)", value: kpiData.ebit, accent: kpiData.ebit < 0 ? "hsl(var(--destructive))" : "hsl(var(--status-green))", icon: TrendingUp, sub: `Marginal: ${kpiData.revenue ? ((kpiData.ebit / kpiData.revenue) * 100).toFixed(1) : 0}%` },
-    { label: "Likviditet", value: kpiData.cashBalance, accent: "#000000", icon: BarChart3, sub: `Kassalikviditet: ${kpiData.currentRatio.toFixed(2)}` },
-    { label: "Eget kapital", value: kpiData.equity, accent: "#737373", icon: Shield, sub: `Soliditet: ${kpiData.soliditet.toFixed(1)}%` },
+    { label: "Likviditet", value: kpiData.cashBalance, accent: "#3b82f6", icon: BarChart3, sub: `Kassalikviditet: ${kpiData.currentRatio.toFixed(2)}` },
+    { label: "Eget kapital", value: kpiData.equity, accent: "#8B5CF6", icon: Shield, sub: `Soliditet: ${kpiData.soliditet.toFixed(1)}%` },
   ];
 
   // Simulated monthly data för sparklines
@@ -154,7 +154,7 @@ const ExecutiveDashboard = ({ kpiData, groupName }: { kpiData: KPIData | null; g
               <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} tickFormatter={v => `${(v / 1000).toFixed(0)}k`} />
               <Tooltip formatter={(v: number) => `${formatSEK(v)} kr`} />
               <Legend content={<CustomLegend />} />
-              <Bar dataKey="revenue" name="Intäkter" fill="#000000" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="revenue" name="Intäkter" fill="#3b82f6" radius={[6, 6, 0, 0]} />
               <Bar dataKey="costs" name="Kostnader" fill="hsl(var(--destructive))" radius={[6, 6, 0, 0]} opacity={0.7} />
             </BarChart>
           </ResponsiveContainer>
@@ -252,8 +252,8 @@ const FlerarsAnalys = ({ kpiData }: { kpiData: KPIData | null }) => { if (!kpiDa
               <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} tickFormatter={v => `${(v / 1000).toFixed(0)}k`} />
               <Tooltip formatter={(v: number) => `${formatSEK(v)} kr`} />
               <Legend content={<CustomLegend />} />
-              <Bar dataKey="revenue" name="Nettoomsättning" fill="#000000" radius={[6, 6, 0, 0]} />
-              <Bar dataKey="ebit" name="EBIT" fill="#000000" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="revenue" name="Nettoomsättning" fill="#3b82f6" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="ebit" name="EBIT" fill="#3b82f6" radius={[6, 6, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
@@ -300,7 +300,7 @@ const KPITree = ({ kpiData }: { kpiData: KPIData | null }) => { if (!kpiData) re
       <CardContent className="p-6">
         <h3 className="text-base font-semibold mb-6">KPI-träd — DuPont-analys</h3>
         <div className="flex flex-col items-center gap-4">
-          <KPINode label="ROE" value={`${roe.toFixed(1)}%`} accent="#737373" />
+          <KPINode label="ROE" value={`${roe.toFixed(1)}%`} accent="#8B5CF6" />
           <div className="w-px h-6 bg-border" />
           <div className="flex items-start gap-16">
             <div className="flex flex-col items-center gap-3">
@@ -312,7 +312,7 @@ const KPITree = ({ kpiData }: { kpiData: KPIData | null }) => { if (!kpiData) re
               </div>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <KPINode label="Kapitalrotation" value={`${kapRot.toFixed(2)}x`} accent="#000000" />
+              <KPINode label="Kapitalrotation" value={`${kapRot.toFixed(2)}x`} accent="#3b82f6" />
               <div className="w-px h-4 bg-border" />
               <div className="flex gap-6">
                 <KPINode label="Tillgångar" value={formatSEK(kpiData.totalAssets)} size="sm" />

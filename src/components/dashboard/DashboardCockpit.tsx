@@ -363,7 +363,7 @@ export const DashboardCockpit = ({
     return ((cur - prev) / Math.abs(prev)) * 100;
   };
 
-  const DONUT_COLORS = ['#000000', '#000000', '#525252', '#737373', '#737373'];
+  const DONUT_COLORS = ['#3b82f6', '#22C55E', '#F59E0B', '#8B5CF6', '#EC4899'];
 
   const DonutChart = ({ data, title, emptyText, showLegend = true, iconType }: { data: any[]; title: string; emptyText: string; showLegend?: boolean; iconType?: 'customer' | 'supplier' }) => { const total = data.reduce((s, d) => s + d.amount, 0);
     const chartData = data.map((d, i) => ({ ...d, fill: DONUT_COLORS[i % DONUT_COLORS.length] }));
@@ -381,12 +381,12 @@ export const DashboardCockpit = ({
     const HeaderIcon = () => {
       if (iconType === 'supplier') return (
         <div className="p-1.5 rounded-lg bg-[#F1F5F9]">
-          <Users className="w-4 h-4 text-neutral-700" />
+          <Users className="w-4 h-4 text-violet-600" />
         </div>
       );
       return (
         <div className="p-1.5 rounded-lg bg-[#EFF6FF]">
-          <Users className="w-4 h-4 text-[#000000]" />
+          <Users className="w-4 h-4 text-[#3b82f6]" />
         </div>
       );
     };
@@ -520,10 +520,10 @@ export const DashboardCockpit = ({
     const isFlat = !Number.isFinite(effectiveChange) || effectiveChange === 0;
     const isHero = kpiId === 'cash';
     const sparkStroke = isHero
-      ? "#000000"
+      ? "#3b82f6"
       : isFlat
         ? "#94A3B8"
-        : (isPositive ? "#10B981" : "#525252");
+        : (isPositive ? "#10B981" : "#EF4444");
 
     const compactPadding = dashboardSettings.compactMode ? "px-[16px] py-[14px]" : "px-[22px] py-[20px]";
     const cardClass = isHero
@@ -534,31 +534,31 @@ export const DashboardCockpit = ({
     // P&L = blå, kassa/likviditet = emerald, reskontra = ink, varningar = amber
     const getCategoryColor = (id: string): string => {
       const colors: Record<string, string> = {
-        'intakter': '#000000',
-        'kostnader': '#000000',
-        'resultat': '#000000',
-        'bruttomarginal': '#000000',
-        'rorelsemarginal': '#000000',
-        'ebitda': '#000000',
-        'kassa': '#000000',
-        'likviditetsgrad': '#000000',
-        'kassalikviditet': '#000000',
-        'periodens-kassaflode': '#000000',
-        'kundfordringar': '#000000',
-        'leverantorsskulder': '#000000',
-        'forfallna': '#000000',
-        'dso': '#525252',
-        'budgetavvikelse': '#525252',
+        'intakter': '#0052FF',
+        'kostnader': '#0052FF',
+        'resultat': '#0052FF',
+        'bruttomarginal': '#0052FF',
+        'rorelsemarginal': '#0052FF',
+        'ebitda': '#0052FF',
+        'kassa': '#059669',
+        'likviditetsgrad': '#059669',
+        'kassalikviditet': '#059669',
+        'periodens-kassaflode': '#059669',
+        'kundfordringar': '#0F172A',
+        'leverantorsskulder': '#0F172A',
+        'forfallna': '#0F172A',
+        'dso': '#F59E0B',
+        'budgetavvikelse': '#F59E0B',
       };
-      return colors[id] || '#000000';
+      return colors[id] || '#0052FF';
     };
     const categoryColor = getCategoryColor(kpiId);
 
     // Flat: solid vit yta — ingen whisper-gradient
     const cardStyle = isHero
       ? {
-          backgroundColor: "rgba(0,0,0,0.04)",
-          border: "1.5px solid rgba(0,0,0,0.35)",
+          backgroundColor: "rgba(0,82,255,0.04)",
+          border: "1.5px solid rgba(0,82,255,0.35)",
           borderTop: `3px solid ${categoryColor}`,
         }
       : {
@@ -566,10 +566,10 @@ export const DashboardCockpit = ({
           background: "#ffffff",
         };
 
-    const heroValueColor = value < 0 ? "#525252" : "#000000";
+    const heroValueColor = value < 0 ? "#EF4444" : "#0F172A";
     const valueClass = isHero
       ? "relative mt-2 min-w-0 max-w-full pr-1 text-[22px] font-bold leading-none tracking-[-0.03em] tabular-nums"
-      : "relative mt-2 min-w-0 max-w-full pr-1 text-[22px] font-bold leading-none text-[#000000] tracking-[-0.03em] tabular-nums";
+      : "relative mt-2 min-w-0 max-w-full pr-1 text-[22px] font-bold leading-none text-[#0F172A] tracking-[-0.03em] tabular-nums";
 
     const labelClass = "min-w-0 text-[11px] font-medium uppercase text-black/40 leading-snug break-words [overflow-wrap:anywhere]";
 
@@ -581,7 +581,7 @@ export const DashboardCockpit = ({
       >
         {hasWarning && (
           <div className="absolute top-2 right-2 z-10">
-            <AlertTriangle size={12} strokeWidth={1.5} className="text-[#525252]" />
+            <AlertTriangle size={12} strokeWidth={1.5} className="text-[#EF9F27]" />
           </div>
         )}
 
@@ -605,7 +605,7 @@ export const DashboardCockpit = ({
         <div className="relative mt-3 flex items-end justify-between gap-3">
           <div className="flex min-w-0 flex-col gap-0.5">
             {prevValue !== undefined && (() => {
-              const color = isFlat ? 'rgba(0,0,0,0.4)' : (isPositive ? '#10B981' : '#525252');
+              const color = isFlat ? 'rgba(0,0,0,0.4)' : (isPositive ? '#10B981' : '#EF4444');
               const Arrow = isFlat ? null : (isPositive ? TrendingUp : TrendingDown);
               const sign = isFlat ? '' : (effectiveChange >= 0 ? '+' : '−');
               const abs = isFlat ? '0' : Math.abs(effectiveChange).toFixed(1);
@@ -868,15 +868,15 @@ export const DashboardCockpit = ({
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="p-1.5 rounded-lg bg-[#EFF6FF]">
-                    <BarChart3 className="w-4 h-4 text-[#000000]" />
+                    <BarChart3 className="w-4 h-4 text-[#3b82f6]" />
                   </div>
                   <CardTitle className="text-base font-semibold text-slate-800">{isLarge ? 'Kassaflöde – 6 månader' : 'Kassaflöde – 3 mån'}</CardTitle>
                 </div>
                 <span className="bg-slate-100 text-slate-600 text-xs rounded-full px-2 py-0.5">{periodChip}</span>
               </div>
               <div className="flex items-center gap-4 mt-2">
-                <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#000000]" /><span className="text-xs text-slate-500">Inbetalningar</span></div>
-                <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-neutral-700" /><span className="text-xs text-slate-500">Utbetalningar</span></div>
+                <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#3b82f6]" /><span className="text-xs text-slate-500">Inbetalningar</span></div>
+                <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-rose-500" /><span className="text-xs text-slate-500">Utbetalningar</span></div>
               </div>
             </CardHeader>
             <CardContent>
@@ -886,10 +886,10 @@ export const DashboardCockpit = ({
                     <ChartGradients />
                     <defs>
                       <linearGradient id="gradInbet" x1="0" y1="1" x2="0" y2="0">
-                        <stop offset="0%" stopColor="#000000" stopOpacity={0.2} /><stop offset="100%" stopColor="#000000" />
+                        <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.2} /><stop offset="100%" stopColor="#3b82f6" />
                       </linearGradient>
                       <linearGradient id="gradUtbet" x1="0" y1="1" x2="0" y2="0">
-                        <stop offset="0%" stopColor="#525252" stopOpacity={0.6} /><stop offset="100%" stopColor="#525252" />
+                        <stop offset="0%" stopColor="#F43F5E" stopOpacity={0.6} /><stop offset="100%" stopColor="#F43F5E" />
                       </linearGradient>
                     </defs>
                     <XAxis dataKey="name" tick={AXIS_TICK} axisLine={false} tickLine={false}/>
@@ -937,17 +937,17 @@ export const DashboardCockpit = ({
                   <LineChart data={monthlyResults}>
                     <defs>
                       <linearGradient id="areaResultat" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#000000" stopOpacity={0.15} />
-                        <stop offset="100%" stopColor="#000000" stopOpacity={0} />
+                        <stop offset="0%" stopColor="#3B82F6" stopOpacity={0.15} />
+                        <stop offset="100%" stopColor="#3B82F6" stopOpacity={0} />
                       </linearGradient>
                     </defs>
                     <XAxis dataKey="name" tick={AXIS_TICK} axisLine={false} tickLine={false}/>
                     <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
                     <RechartsTooltip formatter={(v: number) => `${fmt(v)} kr`} />
                     <Legend content={<CustomLegend />} />
-                    <Line type="monotone" dataKey="intäkter" name="Intäkter" stroke="#000000" strokeWidth={2} dot={false} />
+                    <Line type="monotone" dataKey="intäkter" name="Intäkter" stroke="#22C55E" strokeWidth={2} dot={false} />
                     <Line type="monotone" dataKey="kostnader" name="Kostnader" stroke="#F97316" strokeWidth={2} dot={false} />
-                    <Line type="monotone" dataKey="resultat" name="Resultat" stroke="#000000" strokeWidth={2.5} dot={{ r: 3 }} />
+                    <Line type="monotone" dataKey="resultat" name="Resultat" stroke="#3B82F6" strokeWidth={2.5} dot={{ r: 3 }} />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
@@ -968,12 +968,12 @@ export const DashboardCockpit = ({
 
       case 'ai_insights':
         return (
-          <Card className="rounded-2xl border border-neutral-300/60 bg-card shadow-[var(--shadow-soft)]">
+          <Card className="rounded-2xl border border-violet-200/60 bg-card shadow-[var(--shadow-soft)]">
             <CardHeader className="pb-2">
               <div className="flex items-center justify-between">
                 <CardTitle className="text-base font-semibold text-foreground tracking-tight flex items-center gap-2">
                   <div className="p-1.5 rounded-lg bg-[#F1F5F9]">
-                    <Sparkles className="h-4 w-4 text-neutral-700" />
+                    <Sparkles className="h-4 w-4 text-violet-500" />
                   </div>
                   AI-insikter & prognoser
                 </CardTitle>
@@ -982,7 +982,7 @@ export const DashboardCockpit = ({
             </CardHeader>
             <CardContent className="space-y-2">
               {kpis.result < 0 && (
-                <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-100/50 border-l-4 border-neutral-700">
+                <div className="flex items-start gap-3 p-3 rounded-lg bg-rose-50/50 border-l-4 border-rose-500">
                   <div className="p-1.5 rounded-md bg-[#FCE8E8] flex-shrink-0">
                     <AlertTriangle className="w-4 h-4 text-[#7A1A1A]" />
                   </div>
@@ -994,7 +994,7 @@ export const DashboardCockpit = ({
                 </div>
               )}
               {arData.overdueCount > 0 && (
-                <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-100/50 border-l-4 border-neutral-700">
+                <div className="flex items-start gap-3 p-3 rounded-lg bg-amber-50/50 border-l-4 border-amber-400">
                   <div className="p-1.5 rounded-md bg-[#FAEEDA] flex-shrink-0">
                     <Clock className="w-4 h-4 text-[#7A5417]" />
                   </div>
@@ -1006,7 +1006,7 @@ export const DashboardCockpit = ({
                 </div>
               )}
               {kpis.cash > 0 && kpis.result >= 0 && arData.overdueCount === 0 && (
-                <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-100/50 border-l-4 border-neutral-700">
+                <div className="flex items-start gap-3 p-3 rounded-lg bg-emerald-50/50 border-l-4 border-emerald-400">
                   <div className="p-1.5 rounded-md bg-[#E1F5EE] flex-shrink-0">
                     <TrendingUp className="w-4 h-4 text-[#085041]" />
                   </div>
@@ -1017,7 +1017,7 @@ export const DashboardCockpit = ({
                 </div>
               )}
               {kpis.margin < 10 && kpis.revenue > 0 && (
-                <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-100/50 border-l-4 border-neutral-700">
+                <div className="flex items-start gap-3 p-3 rounded-lg bg-amber-50/50 border-l-4 border-amber-400">
                   <div className="p-1.5 rounded-md bg-[#FAEEDA] flex-shrink-0">
                     <Activity className="w-4 h-4 text-[#7A5417]" />
                   </div>
@@ -1030,7 +1030,7 @@ export const DashboardCockpit = ({
               )}
               <button
                 onClick={() => navigate("/assistant")}
-                className="w-full bg-[#0F1F3D] text-white rounded-xl h-11 flex items-center justify-center gap-2 font-medium text-sm hover:from-[#000000] hover:to-slate-900 transition-all duration-200 mt-2"
+                className="w-full bg-[#0F1F3D] text-white rounded-xl h-11 flex items-center justify-center gap-2 font-medium text-sm hover:from-[#3b82f6] hover:to-slate-900 transition-all duration-200 mt-2"
               >
                 <Sparkles className="h-4 w-4" />Fråga AI-revisorn
               </button>
@@ -1073,7 +1073,7 @@ export const DashboardCockpit = ({
                   ))}
                 </div>
               )}
-              <Button variant="outline" size="sm" className="w-full mt-3 border-slate-200 hover:border-[#000000] hover:text-[#000000] transition-colors" onClick={() => navigate("/bank")}>
+              <Button variant="outline" size="sm" className="w-full mt-3 border-slate-200 hover:border-[#3b82f6] hover:text-[#3b82f6] transition-colors" onClick={() => navigate("/bank")}>
                 <ExternalLink className="h-3 w-3 mr-1" />Öppna bankavstämning
               </Button>
             </CardContent>
@@ -1090,11 +1090,11 @@ export const DashboardCockpit = ({
               <div className="flex items-center justify-between">
                 <CardTitle className="text-base flex items-center gap-2">
                   <div className="p-1.5 rounded-lg bg-[#EFF6FF]">
-                    <TrendingUp className="h-4 w-4 text-[#000000]" />
+                    <TrendingUp className="h-4 w-4 text-[#3b82f6]" />
                   </div>
                   Intäktsprognos
                 </CardTitle>
-                <span className="bg-[#EFF6FF] text-[#000000] text-xs rounded-full px-2 py-0.5 font-medium">Prognos</span>
+                <span className="bg-[#EFF6FF] text-[#3b82f6] text-xs rounded-full px-2 py-0.5 font-medium">Prognos</span>
               </div>
             </CardHeader>
             <CardContent>
@@ -1105,7 +1105,7 @@ export const DashboardCockpit = ({
                       <BarChart data={monthlyResults.slice(-6)}>
                         <defs>
                           <linearGradient id="gradRevForecast" x1="0" y1="1" x2="0" y2="0">
-                            <stop offset="0%" stopColor="#000000" stopOpacity={0.3} /><stop offset="100%" stopColor="#000000" />
+                            <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.3} /><stop offset="100%" stopColor="#3b82f6" />
                           </linearGradient>
                         </defs>
                         <XAxis dataKey="name" tick={AXIS_TICK} axisLine={false} tickLine={false}/>
@@ -1119,7 +1119,7 @@ export const DashboardCockpit = ({
                     </ResponsiveContainer>
                   </div>
                   <div className="bg-slate-50 rounded-lg px-4 py-2 inline-flex items-center gap-2 mt-3">
-                    <TrendingUp className="h-4 w-4 text-[#000000]" />
+                    <TrendingUp className="h-4 w-4 text-[#3b82f6]" />
                     <span className="font-medium text-slate-700 text-sm">Snitt 6 mån: {fmt(avg6)} kr/mån</span>
                   </div>
                 </>
@@ -1145,15 +1145,15 @@ export const DashboardCockpit = ({
             </CardHeader>
             <CardContent>
               {expenseAnomalies.length === 0 ? (
-                <div className="bg-neutral-100/30 rounded-xl p-6 flex flex-col items-center justify-center">
-                  <Shield className="w-12 h-12 text-neutral-300 mb-3" />
+                <div className="bg-green-50/30 rounded-xl p-6 flex flex-col items-center justify-center">
+                  <Shield className="w-12 h-12 text-green-200 mb-3" />
                   <p className="text-sm text-slate-500 font-medium">Inga avvikelser detekterade</p>
                   <p className="text-xs text-slate-300 mt-1">AI-agenten övervakar dina kostnader i realtid</p>
                 </div>
               ) : (
                 <div className="space-y-2">
                   {expenseAnomalies.map((a, i) => (
-                    <div key={i} className="flex items-center justify-between p-3 rounded-lg bg-neutral-100/50 border-l-4 border-neutral-700 text-sm">
+                    <div key={i} className="flex items-center justify-between p-3 rounded-lg bg-amber-50/50 border-l-4 border-amber-400 text-sm">
                       <div>
                         <p className="font-semibold text-slate-800 text-sm">{a.account} {a.name}</p>
                         <p className="text-xs text-slate-500">Snitt: {fmt(a.avg)} kr → Max: {fmt(a.amount)} kr</p>
@@ -1221,7 +1221,7 @@ export const DashboardCockpit = ({
                       );
                     })}
                   </div>
-                  <button onClick={() => navigate("/verifications")} className="text-sm text-[#000000] font-medium hover:text-[#000000] flex items-center gap-1 mt-3 transition-colors group">
+                  <button onClick={() => navigate("/verifications")} className="text-sm text-[#3b82f6] font-medium hover:text-[#3b82f6] flex items-center gap-1 mt-3 transition-colors group">
                     Visa alla <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </>
@@ -1284,7 +1284,7 @@ export const DashboardCockpit = ({
                   })}
                 </div>
               )}
-              <Button variant="outline" size="sm" className="w-full border-slate-200 hover:border-[#000000] hover:text-[#000000] transition-colors" onClick={() => navigate("/invoices")}><ExternalLink className="h-3 w-3 mr-1" />Visa alla kundfakturor</Button>
+              <Button variant="outline" size="sm" className="w-full border-slate-200 hover:border-[#3b82f6] hover:text-[#3b82f6] transition-colors" onClick={() => navigate("/invoices")}><ExternalLink className="h-3 w-3 mr-1" />Visa alla kundfakturor</Button>
             </CardContent>
           </Card>
         );
@@ -1326,7 +1326,7 @@ export const DashboardCockpit = ({
                   ))}
                 </div>
               )}
-              <Button variant="outline" size="sm" className="w-full border-slate-200 hover:border-[#000000] hover:text-[#000000] transition-colors" onClick={() => navigate("/invoices?tab=incoming")}><ExternalLink className="h-3 w-3 mr-1" />Visa alla leverantörsfakturor</Button>
+              <Button variant="outline" size="sm" className="w-full border-slate-200 hover:border-[#3b82f6] hover:text-[#3b82f6] transition-colors" onClick={() => navigate("/invoices?tab=incoming")}><ExternalLink className="h-3 w-3 mr-1" />Visa alla leverantörsfakturor</Button>
             </CardContent>
           </Card>
         );

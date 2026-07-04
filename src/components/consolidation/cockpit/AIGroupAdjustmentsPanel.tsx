@@ -16,8 +16,8 @@ const tierColor = (severity: string) => {
   switch (severity) {
     case 'critical': return 'border-[#F4C8C8] bg-red-50/50';
     case 'high': return 'border-orange-200 bg-orange-50/50';
-    case 'medium': return 'border-[#F0DDB7] bg-neutral-100/50';
-    default: return 'border-[#BFE6D6] bg-neutral-100/50';
+    case 'medium': return 'border-[#F0DDB7] bg-amber-50/50';
+    default: return 'border-[#BFE6D6] bg-emerald-50/50';
   }
 };
 
@@ -68,7 +68,7 @@ export function AIGroupAdjustmentsPanel({ periodId, isLocked }: Props) {
     <Card className="bg-white border-slate-200">
       <div className="p-5 border-b border-slate-100 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_15px_rgba(0,0,0,0.4)]">
+          <div className="w-9 h-9 rounded-lg bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_15px_rgba(0,82,255,0.4)]">
             <Sparkles className="w-4 h-4 text-white" />
           </div>
           <div>
@@ -123,7 +123,7 @@ export function AIGroupAdjustmentsPanel({ periodId, isLocked }: Props) {
                   <span className="text-[11px] text-slate-500">Konfidens</span>
                   <div className="w-20 h-1.5 bg-slate-200 rounded-full overflow-hidden">
                     <div
-                      className={cn('h-full', s.confidence >= 0.85 ? 'bg-neutral-700' : s.confidence >= 0.6 ? 'bg-neutral-700' : 'bg-red-500')}
+                      className={cn('h-full', s.confidence >= 0.85 ? 'bg-emerald-500' : s.confidence >= 0.6 ? 'bg-amber-500' : 'bg-red-500')}
                       style={{ width: `${Math.round(s.confidence * 100)}%` }}
                     />
                   </div>
@@ -141,7 +141,7 @@ export function AIGroupAdjustmentsPanel({ periodId, isLocked }: Props) {
                     size="sm"
                     onClick={() => handleApply(s)}
                     disabled={isLocked || create.isPending}
-                    className="h-7 px-3 text-xs bg-[#000000] hover:bg-[#000000] text-white"
+                    className="h-7 px-3 text-xs bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5 mr-1" /> Tillämpa
                   </Button>

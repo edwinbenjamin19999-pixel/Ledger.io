@@ -39,11 +39,11 @@ const fmt = (n: number) => n.toLocaleString("sv-SE", { minimumFractionDigits: 2,
 const fmt0 = (n: number) => n.toLocaleString("sv-SE", { maximumFractionDigits: 0 });
 
 const DUE_BUCKETS = [
-  { key: "overdue", label: "Förfallna", dot: "bg-neutral-700", textTone: "text-[#7A1A1A]" },
-  { key: "today", label: "Idag", dot: "bg-neutral-700", textTone: "text-[#7A1A1A]" },
-  { key: "tomorrow", label: "Imorgon", dot: "bg-neutral-700", textTone: "text-[#7A5417]" },
-  { key: "thisweek", label: "Denna vecka", dot: "bg-neutral-700", textTone: "text-[#7A5417]" },
-  { key: "nextweek", label: "Nästa vecka", dot: "bg-[#000000]", textTone: "text-[#000000]" },
+  { key: "overdue", label: "Förfallna", dot: "bg-rose-500", textTone: "text-[#7A1A1A]" },
+  { key: "today", label: "Idag", dot: "bg-rose-400", textTone: "text-[#7A1A1A]" },
+  { key: "tomorrow", label: "Imorgon", dot: "bg-amber-500", textTone: "text-[#7A5417]" },
+  { key: "thisweek", label: "Denna vecka", dot: "bg-amber-400", textTone: "text-[#7A5417]" },
+  { key: "nextweek", label: "Nästa vecka", dot: "bg-[#3b82f6]", textTone: "text-[#3b82f6]" },
   { key: "later", label: "Senare", dot: "bg-slate-400", textTone: "text-slate-600" },
 ] as const;
 
@@ -59,9 +59,9 @@ function dueBucket(date: string | null): typeof DUE_BUCKETS[number]["key"] {
 }
 
 const PRIO_META = {
-  pay_now: { label: "Kritisk", dot: "bg-neutral-700", textTone: "text-[#7A1A1A]" },
-  pay_soon: { label: "Hög", dot: "bg-neutral-700", textTone: "text-[#7A5417]" },
-  can_wait: { label: "Normal", dot: "bg-[#000000]", textTone: "text-[#000000]" },
+  pay_now: { label: "Kritisk", dot: "bg-rose-500", textTone: "text-[#7A1A1A]" },
+  pay_soon: { label: "Hög", dot: "bg-amber-500", textTone: "text-[#7A5417]" },
+  can_wait: { label: "Normal", dot: "bg-[#3b82f6]", textTone: "text-[#3b82f6]" },
   strategic_delay: { label: "Låg", dot: "bg-slate-400", textTone: "text-slate-600" },
 } as const;
 
@@ -129,7 +129,7 @@ export function PaymentGroupedList(props: Props) {
             className={cn(
               "px-3 py-1 rounded-full text-xs font-medium transition-colors",
               groupBy === o.v
-                ? "bg-[#EFF6FF] text-[#000000] border border-[#C8DDF5]"
+                ? "bg-[#EFF6FF] text-[#3b82f6] border border-[#C8DDF5]"
                 : "text-slate-600 hover:bg-slate-50 border border-transparent",
             )}
           >
@@ -191,7 +191,7 @@ export function PaymentGroupedList(props: Props) {
                         key={inv.id}
                         className={cn(
                           "flex items-center gap-3 px-5 py-3 group hover:bg-slate-50/40",
-                          inv.selected && "bg-neutral-100/40",
+                          inv.selected && "bg-blue-50/40",
                         )}
                       >
                         <Checkbox checked={inv.selected} onCheckedChange={() => props.onToggleOne(inv.id)} />
@@ -220,12 +220,12 @@ export function PaymentGroupedList(props: Props) {
                         </div>
 
                         {credit ? (
-                          <Button size="sm" variant="ghost" className="h-7 gap-1 text-black" onClick={() => props.onUnmatchCredit(inv.id)}>
+                          <Button size="sm" variant="ghost" className="h-7 gap-1 text-blue-600" onClick={() => props.onUnmatchCredit(inv.id)}>
                             <Link2 className="h-3 w-3" />
                             <span className="text-[10px]">−{fmt0(Math.abs(credit.total_amount))}</span>
                           </Button>
                         ) : availableCredits.length > 0 ? (
-                          <Button size="sm" variant="ghost" className="h-7 gap-1 text-slate-500 hover:text-black" onClick={() => props.onOpenCreditMatch(inv)}>
+                          <Button size="sm" variant="ghost" className="h-7 gap-1 text-slate-500 hover:text-blue-600" onClick={() => props.onOpenCreditMatch(inv)}>
                             <MinusCircle className="h-3 w-3" />
                             <span className="text-[10px]">{availableCredits.length} kredit</span>
                           </Button>

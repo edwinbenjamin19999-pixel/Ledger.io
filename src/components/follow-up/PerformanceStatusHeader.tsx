@@ -12,19 +12,19 @@ const STATUS_STYLE: Record<
   on_track: {
     label: "On track",
     pillClass: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]",
-    ringClass: "bg-neutral-700",
+    ringClass: "bg-emerald-500",
     Icon: CheckCircle2,
   },
   at_risk: {
     label: "At risk",
     pillClass: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]",
-    ringClass: "bg-neutral-700",
+    ringClass: "bg-amber-500",
     Icon: AlertTriangle,
   },
   off_track: {
     label: "Off track",
     pillClass: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]",
-    ringClass: "bg-neutral-700",
+    ringClass: "bg-rose-500",
     Icon: XCircle,
   },
 };
@@ -83,7 +83,7 @@ export function PerformanceStatusHeader({
           </div>
           <h2 className="text-2xl font-semibold text-slate-900 leading-snug">{reason}</h2>
           <div className="mt-3 flex items-start gap-2 text-sm text-slate-600 min-h-[1.25rem]">
-            <Sparkles className="h-4 w-4 mt-0.5 text-[#000000] shrink-0" />
+            <Sparkles className="h-4 w-4 mt-0.5 text-[#3b82f6] shrink-0" />
             {aiLoading ? (
               <span className="inline-flex items-center gap-2 text-slate-400">
                 <Loader2 className="h-3 w-3 animate-spin" /> AI analyserar avvikelser…

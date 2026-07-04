@@ -53,10 +53,10 @@ export function TrustPanel({ companyId, actionType }: Props) {
   if (!stats) return null;
 
   return (
-    <div className="rounded-xl border border-[#C8DDF5] dark:border-[#C8DDF5] bg-neutral-100/60 dark:bg-[#000000]/[0.06] p-3">
+    <div className="rounded-xl border border-[#C8DDF5] dark:border-[#C8DDF5] bg-blue-50/60 dark:bg-[#3b82f6]/[0.06] p-3">
       <div className="flex items-center gap-2 mb-2">
-        <Shield className="h-4 w-4 text-[#000000] dark:text-[#1E3A5F]" />
-        <h4 className="text-xs font-semibold uppercase tracking-wide text-[#000000] dark:text-[#000000]">AI-historik (30 dagar)</h4>
+        <Shield className="h-4 w-4 text-[#3b82f6] dark:text-[#1E3A5F]" />
+        <h4 className="text-xs font-semibold uppercase tracking-wide text-[#3b82f6] dark:text-[#3b82f6]">AI-historik (30 dagar)</h4>
       </div>
       <div className="grid grid-cols-3 gap-2 text-center">
         <div>
@@ -73,7 +73,7 @@ export function TrustPanel({ companyId, actionType }: Props) {
         </div>
       </div>
       {stats.pattern && stats.pattern.total >= 3 && (
-        <div className="mt-2 pt-2 border-t border-black/60 dark:border-[#C8DDF5] flex items-center gap-1.5 text-[11px] text-[#000000] dark:text-[#000000]">
+        <div className="mt-2 pt-2 border-t border-blue-200/60 dark:border-[#C8DDF5] flex items-center gap-1.5 text-[11px] text-[#3b82f6] dark:text-[#3b82f6]">
           <TrendingUp className="h-3 w-3" />
           Du brukar godkänna detta ({stats.pattern.approved}/{stats.pattern.total})
         </div>

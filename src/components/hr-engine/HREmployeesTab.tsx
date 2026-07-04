@@ -8,7 +8,7 @@ interface Props {
 }
 
 const AVATAR_PALETTE = [
-  "#000000", "#5DCAA5", "#525252", "#85B7EB", "#A78BFA",
+  "#0040CC", "#5DCAA5", "#EF9F27", "#85B7EB", "#A78BFA",
   "#F09595", "#22A06B", "#0C447C", "#412402", "#475569",
 ];
 
@@ -41,7 +41,7 @@ export function HREmployeesTab({ companyId }: Props) {
         </div>
         <button
           onClick={() => navigate("/employees")}
-          className="text-[12px] px-3 py-[6px] rounded-[8px] bg-[#000000] text-[#E6F4FA]"
+          className="text-[12px] px-3 py-[6px] rounded-[8px] bg-[#0040CC] text-[#E6F4FA]"
         >
           Hantera i Anställda-modul →
         </button>

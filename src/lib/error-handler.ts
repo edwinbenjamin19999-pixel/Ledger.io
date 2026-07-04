@@ -70,13 +70,13 @@ async function trackError(errorType: string, errorMessage: string, errorStack?: 
     
     // If too many errors, show help message
     if (errorCountThisSession >= MAX_ERRORS_BEFORE_ALERT) {
-      toast.info('Har du problem? Kontakta support@bokfy.se så hjälper vi dig!', {
+      toast.info('Har du problem? Kontakta support@cogniq.se så hjälper vi dig!', {
         duration: 10000,
         action: {
           label: 'Kontakta support',
           onClick: () => {
             if (typeof window !== 'undefined') {
-              window.open('mailto:support@bokfy.se', '_blank');
+              window.open('mailto:support@cogniq.se', '_blank');
             }
           },
         },

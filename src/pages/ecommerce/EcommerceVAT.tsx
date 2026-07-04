@@ -14,8 +14,8 @@ function fmt(n: number) {
 }
 
 function getZoneColor(pct: number) {
-  if (pct < 70) return 'bg-neutral-700';
-  if (pct < 90) return 'bg-neutral-700';
+  if (pct < 70) return 'bg-emerald-500';
+  if (pct < 90) return 'bg-amber-500';
   return 'bg-red-500';
 }
 
@@ -61,7 +61,7 @@ const EcommerceVAT = () => {
       <PageHeader icon={Globe} title="Moms & OSS-rapportering" subtitle="EU-momshantering, OSS-tröskel och deklarationsunderlag" />
 
       {/* OSS threshold */}
-      <Card className={`border-border/50 ${isCritical ? 'border-red-500/50 bg-[#FCE8E8]' : isNearThreshold ? 'border-neutral-700/50 bg-[#FAEEDA]' : 'bg-card/50'}`}>
+      <Card className={`border-border/50 ${isCritical ? 'border-red-500/50 bg-[#FCE8E8]' : isNearThreshold ? 'border-amber-500/50 bg-[#FAEEDA]' : 'bg-card/50'}`}>
         <CardContent className="pt-5">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
@@ -73,7 +73,7 @@ const EcommerceVAT = () => {
             </span>
           </div>
           <div className="relative w-full h-4 bg-muted rounded-full overflow-hidden">
-            <div className="absolute left-[70%] top-0 bottom-0 w-px bg-neutral-700/30 z-10" />
+            <div className="absolute left-[70%] top-0 bottom-0 w-px bg-amber-600/30 z-10" />
             <div className="absolute left-[90%] top-0 bottom-0 w-px bg-red-600/30 z-10" />
             <div
               className={`h-full rounded-full transition-all ${getZoneColor(ossPct)} ${isNearThreshold ? 'animate-pulse' : ''}`}

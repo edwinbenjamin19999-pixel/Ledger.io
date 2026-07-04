@@ -306,7 +306,7 @@ export const TaxAgentDashboard = ({ companyId }: TaxAgentDashboardProps) => { co
                       </div>
                     </div>
                   ) : (
-                    <div className="border border-neutral-700/30 bg-[#E1F5EE] dark:bg-green-950/10 rounded-lg p-3 flex items-center gap-2">
+                    <div className="border border-green-500/30 bg-[#E1F5EE] dark:bg-green-950/10 rounded-lg p-3 flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-[#085041]" />
                       <p className="text-sm">F-skatten ligger i linje med beräknat resultat.</p>
                     </div>

@@ -166,7 +166,7 @@ export const BudgetOnboarding = ({ companyId, fiscalYear, onBudgetCreated }: Bud
       <Card className="max-w-lg mx-auto mt-12">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-lg">
-            <Sparkles className="w-5 h-5 text-[#000000]" />
+            <Sparkles className="w-5 h-5 text-[#3b82f6]" />
             AI bygger din budget
           </CardTitle>
           <CardDescription>Fråga {aiStep + 1} av {AI_QUESTIONS.length}</CardDescription>
@@ -257,10 +257,10 @@ export const BudgetOnboarding = ({ companyId, fiscalYear, onBudgetCreated }: Bud
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card className="cursor-pointer hover:border-[#000000] hover:shadow-md transition-all" onClick={() => setMethod("ai")}>
+        <Card className="cursor-pointer hover:border-[#3b82f6] hover:shadow-md transition-all" onClick={() => setMethod("ai")}>
           <CardContent className="pt-6 text-center space-y-3">
-            <div className="w-12 h-12 rounded-xl bg-[#000000]/10 flex items-center justify-center mx-auto">
-              <Sparkles className="w-6 h-6 text-[#000000]" />
+            <div className="w-12 h-12 rounded-xl bg-[#3b82f6]/10 flex items-center justify-center mx-auto">
+              <Sparkles className="w-6 h-6 text-[#3b82f6]" />
             </div>
             <h3 className="font-semibold">AI-budget</h3>
             <p className="text-xs text-muted-foreground">AI skapar hela budgeten från din historik och dina mål</p>

@@ -14,7 +14,7 @@ interface Props {
 
 const SOURCE_META = {
   manual: { label: 'Manuell', icon: Hand, className: 'bg-slate-100 text-slate-700' },
-  ai: { label: 'AI', icon: Sparkles, className: 'bg-[#EFF6FF] text-[#000000]' },
+  ai: { label: 'AI', icon: Sparkles, className: 'bg-[#EFF6FF] text-[#3b82f6]' },
   reset: { label: 'Återställd', icon: RotateCcw, className: 'bg-[#FAEEDA] text-[#7A5417]' },
 } as const;
 

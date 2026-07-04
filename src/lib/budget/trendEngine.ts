@@ -66,7 +66,7 @@ export function computeTrend(
 
 /** Convenience for KPI labels. */
 export function trendArrowColor(direction: TrendDirection): string {
-  if (direction === "up") return "text-neutral-700";
+  if (direction === "up") return "text-emerald-600";
   if (direction === "down") return "text-red-600";
   return "text-slate-400";
 }

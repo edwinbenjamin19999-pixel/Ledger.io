@@ -153,7 +153,7 @@ export const AssetCard = ({ asset, entries, bookValue, accumulated, onDispose, o
             {/* Tax depreciation */}
             {!isFinancial && (
               <div className="bg-[#EFF6FF] dark:bg-blue-950/20 rounded-lg p-3 space-y-1.5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-black dark:text-[#1E3A5F]">
+                <p className="text-xs font-semibold uppercase tracking-wider text-blue-700 dark:text-[#1E3A5F]">
                   Skattemässig avskrivning (30% degressiv)
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-xs">

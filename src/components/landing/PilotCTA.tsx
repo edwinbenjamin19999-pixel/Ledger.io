@@ -1,32 +1,39 @@
 import { ArrowRight } from "lucide-react";
 
 /**
- * MINIMALIST MONOCHROME — inverterat svart emphasis-block (spec: inversion
- * för emphasis istället för accentfärg). Vit text, mono-etikett, skarpa hörn.
+ * FLAT CTA-BLOCK — helt amber-block (posterprincip: en sektion, en färg,
+ * ett budskap). Mörk text på amber för AA-kontrast. Dekorativ cirkel i
+ * låg opacitet, ingen skugga eller gradient.
  */
 export const PilotCTA = () => {
   return (
-    <section id="pilot" className="relative overflow-hidden border-y-4 border-foreground bg-foreground py-28 text-background">
-      <div className="relative mx-auto max-w-4xl px-6 md:px-8 lg:px-12 text-center">
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-background/60">
+    <section id="pilot" className="relative overflow-hidden bg-gradient-to-br from-[#0052FF] to-[#4D7CFF] py-24">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-24 -top-24 h-[360px] w-[360px] rounded-full bg-white/10"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-20 left-[8%] h-[200px] w-[200px] rotate-12 bg-white/10"
+      />
+      <div className="relative mx-auto max-w-3xl px-6 text-center">
+        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/80">
           Pilotprogram
         </p>
-        <h2 className="mx-auto mt-6 max-w-3xl font-display text-4xl md:text-6xl font-medium leading-[1.05] tracking-tight text-background">
+        <h2 className="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight text-white">
           Vi söker utvalda pilotföretag att växa med.
         </h2>
-        <p className="mx-auto mt-6 max-w-xl font-serif text-lg leading-relaxed text-background/70">
+        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/90">
           Ansök om tidig tillgång — begränsat antal platser. Du får full
           onboarding, direktlinje till teamet och påverkar produkten.
         </p>
-        <div className="mt-10 flex justify-center">
-          <a
-            href="mailto:pilot@bokfy.se"
-            className="group inline-flex h-14 items-center gap-3 border-2 border-background bg-background px-8 font-mono text-xs uppercase tracking-widest text-foreground transition-colors duration-100 hover:bg-foreground hover:text-background focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-background focus-visible:outline-offset-[3px]"
-          >
-            Ansök om pilotplats
-            <ArrowRight className="h-4 w-4" strokeWidth={1.5} aria-hidden />
-          </a>
-        </div>
+        <a
+          href="mailto:pilot@cogniq.se"
+          className="mt-8 inline-flex h-14 items-center gap-2 rounded-xl bg-white px-8 text-base font-bold text-[#0052FF] shadow-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-2xl active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0052FF]"
+        >
+          Ansök om pilotplats
+          <ArrowRight className="h-5 w-5" aria-hidden />
+        </a>
       </div>
     </section>
   );

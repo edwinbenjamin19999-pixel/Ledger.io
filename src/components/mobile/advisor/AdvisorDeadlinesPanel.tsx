@@ -70,7 +70,7 @@ const Group = ({ title, items }: { title: string; items: DeadlineItem[] }) => (
         >
           <div className={cn(
             "h-7 w-7 rounded-lg flex items-center justify-center flex-shrink-0",
-            it.urgent ? "bg-neutral-700/20 text-neutral-300" : "bg-neutral-700/15 text-neutral-300",
+            it.urgent ? "bg-rose-500/20 text-rose-300" : "bg-amber-500/15 text-amber-300",
           )}>
             {it.urgent ? <AlertCircle className="h-3.5 w-3.5" /> : <Calendar className="h-3.5 w-3.5" />}
           </div>

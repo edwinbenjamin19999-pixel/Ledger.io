@@ -3,7 +3,7 @@
  * ==================
  * Parsar CSV-exporter från Nordnet, Avanza, SEB m.fl.
  * Användaren laddar ned filen själv från brokerns sajt (efter BankID hos brokern)
- * och importerar i Bokfy — vi slipper egen BankID-integration och kostnaden.
+ * och importerar i Cogniq — vi slipper egen BankID-integration och kostnaden.
  */
 
 export interface ParsedTx {

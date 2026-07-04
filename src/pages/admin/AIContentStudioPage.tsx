@@ -99,7 +99,7 @@ const AIContentStudioPage = () => {
       <div className="border-b border-slate-900/[0.06] bg-white">
         <div className="mx-auto max-w-[1600px] px-6 py-5">
           <div className="flex items-center gap-3">
-            <div className="rounded-xl bg-[#EFF6FF] p-2.5"><Sparkles className="h-5 w-5 text-[#000000]" /></div>
+            <div className="rounded-xl bg-[#EFF6FF] p-2.5"><Sparkles className="h-5 w-5 text-[#3b82f6]" /></div>
             <div>
               <h1 className="text-xl font-semibold text-slate-900">AI Content Studio</h1>
               <p className="text-sm text-slate-600">Generera SEO-optimerade artiklar enligt master-mallen</p>

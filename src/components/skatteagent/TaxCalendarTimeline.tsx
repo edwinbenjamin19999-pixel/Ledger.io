@@ -22,9 +22,9 @@ interface TaxCalendarTimelineProps {
 }
 
 const STATUS_COLOR: Record<MonthEvent["status"], string> = {
-  paid: "bg-neutral-700",
-  due: "bg-neutral-700",
-  overdue: "bg-neutral-700",
+  paid: "bg-emerald-500",
+  due: "bg-amber-400",
+  overdue: "bg-rose-500",
   future: "bg-slate-300",
 };
 
@@ -69,7 +69,7 @@ export function TaxCalendarTimeline({ year, ftaxLines, expectedMonthly }: TaxCal
       <div className="flex items-center justify-between mb-5">
         <div>
           <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
-            <Calendar className="w-4 h-4 text-neutral-700" />
+            <Calendar className="w-4 h-4 text-indigo-600" />
             Skattekalender {year}
           </h2>
           <p className="text-sm text-slate-500 mt-0.5">
@@ -92,8 +92,8 @@ export function TaxCalendarTimeline({ year, ftaxLines, expectedMonthly }: TaxCal
             key={e.monthIndex}
             onClick={() => setSelected(e)}
             className={cn(
-              "group relative rounded-xl border border-slate-200 p-3 text-left hover:border-neutral-300 hover:shadow-sm transition-all duration-150",
-              selected?.monthIndex === e.monthIndex && "border-neutral-700 ring-2 ring-neutral-100",
+              "group relative rounded-xl border border-slate-200 p-3 text-left hover:border-indigo-300 hover:shadow-sm transition-all duration-150",
+              selected?.monthIndex === e.monthIndex && "border-indigo-500 ring-2 ring-indigo-100",
             )}
           >
             <div className="flex items-center justify-between">

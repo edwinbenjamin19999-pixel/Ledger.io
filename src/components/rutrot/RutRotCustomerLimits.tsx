@@ -61,15 +61,15 @@ export function RutRotCustomerLimits({ settings }: { settings: RutRotSettings })
                   const isExhausted = remaining === 0;
 
                   return (
-                    <tr key={limit.id} className={cn("border-b last:border-0", isNearLimit && "bg-neutral-100/30 dark:bg-amber-950/10")}>
+                    <tr key={limit.id} className={cn("border-b last:border-0", isNearLimit && "bg-amber-50/30 dark:bg-amber-950/10")}>
                       <td className="py-2 pr-3 text-sm font-medium">{limit.customer_name || "—"}</td>
                       <td className="py-2 pr-3 text-xs font-mono text-muted-foreground">{limit.customer_personal_id}</td>
                       <td className="py-2 pr-3">
                         <span className={cn(
                           "text-[10px] font-bold px-1.5 py-0.5 rounded",
                           limit.deduction_type === "rot"
-                            ? "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]"
-                            : "bg-[#EFF6FF] text-black dark:bg-blue-900/30 dark:text-[#1E3A5F]"
+                            ? "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]"
+                            : "bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30 dark:text-[#1E3A5F]"
                         )}>
                           {limit.deduction_type.toUpperCase()}
                         </span>
@@ -128,8 +128,8 @@ export function RutRotCustomerLimits({ settings }: { settings: RutRotSettings })
                     <span className={cn(
                       "text-[9px] font-bold px-1 py-0.5 rounded",
                       limit.deduction_type === "rot"
-                        ? "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30"
-                        : "bg-[#EFF6FF] text-black dark:bg-blue-900/30"
+                        ? "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30"
+                        : "bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30"
                     )}>
                       {limit.deduction_type.toUpperCase()}
                     </span>
@@ -142,7 +142,7 @@ export function RutRotCustomerLimits({ settings }: { settings: RutRotSettings })
                   <div
                     className={cn(
                       "h-full rounded-full transition-all",
-                      pct >= 90 ? "bg-red-500" : pct >= 70 ? "bg-neutral-700" : "bg-neutral-700"
+                      pct >= 90 ? "bg-red-500" : pct >= 70 ? "bg-amber-500" : "bg-emerald-500"
                     )}
                     style={{ width: `${pct}%` }}
                   />
@@ -157,7 +157,7 @@ export function RutRotCustomerLimits({ settings }: { settings: RutRotSettings })
       {sorted.some((l) => { const max = l.deduction_type === "rot" ? ROT_MAX_PER_PERSON : RUT_MAX_PER_PERSON;
         return (max - l.total_used) < 15000 && (max - l.total_used) > 0;
       }) && (
-        <Card className="border-neutral-300/50 bg-neutral-100/50 dark:bg-amber-950/10">
+        <Card className="border-amber-300/50 bg-amber-50/50 dark:bg-amber-950/10">
           <CardContent className="p-4 space-y-2">
             <div className="flex items-center gap-2">
               <AlertTriangle className="h-4 w-4 text-[#7A5417]" />

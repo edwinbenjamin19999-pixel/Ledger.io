@@ -305,7 +305,7 @@ export const KYCOnboarding = ({ companyId, onComplete }: KYCOnboardingProps) => 
                 Skattefullmakt ingår
               </h4>
               <p className="text-sm text-muted-foreground">
-                Genom att signera ger du Bokfy fullmakt att skicka in deklarationer åt dig:
+                Genom att signera ger du Cogniq fullmakt att skicka in deklarationer åt dig:
               </p>
               <ul className="text-sm space-y-1">
                 <li className="flex items-center gap-2">
@@ -554,7 +554,7 @@ export const KYCOnboarding = ({ companyId, onComplete }: KYCOnboardingProps) => 
               {representatives.length === 0 && (
                 <Alert className="bg-[#FAEEDA] border-[#F0DDB7]">
                   <AlertCircle className="h-4 w-4 text-[#7A5417]" />
-                  <AlertDescription className="text-sm text-[#7A5417] dark:text-neutral-300">
+                  <AlertDescription className="text-sm text-[#7A5417] dark:text-amber-200">
                     Lägg till minst en företrädare för att fortsätta
                   </AlertDescription>
                 </Alert>

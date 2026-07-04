@@ -1,7 +1,7 @@
 /**
  * Semantic status styles for scenario / forecast / follow-up surfaces.
  *
- * Always prefer these helpers over hard-coded `bg-neutral-100` / `text-neutral-700` etc.
+ * Always prefer these helpers over hard-coded `bg-emerald-50` / `text-rose-700` etc.
  * They route through the design-system tokens defined in `index.css` so the
  * components automatically respect light / dark / brand themes.
  */

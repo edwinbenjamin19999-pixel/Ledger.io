@@ -14,7 +14,7 @@ import { useChartTheme } from "@/hooks/useChartTheme";
 
 const BLOCK_COLORS: Record<string, string> = { billable: "bg-[#E1F5EE] border-[#BFE6D6] text-[#085041] dark:text-[#1D9E75]",
   internal: "bg-muted border-border text-muted-foreground",
-  meeting: "bg-[#EFF6FF] border-[#C8DDF5] text-black dark:text-[#1E3A5F]",
+  meeting: "bg-[#EFF6FF] border-[#C8DDF5] text-blue-700 dark:text-[#1E3A5F]",
 };
 
 export function ProductivityDashboard() {
@@ -169,7 +169,7 @@ export function ProductivityDashboard() {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm flex items-center gap-1.5">
-              <Sparkles className="h-4 w-4 text-[#000000]" />
+              <Sparkles className="h-4 w-4 text-[#3b82f6]" />
               Faktureringsgrad — 12 veckors trend
             </CardTitle>
           </CardHeader>
@@ -185,7 +185,7 @@ export function ProductivityDashboard() {
                     formatter={(v: number) => [`${v}%`, "Faktureringsgrad"]}
                   />
                   <ReferenceLine y={80} stroke="hsl(var(--muted-foreground))" strokeDasharray="4 4" label={{ value: "Mål 80%", position: "right", className: "text-[10px] fill-muted-foreground" }} />
-                  <Line type="monotone" dataKey="rate" stroke="#000000" strokeWidth={2} dot={{ fill: "#000000", r: 3 }} />
+                  <Line type="monotone" dataKey="rate" stroke="#3b82f6" strokeWidth={2} dot={{ fill: "#3b82f6", r: 3 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -213,7 +213,7 @@ export function ProductivityDashboard() {
                   />
                   <Bar dataKey="avgHours" radius={[6, 6, 0, 0]}>
                     {dayPerformance.map((d, i) => (
-                      <Cell key={i} fill={d.billableRate >= 80 ? "#000000" : d.billableRate >= 60 ? "#525252" : "hsl(var(--muted-foreground))"} />
+                      <Cell key={i} fill={d.billableRate >= 80 ? "#10b981" : d.billableRate >= 60 ? "#f59e0b" : "hsl(var(--muted-foreground))"} />
                     ))}
                   </Bar>
                 </BarChart>
@@ -313,7 +313,7 @@ export function ProductivityDashboard() {
           </div>
 
           <div className="mt-3 flex gap-4 text-[11px] text-muted-foreground">
-            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-neutral-700" /> Fakturerbar</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-500" /> Fakturerbar</span>
             <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-muted-foreground/30" /> Intern/admin</span>
             <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-blue-500" /> Möten</span>
           </div>
@@ -324,7 +324,7 @@ export function ProductivityDashboard() {
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-sm flex items-center gap-1.5">
-            <Sparkles className="h-4 w-4 text-[#000000]" />
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
             AI Produktivitetsinsikter
           </CardTitle>
         </CardHeader>
@@ -400,7 +400,7 @@ export function ProductivityDashboard() {
           </div>
           <div className="flex gap-2 flex-shrink-0">
             <Button size="sm" variant="outline" className="text-xs">Inte nu</Button>
-            <Button size="sm" className="text-xs bg-[#000000] hover:bg-[#000000]/90 text-foreground">Aktivera</Button>
+            <Button size="sm" className="text-xs bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground">Aktivera</Button>
           </div>
         </CardContent>
       </Card>

@@ -46,7 +46,7 @@ export function OutputSurfaceMap() {
           <button
             key={s.id}
             onClick={() => navigate(s.route)}
-            className="group flex items-start justify-between gap-3 p-3 rounded-xl border border-slate-200/70 bg-white hover:border-[#000000] hover:bg-neutral-100/30 transition-colors text-left"
+            className="group flex items-start justify-between gap-3 p-3 rounded-xl border border-slate-200/70 bg-white hover:border-[#3b82f6] hover:bg-blue-50/30 transition-colors text-left"
           >
             <div className="min-w-0">
               <div className="text-sm font-medium text-slate-900 truncate">{s.destination}</div>
@@ -66,7 +66,7 @@ export function OutputSurfaceMap() {
                 <span className="text-[10px] text-slate-500">{s.agent}</span>
               </div>
             </div>
-            <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#000000] flex-shrink-0 mt-1" />
+            <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#3b82f6] flex-shrink-0 mt-1" />
           </button>
         ))}
       </div>

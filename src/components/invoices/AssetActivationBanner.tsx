@@ -66,9 +66,9 @@ export const AssetActivationBanner = ({ invoiceId, totalAmount, threshold = 1000
   if (!candidate || dismissed) return null;
 
   return (
-    <div className="mx-4 sm:mx-8 mt-4 rounded-[12px] border-[0.5px] border-[#000000]/30 bg-[#000000]/5 p-4">
+    <div className="mx-4 sm:mx-8 mt-4 rounded-[12px] border-[0.5px] border-[#3b82f6]/30 bg-[#3b82f6]/5 p-4">
       <div className="flex items-start gap-3">
-        <Sparkles className="w-5 h-5 text-[#000000] mt-0.5 shrink-0" />
+        <Sparkles className="w-5 h-5 text-[#3b82f6] mt-0.5 shrink-0" />
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium text-foreground">
             Denna kostnad verkar vara en investering snarare än en direkt kostnad
@@ -80,7 +80,7 @@ export const AssetActivationBanner = ({ invoiceId, totalAmount, threshold = 1000
           <div className="flex gap-2 mt-3">
             <Button
               size="sm"
-              className="h-8 bg-[#000000] hover:bg-[#000000] text-white"
+              className="h-8 bg-[#3b82f6] hover:bg-[#0052FF] text-white"
               onClick={() =>
                 navigate(
                   `/depreciation?fromInvoice=${invoiceId}&name=${encodeURIComponent(

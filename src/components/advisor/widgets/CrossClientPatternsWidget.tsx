@@ -50,9 +50,9 @@ export const CrossClientPatternsWidget = () => {
             const Icon = ICON[ins.kind] ?? Sparkles;
             const tone =
               ins.severity === "critical"
-                ? "border-[#F4C8C8] bg-neutral-100/50"
+                ? "border-[#F4C8C8] bg-rose-50/50"
                 : ins.severity === "warning"
-                  ? "border-[#F0DDB7] bg-neutral-100/50"
+                  ? "border-[#F0DDB7] bg-amber-50/50"
                   : "border-[#E2E8F0] bg-[#F8FAFC]";
             return (
               <button

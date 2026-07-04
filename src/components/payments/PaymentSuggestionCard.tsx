@@ -66,7 +66,7 @@ export function PaymentSuggestionCard(props: Props) {
       <div className="flex items-center justify-between px-5 py-3 border-b border-slate-100">
         <div className="flex items-center gap-2">
           <div className="p-1.5 rounded-md bg-[#EFF6FF]">
-            <Sparkles className="h-4 w-4 text-[#000000]" />
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
           </div>
           <div>
             <p className="text-sm font-semibold text-slate-900">AI Treasury-förslag</p>
@@ -85,8 +85,8 @@ export function PaymentSuggestionCard(props: Props) {
                 <span className={cn(
                   "p-1.5 rounded-md",
                   s.tone === "rose" && "bg-[#FCE8E8] text-[#7A1A1A]",
-                  s.tone === "cyan" && "bg-[#EFF6FF] text-[#000000]",
-                  s.tone === "blue" && "bg-[#EFF6FF] text-black",
+                  s.tone === "cyan" && "bg-[#EFF6FF] text-[#3b82f6]",
+                  s.tone === "blue" && "bg-[#EFF6FF] text-blue-600",
                 )}>
                   <Icon className="h-3.5 w-3.5" />
                 </span>
@@ -95,8 +95,8 @@ export function PaymentSuggestionCard(props: Props) {
               <p className={cn(
                 "text-xl font-semibold tabular-nums",
                 s.tone === "rose" && "text-[#7A1A1A]",
-                s.tone === "cyan" && "text-[#000000]",
-                s.tone === "blue" && "text-black",
+                s.tone === "cyan" && "text-[#3b82f6]",
+                s.tone === "blue" && "text-blue-600",
               )}>
                 {fmt(s.amount)} kr
               </p>
@@ -133,7 +133,7 @@ function ModeToggle({ mode, onChange }: { mode: "off" | "suggest" | "auto"; onCh
           onClick={() => onChange(m.v)}
           className={cn(
             "px-2.5 py-1 rounded-md transition-colors",
-            mode === m.v ? "bg-white text-[#000000] shadow-sm font-medium" : "text-slate-600 hover:text-slate-900",
+            mode === m.v ? "bg-white text-[#3b82f6] shadow-sm font-medium" : "text-slate-600 hover:text-slate-900",
           )}
         >
           {m.l}

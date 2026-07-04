@@ -14,7 +14,7 @@ const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: 
 
 export default function WhiteLabelLandingPage() {
   return (
-    <div className="min-h-screen bg-[#000000]">
+    <div className="min-h-screen bg-[#0F172A]">
       <Header />
       <main>
         <WLHero />

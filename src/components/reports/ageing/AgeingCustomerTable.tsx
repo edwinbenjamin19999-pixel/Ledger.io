@@ -152,7 +152,7 @@ export const AgeingCustomerTable = ({
                         className={cn(
                           "px-3 py-3 text-right tabular-nums font-bold",
                           g.overdue > 0
-                            ? "bg-neutral-100/40 dark:bg-rose-950/20 text-[#7A1A1A] dark:text-[#C73838]"
+                            ? "bg-rose-50/40 dark:bg-rose-950/20 text-[#7A1A1A] dark:text-[#C73838]"
                             : "text-slate-400",
                         )}
                       >
@@ -189,7 +189,7 @@ export const AgeingCustomerTable = ({
                                         type,
                                       );
                                     }}
-                                    className="inline-flex items-center gap-1 text-[11px] h-6 px-2 rounded-md border border-[#C8DDF5] dark:border-[#000000]/60 text-[#000000] dark:text-[#1E3A5F] hover:bg-[#EFF6FF] dark:hover:bg-blue-950/30 transition-colors"
+                                    className="inline-flex items-center gap-1 text-[11px] h-6 px-2 rounded-md border border-[#C8DDF5] dark:border-[#3b82f6]/60 text-[#3b82f6] dark:text-[#1E3A5F] hover:bg-[#EFF6FF] dark:hover:bg-blue-950/30 transition-colors"
                                   >
                                     <Send className="w-2.5 h-2.5" />
                                     Påminn
@@ -208,7 +208,7 @@ export const AgeingCustomerTable = ({
                                   className={cn(
                                     "text-[10px]",
                                     days > 90
-                                      ? "border-neutral-300 text-[#7A1A1A]"
+                                      ? "border-rose-300 text-[#7A1A1A]"
                                       : days > 60
                                         ? "border-[#F0DDB7] text-[#7A5417]"
                                         : "border-slate-200 text-slate-500",

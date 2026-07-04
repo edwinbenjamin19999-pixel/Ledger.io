@@ -89,7 +89,7 @@ export function AutoPaySKVSettings({ companyId }: { companyId: string | null | u
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-base">
-          <ShieldCheck className="h-4 w-4 text-[#000000]" />
+          <ShieldCheck className="h-4 w-4 text-[#3b82f6]" />
           AI-autobetalning av Skatteverket
         </CardTitle>
       </CardHeader>
@@ -145,7 +145,7 @@ export function AutoPaySKVSettings({ companyId }: { companyId: string | null | u
         )}
 
         <div className="flex justify-end pt-2">
-          <Button onClick={save} disabled={saving} className="bg-[#000000] hover:bg-[#000000]">
+          <Button onClick={save} disabled={saving} className="bg-[#3b82f6] hover:bg-[#3b82f6]">
             {saving && <Loader2 className="h-3.5 w-3.5 mr-1 animate-spin" />} Spara
           </Button>
         </div>

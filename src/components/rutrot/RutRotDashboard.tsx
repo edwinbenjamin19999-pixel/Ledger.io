@@ -37,7 +37,7 @@ export function RutRotDashboard({ settings }: { settings: RutRotSettings }) { co
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           {settings.rot_enabled && <Hammer className="h-6 w-6 text-[#085041]" />}
-          {settings.rut_enabled && <Home className="h-6 w-6 text-black" />}
+          {settings.rut_enabled && <Home className="h-6 w-6 text-blue-500" />}
           <div>
             <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
               {settings.rut_enabled && settings.rot_enabled ? "RUT/ROT" : settings.rut_enabled ? "RUT" : "ROT"}-avdrag
@@ -49,7 +49,7 @@ export function RutRotDashboard({ settings }: { settings: RutRotSettings }) { co
         </div>
         <button
           onClick={() => setShowNew(true)}
-          className="bg-[#0F1F3D] text-white rounded-xl px-5 py-2.5 font-semibold shadow-sm hover:shadow-md hover:from-neutral-700 hover:to-orange-600 transition-all flex items-center gap-1.5"
+          className="bg-[#0F1F3D] text-white rounded-xl px-5 py-2.5 font-semibold shadow-sm hover:shadow-md hover:from-amber-600 hover:to-orange-600 transition-all flex items-center gap-1.5"
         >
           <Plus className="h-4 w-4" />
           Ny RUT/ROT-faktura
@@ -96,7 +96,7 @@ export function RutRotDashboard({ settings }: { settings: RutRotSettings }) { co
 
       {/* Risk zone alert */}
       {riskCustomers.length > 0 && (
-        <div className="p-3 rounded-lg border border-neutral-300/50 bg-neutral-100/50 dark:bg-amber-950/10 space-y-1">
+        <div className="p-3 rounded-lg border border-amber-300/50 bg-amber-50/50 dark:bg-amber-950/10 space-y-1">
           <div className="flex items-center gap-2">
             <AlertTriangle className="h-4 w-4 text-[#7A5417] flex-shrink-0" />
             <span className="text-sm font-medium">Kunder nära avdragstaket</span>
@@ -115,19 +115,19 @@ export function RutRotDashboard({ settings }: { settings: RutRotSettings }) { co
       <Tabs defaultValue="invoices">
         <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm p-1 inline-flex gap-1">
           <TabsList className="bg-transparent p-0 h-auto">
-            <TabsTrigger value="invoices" className="data-[state=active]:bg-neutral-700 data-[state=active]:text-white rounded-xl px-4 py-2 text-sm font-semibold data-[state=active]:shadow-sm gap-1.5">
+            <TabsTrigger value="invoices" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white rounded-xl px-4 py-2 text-sm font-semibold data-[state=active]:shadow-sm gap-1.5">
               <FileText className="h-3.5 w-3.5" />
               Fakturor
             </TabsTrigger>
-            <TabsTrigger value="limits" className="data-[state=active]:bg-neutral-700 data-[state=active]:text-white rounded-xl px-4 py-2 text-sm font-semibold data-[state=active]:shadow-sm gap-1.5">
+            <TabsTrigger value="limits" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white rounded-xl px-4 py-2 text-sm font-semibold data-[state=active]:shadow-sm gap-1.5">
               <Users className="h-3.5 w-3.5" />
               Kundgränser
             </TabsTrigger>
-            <TabsTrigger value="reports" className="data-[state=active]:bg-neutral-700 data-[state=active]:text-white rounded-xl px-4 py-2 text-sm font-semibold data-[state=active]:shadow-sm gap-1.5">
+            <TabsTrigger value="reports" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white rounded-xl px-4 py-2 text-sm font-semibold data-[state=active]:shadow-sm gap-1.5">
               <BarChart3 className="h-3.5 w-3.5" />
               Rapporter
             </TabsTrigger>
-            <TabsTrigger value="advisor" className="data-[state=active]:bg-neutral-700 data-[state=active]:text-white rounded-xl px-4 py-2 text-sm font-semibold data-[state=active]:shadow-sm gap-1.5">
+            <TabsTrigger value="advisor" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white rounded-xl px-4 py-2 text-sm font-semibold data-[state=active]:shadow-sm gap-1.5">
               <Sparkles className="h-3.5 w-3.5" />
               AI-rådgivare
             </TabsTrigger>

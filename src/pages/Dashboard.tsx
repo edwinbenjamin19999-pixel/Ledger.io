@@ -256,12 +256,12 @@ const Dashboard = () => {
     if (!company) return;
     setMandateLoading(true);
     try {
-      const mandateText = `FULLMAKT FÖR SKATTEÄRENDEN - Bokfy AB får företräda ${company.name} hos Skatteverket för ${mandateType === 'full' ? 'AGI och moms' : mandateType === 'agi' ? 'AGI' : 'moms'}deklarationer. Accepterat ${new Date().toISOString()}`;
+      const mandateText = `FULLMAKT FÖR SKATTEÄRENDEN - Cogniq AB får företräda ${company.name} hos Skatteverket för ${mandateType === 'full' ? 'AGI och moms' : mandateType === 'agi' ? 'AGI' : 'moms'}deklarationer. Accepterat ${new Date().toISOString()}`;
       const { data, error } = await supabase.functions.invoke('register-tax-mandate', {
         body: { company_id: company.id, mandate_type: mandateType, consent_text: mandateText, consent_ip_address: null },
       });
       if (error) throw error;
-      toast.success('Fullmakt registrerad!', { description: data?.note || 'Bokfy kan nu skicka deklarationer till Skatteverket för din räkning.' });
+      toast.success('Fullmakt registrerad!', { description: data?.note || 'Cogniq kan nu skicka deklarationer till Skatteverket för din räkning.' });
       setShowMandateConsent(false);
       loadCompanies();
     } catch (error: any) {

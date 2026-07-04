@@ -9,7 +9,7 @@ export const PayrollTimeline = ({ payrollRuns }: PayrollTimelineProps) => { cons
 
   const statusConfig: Record<string, { icon: any; color: string; label: string }> = { approved: { icon: CheckCircle, color: "text-[#085041]", label: "Godkänd" },
     draft: { icon: Clock, color: "text-[#7A5417]", label: "Utkast" },
-    pending: { icon: FileText, color: "text-black", label: "Väntar" },
+    pending: { icon: FileText, color: "text-blue-500", label: "Väntar" },
   };
 
   // Show upcoming deadlines
@@ -41,7 +41,7 @@ export const PayrollTimeline = ({ payrollRuns }: PayrollTimelineProps) => { cons
               return (
                 <div
                   key={i}
-                  className={`flex-shrink-0 border rounded-lg p-3 min-w-[160px] ${ isPast ? "bg-[#E1F5EE] border-[#BFE6D6] dark:bg-green-950/20 dark:border-neutral-700" : "bg-muted/30"
+                  className={`flex-shrink-0 border rounded-lg p-3 min-w-[160px] ${ isPast ? "bg-[#E1F5EE] border-[#BFE6D6] dark:bg-green-950/20 dark:border-green-800" : "bg-muted/30"
                   }`}
                 >
                   <div className="flex items-center gap-2 mb-1">

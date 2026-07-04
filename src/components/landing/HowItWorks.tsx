@@ -39,13 +39,13 @@ export const HowItWorks = () => {
   return (
     <section id="how-it-works" className="bg-gray-100 py-24 px-6 scroll-mt-20">
       <div className="mx-auto max-w-5xl">
-        <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#000000]">
+        <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
           Så här fungerar det
         </p>
-        <h2 className="mb-4 text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#000000]">
+        <h2 className="mb-4 text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F172A]">
           Bokföring som sköter sig själv.
         </h2>
-        <p className="mb-16 text-center text-base text-[#000000]/60">
+        <p className="mb-16 text-center text-base text-[#0F172A]/60">
           Tre steg. Inga förkunskaper. Alltid korrekt.
         </p>
 
@@ -55,16 +55,16 @@ export const HowItWorks = () => {
               key={n}
               className="relative rounded-lg bg-white p-8 transition-transform duration-200 hover:scale-[1.02]"
             >
-              <div className="absolute -top-4 left-8 flex h-9 w-9 items-center justify-center rounded-full bg-[#000000] text-sm font-bold text-white">
+              <div className="absolute -top-4 left-8 flex h-9 w-9 items-center justify-center rounded-full bg-[#0052FF] text-sm font-bold text-white">
                 {n}
               </div>
-              <div className="mb-5 mt-2 flex h-12 w-12 items-center justify-center rounded-md bg-neutral-100 text-[#000000]">
+              <div className="mb-5 mt-2 flex h-12 w-12 items-center justify-center rounded-md bg-blue-50 text-[#0052FF]">
                 <Icon className="h-6 w-6" strokeWidth={2.5} aria-hidden />
               </div>
-              <h3 className="mb-2 text-lg font-bold text-[#000000]">{title}</h3>
-              <p className="text-sm leading-relaxed text-[#000000]/60">{body}</p>
+              <h3 className="mb-2 text-lg font-bold text-[#0F172A]">{title}</h3>
+              <p className="text-sm leading-relaxed text-[#0F172A]/60">{body}</p>
               {example && (
-                <div className="mt-4 rounded-md bg-[#000000] p-3 font-mono text-[11px] text-neutral-300">
+                <div className="mt-4 rounded-md bg-[#0F172A] p-3 font-mono text-[11px] text-emerald-300">
                   {example}
                 </div>
               )}
@@ -72,8 +72,8 @@ export const HowItWorks = () => {
           ))}
         </div>
 
-        <p className="mt-12 text-center text-xs font-medium text-[#000000]/50">
-          Genomsnittlig tid för att bokföra en transaktion med Bokfy: under 3 sekunder.
+        <p className="mt-12 text-center text-xs font-medium text-[#0F172A]/50">
+          Genomsnittlig tid för att bokföra en transaktion med Cogniq: under 3 sekunder.
         </p>
       </div>
     </section>

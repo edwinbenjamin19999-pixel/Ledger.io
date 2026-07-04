@@ -4,13 +4,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, Menu, X } from "lucide-react";
 
 interface HeaderProps {
-  /** Behålls för bakåtkompatibilitet — flat-headern är alltid solid vit. */
+  /** Behålls för bakåtkompatibilitet. */
   lightBg?: boolean;
 }
 
 /**
- * FLAT HEADER — solitt vitt block, ingen transparens eller blur.
- * Skarp kant mot innehållet vid scroll (border, inte skugga).
+ * MINIMALIST MODERN HEADER — halvtransparent vit med backdrop-blur,
+ * gradient på wordmarkets senare del och gradient-CTA. Subtil skugga
+ * först vid scroll.
  */
 export const Header = (_props: HeaderProps = {}) => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,93 +33,71 @@ export const Header = (_props: HeaderProps = {}) => {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full h-[60px] bg-white transition-colors duration-200 ${
-        scrolled ? "border-b-2 border-gray-100" : "border-b-2 border-transparent"
+      className={`fixed top-0 z-50 h-[60px] w-full bg-white/85 backdrop-blur-md transition-shadow duration-300 ${
+        scrolled ? "shadow-sm border-b border-border" : "border-b border-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-0">
-          <span className="text-xl font-extrabold tracking-tight text-[#000000]">Bok</span>
-          <span className="text-xl font-extrabold tracking-tight text-primary">fy</span>
+      <div className="container mx-auto flex h-full items-center justify-between px-4 sm:px-6">
+        {/* Logo — gradient-signatur på "niq" */}
+        <Link to="/" className="flex items-center gap-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2">
+          <span className="text-xl font-extrabold tracking-tight text-foreground">Cog</span>
+          <span className="bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] bg-clip-text text-xl font-extrabold tracking-tight text-transparent">
+            niq
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => {
-            const isAnchor = link.href.startsWith("#");
-            const cls =
-              "text-sm font-medium text-[#000000]/70 hover:text-primary transition-colors duration-200";
-            return isAnchor ? (
-              <a key={link.label} href={link.href} className={cls}>
-                {link.label}
-              </a>
-            ) : (
-              <Link key={link.label} to={link.href} className={cls}>
-                {link.label}
-              </Link>
-            );
-          })}
+        <nav className="hidden items-center gap-6 md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              to={link.href}
+              className="text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => navigate("/auth")}
-            className="text-sm text-[#000000]/70 hover:text-[#000000]"
-          >
+        <div className="hidden items-center gap-3 md:flex">
+          <Button variant="ghost" size="sm" onClick={() => navigate("/auth")} className="text-sm">
             Logga in
           </Button>
-          <Button size="sm" onClick={() => navigate("/auth")} className="text-sm h-9 gap-1.5">
+          <Button size="sm" onClick={() => navigate("/auth")} className="group h-9 gap-1.5 text-sm">
             Kom igång gratis
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden />
           </Button>
         </div>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 text-[#000000] transition-colors"
+          className="rounded-md p-2 text-foreground transition-colors md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF]"
           aria-label={mobileOpen ? "Stäng meny" : "Öppna meny"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
         >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileOpen ? <X className="h-5 w-5" aria-hidden /> : <Menu className="h-5 w-5" aria-hidden />}
         </button>
       </div>
 
-      {/* Mobile dropdown — solitt block, tjock kant */}
+      {/* Mobile dropdown */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-b-2 border-gray-100 px-4 py-4 space-y-3">
-          {navLinks.map((link) => {
-            const isAnchor = link.href.startsWith("#");
-            const cls =
-              "block text-sm font-medium text-[#000000]/70 hover:text-primary transition-colors";
-            return isAnchor ? (
-              <a
-                key={link.label}
-                href={link.href}
-                className={cls}
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </a>
-            ) : (
-              <Link
-                key={link.label}
-                to={link.href}
-                className={cls}
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+        <div className="space-y-3 border-b border-border bg-white/95 px-4 py-4 backdrop-blur-md md:hidden">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              to={link.href}
+              className="block text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setMobileOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
           <Button
             size="sm"
             onClick={() => { navigate("/auth"); setMobileOpen(false); }}
-            className="w-full h-10 text-sm"
+            className="h-11 w-full text-sm"
           >
             Kom igång gratis
           </Button>

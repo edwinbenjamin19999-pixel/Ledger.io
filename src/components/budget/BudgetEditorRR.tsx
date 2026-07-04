@@ -247,33 +247,33 @@ export const BudgetEditorRR = ({ rows, onCellChange, isLocked, driverRR, budgetV
           {
             label: "Nettoomsättning",
             value: formatSEK(annualRevenue),
-            bg: "linear-gradient(135deg, #1e3a5f 0%, #000000 100%)",
+            bg: "linear-gradient(135deg, #1e3a5f 0%, #0052FF 100%)",
             labelColor: "text-blue-200",
             sub: "Helår prognos",
           },
           {
             label: "Bruttomarginal",
             value: `${grossMargin.toFixed(1)}%`,
-            bg: "linear-gradient(135deg, #78350f 0%, #525252 100%)",
-            labelColor: "text-neutral-300",
+            bg: "linear-gradient(135deg, #78350f 0%, #f59e0b 100%)",
+            labelColor: "text-amber-200",
             sub: `Bruttovinst: ${formatSEK(grossProfit)}`,
           },
           {
             label: "EBIT (Rörelseresultat)",
             value: formatSEK(ebit),
             bg: "linear-gradient(135deg, #3b0764 0%, #7c3aed 100%)",
-            labelColor: "text-neutral-300",
+            labelColor: "text-violet-200",
             sub: `Rörelsemarginal ${ebitMargin.toFixed(1)}%`,
           },
           {
             label: "Årets resultat",
             value: formatSEK(netResult),
             bg: netResult > 0
-              ? "linear-gradient(135deg, #064e3b 0%, #000000 100%)"
+              ? "linear-gradient(135deg, #064e3b 0%, #10b981 100%)"
               : netResult < 0
-              ? "linear-gradient(135deg, #4c0519 0%, #525252 100%)"
+              ? "linear-gradient(135deg, #4c0519 0%, #e11d48 100%)"
               : "linear-gradient(135deg, #0f172a 0%, #334155 100%)",
-            labelColor: netResult > 0 ? "text-neutral-300" : netResult < 0 ? "text-neutral-300" : "text-slate-300",
+            labelColor: netResult > 0 ? "text-emerald-200" : netResult < 0 ? "text-rose-200" : "text-slate-300",
             sub: `Nettomarginal ${netMargin.toFixed(1)}%`,
           },
         ].map(card => (
@@ -411,20 +411,20 @@ const COMPARISON_ROWS: CompRow[] = [
 ];
 
 function getCompRowClass(tier: RowTier, key: string): string {
-  if (tier === "result") return "bg-neutral-100/50 dark:bg-emerald-950/10 font-black text-base";
+  if (tier === "result") return "bg-emerald-50/50 dark:bg-emerald-950/10 font-black text-base";
   if (tier === "milestone") {
-    if (key.includes("gross")) return "bg-neutral-100/50 dark:bg-indigo-950/10 font-bold border-l-4 border-l-indigo-400 dark:border-l-indigo-500";
-    if (key.includes("ebit") && !key.includes("ebt")) return "bg-neutral-100/50 dark:bg-violet-950/10 font-bold border-l-4 border-l-violet-400 dark:border-l-violet-500";
+    if (key.includes("gross")) return "bg-indigo-50/50 dark:bg-indigo-950/10 font-bold border-l-4 border-l-indigo-400 dark:border-l-indigo-500";
+    if (key.includes("ebit") && !key.includes("ebt")) return "bg-violet-50/50 dark:bg-violet-950/10 font-bold border-l-4 border-l-violet-400 dark:border-l-violet-500";
     return "bg-slate-50 dark:bg-slate-800/30 font-bold";
   }
   return "hover:bg-slate-50/80 dark:hover:bg-slate-800/30";
 }
 
 function getStickyCompBg(tier: RowTier, key: string): string {
-  if (tier === "result") return "bg-neutral-100/50 dark:bg-emerald-950/10";
+  if (tier === "result") return "bg-emerald-50/50 dark:bg-emerald-950/10";
   if (tier === "milestone") {
-    if (key.includes("gross")) return "bg-neutral-100/50 dark:bg-indigo-950/10";
-    if (key.includes("ebit") && !key.includes("ebt")) return "bg-neutral-100/50 dark:bg-violet-950/10";
+    if (key.includes("gross")) return "bg-indigo-50/50 dark:bg-indigo-950/10";
+    if (key.includes("ebit") && !key.includes("ebt")) return "bg-violet-50/50 dark:bg-violet-950/10";
     return "bg-slate-50 dark:bg-slate-800/30";
   }
   return "bg-white dark:bg-card";
@@ -463,7 +463,7 @@ function ComparisonTable({ rrPerMonth }: { rrPerMonth: any[] }) {
                 <React.Fragment key={m.key}>
                   <th className="text-[10px] text-slate-400 text-center px-1 py-1.5 font-medium">Budget</th>
                   <th className="text-[10px] text-slate-400 text-center px-1 py-1.5 font-medium">Utfall</th>
-                  <th className="text-[10px] font-semibold text-center px-1 py-1.5 text-neutral-700">Δ%</th>
+                  <th className="text-[10px] font-semibold text-center px-1 py-1.5 text-indigo-400">Δ%</th>
                 </React.Fragment>
               ))}
             </tr>
@@ -541,11 +541,11 @@ function ForecastTable({ rrPerMonth, rrRows }: { rrPerMonth: any[]; rrRows: Budg
                 )}>
                   {m.label}
                   {i === currentMonth && (
-                    <div className="absolute -bottom-0 left-0 right-0 text-[8px] text-neutral-300 font-normal normal-case tracking-normal">← Utfall | Prognos →</div>
+                    <div className="absolute -bottom-0 left-0 right-0 text-[8px] text-indigo-300 font-normal normal-case tracking-normal">← Utfall | Prognos →</div>
                   )}
                 </th>
               ))}
-              <th className="text-center px-2 py-3 border-l border-slate-700 text-neutral-300 font-semibold text-xs uppercase tracking-wider bg-neutral-700 dark:bg-indigo-950">
+              <th className="text-center px-2 py-3 border-l border-slate-700 text-indigo-200 font-semibold text-xs uppercase tracking-wider bg-indigo-900 dark:bg-indigo-950">
                 Prognos helår
               </th>
             </tr>
@@ -580,8 +580,8 @@ function ForecastTable({ rrPerMonth, rrRows }: { rrPerMonth: any[]; rrRows: Budg
                     );
                   })}
                   <td className={cn(
-                    "text-right px-3 py-2.5 tabular-nums font-mono font-bold border-l border-[#C8DDF5] dark:border-neutral-700",
-                    "bg-[#EFF6FF] dark:bg-indigo-950/30 text-neutral-700 dark:text-neutral-300"
+                    "text-right px-3 py-2.5 tabular-nums font-mono font-bold border-l border-[#C8DDF5] dark:border-indigo-800",
+                    "bg-[#EFF6FF] dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300"
                   )}>
                     {Math.abs(helaar) < 1 ? <span className="text-slate-300 dark:text-slate-600">—</span> : formatSEK(Math.round(helaar))}
                   </td>

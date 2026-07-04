@@ -10,7 +10,7 @@ export function DSAISpark({ className, size = 18 }: { className?: string; size?:
   return (
     <span
       className={cn(
-        "inline-flex items-center justify-center rounded-full flex-shrink-0 bg-[#000000]",
+        "inline-flex items-center justify-center rounded-full flex-shrink-0 bg-[#0040CC]",
         className
       )}
       style={{ width: size, height: size }}
@@ -60,7 +60,7 @@ export function DSAIWarningCard({ className, children, ...rest }: React.HTMLAttr
   return (
     <div
       className={cn(
-        "bg-[#FAEEDA] border-[0.5px] border-[#525252] rounded-[12px] p-[10px]",
+        "bg-[#FAEEDA] border-[0.5px] border-[#EF9F27] rounded-[12px] p-[10px]",
         className
       )}
       {...rest}
@@ -90,7 +90,7 @@ export function DSAIBadge({ className, ...rest }: React.HTMLAttributes<HTMLSpanE
  * ============================================================ */
 export function DSConfBar({ score, className }: { score: number; className?: string }) {
   const pct = Math.max(0, Math.min(100, Math.round(score)));
-  const fill = pct >= 80 ? "bg-[#1D9E75]" : pct >= 50 ? "bg-[#525252]" : "bg-[#E24B4A]";
+  const fill = pct >= 80 ? "bg-[#1D9E75]" : pct >= 50 ? "bg-[#EF9F27]" : "bg-[#E24B4A]";
   const text = pct >= 80 ? "text-[#0F6E56]" : pct >= 50 ? "text-[#633806]" : "text-[#791F1F]";
   return (
     <div className={cn("flex items-center gap-[5px]", className)}>

@@ -13,7 +13,7 @@ export function KPICardHeader({ label, description, alert }: Props) {
     <div className="flex items-center justify-between gap-2">
       <div className="flex items-center gap-2 min-w-0">
         {alert && <AlertTriangle className="h-4 w-4 text-[#7A1A1A] shrink-0" />}
-        <h3 className={cn("text-sm font-medium tracking-wide truncate", alert ? "text-[#7A1A1A] dark:text-neutral-300" : "text-muted-foreground")}>
+        <h3 className={cn("text-sm font-medium tracking-wide truncate", alert ? "text-[#7A1A1A] dark:text-rose-300" : "text-muted-foreground")}>
           {label}
         </h3>
       </div>

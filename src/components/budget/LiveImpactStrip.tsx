@@ -20,7 +20,7 @@ export function LiveImpactStrip({ rr, kf, metrics, realism, baseline }: Props) {
   const cashΔ = baseline ? cash - baseline.cash : 0;
   const runwayΔ = baseline && runway != null && baseline.runway != null ? runway - baseline.runway : 0;
 
-  const realismDot = realism.status === "ok" ? "bg-neutral-700" : realism.status === "warning" ? "bg-neutral-700" : "bg-red-500";
+  const realismDot = realism.status === "ok" ? "bg-emerald-500" : realism.status === "warning" ? "bg-amber-500" : "bg-red-500";
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">

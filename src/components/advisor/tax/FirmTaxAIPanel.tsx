@@ -114,7 +114,7 @@ export function FirmTaxAIPanel({ rows, onAction }: Props) {
       </div>
 
       {visible.length === 0 ? (
-        <div className="rounded-2xl bg-[#E1F5EE] ring-1 ring-neutral-300 px-3 py-3 flex items-center gap-2">
+        <div className="rounded-2xl bg-[#E1F5EE] ring-1 ring-emerald-200 px-3 py-3 flex items-center gap-2">
           <CheckCircle2 className="h-4 w-4 text-[#085041]" />
           <div className="text-xs font-semibold text-[#085041]">Portföljen ser bra ut ✓</div>
         </div>
@@ -125,8 +125,8 @@ export function FirmTaxAIPanel({ rows, onAction }: Props) {
               c.severity === "critical"
                 ? "bg-[#FCE8E8] text-[#7A1A1A] ring-red-200"
                 : c.severity === "warning"
-                ? "bg-[#FAEEDA] text-[#7A5417] ring-neutral-300"
-                : "bg-[#E1F5EE] text-[#085041] ring-neutral-300";
+                ? "bg-[#FAEEDA] text-[#7A5417] ring-amber-200"
+                : "bg-[#E1F5EE] text-[#085041] ring-emerald-200";
             return (
               <button
                 key={c.title}

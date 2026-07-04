@@ -54,7 +54,7 @@ export function EditableCell({
           rowType !== "normal" && "font-bold",
           isZero && "text-muted-foreground/25 font-normal select-none",
           !isZero && value < 0 && "text-[#7A1A1A] dark:text-[#C73838]",
-          !isZero && value > 0 && rowType === "result" && "text-neutral-700 dark:text-[#1E3A5F]",
+          !isZero && value > 0 && rowType === "result" && "text-violet-700 dark:text-[#1E3A5F]",
           !isZero && value > 0 && rowType === "subtotal" && "text-[#085041] dark:text-[#1D9E75]",
           className
         )}
@@ -90,7 +90,7 @@ export function EditableCell({
             setEditing(false);
           }
         }}
-        className="w-full bg-[#F1F5F9] border border-neutral-700/60 rounded text-right text-xs font-mono px-2 py-0.5 outline-none focus:ring-2 focus:ring-neutral-700/30 tabular-nums [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+        className="w-full bg-[#F1F5F9] border border-violet-500/60 rounded text-right text-xs font-mono px-2 py-0.5 outline-none focus:ring-2 focus:ring-violet-500/30 tabular-nums [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
       />
     );
   }
@@ -101,7 +101,7 @@ export function EditableCell({
       onClick={() => setEditing(true)}
       className={cn(
         "w-full text-right text-xs font-mono tabular-nums rounded px-2 py-0.5 transition-colors group relative cursor-text",
-        "hover:bg-neutral-700/[0.08] hover:text-neutral-700 dark:hover:text-[#1E3A5F]",
+        "hover:bg-violet-500/[0.08] hover:text-violet-600 dark:hover:text-[#1E3A5F]",
         isZero && "text-muted-foreground/25",
         className
       )}

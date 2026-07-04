@@ -15,7 +15,7 @@ export function CCDashboardCards({ total, matched, missingReceipts, needsClarifi
     { label: "Matchade", value: matched, icon: CheckCircle2, color: "text-[#085041]" },
     { label: "Saknar kvitto", value: missingReceipts, icon: FileQuestion, color: "text-muted-foreground" },
     { label: "Behöver svar", value: needsClarification, icon: AlertTriangle, color: "text-[#7A5417]" },
-    { label: "Redo att bokföra", value: readyToPost, icon: Send, color: "text-[#000000]" },
+    { label: "Redo att bokföra", value: readyToPost, icon: Send, color: "text-[#3b82f6]" },
   ];
 
   return (

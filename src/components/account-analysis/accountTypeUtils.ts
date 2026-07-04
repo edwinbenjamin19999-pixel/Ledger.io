@@ -46,10 +46,10 @@ export function getAccountStatus(summary: { pctChange: number; transactionCount:
 
 export function getStatusLabel(status: string): { label: string; color: string } {
   switch (status) {
-    case 'unusual': return { label: 'Ovanligt', color: 'bg-neutral-100 text-neutral-700 dark:bg-neutral-700/40 dark:text-[#C28A2B]' };
-    case 'high_activity': return { label: 'Hög aktivitet', color: 'bg-neutral-200 text-black dark:bg-blue-900/40 dark:text-[#1E3A5F]' };
+    case 'unusual': return { label: 'Ovanligt', color: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-[#C28A2B]' };
+    case 'high_activity': return { label: 'Hög aktivitet', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-[#1E3A5F]' };
     case 'low_movement': return { label: 'Låg rörelse', color: 'bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-400' };
-    case 'stable': return { label: 'Stabil', color: 'bg-neutral-100 text-neutral-700 dark:bg-neutral-700/40 dark:text-[#1D9E75]' };
+    case 'stable': return { label: 'Stabil', color: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-[#1D9E75]' };
     default: return { label: '', color: '' };
   }
 }

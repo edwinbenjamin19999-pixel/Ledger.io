@@ -50,7 +50,7 @@ export function ProjectAvslutTab({ project, totalRevenue, totalCost }: Props) { 
             <Button
               size="sm"
               onClick={() => updateProject.mutate({ id: project.id, status: "completed", is_active: false, closed_at: new Date().toISOString() })}
-              className="bg-[#000000] hover:bg-[#000000]/90 text-white"
+              className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white"
             >
               Markera som avslutat
             </Button>
@@ -95,7 +95,7 @@ export function ProjectAvslutTab({ project, totalRevenue, totalCost }: Props) { 
             <ul className="space-y-1">
               {getLearnings().map((l, i) => (
                 <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                  <span className="text-[#000000] mt-1">—</span>
+                  <span className="text-[#3b82f6] mt-1">—</span>
                   {l}
                 </li>
               ))}

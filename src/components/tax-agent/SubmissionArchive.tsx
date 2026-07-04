@@ -37,18 +37,18 @@ const MONTH_NAMES = [
 ];
 
 const TYPE_COLORS: Record<string, string> = {
-  AGI: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-neutral-700/30 dark:text-neutral-300 dark:border-neutral-700",
-  Moms: "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5] dark:bg-blue-900/30 dark:text-[#000000] dark:border-[#000000]",
-  INK2: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-neutral-700/30 dark:text-neutral-300 dark:border-neutral-700",
-  K10: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-neutral-700/30 dark:text-neutral-300 dark:border-neutral-700",
-  "F-skatt": "bg-[#F1F5F9] text-neutral-700 border-[#E2E8F0] dark:bg-neutral-700/30 dark:text-neutral-300 dark:border-neutral-700",
-  KU: "bg-[#EFF6FF] text-black border-[#C8DDF5] dark:bg-blue-900/30 dark:text-blue-300 dark:border-black",
+  AGI: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-700",
+  Moms: "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5] dark:bg-blue-900/30 dark:text-[#3b82f6] dark:border-[#3b82f6]",
+  INK2: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-700",
+  K10: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-rose-900/30 dark:text-rose-300 dark:border-rose-700",
+  "F-skatt": "bg-[#F1F5F9] text-violet-700 border-[#E2E8F0] dark:bg-violet-900/30 dark:text-violet-300 dark:border-violet-700",
+  KU: "bg-[#EFF6FF] text-blue-700 border-[#C8DDF5] dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-700",
 };
 
 const STATUS_COLORS: Record<string, string> = {
-  submitted: "bg-[#EFF6FF] text-black border-[#C8DDF5] dark:bg-blue-900/30 dark:text-blue-300",
-  approved: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-neutral-700/30 dark:text-neutral-300",
-  corrected: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-neutral-700/30 dark:text-neutral-300",
+  submitted: "bg-[#EFF6FF] text-blue-700 border-[#C8DDF5] dark:bg-blue-900/30 dark:text-blue-300",
+  approved: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-emerald-900/30 dark:text-emerald-300",
+  corrected: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-900/30 dark:text-amber-300",
   draft: "bg-muted text-muted-foreground border-border",
   overdue: "bg-destructive/15 text-destructive border-destructive/30",
 };
@@ -323,11 +323,11 @@ export const SubmissionArchive = ({ companyId }: SubmissionArchiveProps) => {
           <p className="text-lg font-bold">{stats.total}</p>
           <p className="text-[10px] text-muted-foreground">Totalt</p>
         </div>
-        <div className="rounded-lg border bg-[#E1F5EE] dark:bg-emerald-950/20 border-[#BFE6D6] dark:border-neutral-700 p-3 text-center">
+        <div className="rounded-lg border bg-[#E1F5EE] dark:bg-emerald-950/20 border-[#BFE6D6] dark:border-emerald-800 p-3 text-center">
           <p className="text-lg font-bold text-[#085041] dark:text-[#1D9E75]">{stats.submitted}</p>
           <p className="text-[10px] text-[#085041] dark:text-[#1D9E75]">Inskickade</p>
         </div>
-        <div className="rounded-lg border bg-[#FAEEDA] dark:bg-amber-950/20 border-[#F0DDB7] dark:border-neutral-700 p-3 text-center">
+        <div className="rounded-lg border bg-[#FAEEDA] dark:bg-amber-950/20 border-[#F0DDB7] dark:border-amber-800 p-3 text-center">
           <p className="text-lg font-bold text-[#7A5417] dark:text-[#C28A2B]">{stats.corrections}</p>
           <p className="text-[10px] text-[#7A5417] dark:text-[#C28A2B]">Rättelser</p>
         </div>
@@ -344,7 +344,7 @@ export const SubmissionArchive = ({ companyId }: SubmissionArchiveProps) => {
             <FileText className="h-12 w-12 text-muted-foreground/40" />
             <div className="text-center">
               <p className="font-medium text-muted-foreground">Inga deklarationer hittades</p>
-              <p className="text-xs text-muted-foreground/70 mt-1">Deklarationer du skickar in via Bokfy visas här</p>
+              <p className="text-xs text-muted-foreground/70 mt-1">Deklarationer du skickar in via Cogniq visas här</p>
             </div>
           </CardContent>
         </Card>
@@ -440,7 +440,7 @@ function ArchiveRow({
             <Download className="h-3 w-3 mr-1" />PDF
           </Button>
           {(r.status === "submitted" || r.status === "approved") && (
-            <Button variant="outline" size="sm" className="text-xs h-7 px-2 border-[#F0DDB7] text-[#7A5417] hover:bg-[#FAEEDA] dark:text-neutral-300 dark:hover:bg-amber-950/30">
+            <Button variant="outline" size="sm" className="text-xs h-7 px-2 border-[#F0DDB7] text-[#7A5417] hover:bg-[#FAEEDA] dark:text-amber-300 dark:hover:bg-amber-950/30">
               <FileEdit className="h-3 w-3 mr-1" />Rättelse
             </Button>
           )}

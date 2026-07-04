@@ -253,10 +253,10 @@ export const ActionWizard = ({ actionType, onCancel, onComplete }: ActionWizardP
 
           {currentStep === 5 && (
             <div className="space-y-6 max-w-2xl">
-              <div className="flex items-center gap-3 p-4 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/30 border border-[#F0DDB7] dark:border-neutral-700">
+              <div className="flex items-center gap-3 p-4 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/30 border border-[#F0DDB7] dark:border-amber-800">
                 <AlertTriangle className="h-5 w-5 text-[#7A5417] flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-sm text-[#7A5417] dark:text-neutral-300">
+                  <p className="font-medium text-sm text-[#7A5417] dark:text-amber-300">
                     Granska noggrant innan godkännande
                   </p>
                   <p className="text-xs text-[#7A5417] dark:text-[#C28A2B] mt-0.5">

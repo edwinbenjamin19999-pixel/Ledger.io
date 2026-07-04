@@ -7,10 +7,10 @@ import { TrendingUp, TrendingDown, Minus, type LucideIcon } from "lucide-react";
 export type KPITone = "strong" | "watch" | "needs_attention" | "critical" | "neutral";
 
 const TONE: Record<KPITone, { dot: string; chip: string; ring: string }> = {
-  strong: { dot: "bg-neutral-700", chip: "text-[#085041] dark:text-neutral-300 bg-[#E1F5EE]", ring: "hover:ring-neutral-700/30" },
-  watch: { dot: "bg-[#000000]", chip: "text-[#000000] dark:text-[#000000] bg-[#EFF6FF]", ring: "hover:ring-[#000000]/30" },
-  needs_attention: { dot: "bg-neutral-700", chip: "text-[#7A5417] dark:text-neutral-300 bg-[#FAEEDA]", ring: "hover:ring-neutral-700/30" },
-  critical: { dot: "bg-neutral-700", chip: "text-[#7A1A1A] dark:text-neutral-300 bg-[#FCE8E8]", ring: "hover:ring-neutral-700/30" },
+  strong: { dot: "bg-emerald-500", chip: "text-[#085041] dark:text-emerald-300 bg-[#E1F5EE]", ring: "hover:ring-emerald-500/30" },
+  watch: { dot: "bg-[#3b82f6]", chip: "text-[#3b82f6] dark:text-[#3b82f6] bg-[#EFF6FF]", ring: "hover:ring-[#3b82f6]/30" },
+  needs_attention: { dot: "bg-amber-500", chip: "text-[#7A5417] dark:text-amber-300 bg-[#FAEEDA]", ring: "hover:ring-amber-500/30" },
+  critical: { dot: "bg-rose-500", chip: "text-[#7A1A1A] dark:text-rose-300 bg-[#FCE8E8]", ring: "hover:ring-rose-500/30" },
   neutral: { dot: "bg-slate-400", chip: "text-slate-700 dark:text-slate-300 bg-slate-500/10", ring: "hover:ring-slate-500/30" },
 };
 

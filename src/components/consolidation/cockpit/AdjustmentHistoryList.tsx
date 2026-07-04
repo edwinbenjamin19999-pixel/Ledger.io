@@ -37,7 +37,7 @@ export function AdjustmentHistoryList({ periodId }: Props) {
                 <div className="flex items-center gap-2 mb-1 flex-wrap">
                   <span className={cn(
                     'text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded',
-                    a.source === 'ai_suggestion' ? 'bg-[#EFF6FF] text-[#000000]' : 'bg-slate-100 text-slate-700',
+                    a.source === 'ai_suggestion' ? 'bg-[#EFF6FF] text-[#3b82f6]' : 'bg-slate-100 text-slate-700',
                   )}>
                     {a.source === 'ai_suggestion' ? <Sparkles className="w-2.5 h-2.5 inline mr-0.5" /> : <User className="w-2.5 h-2.5 inline mr-0.5" />}
                     {a.adjustment_type}

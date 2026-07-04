@@ -96,9 +96,9 @@ export function ForecastMainChart({
         </div>
         <div className="hidden items-center gap-3 text-[11px] text-slate-500 sm:flex">
           <span className="inline-flex items-center gap-1.5"><span className="h-2 w-3 rounded-sm bg-slate-700" /> Utfall</span>
-          <span className="inline-flex items-center gap-1.5"><span className="h-2 w-3 rounded-sm" style={{ background: "#000000" }} /> Prognos</span>
+          <span className="inline-flex items-center gap-1.5"><span className="h-2 w-3 rounded-sm" style={{ background: "#3b82f6" }} /> Prognos</span>
           <span className="inline-flex items-center gap-1.5"><span className="h-2 w-3 rounded-sm bg-slate-400" /> Budget</span>
-          <span className="inline-flex items-center gap-1.5"><span className="h-2 w-3 rounded-sm bg-neutral-700" /> Scenario</span>
+          <span className="inline-flex items-center gap-1.5"><span className="h-2 w-3 rounded-sm bg-amber-500" /> Scenario</span>
         </div>
       </div>
 
@@ -116,8 +116,8 @@ export function ForecastMainChart({
             <ChartGradients />
             <defs>
               <linearGradient id="confidenceBandFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#000000" stopOpacity={0.18} />
-                <stop offset="100%" stopColor="#000000" stopOpacity={0.02} />
+                <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.18} />
+                <stop offset="100%" stopColor="#3b82f6" stopOpacity={0.02} />
               </linearGradient>
             </defs>
 
@@ -172,7 +172,7 @@ export function ForecastMainChart({
               type="monotone"
               dataKey="scenario"
               name="Scenario"
-              stroke="#525252"
+              stroke="#f59e0b"
               strokeWidth={1.5}
               dot={false}
               isAnimationActive={false}
@@ -192,10 +192,10 @@ export function ForecastMainChart({
               type="monotone"
               dataKey="forecast"
               name="Prognos"
-              stroke="#000000"
+              stroke="#3b82f6"
               strokeWidth={2.25}
               strokeDasharray="6 3"
-              dot={{ r: 3, fill: "#000000" }}
+              dot={{ r: 3, fill: "#3b82f6" }}
               isAnimationActive
               animationDuration={800}
               connectNulls={false}
@@ -203,9 +203,9 @@ export function ForecastMainChart({
 
             {turningPoints.map((tp, i) => {
               const colorMap = {
-                ebit_negative: "#525252",
-                cash_negative: "#525252",
-                target_miss: "#525252",
+                ebit_negative: "#f59e0b",
+                cash_negative: "#e11d48",
+                target_miss: "#e11d48",
               } as const;
               const fill = colorMap[tp.type];
               return (

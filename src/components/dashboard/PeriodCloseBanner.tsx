@@ -40,7 +40,7 @@ export const PeriodCloseBanner = () => {
         : `om ${daysToPeriodEnd} dagar`;
 
   return (
-    <div className="rounded-xl border border-black/30 bg-blue-500/5 p-4 flex items-start gap-3">
+    <div className="rounded-xl border border-blue-500/30 bg-blue-500/5 p-4 flex items-start gap-3">
       <div className="rounded-lg bg-blue-500/15 p-2 mt-0.5">
         <Calendar className="h-4 w-4 text-blue-400" />
       </div>

@@ -31,7 +31,7 @@ interface Props {
 const SOURCE_BADGE: Record<AdjustmentSource, { label: string; cls: string; Icon: typeof Hand }> = {
   original: { label: 'Original', cls: 'bg-slate-100 text-slate-600', Icon: RotateCcw },
   manual: { label: 'Manuell', cls: 'bg-slate-200 text-slate-800', Icon: Hand },
-  ai: { label: 'AI', cls: 'bg-[#EFF6FF] text-[#000000]', Icon: Sparkles },
+  ai: { label: 'AI', cls: 'bg-[#EFF6FF] text-[#3b82f6]', Icon: Sparkles },
 };
 
 export function AccountPlanGrid({ rows, suggestions, adjustments, onChange, onReset }: Props) {
@@ -112,7 +112,7 @@ export function AccountPlanGrid({ rows, suggestions, adjustments, onChange, onRe
                       {sectionAISuggestionCount > 0 && (
                         <button
                           onClick={(e) => { e.stopPropagation(); acceptAllInSection(section); }}
-                          className="text-[11px] px-2 py-0.5 rounded border border-[#000000] bg-[#EFF6FF] text-[#000000] hover:bg-[#EFF6FF] mr-1.5"
+                          className="text-[11px] px-2 py-0.5 rounded border border-[#3b82f6] bg-[#EFF6FF] text-[#3b82f6] hover:bg-[#EFF6FF] mr-1.5"
                         >
                           <Sparkles className="h-2.5 w-2.5 inline mr-1" />
                           Acceptera alla ({sectionAISuggestionCount})
@@ -153,7 +153,7 @@ export function AccountPlanGrid({ rows, suggestions, adjustments, onChange, onRe
                         <td className="text-right px-3 py-2 tabular-nums">
                           {sug ? (
                             <div className="flex items-center justify-end gap-1.5">
-                              <span title={sug.reason || ''} className="text-[#000000] font-semibold">
+                              <span title={sug.reason || ''} className="text-[#3b82f6] font-semibold">
                                 {formatSEK(sug.suggested_value)}
                               </span>
                               <button
@@ -204,7 +204,7 @@ export function AccountPlanGrid({ rows, suggestions, adjustments, onChange, onRe
                               {sug && (
                                 <button
                                   onClick={() => onChange(acc, sug.suggested_value, 'ai', sug)}
-                                  className="w-full text-left px-2 py-1.5 text-xs rounded hover:bg-[#EFF6FF] text-[#000000]"
+                                  className="w-full text-left px-2 py-1.5 text-xs rounded hover:bg-[#EFF6FF] text-[#3b82f6]"
                                 >
                                   Till AI-förslag
                                 </button>

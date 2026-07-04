@@ -22,7 +22,7 @@ interface CalendarItem {
 }
 
 const statusConfig = {
-  ready: { color: 'bg-[#E1F5EE] text-[#085041] border-neutral-700/30', icon: CheckCircle2, label: 'Klar att skicka' },
+  ready: { color: 'bg-[#E1F5EE] text-[#085041] border-green-500/30', icon: CheckCircle2, label: 'Klar att skicka' },
   calculating: { color: 'bg-[hsl(var(--primary))]/15 text-[hsl(var(--primary))] border-[hsl(var(--primary))]/30', icon: Loader2, label: 'AI räknar...' },
   waiting: { color: 'bg-orange-500/15 text-orange-700 border-orange-500/30', icon: Clock, label: 'Väntar på data' },
   not_started: { color: 'bg-muted text-muted-foreground border-border', icon: Clock, label: 'Ej påbörjad' },

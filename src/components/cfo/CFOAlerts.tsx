@@ -38,7 +38,7 @@ const PRIORITY_CONFIG: Record<AlertPriority, { label: string; className: string;
 
 const PRIORITY_BADGE: Record<AlertPriority, string> = { critical: "bg-destructive text-destructive-foreground",
   high: "bg-orange-500 text-white",
-  medium: "bg-neutral-700 text-white",
+  medium: "bg-amber-500 text-white",
   info: "bg-blue-500 text-white",
 };
 
@@ -148,7 +148,7 @@ export function CFOAlerts({ snapshot, companyId }: CFOAlertsProps) { const initi
     if (criticalAlerts.length === 0) { toast.info("Inga kritiska varningar att rapportera");
       return;
     }
-    const subject = `Bokfy Varningsrapport — ${criticalAlerts.length} aktiva varningar`;
+    const subject = `Cogniq Varningsrapport — ${criticalAlerts.length} aktiva varningar`;
     const body = [
       "LEDGER.IO VARNINGSRAPPORT",
       `Datum: ${new Date().toLocaleDateString("sv-SE")}`,
@@ -159,7 +159,7 @@ export function CFOAlerts({ snapshot, companyId }: CFOAlertsProps) { const initi
         `   ${a.message}`,
         "",
       ]).flat(),
-      "— Bokfy CFO",
+      "— Cogniq CFO",
     ].join("\n");
     window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank");
   };
@@ -199,7 +199,7 @@ export function CFOAlerts({ snapshot, companyId }: CFOAlertsProps) { const initi
         <CardContent>
           {filteredAlerts.length === 0 ? (
             <div className="text-center py-8 text-muted-foreground">
-              <CheckCircle className="h-8 w-8 mx-auto mb-2 text-[#000000]" />
+              <CheckCircle className="h-8 w-8 mx-auto mb-2 text-[#22c55e]" />
               <p className="text-sm">Inga aktiva varningar — allt ser bra ut!</p>
             </div>
           ) : (
@@ -211,14 +211,14 @@ export function CFOAlerts({ snapshot, companyId }: CFOAlertsProps) { const initi
                     "border rounded-lg p-4 transition-all",
                     config.className,
                     alert.priority === "critical" && "border-l-4 border-l-destructive animate-pulse",
-                    alert.type === "opportunity" && "border-neutral-300/50 bg-neutral-100/30"
+                    alert.type === "opportunity" && "border-emerald-200/50 bg-emerald-50/30"
                   )}>
                     <div className="flex items-start gap-3">
                       <Icon className={cn("h-5 w-5 flex-shrink-0 mt-0.5",
                         alert.type === "opportunity" ? "text-[#085041]" :
                         alert.priority === "critical" ? "text-destructive" :
                         alert.priority === "high" ? "text-orange-500" :
-                        alert.priority === "medium" ? "text-[#7A5417]" : "text-black"
+                        alert.priority === "medium" ? "text-[#7A5417]" : "text-blue-500"
                       )} />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">

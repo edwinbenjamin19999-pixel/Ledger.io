@@ -181,7 +181,7 @@ export default function AuditorPortal() {
       // SIE4 (minimal)
       const sieLines: string[] = [];
       sieLines.push(`#FLAGGA 0`);
-      sieLines.push(`#PROGRAM "Bokfy" "1.0"`);
+      sieLines.push(`#PROGRAM "Cogniq" "1.0"`);
       sieLines.push(`#FORMAT PC8`);
       sieLines.push(`#GEN ${new Date().toISOString().slice(0,10).replace(/-/g,"")}`);
       sieLines.push(`#FNAMN "${company.name}"`);
@@ -238,7 +238,7 @@ export default function AuditorPortal() {
   return (
     <div className="min-h-screen bg-background">
       {/* Read-only banner */}
-      <div className="bg-neutral-700/10 border-b border-neutral-700/30 px-4 py-2 flex items-center justify-center gap-2 text-sm text-neutral-700 dark:text-neutral-300">
+      <div className="bg-amber-500/10 border-b border-amber-500/30 px-4 py-2 flex items-center justify-center gap-2 text-sm text-amber-900 dark:text-amber-200">
         <Lock className="h-4 w-4" />
         <span className="font-medium">Skrivskyddad åtkomst — du kan inte ändra något</span>
       </div>
@@ -293,7 +293,7 @@ export default function AuditorPortal() {
                         <td className="p-2">
                           <Button size="sm" variant="ghost" onClick={() => setCommentTarget({ type: "journal_entry", id: e.id, label: `Verifikation ${e.journal_number}` })} className="gap-1">
                             <MessageSquarePlus className="h-3 w-3" />
-                            {flagged ? <span className="text-neutral-700">{flagged}</span> : null}
+                            {flagged ? <span className="text-amber-600">{flagged}</span> : null}
                           </Button>
                         </td>
                       </tr>
@@ -347,7 +347,7 @@ export default function AuditorPortal() {
                           <td className="p-2">
                             <Button size="sm" variant="ghost" onClick={() => setCommentTarget({ type: "account", id: num, label: `Konto ${num}` })} className="gap-1">
                               <MessageSquarePlus className="h-3 w-3" />
-                              {flagged ? <span className="text-neutral-700">{flagged}</span> : null}
+                              {flagged ? <span className="text-amber-600">{flagged}</span> : null}
                             </Button>
                           </td>
                         </tr>

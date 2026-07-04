@@ -88,7 +88,7 @@ export const DeadlineCalendarGrid = ({ deadlines, onSelectDate, selectedDate }: 
           let dotColor = "";
           if (items.length > 0) {
             const minDays = Math.min(...items.map((it) => it.daysLeft));
-            dotColor = minDays <= 3 ? "bg-neutral-700" : minDays <= 10 ? "bg-neutral-700" : "bg-neutral-700";
+            dotColor = minDays <= 3 ? "bg-rose-500" : minDays <= 10 ? "bg-amber-500" : "bg-emerald-500";
           }
 
           return (
@@ -123,13 +123,13 @@ export const DeadlineCalendarGrid = ({ deadlines, onSelectDate, selectedDate }: 
 
       <div className="flex items-center gap-4 mt-4 pt-4 border-t border-[#F1F5F9] text-[11px] text-[#64748B]">
         <div className="flex items-center gap-1.5">
-          <span className="h-2 w-2 rounded-full bg-neutral-700" /> Akut (≤3 d)
+          <span className="h-2 w-2 rounded-full bg-rose-500" /> Akut (≤3 d)
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="h-2 w-2 rounded-full bg-neutral-700" /> Kommande
+          <span className="h-2 w-2 rounded-full bg-amber-500" /> Kommande
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="h-2 w-2 rounded-full bg-neutral-700" /> Klar
+          <span className="h-2 w-2 rounded-full bg-emerald-500" /> Klar
         </div>
       </div>
     </div>

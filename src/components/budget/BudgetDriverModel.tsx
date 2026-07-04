@@ -62,7 +62,7 @@ const DriverGroup = ({ title, icon: Icon, children, defaultOpen = true }: {
     <Collapsible open={open} onOpenChange={setOpen}>
       <CollapsibleTrigger className="w-full">
         <div className="flex items-center gap-2 py-2 px-1 hover:bg-muted/30 rounded-lg transition-colors">
-          <Icon className="w-4 h-4 text-neutral-700" />
+          <Icon className="w-4 h-4 text-indigo-500" />
           <span className="text-xs font-semibold text-foreground flex-1 text-left">{title}</span>
           {open ? <ChevronDown className="w-3.5 h-3.5 text-muted-foreground" /> : <ChevronRight className="w-3.5 h-3.5 text-muted-foreground" />}
         </div>
@@ -114,7 +114,7 @@ const TableHeader = ({ title, lastColLabel = "Helår" }: { title: string; lastCo
 );
 
 const SummaryRow = ({ label, values, annual, sparkline = false }: { label: string; values: number[]; annual: number; sparkline?: boolean }) => (
-  <div className="flex items-center border-t-2 border-[#C8DDF5] dark:border-neutral-700 bg-[#0F1F3D] dark:from-indigo-950/30 dark:to-blue-950/20">
+  <div className="flex items-center border-t-2 border-[#C8DDF5] dark:border-indigo-800 bg-[#0F1F3D] dark:from-indigo-950/30 dark:to-blue-950/20">
     <div className="min-w-[180px] px-3 py-2 text-sm font-bold sticky left-0 bg-inherit z-10 border-r">{label}</div>
     {values.map((v, i) => (
       <div key={i} className={cn("w-[75px] min-w-[75px] text-right px-1.5 py-2 text-xs font-bold tabular-nums border-r",
@@ -187,7 +187,7 @@ const BRTable = ({ br }: { br: BRMonth[] }) => {
       {row("= Summa skulder", m => m.totalLiabilities, true)}
       {row("= Summa EK + skulder", m => m.totalEquityAndLiabilities, true)}
       <div className={cn("flex items-center border-t-2 py-2 px-3",
-        allBalanced ? "bg-[#E1F5EE] dark:bg-emerald-950/30 border-[#BFE6D6] dark:border-neutral-700" : "bg-[#FCE8E8] dark:bg-red-950/30 border-[#F4C8C8] dark:border-red-800")}>
+        allBalanced ? "bg-[#E1F5EE] dark:bg-emerald-950/30 border-[#BFE6D6] dark:border-emerald-800" : "bg-[#FCE8E8] dark:bg-red-950/30 border-[#F4C8C8] dark:border-red-800")}>
         <div className="min-w-[180px] text-xs font-bold sticky left-0 bg-inherit z-10 flex items-center gap-1.5">
           {allBalanced ? <CheckCircle2 className="w-3.5 h-3.5 text-[#085041]" /> : <AlertTriangle className="w-3.5 h-3.5 text-destructive" />}
           {allBalanced ? "✓ Balansräkning i balans" : "⚠ Differens — kontrollera antaganden"}
@@ -296,7 +296,7 @@ export const BudgetDriverModel = ({ className, drivers, onDriversChange }: Props
               <CollapsibleTrigger className="w-full">
                 <CardHeader className="pb-2 cursor-pointer hover:bg-muted/20 transition-colors">
                   <div className="flex items-center gap-2">
-                    <Calculator className="w-4 h-4 text-neutral-700" />
+                    <Calculator className="w-4 h-4 text-indigo-500" />
                     <CardTitle className="text-sm flex-1 text-left">Antaganden (drivare)</CardTitle>
                     <span className="text-xs text-muted-foreground">Ändra för att uppdatera alla rapporter</span>
                     {driversOpen ? <ChevronDown className="w-4 h-4 text-muted-foreground" /> : <ChevronRight className="w-4 h-4 text-muted-foreground" />}
@@ -343,7 +343,7 @@ export const BudgetDriverModel = ({ className, drivers, onDriversChange }: Props
           <Card>
             <CardContent className="pt-5 pb-3">
               <h3 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-neutral-700" />
+                <Sparkles className="w-4 h-4 text-indigo-500" />
                 12-månaders projektion
               </h3>
               <div className="h-56">
@@ -374,7 +374,7 @@ export const BudgetDriverModel = ({ className, drivers, onDriversChange }: Props
             ]).map(tab => (
               <button key={tab.key} onClick={() => setActiveStatement(tab.key)}
                 className={cn("px-4 py-2 text-sm font-medium border-b-2 transition-all duration-200",
-                  activeStatement === tab.key ? "border-neutral-700 text-neutral-700 dark:text-neutral-700" : "border-transparent text-muted-foreground hover:text-foreground")}>
+                  activeStatement === tab.key ? "border-indigo-500 text-indigo-600 dark:text-indigo-400" : "border-transparent text-muted-foreground hover:text-foreground")}>
                 {tab.label}
               </button>
             ))}

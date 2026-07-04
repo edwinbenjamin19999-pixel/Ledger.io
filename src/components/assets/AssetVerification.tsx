@@ -42,7 +42,7 @@ export const AssetVerification = ({ assets }: AssetVerificationProps) => { const
           return (
             <div
               key={asset.id}
-              className={`flex items-center justify-between p-2.5 rounded-lg border text-sm cursor-pointer transition-colors ${ isVerified ? "bg-[#E1F5EE] dark:bg-emerald-950/20 border-[#BFE6D6] dark:border-neutral-700" : "hover:bg-muted/50"
+              className={`flex items-center justify-between p-2.5 rounded-lg border text-sm cursor-pointer transition-colors ${ isVerified ? "bg-[#E1F5EE] dark:bg-emerald-950/20 border-[#BFE6D6] dark:border-emerald-800" : "hover:bg-muted/50"
               }`}
               onClick={() => toggleVerify(asset.id)}
             >

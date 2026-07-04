@@ -112,8 +112,8 @@ export const ARHeroKPI = ({
       value: `${remindersSentThisWeek}`,
       sub: "Skickade denna vecka",
       icon: Mail,
-      accent: "border-l-[#000000]",
-      iconColor: "text-[#000000]",
+      accent: "border-l-[#3b82f6]",
+      iconColor: "text-[#3b82f6]",
     },
     {
       label: "Medelålder fordring",

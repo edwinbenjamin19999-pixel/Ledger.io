@@ -77,11 +77,11 @@ export function UnifiedCommerceDashboard() {
     { label: "Total omsättning", value: formatSEK(data.totalRevenue),
       sub: `${data.invoiceCount + data.orderCount} transaktioner`, icon: ShoppingCart, glow: true },
     { label: "Fakturaintäkter", value: formatSEK(data.invoiceRevenue),
-      sub: `${data.invoiceCount} fakturor`, icon: FileText, color: "text-black" },
+      sub: `${data.invoiceCount} fakturor`, icon: FileText, color: "text-blue-500" },
     { label: "E-handel", value: formatSEK(data.ecomRevenue),
       sub: `${data.orderCount} ordrar`, icon: Globe, color: "text-[#085041]" },
     { label: "Bankinflöde", value: formatSEK(data.bankInflow),
-      sub: "Inbetalningar senaste 30d", icon: Landmark, color: "text-neutral-700" },
+      sub: "Inbetalningar senaste 30d", icon: Landmark, color: "text-violet-500" },
   ];
 
   const pieData = Object.entries(data.platforms).map(([name, value]) => ({ name, value }));

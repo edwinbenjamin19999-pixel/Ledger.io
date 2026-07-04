@@ -48,19 +48,19 @@ export const AutomationScore = ({ companyId }: AutomationScoreProps) => {
   const overallScore = Math.round((automationRate * 0.4 + (stats.avgConfidence * 100) * 0.3 + matchRate * 0.3));
 
   const getGrade = (score: number) => {
-    if (score >= 90) return { label: "A", border: "border-neutral-700", bg: "from-neutral-700 to-neutral-700" };
-    if (score >= 75) return { label: "B", border: "border-neutral-700", bg: "from-neutral-700 to-neutral-700" };
+    if (score >= 90) return { label: "A", border: "border-emerald-400", bg: "from-emerald-400 to-emerald-500" };
+    if (score >= 75) return { label: "B", border: "border-emerald-400", bg: "from-emerald-400 to-emerald-500" };
     if (score >= 60) return { label: "C", border: "border-[hsl(var(--brand-primary))]", bg: "from-[hsl(var(--brand-primary))] to-[hsl(var(--brand-primary))]" };
-    if (score >= 40) return { label: "D", border: "border-neutral-700", bg: "from-neutral-700 to-neutral-700" };
+    if (score >= 40) return { label: "D", border: "border-amber-400", bg: "from-amber-400 to-amber-500" };
     return { label: "E", border: "border-red-400", bg: "from-red-400 to-red-500" };
   };
 
   const grade = getGrade(overallScore);
 
   const metrics = [
-    { label: "AI-bokförda", value: automationRate, sub: `${stats.aiBooked} av ${stats.totalEntries}`, icon: Bot, iconBg: "bg-[#F1F5F9] dark:bg-neutral-700/20", iconColor: "text-neutral-700 dark:text-[#1E3A5F]", barColor: "from-neutral-700 to-neutral-700" },
+    { label: "AI-bokförda", value: automationRate, sub: `${stats.aiBooked} av ${stats.totalEntries}`, icon: Bot, iconBg: "bg-[#F1F5F9] dark:bg-violet-900/20", iconColor: "text-violet-600 dark:text-[#1E3A5F]", barColor: "from-violet-400 to-violet-500" },
     { label: "AI-konfidens", value: stats.avgConfidence * 100, sub: "Genomsnitt", icon: Brain, iconBg: "bg-[hsl(var(--brand-primary)/0.08)]", iconColor: "text-[hsl(var(--brand-primary))]", barColor: "from-[hsl(var(--brand-primary))] to-[hsl(var(--brand-primary))]" },
-    { label: "Bankavstämda", value: matchRate, sub: `${stats.bankMatched} av ${stats.bankTotal}`, icon: Zap, iconBg: "bg-[#E1F5EE] dark:bg-neutral-700/20", iconColor: "text-[#085041] dark:text-[#1D9E75]", barColor: "from-neutral-700 to-neutral-700" },
+    { label: "Bankavstämda", value: matchRate, sub: `${stats.bankMatched} av ${stats.bankTotal}`, icon: Zap, iconBg: "bg-[#E1F5EE] dark:bg-emerald-900/20", iconColor: "text-[#085041] dark:text-[#1D9E75]", barColor: "from-emerald-400 to-emerald-500" },
   ];
 
   return (
@@ -134,7 +134,7 @@ export const AutomationScore = ({ companyId }: AutomationScoreProps) => {
           </p>
           <button
             onClick={() => navigate("/automation")}
-            className="text-[#000000] dark:text-[#1E3A5F] font-semibold text-xs flex-shrink-0 flex items-center gap-1 hover:text-[#000000] transition-colors"
+            className="text-[#3b82f6] dark:text-[#1E3A5F] font-semibold text-xs flex-shrink-0 flex items-center gap-1 hover:text-[#3b82f6] transition-colors"
           >
             Förbättra
             <ArrowRight className="w-3 h-3" />

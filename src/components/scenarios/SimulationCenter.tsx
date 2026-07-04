@@ -31,7 +31,7 @@ export function SimulationCenter({ result, kpis, targetEbit }: Props) {
     icon: typeof TrendingUp; label: string; value: string; sub?: string; tone?: "slate" | "emerald" | "rose" | "cyan";
   }) => {
     const toneCls = {
-      slate: "text-slate-900", emerald: "text-[#085041]", rose: "text-[#7A1A1A]", cyan: "text-[#000000]",
+      slate: "text-slate-900", emerald: "text-[#085041]", rose: "text-[#7A1A1A]", cyan: "text-[#3b82f6]",
     }[tone];
     return (
       <Card className="p-4 rounded-2xl">
@@ -95,8 +95,8 @@ export function SimulationCenter({ result, kpis, targetEbit }: Props) {
             <ComposedChart data={data} margin={{ top: 10, right: 12, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="cashFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#000000" stopOpacity={0.35} />
-                  <stop offset="100%" stopColor="#000000" stopOpacity={0.02} />
+                  <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.35} />
+                  <stop offset="100%" stopColor="#3b82f6" stopOpacity={0.02} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
@@ -111,9 +111,9 @@ export function SimulationCenter({ result, kpis, targetEbit }: Props) {
                 <ReferenceLine y={targetEbit / 12} stroke="#64748b" strokeDasharray="4 4" label={{ value: "Mål EBIT/mån", fontSize: 10, fill: "#64748b", position: "right" }} />
               )}
               {breakEvenIdx != null && breakEvenIdx >= 0 && (
-                <ReferenceLine x={MONTH_LABELS[breakEvenIdx]} stroke="#000000" strokeDasharray="3 3" label={{ value: "Break-even", fontSize: 10, fill: "#000000", position: "top" }} />
+                <ReferenceLine x={MONTH_LABELS[breakEvenIdx]} stroke="#10b981" strokeDasharray="3 3" label={{ value: "Break-even", fontSize: 10, fill: "#10b981", position: "top" }} />
               )}
-              <Area type="monotone" dataKey="cash" stroke="#000000" strokeWidth={2} fill="url(#cashFill)" name="Kassa" />
+              <Area type="monotone" dataKey="cash" stroke="#3b82f6" strokeWidth={2} fill="url(#cashFill)" name="Kassa" />
               <Line type="monotone" dataKey="ebit" stroke="#1e293b" strokeWidth={2} dot={false} name="EBIT" />
             </ComposedChart>
           </ResponsiveContainer>

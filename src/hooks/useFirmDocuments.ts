@@ -6,7 +6,7 @@ import { useFirmClients } from "@/hooks/useFirmDashboard";
 /**
  * Firm-wide document feed.
  *
- * Reads from the existing `documents` table (used by the rest of Bokfy for
+ * Reads from the existing `documents` table (used by the rest of Cogniq for
  * AI document intelligence) and joins it to the firm's clients so the WL
  * portal can:
  *   - browse files per client (folder view)
@@ -215,13 +215,13 @@ export const CATEGORY_LABEL: Record<DocCategory, string> = {
 };
 
 export const CATEGORY_COLOR: Record<DocCategory, string> = {
-  invoice_incoming: "bg-[#FAEEDA] text-neutral-700 border-[#F0DDB7]",
-  invoice_outgoing: "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5]",
-  receipt: "bg-[#F1F5F9] text-neutral-700 border-[#E2E8F0]",
-  bank_statement: "bg-[#EFF6FF] text-neutral-700 border-neutral-700/20",
+  invoice_incoming: "bg-[#FAEEDA] text-amber-700 border-[#F0DDB7]",
+  invoice_outgoing: "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]",
+  receipt: "bg-[#F1F5F9] text-violet-700 border-[#E2E8F0]",
+  bank_statement: "bg-[#EFF6FF] text-indigo-700 border-indigo-500/20",
   contract: "bg-slate-500/10 text-slate-700 border-slate-500/20",
-  annual_report: "bg-[#E1F5EE] text-neutral-700 border-[#BFE6D6]",
+  annual_report: "bg-[#E1F5EE] text-emerald-700 border-[#BFE6D6]",
   payroll: "bg-fuchsia-500/10 text-fuchsia-700 border-fuchsia-500/20",
-  tax: "bg-[#FCE8E8] text-neutral-700 border-[#F4C8C8]",
+  tax: "bg-[#FCE8E8] text-rose-700 border-[#F4C8C8]",
   other: "bg-slate-200 text-slate-600 border-slate-300",
 };

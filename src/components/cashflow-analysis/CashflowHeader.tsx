@@ -3,7 +3,7 @@ import { Sparkles } from "lucide-react";
 export function CashflowHeader() {
   return (
     <div className="flex items-start gap-3">
-      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0F1F3D] text-[#000000] dark:text-[#000000] ring-1 ring-[#000000]/20">
+      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0F1F3D] text-[#3b82f6] dark:text-[#3b82f6] ring-1 ring-[#3b82f6]/20">
         <Sparkles className="h-5 w-5" />
       </div>
       <div className="min-w-0">

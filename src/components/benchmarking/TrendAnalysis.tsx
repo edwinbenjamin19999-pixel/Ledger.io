@@ -128,7 +128,7 @@ export function TrendAnalysis({ currentPercentiles }: TrendAnalysisProps) { cons
                 contentStyle={{ background: "rgba(15,23,42,0.95)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "14px", backdropFilter: "blur(12px)", fontSize: "12px" }}
               />
               <Legend content={<CustomLegend />} />
-              <Line type="monotone" dataKey="ebitda" name="Ditt bolag" stroke="#000000" strokeWidth={2.5} dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="ebitda" name="Ditt bolag" stroke="#3b82f6" strokeWidth={2.5} dot={{ r: 3 }} />
               <Line type="monotone" dataKey="ebitdaMedian" name="Branschmedian" stroke="hsl(var(--muted-foreground))" strokeWidth={1.5} strokeDasharray="6 3" dot={false} />
             </LineChart>
           </ResponsiveContainer>
@@ -153,7 +153,7 @@ export function TrendAnalysis({ currentPercentiles }: TrendAnalysisProps) { cons
               />
               <Legend content={<CustomLegend />} />
               <ReferenceLine y={28} stroke="hsl(var(--muted-foreground))" strokeDasharray="6 3" label={{ value: "Branschsnitt 28d", position: "right", fontSize: 10 }} />
-              <Line type="monotone" dataKey="dso" name="Ditt bolag" stroke="#000000" strokeWidth={2.5} dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="dso" name="Ditt bolag" stroke="#3b82f6" strokeWidth={2.5} dot={{ r: 3 }} />
             </LineChart>
           </ResponsiveContainer>
         </CardContent>

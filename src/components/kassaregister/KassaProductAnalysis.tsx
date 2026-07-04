@@ -74,7 +74,7 @@ export function KassaProductAnalysis({ sales }: Props) { const [sortField, setSo
       <Card>
         <CardHeader className="pb-2">
           <div className="flex items-center gap-2">
-            <Package className="h-4 w-4 text-[#000000]" />
+            <Package className="h-4 w-4 text-[#3b82f6]" />
             <CardTitle className="text-base">Produktförsäljning</CardTitle>
           </div>
         </CardHeader>
@@ -122,7 +122,7 @@ export function KassaProductAnalysis({ sales }: Props) { const [sortField, setSo
         <Card>
           <CardHeader className="pb-2">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-[#000000]" />
+              <Sparkles className="h-4 w-4 text-[#3b82f6]" />
               <CardTitle className="text-sm">AI kombinations-analys</CardTitle>
             </div>
           </CardHeader>

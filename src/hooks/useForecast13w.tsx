@@ -444,14 +444,14 @@ export function useForecast13w(companyId: string | undefined) { const [weeks, se
         manual: "Manuella poster",
       };
 
-      const catColors: Record<string, string> = { customer: "#000000",
-        supplier: "#525252",
-        salary: "#525252",
-        vat: "#737373",
-        ftax: "#525252",
-        employer_fee: "#737373",
-        recurring: "#000000",
-        manual: "#000000",
+      const catColors: Record<string, string> = { customer: "#22C55E",
+        supplier: "#EF4444",
+        salary: "#F59E0B",
+        vat: "#8B5CF6",
+        ftax: "#6366F1",
+        employer_fee: "#EC4899",
+        recurring: "#3b82f6",
+        manual: "#3b82f6",
       };
 
       const inBreakdown: CategoryBreakdown[] = Array.from(inCats.entries())

@@ -28,7 +28,7 @@ interface TransactionsListProps {
 
 const STATUS_STYLES: Record<string, { bg: string; text: string; icon: any; label: string }> = {
   pending:  { bg: "bg-[#FAEEDA]", text: "text-[#8A5A14]", icon: Clock, label: "Väntar" },
-  matched:  { bg: "bg-[#E6F4FA]", text: "text-[#000000]", icon: CheckCircle, label: "Matchad" },
+  matched:  { bg: "bg-[#E6F4FA]", text: "text-[#0040CC]", icon: CheckCircle, label: "Matchad" },
   approved: { bg: "bg-[#E1F5EE]", text: "text-[#1D6E55]", icon: CheckCircle, label: "Godkänd" },
   rejected: { bg: "bg-[#FCE8E8]", text: "text-[#9C2E2D]", icon: XCircle, label: "Avvisad" },
 };
@@ -169,7 +169,7 @@ export function TransactionsList({ transactions, onMatch, matching }: Transactio
                     <button
                       onClick={() => onMatch(transaction.id)}
                       disabled={matching === transaction.id}
-                      className="h-[30px] px-[12px] rounded-[8px] bg-[#000000] text-white text-[11px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[6px] disabled:opacity-50"
+                      className="h-[30px] px-[12px] rounded-[8px] bg-[#0040CC] text-white text-[11px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[6px] disabled:opacity-50"
                     >
                       {matching === transaction.id ? (
                         <Loader2 className="h-[12px] w-[12px] animate-spin" />

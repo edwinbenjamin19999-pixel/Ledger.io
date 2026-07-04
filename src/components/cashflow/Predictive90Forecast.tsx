@@ -327,9 +327,9 @@ export function Predictive90Forecast({ companyId }: Props) {
   }
 
   const summaryColor = (v: number) => {
-    if (v < 0) return "text-[#525252]";
-    if (v < bankBalance * 0.3) return "text-[#525252]";
-    return "text-[#000000]";
+    if (v < 0) return "text-[#DC2626]";
+    if (v < bankBalance * 0.3) return "text-[#D97706]";
+    return "text-[#059669]";
   };
 
   return (
@@ -358,7 +358,7 @@ export function Predictive90Forecast({ companyId }: Props) {
       {/* Critical alert */}
       {criticalDay && (
         <div className="rounded-lg border border-[#FECACA] bg-[#FEF2F2] px-4 py-3 flex items-center gap-2">
-          <AlertTriangle className="w-4 h-4 text-[#525252] shrink-0" />
+          <AlertTriangle className="w-4 h-4 text-[#DC2626] shrink-0" />
           <span className="text-sm text-[#991B1B]">
             <strong>Kassan beräknas understiga 0 kr den {criticalDay}.</strong> Kontrollera utestående fakturor eller anpassa utbetalningar.
           </span>
@@ -391,15 +391,15 @@ export function Predictive90Forecast({ companyId }: Props) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
                 <XAxis dataKey="date" tick={{ fontSize: 10 }} interval={granularity === "daily" ? 6 : 0} />
                 <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => `${Math.round(v / 1000)}k`} />
-                <ReferenceLine y={0} stroke="#525252" strokeDasharray="4 4" />
+                <ReferenceLine y={0} stroke="#DC2626" strokeDasharray="4 4" />
                 <RTooltip content={({ active, payload, label }) => {
                   if (!active || !payload?.length) return null;
                   const d = payload[0].payload;
                   return (
                     <div className="bg-card border rounded-lg shadow p-2 text-xs max-w-[300px]">
                       <div className="font-semibold mb-1">{label}</div>
-                      <div className="text-[#000000]">+{fmt(d.inflows)}</div>
-                      <div className="text-[#525252]">−{fmt(d.outflows)}</div>
+                      <div className="text-[#059669]">+{fmt(d.inflows)}</div>
+                      <div className="text-[#DC2626]">−{fmt(d.outflows)}</div>
                       <div className="font-medium mt-1">Saldo: {fmt(d.balance)}</div>
                       {d.descs.slice(0, 5).map((x: string, i: number) => (
                         <div key={i} className="text-[10px] text-muted-foreground mt-0.5">{x}</div>
@@ -408,9 +408,9 @@ export function Predictive90Forecast({ companyId }: Props) {
                     </div>
                   );
                 }} />
-                <Bar dataKey="inflows" fill="#000000" stackId="flow" />
-                <Bar dataKey="outflows" fill="#525252" stackId="flow" />
-                <Line type="monotone" dataKey="balance" stroke="#000000" strokeWidth={2} dot={false} />
+                <Bar dataKey="inflows" fill="#22C55E" stackId="flow" />
+                <Bar dataKey="outflows" fill="#EF4444" stackId="flow" />
+                <Line type="monotone" dataKey="balance" stroke="#3b82f6" strokeWidth={2} dot={false} />
               </ComposedChart>
             </ResponsiveContainer>
           </div>
@@ -421,7 +421,7 @@ export function Predictive90Forecast({ companyId }: Props) {
       <Card className="border-[#B5D4F4] bg-[#EFF6FF]">
         <CardContent className="pt-4 pb-4">
           <div className="flex items-start gap-2">
-            <Sparkles className="w-4 h-4 text-[#000000] mt-0.5 shrink-0" />
+            <Sparkles className="w-4 h-4 text-[#0040CC] mt-0.5 shrink-0" />
             <div>
               <p className="text-[10px] font-medium uppercase tracking-wider text-[#0C447C]">AI-kommentar</p>
               <p className="text-sm text-[#185FA5] mt-1 leading-relaxed">{aiCommentary}</p>
@@ -460,7 +460,7 @@ export function Predictive90Forecast({ companyId }: Props) {
                   <tr key={i} className="border-b border-border/50 hover:bg-muted/30">
                     <td className="py-1.5 pr-2 tabular-nums">{it.date}</td>
                     <td className="py-1.5 pr-2">{it.description}</td>
-                    <td className={`py-1.5 pr-2 text-right tabular-nums font-medium ${it.amount >= 0 ? "text-[#000000]" : "text-[#525252]"}`}>
+                    <td className={`py-1.5 pr-2 text-right tabular-nums font-medium ${it.amount >= 0 ? "text-[#059669]" : "text-[#DC2626]"}`}>
                       {it.amount >= 0 ? "+" : "−"}{fmt(Math.abs(it.amount))}
                     </td>
                     <td className="py-1.5 pr-2">

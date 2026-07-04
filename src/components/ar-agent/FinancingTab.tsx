@@ -45,7 +45,7 @@ const LiquidityCard = ({ openInvoices }: { openInvoices: ARInvoice[] }) => { con
   const health = net30 > 0 ? "good" : net30 > -20000 ? "warning" : "critical";
   const healthLabel = health === "good" ? "God likviditet" : health === "warning" ? "Stram likviditet" : "Likviditetsbrist";
   const healthColor = health === "good" ? "text-[#085041]" : health === "warning" ? "text-[#7A5417]" : "text-destructive";
-  const dotColor = health === "good" ? "bg-neutral-700" : health === "warning" ? "bg-neutral-700" : "bg-red-500";
+  const dotColor = health === "good" ? "bg-green-500" : health === "warning" ? "bg-amber-500" : "bg-red-500";
 
   return (
     <Card>
@@ -80,7 +80,7 @@ const LiquidityCard = ({ openInvoices }: { openInvoices: ARInvoice[] }) => { con
         </div>
 
         {biggestRisk && (
-          <div className="bg-[#FAEEDA] dark:bg-neutral-700/10 border border-[#F0DDB7] dark:border-neutral-700/30 rounded-lg p-3 space-y-1">
+          <div className="bg-[#FAEEDA] dark:bg-amber-900/10 border border-[#F0DDB7] dark:border-amber-800/30 rounded-lg p-3 space-y-1">
             <p className="text-xs text-[#7A5417] dark:text-[#C28A2B] font-medium">
               Om {biggestRisk.counterparty_name} inte betalar:
             </p>
@@ -99,8 +99,8 @@ const LiquidityCard = ({ openInvoices }: { openInvoices: ARInvoice[] }) => { con
 };
 
 // --- Score badge helper ---
-const SCORE_COLOR: Record<string, string> = { A: "text-[#085041] bg-[#E1F5EE] dark:text-[#1D9E75] dark:bg-neutral-700/30",
-  B: "text-black bg-[#EFF6FF] dark:text-[#1E3A5F] dark:bg-blue-900/30",
+const SCORE_COLOR: Record<string, string> = { A: "text-[#085041] bg-[#E1F5EE] dark:text-[#1D9E75] dark:bg-green-900/30",
+  B: "text-blue-700 bg-[#EFF6FF] dark:text-[#1E3A5F] dark:bg-blue-900/30",
   C: "text-[#7A5417] bg-[#FAEEDA] dark:text-[#C28A2B] dark:bg-yellow-900/30",
   D: "text-orange-700 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30",
   E: "text-[#7A1A1A] bg-[#FCE8E8] dark:text-[#C73838] dark:bg-red-900/30",
@@ -341,7 +341,7 @@ const AILiquidityCoach = ({ openInvoices, customers }: { openInvoices: ARInvoice
   const monthLabel = in30.toLocaleDateString("sv-SE", { day: "numeric", month: "long" });
 
   const scenarios = [
-    { label: "Bästa fall", sublabel: "Alla betalar", amount: cashBase + best, color: "border-[#BFE6D6] dark:border-neutral-700/30 bg-[#E1F5EE] dark:bg-neutral-700/10", textColor: "text-[#085041] dark:text-[#1D9E75]", rec: "Inget behov av extern finansiering. Överväg att placera överskottet." },
+    { label: "Bästa fall", sublabel: "Alla betalar", amount: cashBase + best, color: "border-[#BFE6D6] dark:border-green-800/30 bg-[#E1F5EE] dark:bg-green-900/10", textColor: "text-[#085041] dark:text-[#1D9E75]", rec: "Inget behov av extern finansiering. Överväg att placera överskottet." },
     { label: "Basfall", sublabel: `${Math.round(avgOnTimeRate * 100)}% betalar`, amount: cashBase + base, color: "border-border bg-muted/20", textColor: "text-foreground", rec: "Normal nivå. Bevaka förfallna fakturor aktivt." },
     { label: "Sämsta fall", sublabel: "50% betalar", amount: cashBase + worst, color: "border-[#F4C8C8] dark:border-red-800/30 bg-[#FCE8E8] dark:bg-red-900/10", textColor: "text-destructive", rec: cashBase + worst < 20000 ? "Under rekommenderat minimum. Överväg fakturaköp eller rörelsekredit." : "Kassa täcker basala kostnader, men utan marginal." },
   ];
@@ -411,7 +411,7 @@ const IntegrationCards = () => (
               <p className="text-[10px] text-muted-foreground">{intg.desc}</p>
             </div>
             {intg.connected ? (
-              <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75] border-0 text-[10px]">
+              <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-green-900/30 dark:text-[#1D9E75] border-0 text-[10px]">
                 <CheckCircle className="h-3 w-3 mr-0.5" /> Ansluten
               </Badge>
             ) : (

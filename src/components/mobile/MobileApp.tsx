@@ -79,10 +79,10 @@ export const MobileApp = ({ user, signOut }: MobileAppProps) => {
       : tab;
 
   const moreItems: { id: MobileTab; label: string; icon: React.ElementType; color: string }[] = [
-    { id: "receipts", label: "Kvitton & underlag", icon: Camera, color: "#000000" },
+    { id: "receipts", label: "Kvitton & underlag", icon: Camera, color: "#0040CC" },
     { id: "expenses", label: "Utlägg", icon: Receipt, color: "#1D9E75" },
     { id: "documents", label: "Dokument", icon: FileBox, color: "#94A3B8" },
-    { id: "chat", label: "Fråga AI", icon: Sparkles, color: "#000000" },
+    { id: "chat", label: "Fråga AI", icon: Sparkles, color: "#3b82f6" },
   ];
 
   const isChat = tab === "chat";

@@ -358,9 +358,9 @@ export function VATSubmitDialog({
 
           {/* Path A2 — Mobile sign link (for VD / firmatecknare on the go) */}
           {built && (
-            <div className="rounded-[10px] border-2 border-border p-4 hover:border-[#000000]/30 transition-colors">
+            <div className="rounded-[10px] border-2 border-border p-4 hover:border-[#3b82f6]/30 transition-colors">
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-lg bg-[#000000] flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-[#3b82f6] flex items-center justify-center flex-shrink-0">
                   <Smartphone className="w-5 h-5 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">

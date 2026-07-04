@@ -175,7 +175,7 @@ export const BudgetOnboardingNew = ({ companyId, fiscalYear, onBudgetCreated }: 
 
           <div className="flex gap-1 mb-4">
             {aiSteps.map((_, i) => (
-              <div key={i} className={cn("h-1 flex-1 rounded-full", i <= aiStep ? "bg-neutral-700" : "bg-muted")} />
+              <div key={i} className={cn("h-1 flex-1 rounded-full", i <= aiStep ? "bg-indigo-500" : "bg-muted")} />
             ))}
           </div>
 
@@ -202,7 +202,7 @@ export const BudgetOnboardingNew = ({ companyId, fiscalYear, onBudgetCreated }: 
       <Card className="max-w-lg mx-auto mt-12">
         <CardContent className="pt-6 space-y-6">
           <div className="flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-neutral-700" />
+            <BarChart3 className="w-5 h-5 text-indigo-500" />
             <p className="font-semibold">Basera på historik</p>
           </div>
           <div className="space-y-3">
@@ -230,9 +230,9 @@ export const BudgetOnboardingNew = ({ companyId, fiscalYear, onBudgetCreated }: 
   // Method selection
   const methods = [
     { key: "ai" as const, icon: Sparkles, title: "AI-budget", desc: "AI bygger hela budgeten från historik, tillväxtmål och branschjämförelse", recommended: true, color: "text-purple-500", hover: "hover:border-purple-400" },
-    { key: "historical" as const, icon: BarChart3, title: "Basera på historik", desc: "Kopiera förra årets utfall och justera med tillväxtprocent", color: "text-neutral-700", hover: "hover:border-neutral-700" },
+    { key: "historical" as const, icon: BarChart3, title: "Basera på historik", desc: "Kopiera förra årets utfall och justera med tillväxtprocent", color: "text-indigo-500", hover: "hover:border-indigo-400" },
     { key: "manual" as const, icon: FileSpreadsheet, title: "Börja blank", desc: "Fyll i manuellt konto för konto", color: "text-slate-500", hover: "hover:border-slate-400" },
-    { key: "excel" as const, icon: Upload, title: "Importera från Excel", desc: "Ladda upp en budget-fil och låt AI mappa den automatiskt", color: "text-black", hover: "hover:border-black" },
+    { key: "excel" as const, icon: Upload, title: "Importera från Excel", desc: "Ladda upp en budget-fil och låt AI mappa den automatiskt", color: "text-blue-500", hover: "hover:border-blue-400" },
   ];
 
   return (

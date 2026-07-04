@@ -57,7 +57,7 @@ export const AssetKPIStrip = ({ assets, entries, getBookValue, getAccumulated }:
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
       <KPICard
-        gradient="from-neutral-700 to-purple-700"
+        gradient="from-violet-600 to-purple-700"
         icon={Package}
         label="Lagervärde"
         value={`${fmt(totalBookValue)} kr`}
@@ -65,7 +65,7 @@ export const AssetKPIStrip = ({ assets, entries, getBookValue, getAccumulated }:
       />
 
       <KPICard
-        gradient={fullyDepreciated.length > 0 ? "from-neutral-700 to-red-600" : "from-neutral-700 to-blue-600"}
+        gradient={fullyDepreciated.length > 0 ? "from-rose-500 to-red-600" : "from-emerald-500 to-blue-600"}
         icon={AlertTriangle}
         label="Fullt avskrivna"
         value={`${fullyDepreciated.length} st`}
@@ -74,7 +74,7 @@ export const AssetKPIStrip = ({ assets, entries, getBookValue, getAccumulated }:
       />
 
       <KPICard
-        gradient="from-blue-500 to-neutral-700"
+        gradient="from-blue-500 to-indigo-600"
         icon={RefreshCw}
         label="Avskrivningsgrad"
         value={totalAcquisition > 0 ? `${Math.round((totalAccumulated / totalAcquisition) * 100)}%` : "0%"}
@@ -82,7 +82,7 @@ export const AssetKPIStrip = ({ assets, entries, getBookValue, getAccumulated }:
       />
 
       <KPICard
-        gradient="from-neutral-700 to-orange-600"
+        gradient="from-amber-500 to-orange-600"
         icon={Archive}
         label="Inkuranta tillgångar"
         value={`${obsolete.length} st`}

@@ -60,7 +60,7 @@ export const Stage6AnnualReport = ({ groupId, periodId, groupName, periodStart, 
         <span className="text-muted-foreground">→</span>
         <Badge className={status === "signing" ? "bg-primary" : "bg-muted"}>3. Signera</Badge>
         <span className="text-muted-foreground">→</span>
-        <Badge className={allSigned ? "bg-neutral-700 text-white" : "bg-muted"}>4. Klar</Badge>
+        <Badge className={allSigned ? "bg-green-600 text-white" : "bg-muted"}>4. Klar</Badge>
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -167,7 +167,7 @@ export const Stage6AnnualReport = ({ groupId, periodId, groupName, periodStart, 
             <>
               <Alert className="border-[#BFE6D6] bg-[#E1F5EE] dark:bg-green-950/20">
                 <CheckCircle2 className="w-4 h-4 text-[#085041]" />
-                <AlertDescription className="text-[#085041] dark:text-neutral-300">
+                <AlertDescription className="text-[#085041] dark:text-green-300">
                   Koncernredovisningen är signerad och redo att lämnas in
                 </AlertDescription>
               </Alert>

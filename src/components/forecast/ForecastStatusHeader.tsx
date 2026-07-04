@@ -21,20 +21,20 @@ interface Props {
 const STATUS_MAP: Record<ForecastStatus, { label: string; dot: string; ring: string; text: string }> = {
   on_track: {
     label: "On track",
-    dot: "bg-neutral-700",
-    ring: "ring-neutral-300/60",
+    dot: "bg-emerald-500",
+    ring: "ring-emerald-200/60",
     text: "text-[#085041]",
   },
   at_risk: {
     label: "At risk",
-    dot: "bg-neutral-700",
-    ring: "ring-neutral-300/60",
+    dot: "bg-amber-500",
+    ring: "ring-amber-200/60",
     text: "text-[#7A5417]",
   },
   off_track: {
     label: "Off track",
-    dot: "bg-neutral-700",
-    ring: "ring-neutral-300/60",
+    dot: "bg-rose-500",
+    ring: "ring-rose-200/60",
     text: "text-[#7A1A1A]",
   },
 };

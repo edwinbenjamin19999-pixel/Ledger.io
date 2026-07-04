@@ -33,7 +33,7 @@ export const AdvisorClients = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Sök företag…"
-            className="w-full h-10 pl-9 pr-3 rounded-xl bg-white/[0.06] border border-white/10 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#000000]/50"
+            className="w-full h-10 pl-9 pr-3 rounded-xl bg-white/[0.06] border border-white/10 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#3b82f6]/50"
           />
         </div>
         <button

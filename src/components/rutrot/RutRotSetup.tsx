@@ -35,19 +35,19 @@ export function RutRotSetup() { const { saveSettings } = useRutRotSettings();
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Card
-            className="cursor-pointer border-2 hover:border-black transition-colors"
+            className="cursor-pointer border-2 hover:border-blue-400 transition-colors"
             onClick={() => handleChoose("rut")}
           >
             <CardContent className="p-6 text-center space-y-3">
-              <Home className="h-10 w-10 text-black mx-auto" />
+              <Home className="h-10 w-10 text-blue-500 mx-auto" />
               <p className="font-semibold text-lg">RUT</p>
               <p className="text-sm text-muted-foreground">Städning, hemhjälp, barnpassning</p>
-              <p className="text-xs text-black font-medium">50% avdrag, max 75 000 kr/person/år</p>
+              <p className="text-xs text-blue-600 font-medium">50% avdrag, max 75 000 kr/person/år</p>
             </CardContent>
           </Card>
 
           <Card
-            className="cursor-pointer border-2 hover:border-neutral-700 transition-colors"
+            className="cursor-pointer border-2 hover:border-emerald-500 transition-colors"
             onClick={() => handleChoose("rot")}
           >
             <CardContent className="p-6 text-center space-y-3">
@@ -71,7 +71,7 @@ export function RutRotSetup() { const { saveSettings } = useRutRotSettings();
   return (
     <div className="max-w-lg mx-auto py-16 space-y-6">
       <div className="text-center space-y-2">
-        <Sparkles className="h-8 w-8 text-[#000000] mx-auto" />
+        <Sparkles className="h-8 w-8 text-[#3b82f6] mx-auto" />
         <h2 className="text-xl font-bold">Bekräfta registrering</h2>
         <p className="text-sm text-muted-foreground">
           {choice === "both" ? "RUT och ROT" : choice === "rut" ? "RUT" : "ROT"} aktiveras för ditt företag
@@ -99,7 +99,7 @@ export function RutRotSetup() { const { saveSettings } = useRutRotSettings();
             <Button
               onClick={handleSave}
               disabled={!fSkatt || saveSettings.isPending}
-              className="flex-1 bg-[#000000] hover:bg-[#000000]/90 text-white"
+              className="flex-1 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white"
             >
               {saveSettings.isPending ? "Sparar..." : "Aktivera"}
             </Button>

@@ -112,8 +112,8 @@ export function BankAnalytics({ transactions }: BankAnalyticsProps) { const char
                     <stop offset="95%" stopColor="#1D9E75" stopOpacity={0} />
                   </linearGradient>
                   <linearGradient id="colorExpenses" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#000000" stopOpacity={0.5} />
-                    <stop offset="95%" stopColor="#000000" stopOpacity={0} />
+                    <stop offset="5%" stopColor="#0040CC" stopOpacity={0.5} />
+                    <stop offset="95%" stopColor="#0040CC" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid {...GRID_PROPS} />
@@ -122,7 +122,7 @@ export function BankAnalytics({ transactions }: BankAnalyticsProps) { const char
                 <Tooltip content={<ChartTooltip />} cursor={TOOLTIP_CURSOR} />
                 <Legend content={<CustomLegend />} />
                 <Area type="monotone" dataKey="income" stroke="#1D9E75" fillOpacity={1} fill="url(#colorIncome)" name="Inkomster" />
-                <Area type="monotone" dataKey="expenses" stroke="#000000" fillOpacity={1} fill="url(#colorExpenses)" name="Utgifter" />
+                <Area type="monotone" dataKey="expenses" stroke="#0040CC" fillOpacity={1} fill="url(#colorExpenses)" name="Utgifter" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -144,7 +144,7 @@ export function BankAnalytics({ transactions }: BankAnalyticsProps) { const char
                 <Tooltip content={<ChartTooltip />} cursor={TOOLTIP_CURSOR} />
                 <Legend content={<CustomLegend />} />
                 <Bar dataKey="Inkomster" fill="#1D9E75" radius={[6, 6, 0, 0]} />
-                <Bar dataKey="Utgifter" fill="#000000" radius={[6, 6, 0, 0]} />
+                <Bar dataKey="Utgifter" fill="#0040CC" radius={[6, 6, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>

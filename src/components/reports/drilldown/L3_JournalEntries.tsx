@@ -66,7 +66,7 @@ export function L3_JournalEntries({ ctx, account, onPickEntry }: Props) {
                 <span className="w-24 shrink-0 text-xs tabular-nums text-muted-foreground">
                   {e.entry_date}
                 </span>
-                <span className="w-20 shrink-0 font-mono text-xs font-semibold text-[#000000] dark:text-[#1E3A5F]">
+                <span className="w-20 shrink-0 font-mono text-xs font-semibold text-[#3b82f6] dark:text-[#1E3A5F]">
                   {e.verification_number || "—"}
                 </span>
                 <span className="flex-1 truncate text-sm text-foreground">

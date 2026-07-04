@@ -78,7 +78,7 @@ export const InventoryAnalysis = () => {
                 />
                 <Bar dataKey="value" radius={[0, 4, 4, 0]}>
                   {turnoverData.map((entry, i) => (
-                    <Cell key={i} fill={entry.value > 10000 ? "#000000" : entry.value > 3000 ? "hsl(var(--muted-foreground))" : "#525252"} />
+                    <Cell key={i} fill={entry.value > 10000 ? "#10b981" : entry.value > 3000 ? "hsl(var(--muted-foreground))" : "#ef4444"} />
                   ))}
                 </Bar>
               </BarChart>

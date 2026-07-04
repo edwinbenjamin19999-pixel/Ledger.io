@@ -120,7 +120,7 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
 
         {insight && (
           <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground bg-muted/50 rounded px-2 py-1">
-            <Sparkles className="h-3 w-3 text-[#000000] flex-shrink-0" />
+            <Sparkles className="h-3 w-3 text-[#3b82f6] flex-shrink-0" />
             {insight}
           </div>
         )}
@@ -189,10 +189,10 @@ function AIDiscoveryBanner({ onCreateFromCustomers, onCreateManual }: { onCreate
   if (discoveries.length === 0) return null;
 
   return (
-    <Card className="border-l-4 border-l-[#000000] bg-[#000000]/5">
+    <Card className="border-l-4 border-l-[#3b82f6] bg-[#3b82f6]/5">
       <CardContent className="py-4 px-5">
         <div className="flex items-start gap-3">
-          <Sparkles className="h-5 w-5 text-[#000000] flex-shrink-0 mt-0.5" />
+          <Sparkles className="h-5 w-5 text-[#3b82f6] flex-shrink-0 mt-0.5" />
           <div className="flex-1 space-y-3">
             <div>
               <p className="text-sm font-semibold">AI har analyserat din bokföring och hittat {discoveries.length} möjliga projekt att spåra:</p>
@@ -248,14 +248,14 @@ export function ProjectListView({ projects, isLoading, onSelect, onNew, onCreate
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold flex items-center gap-2">
-            <FolderKanban className="h-6 w-6 text-[#000000]" />
+            <FolderKanban className="h-6 w-6 text-[#3b82f6]" />
             Projektredovisning
           </h1>
           <p className="text-sm text-muted-foreground mt-1">
             AI-driven projektintelligens — intakter, kostnader och marginaler i realtid
           </p>
         </div>
-        <Button onClick={onNew} className="bg-[#000000] hover:bg-[#000000]/90 text-white">
+        <Button onClick={onNew} className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
           <Plus className="h-4 w-4 mr-1" />
           Nytt projekt
         </Button>
@@ -312,7 +312,7 @@ export function ProjectListView({ projects, isLoading, onSelect, onNew, onCreate
             <p className="text-sm text-muted-foreground mt-1">
               Skapa ditt första projekt eller lat AI föreslå projekt baserat på din bokföring.
             </p>
-            <Button onClick={onNew} className="mt-4 bg-[#000000] hover:bg-[#000000]/90 text-white">
+            <Button onClick={onNew} className="mt-4 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
               <Plus className="h-4 w-4 mr-1" />
               Skapa projekt
             </Button>

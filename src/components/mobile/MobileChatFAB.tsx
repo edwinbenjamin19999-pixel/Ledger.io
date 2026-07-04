@@ -18,7 +18,7 @@ export const MobileChatFAB = ({ onClick, hidden }: MobileChatFABProps) => {
       aria-label="Fråga AI"
       className={cn(
         "fixed right-4 z-40 flex items-center gap-2 pl-3 pr-4 h-12 rounded-full",
-        "bg-[#000000] text-white shadow-lg shadow-blue-600/30 active:scale-[0.97] transition-transform"
+        "bg-[#3b82f6] text-white shadow-lg shadow-blue-600/30 active:scale-[0.97] transition-transform"
       )}
       style={{ bottom: "calc(env(safe-area-inset-bottom) + 88px)" }}
     >

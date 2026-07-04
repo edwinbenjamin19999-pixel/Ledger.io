@@ -234,7 +234,7 @@ export function PosCSVImport() { const { addReport } = usePosZReports();
       <div className="flex items-start gap-2 p-3 rounded-lg bg-primary/5 border border-primary/20">
         <Sparkles className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
         <p className="text-xs text-muted-foreground">
-          Tips: Exportera dagliga Z-rapporter från ditt kassasystem som CSV. Bokfy tolkar automatiskt belopp per betalmetod
+          Tips: Exportera dagliga Z-rapporter från ditt kassasystem som CSV. Cogniq tolkar automatiskt belopp per betalmetod
           och skapar bokföringsunderlag enligt BAS 2026.
         </p>
       </div>

@@ -77,10 +77,10 @@ export function CustomerIntelligenceList({ customers, profiles, onEdit, onShowPr
     <div className="space-y-6">
       {/* AI Insight Bar */}
       {requiresAttention.length > 0 ? (
-        <div className="rounded-2xl border border-slate-200/70 border-l-[3px] border-l-[#000000] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+        <div className="rounded-2xl border border-slate-200/70 border-l-[3px] border-l-[#3b82f6] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
           <div className="flex items-start gap-4">
             <div className="h-10 w-10 rounded-xl bg-[#EFF6FF] flex items-center justify-center flex-shrink-0">
-              <Brain className="h-5 w-5 text-[#000000]" />
+              <Brain className="h-5 w-5 text-[#3b82f6]" />
             </div>
             <div className="flex-1 space-y-1">
               <p className="text-sm font-semibold text-slate-900">
@@ -90,7 +90,7 @@ export function CustomerIntelligenceList({ customers, profiles, onEdit, onShowPr
                 Kunder med hög risk eller pågående förfall över 14 dagar. Hantera direkt i AR-agenten.
               </p>
             </div>
-            <Button size="sm" className="bg-[#000000] hover:bg-[#000000] text-white" onClick={() => navigate("/ar-agent")}>
+            <Button size="sm" className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white" onClick={() => navigate("/ar-agent")}>
               Öppna AR-agent <ArrowUpRight className="h-3.5 w-3.5 ml-1" />
             </Button>
           </div>
@@ -155,7 +155,7 @@ export function CustomerIntelligenceList({ customers, profiles, onEdit, onShowPr
 
 function KPI({ icon: Icon, label, value, accent }: { icon: any; label: string; value: string; accent: "cyan" | "rose" | "amber" | "emerald" }) {
   const map = {
-    cyan: "border-l-[#000000] text-[#000000] bg-[#EFF6FF]",
+    cyan: "border-l-[#3b82f6] text-[#3b82f6] bg-[#EFF6FF]",
     rose: "border-l-rose-500 text-[#7A1A1A] bg-[#FCE8E8]",
     amber: "border-l-amber-500 text-[#7A5417] bg-[#FAEEDA]",
     emerald: "border-l-emerald-500 text-[#085041] bg-[#E1F5EE]",
@@ -175,7 +175,7 @@ function KPI({ icon: Icon, label, value, accent }: { icon: any; label: string; v
 }
 
 function FilterChip({ active, onClick, children, accent }: { active: boolean; onClick: () => void; children: React.ReactNode; accent?: "rose" | "emerald" }) {
-  const activeClass = accent === "rose" ? "bg-neutral-700 text-white" : accent === "emerald" ? "bg-neutral-700 text-white" : "bg-[#000000] text-white";
+  const activeClass = accent === "rose" ? "bg-rose-600 text-white" : accent === "emerald" ? "bg-emerald-600 text-white" : "bg-[#3b82f6] text-white";
   return (
     <button
       onClick={onClick}
@@ -222,7 +222,7 @@ function CustomerRow({ customer, profile, onEdit, onShowProfile, onSendReminder 
           <div className="flex items-center gap-2 flex-wrap">
             <button
               onClick={() => onShowProfile(customer)}
-              className="text-sm font-semibold text-slate-900 hover:text-[#000000] truncate text-left"
+              className="text-sm font-semibold text-slate-900 hover:text-[#3b82f6] truncate text-left"
             >
               {customer.name}
             </button>

@@ -20,9 +20,9 @@ const FILTER_MAP: Record<string, string | null> = {
 };
 
 const DOT_COLOR: Record<InsightSeverity, string> = {
-  red: "bg-neutral-700",
-  yellow: "bg-neutral-700",
-  green: "bg-neutral-700",
+  red: "bg-rose-500",
+  yellow: "bg-amber-500",
+  green: "bg-emerald-500",
 };
 
 function getUrgency(insight: PulseInsight): string | null {
@@ -121,7 +121,7 @@ export const BusinessPulseWidget = ({ companyId, size = "large" }: BusinessPulse
           <div className="px-4 py-10 text-center">
             {cashCritical ? (
               <>
-                <p className="text-sm text-neutral-700">Negativ kassa — kritiskt läge</p>
+                <p className="text-sm text-rose-600">Negativ kassa — kritiskt läge</p>
                 <p className="text-xs text-gray-400 mt-1">Inga öppna signaler i kön, men likviditeten kräver åtgärd.</p>
               </>
             ) : (
@@ -157,7 +157,7 @@ export const BusinessPulseWidget = ({ companyId, size = "large" }: BusinessPulse
                   {urgency}
                 </span>
               )}
-              <span className="text-[#000000] text-xs hover:underline flex-shrink-0">
+              <span className="text-[#3b82f6] text-xs hover:underline flex-shrink-0">
                 {actionLabel}
               </span>
             </button>
@@ -169,7 +169,7 @@ export const BusinessPulseWidget = ({ companyId, size = "large" }: BusinessPulse
       {!isMedium && insights.length > 0 && (
         <button
           onClick={() => navigate("/reports")}
-          className="border-t border-gray-100 pt-3 pb-3 mt-1 px-6 text-[#000000] hover:underline text-xs font-medium text-left cursor-pointer"
+          className="border-t border-gray-100 pt-3 pb-3 mt-1 px-6 text-[#3b82f6] hover:underline text-xs font-medium text-left cursor-pointer"
         >
           Visa fullständig logg →
         </button>

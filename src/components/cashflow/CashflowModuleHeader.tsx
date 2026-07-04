@@ -16,8 +16,8 @@ const ICON_FOR: Record<CashflowModuleKey, LucideIcon> = {
 
 const ICON_TINT: Record<CashflowModuleKey, string> = {
   report: "from-slate-700/20 to-slate-700/5 border-slate-300/50 text-slate-700 dark:text-slate-300",
-  live: "from-[#000000]/20 to-[#000000]/5 border-[#C8DDF5] text-[#000000]",
-  command: "from-neutral-700/20 to-neutral-700/5 border-[#E2E8F0] text-neutral-700",
+  live: "from-[#3b82f6]/20 to-[#3b82f6]/5 border-[#C8DDF5] text-[#3b82f6]",
+  command: "from-violet-500/20 to-violet-500/5 border-[#E2E8F0] text-violet-600",
 };
 
 const BRIDGE_ICON: Record<CashflowModuleKey, LucideIcon> = {

@@ -282,8 +282,8 @@ function MetricCard({ label, value, subtext, icon: Icon, status }: { label: stri
 }
 
 function AIAlert({ text, type = "info" }: { text: string; type?: "info" | "warning" | "success" }) { const colors = { info: "bg-primary/5 border-primary/20 text-primary",
-    warning: "bg-[#FAEEDA] dark:bg-neutral-700/10 border-[#F0DDB7] dark:border-neutral-700",
-    success: "bg-[#E1F5EE] dark:bg-neutral-700/10 border-[#BFE6D6] dark:border-neutral-700",
+    warning: "bg-[#FAEEDA] dark:bg-amber-900/10 border-[#F0DDB7] dark:border-amber-800",
+    success: "bg-[#E1F5EE] dark:bg-emerald-900/10 border-[#BFE6D6] dark:border-emerald-800",
   };
   const icons = { info: Info, warning: AlertTriangle, success: CheckCircle2 };
   const AlertIcon = icons[type];
@@ -304,8 +304,8 @@ function DataConfidenceBadge({ factPercent, estimatePercent }: { factPercent: nu
           <span className="text-xs text-muted-foreground">{factPercent}% faktabaserat, {estimatePercent}% estimat</span>
         </div>
         <div className="flex h-2 rounded-full overflow-hidden bg-muted">
-          <div className="bg-neutral-700 transition-all" style={{ width: `${factPercent}%` }} />
-          <div className="bg-neutral-700 transition-all" style={{ width: `${estimatePercent}%` }} />
+          <div className="bg-emerald-500 transition-all" style={{ width: `${factPercent}%` }} />
+          <div className="bg-amber-400 transition-all" style={{ width: `${estimatePercent}%` }} />
         </div>
       </div>
     </div>
@@ -814,7 +814,7 @@ export const ESGReporting = () => { const [companyId, setCompanyId] = useState<s
           <CardContent className="space-y-4">
             {[
               { title: "CSRD/ESRS-rapport", desc: "ESRS E1 (Klimat), S1 (Arbetstagare), G1 (Affärsetik)", icon: FileText },
-              { title: "GRI-kompatibel rapport", desc: "Mappar Bokfy-data till GRI Universal Standards", icon: FileText },
+              { title: "GRI-kompatibel rapport", desc: "Mappar Cogniq-data till GRI Universal Standards", icon: FileText },
               { title: "VSME-rapport", desc: "Anpassad för små och medelstora bolag", icon: Building2 },
               { title: "Intern ESG-sammanfattning", desc: "1-sidors sammanfattning för styrelsen", icon: Download },
             ].map(report => (

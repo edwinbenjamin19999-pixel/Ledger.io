@@ -184,7 +184,7 @@ export function AIReviewPanel({
               )}
 
               {result.findings.length === 0 && (
-                <div className="text-center py-8 text-sm text-[#085041] dark:text-[#1D9E75] bg-[#E1F5EE]/50 dark:bg-emerald-950/20 rounded-xl border border-[#BFE6D6] dark:border-neutral-700/50">
+                <div className="text-center py-8 text-sm text-[#085041] dark:text-[#1D9E75] bg-[#E1F5EE]/50 dark:bg-emerald-950/20 rounded-xl border border-[#BFE6D6] dark:border-emerald-900/50">
                   ✓ Inga observationer — strukturen ser korrekt ut
                 </div>
               )}

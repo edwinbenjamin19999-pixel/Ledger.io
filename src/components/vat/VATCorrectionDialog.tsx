@@ -37,7 +37,7 @@ export function VATCorrectionDialog({ open, onOpenChange, finding, onOpenDrilldo
           </div>
 
           {finding.suggestedFix && (
-            <div className="rounded-xl border border-[#F0DDB7] dark:border-neutral-700 p-4 bg-[#FAEEDA]/40 dark:bg-amber-950/10">
+            <div className="rounded-xl border border-[#F0DDB7] dark:border-amber-900 p-4 bg-[#FAEEDA]/40 dark:bg-amber-950/10">
               <div className="text-xs font-semibold text-[#7A5417] dark:text-[#C28A2B] uppercase tracking-wider mb-1">Förslag</div>
               <p className="text-sm text-foreground">{finding.suggestedFix}</p>
             </div>

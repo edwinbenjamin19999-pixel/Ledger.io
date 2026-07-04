@@ -117,7 +117,7 @@ export function AIInsightBar() {
           ? "border-[#F4C8C8] bg-[#FCE8E8] text-[#7A1A1A]"
           : tone === "warning"
             ? "border-[#F0DDB7] bg-[#FAEEDA] text-[#7A5417]"
-            : "border-[#C8DDF5] bg-[#EFF6FF] text-[#000000]",
+            : "border-[#C8DDF5] bg-[#EFF6FF] text-[#3b82f6]",
       )}
     >
       <Sparkles
@@ -127,7 +127,7 @@ export function AIInsightBar() {
             ? "text-[#7A1A1A]"
             : tone === "warning"
               ? "text-[#7A5417]"
-              : "text-[#000000]",
+              : "text-[#3b82f6]",
         )}
       />
       <div className="flex-1 min-w-0">

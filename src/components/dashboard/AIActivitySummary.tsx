@@ -124,16 +124,16 @@ export const AIActivitySummary = ({ companyId }: AIActivitySummaryProps) => {
   return (
     <div className="relative overflow-hidden rounded-2xl border border-slate-200/70 bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
       {/* Cyan accent line */}
-      <div className="absolute -top-px inset-x-8 h-px bg-gradient-to-r from-transparent via-[#000000]/60 to-transparent" />
+      <div className="absolute -top-px inset-x-8 h-px bg-gradient-to-r from-transparent via-[#3b82f6]/60 to-transparent" />
 
       {/* Header */}
       <div className="flex items-center justify-between gap-3 px-5 py-4 border-b border-slate-100">
         <div className="flex items-center gap-2.5 min-w-0">
           <div className="relative w-8 h-8 rounded-lg bg-[#EFF6FF] flex items-center justify-center flex-shrink-0">
-            <Sparkles className="w-4 h-4 text-[#000000]" />
+            <Sparkles className="w-4 h-4 text-[#3b82f6]" />
             <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]" />
             </span>
           </div>
           <div className="min-w-0">

@@ -78,7 +78,7 @@ export const CashflowReportHeader = ({
               <span
                 className={cn(
                   "h-1.5 w-1.5 rounded-full",
-                  statusOk ? "bg-neutral-700" : "bg-neutral-700",
+                  statusOk ? "bg-emerald-500" : "bg-amber-500",
                 )}
               />
               {statusOk ? "OK" : "Behöver granskas"}

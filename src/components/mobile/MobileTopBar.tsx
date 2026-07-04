@@ -92,8 +92,8 @@ export const MobileTopBar = ({ user, signOut }: MobileTopBarProps) => {
       >
         {/* LEFT: logo */}
         <div className="flex items-center shrink-0">
-          <span className="text-white font-medium text-[18px] leading-none">Bok</span>
-          <span className="text-[#000000] font-medium text-[18px] leading-none">fy</span>
+          <span className="text-white font-medium text-[18px] leading-none">Cog</span>
+          <span className="text-[#3b82f6] font-medium text-[18px] leading-none">niq</span>
         </div>
 
         {/* CENTER: company selector */}
@@ -115,7 +115,7 @@ export const MobileTopBar = ({ user, signOut }: MobileTopBarProps) => {
             </span>
           ) : null}
           {activeCompany?.is_test && (
-            <span className="ml-2 px-1.5 py-0.5 rounded-md bg-neutral-700/90 text-[10px] font-bold text-slate-900 tracking-wide shrink-0">
+            <span className="ml-2 px-1.5 py-0.5 rounded-md bg-amber-400/90 text-[10px] font-bold text-slate-900 tracking-wide shrink-0">
               TEST
             </span>
           )}
@@ -127,7 +127,7 @@ export const MobileTopBar = ({ user, signOut }: MobileTopBarProps) => {
           className="min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0 relative"
           aria-label="Mitt konto"
         >
-          <div className="w-[32px] h-[32px] rounded-full bg-[#000000] flex items-center justify-center">
+          <div className="w-[32px] h-[32px] rounded-full bg-[#0040CC] flex items-center justify-center">
             <span className="text-[12px] font-medium text-[#E6F4FA]">{initials}</span>
           </div>
         </button>
@@ -176,10 +176,10 @@ export const MobileTopBar = ({ user, signOut }: MobileTopBarProps) => {
           </button>
           <button
             onClick={() => { setProfileOpen(false); signOut(); }}
-            className="flex items-center gap-3 w-full px-4 py-3 rounded-ds-card bg-ds-surface border-0.5 border-neutral-300 active:scale-[0.97] transition-all duration-200 min-h-[44px]"
+            className="flex items-center gap-3 w-full px-4 py-3 rounded-ds-card bg-ds-surface border-0.5 border-rose-200 active:scale-[0.97] transition-all duration-200 min-h-[44px]"
           >
-            <LogOut className="h-5 w-5 text-neutral-700" />
-            <span className="text-sm font-medium text-neutral-700">Logga ut</span>
+            <LogOut className="h-5 w-5 text-rose-500" />
+            <span className="text-sm font-medium text-rose-600">Logga ut</span>
           </button>
         </div>
       </MobileBottomSheet>

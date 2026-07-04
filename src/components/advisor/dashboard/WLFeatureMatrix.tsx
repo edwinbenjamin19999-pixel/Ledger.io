@@ -65,11 +65,11 @@ const FEATURES: FeatureRow[] = [
 
 const CATEGORY_TONE: Record<FeatureRow["category"], string> = {
   Bokföring: "bg-slate-100 text-slate-700",
-  Rapport: "bg-[#EFF6FF] text-[#000000]",
+  Rapport: "bg-[#EFF6FF] text-[#3b82f6]",
   Skatt: "bg-[#FAEEDA] text-[#7A5417]",
   Lön: "bg-[#E1F5EE] text-[#085041]",
-  Fakturor: "bg-[#EFF6FF] text-black",
-  Bank: "bg-[#F1F5F9] text-neutral-700",
+  Fakturor: "bg-[#EFF6FF] text-blue-700",
+  Bank: "bg-[#F1F5F9] text-violet-700",
   AI: "bg-fuchsia-50 text-fuchsia-700",
 };
 
@@ -108,7 +108,7 @@ export const WLFeatureMatrix = () => {
           </p>
         </div>
         <div className="text-[11px] text-slate-500">
-          {FEATURES.length} funktioner · samma motor som Bokfy standard
+          {FEATURES.length} funktioner · samma motor som Cogniq standard
         </div>
       </div>
 
@@ -118,7 +118,7 @@ export const WLFeatureMatrix = () => {
             key={f.tab}
             disabled={!targetClientId}
             onClick={() => open(f.tab)}
-            className="text-left rounded-xl border border-slate-200 bg-white px-3 py-2.5 hover:border-[#000000] hover:bg-neutral-100/30 disabled:opacity-50 disabled:cursor-not-allowed transition group"
+            className="text-left rounded-xl border border-slate-200 bg-white px-3 py-2.5 hover:border-[#3b82f6] hover:bg-blue-50/30 disabled:opacity-50 disabled:cursor-not-allowed transition group"
           >
             <div className="flex items-start gap-2">
               <div className="h-8 w-8 rounded-lg bg-slate-50 flex items-center justify-center shrink-0 group-hover:bg-white">

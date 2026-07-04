@@ -372,7 +372,7 @@ const Reports = ({ initialLens }: ReportsProps = {}) => {
                         size="sm"
                         variant="outline"
                         onClick={() => setInvestigatorOpen(true)}
-                        className="gap-1.5 border-[#F4C8C8] text-[#7A1A1A] hover:bg-[#FCE8E8] dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-rose-950/30"
+                        className="gap-1.5 border-[#F4C8C8] text-[#7A1A1A] hover:bg-[#FCE8E8] dark:border-rose-800 dark:text-rose-300 dark:hover:bg-rose-950/30"
                       >
                         <Search className="w-3.5 h-3.5" />
                         Undersök obalans

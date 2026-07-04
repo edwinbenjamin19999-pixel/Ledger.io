@@ -23,8 +23,8 @@ import { ComingSoonButton } from "@/components/ui/ComingSoonButton";
 const fmt = (n: number) => n.toLocaleString("sv-SE", { maximumFractionDigits: 0 });
 
 const SCORE_STYLES: Record<string, { bg: string; text: string; border: string }> = {
-  A: { bg: "bg-[#E1F5EE] dark:bg-neutral-700/30", text: "text-[#085041] dark:text-[#1D9E75]", border: "border-[#BFE6D6] dark:border-neutral-700" },
-  B: { bg: "bg-[#EFF6FF] dark:bg-blue-900/30", text: "text-black dark:text-[#1E3A5F]", border: "border-[#C8DDF5] dark:border-black" },
+  A: { bg: "bg-[#E1F5EE] dark:bg-green-900/30", text: "text-[#085041] dark:text-[#1D9E75]", border: "border-[#BFE6D6] dark:border-green-800" },
+  B: { bg: "bg-[#EFF6FF] dark:bg-blue-900/30", text: "text-blue-700 dark:text-[#1E3A5F]", border: "border-[#C8DDF5] dark:border-blue-800" },
   C: { bg: "bg-[#FAEEDA] dark:bg-yellow-900/30", text: "text-[#7A5417] dark:text-[#C28A2B]", border: "border-[#F0DDB7] dark:border-yellow-800" },
   D: { bg: "bg-orange-100 dark:bg-orange-900/30", text: "text-orange-700 dark:text-orange-400", border: "border-orange-200 dark:border-orange-800" },
   E: { bg: "bg-[#FCE8E8] dark:bg-red-900/30", text: "text-[#7A1A1A] dark:text-[#C73838]", border: "border-[#F4C8C8] dark:border-red-800" },
@@ -109,7 +109,7 @@ export const CustomerCreditTab = ({ customers, openInvoices, companyId }: Props)
     <div className="space-y-4">
       {/* Credit limit warnings */}
       {customers.filter(c => c.creditExceeded).length > 0 && (
-        <Card className="border-[#F0DDB7] dark:border-neutral-700/30 bg-[#FAEEDA] dark:bg-neutral-700/10">
+        <Card className="border-[#F0DDB7] dark:border-amber-800/30 bg-[#FAEEDA] dark:bg-amber-900/10">
           <CardContent className="py-3 px-4 flex items-center gap-3">
             <AlertTriangle className="h-4 w-4 text-[#7A5417] flex-shrink-0" />
             <p className="text-xs text-[#7A5417] dark:text-[#C28A2B]">

@@ -631,7 +631,7 @@ const Budget = () => {
                   className={cn(
                     "inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium transition-colors border",
                     activeTab === t.key
-                      ? "bg-[#000000] text-white border-black"
+                      ? "bg-[#3b82f6] text-white border-blue-600"
                       : "bg-white text-slate-600 border-slate-200 hover:border-slate-300"
                   )}
                 >

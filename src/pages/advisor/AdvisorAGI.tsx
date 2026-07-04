@@ -15,7 +15,7 @@ import { nextLabel, runStageUpdate } from "@/components/advisor/actions/wlStageA
 const STAGE_META: Record<AGIStage, { label: string; tone: string }> = {
   draft: { label: "Utkast", tone: "bg-slate-100 text-slate-700" },
   ready: { label: "Redo", tone: "bg-[#E1F5EE] text-[#085041]" },
-  submitted: { label: "Inlämnad", tone: "bg-[#EFF6FF] text-black" },
+  submitted: { label: "Inlämnad", tone: "bg-[#EFF6FF] text-blue-700" },
   settled: { label: "Reglerad", tone: "bg-[#E1F5EE] text-[#085041]" },
   missing_data: { label: "Saknar data", tone: "bg-[#FCE8E8] text-[#7A1A1A]" },
 };
@@ -192,7 +192,7 @@ const AdvisorAGI = () => {
                       className={`block w-fit px-2 py-0.5 rounded-md text-[10px] font-semibold ring-1 ${
                         r.risk === "high"
                           ? "bg-[#FCE8E8] text-[#7A1A1A] ring-red-200"
-                          : "bg-[#FAEEDA] text-[#7A5417] ring-neutral-300"
+                          : "bg-[#FAEEDA] text-[#7A5417] ring-amber-200"
                       }`}
                     >
                       <AlertTriangle className="h-2.5 w-2.5 inline mr-1" />
@@ -229,9 +229,9 @@ const AdvisorAGI = () => {
         </div>
       )}
 
-      <div className="rounded-2xl border border-[#C8DDF5] bg-neutral-100/40 p-4 flex items-start gap-3">
-        <Sparkles className="h-4 w-4 text-[#000000] mt-0.5" />
-        <div className="text-xs text-[#000000]">
+      <div className="rounded-2xl border border-[#C8DDF5] bg-blue-50/40 p-4 flex items-start gap-3">
+        <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5" />
+        <div className="text-xs text-[#3b82f6]">
           <strong>AI-prioritering:</strong> AGI ska normalt lämnas senast den 12:e månaden efter löneutbetalning.
           Sortera på "Saknar data" för att hitta blockerade klienter.
         </div>

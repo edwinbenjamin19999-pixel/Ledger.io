@@ -45,8 +45,8 @@ export default function AdvisorProfitability() {
     : "text-[#0F6E56]";
 
   const overviewColor =
-    totals.marginPct >= 50 ? "text-neutral-700"
-    : totals.marginPct >= 30 ? "text-neutral-700"
+    totals.marginPct >= 50 ? "text-emerald-600"
+    : totals.marginPct >= 30 ? "text-amber-600"
     : "text-red-600";
 
   return (
@@ -58,8 +58,8 @@ export default function AdvisorProfitability() {
 
       {/* OVERVIEW CARDS — premium surface with top accent */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <KpiCard label="Månadsintäkter" value={fmtSek(totals.revenue)} accent="#000000" sub="snitt 12m" />
-        <KpiCard label="Lönekostnad" value={fmtSek(totals.cost)} accent="#525252" sub={`${PROFITABILITY_INTERNAL_RATE} kr/h internkostnad`} />
+        <KpiCard label="Månadsintäkter" value={fmtSek(totals.revenue)} accent="#0040CC" sub="snitt 12m" />
+        <KpiCard label="Lönekostnad" value={fmtSek(totals.cost)} accent="#EF9F27" sub={`${PROFITABILITY_INTERNAL_RATE} kr/h internkostnad`} />
         <KpiCard
           label="Täckningsbidrag"
           value={fmtSek(totals.margin)}
@@ -70,7 +70,7 @@ export default function AdvisorProfitability() {
         <KpiCard
           label="Marginal"
           value={`${totals.marginPct.toFixed(1)}%`}
-          accent="#000000"
+          accent="#0040CC"
           valueClass={
             totals.marginPct > 30 ? "text-[#0F6E56]"
             : totals.marginPct >= 10 ? "text-[#633806]"
@@ -145,7 +145,7 @@ export default function AdvisorProfitability() {
             <li>• {concentratedClients} klienter genererar ~80% av byråns intäkter. Portföljen är koncentrerad.</li>
           )}
           {negativeMarginCount > 0 && (
-            <li className="text-neutral-300">• {negativeMarginCount} klienter har negativ marginal. Överväg prisökning eller effektivisering.</li>
+            <li className="text-amber-300">• {negativeMarginCount} klienter har negativ marginal. Överväg prisökning eller effektivisering.</li>
           )}
           <li>• AI-automatisering uppskattas spara ~42 timmar denna månad (~{fmtSek(42 * PROFITABILITY_INTERNAL_RATE)} i byråkostnad).</li>
           {overEstimatedClient && (overEstimatedClient.marginPct ?? 1) < 0.1 && (
@@ -163,7 +163,7 @@ export default function AdvisorProfitability() {
               <XAxis dataKey="month" stroke="#94A3B8" fontSize={11} tickFormatter={(v) => `M${v}`} />
               <YAxis stroke="#94A3B8" fontSize={11} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
               <Tooltip formatter={(v: number) => fmtSek(v)} />
-              <Line type="monotone" dataKey="revenue" stroke="#000000" strokeWidth={2} dot={false} />
+              <Line type="monotone" dataKey="revenue" stroke="#3b82f6" strokeWidth={2} dot={false} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -179,7 +179,7 @@ const KpiCard = ({
   label,
   value,
   valueClass,
-  accent = "#000000",
+  accent = "#0040CC",
   sub,
 }: {
   label: string;

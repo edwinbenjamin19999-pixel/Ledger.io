@@ -110,7 +110,7 @@ export function SelfFixButton({
         <DialogContent className="max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Wand2 className="w-4 h-4 text-[#000000]" />
+              <Wand2 className="w-4 h-4 text-[#3b82f6]" />
               Självfix — {module}
             </DialogTitle>
             <DialogDescription>
@@ -142,7 +142,7 @@ export function SelfFixButton({
                     className="flex items-start gap-2 text-sm py-1.5 border-b border-border/50 last:border-0"
                   >
                     {s.status === "ok" ? (
-                      <CheckCircle2 className="w-4 h-4 text-neutral-700 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                     ) : s.status === "failed" ? (
                       <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     ) : (
@@ -161,8 +161,8 @@ export function SelfFixButton({
               <div
                 className={`rounded-lg px-3 py-2 text-sm font-medium ${
                   result.success
-                    ? "bg-neutral-100 text-neutral-700 dark:bg-emerald-950/30 dark:text-neutral-700"
-                    : "bg-neutral-100 text-neutral-700 dark:bg-amber-950/30 dark:text-neutral-700"
+                    ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400"
+                    : "bg-amber-50 text-amber-700 dark:bg-amber-950/30 dark:text-amber-400"
                 }`}
               >
                 {result.summary}

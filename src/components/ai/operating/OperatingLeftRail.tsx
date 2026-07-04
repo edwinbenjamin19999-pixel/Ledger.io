@@ -68,17 +68,17 @@ export function OperatingLeftRail({ active, onSelect, counts }: Props) {
                     onClick={() => !isDisabled && onSelect(it.key as CanvasSection)}
                     className={cn(
                       "w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-sm transition-colors text-left",
-                      isActive && "bg-[#EFF6FF] text-[#000000] font-medium",
+                      isActive && "bg-[#EFF6FF] text-[#3b82f6] font-medium",
                       !isActive && !isDisabled && "text-slate-700 hover:bg-slate-50",
                       isDisabled && "text-slate-400 cursor-not-allowed",
                     )}
                   >
-                    <Icon className={cn("w-3.5 h-3.5", isActive ? "text-[#000000]" : "text-slate-500")} />
+                    <Icon className={cn("w-3.5 h-3.5", isActive ? "text-[#3b82f6]" : "text-slate-500")} />
                     <span className="flex-1 truncate">{it.label}</span>
                     {typeof it.count === "number" && (
                       <span className={cn(
                         "text-[10px] tabular-nums px-1.5 py-0.5 rounded-full font-medium",
-                        isActive ? "bg-[#EFF6FF] text-[#000000]" : "bg-slate-100 text-slate-600"
+                        isActive ? "bg-[#EFF6FF] text-[#3b82f6]" : "bg-slate-100 text-slate-600"
                       )}>
                         {it.count}
                       </span>

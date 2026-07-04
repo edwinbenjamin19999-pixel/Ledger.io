@@ -55,8 +55,8 @@ export const AdvisorAIOverview = ({ clients, onSeeAll }: AdvisorAIOverviewProps)
       )}>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#000000]/30 to-blue-500/30 flex items-center justify-center">
-              <Sparkles className="h-3.5 w-3.5 text-[#000000]" />
+            <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#3b82f6]/30 to-blue-500/30 flex items-center justify-center">
+              <Sparkles className="h-3.5 w-3.5 text-[#3b82f6]" />
             </div>
             <div>
               <div className="text-sm font-semibold text-white leading-none">AI-översikt</div>
@@ -67,9 +67,9 @@ export const AdvisorAIOverview = ({ clients, onSeeAll }: AdvisorAIOverviewProps)
         <ul className="space-y-2">
           {insights.map((ins, i) => {
             const Icon = ins.Icon;
-            const tone = ins.tone === "critical" ? "text-neutral-300"
-              : ins.tone === "warning" ? "text-neutral-300"
-              : "text-[#000000]";
+            const tone = ins.tone === "critical" ? "text-rose-300"
+              : ins.tone === "warning" ? "text-amber-300"
+              : "text-[#3b82f6]";
             return (
               <li key={i} className="flex items-start gap-2.5">
                 <Icon className={cn("h-3.5 w-3.5 mt-0.5 flex-shrink-0", tone)} />
@@ -80,7 +80,7 @@ export const AdvisorAIOverview = ({ clients, onSeeAll }: AdvisorAIOverviewProps)
         </ul>
         <button
           onClick={onSeeAll}
-          className="mt-3 w-full flex items-center justify-center gap-1 text-xs font-semibold text-[#000000] hover:text-[#000000] active:scale-[0.98] transition-all py-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08]"
+          className="mt-3 w-full flex items-center justify-center gap-1 text-xs font-semibold text-[#3b82f6] hover:text-[#3b82f6] active:scale-[0.98] transition-all py-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08]"
         >
           Visa alla insikter <ChevronRight className="h-3 w-3" />
         </button>

@@ -168,11 +168,11 @@ const SecurityAudit = () => { const { user, loading } = useAuth();
 
   const getLevelBadge = (level: string) => { if (level === "error") return <Badge variant="destructive">Kritisk</Badge>;
     if (level === "warn") return <Badge variant="secondary" className="bg-[#FAEEDA] text-[#7A5417] dark:bg-yellow-900/30 dark:text-[#C28A2B]">Varning</Badge>;
-    return <Badge variant="default" className="bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]">Info</Badge>;
+    return <Badge variant="default" className="bg-[#E1F5EE] text-[#085041] dark:bg-green-900/30 dark:text-[#1D9E75]">Info</Badge>;
   };
 
   const getDifficultyBadge = (difficulty?: string) => { if (!difficulty) return null;
-    const colors: Record<string, string> = { low: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]",
+    const colors: Record<string, string> = { low: "bg-[#E1F5EE] text-[#085041] dark:bg-green-900/30 dark:text-[#1D9E75]",
       medium: "bg-[#FAEEDA] text-[#7A5417] dark:bg-yellow-900/30 dark:text-[#C28A2B]",
       high: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]",
     };
@@ -325,11 +325,11 @@ const SecurityAudit = () => { const { user, loading } = useAuth();
                 </CardContent>
               </Card>
             )}
-            <div className="rounded-xl bg-[#EFF6FF] border border-[#C8DDF5] p-4 flex items-start gap-3 dark:bg-blue-950/30 dark:border-black">
-              <Info className="w-5 h-5 text-black dark:text-[#1E3A5F] flex-shrink-0 mt-0.5" />
+            <div className="rounded-xl bg-[#EFF6FF] border border-[#C8DDF5] p-4 flex items-start gap-3 dark:bg-blue-950/30 dark:border-blue-800">
+              <Info className="w-5 h-5 text-blue-600 dark:text-[#1E3A5F] flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-medium text-blue-800 dark:text-blue-300">Förstärk kontosäkerheten</p>
-                <p className="text-xs text-black dark:text-[#1E3A5F] mt-1">
+                <p className="text-xs text-blue-600 dark:text-[#1E3A5F] mt-1">
                   Aktivera tvåfaktorsautentisering (2FA) i dina kontoinställningar för maximal säkerhet.
                 </p>
               </div>

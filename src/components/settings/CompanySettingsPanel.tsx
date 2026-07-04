@@ -164,7 +164,7 @@ export default function CompanySettingsPanel({ companyId }: Props) {
       </div>
       <div className="flex items-center gap-2">
         {isDirty(sectionKeys[section]) && (
-          <Badge variant="outline" className="border-neutral-700 text-neutral-700">
+          <Badge variant="outline" className="border-amber-500 text-amber-600">
             <AlertCircle className="h-3 w-3 mr-1" />Osparade ändringar
           </Badge>
         )}
@@ -311,7 +311,7 @@ export default function CompanySettingsPanel({ companyId }: Props) {
                 <Label>Nästa fakturanummer</Label>
                 <Input type="number" value={form.next_invoice_number} onChange={e => set("next_invoice_number", +e.target.value)} />
                 {form.next_invoice_number < (saved.next_invoice_number || 0) && (
-                  <p className="text-xs text-neutral-700 mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />Lägre än befintligt — kan ge dubbletter</p>
+                  <p className="text-xs text-amber-600 mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />Lägre än befintligt — kan ge dubbletter</p>
                 )}
               </div>
               <div><Label>Påminnelse nivå 1 (dagar)</Label><Input type="number" value={form.reminder_days_l1} onChange={e => set("reminder_days_l1", +e.target.value)} /></div>

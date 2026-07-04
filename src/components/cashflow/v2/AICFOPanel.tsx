@@ -31,9 +31,9 @@ export function AICFOPanel({
   return (
     <div className="space-y-4">
       {/* Header */}
-      <Card className="p-4 bg-gradient-to-br from-[#000000]/10 to-transparent border-[#C8DDF5]">
+      <Card className="p-4 bg-gradient-to-br from-[#3b82f6]/10 to-transparent border-[#C8DDF5]">
         <div className="flex items-start gap-2">
-          <Bot className="h-5 w-5 text-[#000000] mt-0.5" />
+          <Bot className="h-5 w-5 text-[#3b82f6] mt-0.5" />
           <div>
             <h3 className="text-sm font-semibold tracking-tight">AI CFO</h3>
             <p className="text-[11px] text-muted-foreground mt-0.5">
@@ -92,7 +92,7 @@ export function AICFOPanel({
       {/* Topp 3 åtgärder */}
       <Card className="p-4">
         <h4 className="text-[11px] uppercase tracking-wide text-muted-foreground mb-3 flex items-center gap-1">
-          <Sparkles className="h-3 w-3 text-[#000000]" /> Topp 3 åtgärder
+          <Sparkles className="h-3 w-3 text-[#3b82f6]" /> Topp 3 åtgärder
         </h4>
         {top3.length === 0 ? (
           <p className="text-xs text-muted-foreground">Inga föreslagna åtgärder.</p>
@@ -120,7 +120,7 @@ export function AICFOPanel({
                   </div>
                   <Button
                     size="sm"
-                    className="w-full h-8 text-xs bg-[#000000] hover:bg-[#000000] text-white"
+                    className="w-full h-8 text-xs bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
                     onClick={() => onExecuteAction(insight)}
                   >
                     Granska & utför

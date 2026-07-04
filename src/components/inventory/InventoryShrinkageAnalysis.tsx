@@ -132,8 +132,8 @@ export const InventoryShrinkageAnalysis = () => {
       </Card>
 
       {/* Forecast */}
-      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20">
-        <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
+        <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
         <p className="text-xs text-muted-foreground">
           Om nuvarande trend haller: svinn 2026 = 28 080 kr (1,2% av lagervarde).
           Branschsnitt detaljhandel: 1,5% — du är under snittet. Fokusera på att utreda

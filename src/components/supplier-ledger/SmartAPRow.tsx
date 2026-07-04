@@ -46,7 +46,7 @@ interface Props {
 const SupplierAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   return (
-    <div className="w-[28px] h-[28px] rounded-full bg-[#000000] text-[#E6F4FA] text-[11px] font-medium flex items-center justify-center shrink-0">
+    <div className="w-[28px] h-[28px] rounded-full bg-[#0040CC] text-[#E6F4FA] text-[11px] font-medium flex items-center justify-center shrink-0">
       {initials}
     </div>
   );
@@ -82,7 +82,7 @@ export function SmartAPRow({ invoice, group, isSelected, cashBalance, companyId,
   const toneClass = {
     rose: "text-[#7A1A1A]",
     amber: "text-[#7A5417]",
-    cyan: "text-[#000000]",
+    cyan: "text-[#3b82f6]",
     slate: "text-slate-500",
     emerald: "text-[#085041]",
   }[aiLine?.tone || "slate"];
@@ -102,7 +102,7 @@ export function SmartAPRow({ invoice, group, isSelected, cashBalance, companyId,
           type="checkbox"
           checked={isSelected}
           onChange={() => onToggleSelect(invoice.id)}
-          className="w-[14px] h-[14px] rounded-[3px] border-[1.5px] border-[#D1D5DB] accent-[#000000] shrink-0 cursor-pointer"
+          className="w-[14px] h-[14px] rounded-[3px] border-[1.5px] border-[#D1D5DB] accent-[#0040CC] shrink-0 cursor-pointer"
         />
         <SupplierAvatar name={invoice.counterparty_name} />
         <div className="flex-1 min-w-0">

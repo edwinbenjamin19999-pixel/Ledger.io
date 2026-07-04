@@ -45,7 +45,7 @@ function ChipList({
   actionLabel?: string;
 }) {
   const accents = {
-    cyan: "border-[#C8DDF5] bg-[#EFF6FF] text-[#000000]",
+    cyan: "border-[#C8DDF5] bg-[#EFF6FF] text-[#3b82f6]",
     rose: "border-[#F4C8C8] bg-[#FCE8E8] text-[#7A1A1A]",
     emerald: "border-[#BFE6D6] bg-[#E1F5EE] text-[#085041]",
   } as const;
@@ -92,8 +92,8 @@ export function ForecastInsightsPanel({ insights, loading, onApplyAction, onOpen
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EFF6FF] ring-1 ring-black">
-            <Sparkles className="h-4 w-4 text-[#000000]" />
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EFF6FF] ring-1 ring-blue-200">
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
           </div>
           <div>
             <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">AI-insikter</div>

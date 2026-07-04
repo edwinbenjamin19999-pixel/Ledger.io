@@ -108,7 +108,7 @@ export function CashLedgerVsBankCard({ companyId }: Props) {
         {/* Bank */}
         <div className={cn(
           "rounded-xl border p-4",
-          banks.length === 0 ? "border-slate-200 bg-slate-50/40" : "border-[#BFE6D6] bg-neutral-100/40"
+          banks.length === 0 ? "border-slate-200 bg-slate-50/40" : "border-[#BFE6D6] bg-emerald-50/40"
         )}>
           <div className="flex items-center gap-2 text-[11px] uppercase tracking-wide text-muted-foreground font-medium">
             <Landmark className="w-3.5 h-3.5" /> Bank (PSD2)
@@ -145,7 +145,7 @@ export function CashLedgerVsBankCard({ companyId }: Props) {
               <div className="text-[11px] text-muted-foreground mt-2">
                 {banks.length} konto · senast synkad {new Date(Math.max(...banks.filter(b => b.last_synced_at).map(b => new Date(b.last_synced_at!).getTime()))).toLocaleString("sv-SE", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" })}
               </div>
-              <ul className="mt-3 space-y-1.5 border-t border-neutral-300/60 pt-2">
+              <ul className="mt-3 space-y-1.5 border-t border-emerald-200/60 pt-2">
                 {banks.map((b, i) => (
                   <li key={i} className="flex items-center justify-between gap-2 text-[11px]">
                     <div className="min-w-0 flex-1">

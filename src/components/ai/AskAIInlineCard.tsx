@@ -30,9 +30,9 @@ export function AskAIInlineCard() {
   const questions = match?.questions || DEFAULT_QUESTIONS;
 
   return (
-    <div className="rounded-2xl border border-[#000000]/20 bg-gradient-to-br from-[#000000]/5 to-transparent p-5">
+    <div className="rounded-2xl border border-[#3b82f6]/20 bg-gradient-to-br from-[#3b82f6]/5 to-transparent p-5">
       <div className="flex items-start gap-3">
-        <div className="w-9 h-9 rounded-xl bg-[#000000] flex items-center justify-center flex-shrink-0">
+        <div className="w-9 h-9 rounded-xl bg-[#3b82f6] flex items-center justify-center flex-shrink-0">
           <Sparkles className="w-4 h-4 text-white" />
         </div>
         <div className="flex-1 min-w-0">
@@ -45,7 +45,7 @@ export function AskAIInlineCard() {
               <button
                 key={i}
                 onClick={() => ask(q)}
-                className="group inline-flex items-center gap-1.5 text-[12px] px-3 py-1.5 rounded-full border border-[#000000]/30 bg-white hover:bg-[#000000]/10 text-[#000000] font-medium transition-colors"
+                className="group inline-flex items-center gap-1.5 text-[12px] px-3 py-1.5 rounded-full border border-[#3b82f6]/30 bg-white hover:bg-[#3b82f6]/10 text-[#0040CC] font-medium transition-colors"
               >
                 {q}
                 <ArrowRight className="w-3 h-3 opacity-60 group-hover:translate-x-0.5 transition-transform" />

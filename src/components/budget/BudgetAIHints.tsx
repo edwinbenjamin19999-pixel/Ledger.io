@@ -66,7 +66,7 @@ export function BudgetAIHints({ metrics }: Props) {
     amber: { bg: "bg-[#FAEEDA]", border: "border-[#F0DDB7]", title: "text-[#7A5417] dark:text-[#C28A2B]" },
     rose: { bg: "bg-[#FCE8E8]", border: "border-[#F4C8C8]", title: "text-[#7A1A1A] dark:text-[#C73838]" },
     emerald: { bg: "bg-[#E1F5EE]", border: "border-[#BFE6D6]", title: "text-[#085041] dark:text-[#1D9E75]" },
-    blue: { bg: "bg-[#EFF6FF]", border: "border-[#C8DDF5]", title: "text-black dark:text-[#1E3A5F]" },
+    blue: { bg: "bg-[#EFF6FF]", border: "border-[#C8DDF5]", title: "text-blue-600 dark:text-[#1E3A5F]" },
   };
 
   return (

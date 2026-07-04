@@ -15,13 +15,13 @@ export function StatusNowCard({ status, onResume }: Props) {
 
   if (status.state === "error") {
     return (
-      <div className={`${base} border-neutral-300/70`}>
+      <div className={`${base} border-rose-300/70`}>
         <div className="flex items-start gap-3">
-          <div className="mt-0.5 rounded-lg bg-neutral-100 p-2 text-neutral-700">
+          <div className="mt-0.5 rounded-lg bg-rose-50 p-2 text-rose-600">
             <AlertTriangle className="h-5 w-5" />
           </div>
           <div className="flex-1">
-            <div className="text-[11px] font-semibold uppercase tracking-[0.08em] text-neutral-700">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.08em] text-rose-700">
               Fel
             </div>
             <div className="mt-1 text-sm text-slate-900">
@@ -31,7 +31,7 @@ export function StatusNowCard({ status, onResume }: Props) {
               status.errorDetailsHref ? (
                 <a
                   href={status.errorDetailsHref}
-                  className="mt-1 inline-block text-sm font-medium text-neutral-700 underline-offset-2 hover:underline"
+                  className="mt-1 inline-block text-sm font-medium text-rose-700 underline-offset-2 hover:underline"
                 >
                   Visa detaljer
                 </a>
@@ -39,7 +39,7 @@ export function StatusNowCard({ status, onResume }: Props) {
                 <Button
                   variant="link"
                   size="sm"
-                  className="px-0 text-neutral-700"
+                  className="px-0 text-rose-700"
                   onClick={status.onErrorDetails}
                 >
                   Visa detaljer
@@ -54,13 +54,13 @@ export function StatusNowCard({ status, onResume }: Props) {
 
   if (status.state === "paused") {
     return (
-      <div className={`${base} border-neutral-300/70`}>
+      <div className={`${base} border-amber-200/70`}>
         <div className="flex items-start gap-3">
-          <div className="mt-0.5 rounded-lg bg-neutral-100 p-2 text-neutral-700">
+          <div className="mt-0.5 rounded-lg bg-amber-50 p-2 text-amber-600">
             <Pause className="h-5 w-5" />
           </div>
           <div className="flex-1">
-            <div className="text-[11px] font-semibold uppercase tracking-[0.08em] text-neutral-700">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.08em] text-amber-700">
               Pausad
             </div>
             <div className="mt-1 text-sm text-slate-900">
@@ -81,7 +81,7 @@ export function StatusNowCard({ status, onResume }: Props) {
     return (
       <div className={`${base} border-slate-200/70`}>
         <div className="flex items-start gap-3">
-          <div className="mt-0.5 rounded-lg bg-neutral-100 p-2 text-[#000000]">
+          <div className="mt-0.5 rounded-lg bg-blue-50 p-2 text-[#3b82f6]">
             <Loader2 className="h-5 w-5 animate-spin" />
           </div>
           <div className="flex-1">
@@ -116,7 +116,7 @@ export function StatusNowCard({ status, onResume }: Props) {
   return (
     <div className={`${base} border-slate-200/70`}>
       <div className="flex items-start gap-3">
-        <div className="mt-0.5 rounded-lg bg-neutral-100 p-2 text-neutral-700">
+        <div className="mt-0.5 rounded-lg bg-emerald-50 p-2 text-emerald-600">
           <CheckCircle2 className="h-5 w-5" />
         </div>
         <div className="flex-1">

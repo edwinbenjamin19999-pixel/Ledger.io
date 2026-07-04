@@ -52,7 +52,7 @@ export function VarianceDriverCard({ driver, rootCause, aiLoading, onSimulate, o
             </span>
           </div>
           <div className="mt-1.5 flex items-start gap-1.5 text-xs text-slate-600 min-h-[1rem]">
-            <Sparkles className="h-3 w-3 mt-0.5 text-[#000000] shrink-0" />
+            <Sparkles className="h-3 w-3 mt-0.5 text-[#3b82f6] shrink-0" />
             {aiLoading && !rootCause ? (
               <Loader2 className="h-3 w-3 animate-spin text-slate-400" />
             ) : (

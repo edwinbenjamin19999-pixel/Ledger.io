@@ -169,7 +169,7 @@ export const InvoiceDecisionPanel = ({ invoice, companyId, onUpdated }: Decision
       <div className="flex-1 overflow-y-auto p-4 space-y-5">
         {/* Rejection notice */}
         {isRejected && (
-          <div className="rounded-lg border border-neutral-300 bg-[#FCE8E8] p-3">
+          <div className="rounded-lg border border-rose-300 bg-[#FCE8E8] p-3">
             <div className="flex items-center gap-2 text-[#7A1A1A] font-medium text-sm">
               <Ban className="h-4 w-4" />
               Fakturan är avvisad
@@ -271,7 +271,7 @@ export const InvoiceDecisionPanel = ({ invoice, companyId, onUpdated }: Decision
                   >
                     <div
                       className={`h-6 w-6 rounded-full flex items-center justify-center ${
-                        done ? "bg-neutral-700 text-white" : next ? "bg-[#000000] text-white" : "bg-muted text-muted-foreground"
+                        done ? "bg-emerald-500 text-white" : next ? "bg-[#3b82f6] text-white" : "bg-muted text-muted-foreground"
                       }`}
                     >
                       {done ? <CheckCircle2 className="h-3.5 w-3.5" /> : <User2 className="h-3.5 w-3.5" />}
@@ -285,7 +285,7 @@ export const InvoiceDecisionPanel = ({ invoice, companyId, onUpdated }: Decision
                     <Badge variant="outline" className="text-[10px]">
                       Steg {i + 1}/{requiredSteps}
                     </Badge>
-                    {next && <ChevronRight className="h-3.5 w-3.5 text-[#000000]" />}
+                    {next && <ChevronRight className="h-3.5 w-3.5 text-[#3b82f6]" />}
                   </div>
                 );
               })}
@@ -300,7 +300,7 @@ export const InvoiceDecisionPanel = ({ invoice, companyId, onUpdated }: Decision
 
         {/* Reject panel */}
         {showRejectBox && canDecide && (
-          <section className="rounded-lg border border-neutral-300 bg-[#FCE8E8] p-3">
+          <section className="rounded-lg border border-rose-300 bg-[#FCE8E8] p-3">
             <label className="text-xs font-semibold text-[#7A1A1A] block mb-1.5">
               Motivering (krävs)
             </label>
@@ -348,7 +348,7 @@ export const InvoiceDecisionPanel = ({ invoice, companyId, onUpdated }: Decision
             <div className="flex gap-2">
               <Button
                 variant="outline"
-                className="flex-1 text-[#7A1A1A] border-neutral-300 hover:bg-[#FCE8E8]"
+                className="flex-1 text-[#7A1A1A] border-rose-300 hover:bg-[#FCE8E8]"
                 disabled={busy}
                 onClick={() => setShowRejectBox(true)}
               >

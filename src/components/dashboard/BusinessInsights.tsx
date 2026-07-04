@@ -130,9 +130,9 @@ export const BusinessInsights = ({ companyId, industry }: BusinessInsightsProps)
                         : isCost
                         ? "border-orange-500 bg-orange-50"
                         : isRevenue
-                        ? "border-neutral-700 bg-[#E1F5EE]"
+                        ? "border-green-500 bg-[#E1F5EE]"
                         : isPositive
-                        ? "border-black bg-[#EFF6FF]"
+                        ? "border-blue-500 bg-[#EFF6FF]"
                         : ""
                     }
                   >
@@ -144,7 +144,7 @@ export const BusinessInsights = ({ companyId, industry }: BusinessInsightsProps)
                       ) : isRevenue ? (
                         <TrendingUp className="h-5 w-5 mt-0.5 flex-shrink-0 text-[#085041]" />
                       ) : (
-                        <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0 text-black" />
+                        <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0 text-blue-600" />
                       )}
                       <div className="flex-1">
                         <h4 className="font-semibold mb-2">{section.title}</h4>

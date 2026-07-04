@@ -106,7 +106,7 @@ export function Phase3Deductions({ receipts, deductions, setDeductions, onNext, 
           {deductions.map((d) => (
             <div
               key={d.id}
-              className={`flex items-start gap-4 p-4 rounded-lg border transition-colors ${ d.accepted ? "bg-neutral-100/50 dark:bg-emerald-950/20 border-[#BFE6D6] dark:border-neutral-700" : "bg-muted/30"
+              className={`flex items-start gap-4 p-4 rounded-lg border transition-colors ${ d.accepted ? "bg-emerald-50/50 dark:bg-emerald-950/20 border-[#BFE6D6] dark:border-emerald-800" : "bg-muted/30"
               }`}
             >
               <Switch

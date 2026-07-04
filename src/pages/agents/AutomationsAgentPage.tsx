@@ -271,8 +271,8 @@ export default function AutomationsAgentPage() {
 
   const pillState: "active" | "paused" = isActive ? "active" : "paused";
   const pill = {
-    active: { dot: "bg-neutral-700", text: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300", label: "Aktiv" },
-    paused: { dot: "bg-neutral-700", text: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300", label: "Pausad" },
+    active: { dot: "bg-emerald-500", text: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200", label: "Aktiv" },
+    paused: { dot: "bg-amber-500", text: "text-amber-700", bg: "bg-amber-50 border-amber-200", label: "Pausad" },
   }[pillState];
 
   const toggleRule = (id: string) =>
@@ -329,7 +329,7 @@ export default function AutomationsAgentPage() {
       {/* HEADER */}
       <header className="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
         <div className="flex items-start gap-4">
-          <div className="rounded-xl border border-slate-200/70 bg-white p-2.5 text-[#000000]">
+          <div className="rounded-xl border border-slate-200/70 bg-white p-2.5 text-[#3b82f6]">
             <Workflow size={32} strokeWidth={1.6} />
           </div>
           <div>

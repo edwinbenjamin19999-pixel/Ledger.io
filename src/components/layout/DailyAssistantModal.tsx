@@ -167,13 +167,13 @@ export const DailyAssistantModal = () => { const [open, setOpen] = useState(fals
   if (loading || !user) return null;
 
   const severityColors = { urgent: "bg-[#FCE8E8] border-[#F4C8C8] text-[#7A1A1A] dark:bg-red-950/30 dark:border-red-800 dark:text-red-300",
-    warning: "bg-[#FAEEDA] border-[#F0DDB7] text-[#7A5417] dark:bg-amber-950/30 dark:border-neutral-700 dark:text-neutral-300",
-    info: "bg-[#EFF6FF] border-[#C8DDF5] text-blue-800 dark:bg-blue-950/30 dark:border-black dark:text-blue-300",
+    warning: "bg-[#FAEEDA] border-[#F0DDB7] text-[#7A5417] dark:bg-amber-950/30 dark:border-amber-800 dark:text-amber-300",
+    info: "bg-[#EFF6FF] border-[#C8DDF5] text-blue-800 dark:bg-blue-950/30 dark:border-blue-800 dark:text-blue-300",
   };
 
   const severityIconColors = { urgent: "text-[#7A1A1A]",
     warning: "text-[#7A5417]",
-    info: "text-black",
+    info: "text-blue-500",
   };
 
   return (
@@ -230,7 +230,7 @@ export const DailyAssistantModal = () => { const [open, setOpen] = useState(fals
         <div className="px-6 pt-5 pb-6 flex flex-col items-center gap-3">
           <Button
             onClick={handleDismiss}
-            className="w-full h-11 text-sm font-semibold rounded-xl bg-[#000000] text-white hover:bg-[#000000]/90 transition-colors"
+            className="w-full h-11 text-sm font-semibold rounded-xl bg-[#3b82f6] text-white hover:bg-[#3b82f6]/90 transition-colors"
           >
             Sätt igång
             <ArrowRight className="ml-2 h-4 w-4" />

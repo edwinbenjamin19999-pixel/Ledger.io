@@ -19,9 +19,9 @@ const ICONS = {
 } as const;
 
 const COLORS = {
-  ebit_negative: { ring: "ring-neutral-300", text: "text-[#7A5417]", bg: "bg-[#FAEEDA]" },
-  cash_negative: { ring: "ring-neutral-300", text: "text-[#7A1A1A]", bg: "bg-[#FCE8E8]" },
-  target_miss: { ring: "ring-neutral-300", text: "text-[#7A1A1A]", bg: "bg-[#FCE8E8]" },
+  ebit_negative: { ring: "ring-amber-200", text: "text-[#7A5417]", bg: "bg-[#FAEEDA]" },
+  cash_negative: { ring: "ring-rose-200", text: "text-[#7A1A1A]", bg: "bg-[#FCE8E8]" },
+  target_miss: { ring: "ring-rose-200", text: "text-[#7A1A1A]", bg: "bg-[#FCE8E8]" },
 } as const;
 
 export function TurningPointsPanel({ points, onSimulate, onDrilldown }: Props) {

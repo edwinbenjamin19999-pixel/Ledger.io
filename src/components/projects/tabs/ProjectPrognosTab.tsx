@@ -88,10 +88,10 @@ export function ProjectPrognosTab({ project, totalRevenue, totalCost }: Props) {
                 <Tooltip formatter={(v: number) => fmt(v)} />
                 <Legend content={<CustomLegend />} />
                 <Line type="monotone" dataKey="Budgeterad" stroke="hsl(var(--muted-foreground))" strokeDasharray="5 5" strokeWidth={2} dot={false} />
-                <Area type="monotone" dataKey="Faktiskt" fill="#000000" stroke="#000000" fillOpacity={0.2} />
-                <Line type="monotone" dataKey="Optimistisk" stroke="#000000" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
-                <Line type="monotone" dataKey="Basfall" stroke="#525252" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
-                <Line type="monotone" dataKey="Pessimistisk" stroke="#525252" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
+                <Area type="monotone" dataKey="Faktiskt" fill="#3b82f6" stroke="#3b82f6" fillOpacity={0.2} />
+                <Line type="monotone" dataKey="Optimistisk" stroke="#10b981" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
+                <Line type="monotone" dataKey="Basfall" stroke="#f59e0b" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
+                <Line type="monotone" dataKey="Pessimistisk" stroke="#ef4444" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
               </ComposedChart>
             </ResponsiveContainer>
           </div>
@@ -107,7 +107,7 @@ export function ProjectPrognosTab({ project, totalRevenue, totalCost }: Props) {
               ? "border-l-amber-400"
               : "border-l-red-500";
           return (
-            <Card key={scenario.label} className={cn("border-l-4", color, isBase && "ring-1 ring-neutral-300")}>
+            <Card key={scenario.label} className={cn("border-l-4", color, isBase && "ring-1 ring-amber-200")}>
               <CardContent className="p-4 space-y-2">
                 <p className="text-sm font-semibold">{scenario.label}</p>
                 <div className="space-y-1 text-xs">

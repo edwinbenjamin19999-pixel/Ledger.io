@@ -183,7 +183,7 @@ export function CFOWeeklyBriefing({ companyId, userName, snapshot }: WeeklyBrief
 
     return [
       `VECKOBRIEFING — Vecka ${briefing.weekNumber}, ${briefing.year}`,
-      `Genererad av Bokfy CFO`,
+      `Genererad av Cogniq CFO`,
       "",
       "═══ KASSALÄGE ═══",
       `Kassa idag: ${fmt(briefing.cash)} kr`,
@@ -209,7 +209,7 @@ export function CFOWeeklyBriefing({ companyId, userName, snapshot }: WeeklyBrief
       "═══ REKOMMENDERAD ÅTGÄRD ═══",
       briefing.recommendation,
       "",
-      "— Bokfy CFO",
+      "— Cogniq CFO",
     ].filter(l => l !== undefined).join("\n");
   };
 
@@ -313,7 +313,7 @@ export function CFOWeeklyBriefing({ companyId, userName, snapshot }: WeeklyBrief
                   <div className="space-y-2">
                     {briefing.events.map((evt, i) => (
                       <div key={i} className="flex items-center gap-2 bg-background rounded-lg px-3 py-2 border">
-                        {evt.icon === "income" && <TrendingUp className="h-4 w-4 text-[#000000] shrink-0" />}
+                        {evt.icon === "income" && <TrendingUp className="h-4 w-4 text-[#22c55e] shrink-0" />}
                         {evt.icon === "paid" && <CreditCard className="h-4 w-4 text-primary shrink-0" />}
                         {evt.icon === "expense" && <TrendingDown className="h-4 w-4 text-[#7A5417] shrink-0" />}
                         {evt.icon === "warning" && <AlertTriangle className="h-4 w-4 text-destructive shrink-0" />}
@@ -338,7 +338,7 @@ export function CFOWeeklyBriefing({ companyId, userName, snapshot }: WeeklyBrief
                     <div className="flex items-center gap-1 mt-0.5">
                       <span className="text-xs text-muted-foreground">{briefing.weeklyRevenueCount} fakturor</span>
                       {revenueChangePercent !== null && (
-                        <span className={`text-xs font-medium flex items-center gap-0.5 ${revenueChangePercent >= 0 ? "text-[#000000]" : "text-destructive"}`}>
+                        <span className={`text-xs font-medium flex items-center gap-0.5 ${revenueChangePercent >= 0 ? "text-[#22c55e]" : "text-destructive"}`}>
                           {revenueChangePercent >= 0 ? <ArrowUpRight className="h-3 w-3" /> : <ArrowDownRight className="h-3 w-3" />}
                           {Math.abs(revenueChangePercent)}%
                         </span>

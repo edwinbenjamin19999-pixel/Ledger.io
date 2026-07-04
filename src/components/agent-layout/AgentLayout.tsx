@@ -8,7 +8,7 @@ import { ManualActions } from "./ManualActions";
 import type { AgentLayoutProps } from "./types";
 
 /**
- * AgentLayout — shared template for every AI agent page in Bokfy.
+ * AgentLayout — shared template for every AI agent page in Cogniq.
  *
  * Structure (top to bottom):
  *   1. Header (icon, name, description, status pill, pause/resume switch)
@@ -47,8 +47,8 @@ export function AgentLayout(props: AgentLayoutProps) {
       : "inactive";
 
   const pill = {
-    active: { dot: "bg-neutral-700", text: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300", label: "Aktiv" },
-    paused: { dot: "bg-neutral-700", text: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300", label: "Pausad" },
+    active: { dot: "bg-emerald-500", text: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200", label: "Aktiv" },
+    paused: { dot: "bg-amber-500", text: "text-amber-700", bg: "bg-amber-50 border-amber-200", label: "Pausad" },
     inactive: { dot: "bg-slate-400", text: "text-slate-600", bg: "bg-slate-50 border-slate-200", label: "Inaktiv" },
   }[pillState];
 
@@ -57,7 +57,7 @@ export function AgentLayout(props: AgentLayoutProps) {
       {/* HEADER */}
       <header className="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
         <div className="flex items-start gap-4">
-          <div className="rounded-xl border border-slate-200/70 bg-white p-2.5 text-[#000000]">
+          <div className="rounded-xl border border-slate-200/70 bg-white p-2.5 text-[#3b82f6]">
             <Icon size={32} strokeWidth={1.6} />
           </div>
           <div>

@@ -14,9 +14,9 @@ interface CardWrapProps {
 }
 
 const TONES = {
-  rose: { dot: "bg-neutral-700", border: "rgb(254,205,211)", iconBg: "bg-[#FCE8E8]", iconText: "text-[#7A1A1A]", chipBg: "bg-[#FCE8E8]", chipText: "text-[#7A1A1A]" },
-  amber: { dot: "bg-neutral-700", border: "rgb(253,230,138)", iconBg: "bg-[#FAEEDA]", iconText: "text-[#7A5417]", chipBg: "bg-[#FAEEDA]", chipText: "text-[#7A5417]" },
-  emerald: { dot: "bg-neutral-700", border: "rgb(167,243,208)", iconBg: "bg-[#E1F5EE]", iconText: "text-[#085041]", chipBg: "bg-[#E1F5EE]", chipText: "text-[#085041]" },
+  rose: { dot: "bg-rose-500", border: "rgb(254,205,211)", iconBg: "bg-[#FCE8E8]", iconText: "text-[#7A1A1A]", chipBg: "bg-[#FCE8E8]", chipText: "text-[#7A1A1A]" },
+  amber: { dot: "bg-amber-500", border: "rgb(253,230,138)", iconBg: "bg-[#FAEEDA]", iconText: "text-[#7A5417]", chipBg: "bg-[#FAEEDA]", chipText: "text-[#7A5417]" },
+  emerald: { dot: "bg-emerald-500", border: "rgb(167,243,208)", iconBg: "bg-[#E1F5EE]", iconText: "text-[#085041]", chipBg: "bg-[#E1F5EE]", chipText: "text-[#085041]" },
 } as const;
 
 const StatCard = ({ tone, icon, label, value, sub, onClick }: CardWrapProps) => {

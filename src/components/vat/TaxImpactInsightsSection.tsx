@@ -67,9 +67,9 @@ function deriveTaxImpactInsights(p: TaxImpactInsightsSectionProps): DerivedInsig
 }
 
 const TONE_STYLES = {
-  info: { bg: "from-blue-50 to-blue-50/30 dark:from-blue-950/30 dark:to-transparent", border: "border-[#C8DDF5] dark:border-[#000000]/50", icon: "text-[#1E3A5F] dark:text-[#1E3A5F]", iconBg: "bg-[#EFF6FF] dark:bg-blue-950/50" },
-  warning: { bg: "from-neutral-100 to-neutral-100/30 dark:from-amber-950/30 dark:to-transparent", border: "border-[#F0DDB7] dark:border-neutral-700/50", icon: "text-[#7A5417] dark:text-[#C28A2B]", iconBg: "bg-[#FAEEDA] dark:bg-amber-950/50" },
-  alert: { bg: "from-neutral-100 to-neutral-100/30 dark:from-rose-950/30 dark:to-transparent", border: "border-[#F4C8C8] dark:border-neutral-700/50", icon: "text-[#C73838] dark:text-[#C73838]", iconBg: "bg-[#FCE8E8] dark:bg-rose-950/50" },
+  info: { bg: "from-blue-50 to-blue-50/30 dark:from-blue-950/30 dark:to-transparent", border: "border-[#C8DDF5] dark:border-[#3b82f6]/50", icon: "text-[#1E3A5F] dark:text-[#1E3A5F]", iconBg: "bg-[#EFF6FF] dark:bg-blue-950/50" },
+  warning: { bg: "from-amber-50 to-amber-50/30 dark:from-amber-950/30 dark:to-transparent", border: "border-[#F0DDB7] dark:border-amber-900/50", icon: "text-[#7A5417] dark:text-[#C28A2B]", iconBg: "bg-[#FAEEDA] dark:bg-amber-950/50" },
+  alert: { bg: "from-rose-50 to-rose-50/30 dark:from-rose-950/30 dark:to-transparent", border: "border-[#F4C8C8] dark:border-rose-900/50", icon: "text-[#C73838] dark:text-[#C73838]", iconBg: "bg-[#FCE8E8] dark:bg-rose-950/50" },
 };
 
 export function TaxImpactInsightsSection(props: TaxImpactInsightsSectionProps) {
@@ -86,7 +86,7 @@ export function TaxImpactInsightsSection(props: TaxImpactInsightsSectionProps) {
 
   return (
     <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
-      <div className="px-5 py-3.5 border-b border-border bg-gradient-to-r from-neutral-100/50 to-transparent dark:from-amber-950/20">
+      <div className="px-5 py-3.5 border-b border-border bg-gradient-to-r from-amber-50/50 to-transparent dark:from-amber-950/20">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#C28A2B] to-[#C28A2B] flex items-center justify-center shadow-sm">
             <AlertCircle className="w-4 h-4 text-white" />

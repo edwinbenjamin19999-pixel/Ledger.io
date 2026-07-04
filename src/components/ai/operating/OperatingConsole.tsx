@@ -106,9 +106,9 @@ export function OperatingConsole() {
       : "healthy";
 
   const statusBadge = {
-    healthy: { label: "Operativ", cls: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]", dot: "bg-neutral-700" },
-    degraded: { label: "Degraderad", cls: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]", dot: "bg-neutral-700" },
-    blocked: { label: "Blockerad", cls: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]", dot: "bg-neutral-700" },
+    healthy: { label: "Operativ", cls: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]", dot: "bg-emerald-500" },
+    degraded: { label: "Degraderad", cls: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]", dot: "bg-amber-500" },
+    blocked: { label: "Blockerad", cls: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]", dot: "bg-rose-500" },
   }[derivedStatus];
 
   const lastRunFmt = health.lastRunAt
@@ -122,7 +122,7 @@ export function OperatingConsole() {
         <div className="px-6 py-4 flex items-center justify-between gap-4">
           <div className="min-w-0">
             <div className="font-mono text-[10px] tracking-[0.12em] text-slate-400 uppercase">
-              Bokfy · Operating Layer
+              Cogniq · Operating Layer
             </div>
             <h1 className="text-xl font-semibold text-slate-900 tracking-tight mt-0.5">
               AI Operating Console

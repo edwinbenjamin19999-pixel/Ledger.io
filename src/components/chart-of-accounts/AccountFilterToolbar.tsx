@@ -45,7 +45,7 @@ export function AccountFilterToolbar({
           value={search}
           onChange={e => onSearchChange(e.target.value)}
           placeholder="Sök konto, nummer eller namn…"
-          className="w-full pl-9 pr-8 py-2 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#000000]/20 focus:border-[#000000] transition-all"
+          className="w-full pl-9 pr-8 py-2 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/20 focus:border-[#3b82f6] transition-all"
         />
         {search && (
           <button onClick={() => onSearchChange("")} className="absolute right-2.5 top-2.5 text-slate-400 hover:text-slate-600">
@@ -73,7 +73,7 @@ export function AccountFilterToolbar({
 
       {/* Smart filter chips */}
       <div className="flex gap-1 items-center">
-        <Zap className="w-3.5 h-3.5 text-[#000000] mr-0.5" />
+        <Zap className="w-3.5 h-3.5 text-[#3b82f6] mr-0.5" />
         {SMART_FILTERS.map(sf => (
           <button
             key={sf.key}
@@ -89,7 +89,7 @@ export function AccountFilterToolbar({
                 onVatFilterChange("without");
               }
             }}
-            className="text-xs px-3 py-1.5 rounded-full whitespace-nowrap transition-all bg-white border border-[#C8DDF5] text-[#000000] hover:bg-[#EFF6FF] hover:border-[#000000]"
+            className="text-xs px-3 py-1.5 rounded-full whitespace-nowrap transition-all bg-white border border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF] hover:border-[#3b82f6]"
           >
             {sf.label}
           </button>
@@ -100,7 +100,7 @@ export function AccountFilterToolbar({
       <select
         value={typeFilter}
         onChange={e => onTypeFilterChange(e.target.value)}
-        className="text-sm px-3 py-2 rounded-xl border border-slate-200 bg-white text-slate-600 focus:ring-2 focus:ring-[#000000]/20 cursor-pointer"
+        className="text-sm px-3 py-2 rounded-xl border border-slate-200 bg-white text-slate-600 focus:ring-2 focus:ring-[#3b82f6]/20 cursor-pointer"
       >
         <option value="all">Alla typer</option>
         <option value="asset">Tillgång</option>
@@ -114,7 +114,7 @@ export function AccountFilterToolbar({
       <select
         value={vatFilter}
         onChange={e => onVatFilterChange(e.target.value)}
-        className="text-sm px-3 py-2 rounded-xl border border-slate-200 bg-white text-slate-600 focus:ring-2 focus:ring-[#000000]/20 cursor-pointer"
+        className="text-sm px-3 py-2 rounded-xl border border-slate-200 bg-white text-slate-600 focus:ring-2 focus:ring-[#3b82f6]/20 cursor-pointer"
       >
         <option value="all">Alla momsinställningar</option>
         <option value="with">Med momskod</option>
@@ -133,7 +133,7 @@ export function AccountFilterToolbar({
       {/* Result count */}
       <span className="text-xs text-slate-400 ml-auto whitespace-nowrap">
         Visar {filteredCount} av {totalCount} konton
-        {search && <span className="text-[#000000] ml-1">— "{search}"</span>}
+        {search && <span className="text-[#3b82f6] ml-1">— "{search}"</span>}
       </span>
     </div>
   );

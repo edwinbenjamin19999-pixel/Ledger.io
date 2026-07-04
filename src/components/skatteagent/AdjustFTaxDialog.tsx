@@ -51,7 +51,7 @@ export function AdjustFTaxDialog({ open, onOpenChange, companyId, state }: Adjus
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-neutral-700" />
+            <Sparkles className="w-5 h-5 text-indigo-600" />
             Förbered jämkning av F-skatt
           </DialogTitle>
           <DialogDescription>
@@ -67,12 +67,12 @@ export function AdjustFTaxDialog({ open, onOpenChange, companyId, state }: Adjus
             </div>
             <div className="text-xs text-slate-500 mt-1">/månad</div>
           </div>
-          <div className="rounded-xl border border-[#C8DDF5] bg-neutral-100/50 p-4">
-            <div className="text-xs uppercase tracking-wide text-neutral-700">AI-förslag</div>
-            <div className="mt-1 text-2xl font-bold tabular-nums text-neutral-700">
+          <div className="rounded-xl border border-[#C8DDF5] bg-indigo-50/50 p-4">
+            <div className="text-xs uppercase tracking-wide text-indigo-700">AI-förslag</div>
+            <div className="mt-1 text-2xl font-bold tabular-nums text-indigo-900">
               {recommendedMonthly.toLocaleString("sv-SE")} kr
             </div>
-            <div className="text-xs text-neutral-700 mt-1">/månad</div>
+            <div className="text-xs text-indigo-700 mt-1">/månad</div>
           </div>
         </div>
 

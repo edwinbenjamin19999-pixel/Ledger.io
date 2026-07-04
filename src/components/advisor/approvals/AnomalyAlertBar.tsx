@@ -33,8 +33,8 @@ export function AnomalyAlertBar({ anomalies }: { anomalies: ApprovalAnomaly[] })
     ? `${critical.length} kritisk${critical.length === 1 ? "" : "a"} avvikelse${critical.length === 1 ? "" : "r"}`
     : `${warnings.length} avvikelse${warnings.length === 1 ? "" : "r"} att granska`;
   const tone = critical.length > 0
-    ? { ring: "ring-neutral-300", bg: "bg-[#FCE8E8]", icon: "text-[#7A1A1A]", iconBg: "bg-[#FCE8E8]" }
-    : { ring: "ring-neutral-300", bg: "bg-[#FAEEDA]", icon: "text-[#7A5417]", iconBg: "bg-[#FAEEDA]" };
+    ? { ring: "ring-rose-200", bg: "bg-[#FCE8E8]", icon: "text-[#7A1A1A]", iconBg: "bg-[#FCE8E8]" }
+    : { ring: "ring-amber-200", bg: "bg-[#FAEEDA]", icon: "text-[#7A5417]", iconBg: "bg-[#FAEEDA]" };
 
   return (
     <div className={`rounded-3xl px-5 py-4 ring-1 ${tone.ring} ${tone.bg}`}>

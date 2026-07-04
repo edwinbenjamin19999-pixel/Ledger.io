@@ -123,7 +123,7 @@ const AdvisorTax = () => {
           </p>
           <h1 className="text-3xl font-bold tracking-tight text-[#0F172A] mt-1">Skatteorkestrering</h1>
           <p className="text-[#64748B] mt-1.5">
-            Samma skattemotor som standard-Bokfy — orkestrerad över alla {clients.length} klienter.
+            Samma skattemotor som standard-Cogniq — orkestrerad över alla {clients.length} klienter.
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -315,10 +315,10 @@ const AdvisorTax = () => {
 function StageBadge({ stage }: { stage: TaxStage }) {
   const map: Record<TaxStage, { label: string; tone: string }> = {
     draft: { label: "Utkast", tone: "bg-slate-100 text-slate-700" },
-    review: { label: "Granskning", tone: "bg-[#EFF6FF] text-[#000000]" },
+    review: { label: "Granskning", tone: "bg-[#EFF6FF] text-[#3b82f6]" },
     awaiting_client: { label: "Klient", tone: "bg-[#FAEEDA] text-[#7A5417]" },
     ready: { label: "Redo", tone: "bg-[#E1F5EE] text-[#085041]" },
-    submitted: { label: "Inlämnad", tone: "bg-[#EFF6FF] text-black" },
+    submitted: { label: "Inlämnad", tone: "bg-[#EFF6FF] text-blue-700" },
     settled: { label: "Betald", tone: "bg-[#E1F5EE] text-[#085041]" },
     missing_data: { label: "Saknar data", tone: "bg-[#FCE8E8] text-[#7A1A1A]" },
   };
@@ -335,7 +335,7 @@ function RiskBadge({ risk }: { risk: "low" | "medium" | "high" }) {
   const tone =
     risk === "high"
       ? "bg-[#FCE8E8] text-[#7A1A1A] ring-red-200"
-      : "bg-[#FAEEDA] text-[#7A5417] ring-neutral-300";
+      : "bg-[#FAEEDA] text-[#7A5417] ring-amber-200";
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-semibold ring-1 ${tone}`}>
       <AlertTriangle className="h-2.5 w-2.5" />

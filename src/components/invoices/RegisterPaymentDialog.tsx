@@ -402,7 +402,7 @@ export const RegisterPaymentDialog = ({ open, onOpenChange, invoiceId, companyId
           </div>
         ) : createdJournalNumber ? (
           <div className="text-center py-6 space-y-3">
-            <div className="w-12 h-12 rounded-full bg-[#E1F5EE] dark:bg-neutral-700/30 flex items-center justify-center mx-auto">
+            <div className="w-12 h-12 rounded-full bg-[#E1F5EE] dark:bg-green-900/30 flex items-center justify-center mx-auto">
               <span className="text-[#085041] text-xl">✓</span>
             </div>
             <p className="font-medium text-foreground">

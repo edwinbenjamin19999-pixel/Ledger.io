@@ -122,7 +122,7 @@ export function ESGInputForm() {
       <Card>
         <CardHeader className="pb-3">
           <CardTitle className="flex items-center gap-2 text-base">
-            <Users className="h-4 w-4 text-black" /> Socialt (S)
+            <Users className="h-4 w-4 text-blue-600" /> Socialt (S)
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -139,7 +139,7 @@ export function ESGInputForm() {
       <Card>
         <CardHeader className="pb-3">
           <CardTitle className="flex items-center gap-2 text-base">
-            <Shield className="h-4 w-4 text-neutral-700" /> Styrning (G)
+            <Shield className="h-4 w-4 text-violet-600" /> Styrning (G)
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">

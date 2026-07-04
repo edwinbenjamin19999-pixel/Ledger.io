@@ -81,7 +81,7 @@ export function BankIDSignDialog({
       <DialogContent className="max-w-md">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <ShieldCheck className="h-5 w-5 text-[#000000]" />
+            <ShieldCheck className="h-5 w-5 text-[#3b82f6]" />
             BankID-signering
           </DialogTitle>
         </DialogHeader>
@@ -134,7 +134,7 @@ export function BankIDSignDialog({
 
           {(phase === "signing-1" || phase === "signing-2") && (
             <div className="text-center py-6 space-y-3">
-              <Loader2 className="h-10 w-10 mx-auto animate-spin text-[#000000]" />
+              <Loader2 className="h-10 w-10 mx-auto animate-spin text-[#3b82f6]" />
               <div className="text-sm font-semibold">
                 {signerCount === 2
                   ? phase === "signing-1"
@@ -181,11 +181,11 @@ function SignerOption({
       onClick={onClick}
       className={`rounded-xl border p-3 text-left transition-colors ${
         active
-          ? "border-[#000000] bg-[#EFF6FF] ring-2 ring-[#000000]/20"
+          ? "border-[#3b82f6] bg-[#EFF6FF] ring-2 ring-[#3b82f6]/20"
           : "border-border bg-card hover:bg-muted/40"
       }`}
     >
-      <Icon className={`h-4 w-4 mb-1 ${active ? "text-[#000000]" : "text-muted-foreground"}`} />
+      <Icon className={`h-4 w-4 mb-1 ${active ? "text-[#3b82f6]" : "text-muted-foreground"}`} />
       <div className="text-sm font-semibold text-foreground">{label}</div>
       <div className="text-[10px] text-muted-foreground">{sub}</div>
     </button>

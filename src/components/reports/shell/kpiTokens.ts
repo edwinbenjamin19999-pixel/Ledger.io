@@ -24,39 +24,39 @@ export const TONE_STYLES: Record<KpiTone, ToneStyle> = {
     surface:
       "bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-900",
     border: "border-slate-200/60 dark:border-slate-800",
-    trendPositive: "bg-neutral-100 text-neutral-700 dark:bg-emerald-950/40 dark:text-neutral-300",
-    trendNegative: "bg-neutral-100 text-neutral-700 dark:bg-rose-950/40 dark:text-neutral-300",
+    trendPositive: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300",
+    trendNegative: "bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300",
   },
   positive: {
     surface:
-      "bg-gradient-to-b from-neutral-100/50 to-white dark:from-emerald-950/20 dark:to-slate-900",
-    border: "border-neutral-300/60 dark:border-neutral-700/50",
-    trendPositive: "bg-neutral-100 text-neutral-700 dark:bg-emerald-950/50 dark:text-neutral-300",
-    trendNegative: "bg-neutral-100 text-neutral-700 dark:bg-rose-950/40 dark:text-neutral-300",
+      "bg-gradient-to-b from-emerald-50/50 to-white dark:from-emerald-950/20 dark:to-slate-900",
+    border: "border-emerald-200/60 dark:border-emerald-900/50",
+    trendPositive: "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300",
+    trendNegative: "bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300",
   },
   negative: {
     surface:
-      "bg-gradient-to-b from-neutral-100/50 to-white dark:from-rose-950/20 dark:to-slate-900",
-    border: "border-neutral-300/60 dark:border-neutral-700/50",
-    trendPositive: "bg-neutral-100 text-neutral-700 dark:bg-emerald-950/40 dark:text-neutral-300",
-    trendNegative: "bg-neutral-100 text-neutral-700 dark:bg-rose-950/50 dark:text-neutral-300",
+      "bg-gradient-to-b from-rose-50/50 to-white dark:from-rose-950/20 dark:to-slate-900",
+    border: "border-rose-200/60 dark:border-rose-900/50",
+    trendPositive: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300",
+    trendNegative: "bg-rose-100 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300",
   },
   warning: {
     surface:
-      "bg-gradient-to-b from-neutral-100/50 to-white dark:from-amber-950/20 dark:to-slate-900",
-    border: "border-neutral-300/60 dark:border-neutral-700/50",
-    trendPositive: "bg-neutral-100 text-neutral-700 dark:bg-emerald-950/40 dark:text-neutral-300",
-    trendNegative: "bg-neutral-100 text-neutral-700 dark:bg-rose-950/40 dark:text-neutral-300",
+      "bg-gradient-to-b from-amber-50/50 to-white dark:from-amber-950/20 dark:to-slate-900",
+    border: "border-amber-200/60 dark:border-amber-900/50",
+    trendPositive: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300",
+    trendNegative: "bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300",
   },
 };
 
 export const ACCENT_STYLES: Record<KpiAccent, AccentStyle> = {
   default: { bg: "bg-slate-900/[0.06]", fg: "text-slate-700 dark:text-slate-300", stroke: "stroke-slate-500" },
-  emerald: { bg: "bg-neutral-700/[0.08]", fg: "text-neutral-700 dark:text-[#1D9E75]", stroke: "stroke-emerald-500" },
-  rose:    { bg: "bg-neutral-700/[0.08]",    fg: "text-neutral-700 dark:text-[#C73838]",       stroke: "stroke-rose-500" },
+  emerald: { bg: "bg-emerald-500/[0.08]", fg: "text-emerald-600 dark:text-[#1D9E75]", stroke: "stroke-emerald-500" },
+  rose:    { bg: "bg-rose-500/[0.08]",    fg: "text-rose-600 dark:text-[#C73838]",       stroke: "stroke-rose-500" },
   slate:   { bg: "bg-slate-900/[0.06]",   fg: "text-slate-700 dark:text-slate-300",     stroke: "stroke-slate-500" },
-  cyan:    { bg: "bg-[#000000]/[0.08]",    fg: "text-[#000000] dark:text-[#1E3A5F]",       stroke: "stroke-[#000000]" },
-  amber:   { bg: "bg-neutral-700/[0.10]",   fg: "text-neutral-700 dark:text-[#C28A2B]",     stroke: "stroke-amber-500" },
+  cyan:    { bg: "bg-[#3b82f6]/[0.08]",    fg: "text-[#3b82f6] dark:text-[#1E3A5F]",       stroke: "stroke-[#3b82f6]" },
+  amber:   { bg: "bg-amber-500/[0.10]",   fg: "text-amber-600 dark:text-[#C28A2B]",     stroke: "stroke-amber-500" },
 };
 
 /**

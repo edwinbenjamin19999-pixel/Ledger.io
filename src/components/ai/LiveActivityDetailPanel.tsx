@@ -45,7 +45,7 @@ export function LiveActivityDetailPanel({ item, onClose }: Props) {
       <SheetContent side="right" className="w-full sm:max-w-md md:max-w-lg p-0 overflow-y-auto">
         <div className="px-6 py-5 border-b border-slate-100 flex items-start justify-between gap-3 sticky top-0 bg-white z-10">
           <div className="min-w-0">
-            <p className="text-[11px] uppercase font-semibold text-[#000000] tracking-wide">Detaljvy</p>
+            <p className="text-[11px] uppercase font-semibold text-[#3b82f6] tracking-wide">Detaljvy</p>
             <h3 className="text-base font-semibold text-slate-900 mt-1 leading-tight">{item.title}</h3>
             <p className="text-xs text-slate-500 mt-0.5">{item.subtitle}</p>
           </div>

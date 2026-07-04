@@ -95,7 +95,7 @@ export function KPIWidget({
             <span
               className={cn(
                 "flex items-center gap-0.5 text-xs font-medium tabular-nums",
-                positive ? "text-neutral-700" : "text-destructive",
+                positive ? "text-emerald-600" : "text-destructive",
               )}
             >
               <ArrowIcon className="h-3 w-3" />

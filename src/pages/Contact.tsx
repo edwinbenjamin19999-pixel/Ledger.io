@@ -31,7 +31,7 @@ const Contact = () => {
       const body = encodeURIComponent(
         `Namn: ${formData.name}\nFöretag: ${formData.company}\nEmail: ${formData.email}\n\nMeddelande:\n${formData.message}`,
       );
-      window.location.href = `mailto:support@bokfy.se?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:support@cogniq.se?subject=${subject}&body=${body}`;
       toast.success("E-postklient öppnad. Skicka meddelandet därifrån.");
     } finally {
       setIsSubmitting(false);
@@ -46,8 +46,8 @@ const Contact = () => {
         style={{ backgroundColor: "rgba(5, 13, 26, 0.9)" }}
       >
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-[#000000]">
-            Bokfy
+          <Link to="/" className="text-2xl font-bold text-[#3b82f6]">
+            Cogniq
           </Link>
           <Link to="/">
             <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/5">
@@ -64,7 +64,7 @@ const Contact = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Kontakta oss</h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Har du frågor om Bokfy? Vill du boka en demo? Vi hjälper dig gärna!
+              Har du frågor om Cogniq? Vill du boka en demo? Vi hjälper dig gärna!
             </p>
           </div>
 
@@ -77,10 +77,10 @@ const Contact = () => {
                   title: "E-post",
                   content: (
                     <a
-                      href="mailto:support@bokfy.se"
-                      className="text-slate-600 hover:text-[#000000] transition-colors"
+                      href="mailto:support@cogniq.se"
+                      className="text-slate-600 hover:text-[#3b82f6] transition-colors"
                     >
-                      support@bokfy.se
+                      support@cogniq.se
                     </a>
                   ),
                 },
@@ -99,8 +99,8 @@ const Contact = () => {
                   key={title}
                   className="rounded-2xl border border-slate-200 bg-white p-5 flex items-start gap-4 shadow-sm"
                 >
-                  <div className="p-2.5 rounded-xl bg-[#000000]/10 border border-[#000000]/20">
-                    <Icon className="w-5 h-5 text-[#000000]" />
+                  <div className="p-2.5 rounded-xl bg-[#3b82f6]/10 border border-[#3b82f6]/20">
+                    <Icon className="w-5 h-5 text-[#3b82f6]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1 text-slate-900">{title}</h3>
@@ -136,7 +136,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Ditt namn"
-                      className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#000000]/40"
+                      className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#3b82f6]/40"
                     />
                   </div>
                   <div className="space-y-2">
@@ -148,7 +148,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="din@email.se"
-                      className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#000000]/40"
+                      className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#3b82f6]/40"
                     />
                   </div>
                 </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     placeholder="Ditt företagsnamn"
-                    className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#000000]/40"
+                    className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#3b82f6]/40"
                   />
                 </div>
 
@@ -173,7 +173,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Beskriv ditt ärende..."
-                    className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#000000]/40"
+                    className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#3b82f6]/40"
                   />
                 </div>
 
@@ -181,7 +181,7 @@ const Contact = () => {
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full md:w-auto bg-[#000000] hover:bg-[#000000] text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)]"
+                  className="w-full md:w-auto bg-[#3b82f6] hover:bg-[#0052FF] text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)]"
                 >
                   {isSubmitting ? (
                     "Skickar..."

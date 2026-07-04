@@ -146,12 +146,12 @@ export const ActionCenter = ({ companyId, thresholdWarnings = [] }: ActionCenter
     <div>
       {/* Compact notification bar */}
         <div
-        className="flex items-center justify-between px-4 h-11 rounded-lg cursor-pointer bg-[#FAEEDA] dark:bg-[#FAEEDA] border-b-2 border-neutral-700"
+        className="flex items-center justify-between px-4 h-11 rounded-lg cursor-pointer bg-[#FAEEDA] dark:bg-[#FAEEDA] border-b-2 border-amber-500"
         onClick={() => setExpanded(!expanded)}
       >
         <div className="flex items-center gap-2">
           <Bell className="h-4 w-4 text-[#7A5417] dark:text-[#C28A2B]" />
-          <span className="text-sm font-medium text-[#7A5417] dark:text-neutral-300">
+          <span className="text-sm font-medium text-[#7A5417] dark:text-amber-300">
             {label}
           </span>
         </div>

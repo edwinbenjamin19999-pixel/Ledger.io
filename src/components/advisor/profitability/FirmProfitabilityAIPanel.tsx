@@ -21,14 +21,14 @@ const KIND_META: Record<
 
 const TONE_BG: Record<string, string> = {
   amber: "bg-[#FAEEDA] border-[#F0DDB7] text-[#7A5417]",
-  violet: "bg-[#F1F5F9] border-[#E2E8F0] text-neutral-700",
+  violet: "bg-[#F1F5F9] border-[#E2E8F0] text-violet-900",
   rose: "bg-[#FCE8E8] border-[#F4C8C8] text-[#7A1A1A]",
   emerald: "bg-[#E1F5EE] border-[#BFE6D6] text-[#085041]",
 };
 
 const TONE_ICON: Record<string, string> = {
   amber: "text-[#7A5417] bg-[#FAEEDA]",
-  violet: "text-neutral-700 bg-[#F1F5F9]",
+  violet: "text-violet-600 bg-[#F1F5F9]",
   rose: "text-[#7A1A1A] bg-[#FCE8E8]",
   emerald: "text-[#085041] bg-[#E1F5EE]",
 };
@@ -71,10 +71,10 @@ export function FirmProfitabilityAIPanel({ rows, onOpenClient }: Props) {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-5">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center">
-              <Sparkles className="h-5 w-5 text-[#000000]" />
+              <Sparkles className="h-5 w-5 text-[#3b82f6]" />
             </div>
             <div>
-              <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#000000]/80">
+              <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#3b82f6]/80">
                 AI Profit Coach
               </p>
               <h3 className="text-base font-bold tracking-tight">Lönsamhetsanalys</h3>
@@ -83,18 +83,18 @@ export function FirmProfitabilityAIPanel({ rows, onOpenClient }: Props) {
           <div className="flex items-center gap-6 text-right">
             <div>
               <p className="text-[10px] uppercase tracking-wider text-white/50 font-semibold">Möjlig uppsida</p>
-              <p className="text-xl font-bold text-neutral-300 tabular-nums">{fmtSEK(totalUplift)}</p>
+              <p className="text-xl font-bold text-emerald-300 tabular-nums">{fmtSEK(totalUplift)}</p>
             </div>
             <div>
               <p className="text-[10px] uppercase tracking-wider text-white/50 font-semibold">Premium</p>
-              <p className="text-xl font-bold text-[#000000] tabular-nums">{premiumCount}</p>
+              <p className="text-xl font-bold text-[#3b82f6] tabular-nums">{premiumCount}</p>
             </div>
           </div>
         </div>
 
         {critical.length === 0 && opportunities.length === 0 ? (
           <div className="rounded-2xl bg-white/5 border border-white/10 p-5 text-center">
-            <Sparkles className="h-6 w-6 text-neutral-300 mx-auto mb-2" />
+            <Sparkles className="h-6 w-6 text-emerald-300 mx-auto mb-2" />
             <p className="text-sm font-medium">Hela portföljen är lönsam.</p>
             <p className="text-xs text-white/60 mt-1">
               Inga kritiska klienter just nu — fokusera på tillväxt.

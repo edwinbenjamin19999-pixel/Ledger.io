@@ -13,7 +13,7 @@ const LEGACY_KEYS = ["selectedCompanyId", "selected_company", "selected_company_
  *
  * - Mirrors the id into the canonical + legacy localStorage keys.
  * - Dispatches `company-changed`, `active-company-changed` and `storage`
- *   events so any standard Bokfy page (`Dashboard`, `Reports`, `Invoices`,
+ *   events so any standard Cogniq page (`Dashboard`, `Reports`, `Invoices`,
  *   `BankIntegration`, …) that reads `pickDefaultCompanyId()` immediately
  *   re-loads against the scoped client.
  * - Restores the previous active id on unmount.

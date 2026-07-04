@@ -94,7 +94,7 @@ export function LoginPageSection({ draft, update }: Props) {
           <Input
             value={draft.footer_attribution || ""}
             onChange={(e) => update("footer_attribution", e.target.value || null)}
-            placeholder="Powered by Bokfy"
+            placeholder="Powered by Cogniq"
           />
         </div>
       </CardContent>

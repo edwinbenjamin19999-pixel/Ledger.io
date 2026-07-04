@@ -130,7 +130,7 @@ export function AutoEliminationDetector({ groupId,
     }
   };
 
-  const confidenceBadge = (c: number) => { if (c >= 0.9) return <Badge className="bg-neutral-700 text-white">Hög {Math.round(c * 100)}%</Badge>;
+  const confidenceBadge = (c: number) => { if (c >= 0.9) return <Badge className="bg-green-600 text-white">Hög {Math.round(c * 100)}%</Badge>;
     if (c >= 0.7) return <Badge className="bg-yellow-500 text-white">Medel {Math.round(c * 100)}%</Badge>;
     return <Badge variant="destructive">Låg {Math.round(c * 100)}%</Badge>;
   };
@@ -190,7 +190,7 @@ export function AutoEliminationDetector({ groupId,
         {hasRun && activeDetections.length === 0 && (
           <Alert className="border-[#BFE6D6] bg-[#E1F5EE] dark:bg-green-950/20">
             <CheckCircle2 className="h-4 w-4 text-[#085041]" />
-            <AlertDescription className="text-[#085041] dark:text-neutral-300">
+            <AlertDescription className="text-[#085041] dark:text-green-300">
               Inga nya koncerninterna transaktioner att eliminera — allt ser bra ut!
             </AlertDescription>
           </Alert>

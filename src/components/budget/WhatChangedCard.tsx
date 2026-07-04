@@ -29,7 +29,7 @@ export function WhatChangedCard({ items, onPick }: Props) {
                 <button
                   type="button"
                   onClick={() => onPick(it)}
-                  className="w-full text-left rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-neutral-100/40 hover:border-[#C8DDF5] transition-colors p-2.5 flex items-start gap-2"
+                  className="w-full text-left rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-blue-50/40 hover:border-[#C8DDF5] transition-colors p-2.5 flex items-start gap-2"
                 >
                   <Arrow className={cn("w-4 h-4 mt-0.5 shrink-0", color)} />
                   <div className="flex-1 min-w-0">

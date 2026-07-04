@@ -21,7 +21,7 @@ const ABSENCE_TYPES = [
 ];
 
 const AVATAR_PALETTE = [
-  "#000000", "#5DCAA5", "#525252", "#85B7EB", "#A78BFA",
+  "#0040CC", "#5DCAA5", "#EF9F27", "#85B7EB", "#A78BFA",
   "#F09595", "#22A06B", "#0C447C", "#412402", "#475569",
 ];
 
@@ -148,7 +148,7 @@ export function HRAbsenceTab({ companyId }: Props) {
           const vacRemain = vacEntitled - vacUsed;
           const vacEarned = Math.round((new Date().getMonth() + 1) * (vacEntitled / 12));
           const usedPct = vacEntitled > 0 ? (vacUsed / vacEntitled) * 100 : 0;
-          const barColor = usedPct < 50 ? "#5DCAA5" : usedPct < 80 ? "#525252" : "#E07171";
+          const barColor = usedPct < 50 ? "#5DCAA5" : usedPct < 80 ? "#EF9F27" : "#E07171";
           return (
             <div
               key={e.id}
@@ -171,7 +171,7 @@ export function HRAbsenceTab({ companyId }: Props) {
                 </div>
                 <button
                   onClick={() => setOpenModal(e.id)}
-                  className="text-[11px] px-2 py-[5px] rounded-[6px] bg-[#000000] text-[#E6F4FA]"
+                  className="text-[11px] px-2 py-[5px] rounded-[6px] bg-[#0040CC] text-[#E6F4FA]"
                 >
                   Registrera frånvaro
                 </button>
@@ -276,7 +276,7 @@ export function HRAbsenceTab({ companyId }: Props) {
               <button
                 disabled={submit.isPending || days < 1}
                 onClick={() => submit.mutate(openModal)}
-                className="w-full text-[12px] font-medium rounded-[8px] py-[8px] bg-[#000000] text-[#E6F4FA] disabled:opacity-50"
+                className="w-full text-[12px] font-medium rounded-[8px] py-[8px] bg-[#0040CC] text-[#E6F4FA] disabled:opacity-50"
               >
                 Registrera frånvaro
               </button>

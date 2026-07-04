@@ -23,8 +23,8 @@ export function generateMigrationReportPDF({
   let y = margin;
 
   doc.setFontSize(20);
-  doc.setTextColor("#000000");
-  doc.text("Migreringsrapport — Bokfy", margin, y);
+  doc.setTextColor("#0040CC");
+  doc.text("Migreringsrapport — Cogniq", margin, y);
   y += 28;
 
   doc.setFontSize(10);
@@ -39,7 +39,7 @@ export function generateMigrationReportPDF({
 
   // Summary box
   doc.setFontSize(12);
-  doc.setTextColor("#000000");
+  doc.setTextColor("#0040CC");
   doc.text("Sammanfattning", margin, y);
   y += 16;
   doc.setFontSize(10);
@@ -59,7 +59,7 @@ export function generateMigrationReportPDF({
 
   // AI report body
   doc.setFontSize(12);
-  doc.setTextColor("#000000");
+  doc.setTextColor("#0040CC");
   doc.text("AI-observationer & rekommendationer", margin, y);
   y += 16;
   doc.setFontSize(10);
@@ -106,7 +106,7 @@ export function generateMigrationReportPDF({
     doc.setPage(i);
     doc.setFontSize(8);
     doc.setTextColor("#94A3B8");
-    doc.text("Rapporten genererades automatiskt av Bokfy", margin, 820);
+    doc.text("Rapporten genererades automatiskt av Cogniq", margin, 820);
     doc.text(`Sida ${i} / ${pageCount}`, 545, 820, { align: "right" });
   }
 

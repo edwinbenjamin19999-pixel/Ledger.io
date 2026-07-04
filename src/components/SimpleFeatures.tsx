@@ -47,7 +47,7 @@ export const SimpleFeatures = () => {
         {/* Section label */}
         <div className="flex items-center justify-center gap-2 mb-4">
           <svg
-            className="w-4 h-4 text-[#000000]"
+            className="w-4 h-4 text-[#3b82f6]"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={2}
@@ -59,12 +59,12 @@ export const SimpleFeatures = () => {
               d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z"
             />
           </svg>
-          <span className="text-[11.5px] uppercase tracking-[0.12em] font-semibold text-[#000000]">
+          <span className="text-[11.5px] uppercase tracking-[0.12em] font-semibold text-[#3b82f6]">
             Funktioner
           </span>
         </div>
 
-        <h2 className="text-center text-[42px] font-[800] text-[#000000] mb-3 leading-tight" style={{ letterSpacing: "-1.5px" }}>
+        <h2 className="text-center text-[42px] font-[800] text-[#0F172A] mb-3 leading-tight" style={{ letterSpacing: "-1.5px" }}>
           Allt du behöver i en bokföringsplattform
         </h2>
         <p className="text-center text-[16px] text-[#475569] mb-12 max-w-lg mx-auto">
@@ -77,14 +77,14 @@ export const SimpleFeatures = () => {
               key={feature.title}
               className={`rounded-xl border p-8 hover:shadow-lg hover:-translate-y-[3px] transition-all duration-200 ${
                 feature.highlight
-                  ? "border-[rgba(0,0,0,0.3)] bg-gradient-to-br from-[#f0faff] to-white"
+                  ? "border-[rgba(0,82,255,0.3)] bg-gradient-to-br from-[#f0faff] to-white"
                   : "border-[#e2e8f0] bg-white"
               }`}
             >
               <div className="w-[42px] h-[42px] rounded-lg bg-[#f8fafc] border border-[#e2e8f0] flex items-center justify-center mb-4">
-                <feature.icon className="w-5 h-5 text-[#000000]" />
+                <feature.icon className="w-5 h-5 text-[#3b82f6]" />
               </div>
-              <h3 className="font-semibold text-[15px] text-[#000000] mb-1.5">
+              <h3 className="font-semibold text-[15px] text-[#0F172A] mb-1.5">
                 {feature.title}
               </h3>
               <p className="text-sm text-[#64748b] leading-relaxed">

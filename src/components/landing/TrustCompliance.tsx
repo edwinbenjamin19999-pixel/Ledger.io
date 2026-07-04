@@ -23,14 +23,14 @@ export const TrustCompliance = () => {
   return (
     <section className="bg-white py-24 px-6">
       <div className="mx-auto max-w-5xl">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#000000]">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
           Byggt för svensk regelefterlevnad
         </p>
         <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
           {items.map((item) => (
             <div
               key={item}
-              className="rounded-lg border-2 border-gray-200 bg-white px-4 py-6 text-center text-sm font-semibold text-[#000000] transition-colors duration-200 hover:border-[#000000]"
+              className="rounded-lg border-2 border-gray-200 bg-white px-4 py-6 text-center text-sm font-semibold text-[#0F172A] transition-colors duration-200 hover:border-[#0052FF]"
             >
               {item}
             </div>
@@ -40,11 +40,11 @@ export const TrustCompliance = () => {
         <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-3">
           {securityItems.map(({ Icon, label, sub }) => (
             <div key={label} className="flex flex-col items-center gap-2 text-center">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-100 text-[#000000]">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 text-[#059669]">
                 <Icon className="h-5 w-5" strokeWidth={2.5} aria-hidden />
               </span>
-              <span className="text-sm font-bold text-[#000000]">{label}</span>
-              <span className="text-xs text-[#000000]/50">{sub}</span>
+              <span className="text-sm font-bold text-[#0F172A]">{label}</span>
+              <span className="text-xs text-[#0F172A]/50">{sub}</span>
             </div>
           ))}
         </div>

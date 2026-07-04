@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 import { Activity, FileEdit, Sparkles, Lock } from "lucide-react";
 
 const STATE_STYLES: Record<ViewState, { dot: string; text: string; ring: string; label: string; Icon: typeof Activity }> = {
-  live:      { dot: "bg-neutral-700", text: "text-[#085041] dark:text-neutral-300", ring: "ring-neutral-700/20 bg-[#E1F5EE] dark:bg-emerald-950/30", label: "LIVE",      Icon: Activity },
-  draft:     { dot: "bg-neutral-700",   text: "text-[#7A5417] dark:text-neutral-300",     ring: "ring-neutral-700/20 bg-[#FAEEDA] dark:bg-amber-950/30",       label: "DRAFT",     Icon: FileEdit },
-  scenario:  { dot: "bg-[#000000]",    text: "text-[#000000] dark:text-[#000000]",       ring: "ring-[#000000]/20 bg-[#EFF6FF] dark:bg-blue-950/30",          label: "SCENARIO",  Icon: Sparkles },
+  live:      { dot: "bg-emerald-500", text: "text-[#085041] dark:text-emerald-300", ring: "ring-emerald-500/20 bg-[#E1F5EE] dark:bg-emerald-950/30", label: "LIVE",      Icon: Activity },
+  draft:     { dot: "bg-amber-500",   text: "text-[#7A5417] dark:text-amber-300",     ring: "ring-amber-500/20 bg-[#FAEEDA] dark:bg-amber-950/30",       label: "DRAFT",     Icon: FileEdit },
+  scenario:  { dot: "bg-[#3b82f6]",    text: "text-[#3b82f6] dark:text-[#3b82f6]",       ring: "ring-[#3b82f6]/20 bg-[#EFF6FF] dark:bg-blue-950/30",          label: "SCENARIO",  Icon: Sparkles },
   finalized: { dot: "bg-slate-500",   text: "text-slate-700 dark:text-slate-300",     ring: "ring-slate-500/20 bg-slate-100 dark:bg-slate-800/40",      label: "FINALIZED", Icon: Lock },
 };
 

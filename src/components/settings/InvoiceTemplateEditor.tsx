@@ -60,7 +60,7 @@ const I18N = {
 };
 
 const defaultTemplate = (name = "Standard"): Template => ({
-  id: crypto.randomUUID(), name, style: "klassisk", primaryColor: "#000000", font: FONTS[0].v,
+  id: crypto.randomUUID(), name, style: "klassisk", primaryColor: "#3b82f6", font: FONTS[0].v,
   sender: { name: "Mitt Företag AB", address: "Storgatan 1\n111 22 Stockholm", orgnr: "556677-8899",
     vatnr: "SE556677889901", bankgiro: "123-4567", iban: "", email: "info@foretaget.se", phone: "+46 8 123 45 67", website: "foretaget.se" },
   paymentTermsDays: 30, lateInterestEnabled: true, lateInterestRate: 11.5,

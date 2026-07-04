@@ -3,7 +3,7 @@ import type { CompactGuide } from "./index";
 export const avdragsgillMoms: CompactGuide = {
   slug: "avdragsgill-moms",
   h1: "Avdragsgill moms — vad gäller egentligen?",
-  metaTitle: "Avdragsgill moms — komplett guide | Bokfy",
+  metaTitle: "Avdragsgill moms — komplett guide | Cogniq",
   metaDescription:
     "När får du dra ingående moms? Regler för representation, personalbil, mat, gåvor och blandad verksamhet. Med exempel.",
   intent: "compliance",
@@ -53,6 +53,6 @@ export const avdragsgillMoms: CompactGuide = {
     { title: "Glömmer fördela vid blandad verksamhet", body: "Skatteverket kräver dokumenterad fördelningsnyckel — annars hela avdraget i fara." },
   ],
   northledgerNote:
-    "Bokfy känner igen kvitton som faller under specialregler (representation, bil, gåva) och tillämpar rätt momsavdrag automatiskt.",
+    "Cogniq känner igen kvitton som faller under specialregler (representation, bil, gåva) och tillämpar rätt momsavdrag automatiskt.",
   related: ["moms-sverige", "momsdeklaration", "bokfora-kvitto"],
 };

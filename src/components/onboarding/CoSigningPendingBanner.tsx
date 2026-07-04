@@ -51,7 +51,7 @@ export const CoSigningPendingBanner = () => {
       <button
         onClick={sendReminder}
         disabled={sending}
-        className="h-8 px-3 rounded-lg bg-neutral-700 hover:bg-neutral-700 text-white text-[12px] font-semibold flex items-center gap-1.5 disabled:opacity-60"
+        className="h-8 px-3 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-[12px] font-semibold flex items-center gap-1.5 disabled:opacity-60"
       >
         {sending ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Mail className="w-3.5 h-3.5" />}
         Påminn nu

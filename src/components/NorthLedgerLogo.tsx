@@ -36,9 +36,9 @@ export const NorthLedgerLogo = () => { const [loading, setLoading] = useState(fa
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Bokfy Logotyp</CardTitle>
+        <CardTitle>Cogniq Logotyp</CardTitle>
         <CardDescription>
-          Generera och ladda ner Bokfy-logotyp för branding
+          Generera och ladda ner Cogniq-logotyp för branding
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -62,7 +62,7 @@ export const NorthLedgerLogo = () => { const [loading, setLoading] = useState(fa
             <div className="border rounded-lg p-4 bg-white">
               <img 
                 src={logoUrl} 
-                alt="Bokfy Logo" 
+                alt="Cogniq Logo" 
                 className="w-full h-auto max-w-md mx-auto"
               />
             </div>

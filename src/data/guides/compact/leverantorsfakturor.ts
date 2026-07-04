@@ -3,7 +3,7 @@ import type { CompactGuide } from "./index";
 export const leverantorsfakturor: CompactGuide = {
   slug: "leverantorsfakturor",
   h1: "Leverantörsfakturor — så bokför du dem rätt",
-  metaTitle: "Leverantörsfakturor — så bokför du rätt | Bokfy",
+  metaTitle: "Leverantörsfakturor — så bokför du rätt | Cogniq",
   metaDescription:
     "Komplett guide till leverantörsfakturor: bokföring, attestflöde, periodisering och betalningsmatchning. För småföretagare.",
   intent: "transactional",
@@ -56,6 +56,6 @@ export const leverantorsfakturor: CompactGuide = {
     { title: "Betalar utan attest", body: "Inför alltid attestrutin — även för enmansföretag (skydd mot egna misstag)." },
   ],
   northledgerNote:
-    "Bokfy tar emot fakturor via en unik mailadress, AI-extraherar belopp/moms/leverantör, kontrollerar dubbletter och förbereder bokföringen — du bara godkänner.",
+    "Cogniq tar emot fakturor via en unik mailadress, AI-extraherar belopp/moms/leverantör, kontrollerar dubbletter och förbereder bokföringen — du bara godkänner.",
   related: ["bokfora-faktura", "bas-kontoplanen", "avdragsgill-moms"],
 };

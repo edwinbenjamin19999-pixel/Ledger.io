@@ -24,7 +24,7 @@ export const ARPriorityBar = ({ openInvoices, onViewDetails }: Props) => {
 
   if (actionable.length === 0) {
     return (
-      <div className="rounded-2xl border border-neutral-300/70 bg-gradient-to-r from-neutral-100/60 to-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+      <div className="rounded-2xl border border-emerald-200/70 bg-gradient-to-r from-emerald-50/60 to-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-xl bg-[#E1F5EE] flex items-center justify-center">
             <ShieldCheck className="h-5 w-5 text-[#085041]" />
@@ -39,7 +39,7 @@ export const ARPriorityBar = ({ openInvoices, onViewDetails }: Props) => {
   }
 
   return (
-    <div className="rounded-2xl border border-neutral-300/70 bg-gradient-to-r from-neutral-100/60 via-white to-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+    <div className="rounded-2xl border border-rose-200/70 bg-gradient-to-r from-rose-50/60 via-white to-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
       <div className="flex flex-col md:flex-row md:items-center gap-4">
         <div className="flex items-start gap-3 flex-1 min-w-0">
           <div className="h-10 w-10 rounded-xl bg-[#FCE8E8] flex items-center justify-center flex-shrink-0">
@@ -57,7 +57,7 @@ export const ARPriorityBar = ({ openInvoices, onViewDetails }: Props) => {
         </div>
         <div className="flex gap-2 md:flex-shrink-0">
           <Button
-            className="bg-[#0F1F3D] hover:from-[#000000] hover:to-blue-500 text-white shadow-[0_2px_8px_rgba(0,0,0,0.25)] h-10"
+            className="bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-blue-500 text-white shadow-[0_2px_8px_rgba(0,82,255,0.25)] h-10"
             onClick={() => toast.success(`${actionable.length} påminnelser köade för utskick`)}
           >
             <Send className="h-4 w-4 mr-2" />

@@ -22,7 +22,7 @@ interface ShadowEntry { id: string;
 }
 
 function ConfidenceBar({ confidence }: { confidence: number }) { const pct = confidence * 100;
-  const color = pct >= 90 ? "#000000" : pct >= 75 ? "#525252" : pct >= 60 ? "#f97316" : "#525252";
+  const color = pct >= 90 ? "#22c55e" : pct >= 75 ? "#f59e0b" : pct >= 60 ? "#f97316" : "#ef4444";
   return (
     <div className="flex items-center gap-2 w-full">
       <div className="flex-1 h-2 rounded-full bg-muted overflow-hidden">
@@ -56,9 +56,9 @@ function SignalList({ result }: { result: AgentResult }) { const signals: string
         <div key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
           <span className="mt-0.5 shrink-0">
             {result.confidence >= 0.75 ? (
-              <CheckCircle className="h-3 w-3 text-[#000000]" />
+              <CheckCircle className="h-3 w-3 text-[#22c55e]" />
             ) : (
-              <XCircle className="h-3 w-3 text-[#525252]" />
+              <XCircle className="h-3 w-3 text-[#ef4444]" />
             )}
           </span>
           {s}
@@ -198,7 +198,7 @@ export function AgentShadowMode({ companyId }: ShadowModeProps) { const [entries
             key={entry.id}
             className={`overflow-hidden transition-all ${isDone ? "opacity-50" : ""}`}
             style={{ borderLeftWidth: 4,
-              borderLeftColor: pct >= 90 ? "#000000" : pct >= 75 ? "#525252" : pct >= 60 ? "#f97316" : "#525252",
+              borderLeftColor: pct >= 90 ? "#22c55e" : pct >= 75 ? "#f59e0b" : pct >= 60 ? "#f97316" : "#ef4444",
             }}
           >
             <CardContent className="p-4">

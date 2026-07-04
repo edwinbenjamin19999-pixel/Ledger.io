@@ -18,7 +18,7 @@ interface Props {
 }
 
 export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
-  const url = `https://bokfy.se${canonicalPath}`;
+  const url = `https://cogniq.se${canonicalPath}`;
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -27,11 +27,11 @@ export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
     description: article.metaDescription,
     datePublished: article.updatedAt,
     dateModified: article.updatedAt,
-    author: { "@type": "Organization", name: "Bokfy" },
+    author: { "@type": "Organization", name: "Cogniq" },
     publisher: {
       "@type": "Organization",
-      name: "Bokfy",
-      logo: { "@type": "ImageObject", url: "https://bokfy.se/og-image.jpg" },
+      name: "Cogniq",
+      logo: { "@type": "ImageObject", url: "https://cogniq.se/og-image.jpg" },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     keywords: article.keywords.join(", "),
@@ -65,7 +65,7 @@ export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
         updatedAt={article.updatedAt}
       />
 
-      <article className="container mx-auto max-w-[760px] px-6 py-16 text-[17px] leading-[1.75] text-slate-700 [&_h2]:text-[26px] [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-[#000000] [&_h2]:mt-14 [&_h2]:mb-5 [&_p]:mb-5">
+      <article className="container mx-auto max-w-[760px] px-6 py-16 text-[17px] leading-[1.75] text-slate-700 [&_h2]:text-[26px] [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-[#0F172A] [&_h2]:mt-14 [&_h2]:mb-5 [&_p]:mb-5">
         {article.problem && <ProblemBlock data={article.problem} />}
 
         {article.steps && article.steps.length > 0 && <StepList steps={article.steps} />}
@@ -80,7 +80,7 @@ export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
               <ul className="mt-4 space-y-2">
                 {section.list.items.map((item, j) => (
                   <li key={j} className="flex items-start gap-2 leading-relaxed">
-                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#000000]" />
+                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3b82f6]" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -104,8 +104,8 @@ export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
             <ul className="space-y-3">
               {article.summary.map((s, i) => (
                 <li key={i} className="flex items-start gap-3 leading-relaxed">
-                  <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-neutral-100">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-neutral-700" />
+                  <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-emerald-50">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
                   </span>
                   <span>{s}</span>
                 </li>

@@ -33,14 +33,14 @@ const Pill = ({
   count, label, tone, pulse = false,
 }: { count: number; label: string; tone: "critical" | "warning" | "healthy"; pulse?: boolean }) => {
   const styles = {
-    critical: "bg-neutral-700/15 text-neutral-300 border-neutral-700/30 shadow-[0_0_16px_rgba(244,63,94,0.25)]",
-    warning: "bg-neutral-700/15 text-neutral-300 border-neutral-700/30 shadow-[0_0_12px_rgba(245,158,11,0.18)]",
-    healthy: "bg-neutral-700/15 text-neutral-300 border-neutral-700/30",
+    critical: "bg-rose-500/15 text-rose-300 border-rose-400/30 shadow-[0_0_16px_rgba(244,63,94,0.25)]",
+    warning: "bg-amber-500/15 text-amber-300 border-amber-400/30 shadow-[0_0_12px_rgba(245,158,11,0.18)]",
+    healthy: "bg-emerald-500/15 text-emerald-300 border-emerald-400/30",
   } as const;
   const dot = {
-    critical: "bg-neutral-700",
-    warning: "bg-neutral-700",
-    healthy: "bg-neutral-700",
+    critical: "bg-rose-400",
+    warning: "bg-amber-400",
+    healthy: "bg-emerald-400",
   } as const;
   return (
     <div className={cn(

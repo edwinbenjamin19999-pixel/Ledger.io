@@ -115,7 +115,7 @@ export function ExecutionFlowDrawer({ open, onClose, insight, companyId, selecte
                       ) : (
                         previewItems.map((p, i) => (
                           <div key={i} className="p-2.5 text-xs flex items-center gap-2">
-                            <ArrowRight className="h-3 w-3 text-[#000000] dark:text-[#1E3A5F]" />
+                            <ArrowRight className="h-3 w-3 text-[#3b82f6] dark:text-[#1E3A5F]" />
                             <span className="text-slate-700 dark:text-white/80">{p}</span>
                           </div>
                         ))
@@ -142,7 +142,7 @@ export function ExecutionFlowDrawer({ open, onClose, insight, companyId, selecte
           {stage === "progress" && (
             <div className="py-8 space-y-4">
               <div className="text-center">
-                <Loader2 className="h-8 w-8 animate-spin mx-auto text-[#000000] mb-3" />
+                <Loader2 className="h-8 w-8 animate-spin mx-auto text-[#3b82f6] mb-3" />
                 <h3 className="text-base font-semibold text-slate-900 dark:text-white">Utför {progress.current}/{progress.total}…</h3>
                 <p className="text-xs text-muted-foreground mt-1">{insight.title}</p>
               </div>
@@ -158,7 +158,7 @@ export function ExecutionFlowDrawer({ open, onClose, insight, companyId, selecte
           {/* RESULT */}
           {stage === "result" && (
             <div className="space-y-4">
-              <div className="rounded-2xl border border-[#BFE6D6] dark:border-[#BFE6D6] bg-[#E1F5EE] dark:bg-neutral-700/[0.06] p-5 text-center">
+              <div className="rounded-2xl border border-[#BFE6D6] dark:border-[#BFE6D6] bg-[#E1F5EE] dark:bg-emerald-500/[0.06] p-5 text-center">
                 <CheckCircle2 className="h-10 w-10 text-[#085041] mx-auto mb-2" />
                 <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Klart!</h3>
                 <p className="text-sm text-muted-foreground mt-1">

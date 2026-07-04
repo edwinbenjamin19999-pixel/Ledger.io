@@ -31,7 +31,7 @@ const IndustryBadge = () => {
   if (!badge) return null;
   return (
     <span
-      className="hidden md:inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-blue-500/15 text-black dark:text-blue-300 text-[10px] font-medium tracking-wide shrink-0"
+      className="hidden md:inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-blue-500/15 text-blue-700 dark:text-blue-300 text-[10px] font-medium tracking-wide shrink-0"
       title={badge.label}
     >
       <span aria-hidden>{badge.emoji}</span>
@@ -157,7 +157,7 @@ export const GlobalCompanyPicker = () => {
         <Building2 className="h-3.5 w-3.5" />
         <span className="truncate max-w-[180px]">{current.name}</span>
         {current.is_test && (
-          <span className="px-1.5 py-0.5 rounded-md bg-neutral-700 text-[10px] font-bold text-amber-950 tracking-wide">
+          <span className="px-1.5 py-0.5 rounded-md bg-amber-400 text-[10px] font-bold text-amber-950 tracking-wide">
             TEST
           </span>
         )}
@@ -173,7 +173,7 @@ export const GlobalCompanyPicker = () => {
           <Building2 className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
           <span className="truncate text-xs font-medium">{current.name}</span>
           {current.is_test && (
-            <span className="px-1.5 py-0.5 rounded-md bg-neutral-700 text-[10px] font-bold text-amber-950 tracking-wide shrink-0">
+            <span className="px-1.5 py-0.5 rounded-md bg-amber-400 text-[10px] font-bold text-amber-950 tracking-wide shrink-0">
               TEST
             </span>
           )}

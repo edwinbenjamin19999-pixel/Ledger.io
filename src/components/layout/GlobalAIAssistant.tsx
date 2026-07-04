@@ -254,7 +254,7 @@ export const GlobalAIAssistant = ({ companyId: companyIdProp }: GlobalAIAssistan
         onClick={() => setOpen(true)}
         className={cn(
           "fixed bottom-20 md:bottom-6 right-6 z-50 h-[52px] px-5 rounded-full",
-          "bg-[#000000] hover:bg-[#000000]/90 text-white",
+          "bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white",
           "flex items-center gap-2 font-medium text-sm",
           "animate-[pulse-glow_3s_ease-in-out_infinite]",
           "hover:scale-105 hover:-translate-y-0.5",
@@ -262,7 +262,7 @@ export const GlobalAIAssistant = ({ companyId: companyIdProp }: GlobalAIAssistan
           "shadow-[0_4px_12px_rgba(59,130,246,0.35),_0_2px_4px_rgba(0,0,0,0.15)]",
           "hover:shadow-[0_8px_24px_rgba(59,130,246,0.45)]",
           "hover:[animation:none]",
-          "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#000000]/50",
+          "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3b82f6]/50",
           open && "hidden"
         )}
         title="Fråga AI (Ctrl+K)"
@@ -284,9 +284,9 @@ export const GlobalAIAssistant = ({ companyId: companyIdProp }: GlobalAIAssistan
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-3 border-b bg-[hsl(185,80%,10%)]">
           <div className="flex items-center gap-2 min-w-0">
-            <Sparkles className="h-4 w-4 text-[#000000] shrink-0" />
+            <Sparkles className="h-4 w-4 text-[#3b82f6] shrink-0" />
             <span className="text-sm font-semibold text-white truncate">{assistantName}</span>
-            <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#000000]/20 text-[#000000] font-medium truncate">
+            <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#3b82f6]/20 text-[#3b82f6] font-medium truncate">
               {contextLabel}
             </span>
           </div>
@@ -324,8 +324,8 @@ export const GlobalAIAssistant = ({ companyId: companyIdProp }: GlobalAIAssistan
           <div className="py-4 space-y-4">
             {messages.length === 0 && (
               <div className="text-center py-8 space-y-4">
-                <div className="mx-auto w-12 h-12 rounded-full bg-[#000000]/10 flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-[#000000]" />
+                <div className="mx-auto w-12 h-12 rounded-full bg-[#3b82f6]/10 flex items-center justify-center">
+                  <Sparkles className="w-6 h-6 text-[#3b82f6]" />
                 </div>
                 <div className="space-y-1">
                   <p className="text-sm font-medium text-foreground">{ctx.greeting}</p>
@@ -353,7 +353,7 @@ export const GlobalAIAssistant = ({ companyId: companyIdProp }: GlobalAIAssistan
               <div key={msg.id}>
                 <div className={cn("flex gap-2", msg.role === "user" ? "justify-end" : "justify-start")}>
                   {msg.role === "assistant" && (
-                    <div className="w-7 h-7 rounded-full bg-[#000000] flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-7 h-7 rounded-full bg-[#3b82f6] flex items-center justify-center shrink-0 mt-0.5">
                       <Sparkles className="w-3.5 h-3.5 text-white" />
                     </div>
                   )}
@@ -361,12 +361,12 @@ export const GlobalAIAssistant = ({ companyId: companyIdProp }: GlobalAIAssistan
                     className={cn(
                       "rounded-xl text-sm",
                       msg.role === "user"
-                        ? "max-w-[80%] bg-[#000000] text-white px-3 py-2 rounded-br-sm"
+                        ? "max-w-[80%] bg-[#3b82f6] text-white px-3 py-2 rounded-br-sm"
                         : "max-w-[90%] bg-card border px-3 py-2 rounded-bl-sm"
                     )}
                   >
                     {msg.role === "assistant" ? (
-                      <div className="prose prose-sm dark:prose-invert max-w-none prose-p:text-[12px] prose-p:my-1 prose-li:text-[12px] prose-strong:text-foreground prose-code:text-[#000000] prose-code:text-xs">
+                      <div className="prose prose-sm dark:prose-invert max-w-none prose-p:text-[12px] prose-p:my-1 prose-li:text-[12px] prose-strong:text-foreground prose-code:text-[#3b82f6] prose-code:text-xs">
                         <ReactMarkdown>{msg.content || "..."}</ReactMarkdown>
                       </div>
                     ) : (
@@ -396,7 +396,7 @@ export const GlobalAIAssistant = ({ companyId: companyIdProp }: GlobalAIAssistan
                     {msg.suggestedQuestions.map((q, i) => (
                       <button
                         key={i}
-                        className="text-[11px] px-2.5 py-1 rounded-full border border-[#000000]/30 text-[#000000] hover:bg-[#000000]/10 transition-colors"
+                        className="text-[11px] px-2.5 py-1 rounded-full border border-[#3b82f6]/30 text-[#3b82f6] hover:bg-[#3b82f6]/10 transition-colors"
                         onClick={() => sendMessage(q)}
                       >
                         {q}
@@ -409,7 +409,7 @@ export const GlobalAIAssistant = ({ companyId: companyIdProp }: GlobalAIAssistan
 
             {isLoading && messages[messages.length - 1]?.content === "" && (
               <div className="flex gap-2">
-                <div className="w-7 h-7 rounded-full bg-[#000000] flex items-center justify-center shrink-0">
+                <div className="w-7 h-7 rounded-full bg-[#3b82f6] flex items-center justify-center shrink-0">
                   <Sparkles className="w-3.5 h-3.5 text-white" />
                 </div>
                 <div className="bg-card border rounded-xl px-3 py-2 flex items-center gap-2 text-sm text-muted-foreground">
@@ -470,7 +470,7 @@ export const GlobalAIAssistant = ({ companyId: companyIdProp }: GlobalAIAssistan
               onClick={() => sendMessage()}
               disabled={(!input.trim() && pendingAttachments.length === 0) || isLoading}
               size="icon"
-              className="rounded-full h-8 w-8 bg-[#000000] hover:bg-[#000000]/90"
+              className="rounded-full h-8 w-8 bg-[#3b82f6] hover:bg-[#3b82f6]/90"
             >
               <Send className="w-3.5 h-3.5 text-white" />
             </Button>

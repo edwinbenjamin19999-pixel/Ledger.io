@@ -64,12 +64,12 @@ export function CustomerProfilePanel({ open, onOpenChange, customer, profile, on
             <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">Kontakt</h4>
             <div className="space-y-1.5 text-sm">
               {customer.email && (
-                <a href={`mailto:${customer.email}`} className="flex items-center gap-2 text-slate-700 hover:text-[#000000]">
+                <a href={`mailto:${customer.email}`} className="flex items-center gap-2 text-slate-700 hover:text-[#3b82f6]">
                   <Mail className="h-4 w-4 text-slate-400" />{customer.email}
                 </a>
               )}
               {customer.phone && (
-                <a href={`tel:${customer.phone}`} className="flex items-center gap-2 text-slate-700 hover:text-[#000000]">
+                <a href={`tel:${customer.phone}`} className="flex items-center gap-2 text-slate-700 hover:text-[#3b82f6]">
                   <Phone className="h-4 w-4 text-slate-400" />{customer.phone}
                 </a>
               )}
@@ -93,9 +93,9 @@ export function CustomerProfilePanel({ open, onOpenChange, customer, profile, on
 
           {/* AI insight */}
           {profile && (
-            <section className="rounded-2xl border border-slate-200/70 border-l-[3px] border-l-[#000000] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+            <section className="rounded-2xl border border-slate-200/70 border-l-[3px] border-l-[#3b82f6] bg-white p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
               <div className="flex items-start gap-2">
-                <Brain className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+                <Brain className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
                 <div className="space-y-2">
                   <p className="text-sm text-slate-700">{profile.aiPattern}</p>
                   <p className="text-xs text-slate-500">{profile.recommendation}</p>
@@ -124,7 +124,7 @@ export function CustomerProfilePanel({ open, onOpenChange, customer, profile, on
           {/* Actions */}
           <section className="space-y-2">
             <Button
-              className="w-full bg-[#000000] hover:bg-[#000000] text-white"
+              className="w-full bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
               onClick={() => {
                 onOpenChange(false);
                 navigate(`/ar-agent?customer=${encodeURIComponent(customer.name)}`);

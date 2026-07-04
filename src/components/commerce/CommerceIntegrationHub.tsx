@@ -28,7 +28,7 @@ const INTEGRATIONS: Integration[] = [
 
 const statusConfig = { connected: { label: "Ansluten", color: "border-[#BFE6D6] text-[#085041] bg-[#E1F5EE] dark:bg-emerald-950/20", icon: Wifi },
   disconnected: { label: "Ej ansluten", color: "border-border text-muted-foreground", icon: WifiOff },
-  syncing: { label: "Synkar...", color: "border-black text-black bg-[#EFF6FF] dark:bg-blue-950/20", icon: RefreshCw },
+  syncing: { label: "Synkar...", color: "border-blue-300 text-blue-600 bg-[#EFF6FF] dark:bg-blue-950/20", icon: RefreshCw },
   error: { label: "Fel", color: "border-red-300 text-[#7A1A1A] bg-[#FCE8E8] dark:bg-red-950/20", icon: WifiOff },
 };
 
@@ -58,14 +58,14 @@ export function CommerceIntegrationHub() { const grouped = { pos: INTEGRATIONS.f
               return (
                 <Card key={intg.id} className={cn(
                   "group transition-all hover:shadow-md",
-                  intg.status === "connected" && "ring-1 ring-neutral-300/50"
+                  intg.status === "connected" && "ring-1 ring-emerald-200/50"
                 )}>
                   <CardContent className="pt-4 pb-3">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2.5">
                         <div className={cn(
                           "h-9 w-9 rounded-lg flex items-center justify-center",
-                          intg.status === "connected" ? "bg-[#E1F5EE] dark:bg-neutral-700/30" : "bg-muted"
+                          intg.status === "connected" ? "bg-[#E1F5EE] dark:bg-emerald-900/30" : "bg-muted"
                         )}>
                           <Icon className={cn(
                             "h-4 w-4",

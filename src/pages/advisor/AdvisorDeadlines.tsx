@@ -12,15 +12,15 @@ type ViewMode = "list" | "calendar" | "timeline";
 
 const KIND_META: Record<FirmDeadlineItem["kind"], { label: string; bg: string; text: string; icon: any; action: string; route: (cid: string) => string }> = {
   vat:    { label: "Moms",          bg: "bg-[#0B1929]",   text: "text-white",         icon: Calculator, action: "Beräkna moms",  route: (cid) => `/wl/app/moms?client=${cid}&action=calculate` },
-  agi:    { label: "AGI",           bg: "bg-[#000000]",   text: "text-white",         icon: FileText,   action: "Förbered AGI",  route: (cid) => `/wl/app/agi?client=${cid}` },
+  agi:    { label: "AGI",           bg: "bg-[#0040CC]",   text: "text-white",         icon: FileText,   action: "Förbered AGI",  route: (cid) => `/wl/app/agi?client=${cid}` },
   ink2:   { label: "Bokslut",       bg: "bg-purple-600",  text: "text-white",         icon: BookOpen,   action: "Öppna bokslut", route: (cid) => `/wl/app/clients/${cid}/workspace/closing` },
-  annual: { label: "Årsredovisning", bg: "bg-neutral-700",   text: "text-white",         icon: Send,       action: "Lämna in",      route: (cid) => `/wl/app/clients/${cid}/workspace/closing` },
+  annual: { label: "Årsredovisning", bg: "bg-amber-500",   text: "text-white",         icon: Send,       action: "Lämna in",      route: (cid) => `/wl/app/clients/${cid}/workspace/closing` },
 };
 
 const daysCellColor = (d: number) =>
   d < 0 ? "text-red-600 font-medium"
-  : d === 0 ? "text-neutral-700 font-medium"
-  : d <= 3 ? "text-neutral-700"
+  : d === 0 ? "text-amber-600 font-medium"
+  : d <= 3 ? "text-amber-600"
   : d <= 7 ? "text-slate-700"
   : "text-slate-500";
 
@@ -158,7 +158,7 @@ export default function AdvisorDeadlines() {
                         {format(d.due_date, "yyyy-MM-dd")}
                       </td>
                       <td className="px-4 py-2.5">
-                        <button onClick={() => navigate(`/wl/app/clients/${d.client_id}`)} className="font-medium text-slate-900 hover:text-black">
+                        <button onClick={() => navigate(`/wl/app/clients/${d.client_id}`)} className="font-medium text-slate-900 hover:text-blue-600">
                           {d.client_name}
                         </button>
                       </td>
@@ -210,7 +210,7 @@ export default function AdvisorDeadlines() {
                       <td className="px-4 py-2.5 text-right">
                         <button
                           onClick={() => navigate(meta.route(d.client_id))}
-                          className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[28px] inline-flex items-center"
+                          className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[28px] inline-flex items-center"
                         >
                           {meta.action}
                         </button>
@@ -305,11 +305,11 @@ const CalendarView = ({ items }: { items: FirmDeadlineItem[] }) => {
       <div className="grid grid-cols-7 gap-1">
         {cells.map((c, i) => (
           <div key={i} className={`min-h-[72px] border border-slate-100 rounded-md p-1.5 text-[11px] ${
-            c && isToday(c.date) ? "bg-neutral-100/40 border-black" : "bg-white"
+            c && isToday(c.date) ? "bg-blue-50/40 border-blue-200" : "bg-white"
           }`}>
             {c && (
               <>
-                <p className={`text-[11px] mb-1 ${isToday(c.date) ? "text-black font-semibold" : "text-slate-500"}`}>
+                <p className={`text-[11px] mb-1 ${isToday(c.date) ? "text-blue-700 font-semibold" : "text-slate-500"}`}>
                   {c.date.getDate()}
                 </p>
                 <div className="space-y-0.5">

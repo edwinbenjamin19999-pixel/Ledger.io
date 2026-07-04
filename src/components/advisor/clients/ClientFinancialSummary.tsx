@@ -22,7 +22,7 @@ const fmt = (n: number) =>
 const Line = ({ label, value, emphasis }: Row) => {
   const cls =
     emphasis === "positive"
-      ? "text-neutral-700"
+      ? "text-emerald-600"
       : emphasis === "negative"
       ? "text-red-600"
       : "text-slate-900";
@@ -56,7 +56,7 @@ export const ClientFinancialSummary = ({
 
     <div className="flex items-center justify-between py-1.5 text-[12px] border-t border-slate-100 mt-2 pt-3">
       <span className="text-slate-500">vs föregående månad</span>
-      <span className={vsPrevPct >= 0 ? "text-neutral-700 font-medium" : "text-red-600 font-medium"}>
+      <span className={vsPrevPct >= 0 ? "text-emerald-600 font-medium" : "text-red-600 font-medium"}>
         {vsPrevPct >= 0 ? "+" : ""}
         {vsPrevPct.toFixed(1)}%
       </span>

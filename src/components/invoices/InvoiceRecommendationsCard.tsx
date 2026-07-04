@@ -58,10 +58,10 @@ export const InvoiceRecommendationsCard = ({
   if (recs.length === 0) return null;
 
   return (
-    <div className="rounded-2xl bg-white border border-slate-200/70 border-l-[3px] border-l-[#000000] shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
+    <div className="rounded-2xl bg-white border border-slate-200/70 border-l-[3px] border-l-[#3b82f6] shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
       <div className="flex items-start gap-4">
         <div className="h-10 w-10 rounded-xl bg-[#EFF6FF] flex items-center justify-center shrink-0">
-          <Sparkles className="h-5 w-5 text-[#000000]" />
+          <Sparkles className="h-5 w-5 text-[#3b82f6]" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-3 mb-3">
@@ -74,7 +74,7 @@ export const InvoiceRecommendationsCard = ({
           <ul className="space-y-2">
             {recs.map((r, i) => {
               const Icon = r.icon;
-              const toneText = r.tone === "rose" ? "text-[#7A1A1A]" : "text-[#000000]";
+              const toneText = r.tone === "rose" ? "text-[#7A1A1A]" : "text-[#3b82f6]";
               const toneBg = r.tone === "rose" ? "bg-[#FCE8E8]" : "bg-[#EFF6FF]";
               return (
                 <li key={i} className="flex items-center gap-3 text-sm">

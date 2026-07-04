@@ -205,7 +205,7 @@ export const SupplierInvoiceApprovalActions = ({
             ) : (
               <Button
                 size="sm"
-                className={`${btnH} bg-[#000000] hover:bg-[#000000] text-white`}
+                className={`${btnH} bg-[#3b82f6] hover:bg-[#3b82f6] text-white`}
                 disabled={busy}
                 onClick={handleAttest}
               >
@@ -251,7 +251,7 @@ export const SupplierInvoiceApprovalActions = ({
             {!hidePayAction && paymentCheck.allowed && (
               <Button
                 size="sm"
-                className={`${btnH} bg-neutral-700 hover:bg-neutral-700 text-white`}
+                className={`${btnH} bg-emerald-600 hover:bg-emerald-700 text-white`}
                 disabled={busy}
                 onClick={handleMarkPaid}
               >
@@ -282,7 +282,7 @@ export const SupplierInvoiceApprovalActions = ({
           <>
             <Button
               size="sm"
-              className={`${btnH} bg-[#000000] hover:bg-[#000000] text-white`}
+              className={`${btnH} bg-[#3b82f6] hover:bg-[#3b82f6] text-white`}
               disabled={busy}
               onClick={handleAttest}
             >

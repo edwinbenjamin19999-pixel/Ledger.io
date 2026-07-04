@@ -426,7 +426,7 @@ export function KPIWidgetGrid({ companyId, period: controlledPeriod, onPeriodCha
             {data.fallbackUsed && data.effectiveLabel ? data.effectiveLabel : range.label}
           </span>
           {data.fallbackUsed && (
-            <span className="text-[10px] uppercase tracking-wider font-semibold px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-700 border border-neutral-300">
+            <span className="text-[10px] uppercase tracking-wider font-semibold px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200">
               Fallback
             </span>
           )}

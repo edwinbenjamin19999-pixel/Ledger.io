@@ -35,10 +35,10 @@ const Card = ({
   loading: boolean;
 }) => {
   const tones: Record<string, { border: string; iconBg: string; iconText: string; dot: string }> = {
-    rose: { border: "rgb(254,205,211)", iconBg: "bg-[#FCE8E8]", iconText: "text-[#7A1A1A]", dot: "bg-neutral-700" },
-    amber: { border: "rgb(253,230,138)", iconBg: "bg-[#FAEEDA]", iconText: "text-[#7A5417]", dot: "bg-neutral-700" },
-    indigo: { border: "rgb(199,210,254)", iconBg: "bg-[#EFF6FF]", iconText: "text-neutral-700", dot: "bg-neutral-700" },
-    emerald: { border: "rgb(167,243,208)", iconBg: "bg-[#E1F5EE]", iconText: "text-[#085041]", dot: "bg-neutral-700" },
+    rose: { border: "rgb(254,205,211)", iconBg: "bg-[#FCE8E8]", iconText: "text-[#7A1A1A]", dot: "bg-rose-500" },
+    amber: { border: "rgb(253,230,138)", iconBg: "bg-[#FAEEDA]", iconText: "text-[#7A5417]", dot: "bg-amber-500" },
+    indigo: { border: "rgb(199,210,254)", iconBg: "bg-[#EFF6FF]", iconText: "text-indigo-600", dot: "bg-indigo-500" },
+    emerald: { border: "rgb(167,243,208)", iconBg: "bg-[#E1F5EE]", iconText: "text-[#085041]", dot: "bg-emerald-500" },
   };
   const t = tones[tone];
   return (

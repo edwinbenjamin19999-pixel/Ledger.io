@@ -67,7 +67,7 @@ export function PosSalesDetail({ sales }: Props) {
     { name: "Swish", value: todaySales.swish_amount },
   ].filter(p => p.value > 0) : [];
 
-  const colors = ["hsl(var(--primary))", "#000000", "#737373", "#525252"];
+  const colors = ["hsl(var(--primary))", "#3b82f6", "#8b5cf6", "#f59e0b"];
 
   if (!todaySales) { return (
       <Card className="mt-4">

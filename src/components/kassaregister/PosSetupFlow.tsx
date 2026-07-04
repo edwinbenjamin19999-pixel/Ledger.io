@@ -85,10 +85,10 @@ export function PosSetupFlow() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-6 space-y-8">
       {/* HERO */}
-      <div className="rounded-2xl border border-[#C8DDF5] bg-gradient-to-br from-[#000000]/10 via-card to-blue-500/10 dark:from-[#000000]/15 dark:via-card dark:to-blue-500/15 p-6 md:p-8 shadow-sm animate-fade-in">
+      <div className="rounded-2xl border border-[#C8DDF5] bg-gradient-to-br from-[#3b82f6]/10 via-card to-blue-500/10 dark:from-[#3b82f6]/15 dark:via-card dark:to-blue-500/15 p-6 md:p-8 shadow-sm animate-fade-in">
         <div className="flex flex-col md:flex-row md:items-center gap-6">
           <div className="flex-1 space-y-3">
-            <span className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-[#EFF6FF] text-[#000000] dark:text-[#000000] border border-[#C8DDF5]">
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6] border border-[#C8DDF5]">
               <Sparkles className="h-3 w-3" /> AI-driven automation
             </span>
             <h1 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
@@ -105,7 +105,7 @@ export function PosSetupFlow() {
                 { icon: Landmark, label: "Bankavstämning" },
                 { icon: ShieldCheck, label: "Felupptäckt" },
               ].map((c) => (
-                <span key={c.label} className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-card border border-[#C8DDF5] text-[#000000] dark:text-[#000000]">
+                <span key={c.label} className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-card border border-[#C8DDF5] text-[#3b82f6] dark:text-[#3b82f6]">
                   <c.icon className="h-3 w-3" /> {c.label}
                 </span>
               ))}
@@ -113,11 +113,11 @@ export function PosSetupFlow() {
           </div>
           <div className="md:w-72 shrink-0 rounded-2xl bg-card border border-[#C8DDF5] p-5 text-center">
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">AI automation</p>
-            <p className="text-4xl font-bold text-[#000000] dark:text-[#1E3A5F] tabular-nums mt-1">95%</p>
+            <p className="text-4xl font-bold text-[#3b82f6] dark:text-[#1E3A5F] tabular-nums mt-1">95%</p>
             <p className="text-xs text-muted-foreground mt-1">av din kassabokföring sköts automatiskt</p>
             <Button
               onClick={() => { document.getElementById("setup-flow")?.scrollIntoView({ behavior: "smooth" }); }}
-              className="w-full mt-4 bg-[#000000] hover:bg-[#000000] text-white"
+              className="w-full mt-4 bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
             >
               Kom igång på 30 sekunder
             </Button>
@@ -132,10 +132,10 @@ export function PosSetupFlow() {
           const isPast = i < stepIdx;
           return (
             <div key={s.id} className="flex items-center gap-2 shrink-0">
-              {i > 0 && <div className={cn("h-px w-6 md:w-10", isPast || isActive ? "bg-[#000000]" : "bg-border")} />}
+              {i > 0 && <div className={cn("h-px w-6 md:w-10", isPast || isActive ? "bg-[#3b82f6]" : "bg-border")} />}
               <div className={cn(
                 "flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors border",
-                isActive ? "bg-[#000000] text-white border-black" : isPast ? "bg-[#EFF6FF] text-[#000000] dark:text-[#000000] border-[#C8DDF5]" : "bg-card text-muted-foreground border-border"
+                isActive ? "bg-[#3b82f6] text-white border-blue-600" : isPast ? "bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6] border-[#C8DDF5]" : "bg-card text-muted-foreground border-border"
               )}>
                 <span className="font-semibold tabular-nums">{i + 1}</span>
                 <span className="font-medium">{s.label}</span>
@@ -152,14 +152,14 @@ export function PosSetupFlow() {
             <>
               {/* Auto-detection banner */}
               {!autoDetectDismissed && (
-                <Card className="border-l-[3px] border-l-[#000000] bg-[#EFF6FF] animate-fade-in">
+                <Card className="border-l-[3px] border-l-[#3b82f6] bg-[#EFF6FF] animate-fade-in">
                   <CardContent className="pt-5 pb-5 flex items-center gap-3 flex-wrap">
-                    <Brain className="h-5 w-5 text-[#000000] dark:text-[#1E3A5F] shrink-0" />
+                    <Brain className="h-5 w-5 text-[#3b82f6] dark:text-[#1E3A5F] shrink-0" />
                     <p className="text-sm text-foreground flex-1 min-w-[200px]">
                       Vi tror att du använder <strong>Zettle</strong> baserat på dina tidigare data.
                     </p>
                     <div className="flex gap-2">
-                      <Button size="sm" onClick={() => { setSelectedProvider("zettle"); setStep("mapping"); }} className="bg-[#000000] hover:bg-[#000000] text-white">Bekräfta</Button>
+                      <Button size="sm" onClick={() => { setSelectedProvider("zettle"); setStep("mapping"); }} className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white">Bekräfta</Button>
                       <Button size="sm" variant="outline" onClick={() => setAutoDetectDismissed(true)}>Välj annat</Button>
                     </div>
                   </CardContent>
@@ -174,9 +174,9 @@ export function PosSetupFlow() {
                 <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {PROVIDERS.map((p) => {
                     const typeColor = p.api === "API"
-                      ? "bg-[#E1F5EE] text-[#085041] dark:text-neutral-300 border-[#BFE6D6]"
+                      ? "bg-[#E1F5EE] text-[#085041] dark:text-emerald-300 border-[#BFE6D6]"
                       : p.api === "CSV"
-                        ? "bg-[#FAEEDA] text-[#7A5417] dark:text-neutral-300 border-[#F0DDB7]"
+                        ? "bg-[#FAEEDA] text-[#7A5417] dark:text-amber-300 border-[#F0DDB7]"
                         : "bg-muted text-muted-foreground border-border";
                     return (
                       <button
@@ -185,11 +185,11 @@ export function PosSetupFlow() {
                         className={cn(
                           "group p-4 rounded-2xl border text-left transition-all relative bg-card",
                           "hover:border-[#C8DDF5] hover:shadow-md hover:-translate-y-px",
-                          selectedProvider === p.id ? "border-[#000000] bg-[#EFF6FF] border-l-[3px] border-l-[#000000]" : "border-border"
+                          selectedProvider === p.id ? "border-[#3b82f6] bg-[#EFF6FF] border-l-[3px] border-l-[#3b82f6]" : "border-border"
                         )}
                       >
                         {p.badge && (
-                          <span className="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#000000] text-white">
+                          <span className="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#3b82f6] text-white">
                             {p.badge}
                           </span>
                         )}
@@ -207,7 +207,7 @@ export function PosSetupFlow() {
                               <span className="text-[10px] text-muted-foreground">{p.confidence}</span>
                             </div>
                           </div>
-                          <ArrowRight className="h-4 w-4 text-muted-foreground/50 group-hover:text-[#000000] dark:group-hover:text-[#1E3A5F] transition-colors mt-1" />
+                          <ArrowRight className="h-4 w-4 text-muted-foreground/50 group-hover:text-[#3b82f6] dark:group-hover:text-[#1E3A5F] transition-colors mt-1" />
                         </div>
                       </button>
                     );

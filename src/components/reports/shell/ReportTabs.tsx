@@ -46,9 +46,9 @@ export const ReportTabs = ({
                 "rounded-full px-4 py-1.5 text-sm font-medium transition-all",
                 "text-slate-600 dark:text-slate-300",
                 "hover:bg-white/60 dark:hover:bg-slate-700/60",
-                "data-[state=active]:bg-[#000000] data-[state=active]:text-white",
-                "data-[state=active]:shadow-[0_2px_6px_rgba(0,0,0,0.25)]",
-                "focus-visible:ring-2 focus-visible:ring-[#000000]/40",
+                "data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white",
+                "data-[state=active]:shadow-[0_2px_6px_rgba(0,82,255,0.25)]",
+                "focus-visible:ring-2 focus-visible:ring-[#3b82f6]/40",
               )}
             >
               {tab.label}

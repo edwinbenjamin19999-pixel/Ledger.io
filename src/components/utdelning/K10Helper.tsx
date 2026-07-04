@@ -164,7 +164,7 @@ export function K10Helper() {
               {/* Results card */}
               <div className="rounded-lg border-2 border-[#E2E8F0] bg-[#F1F5F9] p-5 space-y-4">
                 <div className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5 text-neutral-700" />
+                  <TrendingUp className="h-5 w-5 text-violet-500" />
                   <h3 className="font-semibold text-sm">Beräknat utdelningsutrymme</h3>
                 </div>
 
@@ -201,7 +201,7 @@ export function K10Helper() {
 
               {/* Minimum salary warning */}
               {!result.canUseLonunderlag && values.companyTotalSalaries > 0 && (
-                <div className="rounded-lg border border-[#F0DDB7] bg-neutral-100/50 dark:bg-amber-950/20 p-3 flex items-start gap-2">
+                <div className="rounded-lg border border-[#F0DDB7] bg-amber-50/50 dark:bg-amber-950/20 p-3 flex items-start gap-2">
                   <AlertTriangle className="h-4 w-4 text-[#7A5417] shrink-0 mt-0.5" />
                   <div className="text-xs">
                     <p className="font-medium text-[#7A5417] dark:text-[#C28A2B]">
@@ -236,7 +236,7 @@ export function K10Helper() {
               </div>
 
               {/* Carry forward */}
-              <div className="rounded-lg border border-[#BFE6D6] bg-neutral-100/50 dark:bg-emerald-950/20 p-3 flex items-center gap-2">
+              <div className="rounded-lg border border-[#BFE6D6] bg-emerald-50/50 dark:bg-emerald-950/20 p-3 flex items-center gap-2">
                 <Info className="h-4 w-4 text-[#085041] shrink-0" />
                 <p className="text-xs">
                   <span className="font-medium">Sparat utrymme nästa år:</span>{" "}
@@ -244,7 +244,7 @@ export function K10Helper() {
                 </p>
               </div>
 
-              <div className="rounded-lg border border-[#F0DDB7] dark:border-neutral-700 bg-neutral-100/50 dark:bg-amber-950/20 p-3">
+              <div className="rounded-lg border border-[#F0DDB7] dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 p-3">
                 <p className="text-sm">
                   K10 ska bifogas din privata inkomstdeklaration senast 2 maj.
                 </p>

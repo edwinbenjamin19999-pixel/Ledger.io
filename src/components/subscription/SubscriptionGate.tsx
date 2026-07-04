@@ -44,7 +44,7 @@ export const SubscriptionGate = ({ children,
   }
 
   return (
-    <Alert className="border-neutral-700/50 bg-[#FAEEDA]">
+    <Alert className="border-amber-500/50 bg-[#FAEEDA]">
       <Lock className="h-4 w-4 text-[#7A5417]" />
       <AlertTitle className="text-[#7A5417] dark:text-[#C28A2B]">
         Prenumeration krävs

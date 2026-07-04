@@ -36,7 +36,7 @@ import { toast } from "sonner";
 const TABS: Array<{ key: InvoiceStatusGroup | "all"; label: string; icon: typeof FileText; tone: string }> = [
   { key: "all", label: "Alla", icon: Receipt, tone: "text-[#0F172A]" },
   { key: "draft", label: "Utkast", icon: FileText, tone: "text-slate-700" },
-  { key: "sent", label: "Skickade", icon: Send, tone: "text-[#000000]" },
+  { key: "sent", label: "Skickade", icon: Send, tone: "text-[#3b82f6]" },
   { key: "overdue", label: "Förfallna", icon: AlertTriangle, tone: "text-[#7A1A1A]" },
   { key: "paid", label: "Betalda", icon: CheckCircle2, tone: "text-[#085041]" },
 ];
@@ -168,7 +168,7 @@ const AdvisorInvoices = () => {
             Kundfakturering
           </h1>
           <p className="text-[#64748B] mt-1.5">
-            Samma motor som standard-Bokfy — orkestrerad över alla {clients.length} klienter.
+            Samma motor som standard-Cogniq — orkestrerad över alla {clients.length} klienter.
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -277,7 +277,7 @@ const AdvisorInvoices = () => {
                     size="sm"
                     onClick={seedDemo}
                     disabled={seeding}
-                    className="mt-4 border-[#C8DDF5] text-[#000000] hover:bg-[#EFF6FF]"
+                    className="mt-4 border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF]"
                   >
                     <Database className="h-3.5 w-3.5 mr-1.5" />
                     {seeding ? "Skapar…" : "Skapa demofakturor"}
@@ -355,7 +355,7 @@ const AdvisorInvoices = () => {
 function StatusBadge({ group, reminders }: { group: string; reminders: number }) {
   const map: Record<string, { label: string; tone: string; icon: typeof Clock }> = {
     draft: { label: "Utkast", tone: "bg-slate-100 text-slate-700", icon: FileText },
-    sent: { label: "Skickad", tone: "bg-[#EFF6FF] text-[#000000]", icon: Send },
+    sent: { label: "Skickad", tone: "bg-[#EFF6FF] text-[#3b82f6]", icon: Send },
     overdue: { label: "Förfallen", tone: "bg-[#FCE8E8] text-[#7A1A1A]", icon: AlertTriangle },
     paid: { label: "Betald", tone: "bg-[#E1F5EE] text-[#085041]", icon: CheckCircle2 },
   };

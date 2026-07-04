@@ -25,8 +25,8 @@ export function WithdrawalRecommendation({ data }: WithdrawalRecommendationProps
   const mutation = useCreateOwnerWithdrawal();
 
   const statusColors = {
-    healthy: "from-neutral-100 to-neutral-100/50 dark:from-emerald-950/30 dark:to-neutral-700/20 border-[#BFE6D6] dark:border-neutral-700",
-    tight: "from-neutral-100 to-neutral-100/50 dark:from-amber-950/30 dark:to-neutral-700/20 border-[#F0DDB7] dark:border-neutral-700",
+    healthy: "from-emerald-50 to-emerald-100/50 dark:from-emerald-950/30 dark:to-emerald-900/20 border-[#BFE6D6] dark:border-emerald-800",
+    tight: "from-amber-50 to-amber-100/50 dark:from-amber-950/30 dark:to-amber-900/20 border-[#F0DDB7] dark:border-amber-800",
     warning: "from-red-50 to-red-100/50 dark:from-red-950/30 dark:to-red-900/20 border-[#F4C8C8] dark:border-red-800",
   };
 

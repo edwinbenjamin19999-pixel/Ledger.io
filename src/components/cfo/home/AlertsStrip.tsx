@@ -10,9 +10,9 @@ interface Props {
 }
 
 const SEV_CFG = {
-  critical: { border: "border-l-rose-500", chip: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-neutral-300" },
+  critical: { border: "border-l-rose-500", chip: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-rose-300" },
   high: { border: "border-l-orange-500", chip: "bg-orange-500/10 text-orange-700 dark:text-orange-300" },
-  medium: { border: "border-l-amber-500", chip: "bg-[#FAEEDA] text-[#7A5417] dark:text-neutral-300" },
+  medium: { border: "border-l-amber-500", chip: "bg-[#FAEEDA] text-[#7A5417] dark:text-amber-300" },
   low: { border: "border-l-slate-400", chip: "bg-slate-500/10 text-slate-700 dark:text-slate-300" },
 } as const;
 
@@ -24,7 +24,7 @@ export function AlertsStrip({ companyId }: Props) {
 
   if (items.length === 0) {
     return (
-      <section className="rounded-2xl border border-neutral-300/40 dark:border-neutral-700/30 bg-[#0F1F3D] dark:from-emerald-950/20 dark:to-blue-950/10 p-5 md:p-6 h-full flex items-center gap-3">
+      <section className="rounded-2xl border border-emerald-200/40 dark:border-emerald-800/30 bg-[#0F1F3D] dark:from-emerald-950/20 dark:to-blue-950/10 p-5 md:p-6 h-full flex items-center gap-3">
         <div className="h-9 w-9 rounded-lg bg-[#E1F5EE] flex items-center justify-center shrink-0">
           <Sparkles className="h-4 w-4 text-[#085041] dark:text-[#1D9E75]" />
         </div>
@@ -66,7 +66,7 @@ export function AlertsStrip({ companyId }: Props) {
                 </div>
                 <h4 className="font-semibold text-sm leading-snug line-clamp-2">{it.title}</h4>
                 <p className="text-[11px] text-muted-foreground mt-1 line-clamp-2">{it.explanation}</p>
-                <div className="mt-2 flex items-center gap-1 text-[11px] text-[#000000] dark:text-[#1E3A5F] font-medium">
+                <div className="mt-2 flex items-center gap-1 text-[11px] text-[#3b82f6] dark:text-[#1E3A5F] font-medium">
                   Granska <ArrowRight className="h-3 w-3" />
                 </div>
               </button>

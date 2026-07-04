@@ -51,7 +51,7 @@ export const KPISummaryBar = ({ account, allSummaries }: KPISummaryBarProps) => 
   ];
 
   const valueColor = (tone: ValueTone) =>
-    tone === 'positive' ? '#10B981' : tone === 'negative' ? '#525252' : '#000000';
+    tone === 'positive' ? '#10B981' : tone === 'negative' ? '#EF4444' : '#0F172A';
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2">

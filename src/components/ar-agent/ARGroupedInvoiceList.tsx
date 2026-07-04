@@ -49,9 +49,9 @@ function buildInsight(c: CustomerProfile | undefined): string | undefined {
 }
 
 const GROUP_META: Record<Group, { title: string; accent: string; chipBg: string; chipText: string; dot: string; defaultOpen: boolean; icon: typeof AlertCircle }> = {
-  action: { title: "Kräver åtgärd", accent: "border-l-rose-500", chipBg: "bg-[#FCE8E8]", chipText: "text-[#7A1A1A]", dot: "bg-neutral-700", defaultOpen: true, icon: AlertCircle },
-  monitor: { title: "Bevaka", accent: "border-l-amber-500", chipBg: "bg-[#FAEEDA]", chipText: "text-[#7A5417]", dot: "bg-neutral-700", defaultOpen: true, icon: Clock },
-  control: { title: "Under kontroll", accent: "border-l-emerald-500", chipBg: "bg-[#E1F5EE]", chipText: "text-[#085041]", dot: "bg-neutral-700", defaultOpen: false, icon: CheckCircle2 },
+  action: { title: "Kräver åtgärd", accent: "border-l-rose-500", chipBg: "bg-[#FCE8E8]", chipText: "text-[#7A1A1A]", dot: "bg-rose-500", defaultOpen: true, icon: AlertCircle },
+  monitor: { title: "Bevaka", accent: "border-l-amber-500", chipBg: "bg-[#FAEEDA]", chipText: "text-[#7A5417]", dot: "bg-amber-500", defaultOpen: true, icon: Clock },
+  control: { title: "Under kontroll", accent: "border-l-emerald-500", chipBg: "bg-[#E1F5EE]", chipText: "text-[#085041]", dot: "bg-emerald-500", defaultOpen: false, icon: CheckCircle2 },
 };
 
 const PremiumARRow = ({ row }: { row: Row }) => {

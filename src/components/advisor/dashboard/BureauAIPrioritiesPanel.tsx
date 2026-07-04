@@ -9,7 +9,7 @@ interface Priority {
   route: string;
 }
 
-const sevColor = { red: "#E24B4A", amber: "#525252", green: "#1D9E75" } as const;
+const sevColor = { red: "#E24B4A", amber: "#EF9F27", green: "#1D9E75" } as const;
 
 const fmtTime = (d: Date | null) =>
   d ? d.toLocaleTimeString("sv-SE", { hour: "2-digit", minute: "2-digit" }) : "—";
@@ -67,9 +67,9 @@ export const BureauAIPrioritiesPanel = () => {
         <div className="flex items-center gap-2">
           <div
             className="h-[18px] w-[18px] rounded-full flex items-center justify-center"
-            style={{ background: "#000000" }}
+            style={{ background: "#0040CC" }}
           >
-            <span className="h-[7px] w-[7px] rounded-full bg-[#000000]" />
+            <span className="h-[7px] w-[7px] rounded-full bg-[#3b82f6]" />
           </div>
           <span className="text-[10px] font-medium uppercase tracking-[0.07em] text-white/60">
             AI-prioriteringar idag
@@ -110,7 +110,7 @@ export const BureauAIPrioritiesPanel = () => {
 
       <button
         onClick={() => navigate("/wl/app/insights")}
-        className="mt-2.5 text-[11px] text-[#000000] hover:underline"
+        className="mt-2.5 text-[11px] text-[#3b82f6] hover:underline"
       >
         Visa fullständig AI-logg →
       </button>

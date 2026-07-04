@@ -44,8 +44,8 @@ export default function PublicGuidePage() {
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="text-center mb-10">
-              <h1 className="text-3xl sm:text-4xl font-bold text-[#000000] mb-3">
-                Så fungerar Bokfy
+              <h1 className="text-3xl sm:text-4xl font-bold text-[#0F172A] mb-3">
+                Så fungerar Cogniq
               </h1>
               <p className="text-[#475569] text-lg max-w-2xl mx-auto">
                 En komplett guide till alla moduler och funktioner — steg för steg.
@@ -82,11 +82,11 @@ export default function PublicGuidePage() {
                 >
                   <AccordionTrigger className="px-6 py-5 hover:no-underline gap-3">
                     <div className="flex items-center gap-3 flex-1 text-left">
-                      <div className="w-10 h-10 rounded-xl bg-[rgba(0,0,0,0.08)] flex items-center justify-center shrink-0">
-                        <cat.icon className="w-5 h-5 text-[#000000]" />
+                      <div className="w-10 h-10 rounded-xl bg-[rgba(0,82,255,0.08)] flex items-center justify-center shrink-0">
+                        <cat.icon className="w-5 h-5 text-[#3b82f6]" />
                       </div>
                       <div>
-                        <span className="font-semibold text-[#000000] text-base">{cat.label}</span>
+                        <span className="font-semibold text-[#0F172A] text-base">{cat.label}</span>
                         <p className="text-sm text-[#475569] mt-0.5">{cat.description}</p>
                       </div>
                     </div>
@@ -98,7 +98,7 @@ export default function PublicGuidePage() {
                           <div className="rounded-lg hover:bg-slate-50 transition-colors">
                             <CollapsibleTrigger className="flex items-start gap-3 p-3 w-full text-left group">
                               <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-[#000000] group-hover:text-[#000000] transition-colors">
+                                <p className="text-sm font-medium text-[#0F172A] group-hover:text-[#3b82f6] transition-colors">
                                   {item.title}
                                 </p>
                                 <p className="text-xs text-[#475569] mt-0.5 leading-relaxed">
@@ -111,11 +111,11 @@ export default function PublicGuidePage() {
                               <div className="px-3 pb-3 space-y-3">
                                 {item.steps && item.steps.length > 0 && (
                                   <div className="bg-slate-50 rounded-lg p-3">
-                                    <p className="text-xs font-semibold text-[#000000] mb-2">Steg-för-steg</p>
+                                    <p className="text-xs font-semibold text-[#0F172A] mb-2">Steg-för-steg</p>
                                     <ol className="space-y-1.5">
                                       {item.steps.map((step, si) => (
                                         <li key={si} className="flex gap-2 text-xs text-[#475569] leading-relaxed">
-                                          <span className="w-5 h-5 rounded-full bg-[rgba(0,0,0,0.1)] text-[#000000] flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">
+                                          <span className="w-5 h-5 rounded-full bg-[rgba(0,82,255,0.1)] text-[#3b82f6] flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">
                                             {si + 1}
                                           </span>
                                           {step}
@@ -125,7 +125,7 @@ export default function PublicGuidePage() {
                                   </div>
                                 )}
                                 {item.tips && item.tips.length > 0 && (
-                                  <div className="flex gap-2 p-2 rounded-lg bg-[#FAEEDA] border border-neutral-300/50">
+                                  <div className="flex gap-2 p-2 rounded-lg bg-[#FAEEDA] border border-amber-200/50">
                                     <Lightbulb className="h-3.5 w-3.5 text-[#7A5417] shrink-0 mt-0.5" />
                                     <div className="space-y-1">
                                       {item.tips.map((tip, ti) => (
@@ -156,8 +156,8 @@ export default function PublicGuidePage() {
             {filteredFaq.length > 0 && (
               <div className="mb-16">
                 <div className="flex items-center gap-2 mb-4">
-                  <HelpCircle className="h-5 w-5 text-[#000000]" />
-                  <h2 className="text-lg font-semibold text-[#000000]">Vanliga frågor</h2>
+                  <HelpCircle className="h-5 w-5 text-[#3b82f6]" />
+                  <h2 className="text-lg font-semibold text-[#0F172A]">Vanliga frågor</h2>
                 </div>
                 <Accordion type="single" collapsible className="space-y-2">
                   {filteredFaq.map((f, i) => (
@@ -166,7 +166,7 @@ export default function PublicGuidePage() {
                       value={`faq-${i}`}
                       className="border border-slate-200 rounded-lg bg-white"
                     >
-                      <AccordionTrigger className="px-4 py-3 hover:no-underline text-left text-sm font-medium text-[#000000]">
+                      <AccordionTrigger className="px-4 py-3 hover:no-underline text-left text-sm font-medium text-[#0F172A]">
                         {f.q}
                       </AccordionTrigger>
                       <AccordionContent className="px-4 pb-3 pt-0">
@@ -180,13 +180,13 @@ export default function PublicGuidePage() {
 
             {/* CTA */}
             <div className="text-center">
-              <p className="text-[#000000] font-semibold text-lg mb-4">
+              <p className="text-[#0F172A] font-semibold text-lg mb-4">
                 Redo att komma igång?
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <Button
                   asChild
-                  className="h-11 px-6 bg-[#000000] text-white hover:bg-[#000000] rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+                  className="h-11 px-6 bg-[#3b82f6] text-white hover:bg-[#3b82f6] rounded-lg shadow-[0_4px_20px_rgba(0,82,255,0.3)]"
                 >
                   <a href="/auth">
                     Logga in
@@ -196,9 +196,9 @@ export default function PublicGuidePage() {
                 <Button
                   asChild
                   variant="outline"
-                  className="h-11 px-6 rounded-lg border-[#C8DDF5] text-[#000000] hover:bg-[#EFF6FF] hover:shadow-[0_0_12px_rgba(0,0,0,0.12)] hover:scale-[1.02] transition-all duration-200"
+                  className="h-11 px-6 rounded-lg border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF] hover:shadow-[0_0_12px_rgba(0,82,255,0.12)] hover:scale-[1.02] transition-all duration-200"
                 >
-                  <a href="mailto:kontakt@bokfy.se">Boka demo</a>
+                  <a href="mailto:kontakt@cogniq.se">Boka demo</a>
                 </Button>
               </div>
               <p className="text-xs text-[#94a3b8] mt-3">

@@ -76,7 +76,7 @@ export function ExpandedKPIPanel({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="rounded-xl border bg-muted/20 p-4">
           <div className="flex items-center gap-2 mb-3">
-            <TrendingUp className="h-3.5 w-3.5 text-[#000000]" />
+            <TrendingUp className="h-3.5 w-3.5 text-[#3b82f6]" />
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Percentil över tid
             </p>
@@ -110,7 +110,7 @@ export function ExpandedKPIPanel({
 
         <div className="rounded-xl border bg-muted/20 p-4">
           <div className="flex items-center gap-2 mb-3">
-            <BarChart3 className="h-3.5 w-3.5 text-[#000000]" />
+            <BarChart3 className="h-3.5 w-3.5 text-[#3b82f6]" />
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Branschfördelning
             </p>
@@ -157,8 +157,8 @@ export function ExpandedKPIPanel({
       {deepDive.length > 0 && (
         <div className="rounded-xl border bg-gradient-to-br from-blue-50/60 to-transparent dark:from-blue-950/20 p-4 space-y-2">
           <div className="flex items-center gap-2 mb-1">
-            <Lightbulb className="h-3.5 w-3.5 text-[#000000]" />
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#000000] dark:text-[#1E3A5F]">
+            <Lightbulb className="h-3.5 w-3.5 text-[#3b82f6]" />
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#3b82f6] dark:text-[#1E3A5F]">
               AI-förklaring
             </p>
           </div>
@@ -177,19 +177,19 @@ export function ExpandedKPIPanel({
         <div
           className={cn(
             "flex items-center justify-between rounded-xl border p-4",
-            "bg-gradient-to-r from-neutral-100/70 to-transparent dark:from-emerald-950/20",
-            "border-neutral-300/60 dark:border-neutral-700/40",
+            "bg-gradient-to-r from-emerald-50/70 to-transparent dark:from-emerald-950/20",
+            "border-emerald-200/60 dark:border-emerald-900/40",
           )}
         >
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-full bg-[#E1F5EE] dark:bg-neutral-700/40 flex items-center justify-center">
-              <Coins className="h-4 w-4 text-[#085041] dark:text-neutral-300" />
+            <div className="h-9 w-9 rounded-full bg-[#E1F5EE] dark:bg-emerald-900/40 flex items-center justify-center">
+              <Coins className="h-4 w-4 text-[#085041] dark:text-emerald-300" />
             </div>
             <div>
-              <p className="text-xs uppercase tracking-wider text-neutral-700/70 dark:text-neutral-700/70 font-semibold">
+              <p className="text-xs uppercase tracking-wider text-emerald-700/70 dark:text-emerald-400/70 font-semibold">
                 Finansiell potential
               </p>
-              <p className="text-sm text-[#085041] dark:text-neutral-300">
+              <p className="text-sm text-[#085041] dark:text-emerald-200">
                 Att nå P75 motsvarar ca{" "}
                 <span className="font-bold tabular-nums">
                   {impact.toLocaleString("sv-SE")} kr

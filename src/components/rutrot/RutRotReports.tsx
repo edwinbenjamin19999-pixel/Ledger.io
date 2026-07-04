@@ -61,10 +61,10 @@ export function RutRotReports({ settings }: { settings: RutRotSettings }) {
     <div className="space-y-6 mt-4">
       {/* Monthly narrative */}
       {thisMonth && (
-        <Card className="border-l-4 border-l-[#000000]">
+        <Card className="border-l-4 border-l-[#3b82f6]">
           <CardContent className="p-4 space-y-2">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-[#000000]" />
+              <Sparkles className="h-4 w-4 text-[#3b82f6]" />
               <p className="text-sm font-medium">{currentMonth} — RUT/ROT-sammanfattning</p>
             </div>
             <ul className="text-xs text-muted-foreground space-y-1 ml-6">
@@ -92,8 +92,8 @@ export function RutRotReports({ settings }: { settings: RutRotSettings }) {
                   <YAxis tickFormatter={(v) => fmt(v)} tick={{ fontSize: 11 }} />
                   <Tooltip content={<ChartTooltip />} cursor={TOOLTIP_CURSOR} />
                   <Legend content={<CustomLegend />} />
-                  <Bar dataKey="customerPays" name="Kunddel" fill="#000000" radius={[6, 6, 0, 0]} />
-                  <Bar dataKey="deduction" name="Avdragsdel" fill={settings.rot_enabled ? "#000000" : "#000000"} radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="customerPays" name="Kunddel" fill="#3b82f6" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="deduction" name="Avdragsdel" fill={settings.rot_enabled ? "#10b981" : "#3b82f6"} radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>

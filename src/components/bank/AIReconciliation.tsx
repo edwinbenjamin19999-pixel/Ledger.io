@@ -211,9 +211,9 @@ export function AIReconciliation({ account,
   const confidenceBadge = (confidence: number | null) => {
     const pillBase = "inline-flex items-center gap-1 px-[8px] h-[20px] rounded-full text-[10px] font-medium border-[0.5px]";
     if (!confidence) return <span className={`${pillBase} bg-slate-50 text-slate-500 border-slate-200`}>Ej matchad</span>;
-    if (confidence >= 0.9) return <span className={`${pillBase} bg-neutral-100 text-neutral-700 border-neutral-300`}>✓ Klar · {Math.round(confidence * 100)}%</span>;
-    if (confidence >= 0.6) return <span className={`${pillBase} bg-neutral-100 text-neutral-700 border-neutral-300`}>Granska · {Math.round(confidence * 100)}%</span>;
-    return <span className={`${pillBase} bg-neutral-100 text-neutral-700 border-neutral-300`}>Behöver input · {Math.round(confidence * 100)}%</span>;
+    if (confidence >= 0.9) return <span className={`${pillBase} bg-emerald-50 text-emerald-700 border-emerald-200`}>✓ Klar · {Math.round(confidence * 100)}%</span>;
+    if (confidence >= 0.6) return <span className={`${pillBase} bg-amber-50 text-amber-700 border-amber-200`}>Granska · {Math.round(confidence * 100)}%</span>;
+    return <span className={`${pillBase} bg-rose-50 text-rose-700 border-rose-200`}>Behöver input · {Math.round(confidence * 100)}%</span>;
   };
 
   const fmt = (n: number) => n.toLocaleString("sv-SE", { maximumFractionDigits: 0 });
@@ -343,7 +343,7 @@ export function AIReconciliation({ account,
             <button
               onClick={bulkApprove}
               disabled={bulkApproving}
-              className="h-[30px] px-[12px] rounded-[8px] bg-[#000000] text-white text-[11px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[6px] disabled:opacity-50"
+              className="h-[30px] px-[12px] rounded-[8px] bg-[#0040CC] text-white text-[11px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[6px] disabled:opacity-50"
             >
               {bulkApproving ? <Loader2 className="h-[12px] w-[12px] animate-spin" /> : <CheckCircle2 className="h-[12px] w-[12px]" />}
               Godkänn alla

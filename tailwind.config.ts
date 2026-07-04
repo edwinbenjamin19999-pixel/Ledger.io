@@ -111,12 +111,14 @@ export default {
       borderWidth: {
         "0.5": "0.5px",
       },
+      boxShadow: {
+        accent: "0 4px 14px rgba(0,82,255,0.25)",
+        "accent-lg": "0 8px 24px rgba(0,82,255,0.35)",
+      },
       fontFamily: {
-        // Minimalist Monochrome: stram grotesk (Helvetica-karaktär) + mono-etiketter
-        sans: ["Inter", "Helvetica Neue", "Arial", "sans-serif"],
-        serif: ["Inter", "Helvetica Neue", "Arial", "sans-serif"],
-        display: ["Inter Tight", "Helvetica Neue", "Arial", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+        display: ["Calistoga", "Georgia", "serif"],
+        mono: ["JetBrains Mono", "Fira Code", "ui-monospace", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",

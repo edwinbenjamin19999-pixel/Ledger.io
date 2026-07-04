@@ -42,7 +42,7 @@ export function GapStrip({ kpis, active, onActiveChange, forecastValue, sparklin
             className={cn(
               "px-2.5 py-1 rounded-md text-[11px] font-medium transition-all",
               active === opt
-                ? "bg-[#000000] text-white shadow-[0_2px_8px_-2px_rgba(0,0,0,0.5)]"
+                ? "bg-[#3b82f6] text-white shadow-[0_2px_8px_-2px_rgba(0,82,255,0.5)]"
                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
             )}
           >
@@ -105,7 +105,7 @@ export function GapStrip({ kpis, active, onActiveChange, forecastValue, sparklin
                   <Line
                     type="monotone"
                     dataKey="v"
-                    stroke={kpi?.isFavorable ? "#000000" : "#525252"}
+                    stroke={kpi?.isFavorable ? "#10b981" : "#f43f5e"}
                     strokeWidth={1.75}
                     dot={false}
                   />

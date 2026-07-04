@@ -50,13 +50,13 @@ export function RollingForecast13w({ weeks, loading, runwayWeek, overlayShift = 
         </div>
         <div className="flex items-center gap-3 text-[11px] text-muted-foreground">
           <span className="inline-flex items-center gap-1">
-            <span className="h-2 w-3 rounded-sm bg-neutral-700/30" /> Best
+            <span className="h-2 w-3 rounded-sm bg-emerald-500/30" /> Best
           </span>
           <span className="inline-flex items-center gap-1">
-            <span className="h-2 w-3 rounded-sm bg-[#000000]" /> Förväntat
+            <span className="h-2 w-3 rounded-sm bg-[#3b82f6]" /> Förväntat
           </span>
           <span className="inline-flex items-center gap-1">
-            <span className="h-2 w-3 rounded-sm bg-neutral-700/30" /> Worst
+            <span className="h-2 w-3 rounded-sm bg-rose-500/30" /> Worst
           </span>
         </div>
       </div>

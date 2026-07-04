@@ -73,15 +73,15 @@ export function RutRotAIAdvisor({ settings }: { settings: RutRotSettings }) { co
   return (
     <div className="space-y-4 mt-4">
       {/* Current limits info */}
-      <Card className="border-l-4 border-l-[#000000]">
+      <Card className="border-l-4 border-l-[#3b82f6]">
         <CardContent className="p-4 space-y-3">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-[#000000]" />
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
             <p className="text-sm font-medium">Gällande regler {year}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {settings.rot_enabled && (
-              <div className="p-3 rounded-lg bg-neutral-100/50 dark:bg-emerald-950/20 border border-neutral-300/50 dark:border-neutral-700/50 space-y-1">
+              <div className="p-3 rounded-lg bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/50 dark:border-emerald-800/50 space-y-1">
                 <p className="text-sm font-semibold text-[#085041] dark:text-[#1D9E75]">ROT-avdrag</p>
                 <p className="text-xs text-muted-foreground">Avdragsprocent: {(ROT_RATE * 100).toFixed(0)}% av arbetskostnad</p>
                 <p className="text-xs text-muted-foreground">Max per person/år: {fmt(ROT_MAX_PER_PERSON)}</p>
@@ -90,8 +90,8 @@ export function RutRotAIAdvisor({ settings }: { settings: RutRotSettings }) { co
               </div>
             )}
             {settings.rut_enabled && (
-              <div className="p-3 rounded-lg bg-neutral-100/50 dark:bg-blue-950/20 border border-black/50 dark:border-black/50 space-y-1">
-                <p className="text-sm font-semibold text-black dark:text-[#1E3A5F]">RUT-avdrag</p>
+              <div className="p-3 rounded-lg bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/50 dark:border-blue-800/50 space-y-1">
+                <p className="text-sm font-semibold text-blue-700 dark:text-[#1E3A5F]">RUT-avdrag</p>
                 <p className="text-xs text-muted-foreground">Avdragsprocent: {(RUT_RATE * 100).toFixed(0)}% av arbetskostnad</p>
                 <p className="text-xs text-muted-foreground">Max per person/år: {fmt(RUT_MAX_PER_PERSON)}</p>
                 <p className="text-xs text-muted-foreground">Gäller hushållsnära tjänster i bostad</p>
@@ -106,7 +106,7 @@ export function RutRotAIAdvisor({ settings }: { settings: RutRotSettings }) { co
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-base flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-[#000000]" />
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
             Vanliga frågor — AI-rådgivare
           </CardTitle>
         </CardHeader>

@@ -216,7 +216,7 @@ export const YearEndAuditPanel = ({ companyId }: YearEndAuditPanelProps) => { co
           <>
             {/* Overall status */}
             <div className={`p-4 rounded-lg border ${ result.overall_status === "pass"
-                ? "bg-[#E1F5EE] border-neutral-700/30"
+                ? "bg-[#E1F5EE] border-green-500/30"
                 : result.overall_status === "fail"
                 ? "bg-destructive/10 border-destructive/30"
                 : "bg-[#FAEEDA] border-[#F0DDB7]"

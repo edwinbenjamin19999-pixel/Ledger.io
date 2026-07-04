@@ -10,7 +10,7 @@ export function Step3LivePreview({ draft }: Props) {
   return (
     <div className="space-y-6">
       <div className="text-center max-w-2xl mx-auto">
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-black text-[10px] font-semibold text-[#000000] uppercase tracking-wider mb-3">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-blue-100 text-[10px] font-semibold text-[#3b82f6] uppercase tracking-wider mb-3">
           <Eye className="h-3 w-3" /> Steg 3 · Preview av din plattform
         </div>
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">

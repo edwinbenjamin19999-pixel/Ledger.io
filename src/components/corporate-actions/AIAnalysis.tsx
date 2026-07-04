@@ -175,15 +175,15 @@ export const AIAnalysis = ({ actionType, formData }: AIAnalysisProps) => { const
     danger: ShieldAlert,
   };
 
-  const statusColors = { ok: "border-[#BFE6D6] dark:border-neutral-700",
-    warning: "border-[#F0DDB7] dark:border-neutral-700",
-    info: "border-black dark:border-black",
+  const statusColors = { ok: "border-[#BFE6D6] dark:border-emerald-700",
+    warning: "border-[#F0DDB7] dark:border-amber-700",
+    info: "border-blue-300 dark:border-blue-700",
     danger: "border-destructive",
   };
 
   const iconColors = { ok: "text-[#085041]",
     warning: "text-[#7A5417]",
-    info: "text-black",
+    info: "text-blue-600",
     danger: "text-destructive",
   };
 
@@ -237,7 +237,7 @@ export const AIAnalysis = ({ actionType, formData }: AIAnalysisProps) => { const
       <div className="p-3 rounded-lg bg-muted text-xs text-muted-foreground flex items-start gap-2">
         <Sparkles className="h-4 w-4 flex-shrink-0 mt-0.5" />
         <p>
-          Denna analys är genererad av Bokfy:s juridiska motor baserat på ABL, IL och aktuell praxis.
+          Denna analys är genererad av Cogniq:s juridiska motor baserat på ABL, IL och aktuell praxis.
           Den ersätter inte professionell juridisk rådgivning vid komplexa situationer.
         </p>
       </div>

@@ -14,7 +14,7 @@ const TOC = [
   { id: "bokforing", label: "Hur moms bokförs" },
   { id: "deklaration", label: "Momsdeklaration" },
   { id: "vanliga-fel", label: "Vanliga fel" },
-  { id: "automation", label: "Bokfy & moms" },
+  { id: "automation", label: "Cogniq & moms" },
   { id: "faq", label: "FAQ" },
 ];
 
@@ -25,7 +25,7 @@ const FAQS = [
   { q: "Vad är skillnaden mellan ingående och utgående moms?", a: "Utgående moms är den du tar betalt av kunder. Ingående är den du betalar till leverantörer. Du betalar mellanskillnaden till Skatteverket." },
   { q: "Får jag dra av moms på representation?", a: "Ja — men begränsat. För måltider får du dra av moms på max 300 kr per person och tillfälle." },
   { q: "Hur fungerar omvänd skattskyldighet?", a: "Vid EU-handel mellan företag fakturerar säljaren utan moms. Köparen redovisar både utgående och ingående moms i sin deklaration — netto noll." },
-  { q: "Kan Bokfy lämna in min momsdeklaration?", a: "Ja. Med koppling till Skatteverket kan Bokfy förbereda och lämna in SKV 4700 automatiskt vid varje period." },
+  { q: "Kan Cogniq lämna in min momsdeklaration?", a: "Ja. Med koppling till Skatteverket kan Cogniq förbereda och lämna in SKV 4700 automatiskt vid varje period." },
 ];
 
 export default function VatGuidePage() {
@@ -34,13 +34,13 @@ export default function VatGuidePage() {
       <Header lightBg />
       <main className="flex-1">
         {/* Hero */}
-        <section className="pt-32 pb-12 bg-gradient-to-b from-neutral-100/40 to-white">
+        <section className="pt-32 pb-12 bg-gradient-to-b from-amber-50/40 to-white">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-neutral-300/60 bg-[#FAEEDA] px-3 py-1 text-xs font-medium text-[#7A5417]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-200/60 bg-[#FAEEDA] px-3 py-1 text-xs font-medium text-[#7A5417]">
               <Calculator className="w-3 h-3" />
               Svensk momsguide
             </div>
-            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#000000]">Allt om svensk moms</h1>
+            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#0F172A]">Allt om svensk moms</h1>
             <p className="mt-5 text-lg text-[#475569] leading-relaxed">
               Momssatser, kontoplan, deklaration och vanliga fel — i en guide. Uppdaterad enligt regler 2026.
             </p>
@@ -57,17 +57,17 @@ export default function VatGuidePage() {
             <StickyTOC items={TOC} />
             <article className="max-w-3xl space-y-14">
               <section id="vad-ar-moms" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#000000] tracking-tight">Vad är moms?</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] tracking-tight">Vad är moms?</h2>
                 <p className="mt-4 text-[#334155] leading-[1.8] text-[17px]">
                   Mervärdesskatt (moms) är en konsumtionsskatt som läggs på varor och tjänster. Företag agerar som uppbördsmän — de tar in momsen från kunder och betalar in skillnaden mellan utgående och ingående moms till Skatteverket.
                 </p>
               </section>
 
               <section id="momssatser" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#000000] tracking-tight">Svenska momssatser</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] tracking-tight">Svenska momssatser</h2>
                 <p className="mt-3 text-[#334155] leading-[1.8] text-[17px]">Sverige har tre momssatser plus momsfri försäljning.</p>
                 <div className="mt-6 grid sm:grid-cols-3 gap-4">
-                  <VatRateCard rate="25 %" label="Standardsats" examples={["Konsulttjänster", "Mjukvara", "Kontorsmaterial", "De flesta varor"]} accent="text-[#000000]" />
+                  <VatRateCard rate="25 %" label="Standardsats" examples={["Konsulttjänster", "Mjukvara", "Kontorsmaterial", "De flesta varor"]} accent="text-[#3b82f6]" />
                   <VatRateCard rate="12 %" label="Reducerad" examples={["Restaurang & catering (på plats)", "Hotell & camping", "Konstverk"]} accent="text-[#7A5417]" />
                   <VatRateCard rate="6 %" label="Lägsta" examples={["Böcker & tidningar", "Persontransport", "Kultur & idrott", "Livsmedel & avhämtning (tillfälligt 2026–2027)"]} accent="text-[#085041]" />
                 </div>
@@ -77,11 +77,11 @@ export default function VatGuidePage() {
               </section>
 
               <section id="sankt-matmoms" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#000000] tracking-tight flex items-center gap-2">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] tracking-tight flex items-center gap-2">
                   <CalendarClock className="w-6 h-6 text-[#7A5417]" />
                   Sänkt matmoms 2026–2027
                 </h2>
-                <div className="mt-5 rounded-2xl border border-neutral-100 bg-gradient-to-br from-neutral-100/60 to-white p-6 md:p-7">
+                <div className="mt-5 rounded-2xl border border-amber-100 bg-gradient-to-br from-amber-50/60 to-white p-6 md:p-7">
                   <p className="text-[#334155] leading-[1.8] text-[17px]">
                     Riksdagen har beslutat att tillfälligt sänka momsen på <b>livsmedel</b> från 12 % till <b>6 %</b> under perioden <b>1 april 2026 – 31 december 2027</b> (Prop. 2025/26:100). Syftet är att dämpa hushållens matkostnader.
                   </p>
@@ -93,21 +93,21 @@ export default function VatGuidePage() {
                   </ul>
                   <p className="mt-4 text-sm text-[#475569]">
                     Källor:{" "}
-                    <a href="https://www.skatteverket.se/foretag/moms/saljavarorochtjanster/momsforlivsmedel.4.html" target="_blank" rel="noopener noreferrer" className="text-[#000000] underline underline-offset-2">Skatteverket — Moms på livsmedel</a>{" · "}
-                    <a href="https://www.verksamt.se" target="_blank" rel="noopener noreferrer" className="text-[#000000] underline underline-offset-2">Verksamt.se</a>
+                    <a href="https://www.skatteverket.se/foretag/moms/saljavarorochtjanster/momsforlivsmedel.4.html" target="_blank" rel="noopener noreferrer" className="text-[#3b82f6] underline underline-offset-2">Skatteverket — Moms på livsmedel</a>{" · "}
+                    <a href="https://www.verksamt.se" target="_blank" rel="noopener noreferrer" className="text-[#3b82f6] underline underline-offset-2">Verksamt.se</a>
                   </p>
                 </div>
                 <p className="mt-4 text-[#334155] leading-[1.8] text-[17px]">
-                  Bokfy hanterar övergången automatiskt: alla transaktioner med leveransdatum inom perioden bokförs på 6 %-konton (2630/3012), medan transaktioner före och efter perioden använder 12 %-konton (2620/3011). Du behöver inte ställa om något manuellt.
+                  Cogniq hanterar övergången automatiskt: alla transaktioner med leveransdatum inom perioden bokförs på 6 %-konton (2630/3012), medan transaktioner före och efter perioden använder 12 %-konton (2620/3011). Du behöver inte ställa om något manuellt.
                 </p>
               </section>
 
               <section id="bokforing" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#000000] tracking-tight">Hur moms bokförs</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] tracking-tight">Hur moms bokförs</h2>
                 <p className="mt-3 text-[#334155] leading-[1.8] text-[17px]">
                   Moms bokförs på BAS-konton i 2600-serien. Varje momssats har egna konton för in- och utgående moms.
                 </p>
-                <ul className="mt-5 space-y-2 text-[#334155] leading-[1.7] text-[17px] list-disc pl-6 marker:text-[#000000]">
+                <ul className="mt-5 space-y-2 text-[#334155] leading-[1.7] text-[17px] list-disc pl-6 marker:text-[#3b82f6]">
                   <li><b>2611</b> — Utgående moms 25 %</li>
                   <li><b>2621</b> — Utgående moms 12 %</li>
                   <li><b>2631</b> — Utgående moms 6 %</li>
@@ -117,18 +117,18 @@ export default function VatGuidePage() {
               </section>
 
               <section id="deklaration" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#000000] tracking-tight">Hur momsdeklaration fungerar</h2>
-                <ol className="mt-4 space-y-3 list-decimal pl-6 text-[#334155] leading-[1.7] text-[17px] marker:text-[#000000] marker:font-bold">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] tracking-tight">Hur momsdeklaration fungerar</h2>
+                <ol className="mt-4 space-y-3 list-decimal pl-6 text-[#334155] leading-[1.7] text-[17px] marker:text-[#3b82f6] marker:font-bold">
                   <li>Sammanställ utgående moms (rutorna 10–12) från försäljning under perioden</li>
                   <li>Sammanställ ingående moms (ruta 48) från inköp</li>
                   <li>Kontrollera EU-handel (rutorna 20, 21, 30, 31)</li>
                   <li>Beräkna nettoskuld (utgående minus ingående) — ruta 49</li>
-                  <li>Lämna in via Skatteverkets e-tjänst eller automatiskt via Bokfy</li>
+                  <li>Lämna in via Skatteverkets e-tjänst eller automatiskt via Cogniq</li>
                 </ol>
               </section>
 
               <section id="vanliga-fel" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#000000] tracking-tight">Vanliga fel</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] tracking-tight">Vanliga fel</h2>
                 <div className="mt-5 space-y-3">
                   {[
                     "Restaurangnota med alkohol bokförd som 12 % istället för 25 %",
@@ -138,7 +138,7 @@ export default function VatGuidePage() {
                     "Bokfört faktura i fel period (kontant vs faktureringsmetod)",
                     "Missat att rapportera EU-försäljning i ruta 35 / VIES-deklaration",
                   ].map((f) => (
-                    <div key={f} className="flex gap-3 rounded-xl bg-neutral-100/50 border border-neutral-100 p-4">
+                    <div key={f} className="flex gap-3 rounded-xl bg-amber-50/50 border border-amber-100 p-4">
                       <AlertTriangle className="w-4 h-4 text-[#7A5417] shrink-0 mt-0.5" />
                       <span className="text-[#475569] text-sm leading-relaxed">{f}</span>
                     </div>
@@ -147,14 +147,14 @@ export default function VatGuidePage() {
               </section>
 
               <section id="automation" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#000000] tracking-tight">Hur Bokfy automatiserar moms</h2>
-                <div className="mt-5 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-50 border border-black p-6 md:p-8">
-                  <Sparkles className="w-6 h-6 text-[#000000]" />
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] tracking-tight">Hur Cogniq automatiserar moms</h2>
+                <div className="mt-5 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-50 border border-blue-100 p-6 md:p-8">
+                  <Sparkles className="w-6 h-6 text-[#3b82f6]" />
                   <p className="mt-3 text-[#334155] leading-[1.8] text-[17px]">
-                    Bokfy väljer momskod automatiskt baserat på leverantör, produkttyp och historik. Vid periodslut sammanställs deklarationen automatiskt med alla rutor på SKV 4700 — du behöver bara godkänna inlämningen.
+                    Cogniq väljer momskod automatiskt baserat på leverantör, produkttyp och historik. Vid periodslut sammanställs deklarationen automatiskt med alla rutor på SKV 4700 — du behöver bara godkänna inlämningen.
                   </p>
                   <div className="mt-4">
-                    <Button asChild className="bg-[#000000] text-white hover:bg-[#000000]">
+                    <Button asChild className="bg-[#3b82f6] text-white hover:bg-[#3b82f6]">
                       <Link to="/resources/ai-bookkeeping">Läs om AI-bokföring <ArrowRight className="w-4 h-4 ml-1" /></Link>
                     </Button>
                   </div>
@@ -162,15 +162,15 @@ export default function VatGuidePage() {
               </section>
 
               <section id="faq" className="scroll-mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#000000] tracking-tight mb-5">FAQ</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] tracking-tight mb-5">FAQ</h2>
                 <FAQAccordion items={FAQS} />
               </section>
 
-              <section className="rounded-2xl bg-[#000000] p-8 md:p-10 text-white text-center">
+              <section className="rounded-2xl bg-[#0F172A] p-8 md:p-10 text-white text-center">
                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Slipp tänka på moms</h3>
-                <p className="mt-2 text-white/70 max-w-md mx-auto">Låt Bokfy sköta kodning, beräkning och inlämning automatiskt.</p>
+                <p className="mt-2 text-white/70 max-w-md mx-auto">Låt Cogniq sköta kodning, beräkning och inlämning automatiskt.</p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
-                  <Button asChild className="bg-[#000000] text-[#0a1428] hover:bg-[#000000] font-semibold">
+                  <Button asChild className="bg-[#3b82f6] text-[#0a1428] hover:bg-[#3b82f6] font-semibold">
                     <Link to="/auth">Testa gratis <ArrowRight className="w-4 h-4 ml-1" /></Link>
                   </Button>
                   <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">

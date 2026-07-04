@@ -17,11 +17,11 @@ export function BalanceStatusCard({ balanced, difference, onInvestigate }: Balan
         "group relative overflow-hidden rounded-2xl text-left w-full transition-all duration-200",
         "border bg-card shadow-sm hover:shadow-md hover:-translate-y-0.5",
         balanced
-          ? "border-border ring-1 ring-neutral-700/15 dark:ring-neutral-700/20"
-          : "border-border ring-1 ring-neutral-700/20 dark:ring-neutral-700/25",
+          ? "border-border ring-1 ring-emerald-500/15 dark:ring-emerald-400/20"
+          : "border-border ring-1 ring-rose-500/20 dark:ring-rose-400/25",
       )}
     >
-      <div className={cn("absolute inset-x-0 top-0 h-px", balanced ? "bg-neutral-700/70 dark:bg-neutral-700/80" : "bg-neutral-700/80 dark:bg-neutral-700/90")} />
+      <div className={cn("absolute inset-x-0 top-0 h-px", balanced ? "bg-emerald-500/70 dark:bg-emerald-400/80" : "bg-rose-500/80 dark:bg-rose-400/90")} />
       <div className="px-5 py-4 flex items-start gap-3">
         <div
           className={cn(
@@ -40,7 +40,7 @@ export function BalanceStatusCard({ balanced, difference, onInvestigate }: Balan
           <p
             className={cn(
               "text-lg font-bold leading-tight mt-0.5",
-              balanced ? "text-[#085041] dark:text-neutral-300" : "text-[#7A1A1A] dark:text-neutral-300",
+              balanced ? "text-[#085041] dark:text-emerald-300" : "text-[#7A1A1A] dark:text-rose-300",
             )}
           >
             {balanced ? "✔ I balans" : "❌ Ej i balans"}
@@ -51,7 +51,7 @@ export function BalanceStatusCard({ balanced, difference, onInvestigate }: Balan
               : `Differens: ${formatSEK(Math.abs(difference))}`}
           </p>
           {!balanced && onInvestigate && (
-            <p className="text-[11px] font-medium text-[#7A1A1A] dark:text-neutral-300 mt-2 group-hover:underline">
+            <p className="text-[11px] font-medium text-[#7A1A1A] dark:text-rose-300 mt-2 group-hover:underline">
               Klicka för att undersöka →
             </p>
           )}

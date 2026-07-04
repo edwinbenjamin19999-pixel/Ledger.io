@@ -72,9 +72,9 @@ export function ObservabilityBlock() {
             <div key={a.id} className="flex items-center gap-3 py-1.5 px-2 rounded hover:bg-slate-50 group">
               <span className={cn(
                 "w-1.5 h-1.5 rounded-full flex-shrink-0",
-                a.status === "completed" && "bg-neutral-700",
-                a.status === "failed" && "bg-neutral-700",
-                a.status === "running" && "bg-[#000000] animate-pulse",
+                a.status === "completed" && "bg-emerald-500",
+                a.status === "failed" && "bg-rose-500",
+                a.status === "running" && "bg-[#3b82f6] animate-pulse",
                 !["completed", "failed", "running"].includes(a.status) && "bg-slate-300",
               )} />
               <span className="font-mono text-[11px] text-slate-600 flex-1 truncate">
@@ -84,7 +84,7 @@ export function ObservabilityBlock() {
                 "text-[10px] px-1.5 py-0.5 rounded-full font-medium",
                 a.status === "completed" && "bg-[#E1F5EE] text-[#085041]",
                 a.status === "failed" && "bg-[#FCE8E8] text-[#7A1A1A]",
-                a.status === "running" && "bg-[#EFF6FF] text-[#000000]",
+                a.status === "running" && "bg-[#EFF6FF] text-[#3b82f6]",
                 !["completed", "failed", "running"].includes(a.status) && "bg-slate-100 text-slate-600",
               )}>
                 {a.status}

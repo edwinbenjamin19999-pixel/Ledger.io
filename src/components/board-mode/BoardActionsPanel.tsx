@@ -22,10 +22,10 @@ export const BoardActionsPanel = ({
   if (actions.length === 0) return null;
 
   return (
-    <div className="rounded-3xl border border-[#C8DDF5] bg-gradient-to-br from-[#000000]/[0.04] to-purple-500/[0.04] backdrop-blur-2xl p-8">
+    <div className="rounded-3xl border border-[#C8DDF5] bg-gradient-to-br from-[#3b82f6]/[0.04] to-purple-500/[0.04] backdrop-blur-2xl p-8">
       <div className="flex items-center gap-2 mb-6">
         <Zap className="h-4 w-4 text-[#1E3A5F]" />
-        <h3 className="text-xs uppercase tracking-[0.2em] text-[#000000]/90 font-medium">Vad ska vi göra?</h3>
+        <h3 className="text-xs uppercase tracking-[0.2em] text-[#3b82f6]/90 font-medium">Vad ska vi göra?</h3>
       </div>
       <div className="space-y-3">
         {actions.map(a => (
@@ -50,7 +50,7 @@ export const BoardActionsPanel = ({
             <Button
               variant="ghost"
               size="sm"
-              className="text-[#000000] hover:text-[#000000] hover:bg-[#EFF6FF]"
+              className="text-[#3b82f6] hover:text-[#3b82f6] hover:bg-[#EFF6FF]"
               onClick={() => { onActionClick?.(a.id); navigate("/ai-ekonom"); }}
             >
               {a.cta_label || "Visa detaljer"}

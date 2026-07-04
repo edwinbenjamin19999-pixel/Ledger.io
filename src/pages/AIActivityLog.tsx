@@ -47,10 +47,10 @@ interface ActionRow {
 }
 
 const KIND_META: Record<ActionKind, { label: string; icon: typeof Tag; tone: string }> = {
-  kategorisering: { label: "Kategorisering", icon: Tag, tone: "text-black bg-neutral-100 border-black" },
-  matchning: { label: "Matchning", icon: ArrowLeftRight, tone: "text-neutral-700 bg-neutral-100 border-neutral-100" },
-  momsberakning: { label: "Momsberäkning", icon: Percent, tone: "text-neutral-700 bg-neutral-100 border-neutral-100" },
-  periodisering: { label: "Periodisering", icon: Calendar, tone: "text-neutral-700 bg-neutral-100 border-neutral-100" },
+  kategorisering: { label: "Kategorisering", icon: Tag, tone: "text-blue-600 bg-blue-50 border-blue-100" },
+  matchning: { label: "Matchning", icon: ArrowLeftRight, tone: "text-emerald-600 bg-emerald-50 border-emerald-100" },
+  momsberakning: { label: "Momsberäkning", icon: Percent, tone: "text-amber-600 bg-amber-50 border-amber-100" },
+  periodisering: { label: "Periodisering", icon: Calendar, tone: "text-violet-600 bg-violet-50 border-violet-100" },
   ovrigt: { label: "Övrigt", icon: MoreHorizontal, tone: "text-slate-600 bg-slate-50 border-slate-100" },
 };
 
@@ -74,20 +74,20 @@ function statusBadge(row: ActionRow) {
     return <span className="inline-flex items-center gap-1 rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 text-[11px] font-medium text-slate-600"><RotateCcw className="h-3 w-3" />Ångrat</span>;
   }
   if (row.status === "corrected") {
-    return <span className="inline-flex items-center gap-1 rounded-md border border-neutral-300 bg-neutral-100 px-2 py-0.5 text-[11px] font-medium text-neutral-700"><Edit3 className="h-3 w-3" />Rättad av användare</span>;
+    return <span className="inline-flex items-center gap-1 rounded-md border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] font-medium text-amber-700"><Edit3 className="h-3 w-3" />Rättad av användare</span>;
   }
   if (row.status === "failed") {
-    return <span className="inline-flex items-center gap-1 rounded-md border border-neutral-300 bg-neutral-100 px-2 py-0.5 text-[11px] font-medium text-neutral-700"><AlertCircle className="h-3 w-3" />Misslyckades</span>;
+    return <span className="inline-flex items-center gap-1 rounded-md border border-rose-200 bg-rose-50 px-2 py-0.5 text-[11px] font-medium text-rose-700"><AlertCircle className="h-3 w-3" />Misslyckades</span>;
   }
-  return <span className="inline-flex items-center gap-1 rounded-md border border-neutral-300 bg-neutral-100 px-2 py-0.5 text-[11px] font-medium text-neutral-700"><CheckCircle2 className="h-3 w-3" />Utfört automatiskt</span>;
+  return <span className="inline-flex items-center gap-1 rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[11px] font-medium text-emerald-700"><CheckCircle2 className="h-3 w-3" />Utfört automatiskt</span>;
 }
 
 function confidenceBadge(c: number | null | undefined) {
   if (c === null || c === undefined) return null;
   const pct = Math.round((c <= 1 ? c * 100 : c));
-  let cls = "border-neutral-300 bg-neutral-100 text-neutral-700";
-  if (pct < 60) cls = "border-neutral-300 bg-neutral-100 text-neutral-700";
-  else if (pct < 90) cls = "border-neutral-300 bg-neutral-100 text-neutral-700";
+  let cls = "border-emerald-200 bg-emerald-50 text-emerald-700";
+  if (pct < 60) cls = "border-rose-200 bg-rose-50 text-rose-700";
+  else if (pct < 90) cls = "border-amber-200 bg-amber-50 text-amber-700";
   return <span className={`inline-flex items-center rounded-md border px-2 py-0.5 text-[11px] font-medium tabular-nums ${cls}`}>Konfidens {pct}%</span>;
 }
 
@@ -251,7 +251,7 @@ export default function AIActivityLog() {
               <div className="text-[13px] text-slate-700">
                 Automatiseringsgrad denna månad:{" "}
                 <span className="font-medium text-slate-900 tabular-nums">{cur}%</span>{" "}
-                <span className={cn("text-[12px]", delta >= 0 ? "text-neutral-700" : "text-neutral-700")}>
+                <span className={cn("text-[12px]", delta >= 0 ? "text-emerald-700" : "text-amber-700")}>
                   — {trendStr}
                 </span>
               </div>
@@ -271,11 +271,11 @@ export default function AIActivityLog() {
             </div>
             <div>
               <div className="text-[11px] uppercase tracking-wider text-slate-500 mb-1">Automatiska</div>
-              <div className="text-2xl font-medium tabular-nums text-neutral-700">{summary.automatic}<span className="text-sm font-normal text-slate-500 ml-1">({summary.autoPct}%)</span></div>
+              <div className="text-2xl font-medium tabular-nums text-emerald-700">{summary.automatic}<span className="text-sm font-normal text-slate-500 ml-1">({summary.autoPct}%)</span></div>
             </div>
             <div>
               <div className="text-[11px] uppercase tracking-wider text-slate-500 mb-1">Rättade av användare</div>
-              <div className="text-2xl font-medium tabular-nums text-neutral-700">{summary.corrected}</div>
+              <div className="text-2xl font-medium tabular-nums text-amber-700">{summary.corrected}</div>
             </div>
             <div>
               <div className="text-[11px] uppercase tracking-wider text-slate-500 mb-1">Ångrade</div>
@@ -286,7 +286,7 @@ export default function AIActivityLog() {
               <div className="h-10">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={summary.spark}>
-                    <Line type="monotone" dataKey="v" stroke="#000000" strokeWidth={2} dot={false} isAnimationActive={false} />
+                    <Line type="monotone" dataKey="v" stroke="#3b82f6" strokeWidth={2} dot={false} isAnimationActive={false} />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
@@ -446,8 +446,8 @@ function ExpandedDetail({ row }: { row: ActionRow }) {
                   <tr key={i}>
                     <td className="px-3 py-1.5 font-mono text-slate-700">{l.account}</td>
                     <td className="px-3 py-1.5 text-slate-600">{l.description || "—"}</td>
-                    <td className="px-3 py-1.5 text-right tabular-nums text-neutral-700">{l.debit ? formatSEK(l.debit) : ""}</td>
-                    <td className="px-3 py-1.5 text-right tabular-nums text-black">{l.credit ? formatSEK(l.credit) : ""}</td>
+                    <td className="px-3 py-1.5 text-right tabular-nums text-emerald-700">{l.debit ? formatSEK(l.debit) : ""}</td>
+                    <td className="px-3 py-1.5 text-right tabular-nums text-blue-700">{l.credit ? formatSEK(l.credit) : ""}</td>
                   </tr>
                 ))}
               </tbody>

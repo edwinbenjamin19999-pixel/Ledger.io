@@ -24,9 +24,9 @@ export function BillingAssistant() { const { unbilled } = useUnbilledSummary();
   return (
     <div className="space-y-4 mt-4">
       {/* Summary banner */}
-      <div className="rounded-lg border border-[#000000]/30 bg-[#000000]/5 p-4">
+      <div className="rounded-lg border border-[#3b82f6]/30 bg-[#3b82f6]/5 p-4">
         <div className="flex items-start gap-2">
-          <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+          <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
           <div className="space-y-1">
             <p className="text-sm font-medium">Dags att fakturera — AI har identifierat:</p>
             <p className="text-2xl font-bold">{formatKr(totalValue)}</p>
@@ -41,7 +41,7 @@ export function BillingAssistant() { const { unbilled } = useUnbilledSummary();
       {warningClients.length > 0 && (
         <div className="space-y-2">
           {warningClients.map((w) => (
-            <div key={w.client} className="p-3 rounded-lg border border-neutral-300/50 bg-neutral-100/50 dark:bg-amber-950/10 flex items-start gap-2">
+            <div key={w.client} className="p-3 rounded-lg border border-amber-300/50 bg-amber-50/50 dark:bg-amber-950/10 flex items-start gap-2">
               <AlertTriangle className="h-4 w-4 text-[#7A5417] mt-0.5 flex-shrink-0" />
               <p className="text-xs text-muted-foreground">
                 <span className="font-medium text-foreground">{w.client}</span>-fakturan innehåller{" "}
@@ -121,7 +121,7 @@ export function BillingAssistant() { const { unbilled } = useUnbilledSummary();
                             </thead>
                             <tbody>
                               {u.entries.slice(0, 10).map((e) => (
-                                <tr key={e.id} className={cn("border-b last:border-0", !e.description && "bg-neutral-100/30 dark:bg-amber-950/10")}>
+                                <tr key={e.id} className={cn("border-b last:border-0", !e.description && "bg-amber-50/30 dark:bg-amber-950/10")}>
                                   <td className="py-1 pr-2">{e.entry_date}</td>
                                   <td className="py-1 pr-2 truncate max-w-[180px]">
                                     {e.description || <span className="text-[#7A5417] italic">Saknar beskrivning</span>}
@@ -152,7 +152,7 @@ export function BillingAssistant() { const { unbilled } = useUnbilledSummary();
                           </Button>
                           <Button
                             size="sm"
-                            className="gap-1 bg-[#000000] hover:bg-[#000000]/90 text-foreground"
+                            className="gap-1 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground"
                             onClick={() => setReviewClient(u.client)}
                           >
                             Fakturera allt

@@ -24,9 +24,9 @@ export function GlobalErrorBar({ validation, onInvestigate, onAskAI, onReviewIss
   return (
     <div
       role="alert"
-      className="bg-[#FAEEDA] border-[0.5px] border-[#525252] rounded-[12px] p-[12px] flex items-center gap-[12px] flex-wrap"
+      className="bg-[#FAEEDA] border-[0.5px] border-[#EF9F27] rounded-[12px] p-[12px] flex items-center gap-[12px] flex-wrap"
     >
-      <AlertTriangle className="w-[20px] h-[20px] text-[#525252] flex-shrink-0" strokeWidth={1.8} />
+      <AlertTriangle className="w-[20px] h-[20px] text-[#EF9F27] flex-shrink-0" strokeWidth={1.8} />
       <div className="flex-1 min-w-[240px]">
         <p className="text-[12px] font-medium text-[#412402]">{headline}</p>
         <p className="text-[11px] text-[#633806] mt-[2px]">{detail}</p>
@@ -35,7 +35,7 @@ export function GlobalErrorBar({ validation, onInvestigate, onAskAI, onReviewIss
         <button
           type="button"
           onClick={onInvestigate}
-          className="bg-[#000000] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] h-[34px] hover:bg-[#1074A0] transition-colors"
+          className="bg-[#0040CC] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[12px] h-[34px] hover:bg-[#1074A0] transition-colors"
         >
           Undersök obalans
         </button>

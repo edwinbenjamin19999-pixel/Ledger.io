@@ -14,7 +14,7 @@ interface Props {
  * Temporary WL → real-data validation overlay (spec id="wl-real-data-bridge-v1" §10).
  *
  * Renders the SAME firm hooks the page lists below use, so that the counts here
- * always equal the rows on screen. If the count is 0 while Standard Bokfy shows
+ * always equal the rows on screen. If the count is 0 while Standard Cogniq shows
  * data, the firm-scoped query is the bug — not the UI.
  *
  * Style intentionally subtle / monospace / dashed border = clearly temporary.
@@ -61,7 +61,7 @@ export const WLDataDebugBar = ({ module }: Props) => {
   ];
 
   return (
-    <div className="mx-6 my-3 rounded border border-dashed border-neutral-700/70 bg-neutral-100/40 px-3 py-2 font-mono text-[11px] leading-tight text-[#7A5417]">
+    <div className="mx-6 my-3 rounded border border-dashed border-amber-400/70 bg-amber-50/40 px-3 py-2 font-mono text-[11px] leading-tight text-[#7A5417]">
       <div className="mb-1 flex flex-wrap items-center gap-x-4 gap-y-0.5">
         <span className="font-semibold">WL DEBUG</span>
         <span>firm_id={firmId ?? "—"}</span>
@@ -81,7 +81,7 @@ export const WLDataDebugBar = ({ module }: Props) => {
             key={r.key}
             className={
               r.key === module
-                ? "rounded bg-neutral-300/60 px-1 font-semibold"
+                ? "rounded bg-amber-200/60 px-1 font-semibold"
                 : "px-1"
             }
           >

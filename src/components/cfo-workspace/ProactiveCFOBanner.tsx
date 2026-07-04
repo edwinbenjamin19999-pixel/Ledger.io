@@ -66,7 +66,7 @@ export const ProactiveCFOBanner = ({ companyId }: { companyId: string | null }) 
   return (
     <div className={cn(
       "fixed bottom-4 right-4 z-50 max-w-sm rounded-2xl border-2 border-[#C8DDF5] p-4",
-      "bg-[#0F1F3D] text-white shadow-lg shadow-[#000000]/20",
+      "bg-[#0F1F3D] text-white shadow-lg shadow-[#3b82f6]/20",
       "animate-in slide-in-from-bottom-4 fade-in duration-500",
     )}>
       <button onClick={onDismiss} className="absolute top-2 right-2 text-white/60 hover:text-white">
@@ -84,7 +84,7 @@ export const ProactiveCFOBanner = ({ companyId }: { companyId: string | null }) 
           )}
           <button
             onClick={onDiscuss}
-            className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-[#000000] hover:text-[#000000]"
+            className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-[#3b82f6] hover:text-[#3b82f6]"
           >
             Diskutera med AI CFO <ArrowRight className="h-3 w-3" />
           </button>

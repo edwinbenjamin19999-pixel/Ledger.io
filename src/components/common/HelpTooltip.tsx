@@ -24,12 +24,12 @@ export const HelpTooltip = ({ title,
   
   const iconColors = { help: "text-muted-foreground hover:text-primary",
     tip: "text-[#7A5417] hover:text-[#C28A2B]",
-    info: "text-black hover:text-[#1E3A5F]",
+    info: "text-blue-500 hover:text-[#1E3A5F]",
   };
 
   const bgColors = { help: "bg-popover",
     tip: "bg-[#FAEEDA] dark:bg-yellow-950/50 border-[#F0DDB7] dark:border-yellow-800",
-    info: "bg-[#EFF6FF] dark:bg-blue-950/50 border-[#C8DDF5] dark:border-black",
+    info: "bg-[#EFF6FF] dark:bg-blue-950/50 border-[#C8DDF5] dark:border-blue-800",
   };
 
   return (

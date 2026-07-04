@@ -49,7 +49,7 @@ export const GettingStartedChecklist = () => {
     <div className="mx-2 mb-2 rounded-lg border border-white/10 bg-white/[0.03] p-3 text-white/80">
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-1.5">
-          <Sparkles className="h-3.5 w-3.5 text-[#000000]" />
+          <Sparkles className="h-3.5 w-3.5 text-[#3b82f6]" />
           <span className="text-[11px] uppercase tracking-wider font-medium text-white/70">
             Kom igång
           </span>
@@ -78,7 +78,7 @@ export const GettingStartedChecklist = () => {
             >
               <span
                 className={`h-3.5 w-3.5 rounded-sm border flex items-center justify-center shrink-0 ${
-                  it.done ? "bg-[#000000] border-[#000000]" : "border-white/30"
+                  it.done ? "bg-[#3b82f6] border-[#3b82f6]" : "border-white/30"
                 }`}
               >
                 {it.done && <Check className="h-2.5 w-2.5 text-white" strokeWidth={3} />}

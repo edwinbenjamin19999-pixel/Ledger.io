@@ -124,7 +124,7 @@ export function ActionExecuteSheet({
               </Card>
               <Card className="p-3">
                 <div className="text-[10px] uppercase tracking-wide text-muted-foreground">Runway</div>
-                <div className="mt-1 text-base font-semibold tabular-nums text-[#000000]">
+                <div className="mt-1 text-base font-semibold tabular-nums text-[#3b82f6]">
                   {runwayDelta >= 0 ? "+" : ""}
                   {runwayDelta} d
                 </div>
@@ -136,7 +136,7 @@ export function ActionExecuteSheet({
             </div>
 
             <Card className="p-4 bg-[#EFF6FF] border-[#C8DDF5]">
-              <div className="text-[11px] uppercase tracking-wide text-[#000000] dark:text-[#1E3A5F] mb-2">
+              <div className="text-[11px] uppercase tracking-wide text-[#3b82f6] dark:text-[#1E3A5F] mb-2">
                 Förväntad effekt
               </div>
               <ul className="space-y-1 text-xs">
@@ -180,7 +180,7 @@ export function ActionExecuteSheet({
                 Lägg till i förhandsvisning
               </Button>
               <Button
-                className="flex-1 bg-[#000000] hover:bg-[#000000] text-white"
+                className="flex-1 bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
                 onClick={handleExecute}
                 disabled={executing || !primary}
               >
@@ -194,7 +194,7 @@ export function ActionExecuteSheet({
         {/* PROGRESS */}
         {stage === "progress" && (
           <div className="mt-8 flex flex-col items-center justify-center gap-3 py-12">
-            <Loader2 className="h-8 w-8 animate-spin text-[#000000]" />
+            <Loader2 className="h-8 w-8 animate-spin text-[#3b82f6]" />
             <p className="text-sm text-muted-foreground">Utför {primary?.label?.toLowerCase()}…</p>
           </div>
         )}
@@ -204,7 +204,7 @@ export function ActionExecuteSheet({
           <div className="mt-5 space-y-4">
             <Card className="p-5 bg-[#E1F5EE] border-[#BFE6D6] text-center">
               <CheckCircle2 className="h-8 w-8 text-[#085041] mx-auto mb-2" />
-              <div className="text-sm font-semibold text-[#085041] dark:text-neutral-300">
+              <div className="text-sm font-semibold text-[#085041] dark:text-emerald-300">
                 {resultMsg ?? "Åtgärd utförd"}
               </div>
               <div className="mt-2 text-xs text-muted-foreground">

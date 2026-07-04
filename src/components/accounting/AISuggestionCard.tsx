@@ -39,7 +39,7 @@ export const AISuggestionCard = ({ suggestion, onAccept, onDismiss, isLoading }:
     return (
       <div className="flex items-center gap-2 text-[12px] text-[#475569] py-[10px] px-[12px] rounded-[12px] border-[0.5px] border-[#C8DDF5] bg-[#EFF6FF]">
         <Loader2 className="h-3.5 w-3.5 animate-spin text-[#1E3A5F]" />
-        <span>Bokfy analyserar beskrivningen...</span>
+        <span>Cogniq analyserar beskrivningen...</span>
       </div>
     );
   }

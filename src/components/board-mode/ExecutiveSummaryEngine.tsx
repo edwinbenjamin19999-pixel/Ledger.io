@@ -68,7 +68,7 @@ export const ExecutiveSummaryEngine = ({
             className="inline-block rounded-full"
             style={{ width: 6, height: 6, background: "#10B981" }}
           />
-          <span className="uppercase text-neutral-700 font-medium text-[11px] tracking-widest">
+          <span className="uppercase text-emerald-600 font-medium text-[11px] tracking-widest">
             Aktivt läge: {MODE_PROFILES[mode].shortLabel}
           </span>
         </span>
@@ -125,13 +125,13 @@ export const ExecutiveSummaryEngine = ({
             onClick={handleCopy}
             className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-500 text-sm rounded-lg px-4 py-2 hover:bg-gray-50 transition-colors"
           >
-            {copied ? <Check className="h-3 w-3 text-neutral-700" /> : <Copy className="h-3 w-3" />}
+            {copied ? <Check className="h-3 w-3 text-emerald-500" /> : <Copy className="h-3 w-3" />}
             Kopiera
           </button>
           <button
             type="button"
             onClick={() => onUseInExport(text)}
-            className="bg-[#000000] text-white text-sm font-medium rounded-lg px-4 py-2 hover:bg-[#000000] transition-colors"
+            className="bg-[#0052FF] text-white text-sm font-medium rounded-lg px-4 py-2 hover:bg-[#0040CC] transition-colors"
           >
             Använd i export
           </button>

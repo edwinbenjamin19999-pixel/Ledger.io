@@ -68,15 +68,15 @@ export const ARRecommendationPanel = ({ openInvoices, customers }: Props) => {
   ].filter(Boolean) as Array<{ label: string; icon: typeof Mail; conf: number; onClick: () => void }>;
 
   return (
-    <div className="rounded-2xl border border-border border-l-[3px] border-l-[#000000] bg-card text-card-foreground p-6 shadow-sm space-y-5">
+    <div className="rounded-2xl border border-border border-l-[3px] border-l-[#3b82f6] bg-card text-card-foreground p-6 shadow-sm space-y-5">
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-center gap-4">
         <div className="flex items-start gap-3 flex-1 min-w-0">
           <div className="h-10 w-10 rounded-xl bg-[#EFF6FF] border border-[#C8DDF5] flex items-center justify-center flex-shrink-0">
-            <Sparkles className="h-5 w-5 text-[#000000] dark:text-[#1E3A5F]" />
+            <Sparkles className="h-5 w-5 text-[#3b82f6] dark:text-[#1E3A5F]" />
           </div>
           <div className="min-w-0">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-[#000000] dark:text-[#1E3A5F] mb-0.5">AI rekommenderar</p>
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-[#3b82f6] dark:text-[#1E3A5F] mb-0.5">AI rekommenderar</p>
             <p className="font-semibold text-foreground">
               Åtgärder berör {fmt(totalActionable)} kr
             </p>
@@ -85,7 +85,7 @@ export const ARRecommendationPanel = ({ openInvoices, customers }: Props) => {
         </div>
         <div className="lg:ml-auto flex-shrink-0">
           <Button
-            className="bg-[#0F1F3D] hover:from-[#000000] hover:to-blue-500 text-white shadow-[0_2px_8px_rgba(0,0,0,0.25)] h-10"
+            className="bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-blue-500 text-white shadow-[0_2px_8px_rgba(0,82,255,0.25)] h-10"
             onClick={() => toast.success("Alla rekommenderade åtgärder köade")}
           >
             <Zap className="h-4 w-4 mr-2" />
@@ -122,14 +122,14 @@ export const ARRecommendationPanel = ({ openInvoices, customers }: Props) => {
                 "bg-muted/60 border-border text-foreground/80 hover:bg-muted hover:border-[#C8DDF5]"
               )}
             >
-              <r.icon className="h-3.5 w-3.5 text-[#000000] dark:text-[#1E3A5F]" />
+              <r.icon className="h-3.5 w-3.5 text-[#3b82f6] dark:text-[#1E3A5F]" />
               {r.label}
               <span
                 className={cn(
                   "ml-1 px-1.5 py-0.5 rounded text-[10px] font-semibold",
-                  tone === "cyan" && "bg-[#EFF6FF] text-[#000000] dark:text-[#000000]",
-                  tone === "amber" && "bg-[#FAEEDA] text-[#7A5417] dark:text-neutral-300",
-                  tone === "rose" && "bg-[#FCE8E8] text-[#7A1A1A] dark:text-neutral-300"
+                  tone === "cyan" && "bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6]",
+                  tone === "amber" && "bg-[#FAEEDA] text-[#7A5417] dark:text-amber-300",
+                  tone === "rose" && "bg-[#FCE8E8] text-[#7A1A1A] dark:text-rose-300"
                 )}
               >
                 {r.conf}%

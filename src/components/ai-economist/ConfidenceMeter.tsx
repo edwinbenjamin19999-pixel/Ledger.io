@@ -29,7 +29,7 @@ export function ConfidenceMeter({ confidence, factors, size = "md", className }:
               size === "sm" ? "h-1 w-3" : "h-1.5 w-4",
               "rounded-sm transition-colors",
               i < filled
-                ? confidence >= 0.85 ? "bg-neutral-700" : confidence >= 0.6 ? "bg-neutral-700" : "bg-neutral-700"
+                ? confidence >= 0.85 ? "bg-emerald-500" : confidence >= 0.6 ? "bg-amber-500" : "bg-rose-500"
                 : "bg-slate-200 dark:bg-white/10",
             )}
           />
@@ -46,7 +46,7 @@ export function ConfidenceMeter({ confidence, factors, size = "md", className }:
             <div className="font-semibold text-slate-900 dark:text-white mb-1">Varför {pct}%?</div>
             {factors.map((f, i) => (
               <div key={i} className="flex gap-1.5 text-slate-600 dark:text-white/70">
-                <span className="text-[#000000] dark:text-[#1E3A5F]">•</span>
+                <span className="text-[#3b82f6] dark:text-[#1E3A5F]">•</span>
                 <span>{f}</span>
               </div>
             ))}

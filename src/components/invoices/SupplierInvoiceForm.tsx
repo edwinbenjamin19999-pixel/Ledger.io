@@ -622,7 +622,7 @@ export const SupplierInvoiceForm = ({ companyId, onSuccess, onCancel }: Supplier
 
       {/* AI Review Panel */}
       {aiReview && (
-        <Card className={`border-l-4 ${ aiReview.verdict === 'ok' ? 'border-l-green-500 bg-neutral-100/50 dark:bg-green-950/20' :
+        <Card className={`border-l-4 ${ aiReview.verdict === 'ok' ? 'border-l-green-500 bg-green-50/50 dark:bg-green-950/20' :
           aiReview.verdict === 'warning' ? 'border-l-yellow-500 bg-yellow-50/50 dark:bg-yellow-950/20' :
           'border-l-red-500 bg-red-50/50 dark:bg-red-950/20'
         }`}>
@@ -696,7 +696,7 @@ export const SupplierInvoiceForm = ({ companyId, onSuccess, onCancel }: Supplier
 
             {/* Periodization note */}
             {aiReview.needsPeriodization && (
-              <div className="flex items-start gap-2 text-sm text-black dark:text-[#1E3A5F] p-2 rounded bg-[#EFF6FF] dark:bg-blue-950/30">
+              <div className="flex items-start gap-2 text-sm text-blue-700 dark:text-[#1E3A5F] p-2 rounded bg-[#EFF6FF] dark:bg-blue-950/30">
                 <Info className="h-3.5 w-3.5 mt-0.5 flex-shrink-0" />
                 <span>Behöver periodiseras{aiReview.periodizationMonths ? ` (${aiReview.periodizationMonths} månader)` : ''}</span>
               </div>

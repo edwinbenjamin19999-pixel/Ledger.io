@@ -6,8 +6,8 @@ import { useAdvisorActiveClient } from "@/contexts/AdvisorActiveClientContext";
 /**
  * Legacy /wl/app/clients/:clientId(/*) deep links — switch the advisor's
  * active client context to that company and redirect into the standard
- * Bokfy surface. The optional :tab segment maps 1:1 to a top-level
- * Bokfy route (e.g. "vat", "tax", "invoices", "dashboard").
+ * Cogniq surface. The optional :tab segment maps 1:1 to a top-level
+ * Cogniq route (e.g. "vat", "tax", "invoices", "dashboard").
  */
 const TAB_TO_PATH: Record<string, string> = {
   overview: "/dashboard",

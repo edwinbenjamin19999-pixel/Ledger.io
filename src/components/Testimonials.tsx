@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "Bokföringen sker i realtid och jag behöver knappt ingripa. Jag använder Bokfy som ett ekonomiverktyg, inte ett bokföringsprogram.",
+      "Bokföringen sker i realtid och jag behöver knappt ingripa. Jag använder Cogniq som ett ekonomiverktyg, inte ett bokföringsprogram.",
     name: "Sara J.",
     title: "Grundare, tech-startup",
     initials: "SJ",
@@ -33,7 +33,7 @@ const testimonials = [
 const Stars = () => (
   <div
     className="flex items-center"
-    style={{ gap: 2, marginBottom: 16, color: "#000000", fontSize: 14, letterSpacing: 1 }}
+    style={{ gap: 2, marginBottom: 16, color: "#3b82f6", fontSize: 14, letterSpacing: 1 }}
     aria-label="5 av 5 stjärnor"
   >
     ★★★★★
@@ -49,7 +49,7 @@ export const Testimonials = () => {
           Vad våra användare säger
         </h2>
         <p className="section-lede text-[15px] leading-relaxed max-w-2xl">
-          Riktiga röster från svenska företag, byråer och CFO:er som använder Bokfy dagligen.
+          Riktiga röster från svenska företag, byråer och CFO:er som använder Cogniq dagligen.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -59,7 +59,7 @@ export const Testimonials = () => {
               className="dark-surface-card flex flex-col"
               style={{
                 padding: "28px 24px",
-                ...(t.highlighted ? { borderLeft: "3px solid #000000" } : {}),
+                ...(t.highlighted ? { borderLeft: "3px solid #3b82f6" } : {}),
               }}
             >
               <Stars />
@@ -82,14 +82,14 @@ export const Testimonials = () => {
                       height: 44,
                       borderRadius: "50%",
                       padding: 2,
-                      background: "linear-gradient(135deg, #000000, rgba(0,0,0,0.3))",
+                      background: "linear-gradient(135deg, #3b82f6, rgba(0,82,255,0.3))",
                       flexShrink: 0,
                     }}
                   >
                     <div
                       className="w-full h-full rounded-full flex items-center justify-center"
                       style={{
-                        background: "#000000",
+                        background: "#0F172A",
                         color: "#fff",
                         fontSize: 13,
                         fontWeight: 700,
@@ -117,7 +117,7 @@ export const Testimonials = () => {
           <a
             href="/about"
             className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
-            style={{ color: "#000000", fontSize: 14 }}
+            style={{ color: "#3b82f6", fontSize: 14 }}
           >
             Se fler kundberättelser
             <span aria-hidden>→</span>

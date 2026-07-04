@@ -74,7 +74,7 @@ export const BoardKPIRow = ({
             : (positiveDir === "up" ? kpi.direction === "up" : kpi.direction === "down");
           const valueColor = kpi.value !== null && kpi.value < 0
             ? "text-red-500"
-            : isPositive ? "text-neutral-700" : "text-gray-900";
+            : isPositive ? "text-emerald-600" : "text-gray-900";
 
           return (
             <button
@@ -99,7 +99,7 @@ export const BoardKPIRow = ({
                   "mt-auto pt-3 inline-flex items-center gap-1 font-medium tabular-nums text-sm",
                   kpi.delta_pct === null || kpi.direction === "flat"
                     ? "text-gray-400"
-                    : isPositive ? "text-neutral-700" : "text-red-400"
+                    : isPositive ? "text-emerald-500" : "text-red-400"
                 )}
               >
                 {kpi.delta_pct === null ? (

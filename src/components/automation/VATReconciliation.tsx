@@ -178,7 +178,7 @@ export function VATReconciliation({ companyId, periodStart, periodEnd, rutaValue
           {/* Summary */}
           <div className={`rounded-lg border-2 p-4 ${
             isBalanced
-              ? "border-[#BFE6D6] bg-neutral-100/50 dark:bg-emerald-950/20"
+              ? "border-[#BFE6D6] bg-emerald-50/50 dark:bg-emerald-950/20"
               : "border-destructive/30 bg-red-50/50 dark:bg-red-950/20"
           }`}>
             <div className="flex items-center gap-2 mb-2">

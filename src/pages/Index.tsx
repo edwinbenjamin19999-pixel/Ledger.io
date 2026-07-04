@@ -26,7 +26,7 @@ const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.
  * NavyBlock omsluter endast sektioner som ännu inte konverterats.
  */
 const NavyBlock = ({ children }: { children: ReactNode }) => (
-  <div className="bg-[#000000]">{children}</div>
+  <div className="bg-[#0F172A]">{children}</div>
 );
 
 const Index = () => {

@@ -78,10 +78,10 @@ export function KPIStoryCard({
         "shadow-sm transition-all duration-200",
         // Hover (only when not disabled)
         reliable &&
-          "hover:shadow-lg hover:border-[#C8DDF5] dark:hover:border-[#000000] hover:-translate-y-0.5",
+          "hover:shadow-lg hover:border-[#C8DDF5] dark:hover:border-[#3b82f6] hover:-translate-y-0.5",
         // States
         isAlert && "border-l-4 border-l-rose-500",
-        !isAlert && simulationActive && "shadow-[0_0_24px_rgba(0,0,0,0.18)] border-[#000000] dark:border-[#000000]",
+        !isAlert && simulationActive && "shadow-[0_0_24px_rgba(0,82,255,0.18)] border-[#3b82f6] dark:border-[#3b82f6]",
         !isAlert && !simulationActive && expanded && verdict.accentClass,
         !reliable && "border-dashed opacity-80",
         className,
@@ -89,8 +89,8 @@ export function KPIStoryCard({
     >
       {/* Live pill in simulation */}
       {simulationActive && reliable && (
-        <span className="absolute top-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-[#EFF6FF] border border-[#C8DDF5] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#000000] dark:text-[#000000] animate-pulse">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#000000]" /> Live
+        <span className="absolute top-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-[#EFF6FF] border border-[#C8DDF5] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#3b82f6] dark:text-[#3b82f6] animate-pulse">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#3b82f6]" /> Live
         </span>
       )}
 
@@ -121,7 +121,7 @@ export function KPIStoryCard({
                 Otillräcklig data
               </Badge>
               {kpi.dataQualityNote && (
-                <div className="flex items-start gap-2 rounded-xl border border-neutral-300/60 bg-neutral-100/60 dark:bg-amber-950/20 p-3 text-xs text-[#7A5417] dark:text-neutral-300">
+                <div className="flex items-start gap-2 rounded-xl border border-amber-200/60 bg-amber-50/60 dark:bg-amber-950/20 p-3 text-xs text-[#7A5417] dark:text-amber-200">
                   <AlertTriangle className="h-3.5 w-3.5 mt-0.5 shrink-0" />
                   <p>{kpi.dataQualityNote}</p>
                 </div>

@@ -26,9 +26,9 @@ export function CashRunwayPanel({ companyId }: Props) {
     : 0;
   const tone = runwayDays < 60 ? "critical" : runwayDays < 120 ? "warn" : "ok";
   const toneCfg = {
-    critical: { ring: "ring-neutral-700/30", chip: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-neutral-300", area: "#525252", label: "Kritisk – agera nu" },
-    warn: { ring: "ring-neutral-700/30", chip: "bg-[#FAEEDA] text-[#7A5417] dark:text-neutral-300", area: "#525252", label: "Bevakas" },
-    ok: { ring: "ring-neutral-700/30", chip: "bg-[#E1F5EE] text-[#085041] dark:text-neutral-300", area: "#000000", label: "Stabil" },
+    critical: { ring: "ring-rose-500/30", chip: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-rose-300", area: "#f43f5e", label: "Kritisk – agera nu" },
+    warn: { ring: "ring-amber-500/30", chip: "bg-[#FAEEDA] text-[#7A5417] dark:text-amber-300", area: "#f59e0b", label: "Bevakas" },
+    ok: { ring: "ring-emerald-500/30", chip: "bg-[#E1F5EE] text-[#085041] dark:text-emerald-300", area: "#10b981", label: "Stabil" },
   }[tone];
 
   const cashSeries = data.sparkline.length >= 2
@@ -40,7 +40,7 @@ export function CashRunwayPanel({ companyId }: Props) {
       <div className="p-5 md:p-6 border-b border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-2.5">
           <div className="h-8 w-8 rounded-lg bg-[#EFF6FF] flex items-center justify-center">
-            <Wallet className="h-4 w-4 text-[#000000]" />
+            <Wallet className="h-4 w-4 text-[#3b82f6]" />
           </div>
           <div>
             <h3 className="font-semibold tracking-tight">Kassa & runway</h3>

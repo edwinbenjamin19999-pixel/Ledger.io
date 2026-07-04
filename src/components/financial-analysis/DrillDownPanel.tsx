@@ -103,8 +103,8 @@ export function DrillDownPanel({ row, open, onClose, companyId, fromDate, toDate
 
           <div className={cn(
             "rounded-xl border p-4",
-            row.isFavorable ? "border-neutral-300/60 bg-neutral-100/40 dark:border-neutral-700/40 dark:bg-emerald-950/20"
-              : "border-neutral-300/60 bg-neutral-100/40 dark:border-neutral-700/40 dark:bg-rose-950/20"
+            row.isFavorable ? "border-emerald-200/60 bg-emerald-50/40 dark:border-emerald-800/40 dark:bg-emerald-950/20"
+              : "border-rose-200/60 bg-rose-50/40 dark:border-rose-800/40 dark:bg-rose-950/20"
           )}>
             <div className="flex items-center gap-2 mb-2">
               {row.isFavorable ? <TrendingUp className="h-4 w-4 text-[#085041]" /> : <TrendingDown className="h-4 w-4 text-[#7A1A1A]" />}
@@ -175,7 +175,7 @@ export function DrillDownPanel({ row, open, onClose, companyId, fromDate, toDate
             <Button
               variant="default"
               size="sm"
-              className="flex-1 bg-[#000000] hover:bg-[#000000]"
+              className="flex-1 bg-[#3b82f6] hover:bg-[#3b82f6]"
               onClick={() => onSimulate?.(row)}
             >
               <Sparkles className="h-3.5 w-3.5 mr-1.5" />

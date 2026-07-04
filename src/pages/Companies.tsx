@@ -277,7 +277,7 @@ const Companies = () => { const { user, loading } = useAuth();
                 {lookupResult && !lookupResult.requiresManualEntry && (
                   <Alert className="border-[#BFE6D6] bg-[#E1F5EE] dark:bg-green-950/20">
                     <CheckCircle2 className="w-4 h-4 text-[#085041]" />
-                    <AlertDescription className="text-[#085041] dark:text-neutral-300">
+                    <AlertDescription className="text-[#085041] dark:text-green-200">
                       <strong>{lookupResult.name}</strong> hittades! Uppgifterna har fyllts i automatiskt.
                     </AlertDescription>
                   </Alert>
@@ -371,10 +371,10 @@ const Companies = () => { const { user, loading } = useAuth();
                       </SelectContent>
                     </Select>
                     {(formData.industry === "restaurant" || formData.industry === "hotel") && (
-                      <div className="mt-2 rounded-md border border-black/30 bg-neutral-100 dark:bg-blue-950/20 p-2.5 text-[11px] text-blue-900 dark:text-blue-200 flex items-start gap-2">
+                      <div className="mt-2 rounded-md border border-blue-500/30 bg-blue-50 dark:bg-blue-950/20 p-2.5 text-[11px] text-blue-900 dark:text-blue-200 flex items-start gap-2">
                         <span className="text-base leading-none">{formData.industry === "restaurant" ? "🍽" : "🏨"}</span>
                         <span>
-                          <strong>Branschanpassat läge aktiveras</strong> — Bokfy anpassar
+                          <strong>Branschanpassat läge aktiveras</strong> — Cogniq anpassar
                           kontoplan, dashboard och AI-insikter till din verksamhet.
                         </span>
                       </div>

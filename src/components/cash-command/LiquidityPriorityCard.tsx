@@ -11,16 +11,16 @@ const fmt = (n: number) =>
 
 const riskStyle: Record<ActionableInsight["riskLevel"], { chip: string; bar: string }> = {
   high: {
-    chip: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-[#FCE8E8] dark:text-neutral-300 dark:border-[#F4C8C8]",
-    bar: "from-neutral-700 to-neutral-700",
+    chip: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-[#FCE8E8] dark:text-rose-200 dark:border-[#F4C8C8]",
+    bar: "from-rose-500 to-rose-600",
   },
   medium: {
-    chip: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-[#FAEEDA] dark:text-neutral-300 dark:border-[#F0DDB7]",
-    bar: "from-neutral-700 to-neutral-700",
+    chip: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-[#FAEEDA] dark:text-amber-200 dark:border-[#F0DDB7]",
+    bar: "from-amber-500 to-amber-600",
   },
   low: {
-    chip: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-[#E1F5EE] dark:text-neutral-300 dark:border-[#BFE6D6]",
-    bar: "from-neutral-700 to-neutral-700",
+    chip: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-[#E1F5EE] dark:text-emerald-200 dark:border-[#BFE6D6]",
+    bar: "from-emerald-500 to-emerald-600",
   },
 };
 
@@ -89,19 +89,19 @@ export function LiquidityPriorityCard({
 
           {/* AI rationale folded in */}
           <p className="text-xs italic text-slate-500 dark:text-white/60 mt-1.5 leading-relaxed flex items-start gap-1.5">
-            <Sparkles className="h-3 w-3 mt-0.5 shrink-0 text-[#000000]" />
+            <Sparkles className="h-3 w-3 mt-0.5 shrink-0 text-[#3b82f6]" />
             <span>{insight.description}</span>
           </p>
 
           {/* Impact line */}
           {insight.impactSek > 0 && (
             <div className="mt-3 flex items-baseline gap-3 flex-wrap">
-              <span className="text-2xl font-bold tabular-nums text-[#085041] dark:text-neutral-300">
+              <span className="text-2xl font-bold tabular-nums text-[#085041] dark:text-emerald-300">
                 +{fmt(insight.impactSek)} kr
               </span>
               <span className="text-[11px] text-muted-foreground">inom 14 dagar</span>
               {runwayDelta !== 0 && (
-                <span className="text-xs text-[#000000] dark:text-[#000000] font-medium">
+                <span className="text-xs text-[#3b82f6] dark:text-[#3b82f6] font-medium">
                   · Runway {runwayDelta >= 0 ? "+" : ""}
                   {runwayDelta} dgr
                 </span>
@@ -116,7 +116,7 @@ export function LiquidityPriorityCard({
         <div className="mt-4 border-t border-slate-100 dark:border-white/5 pt-3">
           <button
             onClick={() => setExpanded((s) => !s)}
-            className="w-full flex items-center justify-between text-xs font-medium text-slate-700 dark:text-white/80 hover:text-[#000000] dark:hover:text-[#000000] transition-colors"
+            className="w-full flex items-center justify-between text-xs font-medium text-slate-700 dark:text-white/80 hover:text-[#3b82f6] dark:hover:text-[#3b82f6] transition-colors"
           >
             <span className="flex items-center gap-1.5">
               {expanded ? <ChevronDown className="h-3.5 w-3.5" /> : <ChevronRight className="h-3.5 w-3.5" />}
@@ -203,7 +203,7 @@ export function LiquidityPriorityCard({
         </button>
         <Link
           to={route.href}
-          className="px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 text-slate-700 dark:text-white/80 hover:text-[#000000] dark:hover:text-[#000000] hover:bg-slate-100 dark:hover:bg-white/5 transition-all"
+          className="px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 text-slate-700 dark:text-white/80 hover:text-[#3b82f6] dark:hover:text-[#3b82f6] hover:bg-slate-100 dark:hover:bg-white/5 transition-all"
         >
           <ExternalLink className="h-3.5 w-3.5" />
           {route.label}

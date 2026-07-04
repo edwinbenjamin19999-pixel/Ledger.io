@@ -29,9 +29,9 @@ interface Props {
 }
 
 const urgencyDot = {
-  high: "bg-neutral-700",
-  medium: "bg-neutral-700",
-  low: "bg-neutral-700",
+  high: "bg-rose-500",
+  medium: "bg-amber-500",
+  low: "bg-emerald-500",
 };
 const urgencyLabel = { high: "Hög", medium: "Medel", low: "Låg" };
 

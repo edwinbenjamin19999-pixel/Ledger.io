@@ -68,8 +68,8 @@ export const ARPriorityList = ({ openInvoices, customers }: Props) => {
   });
 
   const riskConfig = {
-    high: { border: "border-l-rose-500", badge: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-neutral-700 dark:text-neutral-300", label: "🔴 Hög risk" },
-    medium: { border: "border-l-amber-500", badge: "bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700 dark:text-neutral-300", label: "🟡 Medium" },
+    high: { border: "border-l-rose-500", badge: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-rose-900 dark:text-rose-200", label: "🔴 Hög risk" },
+    medium: { border: "border-l-amber-500", badge: "bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900 dark:text-amber-200", label: "🟡 Medium" },
     low: { border: "border-l-blue-500", badge: "bg-[#EFF6FF] text-blue-800 dark:bg-blue-900 dark:text-blue-200", label: "🔵 Ny" },
   };
 
@@ -97,10 +97,10 @@ export const ARPriorityList = ({ openInvoices, customers }: Props) => {
             // Per-row trend signal
             const trend: { label: string; cls: string } =
               item.risk === "high"
-                ? { label: "Hög risk", cls: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-neutral-300 border-[#F4C8C8]" }
+                ? { label: "Hög risk", cls: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-rose-300 border-[#F4C8C8]" }
                 : item.recoveryProb >= 70
-                ? { label: "Betalas troligen", cls: "bg-[#E1F5EE] text-[#085041] dark:text-neutral-300 border-[#BFE6D6]" }
-                : { label: "Sen trend", cls: "bg-[#FAEEDA] text-[#7A5417] dark:text-neutral-300 border-[#F0DDB7]" };
+                ? { label: "Betalas troligen", cls: "bg-[#E1F5EE] text-[#085041] dark:text-emerald-300 border-[#BFE6D6]" }
+                : { label: "Sen trend", cls: "bg-[#FAEEDA] text-[#7A5417] dark:text-amber-300 border-[#F0DDB7]" };
 
             return (
               <div
@@ -148,8 +148,8 @@ export const ARPriorityList = ({ openInvoices, customers }: Props) => {
                   {/* FULL-WIDTH — AI recommendation + actions */}
                   <div className="col-span-2 flex items-center justify-between gap-3 pt-2 border-t border-slate-100 dark:border-slate-800">
                     <div className="flex items-center gap-2 min-w-0 flex-1">
-                      <Sparkles className="h-3.5 w-3.5 text-[#000000] flex-shrink-0" />
-                      <span className="text-xs font-medium text-[#000000] dark:text-[#000000] truncate">{item.recommendation}</span>
+                      <Sparkles className="h-3.5 w-3.5 text-[#3b82f6] flex-shrink-0" />
+                      <span className="text-xs font-medium text-[#3b82f6] dark:text-[#3b82f6] truncate">{item.recommendation}</span>
                     </div>
                     <div className="flex gap-1.5 flex-shrink-0">
                       <Button
@@ -207,7 +207,7 @@ export const ARPriorityList = ({ openInvoices, customers }: Props) => {
               {/* Timeline */}
               <div className="border-l-2 border-muted ml-3 pl-4 space-y-4 py-2">
                 <div className="relative">
-                  <div className="absolute -left-[1.35rem] top-1 h-3 w-3 rounded-full bg-neutral-700" />
+                  <div className="absolute -left-[1.35rem] top-1 h-3 w-3 rounded-full bg-emerald-500" />
                   <p className="text-sm font-medium">Faktura skapad</p>
                   <p className="text-xs text-muted-foreground">{new Date(selectedInvoice.invoice.created_at).toLocaleDateString("sv-SE")}</p>
                 </div>
@@ -218,13 +218,13 @@ export const ARPriorityList = ({ openInvoices, customers }: Props) => {
                 </div>
                 {(selectedInvoice.invoice.reminder_count || 0) > 0 && (
                   <div className="relative">
-                    <div className="absolute -left-[1.35rem] top-1 h-3 w-3 rounded-full bg-neutral-700" />
+                    <div className="absolute -left-[1.35rem] top-1 h-3 w-3 rounded-full bg-amber-500" />
                     <p className="text-sm font-medium">Påminnelser skickade</p>
                     <p className="text-xs text-muted-foreground">{selectedInvoice.invoice.reminder_count} påminnelser</p>
                   </div>
                 )}
                 <div className="relative">
-                  <div className={`absolute -left-[1.35rem] top-1 h-3 w-3 rounded-full ${selectedInvoice.risk === "high" ? "bg-neutral-700" : selectedInvoice.risk === "medium" ? "bg-neutral-700" : "bg-blue-500"}`} />
+                  <div className={`absolute -left-[1.35rem] top-1 h-3 w-3 rounded-full ${selectedInvoice.risk === "high" ? "bg-rose-500" : selectedInvoice.risk === "medium" ? "bg-amber-500" : "bg-blue-500"}`} />
                   <p className="text-sm font-medium">Aktuell status</p>
                   <p className="text-xs text-muted-foreground">{selectedInvoice.daysOverdue} dagar förfallen — {selectedInvoice.recommendation}</p>
                 </div>

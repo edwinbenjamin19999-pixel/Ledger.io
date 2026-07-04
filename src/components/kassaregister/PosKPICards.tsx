@@ -91,7 +91,7 @@ const SalesByHourChart = ({ todaySales }: { todaySales: PosDailySales | undefine
             {data.map((entry, i) => (
               <Cell
                 key={i}
-                fill={entry.isCurrent ? "#737373" : entry.isPeak ? "#000000" : entry.isBelow ? "#93c5fd" : "#000000"}
+                fill={entry.isCurrent ? "#8b5cf6" : entry.isPeak ? "#10b981" : entry.isBelow ? "#93c5fd" : "#3b82f6"}
                 opacity={entry.isCurrent ? 1 : 0.85}
               />
             ))}
@@ -99,9 +99,9 @@ const SalesByHourChart = ({ todaySales }: { todaySales: PosDailySales | undefine
         </BarChart>
       </ResponsiveContainer>
       <div className="flex items-center gap-4 mt-2 text-[10px] text-muted-foreground">
-        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-neutral-700" />Topptimmar</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-500" />Topptimmar</span>
         <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-blue-500" />Normal</span>
-        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-neutral-700" />Nu</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-violet-500" />Nu</span>
       </div>
     </div>
   );
@@ -127,7 +127,7 @@ export function PosKPICards({ todaySales, yesterdaySales, monthTotal, monthVat, 
       {/* KPI Row */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <KPICard
-          gradient="from-neutral-700 to-blue-600"
+          gradient="from-emerald-500 to-blue-600"
           icon={ShoppingBag}
           label="Dagsomsättning"
           value={formatKr(todayTotal)}
@@ -135,8 +135,8 @@ export function PosKPICards({ todaySales, yesterdaySales, monthTotal, monthVat, 
           badge={
             <div className="flex items-center gap-1.5">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neutral-300 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-neutral-300" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-200" />
               </span>
               <span className="text-[10px] text-white/70">Live</span>
             </div>
@@ -144,7 +144,7 @@ export function PosKPICards({ todaySales, yesterdaySales, monthTotal, monthVat, 
         />
 
         <KPICard
-          gradient="from-blue-500 to-neutral-700"
+          gradient="from-blue-500 to-indigo-600"
           icon={CreditCard}
           label="Kontant vs Kort"
           value={`Kort ${cardPct}% | Kontant ${cashPct}%`}
@@ -153,7 +153,7 @@ export function PosKPICards({ todaySales, yesterdaySales, monthTotal, monthVat, 
         />
 
         <KPICard
-          gradient={diff === 0 ? "from-neutral-700 to-neutral-700" : "from-neutral-700 to-red-600"}
+          gradient={diff === 0 ? "from-emerald-500 to-green-600" : "from-rose-500 to-red-600"}
           icon={Scale}
           label="Kassadifferens"
           value={diff === 0 ? "0,00 kr" : formatKr(diff)}
@@ -161,15 +161,15 @@ export function PosKPICards({ todaySales, yesterdaySales, monthTotal, monthVat, 
         />
 
         <KPICard
-          gradient="from-neutral-700 to-purple-700"
+          gradient="from-violet-600 to-purple-700"
           icon={FileCheck}
           label="Z-rapport status"
           value={zReportDone ? "Klar" : "Ej stängd"}
           sub="Senaste Z-rapport"
           badge={zReportDone ? (
-            <span className="text-[10px] bg-neutral-700/30 text-neutral-100 px-2 py-0.5 rounded-full">OK</span>
+            <span className="text-[10px] bg-emerald-400/30 text-emerald-100 px-2 py-0.5 rounded-full">OK</span>
           ) : (
-            <span className="text-[10px] bg-neutral-700/30 text-neutral-100 px-2 py-0.5 rounded-full animate-pulse">Öppen</span>
+            <span className="text-[10px] bg-amber-400/30 text-amber-100 px-2 py-0.5 rounded-full animate-pulse">Öppen</span>
           )}
         />
       </div>

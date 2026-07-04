@@ -20,9 +20,9 @@ export const ProformaDetailRow = ({ data, isRisk, highlighted }: Props) => {
       className={cn(
         "flex items-center justify-between p-4 rounded-xl border transition-all",
         isRisk
-          ? "border-neutral-300/60 bg-neutral-100/30"
+          ? "border-rose-200/60 bg-rose-50/30"
           : "border-slate-200/60 bg-white hover:bg-slate-50/60",
-        highlighted && "ring-2 ring-[#000000] ring-offset-2",
+        highlighted && "ring-2 ring-[#3b82f6] ring-offset-2",
       )}
     >
       <div className="flex items-start gap-3 flex-1 min-w-0">
@@ -57,7 +57,7 @@ export const ProformaDetailRow = ({ data, isRisk, highlighted }: Props) => {
           <div
             className={cn(
               "font-bold tabular-nums",
-              data.predicted_result >= 0 ? "text-[#000000]" : "text-[#7A1A1A]",
+              data.predicted_result >= 0 ? "text-[#3b82f6]" : "text-[#7A1A1A]",
             )}
           >
             {data.predicted_result >= 0 ? "+" : ""}

@@ -20,8 +20,8 @@ interface SubmissionItem { formCode: string;
   reference?: string;
 }
 
-const STATUS_CONFIG = { submitted: { label: "Inskickad", icon: CheckCircle, color: "text-[#085041]", bg: "bg-[#E1F5EE] border-neutral-700/30" },
-  ready: { label: "Redo att signera", icon: Shield, color: "text-black", bg: "bg-[#EFF6FF] border-[#C8DDF5]" },
+const STATUS_CONFIG = { submitted: { label: "Inskickad", icon: CheckCircle, color: "text-[#085041]", bg: "bg-[#E1F5EE] border-green-500/30" },
+  ready: { label: "Redo att signera", icon: Shield, color: "text-blue-500", bg: "bg-[#EFF6FF] border-[#C8DDF5]" },
   pending: { label: "Under förberedelse", icon: Clock, color: "text-[#7A5417]", bg: "bg-[#FAEEDA] border-[#F0DDB7]" },
   not_started: { label: "Ej påbörjad", icon: AlertTriangle, color: "text-muted-foreground", bg: "" },
 };
@@ -72,7 +72,7 @@ export const SubmissionPipeline = ({ companyId }: SubmissionPipelineProps) => { 
       {/* Summary KPIs */}
       <div className="grid grid-cols-3 gap-4">
         <Card><CardContent className="pt-4 pb-4 text-center"><p className="text-2xl font-bold text-[#085041]">{submittedCount}</p><p className="text-xs text-muted-foreground">Inskickade</p></CardContent></Card>
-        <Card><CardContent className="pt-4 pb-4 text-center"><p className="text-2xl font-bold text-black">{readyCount}</p><p className="text-xs text-muted-foreground">Redo att signera</p></CardContent></Card>
+        <Card><CardContent className="pt-4 pb-4 text-center"><p className="text-2xl font-bold text-blue-500">{readyCount}</p><p className="text-xs text-muted-foreground">Redo att signera</p></CardContent></Card>
         <Card><CardContent className="pt-4 pb-4 text-center"><p className="text-2xl font-bold text-[#7A5417]">{pendingCount}</p><p className="text-xs text-muted-foreground">Under förberedelse</p></CardContent></Card>
       </div>
 

@@ -246,7 +246,7 @@ export const ProactiveVATPanel = ({ companyId, onTaskCreated, environment }: Pro
           onClick={handleSign}
           disabled={signing || hasBlockingIssues}
           className="w-full"
-          style={{ backgroundColor: hasBlockingIssues ? undefined : '#000000', color: hasBlockingIssues ? undefined : '#0F2137' }}
+          style={{ backgroundColor: hasBlockingIssues ? undefined : '#3b82f6', color: hasBlockingIssues ? undefined : '#0F2137' }}
           variant={hasBlockingIssues ? 'secondary' : 'default'}
         >
           {signing ? (

@@ -23,8 +23,8 @@ const statusIcon: Record<string, React.ReactNode> = { not_applied: <Clock classN
 };
 
 const statusBadge: Record<string, string> = { not_applied: "bg-muted text-muted-foreground",
-  applied: "bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/30 dark:text-[#C28A2B]",
-  approved: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]",
+  applied: "bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/30 dark:text-[#C28A2B]",
+  approved: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]",
   rejected: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]",
 };
 
@@ -138,8 +138,8 @@ export function RutRotInvoiceList({ settings }: { settings: RutRotSettings }) { 
                       <span className={cn(
                         "text-[10px] font-bold px-1.5 py-0.5 rounded",
                         inv.deduction_type === "rot"
-                          ? "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]"
-                          : "bg-[#EFF6FF] text-black dark:bg-blue-900/30 dark:text-[#1E3A5F]"
+                          ? "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]"
+                          : "bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30 dark:text-[#1E3A5F]"
                       )}>
                         {inv.deduction_type.toUpperCase()}
                       </span>
@@ -188,7 +188,7 @@ export function RutRotInvoiceList({ settings }: { settings: RutRotSettings }) { 
         <DialogContent className="max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Shield className="h-4 w-4 text-[#000000]" />
+              <Shield className="h-4 w-4 text-[#3b82f6]" />
               Kontroll före ansökan
             </DialogTitle>
           </DialogHeader>
@@ -212,7 +212,7 @@ export function RutRotInvoiceList({ settings }: { settings: RutRotSettings }) { 
 
             {validationResult?.ok ? (
               <Button
-                className="w-full bg-[#000000] hover:bg-[#000000]/90 text-foreground gap-1.5"
+                className="w-full bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground gap-1.5"
                 onClick={() => { if (reviewInvoice) { updateStatus.mutate({ id: reviewInvoice.id,
                       skv_status: "applied",
                       skv_applied_at: new Date().toISOString(),

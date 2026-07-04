@@ -19,13 +19,13 @@ const ROLES: Record<string, { label: string; icon: typeof Shield; tone: string; 
   admin: {
     label: "Administratör",
     icon: Crown,
-    tone: "text-[#7A5417] bg-[#FAEEDA] ring-neutral-300",
+    tone: "text-[#7A5417] bg-[#FAEEDA] ring-amber-200",
     perms: ["Hantera team", "Branding", "Fakturering", "Alla klienter"],
   },
   consultant: {
     label: "Konsult",
     icon: Briefcase,
-    tone: "text-[#000000] bg-[#EFF6FF] ring-black",
+    tone: "text-[#3b82f6] bg-[#EFF6FF] ring-blue-200",
     perms: ["Bokföring", "Granska klienter", "Skicka godkännanden"],
   },
   viewer: {

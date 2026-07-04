@@ -11,7 +11,7 @@ const iconMap = { risk: <AlertTriangle className="w-4 h-4 text-[#7A1A1A] shrink-
   due: <Calendar className="w-4 h-4 text-[#7A5417] shrink-0" />,
   overdue: <CircleAlert className="w-4 h-4 text-[#7A1A1A] shrink-0" />,
   concentration: <BarChart3 className="w-4 h-4 text-[#7A5417] shrink-0" />,
-  info: <Info className="w-4 h-4 text-black shrink-0" />,
+  info: <Info className="w-4 h-4 text-blue-500 shrink-0" />,
 };
 
 const borderMap = { risk: "border-l-red-500",

@@ -35,7 +35,7 @@ export function EditorToolbar({
       <div className="flex items-center gap-1.5 text-[11px] text-[#64748B] shrink-0">
         {saveState === "saving" && (<><Loader2 className="w-3 h-3 animate-spin" /> Sparar…</>)}
         {saveState === "saved" && (<><Check className="w-3 h-3 text-[#1D9E75]" /> Sparad{savedAt ? ` ${savedAt}` : ""}</>)}
-        {saveState === "error" && (<span className="text-[#525252]">Kunde inte spara</span>)}
+        {saveState === "error" && (<span className="text-[#DC2626]">Kunde inte spara</span>)}
       </div>
 
       {/* Right: actions */}
@@ -44,7 +44,7 @@ export function EditorToolbar({
           <button
             onClick={onAIFill}
             disabled={aiFillDisabled}
-            className="text-[11px] px-2.5 py-1 rounded-md bg-[#000000] hover:bg-[#08374b] disabled:opacity-50 disabled:cursor-not-allowed text-white flex items-center gap-1"
+            className="text-[11px] px-2.5 py-1 rounded-md bg-[#0040CC] hover:bg-[#08374b] disabled:opacity-50 disabled:cursor-not-allowed text-white flex items-center gap-1"
           >
             <Sparkles className="w-3 h-3" /> AI-fyll avsnitt
           </button>

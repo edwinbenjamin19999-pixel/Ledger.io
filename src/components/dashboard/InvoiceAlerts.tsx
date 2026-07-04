@@ -188,7 +188,7 @@ function MiniStat({ label,
   variant: "destructive" | "warning" | "positive" | "neutral";
 }) { const bg = { destructive: "bg-destructive/10",
     warning: "bg-orange-500/10",
-    positive: "bg-neutral-700/10",
+    positive: "bg-green-600/10",
     neutral: "bg-muted",
   }[variant];
 

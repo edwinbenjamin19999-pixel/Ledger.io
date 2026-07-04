@@ -1,6 +1,6 @@
 /**
  * AICFOExplain — global AI narrative layer, identical in RR and BR lenses.
- * Visual: locked to Bokfy design system (DSAICFOSummary).
+ * Visual: locked to Cogniq design system (DSAICFOSummary).
  */
 import { cn } from "@/lib/utils";
 import { formatSEK } from "@/lib/formatNumber";

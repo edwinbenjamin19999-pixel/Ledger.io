@@ -91,12 +91,12 @@ export function KassaCashDiscrepancy({ sales }: Props) { const today = format(ne
               </div>
 
               {!submitted ? (
-                <Button onClick={handleSubmit} disabled={!actualCash} className="bg-[#000000] hover:bg-[#000000]/90 text-foreground">
+                <Button onClick={handleSubmit} disabled={!actualCash} className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground">
                   Beräkna differens
                 </Button>
               ) : discrepancy !== null && (
                 <div className={`p-4 rounded-lg border ${ Math.abs(discrepancy) <= 50
-                    ? "border-[#BFE6D6] bg-neutral-100/50 dark:bg-emerald-950/10"
+                    ? "border-[#BFE6D6] bg-emerald-50/50 dark:bg-emerald-950/10"
                     : "border-[#F4C8C8] bg-red-50/50 dark:bg-red-950/10"
                 }`}>
                   <div className="flex items-center gap-2 mb-2">
@@ -160,7 +160,7 @@ export function KassaCashDiscrepancy({ sales }: Props) { const today = format(ne
                   <ReferenceLine y={-50} stroke="hsl(var(--muted-foreground))" strokeDasharray="2 2" strokeOpacity={0.3} />
                   <Bar dataKey="diff" radius={[6, 6, 0, 0]}>
                     {discrepancyHistory.map((entry, i) => (
-                      <Cell key={i} fill={entry.ok ? "hsl(var(--muted-foreground) / 0.2)" : "#525252"} />
+                      <Cell key={i} fill={entry.ok ? "hsl(var(--muted-foreground) / 0.2)" : "#ef4444"} />
                     ))}
                   </Bar>
                 </BarChart>

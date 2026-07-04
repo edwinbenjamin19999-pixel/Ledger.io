@@ -42,9 +42,9 @@ function fmtRel(d: Date) {
 }
 
 function severityBg(s: AttentionItem["severity"]) {
-  if (s === "critical") return "bg-neutral-100 border-neutral-300 text-neutral-700";
-  if (s === "warning") return "bg-neutral-100 border-neutral-300 text-neutral-700";
-  return "bg-neutral-100 border-black text-blue-900";
+  if (s === "critical") return "bg-rose-50 border-rose-200 text-rose-900";
+  if (s === "warning") return "bg-amber-50 border-amber-200 text-amber-900";
+  return "bg-blue-50 border-blue-200 text-blue-900";
 }
 
 export function DailyBriefingPanel({ companyId }: Props) {
@@ -177,10 +177,10 @@ export function DailyBriefingPanel({ companyId }: Props) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
       {/* Section 1 — Done */}
-      <section className="rounded-2xl border border-neutral-300/60 bg-neutral-100/40 p-5">
+      <section className="rounded-2xl border border-emerald-200/60 bg-emerald-50/40 p-5">
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-7 h-7 rounded-lg bg-neutral-100 flex items-center justify-center">
-            <CheckCircle2 className="w-4 h-4 text-neutral-700" />
+          <div className="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center">
+            <CheckCircle2 className="w-4 h-4 text-emerald-700" />
           </div>
           <h3 className="text-[13px] font-semibold text-emerald-950">
             Det här har jag gjort sedan du loggade in sist
@@ -188,22 +188,22 @@ export function DailyBriefingPanel({ companyId }: Props) {
         </div>
         {loading ? (
           <div className="space-y-2">
-            <div className="h-3 bg-neutral-100/60 rounded animate-pulse" />
-            <div className="h-3 bg-neutral-100/60 rounded w-4/5 animate-pulse" />
+            <div className="h-3 bg-emerald-100/60 rounded animate-pulse" />
+            <div className="h-3 bg-emerald-100/60 rounded w-4/5 animate-pulse" />
           </div>
         ) : done.length === 0 ? (
-          <p className="text-[13px] text-neutral-700/80 leading-relaxed flex items-start gap-2">
-            <Sparkles className="w-4 h-4 mt-0.5 text-neutral-700 flex-shrink-0" />
+          <p className="text-[13px] text-emerald-900/80 leading-relaxed flex items-start gap-2">
+            <Sparkles className="w-4 h-4 mt-0.5 text-emerald-700 flex-shrink-0" />
             Allt är uppdaterat. Jag säger till om något behöver uppmärksamhet.
           </p>
         ) : (
           <ul className="space-y-2">
             {done.map((d) => (
               <li key={d.id} className="text-[13px] text-emerald-950 flex items-start gap-2">
-                <span className="text-neutral-700 mt-0.5">•</span>
+                <span className="text-emerald-600 mt-0.5">•</span>
                 <span className="flex-1">
                   {d.text}
-                  <span className="text-neutral-700/60 ml-1.5 text-[11px]">{fmtRel(d.ts)}</span>
+                  <span className="text-emerald-700/60 ml-1.5 text-[11px]">{fmtRel(d.ts)}</span>
                 </span>
               </li>
             ))}
@@ -212,20 +212,20 @@ export function DailyBriefingPanel({ companyId }: Props) {
       </section>
 
       {/* Section 2 — Attention */}
-      <section className="rounded-2xl border border-neutral-300/70 bg-neutral-100/40 p-5">
+      <section className="rounded-2xl border border-amber-200/70 bg-amber-50/40 p-5">
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-7 h-7 rounded-lg bg-neutral-100 flex items-center justify-center">
-            <AlertCircle className="w-4 h-4 text-neutral-700" />
+          <div className="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center">
+            <AlertCircle className="w-4 h-4 text-amber-700" />
           </div>
           <h3 className="text-[13px] font-semibold text-amber-950">Behöver din uppmärksamhet</h3>
         </div>
         {loading ? (
           <div className="space-y-2">
-            <div className="h-12 bg-neutral-100/60 rounded animate-pulse" />
-            <div className="h-12 bg-neutral-100/60 rounded animate-pulse" />
+            <div className="h-12 bg-amber-100/60 rounded animate-pulse" />
+            <div className="h-12 bg-amber-100/60 rounded animate-pulse" />
           </div>
         ) : attention.length === 0 ? (
-          <p className="text-[13px] text-neutral-700/80 leading-relaxed">
+          <p className="text-[13px] text-amber-900/80 leading-relaxed">
             Inget kräver din uppmärksamhet just nu.
           </p>
         ) : (
@@ -271,7 +271,7 @@ export function DailyBriefingPanel({ companyId }: Props) {
                 <span className="text-slate-800 truncate">{u.title}</span>
                 <span
                   className={`text-[11px] tabular-nums whitespace-nowrap font-medium ${
-                    u.daysLeft <= 5 ? "text-neutral-700" : u.daysLeft <= 14 ? "text-neutral-700" : "text-slate-500"
+                    u.daysLeft <= 5 ? "text-rose-700" : u.daysLeft <= 14 ? "text-amber-700" : "text-slate-500"
                   }`}
                 >
                   {u.daysLeft === 0 ? "idag" : `om ${u.daysLeft} ${u.daysLeft === 1 ? "dag" : "dagar"}`}

@@ -147,8 +147,8 @@ export function BillReviewDialog({ open, onOpenChange, clientName }: Props) { co
 
         <div className="space-y-4">
           {/* AI insight */}
-          <div className="flex items-start gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20">
-            <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+          <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
+            <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
             <p className="text-xs text-muted-foreground">
               Du har {avgMonthly} ofakturerade timmar till denna kund. Markera de du vill inkludera i fakturan.
               En faktura skapas som utkast — du kan granska och redigera den innan du skickar.
@@ -221,7 +221,7 @@ export function BillReviewDialog({ open, onOpenChange, clientName }: Props) { co
             <Button
               onClick={handleBill}
               disabled={selected.size === 0 || creating}
-              className="bg-[#000000] hover:bg-[#000000]/90 text-white gap-1"
+              className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white gap-1"
             >
               {creating ? "Skapar faktura..." : "Skapa fakturautkast"}
               {!creating && <ArrowRight className="h-3.5 w-3.5" />}

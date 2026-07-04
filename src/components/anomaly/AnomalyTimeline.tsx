@@ -57,8 +57,8 @@ export function AnomalyTimeline({ anomalies }: Props) {
               />
               <Legend formatter={(v) => ({ high: "🔴 Hög risk", medium: "🟡 Medium", low: "🟢 Låg" }[v] || v)} />
               <Line type="monotone" dataKey="high" stroke="hsl(var(--destructive))" strokeWidth={2} dot={{ r: 3 }} />
-              <Line type="monotone" dataKey="medium" stroke="#525252" strokeWidth={2} dot={{ r: 3 }} />
-              <Line type="monotone" dataKey="low" stroke="#000000" strokeWidth={2} dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="medium" stroke="#f59e0b" strokeWidth={2} dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="low" stroke="#22c55e" strokeWidth={2} dot={{ r: 3 }} />
             </LineChart>
           </ResponsiveContainer>
         </div>

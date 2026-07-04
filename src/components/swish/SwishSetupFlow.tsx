@@ -30,7 +30,7 @@ export function SwishSetupFlow({ onSetup }: SwishSetupFlowProps) { const [step, 
       <div className="max-w-2xl mx-auto space-y-6">
         <div className="text-center space-y-2">
           <h2 className="text-2xl font-bold text-foreground">Har du Swish Handel / Swish Företag?</h2>
-          <p className="text-muted-foreground">Välj hur du vill koppla Swish till Bokfy</p>
+          <p className="text-muted-foreground">Välj hur du vill koppla Swish till Cogniq</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -80,7 +80,7 @@ export function SwishSetupFlow({ onSetup }: SwishSetupFlowProps) { const [step, 
           <CardContent className="space-y-4">
             <p className="text-sm text-muted-foreground">
               I manuellt läge registrerar du inkommande Swish-betalningar och kopplar dem till fakturor.
-              Bokfy skapar automatiskt verifikationer vid matchning.
+              Cogniq skapar automatiskt verifikationer vid matchning.
             </p>
             <div className="flex gap-2">
               <Button variant="outline" onClick={() => setStep("choose")}>Tillbaka</Button>
@@ -132,11 +132,11 @@ export function SwishSetupFlow({ onSetup }: SwishSetupFlowProps) { const [step, 
             </Select>
           </div>
 
-          <div className="rounded-lg border border-[#F0DDB7] bg-[#FAEEDA] dark:bg-amber-950/20 dark:border-neutral-700 p-3 space-y-2">
+          <div className="rounded-lg border border-[#F0DDB7] bg-[#FAEEDA] dark:bg-amber-950/20 dark:border-amber-800 p-3 space-y-2">
             <div className="flex items-start gap-2">
               <AlertCircle className="h-4 w-4 mt-0.5 text-[#7A5417] dark:text-[#C28A2B]" />
               <div className="text-sm">
-                <p className="font-medium text-[#7A5417] dark:text-neutral-300">Certifikat krävs</p>
+                <p className="font-medium text-[#7A5417] dark:text-amber-300">Certifikat krävs</p>
                 <p className="text-[#7A5417] dark:text-[#C28A2B]">
                   Swish Handel använder certifikatbaserad autentisering.
                   Ladda ner ditt handelscertifikat från din banks företagstjänst och ladda upp det här.

@@ -14,7 +14,7 @@ export function BASUpdateModal({ open, saving, onConfirm, onClose }: Props) {
     { icon: "✓", text: "Egna konton bevaras", color: "text-[#085041]" },
     { icon: "✓", text: "Befintliga inställningar bevaras", color: "text-[#085041]" },
     { icon: "↻", text: "Inaktiva BAS-konton aktiveras", color: "text-[#7A5417]" },
-    { icon: "＋", text: "Nya BAS 2026-konton läggs till", color: "text-black" },
+    { icon: "＋", text: "Nya BAS 2026-konton läggs till", color: "text-blue-500" },
   ];
 
   return (

@@ -130,7 +130,7 @@ export const SendMobileSignLinkButton = ({
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Smartphone className="w-5 h-5 text-[#000000]" />
+              <Smartphone className="w-5 h-5 text-[#3b82f6]" />
               Skicka signeringslänk till mobil
             </DialogTitle>
             <DialogDescription>
@@ -171,8 +171,8 @@ export const SendMobileSignLinkButton = ({
                   className="h-9"
                 />
               </div>
-              <Alert className="bg-neutral-100 border-black">
-                <AlertDescription className="text-[12px] text-[#000000]">
+              <Alert className="bg-blue-50 border-blue-200">
+                <AlertDescription className="text-[12px] text-[#3b82f6]">
                   Länken är personlig, krypterad och fungerar bara en gång.
                   XML-deklarationen lagras säkert tills mottagaren signerat.
                 </AlertDescription>
@@ -180,9 +180,9 @@ export const SendMobileSignLinkButton = ({
             </div>
           ) : (
             <div className="space-y-3 py-2">
-              <Alert className="bg-neutral-100 border-neutral-300">
-                <CheckCircle2 className="h-4 w-4 text-neutral-700" />
-                <AlertDescription className="text-[12px] text-neutral-700">
+              <Alert className="bg-emerald-50 border-emerald-200">
+                <CheckCircle2 className="h-4 w-4 text-emerald-700" />
+                <AlertDescription className="text-[12px] text-emerald-900">
                   {emailSent ? (
                     <>
                       <Mail className="w-3 h-3 inline mr-1" />

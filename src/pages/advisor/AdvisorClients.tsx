@@ -64,7 +64,7 @@ const fmtRelative = (iso: string | null) => {
 
 const RiskMeter = ({ score }: { score: number }) => {
   const tone = score >= 70 ? "rose" : score >= 40 ? "amber" : "emerald";
-  const bg = tone === "rose" ? "bg-neutral-700" : tone === "amber" ? "bg-neutral-700" : "bg-neutral-700";
+  const bg = tone === "rose" ? "bg-rose-500" : tone === "amber" ? "bg-amber-500" : "bg-emerald-500";
   const text = tone === "rose" ? "text-[#7A1A1A]" : tone === "amber" ? "text-[#7A5417]" : "text-[#085041]";
   return (
     <div className="flex items-center gap-2 min-w-[80px]">
@@ -324,7 +324,7 @@ const AdvisorClients = () => {
                   onClick={() => setRiskFilter(r)}
                   className={`rounded-full px-[10px] py-[3px] text-[11px] transition-colors ${
                     active
-                      ? "bg-[#000000] text-[#E6F4FA]"
+                      ? "bg-[#0040CC] text-[#E6F4FA]"
                       : "bg-white text-[#475569] hover:text-[#0F172A]"
                   }`}
                   style={!active ? { border: "0.5px solid #E2E8F0" } : undefined}
@@ -349,7 +349,7 @@ const AdvisorClients = () => {
                   onClick={() => setDeadlineFilter(k)}
                   className={`rounded-full px-[10px] py-[3px] text-[11px] transition-colors ${
                     active
-                      ? "bg-[#000000] text-[#E6F4FA]"
+                      ? "bg-[#0040CC] text-[#E6F4FA]"
                       : "bg-white text-[#475569] hover:text-[#0F172A]"
                   }`}
                   style={!active ? { border: "0.5px solid #E2E8F0" } : undefined}

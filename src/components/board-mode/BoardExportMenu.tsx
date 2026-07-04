@@ -112,7 +112,7 @@ function generatePDF(variant: BoardModeId, data: BoardSummary, summaryText: stri
     doc.setPage(i);
     doc.setFontSize(8);
     doc.setTextColor(140, 140, 140);
-    doc.text(`Bokfy — ${profile.label} — sida ${i} av ${pageCount}`, margin, 820);
+    doc.text(`Cogniq — ${profile.label} — sida ${i} av ${pageCount}`, margin, 820);
   }
 
   const filename = `${profile.shortLabel.toLowerCase()}-pack-${new Date().toISOString().slice(0, 10)}.pdf`;

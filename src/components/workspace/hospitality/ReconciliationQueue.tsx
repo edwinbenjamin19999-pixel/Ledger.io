@@ -52,8 +52,8 @@ export function ReconciliationQueue({ limit = 7 }: { limit?: number }) {
               key={r.id}
               className={cn(
                 "flex items-center justify-between py-2 px-3 rounded-md border-l-4",
-                r.status === "matched" && "border-l-emerald-500 bg-neutral-100/40",
-                r.status === "partial" && "border-l-amber-500 bg-neutral-100/40",
+                r.status === "matched" && "border-l-emerald-500 bg-emerald-50/40",
+                r.status === "partial" && "border-l-amber-500 bg-amber-50/40",
                 r.status === "flagged" && "border-l-red-500 bg-red-50/40",
                 r.status === "unmatched" && "border-l-slate-300",
               )}

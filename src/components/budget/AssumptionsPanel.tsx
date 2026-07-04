@@ -84,7 +84,7 @@ export const AssumptionsPanel = ({ open, onOpenChange, drivers, onDriversChange 
         <div className="space-y-6 pb-8">
           {/* Revenue */}
           <div className="space-y-4">
-            <p className="text-xs font-semibold text-neutral-700 dark:text-neutral-700 uppercase tracking-wide">Intäkter</p>
+            <p className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">Intäkter</p>
             <SliderRow
               label="Pristillväxt"
               icon={TrendingUp}

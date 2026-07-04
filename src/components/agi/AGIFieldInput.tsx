@@ -42,7 +42,7 @@ export const AGIFieldInput = ({ code, label, value, onChange, readOnly }: AGIFie
             type="number"
             value={value || ""}
             onChange={e => onChange(Number(e.target.value) || 0)}
-            className="w-36 h-9 text-sm text-right font-mono pr-8 rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#000000]/20 focus:border-[#000000] bg-background [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            className="w-36 h-9 text-sm text-right font-mono pr-8 rounded-lg border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-[#0052FF]/20 focus:border-[#0052FF] bg-background [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             placeholder="0"
           />
           <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-muted-foreground pointer-events-none">kr</span>

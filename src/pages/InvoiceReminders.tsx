@@ -36,11 +36,11 @@ type Recommendation = {
 };
 
 const ACTION_META: Record<Recommendation["action"], { icon: typeof Mail; tone: string }> = {
-  remind1: { icon: Mail, tone: "bg-[#000000] hover:bg-[#000000] text-white" },
-  remind2: { icon: Mail, tone: "bg-neutral-700 hover:bg-neutral-700 text-white" },
-  call: { icon: Phone, tone: "bg-black hover:bg-black text-white" },
-  plan: { icon: CalendarClock, tone: "bg-neutral-700 hover:bg-neutral-700 text-white" },
-  collection: { icon: Gavel, tone: "bg-neutral-700 hover:bg-neutral-700 text-white" },
+  remind1: { icon: Mail, tone: "bg-[#3b82f6] hover:bg-[#3b82f6] text-white" },
+  remind2: { icon: Mail, tone: "bg-amber-600 hover:bg-amber-700 text-white" },
+  call: { icon: Phone, tone: "bg-blue-600 hover:bg-blue-700 text-white" },
+  plan: { icon: CalendarClock, tone: "bg-violet-600 hover:bg-violet-700 text-white" },
+  collection: { icon: Gavel, tone: "bg-rose-600 hover:bg-rose-700 text-white" },
 };
 
 function buildRecommendation(inv: {
@@ -109,10 +109,10 @@ function buildRecommendation(inv: {
 }
 
 const riskTone: Record<Recommendation["risk"], { dot: string; chip: string; label: string }> = {
-  low: { dot: "bg-neutral-700", chip: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]", label: "Låg risk" },
-  medium: { dot: "bg-neutral-700", chip: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]", label: "Medel risk" },
+  low: { dot: "bg-emerald-500", chip: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]", label: "Låg risk" },
+  medium: { dot: "bg-amber-500", chip: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]", label: "Medel risk" },
   high: { dot: "bg-orange-500", chip: "bg-orange-500/10 text-orange-600 border-orange-500/30", label: "Hög risk" },
-  critical: { dot: "bg-neutral-700", chip: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]", label: "Kritisk" },
+  critical: { dot: "bg-rose-500", chip: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]", label: "Kritisk" },
 };
 
 const InvoiceReminders = () => {
@@ -242,34 +242,34 @@ const InvoiceReminders = () => {
           <div className="rounded-2xl bg-[#0F1F3D] border border-[#C8DDF5] p-6 shadow-lg">
             <div className="flex flex-col lg:flex-row lg:items-center gap-5">
               <div className="flex items-start gap-4 flex-1">
-                <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#000000] to-blue-600 flex items-center justify-center shadow-lg shadow-[#000000]/30 flex-shrink-0">
+                <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-blue-600 flex items-center justify-center shadow-lg shadow-[#3b82f6]/30 flex-shrink-0">
                   <Sparkles className="h-6 w-6 text-white" />
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#000000] uppercase">
+                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#3b82f6] uppercase">
                       AI Beslutsmotor
                     </span>
-                    <span className="h-1 w-1 rounded-full bg-[#000000]/60" />
+                    <span className="h-1 w-1 rounded-full bg-[#3b82f6]/60" />
                     <span className="text-[10px] text-slate-300">live-analys</span>
                   </div>
                   <p className="text-lg font-semibold text-white leading-tight">
                     {enriched.length} fordringar analyserade —{" "}
-                    <span className="text-[#000000]">{formatSEK(Math.round(aiSummary.recoveryEst))}</span> bedöms återvinningsbart
+                    <span className="text-[#3b82f6]">{formatSEK(Math.round(aiSummary.recoveryEst))}</span> bedöms återvinningsbart
                   </p>
                   <div className="flex flex-wrap gap-2 pt-1">
                     {aiSummary.remind > 0 && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#000000]/15 border border-[#000000]/30 text-[#000000] text-xs font-medium">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#3b82f6]/15 border border-[#3b82f6]/30 text-[#3b82f6] text-xs font-medium">
                         <Mail className="h-3 w-3" /> {aiSummary.remind} påminnelser räcker
                       </span>
                     )}
                     {aiSummary.plan > 0 && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neutral-700/15 border border-neutral-700/30 text-neutral-300 text-xs font-medium">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-500/15 border border-violet-400/30 text-violet-200 text-xs font-medium">
                         <CalendarClock className="h-3 w-3" /> {aiSummary.plan} behöver betalplan
                       </span>
                     )}
                     {aiSummary.collection > 0 && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neutral-700/15 border border-neutral-700/30 text-neutral-300 text-xs font-medium">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-500/15 border border-rose-400/30 text-rose-200 text-xs font-medium">
                         <Gavel className="h-3 w-3" /> {aiSummary.collection} till inkasso ({formatSEK(aiSummary.collectionAmount)})
                       </span>
                     )}
@@ -278,7 +278,7 @@ const InvoiceReminders = () => {
               </div>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[#000000] to-blue-600 hover:from-[#000000] hover:to-blue-700 text-white shadow-lg shadow-[#000000]/20 lg:flex-shrink-0"
+                className="bg-gradient-to-r from-[#3b82f6] to-blue-600 hover:from-[#3b82f6] hover:to-blue-700 text-white shadow-lg shadow-[#3b82f6]/20 lg:flex-shrink-0"
                 onClick={() => toast.success(`${enriched.length} rekommenderade åtgärder köade för utförande`)}
               >
                 <Zap className="h-4 w-4 mr-2" />
@@ -353,10 +353,10 @@ const InvoiceReminders = () => {
                     {/* Right: AI recommendation + actions */}
                     <div className="p-5 bg-slate-50/60 dark:bg-slate-900/60">
                       <div className="flex items-start gap-2 mb-3">
-                        <Sparkles className="h-3.5 w-3.5 text-[#000000] mt-0.5 flex-shrink-0" />
+                        <Sparkles className="h-3.5 w-3.5 text-[#3b82f6] mt-0.5 flex-shrink-0" />
                         <div className="space-y-0.5 flex-1 min-w-0">
                           <div className="flex items-center gap-2">
-                            <span className="text-[10px] font-bold tracking-[0.15em] text-[#000000] dark:text-[#1E3A5F] uppercase">
+                            <span className="text-[10px] font-bold tracking-[0.15em] text-[#3b82f6] dark:text-[#1E3A5F] uppercase">
                               AI rekommenderar
                             </span>
                             <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-[#085041]">

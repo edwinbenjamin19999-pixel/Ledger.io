@@ -19,7 +19,7 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
   const [emailStatus, setEmailStatus] = useState<ChannelStatus>({ active: false, lastReceived: null });
   const [whatsappStatus, setWhatsappStatus] = useState<ChannelStatus>({ active: false, lastReceived: null });
 
-  const emailAddress = `kvitton@${companyId.slice(0, 8)}.bokfy.se`;
+  const emailAddress = `kvitton@${companyId.slice(0, 8)}.cogniq.se`;
   const whatsappNumber = "+46 70 123 45 67";
   const whatsappLink = "https://wa.me/46701234567";
 
@@ -74,10 +74,10 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
           className="relative overflow-hidden cursor-pointer bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] hover:bg-[#F5F9FF] transition-all"
           onClick={() => setEmailOpen(true)}
         >
-          <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#000000]" />
+          <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0040CC]" />
           <CardContent className="p-[14px] flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[#EFF6FF] flex items-center justify-center shrink-0">
-              <Mail className="h-5 w-5 text-[#000000]" />
+              <Mail className="h-5 w-5 text-[#0040CC]" />
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
@@ -121,10 +121,10 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
 
         {/* Upload channel */}
         <Card className="relative overflow-hidden bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] hover:bg-[#F5F9FF] transition-all">
-          <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#000000]" />
+          <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0040CC]" />
           <CardContent className="p-[14px] flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[#EFF6FF] flex items-center justify-center shrink-0">
-              <Upload className="h-5 w-5 text-[#000000]" />
+              <Upload className="h-5 w-5 text-[#0040CC]" />
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
@@ -208,7 +208,7 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
                 </div>
               </div>
               <p className="font-mono text-sm font-semibold">{whatsappNumber}</p>
-              <p className="text-xs text-muted-foreground mt-1">Bokfy Bot</p>
+              <p className="text-xs text-muted-foreground mt-1">Cogniq Bot</p>
             </div>
 
             {/* Channel status */}

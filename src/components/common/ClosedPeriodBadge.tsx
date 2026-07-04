@@ -15,7 +15,7 @@ export const ClosedPeriodBadge = ({ className, label = "Perioden är stängd" }:
       <Tooltip>
         <TooltipTrigger asChild>
           <span
-            className={`inline-flex items-center gap-1 rounded-md bg-neutral-700/10 text-neutral-700 px-1.5 py-0.5 text-[10px] font-medium ${className ?? ""}`}
+            className={`inline-flex items-center gap-1 rounded-md bg-amber-500/10 text-amber-500 px-1.5 py-0.5 text-[10px] font-medium ${className ?? ""}`}
           >
             <Lock className="h-3 w-3" />
             Låst

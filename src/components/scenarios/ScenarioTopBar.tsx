@@ -32,8 +32,8 @@ export function ScenarioTopBar({
               onClick={() => onSelectPreset(p.key)}
               className={`text-xs font-medium px-3 h-8 rounded-full border transition-colors ${
                 active
-                  ? "bg-[#000000] text-white border-black"
-                  : "bg-white text-slate-700 border-slate-200 hover:border-[#000000] hover:text-[#000000]"
+                  ? "bg-[#3b82f6] text-white border-blue-600"
+                  : "bg-white text-slate-700 border-slate-200 hover:border-[#3b82f6] hover:text-[#3b82f6]"
               }`}
             >
               {p.name}
@@ -50,8 +50,8 @@ export function ScenarioTopBar({
               onClick={() => onSelectSaved(s.id)}
               className={`text-xs font-medium px-3 h-8 rounded-full border transition-colors ${
                 active
-                  ? "bg-[#000000] text-white border-black"
-                  : "bg-white text-slate-700 border-slate-200 hover:border-[#000000] hover:text-[#000000]"
+                  ? "bg-[#3b82f6] text-white border-blue-600"
+                  : "bg-white text-slate-700 border-slate-200 hover:border-[#3b82f6] hover:text-[#3b82f6]"
               }`}
             >
               {s.name}

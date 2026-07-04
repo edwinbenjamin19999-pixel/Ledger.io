@@ -159,10 +159,10 @@ export const ClientContextBar = () => {
                 className={cn(
                   "text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider",
                   priority.tier === "critical"
-                    ? "bg-[#FCE8E8] text-neutral-700"
+                    ? "bg-[#FCE8E8] text-rose-700"
                     : priority.tier === "warning"
-                    ? "bg-[#FAEEDA] text-neutral-700"
-                    : "bg-[#E1F5EE] text-neutral-700",
+                    ? "bg-[#FAEEDA] text-amber-800"
+                    : "bg-[#E1F5EE] text-emerald-800",
                 )}
               >
                 {priority.tier === "critical"
@@ -198,7 +198,7 @@ export const ClientContextBar = () => {
       {/* Top reason banner (compact) */}
       {priority?.topReason && (
         <div className="hidden lg:flex items-center gap-1.5 text-[11px] text-white/70 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10 max-w-[300px] truncate">
-          <Sparkles className="h-3 w-3 text-[#000000] shrink-0" />
+          <Sparkles className="h-3 w-3 text-[#3b82f6] shrink-0" />
           <span className="truncate">{priority.topReason.label}</span>
         </div>
       )}
@@ -235,9 +235,9 @@ interface ChipProps {
 
 function StatusChip({ label, state }: ChipProps) {
   const meta = {
-    ok: { icon: CheckCircle2, cls: "bg-[#E1F5EE] text-neutral-700 border-[#BFE6D6]" },
-    warn: { icon: AlertTriangle, cls: "bg-[#FAEEDA] text-neutral-700 border-[#F0DDB7]" },
-    alert: { icon: AlertTriangle, cls: "bg-[#FCE8E8] text-neutral-700 border-[#F4C8C8]" },
+    ok: { icon: CheckCircle2, cls: "bg-[#E1F5EE] text-emerald-800 border-[#BFE6D6]" },
+    warn: { icon: AlertTriangle, cls: "bg-[#FAEEDA] text-amber-800 border-[#F0DDB7]" },
+    alert: { icon: AlertTriangle, cls: "bg-[#FCE8E8] text-rose-700 border-[#F4C8C8]" },
     neutral: { icon: CircleDashed, cls: "bg-white/10 text-white/70 border-white/15" },
   }[state];
   const Icon = meta.icon;

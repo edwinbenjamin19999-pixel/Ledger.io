@@ -319,7 +319,7 @@ export async function exportProfessionalExcel(
   isRows: ReportAccountRow[]
 ) {
   const wb = new ExcelJS.Workbook();
-  wb.creator = "Bokfy";
+  wb.creator = "Cogniq";
   wb.created = new Date();
 
   // Sheet 1: Resultaträkning
@@ -336,7 +336,7 @@ export async function exportProfessionalExcel(
   const link = document.createElement("a");
   const period = format(toDate, "yyyy-MM");
   link.href = URL.createObjectURL(blob);
-  link.download = `Bokfy_BR_RR_${companyName.replace(/\s+/g, "_")}_${period}.xlsx`;
+  link.download = `Cogniq_BR_RR_${companyName.replace(/\s+/g, "_")}_${period}.xlsx`;
   link.click();
   URL.revokeObjectURL(link.href);
 }

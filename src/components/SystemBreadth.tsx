@@ -36,8 +36,8 @@ export const SystemBreadth = () => {
             style={{ fontSize: "clamp(28px, 4vw, 44px)", letterSpacing: "-1.5px" }}
           >
             Detta ingår i{" "}
-            <span className="bg-gradient-to-r from-[#000000] to-[#000000] bg-clip-text text-transparent">
-              Bokfy
+            <span className="bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] bg-clip-text text-transparent">
+              Cogniq
             </span>
           </h2>
         </div>
@@ -46,7 +46,7 @@ export const SystemBreadth = () => {
         <div className="sm:hidden max-w-sm mx-auto divide-y divide-white/[0.06] border-y border-white/[0.06]">
           {mobileItems.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-3 py-4">
-              <Icon className="w-4 h-4 text-[#000000] flex-shrink-0" />
+              <Icon className="w-4 h-4 text-[#3b82f6] flex-shrink-0" />
               <span className="text-[16px] text-white/85 font-medium">{label}</span>
             </div>
           ))}
@@ -57,10 +57,10 @@ export const SystemBreadth = () => {
           {items.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="group flex flex-col items-center gap-3 p-5 rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm hover:border-[rgba(0,0,0,0.2)] hover:bg-[rgba(0,0,0,0.04)] hover:shadow-[0_0_20px_rgba(0,0,0,0.08)] transition-all duration-300"
+              className="group flex flex-col items-center gap-3 p-5 rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm hover:border-[rgba(0,82,255,0.2)] hover:bg-[rgba(0,82,255,0.04)] hover:shadow-[0_0_20px_rgba(0,82,255,0.08)] transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-xl bg-[rgba(0,0,0,0.08)] border border-[rgba(0,0,0,0.12)] flex items-center justify-center group-hover:border-[rgba(0,0,0,0.25)] transition-colors duration-300">
-                <Icon className="w-5 h-5 text-[#000000] group-hover:text-[#000000] transition-colors duration-300" />
+              <div className="w-10 h-10 rounded-xl bg-[rgba(0,82,255,0.08)] border border-[rgba(0,82,255,0.12)] flex items-center justify-center group-hover:border-[rgba(0,82,255,0.25)] transition-colors duration-300">
+                <Icon className="w-5 h-5 text-[#3b82f6] group-hover:text-[#3b82f6] transition-colors duration-300" />
               </div>
               <span className="text-[13px] font-medium text-white/60 group-hover:text-white/80 transition-colors duration-300 text-center">
                 {label}

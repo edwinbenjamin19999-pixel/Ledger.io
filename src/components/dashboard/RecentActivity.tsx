@@ -110,7 +110,7 @@ export const RecentActivity = () => { const { user } = useAuth();
       return <Badge variant="outline" className="text-orange-600 border-orange-600">Kräver granskning</Badge>;
     }
     const tone =
-      status === "completed" ? "text-[#085041] border-neutral-700"
+      status === "completed" ? "text-[#085041] border-green-600"
       : status === "pending" ? "text-[#7A5417] border-yellow-600"
       : status === "review" ? "text-orange-600 border-orange-600"
       : "text-slate-500 border-slate-300";

@@ -35,10 +35,10 @@ interface Props {
 }
 
 const scenarios: { value: ForecastScenario; label: string; tone: string }[] = [
-  { value: "base", label: "Bas", tone: "bg-[#000000]" },
-  { value: "best_case", label: "Bästa", tone: "bg-neutral-700" },
-  { value: "worst_case", label: "Sämsta", tone: "bg-neutral-700" },
-  { value: "ai_case", label: "AI", tone: "bg-neutral-700" },
+  { value: "base", label: "Bas", tone: "bg-[#3b82f6]" },
+  { value: "best_case", label: "Bästa", tone: "bg-emerald-500" },
+  { value: "worst_case", label: "Sämsta", tone: "bg-rose-500" },
+  { value: "ai_case", label: "AI", tone: "bg-violet-500" },
 ];
 
 function statusOf(v: number): "good" | "warning" | "critical" {
@@ -76,7 +76,7 @@ export function CashflowForecastPanel({
               className={cn(
                 "rounded-md px-2 py-1 font-medium transition-colors",
                 scenario === s.value
-                  ? "bg-background text-foreground shadow-sm ring-1 ring-[#000000]/40"
+                  ? "bg-background text-foreground shadow-sm ring-1 ring-[#3b82f6]/40"
                   : "text-muted-foreground hover:text-foreground",
               )}
             >
@@ -141,21 +141,21 @@ export function CashflowForecastPanel({
           </div>
 
           {negativeAt ? (
-            <div className="mt-3 flex items-start gap-2 rounded-md border border-[#F4C8C8] bg-[#FCE8E8] p-3 text-xs text-[#7A1A1A] dark:text-neutral-300">
+            <div className="mt-3 flex items-start gap-2 rounded-md border border-[#F4C8C8] bg-[#FCE8E8] p-3 text-xs text-[#7A1A1A] dark:text-rose-300">
               <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
               <span>
                 Risk för negativ likviditet inom {negativeAt} dagar. Överväg åtgärder för att stärka kassan.
               </span>
             </div>
           ) : (
-            <div className="mt-3 flex items-start gap-2 rounded-md border border-[#BFE6D6] bg-[#E1F5EE] p-2.5 text-xs text-[#085041] dark:text-neutral-300">
+            <div className="mt-3 flex items-start gap-2 rounded-md border border-[#BFE6D6] bg-[#E1F5EE] p-2.5 text-xs text-[#085041] dark:text-emerald-300">
               <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0" />
               <span>Positiv likviditet i hela prognosfönstret.</span>
             </div>
           )}
 
           {projection.confidence < 0.6 ? (
-            <div className="mt-2 flex items-start gap-2 rounded-md border border-[#F0DDB7] bg-[#FAEEDA] p-2.5 text-[11px] text-[#7A5417] dark:text-neutral-300">
+            <div className="mt-2 flex items-start gap-2 rounded-md border border-[#F0DDB7] bg-[#FAEEDA] p-2.5 text-[11px] text-[#7A5417] dark:text-amber-300">
               <Sparkles className="mt-0.5 h-3.5 w-3.5 shrink-0" />
               <span>
                 Låg konfidens ({Math.round(projection.confidence * 100)}%) —{" "}

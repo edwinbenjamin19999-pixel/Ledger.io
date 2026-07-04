@@ -113,7 +113,7 @@ export const BudgetScenarios = ({ budgetId, companyId, fiscalYear }: BudgetScena
               <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
               <Tooltip formatter={(v: number) => `${fmt(v)} kr`} />
               <Area type="monotone" dataKey="pessimistiskt" fill="hsl(0 70% 90%)" stroke="hsl(0 70% 50%)" strokeWidth={1.5} fillOpacity={0.3} />
-              <Area type="monotone" dataKey="basfall" fill="#000000" stroke="#000000" strokeWidth={2} fillOpacity={0.15} />
+              <Area type="monotone" dataKey="basfall" fill="#3b82f6" stroke="#3b82f6" strokeWidth={2} fillOpacity={0.15} />
               <Area type="monotone" dataKey="optimistiskt" fill="hsl(150 70% 90%)" stroke="hsl(150 70% 40%)" strokeWidth={1.5} fillOpacity={0.3} />
             </AreaChart>
           </ResponsiveContainer>

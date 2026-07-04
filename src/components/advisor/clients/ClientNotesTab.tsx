@@ -214,7 +214,7 @@ export const ClientNotesTab = ({ companyId, firmId }: Props) => {
               key={t}
               onClick={() => toggleTag(t)}
               className={`px-2 py-0.5 rounded-full text-[11px] border ${
-                draft.tags.includes(t) ? "bg-neutral-100 text-black border-black" : "bg-white text-slate-500 border-slate-200"
+                draft.tags.includes(t) ? "bg-blue-50 text-blue-700 border-blue-200" : "bg-white text-slate-500 border-slate-200"
               }`}
             >
               {t}
@@ -247,7 +247,7 @@ const NoteCard = ({
 }) => (
   <div
     className={`group p-2.5 rounded-md border cursor-pointer mb-1.5 ${
-      active ? "border-black bg-neutral-100/50" : "border-slate-200 bg-white hover:bg-slate-50"
+      active ? "border-blue-300 bg-blue-50/50" : "border-slate-200 bg-white hover:bg-slate-50"
     }`}
     onClick={() => onOpen(note)}
   >

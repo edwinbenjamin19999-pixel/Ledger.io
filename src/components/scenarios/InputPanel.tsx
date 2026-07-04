@@ -86,7 +86,7 @@ export function InputPanel({ drivers, baseDrivers, mode, onModeChange, onChange,
                   max={f.max(base || v || f.min + 1)}
                   step={f.step}
                   onValueChange={([nv]) => set(f.key, nv)}
-                  className="[&_[role=slider]]:border-black [&_[role=slider]]:bg-white [&>span:first-child>span]:bg-[#000000]"
+                  className="[&_[role=slider]]:border-blue-600 [&_[role=slider]]:bg-white [&>span:first-child>span]:bg-[#3b82f6]"
                 />
               </div>
             );
@@ -111,7 +111,7 @@ export function InputPanel({ drivers, baseDrivers, mode, onModeChange, onChange,
       <button
         type="button"
         onClick={onReset}
-        className="w-full text-xs text-slate-500 hover:text-[#000000] underline-offset-2 hover:underline transition-colors"
+        className="w-full text-xs text-slate-500 hover:text-[#3b82f6] underline-offset-2 hover:underline transition-colors"
       >
         Återställ till bas
       </button>

@@ -177,10 +177,10 @@ export function AIInsightPanel({ invoice }: Props) {
           </div>
           <div className="space-y-1.5">
             {warnings.map((s) => (
-              <div key={s.id} className="text-[11px] text-neutral-700/90">
+              <div key={s.id} className="text-[11px] text-amber-900/90">
                 · {RISK_KIND_LABELS[s.kind] ?? s.kind}
                 {typeof s.details?.message === "string" && (
-                  <span className="text-neutral-700/70"> — {s.details.message}</span>
+                  <span className="text-amber-900/70"> — {s.details.message}</span>
                 )}
               </div>
             ))}
@@ -197,7 +197,7 @@ export function AIInsightPanel({ invoice }: Props) {
           <Button
             size="sm"
             disabled={!canAcceptSuggestion || wf.savePreAccounting.isPending}
-            className="bg-[#0F1F3D] text-white hover:from-[#000000] hover:to-blue-500 justify-start"
+            className="bg-[#0F1F3D] text-white hover:from-[#3b82f6] hover:to-blue-500 justify-start"
             onClick={() => {
               wf.savePreAccounting.mutate({
                 invoice_id: invoice.id,
@@ -385,7 +385,7 @@ function OverbillingBlock({
   const message = typeof signal.details?.message === "string" ? signal.details.message : null;
   const isHigh = signal.severity === "high" || signal.severity === "critical";
 
-  const ringCls = isHigh ? "border-neutral-300 bg-[#FCE8E8]" : "border-[#F0DDB7] bg-[#FAEEDA]";
+  const ringCls = isHigh ? "border-rose-300 bg-[#FCE8E8]" : "border-[#F0DDB7] bg-[#FAEEDA]";
   const titleCls = isHigh ? "text-[#7A1A1A]" : "text-[#7A5417]";
   const busy = acceptDeviation.isPending || flagSupplier.isPending || openInvestigation.isPending;
 
@@ -419,7 +419,7 @@ function OverbillingBlock({
           <Button
             size="sm"
             variant="outline"
-            className="h-7 text-[11px] border-neutral-300 text-[#7A1F1E] hover:bg-[#FCE8E8]"
+            className="h-7 text-[11px] border-rose-300 text-[#7A1F1E] hover:bg-[#FCE8E8]"
             onClick={() => flagSupplier.mutate()}
             disabled={busy || !invoice.supplier_id}
           >

@@ -53,7 +53,7 @@ export const SystemHealthCheck = () => { const [health, setHealth] = useState<He
     return <AlertCircle className="w-4 h-4 text-[#7A1A1A]" />;
   };
 
-  const getStatusBadge = (status: string) => { if (status === 'healthy') return <Badge variant="default" className="bg-neutral-700">Fungerar</Badge>;
+  const getStatusBadge = (status: string) => { if (status === 'healthy') return <Badge variant="default" className="bg-green-600">Fungerar</Badge>;
     if (status === 'degraded') return <Badge variant="secondary" className="bg-yellow-600 text-white">Försämrad</Badge>;
     return <Badge variant="destructive">Nere</Badge>;
   };

@@ -55,12 +55,12 @@ export const ChurnRadarCard = ({ contracts, onSelect, onMarkSafe }: Props) => {
         {atRisk.slice(0, 5).map(c => {
           const factors = factorsOf(c);
           return (
-            <div key={c.id} className="p-4 hover:bg-neutral-700/[0.03] transition-colors">
+            <div key={c.id} className="p-4 hover:bg-rose-500/[0.03] transition-colors">
               <div className="flex items-start justify-between gap-3">
                 <button onClick={() => onSelect(c)} className="flex-1 min-w-0 text-left">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="font-medium text-sm truncate">{c.customer?.name || c.title}</span>
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#FCE8E8] dark:bg-rose-950/30 border border-[#F4C8C8] dark:border-neutral-700/40 text-[#7A1A1A] dark:text-neutral-300 text-[10px] font-semibold">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#FCE8E8] dark:bg-rose-950/30 border border-[#F4C8C8] dark:border-rose-900/40 text-[#7A1A1A] dark:text-rose-300 text-[10px] font-semibold">
                       <AlertTriangle className="h-2.5 w-2.5" />
                       {Math.round(c.churn_risk_score || 0)}% risk
                     </span>

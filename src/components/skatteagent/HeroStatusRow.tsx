@@ -28,10 +28,10 @@ const STATUS_LABEL: Record<FTaxStatus, string> = {
   unknown: "—",
 };
 const STATUS_COLOR: Record<FTaxStatus, string> = {
-  due_soon: "bg-neutral-700",
-  paid: "bg-neutral-700",
-  overdue: "bg-neutral-700",
-  scheduled: "bg-neutral-700",
+  due_soon: "bg-amber-400",
+  paid: "bg-emerald-400",
+  overdue: "bg-rose-500",
+  scheduled: "bg-indigo-400",
   unknown: "bg-slate-400",
 };
 
@@ -71,14 +71,14 @@ export function HeroStatusRow({
       <Card className="relative overflow-hidden border-0 bg-[#0F1F3D] text-white p-6 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_60%)]" />
         <div className="relative">
-          <div className="flex items-center gap-2 text-xs font-medium text-neutral-300 uppercase tracking-wide">
+          <div className="flex items-center gap-2 text-xs font-medium text-indigo-200 uppercase tracking-wide">
             <Calendar className="w-3.5 h-3.5" />
             Nästa F-skatt
           </div>
           <div className="mt-3 text-4xl font-bold tabular-nums">
             {state.nextDueAmount > 0 ? fmtKr(state.nextDueAmount) : "—"}
           </div>
-          <div className="mt-1 text-sm text-neutral-300">
+          <div className="mt-1 text-sm text-indigo-200">
             Förfaller {state.nextDueDate}
             {state.daysUntilDue >= 0 && state.daysUntilDue <= 30
               ? ` · om ${state.daysUntilDue} d`
@@ -112,7 +112,7 @@ export function HeroStatusRow({
       {/* Card 2 — Tax position (AI verdict) */}
       <Card className="p-6 hover:-translate-y-0.5 transition-transform duration-200">
         <div className="flex items-center gap-2 text-xs font-medium text-slate-500 uppercase tracking-wide">
-          <Sparkles className="w-3.5 h-3.5 text-neutral-700" />
+          <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
           Tax position (AI)
         </div>
         <div className={cn("mt-3 text-4xl font-bold tabular-nums flex items-center gap-2", POSITION_TONE[state.position])}>

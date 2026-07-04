@@ -1,4 +1,4 @@
-# Bokfy
+# Cogniq
 
 AI-driven redovisnings- och beslutsplattform för svenska företag: automatisk kontering,
 koncernkonsolidering, moms/skatt och Skatteverket-integration.

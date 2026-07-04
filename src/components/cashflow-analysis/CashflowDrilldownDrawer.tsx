@@ -316,7 +316,7 @@ export function CashflowDrilldownDrawer({ open, onOpenChange, focus, companyId, 
                         <span>{b.date}</span>
                         <span className={cn(
                           "rounded-full px-1.5 py-px text-[10px]",
-                          b.matched ? "bg-[#E1F5EE] text-[#085041] dark:text-neutral-300" : "bg-[#FAEEDA] text-[#7A5417] dark:text-neutral-300",
+                          b.matched ? "bg-[#E1F5EE] text-[#085041] dark:text-emerald-300" : "bg-[#FAEEDA] text-[#7A5417] dark:text-amber-300",
                         )}>
                           {b.matched ? "Matchad" : "Omatchad"}
                         </span>

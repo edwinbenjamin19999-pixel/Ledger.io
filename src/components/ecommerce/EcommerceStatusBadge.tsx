@@ -7,16 +7,16 @@ type BadgeType =
 
 const badgeStyles: Record<BadgeType, string> = { betald: "bg-[#E1F5EE] text-[#085041] border border-[#BFE6D6]",
   bokford: "bg-[#E1F5EE] text-[#085041] border border-[#BFE6D6]",
-  matchad: "bg-neutral-200 text-black border border-black",
+  matchad: "bg-blue-100 text-blue-700 border border-blue-200",
   delvis_retur: "bg-[#FAEEDA] text-[#7A5417] border border-[#F0DDB7]",
   returnerad: "bg-[#FCE8E8] text-[#7A1A1A] border border-[#F4C8C8]",
   vantande: "bg-slate-100 text-slate-600 border border-slate-200",
   granskning: "bg-orange-100 text-orange-600 border border-orange-200",
-  verifikat: "bg-[#EFF6FF] text-neutral-700 border border-[#C8DDF5]",
+  verifikat: "bg-[#EFF6FF] text-indigo-700 border border-[#C8DDF5]",
   slutsald: "bg-red-500 text-white font-bold border-0",
   kritiskt: "bg-orange-500 text-white font-bold border-0",
-  lagt_lager: "bg-neutral-700 text-white font-semibold border-0",
-  i_lager: "bg-neutral-700 text-white border-0",
+  lagt_lager: "bg-amber-400 text-white font-semibold border-0",
+  i_lager: "bg-emerald-500 text-white border-0",
 };
 
 const badgeLabels: Record<BadgeType, string> = { betald: "Betald",

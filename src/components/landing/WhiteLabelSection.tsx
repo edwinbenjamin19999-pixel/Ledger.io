@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
  */
 const points = [
   { title: "Din branding", desc: "Logotyp, färger, domän — helt ditt." },
-  { title: "Ditt klientgränssnitt", desc: "Dina kunder ser aldrig Bokfy." },
-  { title: "Samma motor", desc: "Full kraft av Bokfy under huven." },
+  { title: "Ditt klientgränssnitt", desc: "Dina kunder ser aldrig Cogniq." },
+  { title: "Samma motor", desc: "Full kraft av Cogniq under huven." },
 ];
 
 const KPIS = [
@@ -22,7 +22,7 @@ const BARS = [30, 45, 38, 55, 48, 62, 58, 72, 68, 80, 75, 88];
 export const WhiteLabelSection = () => {
   const navigate = useNavigate();
   return (
-    <section className="relative overflow-hidden bg-[#000000] py-24 px-6">
+    <section className="relative overflow-hidden bg-[#0F172A] py-24 px-6">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-28 -left-28 h-[340px] w-[340px] rounded-full bg-white/5"
@@ -31,14 +31,14 @@ export const WhiteLabelSection = () => {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Vänster */}
           <div className="lg:col-span-5">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#FFFFFF]">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#4D7CFF]">
               White Label
             </p>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight text-white">
               Lansera din egen bokföringsplattform.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-white/70">
-              Erbjud Bokfy under ditt varumärke. För redovisningsbyråer, banker
+              Erbjud Cogniq under ditt varumärke. För redovisningsbyråer, banker
               och rådgivare.
             </p>
 
@@ -46,7 +46,7 @@ export const WhiteLabelSection = () => {
               {points.map((p) => (
                 <li key={p.title} className="flex items-start gap-3">
                   <span className="mt-0.5 flex h-[22px] w-[22px] flex-shrink-0 items-center justify-center rounded-md bg-white">
-                    <Check className="h-3 w-3 text-[#000000]" strokeWidth={3} aria-hidden />
+                    <Check className="h-3 w-3 text-[#0052FF]" strokeWidth={3} aria-hidden />
                   </span>
                   <div>
                     <div className="text-[15px] font-bold text-white">{p.title}</div>
@@ -58,7 +58,7 @@ export const WhiteLabelSection = () => {
 
             <button
               onClick={() => navigate("/white-label")}
-              className="group mt-8 inline-flex h-12 items-center gap-2 rounded-md bg-[#000000] px-6 text-[15px] font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#000000] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#000000]"
+              className="group mt-8 inline-flex h-12 items-center gap-2 rounded-md bg-[#0052FF] px-6 text-[15px] font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#0040CC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
             >
               Läs mer om White Label
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
@@ -79,10 +79,10 @@ export const WhiteLabelSection = () => {
               </div>
 
               {/* Mockup-kropp — mörk produktyta */}
-              <div className="rounded-b-md bg-[#000000] p-6">
+              <div className="rounded-b-md bg-[#0F172A] p-6">
                 <div className="mb-5 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="flex h-6 w-6 items-center justify-center rounded-md bg-white text-xs font-extrabold text-[#000000]">
+                    <div className="flex h-6 w-6 items-center justify-center rounded-md bg-white text-xs font-extrabold text-[#0F172A]">
                       B
                     </div>
                     <span className="text-[15px] font-bold tracking-tight text-white">
@@ -104,7 +104,7 @@ export const WhiteLabelSection = () => {
                   {KPIS.map((k) => (
                     <div
                       key={k.label}
-                      className="rounded-md border-t-2 border-[#FFFFFF] bg-white/[0.07] p-3"
+                      className="rounded-md border-t-2 border-[#4D7CFF] bg-white/[0.07] p-3"
                     >
                       <div className="text-[9px] uppercase tracking-wide text-white/50">
                         {k.label}
@@ -112,7 +112,7 @@ export const WhiteLabelSection = () => {
                       <div className="mt-1 text-lg font-bold text-white tabular-nums">
                         {k.value}
                       </div>
-                      <div className="mt-0.5 text-[10px] font-semibold text-neutral-300">
+                      <div className="mt-0.5 text-[10px] font-semibold text-emerald-300">
                         ↗ {k.trend}
                       </div>
                     </div>
@@ -125,7 +125,7 @@ export const WhiteLabelSection = () => {
                     {BARS.map((h, i) => (
                       <div
                         key={i}
-                        className="flex-1 rounded-sm bg-[#FFFFFF]"
+                        className="flex-1 rounded-sm bg-[#4D7CFF]"
                         style={{ height: `${h}%` }}
                       />
                     ))}

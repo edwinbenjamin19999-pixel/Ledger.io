@@ -86,13 +86,13 @@ export function AICategorizeDialog({ open,
       <DialogContent className="max-w-md">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-[#000000]" />
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
             AI-kategorisering
           </DialogTitle>
         </DialogHeader>
 
         <div className="space-y-4">
-          <div className="p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20 space-y-2">
+          <div className="p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20 space-y-2">
             <p className="text-xs text-muted-foreground">Du skrev: "{description}"</p>
             <p className="text-xs text-muted-foreground">
               Tid: {formatHours(durationMinutes)}h
@@ -102,7 +102,7 @@ export function AICategorizeDialog({ open,
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <Label className="text-xs font-medium">AI-förslag</Label>
-              <Badge variant="outline" className="bg-[#000000]/10 text-[#000000] text-[10px]">
+              <Badge variant="outline" className="bg-[#3b82f6]/10 text-[#3b82f6] text-[10px]">
                 {suggestion.confidence}% konfidens
               </Badge>
             </div>
@@ -141,7 +141,7 @@ export function AICategorizeDialog({ open,
                   billable: editedBillable,
                 })
               }
-              className="bg-[#000000] hover:bg-[#000000]/90 text-foreground gap-1.5"
+              className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground gap-1.5"
             >
               <Check className="h-4 w-4" />
               Bekräfta och spara

@@ -320,7 +320,7 @@ export const EnterpriseOnboarding = () => { const navigate = useNavigate();
   // Block if user already has a group
   if (existingGroup) { return (
       <div className="max-w-4xl mx-auto space-y-6 p-6">
-        <Card className="border-neutral-700">
+        <Card className="border-amber-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-[#7A5417]">
               <AlertCircle className="w-5 h-5" />
@@ -364,12 +364,12 @@ export const EnterpriseOnboarding = () => { const navigate = useNavigate();
       {step === 1 && (
         <div className="space-y-6">
           {/* BankID Verification Card */}
-          <Card className={isBankIdVerified ? "border-neutral-700" : ""}>
+          <Card className={isBankIdVerified ? "border-green-500" : ""}>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="w-5 h-5" />
                 BankID-verifiering
-                {isBankIdVerified && <Badge variant="default" className="ml-2 bg-neutral-700">Verifierad</Badge>}
+                {isBankIdVerified && <Badge variant="default" className="ml-2 bg-green-600">Verifierad</Badge>}
               </CardTitle>
               <CardDescription>
                 Verifiera din identitet för att säkerställa att du har rätt att koppla bolagen
@@ -379,7 +379,7 @@ export const EnterpriseOnboarding = () => { const navigate = useNavigate();
               {isBankIdVerified ? (
                 <Alert className="bg-[#E1F5EE] dark:bg-green-950 border-[#BFE6D6]">
                   <CheckCircle2 className="h-4 w-4 text-[#085041]" />
-                  <AlertDescription className="text-[#085041] dark:text-neutral-300">
+                  <AlertDescription className="text-[#085041] dark:text-green-200">
                     Din identitet är verifierad med BankID. Du kan nu fortsätta med registreringen.
                   </AlertDescription>
                 </Alert>
@@ -596,7 +596,7 @@ export const EnterpriseOnboarding = () => { const navigate = useNavigate();
                           </TableCell>
                           <TableCell>
                             {preview.status === 'found' && (
-                              <Badge variant="default" className="bg-neutral-700">Hittad</Badge>
+                              <Badge variant="default" className="bg-green-600">Hittad</Badge>
                             )}
                             {preview.status === 'manual' && preview.name && (
                               <Badge variant="secondary">Manuell</Badge>
@@ -677,14 +677,14 @@ export const EnterpriseOnboarding = () => { const navigate = useNavigate();
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="p-4 bg-[#E1F5EE] dark:bg-green-950 rounded-lg space-y-2">
-              <p className="font-medium text-[#085041] dark:text-neutral-100 flex items-center gap-2">
+              <p className="font-medium text-[#085041] dark:text-green-100 flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" /> Koncern "{groupData.name}" skapad
               </p>
-              <p className="font-medium text-[#085041] dark:text-neutral-100 flex items-center gap-2">
+              <p className="font-medium text-[#085041] dark:text-green-100 flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" /> Faktureringsbolag uppsatt
               </p>
               {subsidiaryPreviews.length > 0 && (
-                <p className="font-medium text-[#085041] dark:text-neutral-100 flex items-center gap-2">
+                <p className="font-medium text-[#085041] dark:text-green-100 flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4" /> {validCount} dotterbolag importerade
                 </p>
               )}

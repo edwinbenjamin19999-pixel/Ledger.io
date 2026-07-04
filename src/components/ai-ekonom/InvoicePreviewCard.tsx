@@ -124,12 +124,12 @@ export const InvoicePreviewCard = ({ data, companyId }: Props) => {
   };
 
   return (
-    <div className="mt-3 rounded-2xl border border-[#C8DDF5] bg-gradient-to-br from-[#000000]/5 via-card to-card shadow-sm overflow-hidden">
+    <div className="mt-3 rounded-2xl border border-[#C8DDF5] bg-gradient-to-br from-[#3b82f6]/5 via-card to-card shadow-sm overflow-hidden">
       {/* Header */}
       <div className="px-4 py-3 border-b border-border/40 bg-[#EFF6FF] flex items-center justify-between gap-3">
         <div className="flex items-center gap-2.5 min-w-0">
           <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] flex items-center justify-center shrink-0">
-            <FileText className="w-4 h-4 text-[#000000] dark:text-[#1E3A5F]" />
+            <FileText className="w-4 h-4 text-[#3b82f6] dark:text-[#1E3A5F]" />
           </div>
           <div className="min-w-0">
             <p className="text-xs text-muted-foreground">Fakturautkast</p>
@@ -159,7 +159,7 @@ export const InvoicePreviewCard = ({ data, companyId }: Props) => {
           {data.customer_was_created && data.customer.id && (
             <button
               onClick={() => navigate(`/customers?customer=${data.customer.id}`)}
-              className="text-[11px] flex items-center gap-1 text-[#000000] dark:text-[#1E3A5F] hover:underline"
+              className="text-[11px] flex items-center gap-1 text-[#3b82f6] dark:text-[#1E3A5F] hover:underline"
             >
               <UserPlus className="w-3 h-3" />
               Ny kund — komplettera uppgifter
@@ -207,7 +207,7 @@ export const InvoicePreviewCard = ({ data, companyId }: Props) => {
           size="sm"
           onClick={handleSend}
           disabled={status !== "draft"}
-          className="bg-[#000000] hover:bg-[#000000] text-white"
+          className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
         >
           {status === "sending" ? (
             <><Loader2 className="w-3.5 h-3.5 mr-1.5 animate-spin" /> Skickar…</>

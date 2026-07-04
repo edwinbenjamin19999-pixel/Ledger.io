@@ -25,7 +25,7 @@ const STATUS_LABELS: Record<string, string> = {
 
 const TYPES = [
   { value: "work", label: "Arbete", bg: "#E1F5EE", color: "#085041", border: "#5DCAA5", row: "#FFFFFF" },
-  { value: "overtime", label: "Övertid", bg: "#FAEEDA", color: "#412402", border: "#525252", row: "#FFFBF0" },
+  { value: "overtime", label: "Övertid", bg: "#FAEEDA", color: "#412402", border: "#EF9F27", row: "#FFFBF0" },
   { value: "sick", label: "Sjuk", bg: "#FCEBEB", color: "#791F1F", border: "#F09595", row: "#FFF8F8" },
   { value: "vacation", label: "Semester", bg: "#EFF6FF", color: "#0C447C", border: "#85B7EB", row: "#F5F9FF" },
   { value: "vab", label: "VAB", bg: "#EFF6FF", color: "#0C447C", border: "#85B7EB", row: "#F5F9FF" },
@@ -208,7 +208,7 @@ export function HRTimeReportTab({ companyId }: Props) {
               className={cn(
                 "text-[11px] rounded-full px-2 py-[3px]",
                 status === s
-                  ? "bg-[#000000] text-white"
+                  ? "bg-[#0040CC] text-white"
                   : "bg-white border-[0.5px] border-[#E2E8F0] text-[#475569]",
               )}
             >
@@ -218,7 +218,7 @@ export function HRTimeReportTab({ companyId }: Props) {
         </div>
         <button
           onClick={() => setShowAdd((s) => !s)}
-          className="ml-auto text-[12px] inline-flex items-center gap-1 px-3 py-[6px] rounded-[8px] bg-[#000000] text-[#E6F4FA]"
+          className="ml-auto text-[12px] inline-flex items-center gap-1 px-3 py-[6px] rounded-[8px] bg-[#0040CC] text-[#E6F4FA]"
         >
           <Plus className="h-3 w-3" /> Lägg till tidsrad
         </button>
@@ -273,7 +273,7 @@ export function HRTimeReportTab({ companyId }: Props) {
           <button
             onClick={() => insert.mutate()}
             disabled={insert.isPending}
-            className="text-[12px] rounded-[6px] bg-[#000000] text-[#E6F4FA] py-[6px] disabled:opacity-50"
+            className="text-[12px] rounded-[6px] bg-[#0040CC] text-[#E6F4FA] py-[6px] disabled:opacity-50"
           >
             Spara
           </button>
@@ -332,7 +332,7 @@ export function HRTimeReportTab({ companyId }: Props) {
                             style={{
                               background: r.status === "approved" ? "#E1F5EE" : r.status === "rejected" ? "#FCEBEB" : "#FAEEDA",
                               color: r.status === "approved" ? "#085041" : r.status === "rejected" ? "#791F1F" : "#412402",
-                              border: `0.5px solid ${r.status === "approved" ? "#5DCAA5" : r.status === "rejected" ? "#F09595" : "#525252"}`,
+                              border: `0.5px solid ${r.status === "approved" ? "#5DCAA5" : r.status === "rejected" ? "#F09595" : "#EF9F27"}`,
                             }}
                           >
                             {r.status === "approved" ? "Godkänd" : r.status === "rejected" ? "Nekad" : "Väntar"}

@@ -35,10 +35,10 @@ export function OnboardingShell({
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto h-16 px-6 flex items-center justify-between">
           <Link to="/white-label" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-[#000000] to-[#000000] flex items-center justify-center text-white font-bold text-xs">
+            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-[#3b82f6] to-[#3b82f6] flex items-center justify-center text-white font-bold text-xs">
               C
             </div>
-            <span className="text-sm font-semibold text-slate-900">Bokfy</span>
+            <span className="text-sm font-semibold text-slate-900">Cogniq</span>
             <span className="hidden sm:inline text-xs text-slate-400 ml-1">White Label</span>
           </Link>
           <StepProgress current={step} steps={steps} />
@@ -75,7 +75,7 @@ export function OnboardingShell({
             <Button
               onClick={onNext}
               disabled={!canGoNext || loading}
-              className="bg-[#000000] hover:bg-[#000000] text-white px-6 shadow-[0_2px_12px_rgba(0,0,0,0.25)]"
+              className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white px-6 shadow-[0_2px_12px_rgba(0,82,255,0.25)]"
             >
               {loading ? (
                 <Loader2 className="h-4 w-4 animate-spin" />

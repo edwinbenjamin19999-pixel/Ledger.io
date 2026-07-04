@@ -17,8 +17,8 @@ export function KPIFilterCards({ stats, currentFilter, onFilterChange }: Props) 
 
   const accentMap: Record<string, { gradient: string; border: string; bg: string; iconBg: string; iconText: string; numText: string }> = {
     all: { gradient: "from-slate-50 to-white", border: "border-slate-200", bg: "bg-gradient-to-br", iconBg: "bg-slate-100", iconText: "text-slate-500", numText: "text-slate-900" },
-    active: { gradient: "from-neutral-100/80 to-white", border: "border-[#BFE6D6]", bg: "bg-gradient-to-br", iconBg: "bg-[#E1F5EE]", iconText: "text-[#085041]", numText: "text-[#085041]" },
-    vat: { gradient: "from-neutral-100/80 to-white", border: "border-[#E2E8F0]", bg: "bg-gradient-to-br", iconBg: "bg-[#F1F5F9]", iconText: "text-neutral-700", numText: "text-neutral-700" },
+    active: { gradient: "from-emerald-50/80 to-white", border: "border-[#BFE6D6]", bg: "bg-gradient-to-br", iconBg: "bg-[#E1F5EE]", iconText: "text-[#085041]", numText: "text-[#085041]" },
+    vat: { gradient: "from-violet-50/80 to-white", border: "border-[#E2E8F0]", bg: "bg-gradient-to-br", iconBg: "bg-[#F1F5F9]", iconText: "text-violet-600", numText: "text-violet-700" },
   };
 
   return (

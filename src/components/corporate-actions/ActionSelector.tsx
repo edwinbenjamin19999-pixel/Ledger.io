@@ -96,12 +96,12 @@ export const ActionSelector = ({ onSelect }: ActionSelectorProps) => { const [qu
                   <span key={doc} className="text-[10px] px-1.5 py-0.5 bg-muted rounded">{doc}</span>
                 ))}
                 {template.accounts.length > 0 && (
-                  <span className="text-[10px] px-1.5 py-0.5 bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75] rounded">
+                  <span className="text-[10px] px-1.5 py-0.5 bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75] rounded">
                     Bokföring
                   </span>
                 )}
                 {template.requiresSigning && (
-                  <span className="text-[10px] px-1.5 py-0.5 bg-[#EFF6FF] text-black dark:bg-blue-900/30 dark:text-[#1E3A5F] rounded">
+                  <span className="text-[10px] px-1.5 py-0.5 bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30 dark:text-[#1E3A5F] rounded">
                     BankID
                   </span>
                 )}

@@ -29,7 +29,7 @@ export function KassaVatOptimization({ sales }: Props) {
   const totalMoms = vatBreakdown.reduce((s, v) => s + v.moms, 0);
   const avgVatRate = monthTotal > 0 ? (totalMoms / (monthTotal - totalMoms)) * 100 : 0;
 
-  const chartColors = ["#000000", "#000000", "#f97316", "#525252"];
+  const chartColors = ["#3b82f6", "#3b82f6", "#f97316", "#f59e0b"];
 
   // Find highest VAT day (simulated)
   const highestVatDay = useMemo(() => { if (sales.length === 0) return null;
@@ -75,7 +75,7 @@ export function KassaVatOptimization({ sales }: Props) {
       <Card>
         <CardHeader className="pb-2">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-[#000000]" />
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
             <CardTitle className="text-base">Momsfördelning kassaförsäljning</CardTitle>
           </div>
         </CardHeader>
@@ -131,8 +131,8 @@ export function KassaVatOptimization({ sales }: Props) {
 
       {/* AI insights */}
       {highestVatDay && (
-        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20">
-          <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
+          <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
           <p className="text-xs text-muted-foreground">
             Högsta moms-dag: {highestVatDay.date} ({highestVatDay.rate}%) — hög alkoholförsäljning.
             Genomsnittlig momsbörda {avgVatRate.toFixed(1)}% indikerar blandat sortiment med övervikt

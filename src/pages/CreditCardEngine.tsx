@@ -400,8 +400,8 @@ export default function CreditCardEngine() {
           Välj ett bolag för att hantera kreditkortsbokföring.
         </div>
       ) : transactions.length === 0 ? (
-        <Card className="rounded-2xl border-l-[3px] border-l-[#000000] p-10 text-center bg-white">
-          <Sparkles className="h-10 w-10 text-[#000000] mx-auto mb-3" />
+        <Card className="rounded-2xl border-l-[3px] border-l-[#3b82f6] p-10 text-center bg-white">
+          <Sparkles className="h-10 w-10 text-[#3b82f6] mx-auto mb-3" />
           <h2 className="text-xl font-semibold text-slate-900 mb-2">
             Du är redo att automatisera din kreditkortsbokföring
           </h2>
@@ -444,7 +444,7 @@ export default function CreditCardEngine() {
                   <TabsTrigger value="missing_receipt" className="data-[state=active]:text-[#7A5417]">
                     Saknar kvitto ({buckets.missing_receipt.length})
                   </TabsTrigger>
-                  <TabsTrigger value="ready" className="data-[state=active]:text-[#000000]">
+                  <TabsTrigger value="ready" className="data-[state=active]:text-[#3b82f6]">
                     Klar att bokföra ({buckets.ready.length})
                   </TabsTrigger>
                   <TabsTrigger value="posted" className="data-[state=active]:text-[#085041]">

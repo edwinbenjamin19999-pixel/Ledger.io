@@ -13,8 +13,8 @@ const statusLabel: Record<string, string> = { sent: "Skickad",
   draft: "Utkast",
 };
 
-const statusBadge: Record<string, string> = { sent: "bg-[#EFF6FF] text-black dark:bg-blue-900/30 dark:text-[#1E3A5F]",
-  paid: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]",
+const statusBadge: Record<string, string> = { sent: "bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30 dark:text-[#1E3A5F]",
+  paid: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]",
   overdue: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]",
   draft: "bg-muted text-muted-foreground",
 };

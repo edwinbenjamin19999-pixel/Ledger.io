@@ -83,7 +83,7 @@ export function JournalEntryCard({
           <div
             className={cn(
               "rounded-xl p-2 shrink-0",
-              isPosted ? "bg-neutral-700" : "bg-neutral-700",
+              isPosted ? "bg-emerald-600" : "bg-indigo-600",
             )}
           >
             {isPosted ? (
@@ -107,10 +107,10 @@ export function JournalEntryCard({
             className={cn(
               "text-[10px] font-semibold px-2 py-1 rounded-full border",
               confidencePct >= 95
-                ? "bg-neutral-700/10 text-neutral-300 border-neutral-700/30"
+                ? "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
                 : confidencePct >= 80
-                  ? "bg-neutral-700/10 text-neutral-300 border-neutral-700/30"
-                  : "bg-neutral-700/10 text-neutral-300 border-neutral-700/30",
+                  ? "bg-amber-500/10 text-amber-300 border-amber-500/30"
+                  : "bg-rose-500/10 text-rose-300 border-rose-500/30",
             )}
           >
             {confidencePct}%
@@ -173,7 +173,7 @@ export function JournalEntryCard({
             <span
               className={cn(
                 "font-semibold",
-                balanced ? "text-neutral-700" : "text-neutral-700",
+                balanced ? "text-emerald-400" : "text-rose-400",
               )}
             >
               {formatSEK(totalCredit)}
@@ -181,7 +181,7 @@ export function JournalEntryCard({
           </div>
         </div>
         {!balanced && (
-          <p className="text-neutral-700 text-[11px] mt-1">
+          <p className="text-rose-400 text-[11px] mt-1">
             ⚠ Differens {formatSEK(Math.abs(totalDebit - totalCredit))}
           </p>
         )}

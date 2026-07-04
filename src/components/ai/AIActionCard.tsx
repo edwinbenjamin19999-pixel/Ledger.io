@@ -82,8 +82,8 @@ export const AIActionCard = ({ action, onComplete }: Props) => {
   // Declined / out-of-scope card
   if (action.declined) {
     return (
-      <div className="rounded-xl border border-neutral-700/30 bg-neutral-700/5 p-3 space-y-2 text-xs">
-        <div className="flex items-center gap-2 font-semibold text-neutral-700 dark:text-neutral-700">
+      <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-3 space-y-2 text-xs">
+        <div className="flex items-center gap-2 font-semibold text-amber-600 dark:text-amber-400">
           <AlertTriangle className="w-3.5 h-3.5" /> {action.title}
         </div>
         <p className="text-foreground/90 leading-relaxed">{action.declineMessage}</p>
@@ -98,13 +98,13 @@ export const AIActionCard = ({ action, onComplete }: Props) => {
     <div
       className={cn(
         "rounded-xl border bg-card p-3 space-y-3 text-xs",
-        phase === "done" && "border-neutral-700/40 bg-neutral-700/5",
+        phase === "done" && "border-emerald-500/40 bg-emerald-500/5",
         phase === "cancelled" && "opacity-60"
       )}
     >
       <div className="flex items-start gap-2">
-        <div className="w-6 h-6 rounded-md bg-[#000000]/15 flex items-center justify-center shrink-0 mt-0.5">
-          <Sparkles className="w-3.5 h-3.5 text-[#000000]" />
+        <div className="w-6 h-6 rounded-md bg-[#3b82f6]/15 flex items-center justify-center shrink-0 mt-0.5">
+          <Sparkles className="w-3.5 h-3.5 text-[#3b82f6]" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="font-semibold text-foreground">{action.title}</div>
@@ -127,7 +127,7 @@ export const AIActionCard = ({ action, onComplete }: Props) => {
         <div className="flex gap-2 pt-1">
           <button
             onClick={execute}
-            className="flex-1 h-8 rounded-lg bg-[#000000] hover:bg-[#000000]/90 text-white font-medium flex items-center justify-center gap-1.5 transition-colors"
+            className="flex-1 h-8 rounded-lg bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white font-medium flex items-center justify-center gap-1.5 transition-colors"
           >
             <Check className="w-3.5 h-3.5" /> {action.confirmLabel ?? "Ja, gör det"}
           </button>
@@ -147,14 +147,14 @@ export const AIActionCard = ({ action, onComplete }: Props) => {
       )}
 
       {phase === "done" && (
-        <div className="space-y-1.5 pt-1 border-t border-neutral-700/20">
-          <div className="flex items-center gap-1.5 text-neutral-700 dark:text-neutral-700 font-medium">
+        <div className="space-y-1.5 pt-1 border-t border-emerald-500/20">
+          <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-medium">
             <Check className="w-3.5 h-3.5" /> {resultMsg}
           </div>
           {["send_reminder", "mark_invoice_paid", "post_journal", "periodize_cost"].includes(action.kind) && (
             <button
               onClick={() => toast.info("Åtgärden ångrad.")}
-              className="text-[#000000] hover:underline inline-flex items-center gap-1"
+              className="text-[#3b82f6] hover:underline inline-flex items-center gap-1"
             >
               <RotateCcw className="w-3 h-3" /> Ångra
             </button>

@@ -72,7 +72,7 @@ export const AccrualSuggestionBanner = ({
   return (
     <>
       <div className="p-3 rounded-[10px] border-[0.5px] border-[#C8DDF5] bg-[#EFF6FF] flex items-start gap-3">
-        <div className="w-7 h-7 rounded-full bg-[#000000] flex items-center justify-center shrink-0">
+        <div className="w-7 h-7 rounded-full bg-[#3b82f6] flex items-center justify-center shrink-0">
           <Sparkles className="w-3.5 h-3.5 text-white" />
         </div>
         <div className="flex-1">
@@ -81,7 +81,7 @@ export const AccrualSuggestionBanner = ({
           </p>
           <p className="text-[11px] text-[#3b5a85] mt-0.5">{signal.reason} · förslag: {signal.suggestedMonths} månader</p>
           <div className="flex gap-2 mt-2">
-            <Button size="sm" onClick={() => setOpen(true)} className="h-[28px] bg-[#000000] hover:bg-[#000000] text-white">
+            <Button size="sm" onClick={() => setOpen(true)} className="h-[28px] bg-[#3b82f6] hover:bg-[#0052FF] text-white">
               Ja – periodisera automatiskt
             </Button>
             <Button size="sm" variant="outline" onClick={() => { setMonths(signal.suggestedMonths); setOpen(true); }} className="h-[28px]">
@@ -133,7 +133,7 @@ export const AccrualSuggestionBanner = ({
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setOpen(false)}>Avbryt</Button>
-            <Button onClick={handleConfirm} disabled={saving} className="bg-[#000000] hover:bg-[#000000]">
+            <Button onClick={handleConfirm} disabled={saving} className="bg-[#3b82f6] hover:bg-[#0052FF]">
               {saving ? "Sparar..." : "Bekräfta & skapa"}
             </Button>
           </DialogFooter>

@@ -121,7 +121,7 @@ export function AgentDashboard({ companyId }: AgentDashboardProps) {
             <Switch
               checked={shadowMode}
               onCheckedChange={setShadowMode}
-              className="data-[state=checked]:bg-[#94A3B8] data-[state=unchecked]:bg-[#000000]"
+              className="data-[state=checked]:bg-[#94A3B8] data-[state=unchecked]:bg-[#0040CC]"
             />
             <span className="text-[12px] font-medium min-w-[100px] text-[#0F172A]">
               {shadowMode ? (
@@ -148,8 +148,8 @@ export function AgentDashboard({ companyId }: AgentDashboardProps) {
           className={cn(
             "relative overflow-hidden rounded-2xl border p-8 md:p-10",
             isDark
-              ? "bg-[#0F1F3D] border-slate-800 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.3)]"
-              : "bg-gradient-to-br from-blue-50/60 via-white to-white border-slate-200 shadow-[0_8px_40px_-16px_rgba(0,0,0,0.18)]"
+              ? "bg-[#0F1F3D] border-slate-800 shadow-[0_8px_40px_-12px_rgba(0,82,255,0.3)]"
+              : "bg-gradient-to-br from-blue-50/60 via-white to-white border-slate-200 shadow-[0_8px_40px_-16px_rgba(0,82,255,0.18)]"
           )}
         >
           <div className={cn(
@@ -187,13 +187,13 @@ export function AgentDashboard({ companyId }: AgentDashboardProps) {
               <div className="flex flex-wrap items-center gap-4">
                 <Button
                   onClick={() => navigate('/bankintegration')}
-                  className="h-[38px] px-[16px] rounded-[8px] bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] text-[12px] font-medium"
+                  className="h-[38px] px-[16px] rounded-[8px] bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] text-[12px] font-medium"
                 >
                   <Sparkles className="h-4 w-4 mr-1.5" />Aktivera autopilot
                 </Button>
                 <button
                   type="button"
-                  className="text-[12px] text-[#000000] hover:underline cursor-pointer bg-transparent border-0 p-0"
+                  className="text-[12px] text-[#0040CC] hover:underline cursor-pointer bg-transparent border-0 p-0"
                 >
                   Hur fungerar det? →
                 </button>
@@ -223,21 +223,21 @@ export function AgentDashboard({ companyId }: AgentDashboardProps) {
               <div className="flex items-center justify-between mb-3">
                 <p className="text-sm font-semibold flex items-center gap-2">
                   <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]" />
                   </span>
                   AI-konfidensfördelning — Live
                 </p>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-[#000000]" /> Auto ≥92%</span>
-                  <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-[#525252]" /> Granska 60-92%</span>
-                  <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-[#525252]" /> Flaggad &lt;60%</span>
+                  <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-[#22c55e]" /> Auto ≥92%</span>
+                  <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]" /> Granska 60-92%</span>
+                  <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-[#ef4444]" /> Flaggad &lt;60%</span>
                 </div>
               </div>
               <div className="h-4 rounded-full overflow-hidden flex bg-muted/30">
-                <div className="bg-[#000000] transition-all duration-700 rounded-l-full" style={{ width: `${greenPct}%` }} />
-                <div className="bg-[#525252] transition-all duration-700" style={{ width: `${yellowPct}%` }} />
-                <div className="bg-[#525252] transition-all duration-700 rounded-r-full" style={{ width: `${redPct}%` }} />
+                <div className="bg-[#22c55e] transition-all duration-700 rounded-l-full" style={{ width: `${greenPct}%` }} />
+                <div className="bg-[#f59e0b] transition-all duration-700" style={{ width: `${yellowPct}%` }} />
+                <div className="bg-[#ef4444] transition-all duration-700 rounded-r-full" style={{ width: `${redPct}%` }} />
               </div>
               <div className="flex justify-between mt-2 text-xs text-muted-foreground">
                 <span>{autoBooked} auto</span>
@@ -253,23 +253,23 @@ export function AgentDashboard({ companyId }: AgentDashboardProps) {
       <Tabs defaultValue={shadowMode ? "shadow" : "feed"}>
         <TabsList className="flex-wrap h-auto gap-0 rounded-none bg-transparent p-0 border-b border-[#E2E8F0] w-full justify-start">
           {shadowMode && (
-            <TabsTrigger value="shadow" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:shadow-none">
+            <TabsTrigger value="shadow" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none">
               <Eye className="h-4 w-4" /> Skuggläge
             </TabsTrigger>
           )}
-          <TabsTrigger value="feed" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:shadow-none">
+          <TabsTrigger value="feed" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none">
             <Radio className="h-4 w-4" /> Transaktioner
           </TabsTrigger>
-          <TabsTrigger value="review" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:shadow-none">
+          <TabsTrigger value="review" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none">
             <CheckCircle className="h-4 w-4" /> Granskning
           </TabsTrigger>
-          <TabsTrigger value="rules" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:shadow-none">
+          <TabsTrigger value="rules" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none">
             <Wrench className="h-4 w-4" /> Bokföringsregler
           </TabsTrigger>
-          <TabsTrigger value="performance" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:shadow-none">
+          <TabsTrigger value="performance" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none">
             <BarChart3 className="h-4 w-4" /> Prestanda
           </TabsTrigger>
-          <TabsTrigger value="learning" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:font-medium data-[state=active]:border-[#000000] data-[state=active]:shadow-none">
+          <TabsTrigger value="learning" className="gap-1.5 rounded-none bg-transparent text-[12px] text-[#475569] border-b-2 border-transparent px-[14px] py-[8px] -mb-px data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:font-medium data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none">
             <TrendingUp className="h-4 w-4" /> Inlärning
           </TabsTrigger>
         </TabsList>
@@ -317,7 +317,7 @@ function OnboardingStep({
           : "bg-white border-[#E2E8F0] hover:bg-[#F8FAFB]"
       )}
     >
-      {!isDark && <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#000000]" />}
+      {!isDark && <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0040CC]" />}
       <div className="relative shrink-0">
         <div className={cn(
           "h-9 w-9 rounded-[10px] flex items-center justify-center",
@@ -325,7 +325,7 @@ function OnboardingStep({
         )}>
           <Icon className={cn("h-4 w-4", isDark ? "text-white/60" : "text-[#475569]")} />
         </div>
-        <span className="absolute -top-1.5 -left-1.5 w-[24px] h-[24px] rounded-full bg-[#000000] text-[#E6F4FA] text-[11px] font-medium flex items-center justify-center">
+        <span className="absolute -top-1.5 -left-1.5 w-[24px] h-[24px] rounded-full bg-[#0040CC] text-[#E6F4FA] text-[11px] font-medium flex items-center justify-center">
           {num}
         </span>
       </div>
@@ -335,7 +335,7 @@ function OnboardingStep({
       </div>
       <span className={cn(
         "text-[11px] font-medium group-hover:translate-x-0.5 transition-transform",
-        isDark ? "text-white/70" : "text-[#000000]"
+        isDark ? "text-white/70" : "text-[#0040CC]"
       )}>{cta}</span>
     </button>
   );

@@ -154,7 +154,7 @@ export const ServiceAgreementSign = ({ onSigned, onSkip, companyId }: ServiceAgr
         <Alert>
           <Shield className="h-4 w-4" />
           <AlertDescription>
-            För att använda Bokfy:s tjänster behöver du godkänna vårt tjänsteavtal. 
+            För att använda Cogniq:s tjänster behöver du godkänna vårt tjänsteavtal. 
             Vi rekommenderar signering med BankID för högsta säkerhet.
           </AlertDescription>
         </Alert>
@@ -192,7 +192,7 @@ export const ServiceAgreementSign = ({ onSigned, onSkip, companyId }: ServiceAgr
         </Dialog>
 
         {hasRead && (
-          <div className="p-4 bg-[#E1F5EE] border border-neutral-700/20 rounded-lg flex items-center gap-2">
+          <div className="p-4 bg-[#E1F5EE] border border-green-500/20 rounded-lg flex items-center gap-2">
             <CheckCircle2 className="h-4 w-4 text-[#085041]" />
             <span className="text-sm text-[#085041] dark:text-[#1D9E75]">Du har läst avtalet</span>
           </div>

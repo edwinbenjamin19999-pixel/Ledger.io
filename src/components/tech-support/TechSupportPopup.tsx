@@ -21,9 +21,9 @@ interface Props {
 }
 
 const modeColor: Record<string, string> = {
-  AUTO: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/40 dark:text-neutral-300",
-  ASSISTED: "bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/40 dark:text-neutral-300",
-  BLOCKED: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-neutral-700/40 dark:text-neutral-300",
+  AUTO: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/40 dark:text-emerald-200",
+  ASSISTED: "bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/40 dark:text-amber-200",
+  BLOCKED: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-rose-900/40 dark:text-rose-200",
 };
 
 export function TechSupportPopup({ open, plan, onClose, onResult }: Props) {
@@ -65,7 +65,7 @@ export function TechSupportPopup({ open, plan, onClose, onResult }: Props) {
             {plan.mode === "BLOCKED" ? (
               <ShieldAlert className="h-5 w-5 text-[#7A1A1A]" />
             ) : (
-              <Wrench className="h-5 w-5 text-[#000000]" />
+              <Wrench className="h-5 w-5 text-[#3b82f6]" />
             )}
             Teknisk support
           </DialogTitle>
@@ -157,8 +157,8 @@ export function TechSupportPopup({ open, plan, onClose, onResult }: Props) {
           )}
 
           {plan.escalate && (
-            <section className="rounded-lg border border-[#F4C8C8] bg-neutral-100/50 p-3 dark:border-neutral-700/40 dark:bg-rose-950/30">
-              <p className="text-xs text-[#7A1A1A] dark:text-neutral-100">
+            <section className="rounded-lg border border-[#F4C8C8] bg-rose-50/50 p-3 dark:border-rose-900/40 dark:bg-rose-950/30">
+              <p className="text-xs text-[#7A1A1A] dark:text-rose-100">
                 Det här kräver vår support. Klicka nedan för att skicka ett ärende — vi har redan loggat detaljerna.
               </p>
               <Button
@@ -168,7 +168,7 @@ export function TechSupportPopup({ open, plan, onClose, onResult }: Props) {
                 asChild
               >
                 <a
-                  href={`mailto:support@bokfy.se?subject=${encodeURIComponent(
+                  href={`mailto:support@cogniq.se?subject=${encodeURIComponent(
                     "Teknisk support: " + (plan.incident.module ?? "okänd modul"),
                   )}&body=${encodeURIComponent(
                     `Incident-ID: ${plan.incident.id}\nKlassificering: ${plan.incident.classification}\nFel: ${plan.incident.errorMessage}`,

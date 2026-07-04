@@ -175,7 +175,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
   const runwayPct = Math.min((runwayMonths / 12) * 100, 100);
   const runwayColor = runwayMonths < 3 ? "destructive" : runwayMonths < 6 ? "warning" : "ok";
 
-  const gaugeMarginColor = cfoData.ebitdaMargin < 10 ? "#525252" : cfoData.ebitdaMargin < 20 ? "#525252" : "#000000";
+  const gaugeMarginColor = cfoData.ebitdaMargin < 10 ? "#ef4444" : cfoData.ebitdaMargin < 20 ? "#f59e0b" : "#10b981";
 
   const alertCount = effectiveSnapshot ? (
     (runwayMonths < 3 ? 1 : 0) +
@@ -208,7 +208,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {/* KASSABALANS */}
-        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10">
+        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10">
           <CardContent className="pt-4 pb-3 px-4">
             <div className="flex items-center gap-2 mb-1">
               <DollarSign className={cn("h-4 w-4", runwayColor === "destructive" ? "text-destructive" : "text-[#085041]")} />
@@ -227,7 +227,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
                   {runwayMonths} månader
                 </span>
               </div>
-              <Progress value={runwayPct} className={cn("h-1.5", runwayColor === "destructive" && "[&>div]:bg-destructive", runwayColor === "warning" && "[&>div]:bg-neutral-700")} />
+              <Progress value={runwayPct} className={cn("h-1.5", runwayColor === "destructive" && "[&>div]:bg-destructive", runwayColor === "warning" && "[&>div]:bg-amber-500")} />
             </div>
             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-2 text-[10px] text-muted-foreground bg-white/50 dark:bg-white/5 rounded px-2 py-1">
               {runwayMonths < 6 ? "Likviditeten kräver uppmärksamhet" : "God likviditetsbuffert"}
@@ -236,10 +236,10 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         </Card>
 
         {/* OMSÄTTNING */}
-        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '50ms' }}>
+        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '50ms' }}>
           <CardContent className="pt-4 pb-3 px-4">
             <div className="flex items-center gap-2 mb-1">
-              <TrendingUp className="h-4 w-4 text-[#000000]" />
+              <TrendingUp className="h-4 w-4 text-[#3b82f6]" />
               <span className="text-xs text-muted-foreground">Omsättning (mån)</span>
             </div>
             <div className="flex items-center gap-2">
@@ -270,7 +270,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         </Card>
 
         {/* EBITDA-MARGINAL */}
-        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '100ms' }}>
+        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '100ms' }}>
           <CardContent className="pt-4 pb-3 px-4">
             <div className="flex items-center gap-2 mb-1">
               <Shield className="h-4 w-4" style={{ color: gaugeMarginColor }} />
@@ -296,7 +296,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         </Card>
 
         {/* ÅRETS RESULTAT */}
-        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '150ms' }}>
+        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '150ms' }}>
           <CardContent className="pt-4 pb-3 px-4">
             <div className="flex items-center gap-2 mb-1">
               <Calendar className="h-4 w-4 text-[#7A5417]" />
@@ -327,21 +327,21 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
       </div>
 
       {/* AI Summary Card — Centerpiece */}
-      <div className="bg-[#0F1F3D] dark:from-indigo-950/30 dark:to-blue-950/20 border border-neutral-300/40 dark:border-neutral-700/30 rounded-2xl p-6 animate-fade-in">
+      <div className="bg-[#0F1F3D] dark:from-indigo-950/30 dark:to-blue-950/20 border border-indigo-200/40 dark:border-indigo-800/30 rounded-2xl p-6 animate-fade-in">
         <div className="flex items-center gap-2 mb-4">
           <div className="h-8 w-8 rounded-xl bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_12px_rgba(99,102,241,0.25)]">
             <Sparkles className="h-4 w-4 text-white" />
           </div>
-          <span className="text-sm font-bold text-neutral-700 dark:text-neutral-300">AI Analys</span>
+          <span className="text-sm font-bold text-indigo-900 dark:text-indigo-200">AI Analys</span>
         </div>
         <div className="space-y-2">
           {summaryLines.map((line, i) => {
             const icons = [Brain, TrendingUp, Shield];
             const LineIcon = icons[i % icons.length];
             return (
-              <div key={i} className="flex items-start gap-3 bg-white/50 dark:bg-white/5 rounded-lg p-3 border border-neutral-100/30 dark:border-neutral-700/20">
-                <LineIcon className="h-4 w-4 text-neutral-700 mt-0.5 shrink-0" />
-                <p className="text-sm text-neutral-700/90 dark:text-neutral-300/80">{line}</p>
+              <div key={i} className="flex items-start gap-3 bg-white/50 dark:bg-white/5 rounded-lg p-3 border border-indigo-100/30 dark:border-indigo-800/20">
+                <LineIcon className="h-4 w-4 text-indigo-500 mt-0.5 shrink-0" />
+                <p className="text-sm text-indigo-800/90 dark:text-indigo-200/80">{line}</p>
               </div>
             );
           })}
@@ -351,18 +351,18 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
       {/* Opportunity & Risk Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in">
         {/* Opportunities */}
-        <div className="border border-neutral-300/50 bg-[#0F1F3D] dark:from-emerald-950/20 dark:to-green-950/10 rounded-2xl p-4 shadow-[0_0_16px_rgba(16,185,129,0.08)]">
+        <div className="border border-emerald-200/50 bg-[#0F1F3D] dark:from-emerald-950/20 dark:to-green-950/10 rounded-2xl p-4 shadow-[0_0_16px_rgba(16,185,129,0.08)]">
           <div className="flex items-center gap-2 mb-3">
             <Lightbulb className="h-4 w-4 text-[#085041]" />
-            <span className="text-sm font-semibold text-[#085041] dark:text-neutral-300">Möjligheter</span>
+            <span className="text-sm font-semibold text-[#085041] dark:text-emerald-300">Möjligheter</span>
           </div>
           <div className="space-y-2">
             {opportunities.map((item, i) => {
               const Icon = item.icon;
               return (
-                <div key={i} className="flex items-start gap-2.5 p-2.5 bg-white/60 dark:bg-white/5 rounded-lg border border-neutral-100/50 dark:border-neutral-700/30 hover:scale-[1.01] transition-transform">
+                <div key={i} className="flex items-start gap-2.5 p-2.5 bg-white/60 dark:bg-white/5 rounded-lg border border-emerald-100/50 dark:border-emerald-800/30 hover:scale-[1.01] transition-transform">
                   <Icon className="h-3.5 w-3.5 text-[#085041] mt-0.5 shrink-0" />
-                  <p className="text-xs text-[#085041] dark:text-neutral-300">{item.text}</p>
+                  <p className="text-xs text-[#085041] dark:text-emerald-300">{item.text}</p>
                 </div>
               );
             })}
@@ -370,18 +370,18 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         </div>
 
         {/* Risks */}
-        <div className="border border-neutral-300/50 bg-[#0F1F3D] dark:from-rose-950/20 dark:to-red-950/10 rounded-2xl p-4 shadow-[0_0_16px_rgba(244,63,94,0.06)]">
+        <div className="border border-rose-200/50 bg-[#0F1F3D] dark:from-rose-950/20 dark:to-red-950/10 rounded-2xl p-4 shadow-[0_0_16px_rgba(244,63,94,0.06)]">
           <div className="flex items-center gap-2 mb-3">
             <AlertTriangle className="h-4 w-4 text-[#7A1A1A]" />
-            <span className="text-sm font-semibold text-[#7A1A1A] dark:text-neutral-300">Risker</span>
+            <span className="text-sm font-semibold text-[#7A1A1A] dark:text-rose-300">Risker</span>
           </div>
           <div className="space-y-2">
             {risks.map((item, i) => {
               const Icon = item.icon;
               return (
-                <div key={i} className="flex items-start gap-2.5 p-2.5 bg-white/60 dark:bg-white/5 rounded-lg border border-neutral-100/50 dark:border-neutral-700/30 hover:scale-[1.01] transition-transform">
+                <div key={i} className="flex items-start gap-2.5 p-2.5 bg-white/60 dark:bg-white/5 rounded-lg border border-rose-100/50 dark:border-rose-800/30 hover:scale-[1.01] transition-transform">
                   <Icon className="h-3.5 w-3.5 text-[#7A1A1A] mt-0.5 shrink-0" />
-                  <p className="text-xs text-[#7A1A1A] dark:text-neutral-300">{item.text}</p>
+                  <p className="text-xs text-[#7A1A1A] dark:text-rose-300">{item.text}</p>
                 </div>
               );
             })}
@@ -395,7 +395,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         {nextActions.map((action, i) => (
           <button
             key={i}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full border border-black/30 bg-[#EFF6FF] dark:bg-blue-950/20 text-[#000000] dark:text-[#000000] hover:shadow-[0_0_12px_rgba(0,0,0,0.15)] hover:scale-[1.02] transition-all duration-200"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full border border-blue-200/30 bg-[#EFF6FF] dark:bg-blue-950/20 text-[#3b82f6] dark:text-[#3b82f6] hover:shadow-[0_0_12px_rgba(0,82,255,0.15)] hover:scale-[1.02] transition-all duration-200"
           >
             <ArrowRight className="h-3 w-3" />
             {action}
@@ -414,7 +414,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
               className={cn(
                 "flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap min-h-[44px]",
                 isActive
-                  ? "bg-[#0F1F3D] text-white shadow-[0_0_12px_rgba(0,0,0,0.25)]"
+                  ? "bg-[#0F1F3D] text-white shadow-[0_0_12px_rgba(0,82,255,0.25)]"
                   : "text-muted-foreground hover:text-foreground hover:bg-[#EFF6FF]"
               )}
             >

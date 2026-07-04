@@ -15,8 +15,8 @@ interface FirmClientListProps {
 
 const urgencyConfig = {
   high: { label: "Hög", className: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838] border-[#F4C8C8]" },
-  medium: { label: "Medel", className: "bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/30 dark:text-[#C28A2B] border-[#F0DDB7]" },
-  low: { label: "OK", className: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75] border-[#BFE6D6]" },
+  medium: { label: "Medel", className: "bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/30 dark:text-[#C28A2B] border-[#F0DDB7]" },
+  low: { label: "OK", className: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75] border-[#BFE6D6]" },
 };
 
 export const FirmClientList = ({ firmId, onAddClient }: FirmClientListProps) => {
@@ -84,7 +84,7 @@ export const FirmClientList = ({ firmId, onAddClient }: FirmClientListProps) => 
                   {client.alerts > 0 && (
                     <div className="flex flex-wrap gap-1.5">
                       {client.draftEntries > 0 && (
-                        <Badge variant="outline" className="text-xs gap-1 bg-[#FAEEDA] dark:bg-neutral-700/20">
+                        <Badge variant="outline" className="text-xs gap-1 bg-[#FAEEDA] dark:bg-amber-900/20">
                           <FileText className="h-3 w-3" /> {client.draftEntries} utkast
                         </Badge>
                       )}

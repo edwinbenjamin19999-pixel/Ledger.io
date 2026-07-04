@@ -126,7 +126,7 @@ export function SBTSimulator({ currentCO2, co2Travel, co2Energy }: SBTSimulatorP
               <Tooltip formatter={(v: number) => `${v.toFixed(2)} ton CO₂`} />
               <ReferenceLine y={targetCO2} stroke="hsl(142, 76%, 36%)" strokeDasharray="6 3" label={{ value: "Mål", position: "right", fontSize: 11 }} />
               <Line type="monotone" dataKey="target" name="Mål (1.5°C)" stroke="hsl(142, 76%, 36%)" strokeWidth={2} dot={{ r: 4 }} />
-              <Line type="monotone" dataKey="actual" name="Prognos" stroke="#000000" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="actual" name="Prognos" stroke="#3b82f6" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3 }} />
             </LineChart>
           </ResponsiveContainer>
 
@@ -150,7 +150,7 @@ export function SBTSimulator({ currentCO2, co2Travel, co2Energy }: SBTSimulatorP
           {/* Adopt button */}
           <div className="flex gap-3 pt-2">
             {adopted ? (
-              <div className="flex items-center gap-2 p-3 bg-[#E1F5EE] dark:bg-neutral-700/20 rounded-lg border border-[#BFE6D6] dark:border-neutral-700 text-sm">
+              <div className="flex items-center gap-2 p-3 bg-[#E1F5EE] dark:bg-emerald-900/20 rounded-lg border border-[#BFE6D6] dark:border-emerald-800 text-sm">
                 <CheckCircle2 className="h-4 w-4 text-[#085041]" />
                 <span>Klimatmål antagna — uppföljning sker automatiskt varje månad</span>
               </div>

@@ -42,7 +42,7 @@ export function CommerceReconciliationCenter() { const [filter, setFilter] = use
   const statusConfig = { matched: { icon: CheckCircle, color: "text-[#085041]", bg: "border-l-emerald-500", label: "Matchad" },
     partial: { icon: AlertTriangle, color: "text-[#7A5417]", bg: "border-l-amber-500", label: "Delvis" },
     missing: { icon: XCircle, color: "text-[#7A1A1A]", bg: "border-l-red-500", label: "Saknas" },
-    timing: { icon: Clock, color: "text-black", bg: "border-l-blue-500", label: "Tidning" },
+    timing: { icon: Clock, color: "text-blue-500", bg: "border-l-blue-500", label: "Tidning" },
   };
 
   return (

@@ -20,7 +20,7 @@ export function BlockShell({
     <section
       className={cn(
         "rounded-2xl border bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)]",
-        tone === "alert" ? "border-neutral-300/70 ring-1 ring-neutral-100" : "border-slate-200/70",
+        tone === "alert" ? "border-rose-200/70 ring-1 ring-rose-100" : "border-slate-200/70",
         className
       )}
     >

@@ -30,7 +30,7 @@ const PERIOD_MONTHS: Record<Period, number[]> = {
 const OPT_STYLE = {
   revenue: { icon: TrendingUp, color: "text-[#085041]", bg: "bg-[#E1F5EE]", border: "border-[#BFE6D6]" },
   cost: { icon: TrendingDown, color: "text-[#7A1A1A]", bg: "bg-[#FCE8E8]", border: "border-[#F4C8C8]" },
-  balanced: { icon: Scale, color: "text-[#000000]", bg: "bg-[#EFF6FF]", border: "border-[#C8DDF5]" },
+  balanced: { icon: Scale, color: "text-[#3b82f6]", bg: "bg-[#EFF6FF]", border: "border-[#C8DDF5]" },
 } as const;
 
 interface Props {
@@ -87,7 +87,7 @@ export function GapClosingPanel({ drivers, rr, kf, onApply, className }: Props) 
   return (
     <div className={cn("rounded-2xl border border-slate-200 bg-white p-5 space-y-4", className)}>
       <div className="flex items-center gap-2">
-        <Target className="w-5 h-5 text-[#000000]" />
+        <Target className="w-5 h-5 text-[#3b82f6]" />
         <h3 className="font-semibold text-slate-900">Stäng gapet — vad krävs?</h3>
       </div>
 

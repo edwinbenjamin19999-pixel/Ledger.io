@@ -47,7 +47,7 @@ const priorityOptions = [
 
 const statusColumns = [
   { key: "todo", label: "Att göra", icon: Clock, color: "text-muted-foreground" },
-  { key: "in_progress", label: "Pågår", icon: AlertTriangle, color: "text-black" },
+  { key: "in_progress", label: "Pågår", icon: AlertTriangle, color: "text-blue-600" },
   { key: "review", label: "Granskning", icon: Calendar, color: "text-[#7A5417]" },
   { key: "done", label: "Klart", icon: CheckCircle2, color: "text-[#085041]" },
 ];

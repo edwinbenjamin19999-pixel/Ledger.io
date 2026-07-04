@@ -17,7 +17,7 @@ interface Claim { amount: number;
 interface Props { claims: Claim[];
 }
 
-const COLORS = ["#0F1F3D", "#1E3A5F", "#1D9E75", "#C28A2B", "#C73838", "#475569", "#94A3B8", "#000000"];
+const COLORS = ["#0F1F3D", "#1E3A5F", "#1D9E75", "#C28A2B", "#C73838", "#475569", "#94A3B8", "#3b82f6"];
 
 export default function ExpenseStatistics({ claims }: Props) {
   const chartTheme = useChartTheme(); const monthlyData = useMemo(() => { const map = new Map<string, number>();

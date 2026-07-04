@@ -151,7 +151,7 @@ const AdvisorSupplierInvoices = () => {
             Leverantörsattest
           </h1>
           <p className="text-[#64748B] mt-1.5">
-            Samma leverantörsmotor som Bokfy standard — orkestrerad över {clients.length}{" "}
+            Samma leverantörsmotor som Cogniq standard — orkestrerad över {clients.length}{" "}
             klienter med obligatorisk klient-attest före betalning.
           </p>
         </div>
@@ -242,7 +242,7 @@ const AdvisorSupplierInvoices = () => {
                   size="sm"
                   onClick={seedDemo}
                   disabled={seeding}
-                  className="mt-4 border-[#C8DDF5] text-[#000000] hover:bg-[#EFF6FF]"
+                  className="mt-4 border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF]"
                 >
                   <Database className="h-3.5 w-3.5 mr-1.5" />
                   {seeding ? "Skapar…" : "Skapa demoleverantörsfakturor"}
@@ -302,7 +302,7 @@ const AdvisorSupplierInvoices = () => {
                               {r.riskReasons.map((reason, i) => (
                                 <span
                                   key={i}
-                                  className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#FCE8E8] text-[#7A1A1A] border border-neutral-100"
+                                  className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#FCE8E8] text-[#7A1A1A] border border-rose-100"
                                 >
                                   {reason}
                                 </span>

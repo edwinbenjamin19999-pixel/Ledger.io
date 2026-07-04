@@ -7,40 +7,40 @@ const EFFECTIVE_DATE = "2025-01-15";
 
 const LegalDPA = () => {
   useEffect(() => {
-    document.title = `Personuppgiftsbiträdesavtal (DPA) ${VERSION} – Bokfy`;
+    document.title = `Personuppgiftsbiträdesavtal (DPA) ${VERSION} – Cogniq`;
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#000000]">
+    <div className="min-h-screen bg-white text-[#0F172A]">
 
       <Header lightBg />
 
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="mb-10 pb-6 border-b border-slate-200">
-            <p className="text-sm text-[#000000] font-semibold tabular-nums mb-2">
+            <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-[#000000] mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-[#0F172A] mb-3">
               Personuppgiftsbiträdesavtal (DPA)
             </h1>
             <p className="text-base text-slate-600">
-              Detta avtal reglerar Bokfy:s behandling av personuppgifter för Kundens räkning
+              Detta avtal reglerar Cogniq:s behandling av personuppgifter för Kundens räkning
               enligt GDPR artikel 28. Avtalet utgör en integrerad del av kundavtalet.
             </p>
           </div>
 
-          <article className="prose prose-slate max-w-none prose-headings:text-[#000000] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#000000]">
+          <article className="prose prose-slate max-w-none prose-headings:text-[#0F172A] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0F172A]">
             <h2>1. Roller</h2>
             <p>
               <strong>Kunden</strong> är personuppgiftsansvarig för de uppgifter som behandlas
-              i Tjänsten. <strong>Bokfy</strong> är personuppgiftsbiträde och behandlar
+              i Tjänsten. <strong>Cogniq</strong> är personuppgiftsbiträde och behandlar
               uppgifterna endast enligt Kundens dokumenterade instruktioner.
             </p>
 
             <h2>2. Föremål, varaktighet och syfte</h2>
             <ul>
-              <li><strong>Föremål:</strong> tillhandahållande av Bokfy:s plattform för bokföring, fakturering, lön, AI-analys och tillhörande tjänster.</li>
+              <li><strong>Föremål:</strong> tillhandahållande av Cogniq:s plattform för bokföring, fakturering, lön, AI-analys och tillhörande tjänster.</li>
               <li><strong>Varaktighet:</strong> under kundavtalets löptid samt 90 dagar efter dess upphörande för export och radering.</li>
               <li><strong>Syfte:</strong> fullgörande av kundavtalet.</li>
             </ul>
@@ -51,7 +51,7 @@ const LegalDPA = () => {
               <li><strong>Uppgifter:</strong> namn, kontaktuppgifter, personnummer (vid behov), bankuppgifter, lön, transaktionsdata, dokument bifogade verifikationer.</li>
             </ul>
 
-            <h2>4. Bokfy:s skyldigheter</h2>
+            <h2>4. Cogniq:s skyldigheter</h2>
             <ul>
               <li>Behandla personuppgifter endast enligt Kundens instruktioner.</li>
               <li>Säkerställa att personal med tillgång till uppgifterna omfattas av sekretess.</li>
@@ -74,7 +74,7 @@ const LegalDPA = () => {
 
             <h2>6. Underbiträden</h2>
             <p>
-              Kunden ger generell förhandstillåtelse för Bokfy att anlita underbiträden
+              Kunden ger generell förhandstillåtelse för Cogniq att anlita underbiträden
               enligt nedanstående lista. Tillkommande eller ersättande underbiträden meddelas
               med 30 dagars varsel; Kunden har då rätt att göra invändning.
             </p>
@@ -82,7 +82,7 @@ const LegalDPA = () => {
             <div className="not-prose overflow-x-auto mt-4 mb-6">
               <table className="w-full text-sm border border-slate-200 rounded-xl overflow-hidden">
                 <thead className="bg-slate-50">
-                  <tr className="text-left text-[#000000]">
+                  <tr className="text-left text-[#0F172A]">
                     <th className="px-4 py-2.5 font-semibold">Underbiträde</th>
                     <th className="px-4 py-2.5 font-semibold">Tjänst</th>
                     <th className="px-4 py-2.5 font-semibold">Plats</th>
@@ -132,7 +132,7 @@ const LegalDPA = () => {
 
             <h2>8. Granskningsrätt</h2>
             <p>
-              Bokfy tillhandahåller på Kundens begäran den information som behövs för att
+              Cogniq tillhandahåller på Kundens begäran den information som behövs för att
               visa efterlevnad. Kunden har rätt att en gång per år utföra revision, vilken
               normalt sker via ifyllda säkerhetsfrågeformulär (SOC 2-rapport eller motsvarande)
               för att minimera störning i driften.
@@ -149,8 +149,8 @@ const LegalDPA = () => {
             <p className="tabular-nums">
               Denna version: <strong>{VERSION}</strong>, ikraftträdande{" "}
               <strong>{EFFECTIVE_DATE}</strong>. Frågor:{" "}
-              <a href="mailto:dpo@bokfy.se" className="text-[#000000] no-underline hover:underline">
-                dpo@bokfy.se
+              <a href="mailto:dpo@cogniq.se" className="text-[#3b82f6] no-underline hover:underline">
+                dpo@cogniq.se
               </a>
               .
             </p>

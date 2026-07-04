@@ -110,10 +110,10 @@ export function CashFlowChart({ periods, showForecast, onToggleForecast, onBarCl
               type="monotone"
               dataKey="balance"
               name="Kassasaldo"
-              stroke="#525252"
+              stroke="#818cf8"
               strokeWidth={2.5}
               dot={false}
-              activeDot={{ r: 6, fill: '#525252', strokeWidth: 3, stroke: '#0f172a', filter: 'url(#glow)' }}
+              activeDot={{ r: 6, fill: '#818cf8', strokeWidth: 3, stroke: '#0f172a', filter: 'url(#glow)' }}
               {...LINE_ANIMATION}
             />
           </ComposedChart>

@@ -24,8 +24,8 @@ const Pill = ({ active, onClick, children }: { active: boolean; onClick: () => v
     className={cn(
       "shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-150 border",
       active
-        ? "bg-[#000000] text-white border-[#000000] shadow-sm"
-        : "bg-white text-[#475569] border-slate-200 hover:border-[#000000] hover:text-[#000000]",
+        ? "bg-[#3b82f6] text-white border-[#3b82f6] shadow-sm"
+        : "bg-white text-[#475569] border-slate-200 hover:border-[#3b82f6] hover:text-[#3b82f6]",
     )}
   >
     {children}

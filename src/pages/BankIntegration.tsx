@@ -204,7 +204,7 @@ export default function BankIntegration() { const navigate = useNavigate();
     return (
       <div className="px-6 py-6 space-y-6">
         <style>{`@keyframes bankint-shimmer { 0% { background-position: 200% 0 } 100% { background-position: -200% 0 } }`}</style>
-        <h1 className="text-2xl font-semibold tracking-tight text-[#000000] dark:text-white">
+        <h1 className="text-2xl font-semibold tracking-tight text-[#0F172A] dark:text-white">
           Bankintegration
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -290,7 +290,7 @@ export default function BankIntegration() { const navigate = useNavigate();
           )}
           <button
             onClick={() => setShowLinkDialog(true)}
-            className="h-[34px] px-[14px] rounded-[8px] bg-[#000000] text-white text-[12px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[6px]"
+            className="h-[34px] px-[14px] rounded-[8px] bg-[#0040CC] text-white text-[12px] font-medium hover:bg-[#093d54] inline-flex items-center gap-[6px]"
           >
             <Plus className="h-[14px] w-[14px]" />Koppla bank
           </button>
@@ -335,7 +335,7 @@ export default function BankIntegration() { const navigate = useNavigate();
             <div className="flex flex-col sm:flex-row gap-[8px] mt-[14px]">
               <button
                 onClick={() => setShowLinkDialog(true)}
-                className="h-[36px] px-[16px] rounded-[8px] bg-[#000000] text-white text-[12px] font-medium hover:bg-[#093d54] inline-flex items-center justify-center gap-[6px]"
+                className="h-[36px] px-[16px] rounded-[8px] bg-[#0040CC] text-white text-[12px] font-medium hover:bg-[#093d54] inline-flex items-center justify-center gap-[6px]"
               >
                 <Plus className="h-[14px] w-[14px]" />
                 Anslut bankkonto
@@ -360,7 +360,7 @@ export default function BankIntegration() { const navigate = useNavigate();
                   <TabsTrigger
                     key={t.id}
                     value={t.id}
-                    className="h-[34px] px-[14px] rounded-none border-b-2 border-transparent bg-transparent text-[12px] text-[#475569] data-[state=active]:bg-transparent data-[state=active]:text-[#000000] data-[state=active]:border-[#000000] data-[state=active]:shadow-none gap-[6px]"
+                    className="h-[34px] px-[14px] rounded-none border-b-2 border-transparent bg-transparent text-[12px] text-[#475569] data-[state=active]:bg-transparent data-[state=active]:text-[#0040CC] data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none gap-[6px]"
                   >
                     {Icon && <Icon className="h-[14px] w-[14px]" />}
                     {t.label}

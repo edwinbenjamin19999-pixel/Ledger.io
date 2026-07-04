@@ -30,7 +30,7 @@ export const ContextHeader = ({ context, onNewConversation }: Props) => {
           <p className="text-xs text-slate-500">AI CFO Workspace</p>
         </div>
         {context.percentile != null && (
-          <Badge variant="outline" className="ml-2 border-[#C8DDF5] text-[#000000] dark:text-[#000000]">P{context.percentile}</Badge>
+          <Badge variant="outline" className="ml-2 border-[#C8DDF5] text-[#3b82f6] dark:text-[#3b82f6]">P{context.percentile}</Badge>
         )}
       </div>
       <Button onClick={onNewConversation} variant="outline" size="sm" className="gap-1.5">

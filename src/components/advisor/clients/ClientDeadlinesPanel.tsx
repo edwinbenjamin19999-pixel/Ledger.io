@@ -25,7 +25,7 @@ export const ClientDeadlinesPanel = ({ items }: { items: DeadlineItem[] }) => (
           const colorClass = overdue
             ? "text-red-600"
             : today
-            ? "text-neutral-700"
+            ? "text-amber-600"
             : "text-slate-700";
           return (
             <li key={d.id} className="flex items-start justify-between gap-2 text-[12px]">
@@ -43,7 +43,7 @@ export const ClientDeadlinesPanel = ({ items }: { items: DeadlineItem[] }) => (
                 </span>
               )}
               {today && (
-                <span className="px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-700 text-[10px] font-medium">
+                <span className="px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 text-[10px] font-medium">
                   IDAG
                 </span>
               )}

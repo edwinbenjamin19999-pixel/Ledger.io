@@ -31,8 +31,8 @@ export const AGIStepIndicator = ({ currentStep, completedSteps }: AGIStepIndicat
                 <div
                   className={cn(
                     "w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 shrink-0",
-                    isActive && "bg-[#000000] text-white shadow-[0_0_0_4px_rgba(0,0,0,0.15)]",
-                    isCompleted && !isActive && "bg-[#000000] text-white",
+                    isActive && "bg-[#0052FF] text-white shadow-[0_0_0_4px_rgba(0,82,255,0.15)]",
+                    isCompleted && !isActive && "bg-[#0052FF] text-white",
                     !isActive && !isCompleted && "bg-muted text-muted-foreground border-2 border-border"
                   )}
                 >
@@ -59,7 +59,7 @@ export const AGIStepIndicator = ({ currentStep, completedSteps }: AGIStepIndicat
                 <div className="flex-1 mx-3 h-0.5 rounded-full bg-border relative overflow-hidden self-start mt-5">
                   <div
                     className={cn(
-                      "absolute inset-y-0 left-0 bg-[#000000] rounded-full transition-all duration-500 ease-out",
+                      "absolute inset-y-0 left-0 bg-[#0052FF] rounded-full transition-all duration-500 ease-out",
                       isPast ? "w-full" : "w-0"
                     )}
                   />

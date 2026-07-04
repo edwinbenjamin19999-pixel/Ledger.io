@@ -90,8 +90,8 @@ export function ESGScoreAdvisor({ esg, scores }: Props) { const actions: Action[
     return ratioB - ratioA;
   });
 
-  const catColor = { E: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-neutral-300",
-    S: "bg-[#EFF6FF] text-black dark:bg-blue-900/30 dark:text-blue-300",
+  const catColor = { E: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-emerald-300",
+    S: "bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
     G: "bg-[#F1F5F9] text-purple-700 dark:bg-purple-900/30 dark:text-purple-300",
   };
 

@@ -82,7 +82,7 @@ export function KassaReceiptAnalysis({ sales }: Props) { const avgTicket = useMe
       <Card>
         <CardHeader className="pb-2">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-[#000000]" />
+            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
             <CardTitle className="text-sm">AI produktkombinationer</CardTitle>
           </div>
         </CardHeader>
@@ -90,7 +90,7 @@ export function KassaReceiptAnalysis({ sales }: Props) { const avgTicket = useMe
           {comboInsights.map((c, i) => (
             <div
               key={i}
-              className="flex items-start gap-3 p-3 rounded-lg border border-l-4 border-l-[#000000]"
+              className="flex items-start gap-3 p-3 rounded-lg border border-l-4 border-l-[#3b82f6]"
             >
               <Package className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div className="flex-1">
@@ -113,8 +113,8 @@ export function KassaReceiptAnalysis({ sales }: Props) { const avgTicket = useMe
 
       {/* Improvement suggestion */}
       {avgTicket > 0 && avgTicket < 380 && (
-        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20">
-          <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
+          <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
           <p className="text-xs text-muted-foreground">
             Ditt genomsnittskvitto är {formatKr(avgTicket)}. Branschsnitt (detaljhandel): 380 kr.
             Lägg till kompletterande produkter vid kassan för att oka snittkvittot.

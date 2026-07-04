@@ -12,7 +12,7 @@ import type { CollectionCase, CustomerProfile } from "./ARAgent";
 const fmt = (n: number) => n.toLocaleString("sv-SE", { maximumFractionDigits: 0 });
 
 const STATUS_MAP: Record<string, { label: string; color: string }> = { pending: { label: "Väntar", color: "bg-muted text-muted-foreground" },
-  submitted: { label: "Inskickad", color: "bg-[#EFF6FF] text-black dark:bg-blue-900/30 dark:text-[#1E3A5F]" },
+  submitted: { label: "Inskickad", color: "bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30 dark:text-[#1E3A5F]" },
   legal: { label: "Rättslig process", color: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]" },
   partial_payment: { label: "Delbetalning", color: "bg-[#FAEEDA] text-[#7A5417] dark:bg-yellow-900/30 dark:text-[#C28A2B]" },
   disputed: { label: "Bestridd", color: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400" },
@@ -96,7 +96,7 @@ export const ActiveCollectionTab = ({ cases, companyId, onRefresh, customers, wr
     <div className="space-y-4">
       {/* Write-off prevention alert */}
       {writtenOffAmount > 0 && (
-        <Card className="border-[#F0DDB7] dark:border-neutral-700/30 bg-[#FAEEDA] dark:bg-neutral-700/10">
+        <Card className="border-[#F0DDB7] dark:border-amber-800/30 bg-[#FAEEDA] dark:bg-amber-900/10">
           <CardContent className="py-4 px-5">
             <div className="flex items-start gap-3">
               <TrendingDown className="h-5 w-5 text-[#7A5417] flex-shrink-0 mt-0.5" />

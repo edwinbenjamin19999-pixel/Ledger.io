@@ -130,9 +130,9 @@ const KPICard = ({
 const CustomerAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   const colors = [
-    "from-neutral-700 to-neutral-700", "from-neutral-700 to-blue-500",
-    "from-neutral-700 to-pink-500", "from-neutral-700 to-orange-500",
-    "from-blue-500 to-[#000000]", "from-fuchsia-500 to-purple-500",
+    "from-violet-500 to-indigo-500", "from-emerald-500 to-blue-500",
+    "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
+    "from-blue-500 to-[#3b82f6]", "from-fuchsia-500 to-purple-500",
   ];
   const idx = name.charCodeAt(0) % colors.length;
   return (
@@ -432,7 +432,7 @@ const Invoices = () => {
     const Icon = cfg.icon;
     return (
       <Badge variant="outline" className={`${cfg.color} border-current/30 gap-1`}>
-        {status === "overdue" && <span className="h-1.5 w-1.5 rounded-full bg-neutral-700 animate-pulse" />}
+        {status === "overdue" && <span className="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse" />}
         <Icon className="h-3 w-3" />
         {cfg.label}
       </Badge>
@@ -447,7 +447,7 @@ const Invoices = () => {
     return <span className="text-[10px] text-muted-foreground">{days}d kvar</span>;
   };
 
-  const bucketColors = ["bg-neutral-700", "bg-neutral-700", "bg-orange-500", "bg-neutral-700"];
+  const bucketColors = ["bg-emerald-500", "bg-amber-500", "bg-orange-500", "bg-rose-500"];
   const bucketLabels = ["0-30 dagar", "31-60 dagar", "61-90 dagar", ">90 dagar"];
 
   return (
@@ -482,7 +482,7 @@ const Invoices = () => {
                 <TabsTrigger
                   key={t.v}
                   value={t.v}
-                  className="rounded-none bg-transparent px-[14px] h-[36px] text-[12px] text-[#475569] data-[state=active]:text-[#000000] data-[state=active]:border-b-2 data-[state=active]:border-[#000000] data-[state=active]:shadow-none data-[state=active]:bg-transparent"
+                  className="rounded-none bg-transparent px-[14px] h-[36px] text-[12px] text-[#475569] data-[state=active]:text-[#0040CC] data-[state=active]:border-b-2 data-[state=active]:border-[#0040CC] data-[state=active]:shadow-none data-[state=active]:bg-transparent"
                 >
                   {t.icon && <t.icon className="h-3.5 w-3.5 mr-1" />}
                   {t.label}
@@ -570,7 +570,7 @@ const Invoices = () => {
                   key={s}
                   onClick={() => setStatusFilter(statusFilter === s ? "all" : s)}
                   className={`px-[12px] h-[28px] rounded-full text-[11px] font-medium border-[0.5px] transition-colors ${statusFilter === s
-                    ? "bg-[#000000] text-[#E6F4FA] border-[#000000]"
+                    ? "bg-[#0040CC] text-[#E6F4FA] border-[#0040CC]"
                     : "bg-white text-[#475569] border-[#E2E8F0] hover:bg-[#F8FAFB]"}`}
                 >
                   {s === "all" ? "Alla" : s === "sent" ? "Obetalda" : s === "overdue" ? "Förfallna" : s === "paid" ? "Betalda" : "Utkast"}
@@ -698,7 +698,7 @@ const Invoices = () => {
       {/* ── FLOATING ACTION BUTTON ── */}
       <button
         onClick={() => setShowCreateDialog(true)}
-        className="fixed bottom-20 md:bottom-8 right-8 bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] px-[14px] h-[36px] flex items-center gap-2 font-medium text-[12px] z-50 transition-colors"
+        className="fixed bottom-20 md:bottom-8 right-8 bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] px-[14px] h-[36px] flex items-center gap-2 font-medium text-[12px] z-50 transition-colors"
       >
         <PlusCircle className="h-4 w-4" />
         Ny faktura
@@ -764,7 +764,7 @@ const InvoiceList = ({
                     {invoice.invoice_number}
                   </span>
                   {getStatusBadge(invoice)}
-                  {borderStyle.dot && <span className="h-2 w-2 rounded-full bg-neutral-700 animate-pulse" />}
+                  {borderStyle.dot && <span className="h-2 w-2 rounded-full bg-rose-500 animate-pulse" />}
                 </div>
                 <p className="text-sm text-foreground truncate">{invoice.counterparty_name}</p>
                 <div className="flex items-center gap-3 mt-0.5">
@@ -911,11 +911,11 @@ const OutgoingARView = ({
   }, [list, searchQuery]);
 
   const segmentMeta: Record<OutgoingSegment, { label: string; dot: string; tone: "rose" | "amber" | "emerald" | "slate" | "cyan" }> = {
-    all: { label: "Alla utestående", dot: "bg-[#000000]", tone: "cyan" },
-    action: { label: "Behöver åtgärd", dot: "bg-neutral-700", tone: "rose" },
-    due_soon: { label: "Förfaller snart", dot: "bg-neutral-700", tone: "amber" },
-    overdue: { label: "Förfallna", dot: "bg-neutral-700", tone: "rose" },
-    paid: { label: "Betalda", dot: "bg-neutral-700", tone: "emerald" },
+    all: { label: "Alla utestående", dot: "bg-[#3b82f6]", tone: "cyan" },
+    action: { label: "Behöver åtgärd", dot: "bg-rose-500", tone: "rose" },
+    due_soon: { label: "Förfaller snart", dot: "bg-amber-500", tone: "amber" },
+    overdue: { label: "Förfallna", dot: "bg-rose-500", tone: "rose" },
+    paid: { label: "Betalda", dot: "bg-emerald-500", tone: "emerald" },
     draft: { label: "Utkast", dot: "bg-slate-400", tone: "slate" },
   };
 
@@ -952,7 +952,7 @@ const OutgoingARView = ({
               onClick={() => onSegmentChange(seg)}
               className={`flex items-center gap-2 px-[12px] h-[30px] rounded-full text-[11px] font-medium border-[0.5px] transition-colors ${
                 active
-                  ? "bg-[#000000] text-[#E6F4FA] border-[#000000]"
+                  ? "bg-[#0040CC] text-[#E6F4FA] border-[#0040CC]"
                   : "bg-white text-[#475569] border-[#E2E8F0] hover:bg-[#F8FAFB]"
               }`}
             >

@@ -19,10 +19,10 @@ export function AgentPerformance({ companyId, stats }: Props) {
 
   // Confidence distribution histogram
   const histogram = [
-    { range: "<60%", count: stats?.userFlagged || 0, color: "#525252" },
+    { range: "<60%", count: stats?.userFlagged || 0, color: "#ef4444" },
     { range: "60-75%", count: Math.round((stats?.reviewNeeded || 0) * 0.3), color: "#f97316" },
-    { range: "75-92%", count: Math.round((stats?.reviewNeeded || 0) * 0.7), color: "#525252" },
-    { range: ">92%", count: stats?.autoBooked || 0, color: "#000000" },
+    { range: "75-92%", count: Math.round((stats?.reviewNeeded || 0) * 0.7), color: "#f59e0b" },
+    { range: ">92%", count: stats?.autoBooked || 0, color: "#22c55e" },
   ];
 
   return (
@@ -30,13 +30,13 @@ export function AgentPerformance({ companyId, stats }: Props) {
       {/* Monthly stats summary */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
-          icon={<CheckCircle className="h-5 w-5 text-[#000000]" />}
+          icon={<CheckCircle className="h-5 w-5 text-[#22c55e]" />}
           label="Bokfort automatiskt"
           value={stats?.autoBooked || 0}
           sub={`${(stats?.autoRate || 0).toFixed(1)}% av totalt`}
         />
         <StatCard
-          icon={<AlertTriangle className="h-5 w-5 text-[#525252]" />}
+          icon={<AlertTriangle className="h-5 w-5 text-[#f59e0b]" />}
           label="Kravde granskning"
           value={stats?.reviewNeeded || 0}
           sub={`${stats?.corrected || 0} korrigeringar`}
@@ -83,7 +83,7 @@ export function AgentPerformance({ companyId, stats }: Props) {
               <Line
                 type="monotone"
                 dataKey="rate"
-                stroke="#000000"
+                stroke="#3b82f6"
                 strokeWidth={2}
                 dot={{ r: 3, fill: "hsl(var(--primary))" }}
               />

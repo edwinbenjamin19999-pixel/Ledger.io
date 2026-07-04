@@ -49,7 +49,7 @@ export function ContentSidebar({
               onClick={() => !k3Disabled && onSelect(item.id)}
               className={`group w-full text-left text-[12px] flex items-center justify-between gap-2 py-1.5 pr-2 transition-colors rounded-r ${
                 active
-                  ? "bg-[#EFF6FF] text-[#0C447C] font-medium border-l-[2px] border-[#000000]"
+                  ? "bg-[#EFF6FF] text-[#0C447C] font-medium border-l-[2px] border-[#0040CC]"
                   : k3Disabled
                   ? "text-[#CBD5E1] cursor-not-allowed border-l-[2px] border-transparent"
                   : item.status === "incomplete" || item.status === "missing_mandatory"
@@ -59,7 +59,7 @@ export function ContentSidebar({
               style={{ paddingLeft: `${10 + (item.indent ?? 0) * 14}px` }}
             >
               <span className="truncate flex items-center gap-1.5">
-                {item.isAction && <span className="text-[#000000]">+</span>}
+                {item.isAction && <span className="text-[#0040CC]">+</span>}
                 {item.label}
                 {k3Disabled && <span className="text-[9px]">(K3)</span>}
               </span>
@@ -76,12 +76,12 @@ export function ContentSidebar({
           <span className="font-semibold">{sum.complete}</span> av <span className="font-semibold">{sum.total}</span> krav uppfyllda
         </p>
         <div className="mt-1.5 h-1.5 rounded-full bg-[#F1F5F9] overflow-hidden">
-          <div className="h-full bg-[#000000] transition-all" style={{ width: `${sum.pct}%` }} />
+          <div className="h-full bg-[#0040CC] transition-all" style={{ width: `${sum.pct}%` }} />
         </div>
         {onShowAllRequirements && (
           <button
             onClick={onShowAllRequirements}
-            className="mt-2 text-[11px] text-[#000000] hover:underline flex items-center gap-0.5"
+            className="mt-2 text-[11px] text-[#0040CC] hover:underline flex items-center gap-0.5"
           >
             Visa alla krav <ChevronRight className="w-3 h-3" />
           </button>
@@ -93,7 +93,7 @@ export function ContentSidebar({
 
 function StatusIcon({ status }: { status?: SidebarItem["status"] }) {
   if (status === "complete") return <Check className="w-3 h-3 text-[#1D9E75] shrink-0" />;
-  if (status === "attention") return <AlertCircle className="w-3 h-3 text-[#525252] shrink-0" />;
-  if (status === "missing_mandatory") return <span className="w-1.5 h-1.5 rounded-full bg-[#525252] shrink-0" />;
+  if (status === "attention") return <AlertCircle className="w-3 h-3 text-[#EF9F27] shrink-0" />;
+  if (status === "missing_mandatory") return <span className="w-1.5 h-1.5 rounded-full bg-[#DC2626] shrink-0" />;
   return null;
 }

@@ -88,9 +88,9 @@ const KPICard = ({ icon: Icon, gradient, title, subtitle, value, extra, delay = 
 const EmpAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   const colors = [
-    "from-neutral-700 to-neutral-700", "from-neutral-700 to-blue-500",
-    "from-neutral-700 to-pink-500", "from-neutral-700 to-orange-500",
-    "from-blue-500 to-[#000000]", "from-fuchsia-500 to-purple-500",
+    "from-violet-500 to-indigo-500", "from-emerald-500 to-blue-500",
+    "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
+    "from-blue-500 to-[#3b82f6]", "from-fuchsia-500 to-purple-500",
   ];
   return (
     <div className={`h-10 w-10 rounded-xl bg-gradient-to-br ${colors[name.charCodeAt(0) % colors.length]} flex items-center justify-center text-white text-xs font-bold shrink-0`}>
@@ -107,7 +107,7 @@ const SalaryMiniBar = ({ gross, tax, net }: { gross: number; tax: number; net: n
   return (
     <div className="flex h-2 rounded-full overflow-hidden w-full max-w-[160px]">
       <div className="bg-blue-500" style={{ width: `${100 - taxPct}%` }} />
-      <div className="bg-neutral-700" style={{ width: `${taxPct}%` }} />
+      <div className="bg-rose-400" style={{ width: `${taxPct}%` }} />
     </div>
   );
 };
@@ -335,7 +335,7 @@ const HR = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* CARD 1 — Total lönekostnad */}
           <div className="relative overflow-hidden rounded-[12px] p-4" style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA" }}>
-            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#000000" }} />
+            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0040CC" }} />
             <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">TOTAL LÖNEKOSTNAD</div>
             <div className="mt-1 text-[20px] font-medium tracking-[-0.02em] tabular-nums text-[#0F172A]">
               <AnimatedNumber value={totalEmployerCost} /> kr
@@ -358,7 +358,7 @@ const HR = () => {
 
           {/* CARD 3 — AGI förfaller */}
           <div className="relative overflow-hidden rounded-[12px] p-4" style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA" }}>
-            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#525252" }} />
+            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#EF9F27" }} />
             <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">AGI FÖRFALLER</div>
             <div className="mt-1 text-[18px] font-medium tracking-[-0.02em] text-[#0F172A]">
               {daysToAGI === 0 ? "IDAG" : `Om ${daysToAGI} dagar`}
@@ -368,7 +368,7 @@ const HR = () => {
 
           {/* CARD 4 — Nettöverföringar */}
           <div className="relative overflow-hidden rounded-[12px] p-4" style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA" }}>
-            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#000000" }} />
+            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0040CC" }} />
             <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">NETTÖVERFÖRINGAR</div>
             <div className="mt-1 text-[20px] font-medium tracking-[-0.02em] tabular-nums text-[#0F172A]">
               <AnimatedNumber value={totalNet} /> kr
@@ -383,7 +383,7 @@ const HR = () => {
         {/* ── PAYROLL RUN BANNER ── */}
         {draftRuns.length > 0 && (
           <div className="relative overflow-hidden rounded-[12px]" style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA", padding: "12px 16px" }}>
-            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#000000" }} />
+            <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0040CC" }} />
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-[12px]">
                 {/* Step 1 — Löner inmatade (completed) */}
@@ -412,7 +412,7 @@ const HR = () => {
               </div>
               <Button
                 onClick={() => approvePayrollRun(draftRuns[0].id)}
-                className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] border-0"
+                className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[34px] border-0"
               >
                 Godkänn lönekörning
               </Button>
@@ -548,7 +548,7 @@ const HR = () => {
                   const lastRun = payrollRuns.find(r => r.status === 'approved');
                   return (
                     <Card key={emp.id} className="border-slate-100 dark:border-slate-700 overflow-hidden hover:shadow-md transition-shadow cursor-pointer" onClick={() => setDrawerEmployee(emp)}>
-                      <div className="h-[3px] bg-neutral-700" />
+                      <div className="h-[3px] bg-emerald-500" />
                       <CardContent className="pt-5 pb-4">
                         <div className="flex items-start gap-3 mb-3">
                           <EmpAvatar name={`${emp.first_name} ${emp.last_name}`} />
@@ -569,7 +569,7 @@ const HR = () => {
                         {gross > 0 && (
                           <>
                             <div className="flex items-center gap-2 mb-2 flex-wrap">
-                              <Badge className="bg-[#F1F5F9] text-neutral-700 border-[#E2E8F0] text-[10px]">Brutto {fmt(gross)} kr</Badge>
+                              <Badge className="bg-[#F1F5F9] text-violet-500 border-[#E2E8F0] text-[10px]">Brutto {fmt(gross)} kr</Badge>
                               <Badge className="bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] text-[10px]">Skatt {fmt(tax)} kr</Badge>
                               <Badge className="bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] text-[10px]">Netto {fmt(net)} kr</Badge>
                             </div>
@@ -591,10 +591,10 @@ const HR = () => {
               </div>
             ) : (
               <Card className="overflow-hidden">
-                <div className="h-[3px] bg-neutral-700" />
+                <div className="h-[3px] bg-emerald-500" />
                 <CardContent className="py-16 text-center">
-                  <div className="rounded-2xl bg-[#E1F5EE] dark:bg-neutral-700/30 p-3 inline-block mb-4">
-                    <Users className="w-12 h-12 text-neutral-300 dark:text-[#085041]" />
+                  <div className="rounded-2xl bg-[#E1F5EE] dark:bg-emerald-900/30 p-3 inline-block mb-4">
+                    <Users className="w-12 h-12 text-emerald-300 dark:text-[#085041]" />
                   </div>
                   <p className="text-slate-500 font-medium mt-4">Inga anställda ännu</p>
               </CardContent></Card>
@@ -610,7 +610,7 @@ const HR = () => {
             {payrollRuns.length > 0 ? (
               <div className="space-y-3">
                 {payrollRuns.map(run => {
-                  const accent = run.status === 'approved' ? '#1D9E75' : run.status === 'draft' ? '#525252' : '#94A3B8';
+                  const accent = run.status === 'approved' ? '#1D9E75' : run.status === 'draft' ? '#EF9F27' : '#94A3B8';
                   return (
                     <div key={run.id} className="relative overflow-hidden rounded-[12px] bg-white border-[0.5px] border-[#E2E8F0] px-[16px] py-[12px]">
                       <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: accent }} />
@@ -637,7 +637,7 @@ const HR = () => {
                             <>
                               <Button
                                 onClick={() => approvePayrollRun(run.id)}
-                                className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[30px] border-0"
+                                className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[30px] border-0"
                               >
                                 Godkänn
                               </Button>
@@ -660,10 +660,10 @@ const HR = () => {
               </div>
             ) : (
               <Card className="overflow-hidden">
-                <div className="h-[3px] bg-neutral-700" />
+                <div className="h-[3px] bg-emerald-500" />
                 <CardContent className="py-16 text-center">
-                  <div className="rounded-2xl bg-[#E1F5EE] dark:bg-neutral-700/30 p-3 inline-block mb-4">
-                    <DollarSign className="w-12 h-12 text-neutral-300 dark:text-[#085041]" />
+                  <div className="rounded-2xl bg-[#E1F5EE] dark:bg-emerald-900/30 p-3 inline-block mb-4">
+                    <DollarSign className="w-12 h-12 text-emerald-300 dark:text-[#085041]" />
                   </div>
                   <p className="text-slate-500 font-medium mt-4">Inga lönekörningar ännu</p>
               </CardContent></Card>
@@ -673,10 +673,10 @@ const HR = () => {
           {/* ── TAX BREAKDOWN CHART ── */}
           <TabsContent value="chart">
             <Card className="border-slate-100 dark:border-slate-700 overflow-hidden">
-              <div className="h-[3px] bg-neutral-700" />
+              <div className="h-[3px] bg-emerald-500" />
               <CardHeader className="bg-slate-50 dark:bg-slate-800 border-b border-slate-100 dark:border-slate-700">
                 <CardTitle className="flex items-center gap-3">
-                  <div className="rounded-xl p-2 bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]">
+                  <div className="rounded-xl p-2 bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]">
                     <TrendingUp className="h-4 w-4" />
                   </div>
                   Löneanalys per anställd
@@ -692,8 +692,8 @@ const HR = () => {
                       <YAxis tick={{ fontSize: 10, fill: "#94A3B8" }} tickFormatter={v => `${(v/1000).toFixed(0)}k`} />
                       <RTooltip content={<ChartTooltip />} />
                       <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 10, color: "#94A3B8" }} />
-                      <Bar dataKey="Bruttolön" stackId="a" fill="#000000" radius={[0, 0, 0, 0]} />
-                      <Bar dataKey="Arbetsgivaravgift" stackId="b" fill="#525252" radius={[0, 0, 0, 0]} />
+                      <Bar dataKey="Bruttolön" stackId="a" fill="#0040CC" radius={[0, 0, 0, 0]} />
+                      <Bar dataKey="Arbetsgivaravgift" stackId="b" fill="#EF9F27" radius={[0, 0, 0, 0]} />
                       <Bar dataKey="Preliminärskatt" stackId="c" fill="#E24B4A" radius={[0, 0, 0, 0]} />
                       <Bar dataKey="Nettolön" stackId="d" fill="#1D9E75" radius={[4, 4, 0, 0]} />
                     </BarChart>

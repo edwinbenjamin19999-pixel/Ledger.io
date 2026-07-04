@@ -18,7 +18,7 @@ export const TaxMandateConsent = ({ onAccept, onSkip, loading }: TaxMandateConse
   const mandateText = `
 FULLMAKT FÖR SKATTEÄRENDEN
 
-Jag/Vi ger härmed Bokfy AB (org.nr 559999-9999) fullmakt att företräda mitt/vårt företag hos Skatteverket avseende:
+Jag/Vi ger härmed Cogniq AB (org.nr 559999-9999) fullmakt att företräda mitt/vårt företag hos Skatteverket avseende:
 
 1. ARBETSGIVARDEKLARATION (AGI)
    - Skicka in månatliga arbetsgivardeklarationer
@@ -44,25 +44,25 @@ Jag/Vi ger härmed Bokfy AB (org.nr 559999-9999) fullmakt att företräda mitt/v
    - Hämta uppgifter från Skatteverkets och Bolagsverkets register
 
 FULLMAKTENS OMFATTNING:
-Bokfy AB får endast:
+Cogniq AB får endast:
 - Läsa och hämta information från Skatteverket
 - Skicka in deklarationer som godkänts av behörig firmatecknare
 - INTE göra betalningar eller andra dispositioner
 
 GILTIGHET:
-Fullmakten gäller tillsvidare och kan när som helst återkallas via Bokfy:s inställningar.
+Fullmakten gäller tillsvidare och kan när som helst återkallas via Cogniq:s inställningar.
 
 ÅTERKALLELSE:
 Fullmakten kan återkallas genom att:
-1. Logga in på Bokfy
+1. Logga in på Cogniq
 2. Gå till Inställningar > Skatteverket
 3. Klicka på "Återkalla fullmakt"
 
 DATASKYDD:
-Bokfy hanterar dina uppgifter enligt GDPR och vår integritetspolicy.
+Cogniq hanterar dina uppgifter enligt GDPR och vår integritetspolicy.
 
 KONTAKT:
-Vid frågor kontakta support@bokfy.se
+Vid frågor kontakta support@cogniq.se
 
 Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmatecknare och har rätt att ge denna fullmakt.
 `;
@@ -79,14 +79,14 @@ Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmateck
           Fullmakt för Skatteärenden
         </CardTitle>
         <CardDescription>
-          För att Bokfy ska kunna skicka deklarationer till Skatteverket behöver vi din fullmakt
+          För att Cogniq ska kunna skicka deklarationer till Skatteverket behöver vi din fullmakt
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         <Alert>
           <Info className="h-4 w-4" />
           <AlertDescription>
-            Fullmakten gör det möjligt för Bokfy att automatiskt skicka in AGI, momsdeklarationer, inkomstdeklaration (INK2) samt årsredovisning till Skatteverket och Bolagsverket. 
+            Fullmakten gör det möjligt för Cogniq att automatiskt skicka in AGI, momsdeklarationer, inkomstdeklaration (INK2) samt årsredovisning till Skatteverket och Bolagsverket. 
             Du behåller full kontroll och kan återkalla fullmakten när som helst.
           </AlertDescription>
         </Alert>
@@ -117,7 +117,7 @@ Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmateck
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-destructive mt-0.5">✗</span>
-                <span>Göra betalningar (detta kan INTE Bokfy göra)</span>
+                <span>Göra betalningar (detta kan INTE Cogniq göra)</span>
               </li>
             </ul>
           </div>
@@ -157,7 +157,7 @@ Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmateck
                 className="text-sm leading-relaxed cursor-pointer"
                 onClick={(e) => e.stopPropagation()}
               >
-                Jag ger Bokfy fullmakt att företräda mitt företag hos Skatteverket enligt ovanstående villkor.
+                Jag ger Cogniq fullmakt att företräda mitt företag hos Skatteverket enligt ovanstående villkor.
                 Jag bekräftar att jag är behörig firmatecknare.
               </label>
             </div>
@@ -177,7 +177,7 @@ Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmateck
                 className="text-sm leading-relaxed cursor-pointer"
                 onClick={(e) => e.stopPropagation()}
               >
-                Jag har läst och godkänner Bokfy:s{" "}
+                Jag har läst och godkänner Cogniq:s{" "}
                 <a href="/terms" target="_blank" className="text-primary hover:underline" onClick={(e) => e.stopPropagation()}>
                   användarvillkor
                 </a>{" "}

@@ -2,10 +2,10 @@ import { Shield, Lock, Building2, Landmark, BookOpen, FileCheck, Database, Shiel
 
 const trustItems = [
   { icon: Shield, name: "Direktkoppling Skatteverket", label: "Live", badgeClass: "bg-[#E1F5EE] text-[#1D9E75] border border-[#BFE6D6]" },
-  { icon: Lock, name: "BankID-verifierat", label: "Säker", badgeClass: "bg-[rgba(0,0,0,0.1)] text-[#000000] border border-[rgba(0,0,0,0.2)]" },
+  { icon: Lock, name: "BankID-verifierat", label: "Säker", badgeClass: "bg-[rgba(0,82,255,0.1)] text-[#3b82f6] border border-[rgba(0,82,255,0.2)]" },
   { icon: Building2, name: "Bolagsverket", label: "Integrerat", badgeClass: "bg-[#F1F5F9] text-[#1E3A5F] border border-[#E2E8F0]" },
   { icon: BookOpen, name: "K2 & K3", label: "Stöd", badgeClass: "bg-[#E1F5EE] text-[#1D9E75] border border-[#BFE6D6]" },
-  { icon: FileCheck, name: "Full revisionslogg", label: "Spårbart", badgeClass: "bg-[rgba(0,0,0,0.1)] text-[#000000] border border-[rgba(0,0,0,0.2)]" },
+  { icon: FileCheck, name: "Full revisionslogg", label: "Spårbart", badgeClass: "bg-[rgba(0,82,255,0.1)] text-[#3b82f6] border border-[rgba(0,82,255,0.2)]" },
   { icon: Database, name: "BAS 2026", label: "Kontoplan", badgeClass: "bg-[#F1F5F9] text-[#1E3A5F] border border-[#E2E8F0]" },
   { icon: ShieldCheck, name: "GDPR", label: "Dataskydd", badgeClass: "bg-[#E1F5EE] text-[#1D9E75] border border-[#BFE6D6]" },
   { icon: Shield, name: "Spårbar AI", label: "Verifierbar", badgeClass: "bg-[#F1F5F9] text-[#1E3A5F] border border-[#E2E8F0]" },
@@ -36,7 +36,7 @@ export const TrustBanner = () => {
         <div className="sm:hidden flex flex-wrap justify-center items-center gap-x-5 gap-y-3">
           {mobileTrust.map((item) => (
             <div key={item.name} className="flex items-center gap-1.5 text-white/50">
-              <item.icon className="w-3.5 h-3.5 text-neutral-700/70" />
+              <item.icon className="w-3.5 h-3.5 text-emerald-400/70" />
               <span className="text-[13px] font-medium">{item.name}</span>
             </div>
           ))}
@@ -47,7 +47,7 @@ export const TrustBanner = () => {
           {trustItems.map((item) => (
             <div
               key={item.name}
-              className="flex items-center gap-2 text-white/40 transition-all duration-200 hover:text-white/70 hover:drop-shadow-[0_0_8px_rgba(0,0,0,0.35)]"
+              className="flex items-center gap-2 text-white/40 transition-all duration-200 hover:text-white/70 hover:drop-shadow-[0_0_8px_rgba(0,82,255,0.35)]"
             >
               <item.icon className="w-4 h-4" />
               <span className="text-sm font-medium">{item.name}</span>

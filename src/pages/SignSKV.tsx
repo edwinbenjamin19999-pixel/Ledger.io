@@ -142,14 +142,14 @@ export default function SignSKV() {
   }, [stage, orderRef, envelope, token]);
 
   return (
-    <div className="min-h-screen bg-[#000000] flex flex-col items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-[#0F172A] flex flex-col items-center justify-center px-4 py-8">
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Header */}
         <div className="px-6 pt-6 pb-4 border-b">
-          <div className="flex items-center gap-2 text-[#000000] mb-2">
+          <div className="flex items-center gap-2 text-[#3b82f6] mb-2">
             <ShieldCheck className="h-5 w-5" />
             <span className="text-xs font-semibold uppercase tracking-wider">
-              Bokfy Signering
+              Cogniq Signering
             </span>
           </div>
           <h1 className="text-lg font-bold text-slate-900">
@@ -178,12 +178,12 @@ export default function SignSKV() {
                 Direkt efter signering skickas deklarationen automatiskt till
                 Skatteverket.
               </div>
-              <Button onClick={start} className="w-full gap-2 bg-[#000000] hover:bg-[#000000]/80">
+              <Button onClick={start} className="w-full gap-2 bg-[#3b82f6] hover:bg-[#3b82f6]/80">
                 <Smartphone className="h-4 w-4" />
                 Starta BankID
               </Button>
               <p className="text-[11px] text-slate-400 text-center">
-                Du behöver inget konto i Bokfy för att signera.
+                Du behöver inget konto i Cogniq för att signera.
               </p>
             </>
           )}
@@ -223,7 +223,7 @@ export default function SignSKV() {
 
           {stage === "done" && (
             <div className="text-center space-y-3 py-4">
-              <CheckCircle2 className="h-14 w-14 text-neutral-700 mx-auto" />
+              <CheckCircle2 className="h-14 w-14 text-emerald-600 mx-auto" />
               <h2 className="text-lg font-bold text-slate-900">
                 Klart!
               </h2>
@@ -253,7 +253,7 @@ export default function SignSKV() {
         {/* Footer */}
         <div className="px-6 py-3 border-t bg-slate-50 text-[10px] text-slate-400 flex items-center justify-between">
           <span>Säker signering via BankID</span>
-          <span>bokfy.se</span>
+          <span>cogniq.se</span>
         </div>
       </div>
     </div>

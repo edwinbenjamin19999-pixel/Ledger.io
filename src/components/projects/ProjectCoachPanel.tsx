@@ -77,7 +77,7 @@ export function ProjectCoachPanel({ project, totalRevenue, totalCost, unbilledHo
   if (insights.length === 0) return null;
 
   const borderColor = { warning: "border-l-amber-500",
-    opportunity: "border-l-[#000000]",
+    opportunity: "border-l-[#3b82f6]",
     info: "border-l-muted-foreground/30",
   };
 
@@ -91,7 +91,7 @@ export function ProjectCoachPanel({ project, totalRevenue, totalCost, unbilledHo
               <div className="flex items-start gap-3">
                 <Icon className={cn("h-4 w-4 flex-shrink-0 mt-0.5",
                   insight.type === "warning" ? "text-[#7A5417]" :
-                  insight.type === "opportunity" ? "text-[#000000]" :
+                  insight.type === "opportunity" ? "text-[#3b82f6]" :
                   "text-muted-foreground"
                 )} />
                 <div className="flex-1 space-y-1">

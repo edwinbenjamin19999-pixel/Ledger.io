@@ -131,8 +131,8 @@ export function GransbeloppsCalculator() {
           </div>
 
           {!calc.meetsIbbRequirement && calc.loneunderlag > calc.forenkling && (
-            <div className="mt-4 rounded-lg border border-[#F0DDB7] dark:border-neutral-700 bg-neutral-100/50 dark:bg-amber-950/20 p-3">
-              <p className="text-sm text-[#7A5417] dark:text-neutral-300">
+            <div className="mt-4 rounded-lg border border-[#F0DDB7] dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 p-3">
+              <p className="text-sm text-[#7A5417] dark:text-amber-300">
                 Löneunderlagsregeln ger mer ({fmt(calc.loneunderlag)} kr), men din lön ({fmt(ownSalary)} kr)
                 ligger under kravet ({fmt(calc.ibbKrav)} kr). Höj din lön för att låsa upp det högre beloppet.
               </p>

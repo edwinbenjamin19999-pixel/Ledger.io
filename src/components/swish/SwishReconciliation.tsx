@@ -37,10 +37,10 @@ export function SwishReconciliation({ unmatchedPayments, onMatch, onDirectSale, 
 
   return (
     <div className="space-y-4">
-      <Card className="border-[#F0DDB7] bg-neutral-100/50 dark:bg-amber-950/10 dark:border-neutral-700">
+      <Card className="border-[#F0DDB7] bg-amber-50/50 dark:bg-amber-950/10 dark:border-amber-800">
         <CardContent className="p-4">
           <p className="text-sm">
-            <span className="font-medium text-[#7A5417] dark:text-neutral-300">
+            <span className="font-medium text-[#7A5417] dark:text-amber-300">
               {unmatchedPayments.length} oidentifierade Swish-betalningar
             </span>{" "}
             <span className="text-[#7A5417] dark:text-[#C28A2B]">

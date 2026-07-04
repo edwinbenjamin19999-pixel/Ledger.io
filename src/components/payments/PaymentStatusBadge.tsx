@@ -10,8 +10,8 @@ interface Props {
 const toneClasses: Record<string, string> = {
   neutral: "bg-muted text-muted-foreground border-border",
   info: "bg-[#EFF6FF] text-sky-800 border-[#C8DDF5] dark:bg-sky-900/40 dark:text-sky-200 dark:border-sky-800",
-  warning: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-neutral-700/40 dark:text-neutral-100 dark:border-neutral-700",
-  success: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-neutral-700/40 dark:text-neutral-100 dark:border-neutral-700",
+  warning: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-900/40 dark:text-amber-100 dark:border-amber-800",
+  success: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-emerald-900/40 dark:text-emerald-100 dark:border-emerald-800",
   danger: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-red-900/40 dark:text-red-100 dark:border-red-800",
 };
 

@@ -14,7 +14,7 @@ export default function BlogArticlePage() {
   const article = getArticle(slug);
 
   useEffect(() => {
-    if (article) document.title = `${article.title} — Bokfy Blogg`;
+    if (article) document.title = `${article.title} — Cogniq Blogg`;
   }, [article]);
 
   if (!article) {
@@ -23,9 +23,9 @@ export default function BlogArticlePage() {
         <Header lightBg />
         <main className="flex-1 flex items-center justify-center px-6 py-32">
           <div className="text-center max-w-md">
-            <h1 className="text-2xl font-bold text-[#000000]">Artikeln hittades inte</h1>
+            <h1 className="text-2xl font-bold text-[#0F172A]">Artikeln hittades inte</h1>
             <p className="mt-2 text-[#64748b]">Kanske flyttad eller borttagen.</p>
-            <Button asChild className="mt-6 bg-white text-[#000000] hover:bg-white/90 font-semibold">
+            <Button asChild className="mt-6 bg-white text-[#0F172A] hover:bg-white/90 font-semibold">
               <Link to="/blog">Tillbaka till bloggen</Link>
             </Button>
           </div>
@@ -49,14 +49,14 @@ export default function BlogArticlePage() {
         <section className="pt-28 pb-10 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto max-w-3xl px-6">
             <nav className="flex items-center gap-1.5 text-xs text-[#94a3b8] mb-6">
-              <Link to="/" className="hover:text-[#000000]">Hem</Link>
+              <Link to="/" className="hover:text-[#3b82f6]">Hem</Link>
               <ChevronRight className="w-3 h-3" />
-              <Link to="/blog" className="hover:text-[#000000]">Blogg</Link>
+              <Link to="/blog" className="hover:text-[#3b82f6]">Blogg</Link>
               <ChevronRight className="w-3 h-3" />
-              <span className="text-[#000000]">{article.title}</span>
+              <span className="text-[#0F172A]">{article.title}</span>
             </nav>
             <span className={`inline-flex rounded-full px-3 py-1 text-xs font-medium ${cat.tint} ${cat.text}`}>{cat.label}</span>
-            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#000000] leading-[1.15]">
+            <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-[#0F172A] leading-[1.15]">
               {article.title}
             </h1>
             <p className="mt-5 text-xl text-[#475569] leading-relaxed">{article.excerpt}</p>
@@ -75,7 +75,7 @@ export default function BlogArticlePage() {
               <ArticleRenderer blocks={article.content} />
             ) : (
               <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-10 text-center">
-                <h2 className="text-2xl font-bold text-[#000000]">Vi finputsar denna artikel</h2>
+                <h2 className="text-2xl font-bold text-[#0F172A]">Vi finputsar denna artikel</h2>
                 <p className="mt-3 text-[#64748b] max-w-md mx-auto">
                   Den här artikeln är på väg att publiceras. Under tiden — utforska våra andra insikter nedan.
                 </p>
@@ -83,13 +83,13 @@ export default function BlogArticlePage() {
             )}
 
             {/* Final inline CTA */}
-            <div className="mt-12 rounded-2xl bg-[#000000] p-8 md:p-10 text-white">
-              <div className="text-xs uppercase tracking-[0.2em] text-[#000000]">Redo att testa?</div>
+            <div className="mt-12 rounded-2xl bg-[#0F172A] p-8 md:p-10 text-white">
+              <div className="text-xs uppercase tracking-[0.2em] text-[#3b82f6]">Redo att testa?</div>
               <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight">Låt AI sköta din bokföring</h3>
               <p className="mt-2 text-white/60 max-w-lg">Onboarding på 30 minuter. Ingen bindning. Bygg en framtidssäker ekonomi.</p>
               <div className="mt-5 flex flex-col sm:flex-row gap-3">
-                <Button asChild className="bg-white text-[#000000] hover:bg-white/90 font-semibold">
-                  <Link to="/auth">Testa Bokfy <ArrowRight className="w-4 h-4 ml-1" /></Link>
+                <Button asChild className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold">
+                  <Link to="/auth">Testa Cogniq <ArrowRight className="w-4 h-4 ml-1" /></Link>
                 </Button>
                 <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">
                   <Link to="/contact">Boka demo</Link>

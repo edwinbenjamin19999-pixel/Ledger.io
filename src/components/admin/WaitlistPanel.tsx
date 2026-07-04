@@ -108,7 +108,7 @@ export const WaitlistPanel = () => { const [entries, setEntries] = useState<Wait
           <div>
             <p className="font-medium">Skicka lanseringsmejl</p>
             <p className="text-sm text-muted-foreground">
-              Skicka mejl till alla {entries.length} registrerade om att Bokfy AI lanseras
+              Skicka mejl till alla {entries.length} registrerade om att Cogniq AI lanseras
             </p>
           </div>
           <Button

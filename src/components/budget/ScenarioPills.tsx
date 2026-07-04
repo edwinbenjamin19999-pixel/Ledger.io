@@ -21,7 +21,7 @@ export function ScenarioPills({ value, onChange }: Props) {
           onClick={() => onChange(p.key)}
           className={cn(
             "px-3 py-1 rounded-full text-xs font-medium transition-colors",
-            value === p.key ? "bg-[#000000] text-white" : "text-slate-600 hover:text-slate-900"
+            value === p.key ? "bg-[#3b82f6] text-white" : "text-slate-600 hover:text-slate-900"
           )}
         >
           {p.label}

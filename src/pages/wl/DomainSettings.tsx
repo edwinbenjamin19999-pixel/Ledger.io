@@ -141,7 +141,7 @@ export default function DomainSettings() {
           </Button>
         </div>
         <p className="text-sm text-muted-foreground mt-1">
-          Konfigurera din egen domän för <strong>{tenant.name}</strong>. Standardadress: <code>{tenant.slug}.bokfy.se</code>.
+          Konfigurera din egen domän för <strong>{tenant.name}</strong>. Standardadress: <code>{tenant.slug}.cogniq.se</code>.
         </p>
       </div>
 
@@ -189,7 +189,7 @@ export default function DomainSettings() {
               <ShieldCheck className="h-4 w-4 text-[#085041]" />
               <AlertDescription className="text-sm">
                 Domänen verifierades {new Date(tenant.domain_verified_at).toLocaleDateString("sv-SE")}.
-                Kontakta <a href="mailto:support@bokfy.se" className="underline font-medium">support@bokfy.se</a> för att aktivera SSL och slutföra driftsättningen.
+                Kontakta <a href="mailto:support@cogniq.se" className="underline font-medium">support@cogniq.se</a> för att aktivera SSL och slutföra driftsättningen.
               </AlertDescription>
             </Alert>
           )}

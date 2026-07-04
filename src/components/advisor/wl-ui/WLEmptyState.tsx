@@ -48,7 +48,7 @@ export const WLEmptyState = ({
         <p className="text-sm text-slate-500">{description}</p>
       </div>
       {aiSuggestion && (
-        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EFF6FF] text-[#000000] border border-[#C8DDF5] text-xs font-medium">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EFF6FF] text-[#3b82f6] border border-[#C8DDF5] text-xs font-medium">
           <Sparkles className="h-3 w-3" />
           {aiSuggestion}
         </div>
@@ -72,7 +72,7 @@ export const WLEmptyState = ({
               variant="outline"
               onClick={onSeed.onClick}
               disabled={onSeed.loading}
-              className="border-[#C8DDF5] text-[#000000] hover:bg-[#EFF6FF]"
+              className="border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF]"
             >
               <Database className="h-3.5 w-3.5 mr-1.5" />
               {onSeed.loading ? "Skapar…" : onSeed.label}
@@ -91,7 +91,7 @@ export const WLEmptyState = ({
               <button
                 key={c.id}
                 onClick={c.onOpen}
-                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-700 hover:border-[#000000] hover:bg-neutral-100/40 hover:text-[#000000] transition"
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-700 hover:border-[#3b82f6] hover:bg-blue-50/40 hover:text-[#3b82f6] transition"
               >
                 {c.name}
                 <ChevronRight className="h-3 w-3 opacity-60" />

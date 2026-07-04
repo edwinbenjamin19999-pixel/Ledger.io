@@ -30,8 +30,8 @@ const STATUS_OPTIONS: { value: FormStatus; label: string }[] = [
 const STATUS_COLORS: Record<FormStatus, string> = { not_started: "bg-muted text-muted-foreground",
   ai_preparing: "bg-primary/10 text-primary border-primary/30",
   ready_review: "bg-orange-500/10 text-orange-600 border-orange-500/30",
-  signed: "bg-[#EFF6FF] text-black border-[#C8DDF5]",
-  submitted: "bg-[#E1F5EE] text-[#085041] border-neutral-700/30",
+  signed: "bg-[#EFF6FF] text-blue-600 border-[#C8DDF5]",
+  submitted: "bg-[#E1F5EE] text-[#085041] border-green-500/30",
   not_relevant: "bg-muted text-muted-foreground",
 };
 
@@ -281,7 +281,7 @@ interface FormCardProps { form: SkatteverketForm;
 const FormCard = ({ form, relevant, aiDone, isAiRelevant, isManualAdd, isManualRemove, status, preparing, onToggle, onPrepare, onStatusChange }: FormCardProps) => { const urgency = getDeadlineUrgency(form.deadlineDate);
   const urgencyColors = { red: "bg-destructive/10 text-destructive border-destructive/30",
     orange: "bg-orange-500/10 text-orange-600 border-orange-500/30",
-    green: "bg-[#E1F5EE] text-[#085041] border-neutral-700/30",
+    green: "bg-[#E1F5EE] text-[#085041] border-green-500/30",
     none: "",
   };
 
@@ -305,7 +305,7 @@ const FormCard = ({ form, relevant, aiDone, isAiRelevant, isManualAdd, isManualR
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
-                    <Badge variant="outline" className="text-[10px] h-5 bg-[#E1F5EE] text-[#085041] border-neutral-700/30">
+                    <Badge variant="outline" className="text-[10px] h-5 bg-[#E1F5EE] text-[#085041] border-green-500/30">
                       <Sparkles className="h-2.5 w-2.5 mr-0.5" />AI
                     </Badge>
                   </TooltipTrigger>
@@ -314,7 +314,7 @@ const FormCard = ({ form, relevant, aiDone, isAiRelevant, isManualAdd, isManualR
               </TooltipProvider>
             )}
             {isManualAdd && (
-              <Badge variant="outline" className="text-[10px] h-5 bg-[#EFF6FF] text-black border-[#C8DDF5]">Manuell</Badge>
+              <Badge variant="outline" className="text-[10px] h-5 bg-[#EFF6FF] text-blue-600 border-[#C8DDF5]">Manuell</Badge>
             )}
             {form.aiReady && (
               <Badge variant="secondary" className="text-[10px] h-5">Auto</Badge>

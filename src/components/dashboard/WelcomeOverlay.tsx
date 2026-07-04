@@ -27,7 +27,7 @@ export const WelcomeOverlay = ({ onComplete, durationMs = 2600, companyName }: W
 
   const greeting = companyName
     ? `Välkommen, ${companyName}`
-    : "Välkommen till Bokfy";
+    : "Välkommen till Cogniq";
 
   return (
     <div
@@ -37,11 +37,11 @@ export const WelcomeOverlay = ({ onComplete, durationMs = 2600, companyName }: W
       aria-live="polite"
     >
       <div className="flex items-center gap-0 mb-6">
-        <span className="text-3xl font-[800] text-[#000000]">Bok</span>
-        <span className="text-3xl font-[800] text-[#000000]">fy</span>
+        <span className="text-3xl font-[800] text-[#3b82f6]">Cog</span>
+        <span className="text-3xl font-[800] text-[#0F172A]">niq</span>
       </div>
 
-      <h1 className="text-[22px] font-bold text-[#000000] tracking-tight text-center px-6">
+      <h1 className="text-[22px] font-bold text-[#0F172A] tracking-tight text-center px-6">
         {greeting}
       </h1>
       <p className="mt-2 text-[14px] text-slate-500 text-center max-w-[320px] px-6">
@@ -51,7 +51,7 @@ export const WelcomeOverlay = ({ onComplete, durationMs = 2600, companyName }: W
       {/* Thin progress bar */}
       <div className="mt-8 w-[200px] h-[2px] bg-slate-100 rounded-full overflow-hidden">
         <div
-          className="h-full bg-[#000000] rounded-full"
+          className="h-full bg-[#3b82f6] rounded-full"
           style={{
             animation: "wl-progress 2.2s ease-out forwards",
           }}

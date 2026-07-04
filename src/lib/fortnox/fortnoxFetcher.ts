@@ -1,6 +1,6 @@
 /**
  * FortnoxFetcher — paginated retrieval of customers, suppliers, invoices, articles.
- * Used inside an edge function (server side). Mappers normalize to Bokfy shape.
+ * Used inside an edge function (server side). Mappers normalize to Cogniq shape.
  */
 
 export interface FetchProgress {

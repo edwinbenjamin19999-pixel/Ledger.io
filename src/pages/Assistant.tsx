@@ -50,7 +50,7 @@ const AI_CAPABILITIES = [
 
 const RECENT_ACTIVITY = [
   { icon: CheckCircle2, text: "AI kategoriserade 3 transaktioner", time: "2 tim sedan", color: "text-[#085041]" },
-  { icon: FileText, text: "Faktura #1247 matchad med betalning", time: "3 tim sedan", color: "text-black" },
+  { icon: FileText, text: "Faktura #1247 matchad med betalning", time: "3 tim sedan", color: "text-blue-500" },
   { icon: Clock, text: "Momsdeklaration påminnelse skapad", time: "5 tim sedan", color: "text-[#7A5417]" },
   { icon: AlertTriangle, text: "Ovanlig kostnad upptäckt: 8 500 kr", time: "igår", color: "text-orange-500" },
 ];
@@ -290,7 +290,7 @@ const Assistant = () => {
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20 relative overflow-hidden">
       {/* Subtle background depth blobs */}
       <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-[#000000]/[0.02] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-[#3b82f6]/[0.02] rounded-full blur-3xl pointer-events-none" />
 
       <main className="container mx-auto px-4 py-6 max-w-[1400px] relative z-10">
 
@@ -302,8 +302,8 @@ const Assistant = () => {
           </div>
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E1F5EE] border border-[#BFE6D6]">
             <div className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neutral-700 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-neutral-700" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
             </div>
             <span className="text-xs font-medium text-[#085041] dark:text-[#1D9E75]">AI Redo</span>
           </div>
@@ -314,9 +314,9 @@ const Assistant = () => {
           <div className="flex gap-3 min-w-max md:grid md:grid-cols-5 md:min-w-0">
             {AI_CAPABILITIES.map((cap) => (
               <div key={cap.title} className="relative flex items-start gap-3 px-4 py-3 rounded-[12px] border-[0.5px] border-[#DFE4EA] bg-[#FAFBFC] min-w-[200px] md:min-w-0 hover:shadow-sm transition-all duration-200 overflow-hidden">
-                <span className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#000000]" />
+                <span className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#0040CC]" />
                 <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] flex items-center justify-center flex-shrink-0">
-                  <cap.icon size={16} strokeWidth={1.5} color="#000000" />
+                  <cap.icon size={16} strokeWidth={1.5} color="#0040CC" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-[12px] font-medium text-[#0F172A] truncate">{cap.title}</p>
@@ -332,7 +332,7 @@ const Assistant = () => {
           {/* ── Conversation Sidebar ── */}
           <div className="w-[320px] min-w-[300px] max-w-[340px] flex-shrink-0 hidden md:flex flex-col rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm overflow-hidden">
             <div className="p-3 border-b border-border/40 bg-gradient-to-b from-primary/5 to-transparent">
-              <Button onClick={createNewConversation} size="sm" className="w-full gap-2 bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium">
+              <Button onClick={createNewConversation} size="sm" className="w-full gap-2 bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium">
                 <Plus className="w-4 h-4" />
                 Ny konversation
               </Button>
@@ -461,21 +461,21 @@ const Assistant = () => {
                     <div className="w-full max-w-2xl mt-4 space-y-2">
                       {/* Primary AI Action */}
                       <button onClick={() => { textareaRef.current?.focus(); }} className="w-full flex items-center justify-center gap-2.5 px-4 py-3 rounded-[12px] bg-white border-[0.5px] border-[#E2E8F0] hover:bg-[#F8FAFB] hover:border-[#CBD5E1] transition-all duration-200 group">
-                        <Sparkles size={16} strokeWidth={1.5} color="#000000" className="group-hover:scale-110 transition-transform" />
+                        <Sparkles size={16} strokeWidth={1.5} color="#0040CC" className="group-hover:scale-110 transition-transform" />
                         <span className="text-[12px] font-medium text-[#0F172A]">Fråga AI</span>
                       </button>
                       {/* Secondary actions */}
                       <div className="grid grid-cols-3 gap-2">
                         <button onClick={() => fileInputRef.current?.click()} className="flex items-center justify-center gap-2 px-3 py-2 rounded-xl border border-border/30 bg-transparent hover:bg-[#EFF6FF] hover:border-[#C8DDF5] transition-all duration-150 group">
-                          <Receipt className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#000000] dark:group-hover:text-[#1E3A5F] transition-colors" />
+                          <Receipt className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#3b82f6] dark:group-hover:text-[#1E3A5F] transition-colors" />
                           <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Kvitto</span>
                         </button>
                         <button onClick={() => { setInput("Skapa en faktura"); textareaRef.current?.focus(); }} className="flex items-center justify-center gap-2 px-3 py-2 rounded-xl border border-border/30 bg-transparent hover:bg-[#EFF6FF] hover:border-[#C8DDF5] transition-all duration-150 group">
-                          <FileUp className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#000000] dark:group-hover:text-[#1E3A5F] transition-colors" />
+                          <FileUp className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#3b82f6] dark:group-hover:text-[#1E3A5F] transition-colors" />
                           <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Faktura</span>
                         </button>
                         <button onClick={() => { setInput("Registrera ett utlägg"); textareaRef.current?.focus(); }} className="flex items-center justify-center gap-2 px-3 py-2 rounded-xl border border-border/30 bg-transparent hover:bg-[#EFF6FF] hover:border-[#C8DDF5] transition-all duration-150 group">
-                          <Wallet className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#000000] dark:group-hover:text-[#1E3A5F] transition-colors" />
+                          <Wallet className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#3b82f6] dark:group-hover:text-[#1E3A5F] transition-colors" />
                           <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Utlägg</span>
                         </button>
                       </div>
@@ -644,7 +644,7 @@ const Assistant = () => {
                 )}
 
                 {/* Input container */}
-                <div className="rounded-2xl border border-border/40 bg-card shadow-lg focus-within:ring-2 focus-within:ring-[#000000]/20 focus-within:border-[#C8DDF5] focus-within:shadow-[0_0_20px_rgba(0,198,255,0.08)] transition-all duration-200">
+                <div className="rounded-2xl border border-border/40 bg-card shadow-lg focus-within:ring-2 focus-within:ring-[#3b82f6]/20 focus-within:border-[#C8DDF5] focus-within:shadow-[0_0_20px_rgba(0,198,255,0.08)] transition-all duration-200">
                   <div className="flex items-end gap-2 p-2">
                     <div className="flex items-center pb-1.5 pl-1">
                       <Sparkles className="w-4 h-4 text-primary/40" />
@@ -682,7 +682,7 @@ const Assistant = () => {
                           "w-9 h-9 rounded-[8px] flex items-center justify-center transition-all duration-200",
                           isLoading || (!input.trim() && pendingAttachments.length === 0)
                             ? "bg-muted text-muted-foreground cursor-not-allowed"
-                            : "bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] shadow-sm hover:shadow-md"
+                            : "bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] shadow-sm hover:shadow-md"
                         )}
                       >
                         {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}

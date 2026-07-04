@@ -120,7 +120,7 @@ export function SyncTrustBar({
       </div>
 
       {hasStaleData && (
-        <div className="px-4 py-2 bg-[#FAEEDA] dark:bg-amber-950/20 border-t border-[#F0DDB7] dark:border-neutral-700/40 text-xs text-[#7A5417] dark:text-neutral-300 flex items-center gap-2">
+        <div className="px-4 py-2 bg-[#FAEEDA] dark:bg-amber-950/20 border-t border-[#F0DDB7] dark:border-amber-900/40 text-xs text-[#7A5417] dark:text-amber-300 flex items-center gap-2">
           <AlertTriangle className="h-3.5 w-3.5 flex-shrink-0" />
           Bankdata uppdaterades senast {formatRel(newestSyncSeconds)} — visar senast kända saldon.
         </div>
@@ -134,10 +134,10 @@ export function SyncTrustBar({
                 <span
                   className={`h-1.5 w-1.5 rounded-full ${
                     a.connection_status === "live"
-                      ? "bg-neutral-700"
+                      ? "bg-emerald-500"
                       : a.connection_status === "manual"
                         ? "bg-slate-400"
-                        : "bg-neutral-700"
+                        : "bg-amber-500"
                   }`}
                 />
                 <span className="font-medium truncate">{a.bank_name}</span>

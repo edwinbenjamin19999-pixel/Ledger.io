@@ -41,9 +41,9 @@ export function SupplierApprovalTimeline({ stage }: { stage: SupplierInvoiceStag
             <div
               className={`h-6 w-6 rounded-full flex items-center justify-center ring-1 ${
                 isCurrent
-                  ? "bg-[#000000] text-white ring-[#000000]"
+                  ? "bg-[#3b82f6] text-white ring-[#3b82f6]"
                   : reached
-                  ? "bg-neutral-700 text-white ring-neutral-700"
+                  ? "bg-emerald-500 text-white ring-emerald-500"
                   : "bg-white text-[#94A3B8] ring-[#E2E8F0]"
               }`}
             >
@@ -58,7 +58,7 @@ export function SupplierApprovalTimeline({ stage }: { stage: SupplierInvoiceStag
             </span>
             {i < STEPS.length - 1 && (
               <div
-                className={`h-px w-4 ${reached && ORDER[STEPS[i + 1].key] <= current ? "bg-neutral-700" : "bg-[#E2E8F0]"}`}
+                className={`h-px w-4 ${reached && ORDER[STEPS[i + 1].key] <= current ? "bg-emerald-400" : "bg-[#E2E8F0]"}`}
               />
             )}
           </div>

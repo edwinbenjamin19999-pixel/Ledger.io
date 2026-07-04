@@ -17,7 +17,7 @@ export function TimeframeToggle({ value, onChange, className }: Props) {
           onClick={() => onChange(k)}
           className={cn(
             "px-3 py-1 rounded-full font-medium transition-colors",
-            value === k ? "bg-[#000000] text-white" : "text-slate-600 hover:text-slate-900"
+            value === k ? "bg-[#3b82f6] text-white" : "text-slate-600 hover:text-slate-900"
           )}
         >
           {k === "month" ? "Månad" : "Kvartal"}

@@ -5,7 +5,7 @@ interface SparklineProps {
   height?: number;
 }
 
-export function Sparkline({ data, color = "#525252", width = 60, height = 20 }: SparklineProps) {
+export function Sparkline({ data, color = "#6366f1", width = 60, height = 20 }: SparklineProps) {
   if (!data.length) return null;
 
   const min = Math.min(...data);
@@ -20,7 +20,7 @@ export function Sparkline({ data, color = "#525252", width = 60, height = 20 }: 
 
   // Trend: compare last vs first
   const trend = data[data.length - 1] - data[0];
-  const lineColor = trend >= 0 ? "#000000" : "#525252";
+  const lineColor = trend >= 0 ? "#10b981" : "#f43f5e";
   const usedColor = color === "auto" ? lineColor : color;
 
   return (

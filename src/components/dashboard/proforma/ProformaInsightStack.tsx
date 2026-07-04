@@ -5,9 +5,9 @@ import type { ProformaInsightsBundle } from "./useProformaInsights";
 
 const TONE = {
   neutral: { bg: "bg-slate-50/70 dark:bg-slate-900/40", border: "border-slate-200/60 dark:border-slate-800", iconBg: "bg-slate-500/10", iconColor: "text-slate-600 dark:text-slate-300", Icon: Sparkles },
-  positive: { bg: "bg-neutral-100/70 dark:bg-blue-950/30", border: "border-black/60 dark:border-[#000000]/40", iconBg: "bg-[#EFF6FF]", iconColor: "text-[#000000] dark:text-[#1E3A5F]", Icon: TrendingUp },
-  warning: { bg: "bg-neutral-100/70 dark:bg-amber-950/30", border: "border-neutral-300/60 dark:border-neutral-700/40", iconBg: "bg-[#FAEEDA]", iconColor: "text-[#7A5417] dark:text-[#C28A2B]", Icon: Sparkles },
-  critical: { bg: "bg-neutral-100/70 dark:bg-rose-950/30", border: "border-neutral-300/60 dark:border-neutral-700/40", iconBg: "bg-[#FCE8E8]", iconColor: "text-[#7A1A1A] dark:text-[#C73838]", Icon: AlertTriangle },
+  positive: { bg: "bg-blue-50/70 dark:bg-blue-950/30", border: "border-blue-200/60 dark:border-[#3b82f6]/40", iconBg: "bg-[#EFF6FF]", iconColor: "text-[#3b82f6] dark:text-[#1E3A5F]", Icon: TrendingUp },
+  warning: { bg: "bg-amber-50/70 dark:bg-amber-950/30", border: "border-amber-200/60 dark:border-amber-800/40", iconBg: "bg-[#FAEEDA]", iconColor: "text-[#7A5417] dark:text-[#C28A2B]", Icon: Sparkles },
+  critical: { bg: "bg-rose-50/70 dark:bg-rose-950/30", border: "border-rose-200/60 dark:border-rose-800/40", iconBg: "bg-[#FCE8E8]", iconColor: "text-[#7A1A1A] dark:text-[#C73838]", Icon: AlertTriangle },
 } as const;
 
 interface Props {
@@ -40,7 +40,7 @@ export const ProformaInsightStack = ({ bundle, onScrollToPeriod }: Props) => {
             <button
               type="button"
               onClick={() => onScrollToPeriod?.(primary.targetPeriod!)}
-              className="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-[#000000] hover:bg-[#000000] text-white text-sm font-medium transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-[#3b82f6] hover:bg-[#3b82f6] text-white text-sm font-medium transition-colors shadow-sm"
             >
               {primary.actionLabel}
               <ArrowRight className="w-3.5 h-3.5" />
@@ -49,7 +49,7 @@ export const ProformaInsightStack = ({ bundle, onScrollToPeriod }: Props) => {
         )}
 
         {primary.tone === "positive" && !primary.actionLabel && (
-          <CheckCircle2 className="w-5 h-5 text-[#000000] shrink-0 hidden sm:block" />
+          <CheckCircle2 className="w-5 h-5 text-[#3b82f6] shrink-0 hidden sm:block" />
         )}
       </div>
 

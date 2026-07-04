@@ -58,7 +58,7 @@ export function CashFlowScenario({ scenarios,
   const fmt = (n: number) => Math.round(n).toLocaleString("sv-SE");
 
   return (
-    <Card className="border-[#F0DDB7] bg-neutral-100/30 dark:bg-amber-950/10">
+    <Card className="border-[#F0DDB7] bg-amber-50/30 dark:bg-amber-950/10">
       <CardHeader className="pb-2 flex flex-row items-center justify-between">
         <CardTitle className="text-sm">Simulera scenario — "Vad händer om...?"</CardTitle>
         <Button variant="ghost" size="icon" className="h-7 w-7" onClick={onClose}>

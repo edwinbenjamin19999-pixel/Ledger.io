@@ -111,14 +111,14 @@ export function NewProjectDialog({ open, onOpenChange, onCreate, isLoading }: Pr
             </Select>
           </div>
 
-          <div className="flex items-center gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20 text-xs text-muted-foreground">
-            <Sparkles className="h-4 w-4 text-[#000000] flex-shrink-0" />
+          <div className="flex items-center gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20 text-xs text-muted-foreground">
+            <Sparkles className="h-4 w-4 text-[#3b82f6] flex-shrink-0" />
             <span>AI skapar automatiskt projektkod, dimensionstaggar och kopplar framtida transaktioner.</span>
           </div>
 
           <div className="flex justify-end gap-2 pt-2">
             <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>Avbryt</Button>
-            <Button type="submit" disabled={isLoading || !name.trim()} className="bg-[#000000] hover:bg-[#000000]/90 text-white">
+            <Button type="submit" disabled={isLoading || !name.trim()} className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
               {isLoading ? "Skapar..." : "Skapa projekt"}
             </Button>
           </div>

@@ -15,7 +15,7 @@ export function PlanningActionStack({ actions, onSimulate }: Props) {
   return (
     <div className="space-y-2">
       <div className="flex items-center gap-2">
-        <Sparkles className="w-3.5 h-3.5 text-[#000000]" />
+        <Sparkles className="w-3.5 h-3.5 text-[#3b82f6]" />
         <h3 className="text-sm font-semibold text-slate-900">Topp 3 åtgärder</h3>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">

@@ -121,7 +121,7 @@ export const InvoiceAuditPopover = ({ invoice, attestorName }: Props) => {
 
   const toneClasses: Record<Event["tone"], string> = {
     slate: "bg-slate-100 text-slate-600",
-    cyan: "bg-[#EFF6FF] text-[#000000]",
+    cyan: "bg-[#EFF6FF] text-[#3b82f6]",
     emerald: "bg-[#E1F5EE] text-[#085041]",
     rose: "bg-[#FCE8E8] text-[#7A1A1A]",
     amber: "bg-[#FAEEDA] text-[#7A5417]",

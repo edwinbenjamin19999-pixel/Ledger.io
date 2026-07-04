@@ -174,7 +174,7 @@ export default function SkatteverketSettings() {
 
         <div className="grid gap-6 max-w-2xl">
           {/* Integration status */}
-          <Card className="border-neutral-300 dark:border-neutral-700">
+          <Card className="border-green-300 dark:border-green-700">
             <CardHeader className="pb-3">
               <CardTitle className="text-base flex items-center gap-2">
                 <Shield className="h-4 w-4 text-[#085041]" />
@@ -310,7 +310,7 @@ export default function SkatteverketSettings() {
               <div className="mt-4 p-3 bg-muted rounded-lg">
                 <p className="text-sm font-medium mb-1">💡 Observera</p>
                 <p className="text-sm text-muted-foreground">
-                  Bokfy genererar AGI-filen lokalt, så API:et för "Individuppgifter" behövs inte (kräver lagstöd).
+                  Cogniq genererar AGI-filen lokalt, så API:et för "Individuppgifter" behövs inte (kräver lagstöd).
                 </p>
               </div>
             </CardContent>

@@ -39,8 +39,8 @@ const Cell = ({
 }) => {
   const tones: Record<string, string> = {
     info: "bg-[#EFF6FF] text-sky-700 dark:bg-sky-900/30 dark:text-sky-200",
-    warning: "bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/30 dark:text-neutral-100",
-    success: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-neutral-100",
+    warning: "bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/30 dark:text-amber-100",
+    success: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-emerald-100",
     neutral: "bg-muted text-muted-foreground",
   };
   return (

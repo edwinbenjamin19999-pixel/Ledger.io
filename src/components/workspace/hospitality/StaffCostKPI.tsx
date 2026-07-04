@@ -64,9 +64,9 @@ export const StaffCostKPI = () => {
           : "bad";
 
   const toneClasses = {
-    good: "from-neutral-100 to-neutral-100 dark:from-emerald-950/20 dark:to-neutral-700/20 border-[#BFE6D6] dark:border-neutral-700",
-    warn: "from-neutral-100 to-neutral-100 dark:from-amber-950/20 dark:to-neutral-700/20 border-[#F0DDB7] dark:border-neutral-700",
-    bad: "from-neutral-100 to-neutral-100 dark:from-rose-950/20 dark:to-neutral-700/20 border-[#F4C8C8] dark:border-neutral-700",
+    good: "from-emerald-50 to-emerald-100 dark:from-emerald-950/20 dark:to-emerald-900/20 border-[#BFE6D6] dark:border-emerald-900",
+    warn: "from-amber-50 to-amber-100 dark:from-amber-950/20 dark:to-amber-900/20 border-[#F0DDB7] dark:border-amber-900",
+    bad: "from-rose-50 to-rose-100 dark:from-rose-950/20 dark:to-rose-900/20 border-[#F4C8C8] dark:border-rose-900",
     neutral: "from-slate-50 to-slate-100 dark:from-slate-950/20 dark:to-slate-900/20",
   }[tone];
 

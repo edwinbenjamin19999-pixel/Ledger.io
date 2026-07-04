@@ -48,7 +48,7 @@ export const AccountLockedScreen = ({ userEmail, onSignOut }: AccountLockedScree
             <h1 className="text-2xl font-bold">Kontot är pausat</h1>
             <p className="text-muted-foreground">
               Din provperiod har gått ut och ingen aktiv prenumeration hittades. 
-              Aktivera din prenumeration för att få tillgång till Bokfy igen.
+              Aktivera din prenumeration för att få tillgång till Cogniq igen.
             </p>
           </div>
 

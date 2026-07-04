@@ -21,9 +21,9 @@ const MONTHS = [
 ];
 
 const StatusIcon = ({ checked, status }: { checked: boolean; status: ChecklistItem["status"] }) => {
-  if (checked) return <CheckCircle2 className="h-5 w-5 text-neutral-700" />;
-  if (status === "ok") return <CheckCircle2 className="h-5 w-5 text-neutral-700" />;
-  if (status === "warn") return <AlertTriangle className="h-5 w-5 text-neutral-700" />;
+  if (checked) return <CheckCircle2 className="h-5 w-5 text-emerald-500" />;
+  if (status === "ok") return <CheckCircle2 className="h-5 w-5 text-emerald-500" />;
+  if (status === "warn") return <AlertTriangle className="h-5 w-5 text-amber-500" />;
   if (status === "loading") return <Loader2 className="h-5 w-5 text-muted-foreground animate-spin" />;
   return <Circle className="h-5 w-5 text-muted-foreground" />;
 };
@@ -70,7 +70,7 @@ const PeriodClose = () => {
             <CalendarCheck className="h-5 w-5 text-blue-400" />
             <h1 className="text-2xl font-semibold">Periodstängning</h1>
             {isLocked && (
-              <span className="inline-flex items-center gap-1 rounded-md bg-neutral-700/10 text-neutral-700 px-2 py-0.5 text-xs font-medium">
+              <span className="inline-flex items-center gap-1 rounded-md bg-amber-500/10 text-amber-500 px-2 py-0.5 text-xs font-medium">
                 <Lock className="h-3 w-3" /> Låst
               </span>
             )}

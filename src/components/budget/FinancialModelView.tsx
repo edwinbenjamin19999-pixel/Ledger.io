@@ -156,7 +156,7 @@ export const FinancialModelView = ({ rr, br }: Props) => {
           "transition-colors",
           isTotal && "bg-slate-900 dark:bg-slate-950 text-white font-bold",
           isSubtotal && "bg-slate-100 dark:bg-slate-800 font-semibold border-t border-slate-200 dark:border-slate-700",
-          isKPI && "bg-neutral-100/50 dark:bg-blue-950/20",
+          isKPI && "bg-blue-50/50 dark:bg-blue-950/20",
           !isTotal && !isSubtotal && !isKPI && "hover:bg-slate-50 dark:hover:bg-slate-800/50 border-b border-slate-50 dark:border-slate-900",
         )}
       >
@@ -181,7 +181,7 @@ export const FinancialModelView = ({ rr, br }: Props) => {
           <td key={i} className={cn(
             "py-1.5 px-1.5 text-right text-[11px] tabular-nums font-mono whitespace-nowrap",
             isTotal && "text-white font-bold",
-            isKPI && "text-[#000000] dark:text-[#1E3A5F] font-semibold",
+            isKPI && "text-[#3b82f6] dark:text-[#1E3A5F] font-semibold",
             !isTotal && !isKPI && v < 0 && "text-[#7A1A1A] dark:text-[#C73838]",
           )}>
             {row.isPercent ? fmtPct(v) : fmt(v)}
@@ -190,7 +190,7 @@ export const FinancialModelView = ({ rr, br }: Props) => {
         <td className={cn(
           "py-1.5 px-2 text-right text-xs tabular-nums font-mono font-bold whitespace-nowrap border-l-2 border-slate-200 dark:border-slate-700",
           isTotal && "text-white border-slate-700",
-          isKPI && "text-[#000000] dark:text-[#1E3A5F]",
+          isKPI && "text-[#3b82f6] dark:text-[#1E3A5F]",
           !isTotal && !isKPI && row.annual < 0 && "text-[#7A1A1A] dark:text-[#C73838]",
         )}>
           {row.isPercent ? fmtPct(row.annual) : fmt(row.annual)}
@@ -240,8 +240,8 @@ export const FinancialModelView = ({ rr, br }: Props) => {
 
       {/* Side by side */}
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-        {renderTable("Resultaträkning", plRows, "bg-[#000000]", "Helår")}
-        {renderTable("Balansräkning", bsRows, "bg-neutral-700", "Dec")}
+        {renderTable("Resultaträkning", plRows, "bg-[#3b82f6]", "Helår")}
+        {renderTable("Balansräkning", bsRows, "bg-violet-400", "Dec")}
       </div>
     </div>
   );

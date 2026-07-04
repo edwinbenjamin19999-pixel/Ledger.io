@@ -204,7 +204,7 @@ const AIEkonomPage = () => {
         {/* Mobile floating button */}
         <button
           onClick={() => setMobileRailOpen(true)}
-          className="lg:hidden fixed bottom-24 right-4 w-12 h-12 rounded-full bg-[#000000] text-white shadow-lg flex items-center justify-center z-40"
+          className="lg:hidden fixed bottom-24 right-4 w-12 h-12 rounded-full bg-[#3b82f6] text-white shadow-lg flex items-center justify-center z-40"
           aria-label="Öppna kontextpanel"
         >
           <Sparkles className="w-5 h-5" />

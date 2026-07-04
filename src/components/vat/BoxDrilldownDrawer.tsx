@@ -214,7 +214,7 @@ export function BoxDrilldownDrawer({
                       className={cn(
                         "w-full flex items-center justify-between p-3 rounded-lg border transition-colors text-left",
                         activeAccount === a.accountNumber
-                          ? "bg-[#EFF6FF] dark:bg-blue-950/30 border-[#C8DDF5] dark:border-[#000000]"
+                          ? "bg-[#EFF6FF] dark:bg-blue-950/30 border-[#C8DDF5] dark:border-[#3b82f6]"
                           : "bg-card border-border hover:bg-muted/30"
                       )}
                     >

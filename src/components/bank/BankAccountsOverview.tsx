@@ -95,7 +95,7 @@ export function BankAccountsOverview({
                 onClick={() => onSelectAccount(account.id)}
                 className={`p-[14px] rounded-[10px] border-[0.5px] cursor-pointer transition-colors ${
                   isSelected
-                    ? "border-[#000000] bg-[#F8FAFB]"
+                    ? "border-[#0040CC] bg-[#F8FAFB]"
                     : "border-[#E2E8F0] hover:bg-[#F8FAFB]"
                 }`}
               >

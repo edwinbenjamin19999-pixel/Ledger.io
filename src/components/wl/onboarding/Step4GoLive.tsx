@@ -98,7 +98,7 @@ export function Step4GoLive({ draft, onLaunch, loading, launched, loginUrl }: Pr
         <div className="rounded-xl bg-white border border-slate-100 p-3">
           <div className="text-[10px] uppercase tracking-wider text-slate-400">AI</div>
           <div className="text-xs font-semibold text-slate-900 mt-1 flex items-center gap-1">
-            <Sparkles className="h-3 w-3 text-[#000000]" />
+            <Sparkles className="h-3 w-3 text-[#3b82f6]" />
             {draft.ai_name || "AI Ekonom"}
           </div>
         </div>
@@ -111,7 +111,7 @@ export function Step4GoLive({ draft, onLaunch, loading, launched, loginUrl }: Pr
             size="lg"
             onClick={onLaunch}
             disabled={loading}
-            className="w-full h-12 bg-[#000000] hover:bg-[#000000] text-white font-semibold shadow-[0_4px_24px_rgba(0,0,0,0.3)]"
+            className="w-full h-12 bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold shadow-[0_4px_24px_rgba(0,82,255,0.3)]"
           >
             {loading ? "Skapar din plattform..." : "Lansera min plattform"}
           </Button>
@@ -120,7 +120,7 @@ export function Step4GoLive({ draft, onLaunch, loading, launched, loginUrl }: Pr
             <Button
               size="lg"
               asChild
-              className="w-full h-12 bg-[#000000] hover:bg-[#000000] text-white font-semibold shadow-[0_4px_24px_rgba(0,0,0,0.3)]"
+              className="w-full h-12 bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold shadow-[0_4px_24px_rgba(0,82,255,0.3)]"
             >
               <a href={loginUrl} target="_blank" rel="noopener noreferrer">
                 Gå till min plattform <ExternalLink className="h-4 w-4 ml-1.5" />

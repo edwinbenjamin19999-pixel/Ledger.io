@@ -24,17 +24,17 @@ export function ConsolidationCockpitHeader({
 }: Props) {
   return (
     <div className="relative overflow-hidden rounded-3xl mb-6">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a1428] via-[#000000] to-[#1a1442]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,0,0,0.15),transparent_50%)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a1428] via-[#0F172A] to-[#1a1442]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,82,255,0.15),transparent_50%)]" />
       <div className="relative p-8 backdrop-blur-xl">
         <div className="flex items-start justify-between gap-6 flex-wrap">
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-2xl bg-[#0F1F3D] border border-[#C8DDF5] flex items-center justify-center backdrop-blur-sm">
-                <Building2 className="w-6 h-6 text-[#000000]" />
+                <Building2 className="w-6 h-6 text-[#3b82f6]" />
               </div>
               <div>
-                <p className="text-xs font-medium uppercase tracking-widest text-[#000000]/70">Group Consolidation Cockpit</p>
+                <p className="text-xs font-medium uppercase tracking-widest text-[#3b82f6]/70">Group Consolidation Cockpit</p>
                 <h1 className="text-2xl font-semibold text-white tracking-tight">{groupName || 'Välj koncern'}</h1>
               </div>
             </div>
@@ -48,7 +48,7 @@ export function ConsolidationCockpitHeader({
                 {entityCount} {entityCount === 1 ? 'bolag' : 'bolag'}
               </span>
               {unresolvedCount > 0 && (
-                <Badge className="bg-[#FAEEDA] text-neutral-300 border-[#F0DDB7] hover:bg-neutral-700/30">
+                <Badge className="bg-[#FAEEDA] text-amber-200 border-[#F0DDB7] hover:bg-amber-500/30">
                   <AlertTriangle className="w-3 h-3 mr-1" />
                   {unresolvedCount} att åtgärda
                 </Badge>
@@ -83,7 +83,7 @@ export function ConsolidationCockpitHeader({
               size="sm"
               onClick={onRunConsolidation}
               disabled={isRunning}
-              className="bg-[#0F1F3D] hover:from-[#000000] hover:to-[#000000] text-white border-0 shadow-[0_0_20px_rgba(0,0,0,0.3)]"
+              className="bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-[#3b82f6] text-white border-0 shadow-[0_0_20px_rgba(0,82,255,0.3)]"
             >
               <Play className="w-4 h-4 mr-1.5" />
               {isRunning ? 'Kör…' : 'Kör konsolidering'}

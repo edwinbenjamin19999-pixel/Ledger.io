@@ -45,7 +45,7 @@ export function ClosingStatusPanel({ status, isLoading, fiscalYear, onAutoClose,
               <circle cx="50" cy="50" r="44" fill="none" stroke="#F1F5F9" strokeWidth="6" />
               <circle
                 cx="50" cy="50" r="44" fill="none"
-                stroke="#000000" strokeWidth="6" strokeLinecap="round"
+                stroke="#0040CC" strokeWidth="6" strokeLinecap="round"
                 strokeDasharray={`${(progress / 100) * 276.46} 276.46`}
                 className="transition-all duration-700 ease-out"
               />
@@ -60,8 +60,8 @@ export function ClosingStatusPanel({ status, isLoading, fiscalYear, onAutoClose,
         {/* Status info */}
         <div className="space-y-[8px]">
           <div className="flex items-center gap-[6px]">
-            <Sparkles className="h-[12px] w-[12px] text-[#000000]" />
-            <span className="text-[10px] uppercase tracking-[0.12em] text-[#000000] font-medium">
+            <Sparkles className="h-[12px] w-[12px] text-[#0040CC]" />
+            <span className="text-[10px] uppercase tracking-[0.12em] text-[#0040CC] font-medium">
               AI Closing Command Center
             </span>
           </div>
@@ -102,7 +102,7 @@ export function ClosingStatusPanel({ status, isLoading, fiscalYear, onAutoClose,
           <button
             onClick={onAutoClose}
             disabled={isClosing || isCompleted || critical > 0 || isLoading}
-            className="h-[40px] px-[20px] rounded-[8px] bg-[#000000] text-white text-[13px] font-medium hover:bg-[#093d54] inline-flex items-center justify-center gap-[8px] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="h-[40px] px-[20px] rounded-[8px] bg-[#0040CC] text-white text-[13px] font-medium hover:bg-[#093d54] inline-flex items-center justify-center gap-[8px] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isCompleted ? (
               <><Lock className="h-[14px] w-[14px]" /> Året är stängt</>

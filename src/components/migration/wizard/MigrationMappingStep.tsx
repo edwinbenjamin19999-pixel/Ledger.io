@@ -236,7 +236,7 @@ export const MigrationMappingStep = ({ state, updateState, companyId }: Props) =
               <tbody className="divide-y">
                 {filtered.map((m, i) => { const realIndex = state.accountMappings.indexOf(m);
                   return (
-                    <tr key={i} className={m.status === "missing" ? "bg-red-50/50 dark:bg-red-950/10" : m.status === "suggested" ? "bg-neutral-100/50 dark:bg-amber-950/10" : ""}>
+                    <tr key={i} className={m.status === "missing" ? "bg-red-50/50 dark:bg-red-950/10" : m.status === "suggested" ? "bg-amber-50/50 dark:bg-amber-950/10" : ""}>
                       <td className="p-3 font-mono text-xs">{m.sourceAccount}</td>
                       <td className="p-3">{m.sourceName}</td>
                       <td className="p-3 text-center text-muted-foreground">→</td>
@@ -255,7 +255,7 @@ export const MigrationMappingStep = ({ state, updateState, companyId }: Props) =
                         </Select>
                       </td>
                       <td className="p-3">
-                        {m.status === "matched" && <Badge variant="default" className="text-[10px] bg-neutral-700">Matchad</Badge>}
+                        {m.status === "matched" && <Badge variant="default" className="text-[10px] bg-emerald-600">Matchad</Badge>}
                         {m.status === "suggested" && <Badge variant="secondary" className="text-[10px]">AI-förslag ({m.confidence}%)</Badge>}
                         {m.status === "manual" && <Badge variant="outline" className="text-[10px]">Manuell</Badge>}
                         {m.status === "missing" && <Badge variant="destructive" className="text-[10px]">Saknas</Badge>}

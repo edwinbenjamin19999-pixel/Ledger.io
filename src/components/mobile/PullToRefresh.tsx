@@ -75,7 +75,7 @@ export const PullToRefresh = ({
           }}
         >
           <div
-            className="w-[24px] h-[24px] rounded-full border-2 border-[#000000] border-t-transparent"
+            className="w-[24px] h-[24px] rounded-full border-2 border-[#0040CC] border-t-transparent"
             style={{
               animation: refreshing ? "spin 0.8s linear infinite" : "none",
               transform: refreshing ? undefined : `rotate(${rotation}deg)`,

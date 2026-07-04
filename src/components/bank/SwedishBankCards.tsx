@@ -31,7 +31,7 @@ interface SwedishBankCardsProps { connectedBanks: { bank_name: string; accounts:
 const SWEDISH_BANKS: Omit<BankCardData, "connected" | "accounts">[] = [
   { id: "swedbank", name: "Swedbank", initials: "SW", color: "bg-[#FFF7ED] text-[#C2410C] border-[#FED7AA]" },
   { id: "seb", name: "SEB", initials: "SEB", color: "bg-[#ECFDF5] text-[#047857] border-[#A7F3D0]" },
-  { id: "handelsbanken", name: "Handelsbanken", initials: "SHB", color: "bg-[#EFF6FF] text-[#000000] border-[#BFDBFE]" },
+  { id: "handelsbanken", name: "Handelsbanken", initials: "SHB", color: "bg-[#EFF6FF] text-[#0040CC] border-[#BFDBFE]" },
   { id: "nordea", name: "Nordea", initials: "N", color: "bg-[#EEF2FF] text-[#3730A3] border-[#C7D2FE]" },
   { id: "danske", name: "Danske Bank", initials: "DB", color: "bg-[#F0F9FF] text-[#0369A1] border-[#BAE6FD]" },
   { id: "lansforsakringar", name: "Länsförsäkringar", initials: "LF", color: "bg-[#FEF2F2] text-[#B91C1C] border-[#FECACA]" },
@@ -91,7 +91,7 @@ export function SwedishBankCards({ connectedBanks, onConnect, onManualImport }: 
               ) : (
                 <button
                   onClick={(e) => { e.stopPropagation(); handleConnect(bank.name); }}
-                  className="mt-[6px] h-[26px] px-[8px] text-[11px] text-[#000000] hover:bg-[#F8FAFB] rounded-[6px] inline-flex items-center"
+                  className="mt-[6px] h-[26px] px-[8px] text-[11px] text-[#0040CC] hover:bg-[#F8FAFB] rounded-[6px] inline-flex items-center"
                 >
                   Anslut <ArrowRight className="h-[12px] w-[12px] ml-[4px]" />
                 </button>
@@ -117,20 +117,20 @@ export function SwedishBankCards({ connectedBanks, onConnect, onManualImport }: 
           <div className="space-y-4 py-2">
             <div className="bg-[#EFF6FF] dark:bg-blue-950/30 rounded-xl p-4 space-y-3">
               <h4 className="font-semibold text-sm flex items-center gap-2">
-                <Lock className="h-4 w-4 text-black" />
+                <Lock className="h-4 w-4 text-blue-600" />
                 Så fungerar det
               </h4>
               <ul className="text-sm text-muted-foreground space-y-2">
                 <li className="flex items-start gap-2">
-                  <Eye className="h-4 w-4 mt-0.5 text-black shrink-0" />
+                  <Eye className="h-4 w-4 mt-0.5 text-blue-500 shrink-0" />
                   <span><strong>Enbart läsåtkomst</strong> — vi kan aldrig göra betalningar eller ändringar på ditt konto</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Shield className="h-4 w-4 mt-0.5 text-black shrink-0" />
+                  <Shield className="h-4 w-4 mt-0.5 text-blue-500 shrink-0" />
                   <span><strong>PSD2-skyddad</strong> — anslutningen styrs av EU:s Payment Services Directive 2</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Lock className="h-4 w-4 mt-0.5 text-black shrink-0" />
+                  <Lock className="h-4 w-4 mt-0.5 text-blue-500 shrink-0" />
                   <span><strong>BankID-verifiering</strong> — du godkänner varje anslutning med BankID</span>
                 </li>
               </ul>

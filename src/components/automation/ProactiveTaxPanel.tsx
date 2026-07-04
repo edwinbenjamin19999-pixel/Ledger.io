@@ -23,7 +23,7 @@ interface Optimization { rank: number;
 const formatSEK = (n: number) => Math.round(n).toLocaleString('sv-SE') + ' kr';
 
 const riskLabel: Record<string, string> = { low: 'Låg', medium: 'Medel', high: 'Hög' };
-const riskColor: Record<string, string> = { low: 'bg-[#E1F5EE] text-[#085041] border-neutral-700/30',
+const riskColor: Record<string, string> = { low: 'bg-[#E1F5EE] text-[#085041] border-green-500/30',
   medium: 'bg-orange-500/15 text-orange-700 border-orange-500/30',
   high: 'bg-destructive/15 text-destructive border-destructive/30',
 };
@@ -246,7 +246,7 @@ export const ProactiveTaxPanel = ({ companyId }: ProactiveTaxPanelProps) => { co
           </div>
         )}
 
-        <Button className="w-full" style={{ backgroundColor: '#000000', color: '#0F2137' }}>
+        <Button className="w-full" style={{ backgroundColor: '#3b82f6', color: '#0F2137' }}>
           <Lock className="w-4 h-4 mr-2" />
           Implementera valda åtgärder och signera med BankID
         </Button>

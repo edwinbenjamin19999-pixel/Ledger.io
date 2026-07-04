@@ -35,7 +35,7 @@ const SOURCES = [
   },
   { id: "pdf" as const,
     name: "E-postarkiv / PDF-fakturor",
-    description: "Har du fakturor som PDF i din e-post eller på din dator? AI läser dem automatiskt och skapar poster i Bokfy.",
+    description: "Har du fakturor som PDF i din e-post eller på din dator? AI läser dem automatiskt och skapar poster i Cogniq.",
     methods: ["PDF"],
     exportGuide: "Ladda upp PDF-filer — AI extraherar leverantör, belopp, datum och moms",
     popular: false,
@@ -103,14 +103,14 @@ export const MigrationSourceStep = ({ state, updateState }: Props) => { return (
       </div>
 
       {state.source && state.source !== "fortnox" && state.source !== "visma" && (
-        <Card className="bg-neutral-100/50 dark:bg-emerald-950/20 border-[#BFE6D6] dark:border-neutral-700">
+        <Card className="bg-emerald-50/50 dark:bg-emerald-950/20 border-[#BFE6D6] dark:border-emerald-900">
           <CardContent className="p-4 flex items-start gap-3">
             <FileSpreadsheet className="h-5 w-5 text-[#085041] mt-0.5 shrink-0" />
             <div className="text-sm">
-              <p className="font-medium text-[#085041] dark:text-neutral-300">
+              <p className="font-medium text-[#085041] dark:text-emerald-200">
                 Migrering sker via SIE4-fil
               </p>
-              <p className="text-xs text-neutral-700/80 dark:text-neutral-300/80 mt-1">
+              <p className="text-xs text-emerald-800/80 dark:text-emerald-300/80 mt-1">
                 SIE4-export importerar exakt samma data — kontoplan, verifikationer, kunder och leverantörer — och tar bara några minuter.
               </p>
             </div>
@@ -121,10 +121,10 @@ export const MigrationSourceStep = ({ state, updateState }: Props) => { return (
       {(state.source === "fortnox" || state.source === "visma") && (
         <Card className="bg-[#EFF6FF] border-[#B5D4F4]">
           <CardContent className="p-4 flex items-start gap-3">
-            <FileSpreadsheet className="h-5 w-5 text-[#000000] mt-0.5 shrink-0" />
+            <FileSpreadsheet className="h-5 w-5 text-[#0040CC] mt-0.5 shrink-0" />
             <div className="text-sm">
-              <p className="font-medium text-[#000000]">Direktanslutning tillgänglig</p>
-              <p className="text-xs text-[#000000]/80 mt-1">
+              <p className="font-medium text-[#0040CC]">Direktanslutning tillgänglig</p>
+              <p className="text-xs text-[#0040CC]/80 mt-1">
                 Du kan välja mellan att ansluta direkt via {state.source === "fortnox" ? "Fortnox" : "Visma eEkonomi"} OAuth (rekommenderas) eller ladda upp en SIE4-fil. Fortsätt till nästa steg.
               </p>
             </div>

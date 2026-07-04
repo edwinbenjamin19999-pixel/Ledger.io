@@ -51,8 +51,8 @@ export const MobileNavBar = ({ active, onChange }: MobileNavBarProps) => {
                 <t.icon
                   size={24}
                   strokeWidth={isActive ? 2 : 1.5}
-                  color={isActive ? "#000000" : "#94A3B8"}
-                  fill={isActive ? "#000000" : "none"}
+                  color={isActive ? "#3b82f6" : "#94A3B8"}
+                  fill={isActive ? "#3b82f6" : "none"}
                   fillOpacity={isActive ? 0.12 : 0}
                 />
                 {showBadge && (
@@ -62,7 +62,7 @@ export const MobileNavBar = ({ active, onChange }: MobileNavBarProps) => {
                 )}
               </div>
               {isActive ? (
-                <span className="text-[11px] leading-tight text-[#000000] font-medium">
+                <span className="text-[11px] leading-tight text-[#3b82f6] font-medium">
                   {t.label}
                 </span>
               ) : (

@@ -97,10 +97,10 @@ const CashFlow = () => {
   const selectedPeriodData = drilldownPeriod ? periods.find(p => p.period === drilldownPeriod) || null : null;
 
   const liveDot = realtimeStatus === "live"
-    ? { color: "bg-neutral-700", label: "LIVE", ping: true }
+    ? { color: "bg-emerald-500", label: "LIVE", ping: true }
     : realtimeStatus === "reconnecting"
-      ? { color: "bg-neutral-700", label: "RECONNECTING", ping: true }
-      : { color: "bg-neutral-700", label: "OFFLINE", ping: false };
+      ? { color: "bg-amber-500", label: "RECONNECTING", ping: true }
+      : { color: "bg-rose-500", label: "OFFLINE", ping: false };
 
   const statusPill = (
     <span className="inline-flex items-center gap-1.5 text-[10px] font-mono px-2 py-0.5 rounded-full bg-muted text-muted-foreground">
@@ -161,15 +161,15 @@ const CashFlow = () => {
 
         {/* READ-ONLY AI NARRATIVE BAND (no execution buttons) */}
         {!loading && kpi && (
-          <div className="rounded-xl border bg-gradient-to-r from-[#000000]/5 via-transparent to-transparent px-4 py-3 flex items-center justify-between gap-3 flex-wrap">
+          <div className="rounded-xl border bg-gradient-to-r from-[#3b82f6]/5 via-transparent to-transparent px-4 py-3 flex items-center justify-between gap-3 flex-wrap">
             <div className="flex items-start gap-2 min-w-0 flex-1">
-              <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+              <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
               <p className="text-xs text-foreground/80 leading-relaxed">{narrative}</p>
             </div>
             <Button
               size="sm"
               variant="outline"
-              className="h-8 text-xs border-[#C8DDF5] text-[#000000] dark:text-[#1E3A5F] hover:bg-[#EFF6FF]"
+              className="h-8 text-xs border-[#C8DDF5] text-[#3b82f6] dark:text-[#1E3A5F] hover:bg-[#EFF6FF]"
               onClick={() => navigate("/cash-command")}
             >
               <Zap className="h-3.5 w-3.5 mr-1.5" />
@@ -185,7 +185,7 @@ const CashFlow = () => {
           <div className="space-y-3">
             <div>
               <h2 className="text-sm font-semibold tracking-tight flex items-center gap-1.5">
-                <Radio className="h-3.5 w-3.5 text-[#000000]" /> Cash Waterfall — denna månad
+                <Radio className="h-3.5 w-3.5 text-[#3b82f6]" /> Cash Waterfall — denna månad
               </h2>
               <p className="text-[11px] text-muted-foreground">Klicka på en stapel för att se underliggande verifikationer</p>
             </div>

@@ -111,8 +111,8 @@ export default function ClientDetailPage() {
             <span className="font-mono text-[12px] text-[#94A3B8]">{client.org_number ?? "—"}</span>
             <span className={`px-1.5 py-0.5 rounded text-[10px] font-medium ${
               client.urgency === "high" ? "bg-red-50 text-red-700"
-              : client.urgency === "medium" ? "bg-neutral-100 text-neutral-700"
-              : "bg-neutral-100 text-neutral-700"
+              : client.urgency === "medium" ? "bg-amber-50 text-amber-700"
+              : "bg-emerald-50 text-emerald-700"
             }`}>
               {client.urgency === "high" ? "Kritisk" : client.urgency === "medium" ? "Varning" : "OK"}
             </span>
@@ -185,7 +185,7 @@ export default function ClientDetailPage() {
                 Nedlagd tid — {monthLabel}
               </h3>
               <p className="text-[13px] text-slate-400">Ingen tid loggad denna månad.</p>
-              <Link to="#" className="text-[12px] text-black hover:underline mt-2 inline-block">Logga mer tid →</Link>
+              <Link to="#" className="text-[12px] text-blue-600 hover:underline mt-2 inline-block">Logga mer tid →</Link>
             </div>
           </div>
         </div>

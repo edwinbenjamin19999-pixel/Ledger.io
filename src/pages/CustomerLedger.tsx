@@ -205,7 +205,7 @@ const CustomerLedger = () => { const { user, loading } = useAuth();
                 type="checkbox"
                 checked={checked}
                 onChange={() => toggleSelected(inv.id)}
-                className="w-[14px] h-[14px] rounded-[3px] border-[1.5px] border-[#D1D5DB] accent-[#000000] cursor-pointer"
+                className="w-[14px] h-[14px] rounded-[3px] border-[1.5px] border-[#D1D5DB] accent-[#0040CC] cursor-pointer"
                 aria-label={`Välj faktura ${inv.invoice_number}`}
               />
               <div className="flex-1 min-w-0">
@@ -225,7 +225,7 @@ const CustomerLedger = () => { const { user, loading } = useAuth();
                 type="button"
                 disabled={remindingId === inv.id}
                 onClick={() => handleSendReminder(inv)}
-                className="text-[11px] font-medium text-[#000000] hover:text-[#1074A0] px-[8px] disabled:opacity-50 inline-flex items-center gap-1"
+                className="text-[11px] font-medium text-[#0040CC] hover:text-[#1074A0] px-[8px] disabled:opacity-50 inline-flex items-center gap-1"
               >
                 {remindingId === inv.id && <Loader2 className="w-3 h-3 animate-spin" />}
                 Påminn
@@ -269,7 +269,7 @@ const CustomerLedger = () => { const { user, loading } = useAuth();
               ? { bg: "bg-[#F2FBF7]", border: "border-[#A7E3C7]", line: "bg-[#1D9E75]" }
               : kpi.variant === "red"
                 ? { bg: "bg-[#FFF5F5]", border: "border-[#FBBEBE]", line: "bg-[#E24B4A]" }
-                : { bg: "bg-[#FAFBFC]", border: "border-[#DFE4EA]", line: "bg-[#000000]" };
+                : { bg: "bg-[#FAFBFC]", border: "border-[#DFE4EA]", line: "bg-[#0040CC]" };
           return (
             <div key={i} className={`relative overflow-hidden ${styles.bg} border-[0.5px] ${styles.border} rounded-[12px] p-[16px]`}>
               <span aria-hidden className={`absolute top-0 left-0 right-0 h-[1.5px] ${styles.line} rounded-t-[12px]`} />
@@ -283,7 +283,7 @@ const CustomerLedger = () => { const { user, loading } = useAuth();
 
       {/* AI Inkassoanalys */}
       <div className="bg-[#EFF6FF] border-[0.5px] border-[#B5D4F4] rounded-[12px] px-[14px] py-[10px] flex items-center gap-[10px]">
-        <div className="w-[18px] h-[18px] rounded-full bg-[#000000] flex items-center justify-center flex-shrink-0">
+        <div className="w-[18px] h-[18px] rounded-full bg-[#0040CC] flex items-center justify-center flex-shrink-0">
           <div className="w-[7px] h-[7px] rounded-full bg-[#E6F4FA]" />
         </div>
         <div className="flex flex-col leading-tight flex-1 min-w-0">
@@ -295,7 +295,7 @@ const CustomerLedger = () => { const { user, loading } = useAuth();
         <button
           type="button"
           onClick={() => navigate("/invoice-reminders")}
-          className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[32px] transition-colors flex-shrink-0"
+          className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[11px] font-medium px-[12px] h-[32px] transition-colors flex-shrink-0"
         >
           Skicka påminnelser automatiskt
         </button>
@@ -466,14 +466,14 @@ const CustomerLedger = () => { const { user, loading } = useAuth();
             <button
               type="button"
               onClick={() => toast.success(`${selectedIds.size} fakturor schemalagda`)}
-              className="text-[12px] font-medium text-[#000000] hover:bg-[#EFF6FF] rounded-[8px] px-[12px] h-[32px]"
+              className="text-[12px] font-medium text-[#0040CC] hover:bg-[#EFF6FF] rounded-[8px] px-[12px] h-[32px]"
             >
               Schemalägg
             </button>
             <button
               type="button"
               onClick={() => navigate("/invoice-reminders")}
-              className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[32px] transition-colors"
+              className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[32px] transition-colors"
             >
               Skicka påminnelse
             </button>

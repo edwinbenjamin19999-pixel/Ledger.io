@@ -90,8 +90,8 @@ function PercentileBar({ value, p25, p50, p75, percentile, unit, isReliable }: {
         <div className="absolute inset-0 flex">
           <div className="w-1/4 bg-[#FCE8E8] dark:bg-red-900/30" />
           <div className="w-1/4 bg-[#FAEEDA] dark:bg-yellow-900/30" />
-          <div className="w-1/4 bg-[#E1F5EE] dark:bg-neutral-700/30" />
-          <div className="w-1/4 bg-[#E1F5EE] dark:bg-neutral-700/30" />
+          <div className="w-1/4 bg-[#E1F5EE] dark:bg-green-900/30" />
+          <div className="w-1/4 bg-[#E1F5EE] dark:bg-emerald-900/30" />
         </div>
         <div className="absolute top-0 bottom-0 left-[25%] w-px bg-border" />
         <div className="absolute top-0 bottom-0 left-[50%] w-px bg-border" />
@@ -152,9 +152,9 @@ function KPIBenchmarkCard({ kpi, sniLabel }: { kpi: BenchmarkKPI; sniLabel: stri
 
           {/* Data quality warning */}
           {kpi.dataQualityNote && (
-            <div className="flex items-start gap-2 p-3 bg-[#FAEEDA] dark:bg-amber-950/20 rounded-lg border border-[#F0DDB7] dark:border-neutral-700">
+            <div className="flex items-start gap-2 p-3 bg-[#FAEEDA] dark:bg-amber-950/20 rounded-lg border border-[#F0DDB7] dark:border-amber-800">
               <AlertTriangle className="h-4 w-4 text-[#7A5417] mt-0.5 shrink-0" />
-              <p className="text-xs text-[#7A5417] dark:text-neutral-300">{kpi.dataQualityNote}</p>
+              <p className="text-xs text-[#7A5417] dark:text-amber-300">{kpi.dataQualityNote}</p>
             </div>
           )}
 
@@ -221,11 +221,11 @@ function KPIBenchmarkCard({ kpi, sniLabel }: { kpi: BenchmarkKPI; sniLabel: stri
   );
 }
 
-function InsightCard({ title, text, type }: { title: string; text: string; type: "strength" | "weakness" | "opportunity" | "warning" | "info" }) { const styles: Record<string, { icon: typeof Lightbulb; className: string }> = { strength: { icon: Shield, className: "text-[#085041] bg-[#E1F5EE] dark:bg-neutral-700/20 border-[#BFE6D6] dark:border-neutral-700" },
+function InsightCard({ title, text, type }: { title: string; text: string; type: "strength" | "weakness" | "opportunity" | "warning" | "info" }) { const styles: Record<string, { icon: typeof Lightbulb; className: string }> = { strength: { icon: Shield, className: "text-[#085041] bg-[#E1F5EE] dark:bg-emerald-900/20 border-[#BFE6D6] dark:border-emerald-800" },
     weakness: { icon: AlertTriangle, className: "text-[#7A1A1A] bg-[#FCE8E8] dark:bg-red-900/20 border-[#F4C8C8] dark:border-red-800" },
     opportunity: { icon: Lightbulb, className: "text-[#7A5417] bg-[#FAEEDA] dark:bg-yellow-900/20 border-[#F0DDB7] dark:border-yellow-800" },
     warning: { icon: AlertTriangle, className: "text-[#7A1A1A] bg-[#FCE8E8] dark:bg-red-900/20 border-[#F4C8C8] dark:border-red-800" },
-    info: { icon: Info, className: "text-black bg-[#EFF6FF] dark:bg-blue-900/20 border-[#C8DDF5] dark:border-black" },
+    info: { icon: Info, className: "text-blue-500 bg-[#EFF6FF] dark:bg-blue-900/20 border-[#C8DDF5] dark:border-blue-800" },
   };
   const s = styles[type];
   const Icon = s.icon;

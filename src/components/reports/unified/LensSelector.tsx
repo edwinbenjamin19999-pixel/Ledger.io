@@ -66,8 +66,8 @@ export function LensSelector({
                 "rounded-full px-3.5 py-1.5 text-xs font-medium transition-all",
                 "disabled:cursor-not-allowed disabled:opacity-40",
                 isActive
-                  ? "bg-[#000000] text-white shadow-sm"
-                  : "text-foreground hover:bg-[#EFF6FF] hover:text-[#000000] dark:hover:bg-blue-900/20",
+                  ? "bg-[#3b82f6] text-white shadow-sm"
+                  : "text-foreground hover:bg-[#EFF6FF] hover:text-[#3b82f6] dark:hover:bg-blue-900/20",
               )}
             >
               {opt.label}

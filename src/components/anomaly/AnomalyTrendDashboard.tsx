@@ -15,14 +15,14 @@ interface Props { companyId: string;
   anomalies: { category: string; severity: string; status: string }[];
 }
 
-const SEVERITY_COLORS = { high: "#525252", medium: "#EAB308", low: "#000000" };
+const SEVERITY_COLORS = { high: "#EF4444", medium: "#EAB308", low: "#3B82F6" };
 const CATEGORY_COLORS: Record<string, string> = { duplicate: "#F97316",
   personal_expense: "#A855F7",
-  unusual_amount: "#525252",
+  unusual_amount: "#EF4444",
   round_number: "#EAB308",
-  timing: "#000000",
+  timing: "#3B82F6",
   ghost_vendor: "#6B7280",
-  account_misuse: "#525252",
+  account_misuse: "#D97706",
 };
 const CATEGORY_LABELS: Record<string, string> = { duplicate: "Dubbelbetalningar",
   personal_expense: "Privata kostnader",
@@ -129,7 +129,7 @@ export function AnomalyTrendDashboard({ companyId, anomalies }: Props) {
             <p className="text-xs text-muted-foreground">Modellens precision</p>
             <p className="text-2xl font-bold">{precision}%</p>
             <div className="flex items-center gap-1 mt-0.5">
-              <CheckCircle className="h-3 w-3 text-[#000000]" />
+              <CheckCircle className="h-3 w-3 text-[#22c55e]" />
               <span className="text-xs text-muted-foreground">{falsePositives} falsklarm</span>
             </div>
           </CardContent>
@@ -140,9 +140,9 @@ export function AnomalyTrendDashboard({ companyId, anomalies }: Props) {
             <p className="text-2xl font-bold">{falsePositiveRate}%</p>
             <div className="flex items-center gap-1 mt-0.5">
               {falsePositiveRate < 15 ? (
-                <TrendingDown className="h-3 w-3 text-[#000000]" />
+                <TrendingDown className="h-3 w-3 text-[#22c55e]" />
               ) : (
-                <TrendingUp className="h-3 w-3 text-[#525252]" />
+                <TrendingUp className="h-3 w-3 text-[#EF4444]" />
               )}
               <span className="text-xs text-muted-foreground">{falsePositiveRate < 15 ? "Bra" : "Högt"}</span>
             </div>
@@ -175,9 +175,9 @@ export function AnomalyTrendDashboard({ companyId, anomalies }: Props) {
                   <XAxis dataKey="week" tick={AXIS_TICK} axisLine={false} tickLine={false} />
                   <YAxis allowDecimals={false} tick={AXIS_TICK} axisLine={false} tickLine={false} />
                   <Tooltip content={<ChartTooltip />} cursor={TOOLTIP_CURSOR} />
-                  <Bar dataKey="Kritisk" stackId="a" fill="#525252" radius={[0, 0, 0, 0]} />
+                  <Bar dataKey="Kritisk" stackId="a" fill="#EF4444" radius={[0, 0, 0, 0]} />
                   <Bar dataKey="Medium" stackId="a" fill="#EAB308" radius={[0, 0, 0, 0]} />
-                  <Bar dataKey="Info" stackId="a" fill="#000000" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="Info" stackId="a" fill="#3B82F6" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -248,7 +248,7 @@ export function AnomalyTrendDashboard({ companyId, anomalies }: Props) {
                     contentStyle={{ background: "rgba(15,23,42,0.95)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "14px", backdropFilter: "blur(12px)", fontSize: "12px" }}
                     formatter={(v: number) => [`${v}%`, "Resolutionsgrad"]}
                   />
-                  <Line type="monotone" dataKey="rate" stroke="#000000" strokeWidth={2} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="rate" stroke="#3b82f6" strokeWidth={2} dot={{ r: 3 }} />
                   {/* Target line at 90% */}
                   <Line type="monotone" dataKey={() => 90} stroke="hsl(var(--muted-foreground))" strokeDasharray="5 5" strokeWidth={1} dot={false} name="Mål" />
                 </LineChart>

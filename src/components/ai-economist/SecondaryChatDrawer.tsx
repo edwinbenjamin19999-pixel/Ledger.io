@@ -14,7 +14,7 @@ export function SecondaryChatDrawer({ companyId }: Props) {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-full bg-[#0F1F3D] text-white shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:scale-105 transition-transform z-40 flex items-center justify-center"
+        className="fixed bottom-6 right-6 h-14 w-14 rounded-full bg-[#0F1F3D] text-white shadow-[0_0_30px_rgba(0,82,255,0.5)] hover:scale-105 transition-transform z-40 flex items-center justify-center"
         title="Fråga AI"
       >
         <MessageCircle className="h-6 w-6" />

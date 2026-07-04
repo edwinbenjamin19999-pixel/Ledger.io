@@ -16,7 +16,7 @@ const URGENCY_LABEL = {
 
 const RiskBar = ({ alerts }: { alerts: number }) => {
   const filled = alerts === 0 ? 0 : alerts <= 2 ? 1 : alerts <= 5 ? 2 : 3;
-  const color = filled === 0 ? "bg-neutral-700" : filled === 1 ? "bg-neutral-700" : "bg-neutral-700";
+  const color = filled === 0 ? "bg-emerald-500" : filled === 1 ? "bg-amber-500" : "bg-rose-500";
   return (
     <div className="flex gap-1 items-center">
       {[0, 1, 2].map((i) => (

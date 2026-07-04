@@ -34,19 +34,19 @@ const MONTH_NAMES = [
 ];
 
 const TYPE_CONFIG: Record<string, { icon: React.ElementType; color: string; borderColor: string; label: string }> = {
-  fskatt: { icon: Landmark, color: "text-neutral-700", borderColor: "border-l-violet-500", label: "F-skatt" },
-  vat: { icon: DollarSign, color: "text-[#000000]", borderColor: "border-l-[#000000]", label: "Moms" },
+  fskatt: { icon: Landmark, color: "text-violet-600", borderColor: "border-l-violet-500", label: "F-skatt" },
+  vat: { icon: DollarSign, color: "text-[#0052FF]", borderColor: "border-l-[#0052FF]", label: "Moms" },
   agi: { icon: Users, color: "text-[#085041]", borderColor: "border-l-emerald-500", label: "AGI" },
   ink2: { icon: FileText, color: "text-[#7A5417]", borderColor: "border-l-amber-500", label: "INK2" },
   k10: { icon: Building2, color: "text-[#7A1A1A]", borderColor: "border-l-rose-500", label: "K10" },
-  ku: { icon: Receipt, color: "text-neutral-700", borderColor: "border-l-indigo-500", label: "KU10" },
+  ku: { icon: Receipt, color: "text-indigo-600", borderColor: "border-l-indigo-500", label: "KU10" },
 };
 
 const STATUS_CONFIG: Record<string, { label: string; variant: string; className: string }> = {
-  submitted: { label: "Inskickad", variant: "default", className: "bg-[#EFF6FF] text-black dark:bg-blue-900/40 dark:text-blue-300 border-[#C8DDF5] dark:border-black" },
+  submitted: { label: "Inskickad", variant: "default", className: "bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border-[#C8DDF5] dark:border-blue-800" },
   overdue: { label: "Förfallen", variant: "destructive", className: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/40 dark:text-red-300 border-[#F4C8C8] dark:border-red-800" },
-  pending: { label: "Ej inskickad", variant: "secondary", className: "bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/40 dark:text-neutral-300 border-[#F0DDB7] dark:border-neutral-700" },
-  ready: { label: "Godkänd", variant: "default", className: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/40 dark:text-neutral-300 border-[#BFE6D6] dark:border-neutral-700" },
+  pending: { label: "Ej inskickad", variant: "secondary", className: "bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/40 dark:text-amber-300 border-[#F0DDB7] dark:border-amber-800" },
+  ready: { label: "Godkänd", variant: "default", className: "bg-[#E1F5EE] text-[#085041] dark:bg-green-900/40 dark:text-green-300 border-[#BFE6D6] dark:border-green-800" },
 };
 
 type FilterType = "all" | "overdue" | "week" | "month" | "upcoming";
@@ -185,7 +185,7 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
                     className={cn(
                       "relative flex flex-col items-center gap-0.5 px-4 py-2 rounded-full text-sm font-medium transition-all shrink-0 snap-center",
                       isActive
-                        ? "bg-[#000000] text-white shadow-md"
+                        ? "bg-[#0052FF] text-white shadow-md"
                         : "bg-muted/50 text-muted-foreground hover:bg-muted dark:bg-slate-800/50"
                     )}
                   >
@@ -199,7 +199,7 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
                     {!isActive && m.count > 0 && (
                       <span className={cn(
                         "absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full",
-                        m.hasOverdue ? "bg-red-500" : "bg-[#000000]"
+                        m.hasOverdue ? "bg-red-500" : "bg-[#0052FF]"
                       )} />
                     )}
                   </button>
@@ -237,7 +237,7 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
                 isActive && isOverdueChip
                   ? "bg-red-500 text-white"
                   : isActive
-                    ? "bg-[#000000] text-white shadow-sm"
+                    ? "bg-[#0052FF] text-white shadow-sm"
                     : "bg-muted/60 text-muted-foreground hover:bg-muted dark:bg-slate-800/50"
               )}
             >
@@ -290,7 +290,7 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium flex items-center gap-2">
-                <CalendarDays className="h-4 w-4 text-[#000000]" />
+                <CalendarDays className="h-4 w-4 text-[#0052FF]" />
                 Kommande 30 dagarna
               </CardTitle>
             </CardHeader>
@@ -308,7 +308,7 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
                     <Badge variant="outline" className={cn(
                       "text-[10px] font-semibold",
                       dl.daysLeft <= 3 ? "border-red-300 text-[#7A1A1A] bg-[#FCE8E8] dark:bg-red-900/20" :
-                        dl.daysLeft <= 7 ? "border-[#F0DDB7] text-[#7A5417] bg-[#FAEEDA] dark:bg-neutral-700/20" :
+                        dl.daysLeft <= 7 ? "border-[#F0DDB7] text-[#7A5417] bg-[#FAEEDA] dark:bg-amber-900/20" :
                           "border-border text-muted-foreground"
                     )}>
                       om {dl.daysLeft}d
@@ -335,12 +335,12 @@ export const DeclarationCalendar = ({ deadlines, companyId }: DeclarationCalenda
                           className={cn(
                             "aspect-square rounded-md text-[10px] font-medium flex items-center justify-center transition-all",
                             isSameMonth(h.month, selectedMonth)
-                              ? "ring-2 ring-[#000000] ring-offset-1"
+                              ? "ring-2 ring-[#0052FF] ring-offset-1"
                               : "",
                             h.count === 0 ? "bg-muted/30 text-muted-foreground/50" :
-                              h.count <= 1 ? "bg-[#000000]/10 text-[#000000]" :
-                                h.count <= 3 ? "bg-[#000000]/25 text-[#000000]" :
-                                  "bg-[#000000]/40 text-[#000000] font-bold"
+                              h.count <= 1 ? "bg-[#0052FF]/10 text-[#0052FF]" :
+                                h.count <= 3 ? "bg-[#0052FF]/25 text-[#0052FF]" :
+                                  "bg-[#0052FF]/40 text-[#0052FF] font-bold"
                           )}
                         >
                           {format(h.month, "MMM", { locale: sv }).slice(0, 3)}
@@ -375,11 +375,11 @@ function TimelineItem({ deadline: dl, isLast }: { deadline: EnrichedDeadline; is
 
   const spineColor = dl.computedStatus === "overdue" ? "bg-red-400" :
     dl.computedStatus === "submitted" || dl.computedStatus === "ready" ? "bg-muted-foreground/20" :
-      dl.daysLeft <= 7 ? "bg-[#000000]" : "bg-border";
+      dl.daysLeft <= 7 ? "bg-[#0052FF]" : "bg-border";
 
   const dotColor = dl.computedStatus === "overdue" ? "bg-red-500 shadow-red-500/30" :
-    dl.daysLeft <= 7 ? "bg-neutral-700 shadow-amber-500/30" :
-      dl.daysLeft <= 30 ? "bg-[#000000] shadow-[#000000]/30" : "bg-muted-foreground/40";
+    dl.daysLeft <= 7 ? "bg-amber-500 shadow-amber-500/30" :
+      dl.daysLeft <= 30 ? "bg-[#0052FF] shadow-[#0052FF]/30" : "bg-muted-foreground/40";
 
   const isUrgent = dl.daysLeft <= 7 && dl.computedStatus === "pending";
 
@@ -481,7 +481,7 @@ function ActionButton({ status, daysLeft }: { status: string; daysLeft: number }
         label="Skicka in nu"
         authority="Skatteverket"
         size="sm"
-        className="text-xs h-7 bg-[#000000] hover:bg-[#000000]/90 text-white"
+        className="text-xs h-7 bg-[#0052FF] hover:bg-[#0052FF]/90 text-white"
         onDemoSubmit={() => toast.success("Deklaration inskickad till Skatteverket")}
       />
     );
@@ -499,7 +499,7 @@ function ActionButton({ status, daysLeft }: { status: string; daysLeft: number }
 function EmptyState({ month }: { month: string }) {
   return (
     <div className="flex flex-col items-center justify-center py-16 text-center">
-      <div className="w-16 h-16 rounded-full bg-[#E1F5EE] dark:bg-neutral-700/30 flex items-center justify-center mb-4 animate-scale-in">
+      <div className="w-16 h-16 rounded-full bg-[#E1F5EE] dark:bg-green-900/30 flex items-center justify-center mb-4 animate-scale-in">
         <Check className="h-8 w-8 text-[#085041]" />
       </div>
       <h3 className="text-lg font-semibold capitalize">Allt klart för {month}!</h3>

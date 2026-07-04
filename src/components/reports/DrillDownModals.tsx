@@ -17,7 +17,7 @@ const fmt2 = (n: number) =>
   n.toLocaleString("sv-SE", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 const amountColor = (n: number) =>
-  n < -0.005 ? "text-destructive" : n > 0.005 ? "text-black dark:text-[#1E3A5F]" : "text-muted-foreground";
+  n < -0.005 ? "text-destructive" : n > 0.005 ? "text-blue-700 dark:text-[#1E3A5F]" : "text-muted-foreground";
 
 // ─── LEVEL 1: ACCOUNT ANALYSIS (Vitec 3L style) ─────────────────
 interface MonthRow { month: number;

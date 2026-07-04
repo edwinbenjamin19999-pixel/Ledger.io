@@ -48,7 +48,7 @@ export const AdvisorHome = ({ selectedIds, toggleSelected, onNavigate }: Advisor
           {clients.length > 10 && (
             <button
               onClick={() => onNavigate("clients")}
-              className="text-[11px] text-[#000000] font-semibold active:scale-95 transition-transform"
+              className="text-[11px] text-[#3b82f6] font-semibold active:scale-95 transition-transform"
             >
               Visa alla {clients.length}
             </button>
@@ -61,7 +61,7 @@ export const AdvisorHome = ({ selectedIds, toggleSelected, onNavigate }: Advisor
         ) : (
           <div className="space-y-2">
             {top.map((c) => (
-              <div key={c.id} className={selectedIds.has(c.id) ? "ring-2 ring-[#000000] rounded-2xl" : ""}>
+              <div key={c.id} className={selectedIds.has(c.id) ? "ring-2 ring-[#3b82f6] rounded-2xl" : ""}>
                 <PriorityClientCard
                   client={c}
                   onTap={handleTap}

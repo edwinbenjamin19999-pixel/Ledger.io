@@ -58,11 +58,11 @@ export const RevenueForecastPanel = ({ contracts, mrr }: Props) => {
   const fmtKr = (n: number) => `${Math.round(n).toLocaleString("sv-SE")} kr`;
 
   return (
-    <Card className="rounded-2xl border-slate-200/60 border-l-[3px] border-l-[#000000] shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
+    <Card className="rounded-2xl border-slate-200/60 border-l-[3px] border-l-[#3b82f6] shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
       <div className="p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <div className="h-8 w-8 rounded-lg bg-[#EFF6FF] dark:bg-blue-950/30 flex items-center justify-center">
-            <Brain className="h-4 w-4 text-[#000000] dark:text-[#1E3A5F]" />
+            <Brain className="h-4 w-4 text-[#3b82f6] dark:text-[#1E3A5F]" />
           </div>
           <div>
             <h3 className="font-semibold text-sm">Intäktsprognos · 12 månader</h3>
@@ -113,8 +113,8 @@ export const RevenueForecastPanel = ({ contracts, mrr }: Props) => {
 };
 
 function ScenarioChip({ label, value, icon: Icon, tone }: { label: string; value: string; icon: any; tone: 'good' | 'neutral' | 'risk' }) {
-  const cls = tone === 'good' ? 'border-[#BFE6D6] bg-neutral-100/50 text-[#085041] dark:border-neutral-700/40 dark:bg-emerald-950/20 dark:text-neutral-300'
-    : tone === 'risk' ? 'border-[#F4C8C8] bg-neutral-100/50 text-[#7A1A1A] dark:border-neutral-700/40 dark:bg-rose-950/20 dark:text-neutral-300'
+  const cls = tone === 'good' ? 'border-[#BFE6D6] bg-emerald-50/50 text-[#085041] dark:border-emerald-900/40 dark:bg-emerald-950/20 dark:text-emerald-300'
+    : tone === 'risk' ? 'border-[#F4C8C8] bg-rose-50/50 text-[#7A1A1A] dark:border-rose-900/40 dark:bg-rose-950/20 dark:text-rose-300'
     : 'border-slate-200 bg-slate-50 text-slate-700 dark:border-slate-800 dark:bg-slate-900/40 dark:text-slate-300';
   return (
     <div className={`rounded-lg border p-3 ${cls}`}>

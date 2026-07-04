@@ -32,8 +32,8 @@ export function LiquidityRunwayStrip({ companyId }: Props) {
     health.status === "critical" ? "red" : health.status === "warning" ? "amber" : "emerald";
 
   const toneClasses: Record<string, { ring: string; text: string; bg: string; chip: string }> = {
-    emerald: { ring: "border-[#BFE6D6]", text: "text-[#085041]", bg: "bg-neutral-100/60", chip: "bg-[#E1F5EE] text-[#085041]" },
-    amber:   { ring: "border-[#F0DDB7]",   text: "text-[#7A5417]",   bg: "bg-neutral-100/60",   chip: "bg-[#FAEEDA] text-[#7A5417]" },
+    emerald: { ring: "border-[#BFE6D6]", text: "text-[#085041]", bg: "bg-emerald-50/60", chip: "bg-[#E1F5EE] text-[#085041]" },
+    amber:   { ring: "border-[#F0DDB7]",   text: "text-[#7A5417]",   bg: "bg-amber-50/60",   chip: "bg-[#FAEEDA] text-[#7A5417]" },
     red:     { ring: "border-[#F4C8C8]",     text: "text-[#7A1A1A]",     bg: "bg-red-50/60",     chip: "bg-[#FCE8E8] text-[#7A1A1A]" },
   };
   const t = toneClasses[runwayTone];
@@ -119,7 +119,7 @@ export function LiquidityRunwayStrip({ companyId }: Props) {
               </defs>
               <YAxis hide domain={["auto", "auto"]} />
               <XAxis dataKey="label" hide />
-              <ReferenceLine y={0} stroke="#525252" strokeDasharray="3 3" />
+              <ReferenceLine y={0} stroke="#ef4444" strokeDasharray="3 3" />
               <Area type="monotone" dataKey="pessimistic" stroke="hsl(var(--brand-primary))" strokeWidth={2} fill="url(#runwayFill)" />
             </AreaChart>
           </ResponsiveContainer>

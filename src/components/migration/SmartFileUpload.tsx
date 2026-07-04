@@ -189,7 +189,7 @@ export const SmartFileUpload = ({ dataType, companyId, onImportComplete }: Smart
     }
   };
 
-  const getConfidenceBadge = (confidence: number) => { if (confidence >= 0.8) return <Badge className="bg-neutral-700">Hög säkerhet</Badge>;
+  const getConfidenceBadge = (confidence: number) => { if (confidence >= 0.8) return <Badge className="bg-green-600">Hög säkerhet</Badge>;
     if (confidence >= 0.6) return <Badge variant="outline" className="border-yellow-600 text-[#7A5417]">Medel säkerhet</Badge>;
     return <Badge variant="destructive">Låg säkerhet</Badge>;
   };

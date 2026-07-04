@@ -4,14 +4,14 @@ import { ChevronDown } from "lucide-react";
 const FAQS = [
   {
     q: "Vad händer om AI:n konterar fel?",
-    a: "Bokfy bokför med hög precision mot BAS-kontoplanen, men du godkänner alltid innan något låses. Varje post är granskbar och spårbar till källtransaktionen. Du behåller full kontroll — AI:n tar bort arbetet, inte ansvaret.",
+    a: "Cogniq bokför med hög precision mot BAS-kontoplanen, men du godkänner alltid innan något låses. Varje post är granskbar och spårbar till källtransaktionen. Du behåller full kontroll — AI:n tar bort arbetet, inte ansvaret.",
   },
   {
-    q: "Måste jag kunna bokföring för att använda Bokfy?",
-    a: "Nej. Bokfy är byggt för dig som vill slippa tänka på bokföring helt — inte för dig som redan kan det. Du kopplar ditt bankkonto, laddar upp kvitton, och AI:n sköter resten. Ingen förkunskap krävs.",
+    q: "Måste jag kunna bokföring för att använda Cogniq?",
+    a: "Nej. Cogniq är byggt för dig som vill slippa tänka på bokföring helt — inte för dig som redan kan det. Du kopplar ditt bankkonto, laddar upp kvitton, och AI:n sköter resten. Ingen förkunskap krävs.",
   },
   {
-    q: "Är Bokfy godkänt och i linje med svenska regler?",
+    q: "Är Cogniq godkänt och i linje med svenska regler?",
     a: "Ja. Systemet följer bokföringslagen, BAS 2026 och Skatteverkets riktlinjer. Moms hanteras korrekt per transaktion och alla poster uppfyller kraven för en godkänd verifikation.",
   },
   {
@@ -20,11 +20,11 @@ const FAQS = [
   },
   {
     q: "Vad händer när jag ska deklarera?",
-    a: "Bokfy håller din bokföring löpande uppdaterad så att momsdeklaration, arbetsgivardeklaration (AGI) och inkomstdeklaration kan lämnas direkt till Skatteverket via plattformen — utan manuella formulär eller sista-minuten-stress.",
+    a: "Cogniq håller din bokföring löpande uppdaterad så att momsdeklaration, arbetsgivardeklaration (AGI) och inkomstdeklaration kan lämnas direkt till Skatteverket via plattformen — utan manuella formulär eller sista-minuten-stress.",
   },
   {
     q: "Kan jag byta från min nuvarande bokföringstjänst?",
-    a: "Ja. Du importerar din historik via SIE-fil eller direktkoppling från Fortnox, Visma och andra system. Bokfy matchar konton, ingående balanser och öppna poster automatiskt — du är igång samma dag.",
+    a: "Ja. Du importerar din historik via SIE-fil eller direktkoppling från Fortnox, Visma och andra system. Cogniq matchar konton, ingående balanser och öppna poster automatiskt — du är igång samma dag.",
   },
 ];
 
@@ -39,10 +39,10 @@ export const FAQ = () => {
   return (
     <section className="bg-white py-24 px-6">
       <div className="mx-auto max-w-2xl">
-        <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#000000]">
+        <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
           Vanliga frågor
         </p>
-        <h2 className="mb-12 text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#000000]">
+        <h2 className="mb-12 text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F172A]">
           Bra frågor förtjänar raka svar.
         </h2>
 
@@ -53,18 +53,18 @@ export const FAQ = () => {
               <div
                 key={item.q}
                 className={`border-b-2 py-5 transition-colors duration-200 ${
-                  isOpen ? "border-[#000000]" : "border-gray-200"
+                  isOpen ? "border-[#0052FF]" : "border-gray-200"
                 }`}
               >
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="flex w-full cursor-pointer items-center justify-between rounded-md text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#000000] focus-visible:ring-offset-2"
+                  className="flex w-full cursor-pointer items-center justify-between rounded-md text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2"
                 >
                   <span
                     className={`pr-4 text-base font-semibold transition-colors duration-200 ${
-                      isOpen ? "text-[#000000]" : "text-[#000000]"
+                      isOpen ? "text-[#0052FF]" : "text-[#0F172A]"
                     }`}
                   >
                     {item.q}
@@ -72,13 +72,13 @@ export const FAQ = () => {
                   <ChevronDown
                     aria-hidden
                     className={`h-5 w-5 shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-[#000000]" : "text-[#000000]/40"
+                      isOpen ? "rotate-180 text-[#0052FF]" : "text-[#0F172A]/40"
                     }`}
                     strokeWidth={2.5}
                   />
                 </button>
                 {isOpen && (
-                  <p className="pt-3 pb-1 text-sm leading-relaxed text-[#000000]/60">
+                  <p className="pt-3 pb-1 text-sm leading-relaxed text-[#0F172A]/60">
                     {item.a}
                   </p>
                 )}

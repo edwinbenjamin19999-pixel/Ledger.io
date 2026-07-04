@@ -64,12 +64,12 @@ const SECTIONS: Section[] = [
 export default function HowItWorks() {
   useEffect(() => {
     const prevTitle = document.title;
-    document.title = "Hur Bokfy fungerar | Transparens och kontroll";
+    document.title = "Hur Cogniq fungerar | Transparens och kontroll";
     const meta = document.querySelector('meta[name="description"]');
     const prevDesc = meta?.getAttribute("content") || "";
     meta?.setAttribute(
       "content",
-      "Faktisk beskrivning av vilka beslut Bokfy fattar automatiskt, vilka som alltid kräver din godkänning, och hur korrigeringar hanteras.",
+      "Faktisk beskrivning av vilka beslut Cogniq fattar automatiskt, vilka som alltid kräver din godkänning, och hur korrigeringar hanteras.",
     );
     return () => {
       document.title = prevTitle;
@@ -82,7 +82,7 @@ export default function HowItWorks() {
 
       <PageHeader
         icon={Sparkles}
-        title="Hur Bokfy fungerar"
+        title="Hur Cogniq fungerar"
         subtitle="Faktisk beskrivning av AI:ns roll, gränser och spårbarhet — skriven för dig som vill förstå systemet innan du litar på det."
       />
 
@@ -92,8 +92,8 @@ export default function HowItWorks() {
           return (
             <section key={section.title} className="bg-white rounded-3xl border-[0.5px] border-slate-200 p-7">
               <header className="flex items-start gap-3 mb-4">
-                <div className="w-9 h-9 rounded-xl bg-[#000000]/10 flex items-center justify-center flex-shrink-0">
-                  <Icon className="h-4.5 w-4.5 text-[#000000]" />
+                <div className="w-9 h-9 rounded-xl bg-[#3b82f6]/10 flex items-center justify-center flex-shrink-0">
+                  <Icon className="h-4.5 w-4.5 text-[#3b82f6]" />
                 </div>
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-slate-400 mb-0.5">Avsnitt {idx + 1}</div>
@@ -104,7 +104,7 @@ export default function HowItWorks() {
               <ul className="space-y-3.5">
                 {section.items.map((item) => (
                   <li key={item.label} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
                     <div className="min-w-0">
                       <div className="text-[14px] font-medium text-slate-900">{item.label}</div>
                       {item.detail && (
@@ -119,7 +119,7 @@ export default function HowItWorks() {
         })}
 
         <p className="text-[12px] text-slate-500 text-center pt-2">
-          Saknar du något här? <a href="/contact" className="text-[#000000] underline decoration-dotted underline-offset-2">Hör av dig</a> så uppdaterar vi sidan.
+          Saknar du något här? <a href="/contact" className="text-[#3b82f6] underline decoration-dotted underline-offset-2">Hör av dig</a> så uppdaterar vi sidan.
         </p>
       </div>
     </>

@@ -52,7 +52,7 @@ function formatDate(iso: string): string {
 function StatusPill({ status }: { status: FirmDocument["status"] }) {
   const meta = {
     ready: { label: "Klar", icon: CheckCircle2, cls: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]" },
-    analyzing: { label: "Analyserar", icon: Loader2, cls: "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5]", spin: true },
+    analyzing: { label: "Analyserar", icon: Loader2, cls: "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]", spin: true },
     pending: { label: "I kö", icon: Clock, cls: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]" },
     needs_review: { label: "Granska", icon: AlertTriangle, cls: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]" },
   }[status];
@@ -181,7 +181,7 @@ const AdvisorDocuments = () => {
         />
         <div className="relative flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#000000]/80 mb-1">
+            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#3b82f6]/80 mb-1">
               Dokument & data · AI-koppat
             </p>
             <h1 className="text-2xl font-bold tracking-tight">Klientarkiv</h1>
@@ -213,7 +213,7 @@ const AdvisorDocuments = () => {
 
       {/* AI missing-doc panel */}
       {missingClients.length > 0 && (
-        <Card className="p-4 border-neutral-300/60 bg-gradient-to-br from-neutral-100 to-white">
+        <Card className="p-4 border-amber-200/60 bg-gradient-to-br from-amber-50 to-white">
           <div className="flex items-start gap-3">
             <div className="h-9 w-9 rounded-xl bg-[#FAEEDA] flex items-center justify-center shrink-0">
               <FileQuestion className="h-4 w-4 text-[#7A5417]" />
@@ -376,16 +376,16 @@ const AdvisorDocuments = () => {
         className={cn(
           "fixed bottom-6 right-6 z-30 rounded-2xl border-2 border-dashed p-4 transition-all backdrop-blur-md max-w-[280px] shadow-xl",
           dragOver
-            ? "border-[#000000] bg-neutral-100/95 scale-105"
-            : "border-slate-300 bg-white/90 hover:border-[#000000]/50",
-          uploadingCount > 0 && "border-[#000000] bg-white",
+            ? "border-[#3b82f6] bg-blue-50/95 scale-105"
+            : "border-slate-300 bg-white/90 hover:border-[#3b82f6]/50",
+          uploadingCount > 0 && "border-[#3b82f6] bg-white",
         )}
       >
         <div className="flex items-center gap-2.5">
           {uploadingCount > 0 ? (
-            <Loader2 className="h-5 w-5 text-[#000000] animate-spin shrink-0" />
+            <Loader2 className="h-5 w-5 text-[#3b82f6] animate-spin shrink-0" />
           ) : (
-            <Upload className="h-5 w-5 text-[#000000] shrink-0" />
+            <Upload className="h-5 w-5 text-[#3b82f6] shrink-0" />
           )}
           <div className="text-xs">
             <p className="font-semibold text-slate-900">
@@ -418,9 +418,9 @@ interface KpiProps {
 }
 function Kpi({ label, value, icon: Icon, accent, spin }: KpiProps) {
   const colorMap = {
-    cyan: "text-[#000000]",
-    amber: "text-neutral-300",
-    rose: "text-neutral-300",
+    cyan: "text-[#3b82f6]",
+    amber: "text-amber-300",
+    rose: "text-rose-300",
     default: "text-white/80",
   };
   const color = accent ? colorMap[accent] : colorMap.default;
@@ -461,9 +461,9 @@ function FolderCard({ folder, isActive, onSelect, onOpenClient, onRequest, onDro
       }}
       className={cn(
         "p-4 cursor-pointer transition-all hover:shadow-md hover:border-[#C8DDF5]",
-        isActive && "ring-2 ring-[#000000] border-[#000000]",
-        dragOver && "ring-2 ring-[#000000] bg-[#EFF6FF]",
-        folder.isMissingRecent && "border-neutral-300/60",
+        isActive && "ring-2 ring-[#3b82f6] border-[#3b82f6]",
+        dragOver && "ring-2 ring-[#3b82f6] bg-[#EFF6FF]",
+        folder.isMissingRecent && "border-amber-300/60",
       )}
     >
       <div className="flex items-start justify-between gap-2 mb-3">
@@ -511,7 +511,7 @@ function FolderCard({ folder, isActive, onSelect, onOpenClient, onRequest, onDro
             e.stopPropagation();
             onOpenClient();
           }}
-          className="font-semibold text-[#000000] hover:text-[#000000] inline-flex items-center gap-0.5"
+          className="font-semibold text-[#3b82f6] hover:text-[#3b82f6] inline-flex items-center gap-0.5"
         >
           Öppna
           <ChevronRight className="h-3 w-3" />
@@ -554,14 +554,14 @@ function TimelineRow({ doc, onOpenClient }: TimelineRowProps) {
           <p className="text-sm font-semibold text-slate-900 truncate">{doc.file_name}</p>
           <StatusPill status={doc.status} />
           {doc.linked_task_id && (
-            <span className="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 rounded bg-[#F1F5F9] text-neutral-700 border border-[#E2E8F0]">
+            <span className="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 rounded bg-[#F1F5F9] text-violet-700 border border-[#E2E8F0]">
               <Sparkles className="h-2.5 w-2.5" />
               Kopplad uppgift
             </span>
           )}
         </div>
         <div className="text-[11px] text-slate-500 flex items-center gap-2 flex-wrap">
-          <button type="button" onClick={onOpenClient} className="font-medium text-slate-700 hover:text-[#000000]">
+          <button type="button" onClick={onOpenClient} className="font-medium text-slate-700 hover:text-[#3b82f6]">
             {doc.client_name}
           </button>
           <span>·</span>
@@ -570,7 +570,7 @@ function TimelineRow({ doc, onOpenClient }: TimelineRowProps) {
             <>
               <span>·</span>
               <span className="inline-flex items-center gap-0.5">
-                <Sparkles className="h-2.5 w-2.5 text-[#000000]" />
+                <Sparkles className="h-2.5 w-2.5 text-[#3b82f6]" />
                 AI {Math.round(doc.ai_confidence * 100)}%
               </span>
             </>

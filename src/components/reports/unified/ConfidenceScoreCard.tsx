@@ -13,25 +13,25 @@ export function ConfidenceScoreCard({ confidence, countsBySeverity }: Confidence
 
   const toneStyles = {
     emerald: {
-      shell: "bg-card border-border ring-1 ring-neutral-700/15 dark:ring-neutral-700/20",
-      accent: "bg-neutral-700/70 dark:bg-neutral-700/80",
+      shell: "bg-card border-border ring-1 ring-emerald-500/15 dark:ring-emerald-400/20",
+      accent: "bg-emerald-500/70 dark:bg-emerald-400/80",
       bar: "bg-[#0F1F3D]",
       icon: "bg-[#E1F5EE] text-[#085041] dark:text-[#1D9E75]",
-      value: "text-[#085041] dark:text-neutral-300",
+      value: "text-[#085041] dark:text-emerald-300",
     },
     amber: {
-      shell: "bg-card border-border ring-1 ring-neutral-700/15 dark:ring-neutral-700/20",
-      accent: "bg-neutral-700/70 dark:bg-neutral-700/80",
+      shell: "bg-card border-border ring-1 ring-amber-500/15 dark:ring-amber-400/20",
+      accent: "bg-amber-500/70 dark:bg-amber-400/80",
       bar: "bg-[#0F1F3D]",
       icon: "bg-[#FAEEDA] text-[#7A5417] dark:text-[#C28A2B]",
-      value: "text-[#7A5417] dark:text-neutral-300",
+      value: "text-[#7A5417] dark:text-amber-300",
     },
     rose: {
-      shell: "bg-card border-border ring-1 ring-neutral-700/15 dark:ring-neutral-700/20",
-      accent: "bg-neutral-700/70 dark:bg-neutral-700/80",
+      shell: "bg-card border-border ring-1 ring-rose-500/15 dark:ring-rose-400/20",
+      accent: "bg-rose-500/70 dark:bg-rose-400/80",
       bar: "bg-[#0F1F3D]",
       icon: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-[#C73838]",
-      value: "text-[#7A1A1A] dark:text-neutral-300",
+      value: "text-[#7A1A1A] dark:text-rose-300",
     },
   }[tone];
 

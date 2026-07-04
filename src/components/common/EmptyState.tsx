@@ -56,7 +56,7 @@ export const EmptyState = ({
             const variant = a.variant ?? (i === 0 ? "default" : "outline");
             const cls =
               variant === "default"
-                ? "bg-[#000000] hover:bg-[#000000] text-white"
+                ? "bg-[#3b82f6] hover:bg-[#0052FF] text-white"
                 : "border-slate-200";
             const inner = a.label;
             return a.to ? (

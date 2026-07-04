@@ -61,7 +61,7 @@ export const TransactionTable = ({ details, onOpenVoucher, onToggleReviewed }: T
                   <tr
                     key={row.id}
                     className={`border-b-2 ${isOpening
-                      ? 'bg-[#EFF6FF] dark:bg-neutral-700/20 border-b-indigo-200 dark:border-b-indigo-700'
+                      ? 'bg-[#EFF6FF] dark:bg-indigo-900/20 border-b-indigo-200 dark:border-b-indigo-700'
                       : 'bg-slate-100 dark:bg-slate-700/40 border-t-2 border-t-slate-300 dark:border-t-slate-600 border-b-slate-300 dark:border-b-slate-600'
                     }`}
                   >
@@ -91,7 +91,7 @@ export const TransactionTable = ({ details, onOpenVoucher, onToggleReviewed }: T
                 <tr
                   key={row.id}
                   className={`group border-b border-slate-100 dark:border-slate-700/50 transition-colors cursor-pointer
-                    ${row.anomalyType ? 'bg-neutral-100/50 dark:bg-neutral-700/10' : row.isAccrualOutsidePeriod ? 'bg-neutral-100/40 dark:bg-neutral-700/10' : 'hover:bg-slate-50 dark:hover:bg-slate-800/40'}`}
+                    ${row.anomalyType ? 'bg-amber-50/50 dark:bg-amber-900/10' : row.isAccrualOutsidePeriod ? 'bg-violet-50/40 dark:bg-violet-900/10' : 'hover:bg-slate-50 dark:hover:bg-slate-800/40'}`}
                   onClick={() => onOpenVoucher(row)}
                 >
                   <td className="px-3 py-2.5 text-center w-8">
@@ -107,7 +107,7 @@ export const TransactionTable = ({ details, onOpenVoucher, onToggleReviewed }: T
 
                   <td className="px-4 py-2.5">
                     <button
-                      className="text-sm text-neutral-700 dark:text-neutral-700 font-mono hover:underline"
+                      className="text-sm text-indigo-600 dark:text-indigo-400 font-mono hover:underline"
                       onClick={e => { e.stopPropagation(); navigate(`/verifications?entry=${row.journal_entry_id}`); }}
                     >
                       #{row.journal_number}
@@ -122,7 +122,7 @@ export const TransactionTable = ({ details, onOpenVoucher, onToggleReviewed }: T
                       {row.isAccrualOutsidePeriod && (
                         <span
                           title={`Bokförd i perioden men verifikationsdatum ${row.entry_date} ligger utanför${row.bookedAt ? ` (registrerad ${format(new Date(row.bookedAt), 'dd MMM yyyy', { locale: sv })})` : ''}`}
-                          className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-medium bg-neutral-100 text-neutral-700 border border-neutral-300 dark:bg-neutral-700/30 dark:text-neutral-300 dark:border-neutral-700 flex-shrink-0"
+                          className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-medium bg-violet-100 text-violet-700 border border-violet-200 dark:bg-violet-900/30 dark:text-violet-300 dark:border-violet-700 flex-shrink-0"
                         >
                           Periodisering
                         </span>
@@ -154,7 +154,7 @@ export const TransactionTable = ({ details, onOpenVoucher, onToggleReviewed }: T
                     <div className="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                       <button
                         onClick={e => { e.stopPropagation(); onOpenVoucher(row); }}
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium bg-[#EFF6FF] text-[#000000] hover:bg-[#EFF6FF] border border-[#C8DDF5] transition-colors"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium bg-[#EFF6FF] text-[#3b82f6] hover:bg-[#EFF6FF] border border-[#C8DDF5] transition-colors"
                         title="Redigera verifikation"
                       >
                         <Pencil className="w-3 h-3" /> Redigera

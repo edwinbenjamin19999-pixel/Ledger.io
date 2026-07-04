@@ -24,10 +24,10 @@ interface InventoryTx { id: string;
 }
 
 const typeColor: Record<TxType, string> = { inköp: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]",
-  försäljning: "bg-[#EFF6FF] text-black border-[#C8DDF5]",
+  försäljning: "bg-[#EFF6FF] text-blue-600 border-[#C8DDF5]",
   svinn: "bg-destructive/10 text-destructive border-destructive/20",
   justering: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]",
-  inventering: "bg-[#F1F5F9] text-neutral-700 border-[#E2E8F0]",
+  inventering: "bg-[#F1F5F9] text-violet-600 border-[#E2E8F0]",
 };
 
 const typeLabel: Record<TxType, string> = { inköp: "Inköp",

@@ -39,7 +39,7 @@ export function FinOSInsightCard({ insight, dense = false, className }: Props) {
         "hover:border-[#CBD5E1]",
         className,
       )}
-      style={{ borderLeftWidth: 3, borderLeftColor: insight.severity === "critical" ? "#E24B4A" : insight.severity === "warning" ? "#525252" : insight.severity === "watch" ? "#000000" : insight.severity === "positive" ? "#1D9E75" : "#94A3B8" }}
+      style={{ borderLeftWidth: 3, borderLeftColor: insight.severity === "critical" ? "#E24B4A" : insight.severity === "warning" ? "#EF9F27" : insight.severity === "watch" ? "#0040CC" : insight.severity === "positive" ? "#1D9E75" : "#94A3B8" }}
     >
       <header className="flex items-center gap-2 mb-2 flex-wrap">
         <SeverityBadge severity={insight.severity} />
@@ -95,7 +95,7 @@ export function FinOSInsightCard({ insight, dense = false, className }: Props) {
           {insight.evidence.map((e, i) => (
             <li key={i} className="flex items-center gap-2">
               {e.href ? (
-                <a href={e.href} className="underline underline-offset-2 hover:text-[#000000]">{e.label}</a>
+                <a href={e.href} className="underline underline-offset-2 hover:text-[#3b82f6]">{e.label}</a>
               ) : (
                 <span>{e.label}</span>
               )}

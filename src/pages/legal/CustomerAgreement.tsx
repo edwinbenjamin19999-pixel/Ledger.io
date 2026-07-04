@@ -7,35 +7,35 @@ const EFFECTIVE_DATE = "2025-01-15";
 
 const CustomerAgreement = () => {
   useEffect(() => {
-    document.title = `Kundavtal ${VERSION} – Bokfy`;
+    document.title = `Kundavtal ${VERSION} – Cogniq`;
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#000000]">
+    <div className="min-h-screen bg-white text-[#0F172A]">
 
       <Header lightBg />
 
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="mb-10 pb-6 border-b border-slate-200">
-            <p className="text-sm text-[#000000] font-semibold tabular-nums mb-2">
+            <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-[#000000] mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-[#0F172A] mb-3">
               Kundavtal
             </h1>
             <p className="text-base text-slate-600">
-              Detta avtal reglerar förhållandet mellan Bokfy AB (&quot;Bokfy&quot;) och kunden
-              (&quot;Kunden&quot;) avseende användning av Bokfy:s tjänster.
+              Detta avtal reglerar förhållandet mellan Cogniq AB (&quot;Cogniq&quot;) och kunden
+              (&quot;Kunden&quot;) avseende användning av Cogniq:s tjänster.
             </p>
           </div>
 
-          <article className="prose prose-slate max-w-none prose-headings:text-[#000000] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#000000]">
+          <article className="prose prose-slate max-w-none prose-headings:text-[#0F172A] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0F172A]">
             <h2>1. Parter och definitioner</h2>
             <p>
-              Avtalet ingås mellan Bokfy AB, org.nr [556xxx-xxxx] (&quot;Bokfy&quot;) och den
+              Avtalet ingås mellan Cogniq AB, org.nr [556xxx-xxxx] (&quot;Cogniq&quot;) och den
               juridiska person som registrerar konto i tjänsten (&quot;Kunden&quot;). Med
-              &quot;Tjänsten&quot; avses Bokfy:s molnbaserade plattform för bokföring,
+              &quot;Tjänsten&quot; avses Cogniq:s molnbaserade plattform för bokföring,
               ekonomistyrning, AI-assisterad analys och tillhörande integrationer.
             </p>
 
@@ -60,8 +60,8 @@ const CustomerAgreement = () => {
             <h3>4.1 Prislista</h3>
             <p>
               Vid avtalsstart gäller den prislista som publiceras på{" "}
-              <a href="/pricing" className="text-[#000000] no-underline hover:underline">
-                bokfy.se/pricing
+              <a href="/pricing" className="text-[#3b82f6] no-underline hover:underline">
+                cogniq.se/pricing
               </a>
               .
             </p>
@@ -82,7 +82,7 @@ const CustomerAgreement = () => {
 
             <h3>4.4 Marknadsjustering vid ny avtalsperiod</h3>
             <p>
-              Vid ingången av varje ny 12-månadersperiod har Bokfy rätt att justera priserna
+              Vid ingången av varje ny 12-månadersperiod har Cogniq rätt att justera priserna
               utöver KPI för att spegla utvecklade tjänster, ökade leverantörskostnader eller
               förändrat marknadsläge. Sådan justering meddelas skriftligen senast 90 dagar före
               ny period. Om höjningen utöver KPI överstiger 10 % har Kunden rätt att säga upp
@@ -104,7 +104,7 @@ const CustomerAgreement = () => {
               <li>Använda Tjänsten i enlighet med svensk lag, bokföringslagen (1999:1078) och god redovisningssed.</li>
             </ul>
 
-            <h2>6. Bokfy:s åtaganden</h2>
+            <h2>6. Cogniq:s åtaganden</h2>
             <ul>
               <li>Tillgänglighet om minst 99,5 % räknat per kalendermånad, exklusive aviserat underhåll.</li>
               <li>Support på svenska under kontorstid via mejl och inbyggd chatt.</li>
@@ -114,13 +114,13 @@ const CustomerAgreement = () => {
 
             <h2>7. Personuppgifter</h2>
             <p>
-              Bokfy agerar personuppgiftsbiträde åt Kunden för de personuppgifter som behandlas
+              Cogniq agerar personuppgiftsbiträde åt Kunden för de personuppgifter som behandlas
               i Tjänsten. Behandlingen regleras i separat{" "}
-              <a href="/legal/dpa" className="text-[#000000] no-underline hover:underline">
+              <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">
                 personuppgiftsbiträdesavtal (DPA)
               </a>
               . För egna personuppgifter (t.ex. kontaktpersoner) gäller{" "}
-              <a href="/legal/privacy" className="text-[#000000] no-underline hover:underline">
+              <a href="/legal/privacy" className="text-[#3b82f6] no-underline hover:underline">
                 integritetspolicyn
               </a>
               .
@@ -137,16 +137,16 @@ const CustomerAgreement = () => {
             <h2>9. Immateriella rättigheter</h2>
             <p>
               Kunden äger samtliga rättigheter till den data som lagras i Tjänsten (bokföring,
-              fakturor, kunduppgifter etc.). Bokfy äger samtliga rättigheter till plattformen,
+              fakturor, kunduppgifter etc.). Cogniq äger samtliga rättigheter till plattformen,
               källkod, AI-modeller och varumärke. Kunden får under avtalstiden en
               icke-exklusiv, icke-överlåtbar nyttjanderätt till Tjänsten.
             </p>
 
             <h2>10. Ansvarsbegränsning</h2>
             <p>
-              Bokfy:s totala ansvar gentemot Kunden är begränsat till de avgifter Kunden
+              Cogniq:s totala ansvar gentemot Kunden är begränsat till de avgifter Kunden
               erlagt under de senaste 12 månaderna före den händelse som föranlett anspråket.
-              Bokfy ansvarar inte för indirekt skada såsom utebliven vinst, förlorade affärer
+              Cogniq ansvarar inte för indirekt skada såsom utebliven vinst, förlorade affärer
               eller tredjemansskada. Begränsningen gäller inte vid uppsåt eller grov vårdslöshet.
             </p>
 
@@ -160,9 +160,9 @@ const CustomerAgreement = () => {
 
             <h2>12. Underleverantörer</h2>
             <p>
-              Bokfy använder underleverantörer för drift, lagring, AI-tjänster och e-post.
+              Cogniq använder underleverantörer för drift, lagring, AI-tjänster och e-post.
               Aktuell lista över underbiträden finns i{" "}
-              <a href="/legal/dpa" className="text-[#000000] no-underline hover:underline">
+              <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">
                 DPA
               </a>
               . Tillkommande underleverantörer meddelas Kunden i förväg.
@@ -170,7 +170,7 @@ const CustomerAgreement = () => {
 
             <h2>13. Ändringar i avtalsvillkor</h2>
             <p>
-              Bokfy kan ändra dessa villkor med minst 60 dagars varsel. Vid väsentligt
+              Cogniq kan ändra dessa villkor med minst 60 dagars varsel. Vid väsentligt
               försämrade villkor har Kunden rätt att säga upp avtalet utan kostnad till
               ändringens ikraftträdande. Mindre justeringar (språkliga, klargöranden) gäller
               utan särskild uppsägningsrätt.
@@ -187,24 +187,24 @@ const CustomerAgreement = () => {
             <p className="tabular-nums">
               Denna version: <strong>{VERSION}</strong>, ikraftträdande{" "}
               <strong>{EFFECTIVE_DATE}</strong>. Tidigare versioner finns på begäran via{" "}
-              <a href="mailto:legal@bokfy.se" className="text-[#000000] no-underline hover:underline">
-                legal@bokfy.se
+              <a href="mailto:legal@cogniq.se" className="text-[#3b82f6] no-underline hover:underline">
+                legal@cogniq.se
               </a>
               .
             </p>
 
             <div className="mt-12 p-5 rounded-2xl bg-slate-50 border border-slate-200 not-prose">
               <p className="text-sm text-slate-600 leading-relaxed">
-                <strong className="text-[#000000]">Frågor?</strong> Kontakta oss på{" "}
-                <a href="mailto:legal@bokfy.se" className="text-[#000000] hover:underline">
-                  legal@bokfy.se
+                <strong className="text-[#0F172A]">Frågor?</strong> Kontakta oss på{" "}
+                <a href="mailto:legal@cogniq.se" className="text-[#3b82f6] hover:underline">
+                  legal@cogniq.se
                 </a>{" "}
                 eller läs vår{" "}
-                <a href="/legal/privacy" className="text-[#000000] hover:underline">
+                <a href="/legal/privacy" className="text-[#3b82f6] hover:underline">
                   integritetspolicy
                 </a>{" "}
                 och{" "}
-                <a href="/legal/dpa" className="text-[#000000] hover:underline">
+                <a href="/legal/dpa" className="text-[#3b82f6] hover:underline">
                   DPA
                 </a>
                 .

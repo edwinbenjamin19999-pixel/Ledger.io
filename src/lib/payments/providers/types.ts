@@ -3,7 +3,7 @@
  * Phase 3 will add Salt Edge / Tink / TrueLayer / Yapily implementations
  * without changing this interface.
  *
- * Important: Bokfy does not hold a PSD2 license. The platform never
+ * Important: Cogniq does not hold a PSD2 license. The platform never
  * initiates payments directly. Every provider must terminate in a flow
  * where the user approves the payment in their own bank or via a
  * licensed PIS provider's redirect.

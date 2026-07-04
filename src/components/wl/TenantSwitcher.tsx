@@ -57,7 +57,7 @@ export const TenantSwitcher = () => {
             <div className="flex-1 min-w-0">
               <div className="truncate text-sm font-medium">{t.name}</div>
               <div className="truncate text-[10px] text-muted-foreground">
-                {t.domain && t.domain_status === "verified" ? t.domain : `${t.slug}.bokfy.se`} · {t.role}
+                {t.domain && t.domain_status === "verified" ? t.domain : `${t.slug}.cogniq.se`} · {t.role}
               </div>
             </div>
             <Check className={cn("h-4 w-4 shrink-0", t.slug === current.slug ? "opacity-100" : "opacity-0")} />

@@ -8,7 +8,7 @@ interface Props { score: number; // 0-100
 
 export function ImpactScoreBadge({ score, financialImpact, label }: Props) { const { color, bg, text } = useMemo(() => { if (score >= 80) return { color: "text-destructive", bg: "bg-destructive/15 border-destructive/30", text: "Hög" };
     if (score >= 50) return { color: "text-[#7A5417]", bg: "bg-[#FAEEDA] border-[#F0DDB7]", text: "Medium" };
-    if (score >= 20) return { color: "text-black", bg: "bg-[#EFF6FF] border-black", text: "Låg" };
+    if (score >= 20) return { color: "text-blue-600", bg: "bg-[#EFF6FF] border-blue-300", text: "Låg" };
     return { color: "text-muted-foreground", bg: "bg-muted border-border", text: "Minimal" };
   }, [score]);
 

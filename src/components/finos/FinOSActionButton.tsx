@@ -10,7 +10,7 @@ import { VERBS, type FinOSAction } from "@/lib/finos/actions";
 
 const intentClasses = {
   primary:
-    "bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA]",
+    "bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA]",
   secondary:
     "bg-white border-[0.5px] border-[#E2E8F0] text-[#0F172A] hover:bg-[#F8FAFB]",
   danger:

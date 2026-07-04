@@ -104,7 +104,7 @@ const EcommerceReturns = () => {
                       <XAxis dataKey="month" tick={{ fill: chartTheme.textColor, fontSize: 12 }} />
                       <YAxis tick={{ fill: chartTheme.textColor, fontSize: 12 }} tickFormatter={v => `${v}%`} />
                       <Tooltip formatter={(v: number) => `${v}%`} />
-                      <Line type="monotone" dataKey="rate" stroke="#000000" strokeWidth={2} dot={{ r: 3 }} />
+                      <Line type="monotone" dataKey="rate" stroke="#3b82f6" strokeWidth={2} dot={{ r: 3 }} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>

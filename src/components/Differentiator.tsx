@@ -19,7 +19,7 @@ const northledger = [
 
 export const Differentiator = () => {
   return (
-    <section className="py-20 sm:py-28 bg-gradient-to-b from-[#000000] to-[#0a1428] overflow-hidden">
+    <section className="py-20 sm:py-28 bg-gradient-to-b from-[#0F172A] to-[#0a1428] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
           <h2
@@ -27,7 +27,7 @@ export const Differentiator = () => {
             style={{ fontSize: "clamp(28px, 4vw, 44px)", letterSpacing: "-1.5px" }}
           >
             Från manuellt till{" "}
-            <span className="text-[#000000]">automatiserat</span>
+            <span className="text-[#3b82f6]">automatiserat</span>
           </h2>
           <p className="text-white/50 text-lg max-w-[500px] mx-auto">
             Så här har bokföring alltid fungerat — och så här fungerar det nu.
@@ -58,36 +58,36 @@ export const Differentiator = () => {
             </div>
           </div>
 
-          {/* Bokfy */}
-          <div className="rounded-2xl border border-[rgba(0,0,0,0.2)] bg-[rgba(0,0,0,0.06)] p-7 shadow-[0_0_40px_rgba(0,0,0,0.08)]">
+          {/* Cogniq */}
+          <div className="rounded-2xl border border-[rgba(0,82,255,0.2)] bg-[rgba(0,82,255,0.06)] p-7 shadow-[0_0_40px_rgba(0,82,255,0.08)]">
             <div className="flex items-center gap-2 mb-6">
-              <h3 className="text-sm font-semibold text-[#000000] uppercase tracking-wider">
-                Bokfy
+              <h3 className="text-sm font-semibold text-[#3b82f6] uppercase tracking-wider">
+                Cogniq
               </h3>
-              <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[rgba(0,0,0,0.1)] text-[#000000] border border-[rgba(0,0,0,0.2)]">
+              <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[rgba(0,82,255,0.1)] text-[#3b82f6] border border-[rgba(0,82,255,0.2)]">
                 Autonom
               </span>
             </div>
             <ul className="space-y-4">
               {northledger.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white/80">
-                  <Check className="w-4 h-4 text-[#000000] flex-shrink-0" />
+                  <Check className="w-4 h-4 text-[#3b82f6] flex-shrink-0" />
                   <span className="text-[14px]">{item}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-6 pt-4 border-t border-[rgba(0,0,0,0.1)]">
-              <p className="text-[12px] text-[#000000]">Tid per månad: ~5 minuter</p>
+            <div className="mt-6 pt-4 border-t border-[rgba(0,82,255,0.1)]">
+              <p className="text-[12px] text-[#3b82f6]">Tid per månad: ~5 minuter</p>
             </div>
           </div>
         </div>
 
         <div className="text-center mt-10">
           <Button
-            className="h-12 px-8 rounded-xl text-[15px] font-semibold bg-gradient-to-r from-[#000000] to-[#000000] text-white hover:brightness-110 shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:scale-[1.02] transition-all duration-200"
+            className="h-12 px-8 rounded-xl text-[15px] font-semibold bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] text-white hover:brightness-110 shadow-[0_4px_24px_rgba(0,82,255,0.4)] hover:scale-[1.02] transition-all duration-200"
             onClick={() => (window.location.href = "/auth")}
           >
-            Byt till Bokfy
+            Byt till Cogniq
             <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>

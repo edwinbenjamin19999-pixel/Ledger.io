@@ -108,7 +108,7 @@ export const ClientAIAnalysisTab = ({ clientName, generatedAt, sections, risks, 
             <tbody>
               {risks.map((r, i) => {
                 const Trend = r.trend === "up" ? ArrowUp : r.trend === "down" ? ArrowDown : Minus;
-                const trendColor = r.trend === "up" ? "text-red-600" : r.trend === "down" ? "text-neutral-700" : "text-slate-400";
+                const trendColor = r.trend === "up" ? "text-red-600" : r.trend === "down" ? "text-emerald-600" : "text-slate-400";
                 return (
                   <tr key={i} className="border-t border-slate-100">
                     <td className="px-4 py-2.5 font-medium text-slate-800">{r.signal}</td>
@@ -118,7 +118,7 @@ export const ClientAIAnalysisTab = ({ clientName, generatedAt, sections, risks, 
                     <td className="px-4 py-2.5 text-slate-700">{r.action}</td>
                     <td className="px-4 py-2.5">
                       {r.deeplink && (
-                        <a href={r.deeplink} className="text-black hover:underline inline-flex items-center text-[12px]">
+                        <a href={r.deeplink} className="text-blue-600 hover:underline inline-flex items-center text-[12px]">
                           Åtgärda <ExternalLink className="h-3 w-3 ml-1" />
                         </a>
                       )}
@@ -133,7 +133,7 @@ export const ClientAIAnalysisTab = ({ clientName, generatedAt, sections, risks, 
 
       <div className="bg-white border border-slate-200 rounded-[12px] overflow-hidden">
         <h3 className="text-[12px] font-medium uppercase tracking-wide text-slate-500 px-4 py-3 border-b border-slate-100 flex items-center gap-1.5">
-          <AlertTriangle className="h-3.5 w-3.5 text-neutral-700" /> Anomalier
+          <AlertTriangle className="h-3.5 w-3.5 text-amber-500" /> Anomalier
         </h3>
         {anomalies.length === 0 ? (
           <p className="p-6 text-center text-[12px] text-slate-400">Inga anomalier upptäckta.</p>
@@ -155,7 +155,7 @@ export const ClientAIAnalysisTab = ({ clientName, generatedAt, sections, risks, 
                   <td className="px-4 py-2.5 text-slate-800">{a.description}</td>
                   <td className="px-4 py-2.5 tabular-nums">{a.amount}</td>
                   <td className="px-4 py-2.5 text-slate-600">{a.reason}</td>
-                  <td className="px-4 py-2.5"><a className="text-black text-[12px] hover:underline">Verifiera →</a></td>
+                  <td className="px-4 py-2.5"><a className="text-blue-600 text-[12px] hover:underline">Verifiera →</a></td>
                 </tr>
               ))}
             </tbody>

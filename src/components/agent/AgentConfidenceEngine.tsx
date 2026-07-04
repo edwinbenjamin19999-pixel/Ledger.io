@@ -58,14 +58,14 @@ export function AgentConfidenceEngine({ companyId }: ConfidenceEngineProps) { co
     : 0;
 
   const getCircleColor = (confidence: number) => {
-  const chartTheme2 = chartTheme; if (confidence >= 0.92) return "#000000";
-    if (confidence >= 0.60) return "#525252";
-    return "#525252";
+  const chartTheme2 = chartTheme; if (confidence >= 0.92) return "#22c55e";
+    if (confidence >= 0.60) return "#f59e0b";
+    return "#ef4444";
   };
 
-  const getHistogramColor = (low: number) => { if (low >= 90) return "#000000";
-    if (low >= 60) return "#525252";
-    return "#525252";
+  const getHistogramColor = (low: number) => { if (low >= 90) return "#22c55e";
+    if (low >= 60) return "#f59e0b";
+    return "#ef4444";
   };
 
   if (loading) { return <div className="h-60 bg-muted/50 rounded-lg animate-pulse" />;
@@ -164,7 +164,7 @@ export function AgentConfidenceEngine({ companyId }: ConfidenceEngineProps) { co
                         <p className="text-xs text-primary">• Matchad via en inlärd regel</p>
                       )}
                       {b.confidence < 0.6 && (
-                        <p className="text-xs text-[#525252]">
+                        <p className="text-xs text-[#ef4444]">
                           • Osäkerhetsfaktor: Ingen känd leverantör eller nyckelordsmatchning
                         </p>
                       )}

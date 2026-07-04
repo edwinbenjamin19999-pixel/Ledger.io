@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 interface WidgetCardProps {
   title?: string;
   icon?: LucideIcon;
-  iconBgClass?: string; // e.g. 'bg-[#EFF6FF] text-[#000000]'
+  iconBgClass?: string; // e.g. 'bg-[#EFF6FF] text-[#3b82f6]'
   badge?: React.ReactNode;
   actions?: React.ReactNode;
   children: React.ReactNode;

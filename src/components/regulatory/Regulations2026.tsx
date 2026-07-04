@@ -4,9 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Leaf, BookOpen, Receipt, Wallet, Calculator } from "lucide-react";
 
 const CATEGORY_CONFIG: Record<string, { color: string; icon: any }> = {
-  ESG: { color: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]", icon: Leaf },
-  Redovisning: { color: "bg-[#EFF6FF] text-black dark:bg-blue-900/30 dark:text-[#1E3A5F]", icon: BookOpen },
-  Moms: { color: "bg-[#F1F5F9] text-neutral-700 dark:bg-neutral-700/30 dark:text-[#1E3A5F]", icon: Receipt },
+  ESG: { color: "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]", icon: Leaf },
+  Redovisning: { color: "bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30 dark:text-[#1E3A5F]", icon: BookOpen },
+  Moms: { color: "bg-[#F1F5F9] text-violet-700 dark:bg-violet-900/30 dark:text-[#1E3A5F]", icon: Receipt },
   Lön: { color: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400", icon: Wallet },
   Skatt: { color: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900/30 dark:text-[#C73838]", icon: Calculator },
 };
@@ -31,7 +31,7 @@ const REGULATIONS_2026 = [
     severity: 'medium' as const,
     affectsSize: 'Alla bolag',
     summary: 'Nya och omstrukturerade konton i BAS-kontoplanen för räkenskapsår från 2026.',
-    action: 'Kontoplan är uppdaterad i Bokfy AI automatiskt.',
+    action: 'Kontoplan är uppdaterad i Cogniq AI automatiskt.',
     link: 'https://www.bas.se',
   },
   {
@@ -82,7 +82,7 @@ const REGULATIONS_2026 = [
 
 const SEVERITY_DOT: Record<string, string> = {
   high: "bg-destructive",
-  medium: "bg-neutral-700",
+  medium: "bg-amber-500",
   low: "bg-muted-foreground/40",
 };
 
@@ -138,9 +138,9 @@ export function Regulations2026() {
 
               <p className="text-sm text-muted-foreground">{reg.summary}</p>
 
-              <div className="bg-[#E1F5EE] dark:bg-neutral-700/10 border border-[#BFE6D6] dark:border-neutral-700 rounded-lg p-3">
+              <div className="bg-[#E1F5EE] dark:bg-emerald-900/10 border border-[#BFE6D6] dark:border-emerald-800 rounded-lg p-3">
                 <p className="text-xs font-medium text-[#085041] dark:text-[#1D9E75] mb-0.5">Åtgärd i plattformen:</p>
-                <p className="text-xs text-[#085041] dark:text-neutral-300">{reg.action}</p>
+                <p className="text-xs text-[#085041] dark:text-emerald-300">{reg.action}</p>
               </div>
 
               <a

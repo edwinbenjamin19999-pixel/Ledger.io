@@ -1,6 +1,6 @@
 /**
  * Card.Alert — Semantic alert card for opportunities, risks, info, and warnings.
- * Part of the Bokfy design system. Use instead of ad-hoc colored containers.
+ * Part of the Cogniq design system. Use instead of ad-hoc colored containers.
  */
 import { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -8,31 +8,31 @@ import { cn } from '@/lib/utils';
 const TONE_STYLES = {
   opportunity: {
     bg: 'bg-[#0F1F3D] dark:from-emerald-950/20 dark:to-green-950/10',
-    border: 'border-neutral-300/50 dark:border-neutral-700/30',
-    accent: 'bg-neutral-700',
-    iconBg: 'bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]',
-    title: 'text-[#085041] dark:text-neutral-300',
+    border: 'border-emerald-200/50 dark:border-emerald-800/30',
+    accent: 'bg-emerald-500',
+    iconBg: 'bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]',
+    title: 'text-[#085041] dark:text-emerald-300',
   },
   risk: {
     bg: 'bg-[#0F1F3D] dark:from-rose-950/20 dark:to-red-950/10',
-    border: 'border-neutral-300/50 dark:border-neutral-700/30',
-    accent: 'bg-neutral-700',
-    iconBg: 'bg-[#FCE8E8] text-[#7A1A1A] dark:bg-neutral-700/30 dark:text-[#C73838]',
-    title: 'text-[#7A1A1A] dark:text-neutral-300',
+    border: 'border-rose-200/50 dark:border-rose-800/30',
+    accent: 'bg-rose-500',
+    iconBg: 'bg-[#FCE8E8] text-[#7A1A1A] dark:bg-rose-900/30 dark:text-[#C73838]',
+    title: 'text-[#7A1A1A] dark:text-rose-300',
   },
   info: {
     bg: 'bg-[#0F1F3D] dark:from-blue-950/20 dark:to-blue-950/10',
-    border: 'border-black/50 dark:border-[#000000]/30',
-    accent: 'bg-[#000000]',
-    iconBg: 'bg-[#EFF6FF] text-[#000000] dark:bg-blue-900/30 dark:text-[#1E3A5F]',
-    title: 'text-[#000000] dark:text-[#000000]',
+    border: 'border-blue-200/50 dark:border-[#3b82f6]/30',
+    accent: 'bg-[#3b82f6]',
+    iconBg: 'bg-[#EFF6FF] text-[#3b82f6] dark:bg-blue-900/30 dark:text-[#1E3A5F]',
+    title: 'text-[#3b82f6] dark:text-[#3b82f6]',
   },
   warning: {
     bg: 'bg-[#0F1F3D] dark:from-amber-950/20 dark:to-orange-950/10',
-    border: 'border-neutral-300/50 dark:border-neutral-700/30',
-    accent: 'bg-neutral-700',
-    iconBg: 'bg-[#FAEEDA] text-[#7A5417] dark:bg-neutral-700/30 dark:text-[#C28A2B]',
-    title: 'text-[#7A5417] dark:text-neutral-300',
+    border: 'border-amber-200/50 dark:border-amber-800/30',
+    accent: 'bg-amber-500',
+    iconBg: 'bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/30 dark:text-[#C28A2B]',
+    title: 'text-[#7A5417] dark:text-amber-300',
   },
 } as const;
 

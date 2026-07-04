@@ -137,7 +137,7 @@ export function RutRotNewInvoice({ open, onOpenChange, settings }: Props) { cons
           </div>
 
           {/* Calculation preview */}
-          <Card className={cn("border-l-4", deductionType === "rot" ? "border-l-emerald-500 bg-neutral-100/50 dark:bg-emerald-950/20" : "border-l-blue-400 bg-neutral-100/50 dark:bg-blue-950/20")}>
+          <Card className={cn("border-l-4", deductionType === "rot" ? "border-l-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20" : "border-l-blue-400 bg-blue-50/50 dark:bg-blue-950/20")}>
             <CardContent className="p-4 space-y-2">
               <div className="flex justify-between text-sm">
                 <span>Totalbelopp (exkl. moms)</span>
@@ -145,7 +145,7 @@ export function RutRotNewInvoice({ open, onOpenChange, settings }: Props) { cons
               </div>
               <div className="flex justify-between text-sm">
                 <span>{deductionType.toUpperCase()}-avdrag ({deductionType === "rot" ? "30" : "50"}% av arbete)</span>
-                <span className={cn("font-bold", deductionType === "rot" ? "text-[#085041]" : "text-black")}>
+                <span className={cn("font-bold", deductionType === "rot" ? "text-[#085041]" : "text-blue-600")}>
                   -{fmt(calc.deductionAmount)}
                 </span>
               </div>
@@ -156,7 +156,7 @@ export function RutRotNewInvoice({ open, onOpenChange, settings }: Props) { cons
               </div>
               <div className="flex justify-between text-sm">
                 <span>Skatteverket betalar</span>
-                <span className={cn("font-medium", deductionType === "rot" ? "text-[#085041]" : "text-black")}>
+                <span className={cn("font-medium", deductionType === "rot" ? "text-[#085041]" : "text-blue-600")}>
                   {fmt(calc.deductionAmount)}
                 </span>
               </div>
@@ -164,14 +164,14 @@ export function RutRotNewInvoice({ open, onOpenChange, settings }: Props) { cons
           </Card>
 
           {calc.warning && (
-            <div className="flex items-start gap-2 p-3 rounded-lg bg-[#FAEEDA] border border-[#F0DDB7] dark:bg-amber-950/30 dark:border-neutral-700">
+            <div className="flex items-start gap-2 p-3 rounded-lg bg-[#FAEEDA] border border-[#F0DDB7] dark:bg-amber-950/30 dark:border-amber-800">
               <AlertTriangle className="h-4 w-4 text-[#7A5417] mt-0.5 flex-shrink-0" />
-              <p className="text-xs text-[#7A5417] dark:text-neutral-300">{calc.warning}</p>
+              <p className="text-xs text-[#7A5417] dark:text-amber-300">{calc.warning}</p>
             </div>
           )}
 
-          <div className="flex items-center gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20 text-xs text-muted-foreground">
-            <Sparkles className="h-4 w-4 text-[#000000] flex-shrink-0" />
+          <div className="flex items-center gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20 text-xs text-muted-foreground">
+            <Sparkles className="h-4 w-4 text-[#3b82f6] flex-shrink-0" />
             <span>AI skapar automatiskt bokföring: 1510 kundfordran, 1580 fordran SKV, 3010 intäkt, 2611 moms.</span>
           </div>
 
@@ -182,7 +182,7 @@ export function RutRotNewInvoice({ open, onOpenChange, settings }: Props) { cons
               disabled={createRutRotInvoice.isPending || labor <= 0 || !customerPid}
               className={cn(
                 "text-white",
-                deductionType === "rot" ? "bg-neutral-700 hover:bg-neutral-700" : "bg-blue-500 hover:bg-black"
+                deductionType === "rot" ? "bg-emerald-600 hover:bg-emerald-700" : "bg-blue-500 hover:bg-blue-600"
               )}
             >
               {createRutRotInvoice.isPending ? "Skapar..." : "Skapa faktura"}

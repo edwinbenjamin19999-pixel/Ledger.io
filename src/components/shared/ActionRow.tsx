@@ -41,7 +41,7 @@ export function ActionRow({
     <div className={cn("rounded-2xl border bg-card p-4 sm:p-5", className)}>
       <div className="flex items-center gap-2 mb-4">
         <div className="h-7 w-7 rounded-lg bg-[#EFF6FF] border border-[#C8DDF5] flex items-center justify-center">
-          <Lightbulb className="h-3.5 w-3.5 text-[#000000] dark:text-[#1E3A5F]" />
+          <Lightbulb className="h-3.5 w-3.5 text-[#3b82f6] dark:text-[#1E3A5F]" />
         </div>
         <h3 className="text-sm font-semibold">{title}</h3>
         <span className="text-xs text-muted-foreground ml-1">

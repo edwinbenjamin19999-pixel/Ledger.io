@@ -23,9 +23,9 @@ export const ARCollectionFunnel = ({ openInvoices, collectionCount, collectionAm
 
   const stages = [
     { label: "Alla fordringar", count: openInvoices.length, amount: totalAll, color: "bg-blue-500", width: "100%" },
-    { label: "Förfallna", count: overdue.length, amount: overdue.reduce((s, i) => s + i.total_amount, 0), color: "bg-neutral-700", width: `${Math.max(10, openInvoices.length > 0 ? (overdue.length / openInvoices.length) * 100 : 0)}%` },
+    { label: "Förfallna", count: overdue.length, amount: overdue.reduce((s, i) => s + i.total_amount, 0), color: "bg-amber-500", width: `${Math.max(10, openInvoices.length > 0 ? (overdue.length / openInvoices.length) * 100 : 0)}%` },
     { label: "Påminnelse 1", count: reminder1.length, amount: reminder1.reduce((s, i) => s + i.total_amount, 0), color: "bg-orange-500", width: `${Math.max(8, openInvoices.length > 0 ? (reminder1.length / openInvoices.length) * 100 : 0)}%` },
-    { label: "Påminnelse 2", count: reminder2.length, amount: reminder2.reduce((s, i) => s + i.total_amount, 0), color: "bg-neutral-700", width: `${Math.max(6, openInvoices.length > 0 ? (reminder2.length / openInvoices.length) * 100 : 0)}%` },
+    { label: "Påminnelse 2", count: reminder2.length, amount: reminder2.reduce((s, i) => s + i.total_amount, 0), color: "bg-rose-500", width: `${Math.max(6, openInvoices.length > 0 ? (reminder2.length / openInvoices.length) * 100 : 0)}%` },
     { label: "Inkasso", count: collectionCount, amount: collectionAmount, color: "bg-red-600", width: `${Math.max(5, openInvoices.length > 0 ? (collectionCount / openInvoices.length) * 100 : 0)}%` },
     { label: "Avskriven", count: writtenOffCount, amount: writtenOffAmount, color: "bg-slate-500", width: `${Math.max(4, openInvoices.length > 0 ? (writtenOffCount / openInvoices.length) * 100 : 0)}%` },
   ];

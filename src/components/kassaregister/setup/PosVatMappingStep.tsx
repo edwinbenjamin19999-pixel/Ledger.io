@@ -20,14 +20,14 @@ export function PosVatMappingStep({ onBack, onNext }: { onBack: () => void; onNe
 
   return (
     <div className="space-y-5 animate-fade-in">
-      <Card className="border-l-[3px] border-l-[#000000]">
+      <Card className="border-l-[3px] border-l-[#3b82f6]">
         <CardHeader>
           <div className="flex items-center justify-between gap-3">
             <div>
               <CardTitle className="text-lg">AI mappar moms & konton</CardTitle>
               <p className="text-sm text-slate-500 mt-1">Mappning baserad på svensk BAS-kontoplan 2025</p>
             </div>
-            <span className="inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full bg-[#EFF6FF] text-[#000000] border border-[#C8DDF5]">
+            <span className="inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full bg-[#EFF6FF] text-[#3b82f6] border border-[#C8DDF5]">
               <Sparkles className="h-3 w-3" /> AI-genererad
             </span>
           </div>
@@ -72,7 +72,7 @@ export function PosVatMappingStep({ onBack, onNext }: { onBack: () => void; onNe
 
       <div className="flex justify-between gap-2">
         <Button variant="ghost" onClick={onBack}>Tillbaka</Button>
-        <Button onClick={onNext} className="bg-[#000000] hover:bg-[#000000] text-white gap-1.5">
+        <Button onClick={onNext} className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white gap-1.5">
           <Check className="h-4 w-4" /> Acceptera alla & fortsätt
         </Button>
       </div>

@@ -291,12 +291,12 @@ export function AgentRuleBuilder({ companyId }: RuleBuilderProps) { const [accou
                 <div className="flex items-center gap-2 text-muted-foreground">
                   {rule.hit_count > 0 ? (
                     <span className="flex items-center gap-1">
-                      <CheckCircle className="h-3 w-3 text-[#000000]" />
+                      <CheckCircle className="h-3 w-3 text-[#22c55e]" />
                       Träffade {rule.hit_count} transaktioner
                     </span>
                   ) : (
                     <span className="flex items-center gap-1">
-                      <AlertTriangle className="h-3 w-3 text-[#525252]" />
+                      <AlertTriangle className="h-3 w-3 text-[#f59e0b]" />
                       0 träffar — kontrollera villkoret
                     </span>
                   )}

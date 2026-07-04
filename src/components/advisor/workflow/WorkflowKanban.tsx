@@ -38,7 +38,7 @@ const COLUMNS: {
   accent: string;
 }[] = [
   { key: "todo", label: "Att göra", icon: Clock, accent: "border-slate-300" },
-  { key: "in_progress", label: "Pågår", icon: Loader2, accent: "border-black" },
+  { key: "in_progress", label: "Pågår", icon: Loader2, accent: "border-blue-300" },
   { key: "review", label: "Granskning", icon: Eye, accent: "border-[#F0DDB7]" },
   { key: "done", label: "Klart", icon: CheckCircle2, accent: "border-[#BFE6D6]" },
 ];
@@ -142,7 +142,7 @@ const KanbanColumn = ({
       className={cn(
         "rounded-xl border-2 bg-slate-50/50 p-3 min-h-[400px] transition-colors",
         accent,
-        isOver && "bg-neutral-100/60 border-[#000000]",
+        isOver && "bg-blue-50/60 border-[#3b82f6]",
       )}
     >
       <div className="flex items-center justify-between mb-3 px-1">
@@ -186,8 +186,8 @@ const KanbanCard = ({
       onClick={onClick}
       className={cn(
         "group rounded-lg bg-white border border-slate-200 p-3 shadow-sm cursor-grab active:cursor-grabbing transition-all",
-        "hover:shadow-md hover:border-[#000000]",
-        (isDragging || dragging) && "opacity-60 ring-2 ring-[#000000]",
+        "hover:shadow-md hover:border-[#3b82f6]",
+        (isDragging || dragging) && "opacity-60 ring-2 ring-[#3b82f6]",
       )}
     >
       <div className="flex items-start justify-between gap-2 mb-2">

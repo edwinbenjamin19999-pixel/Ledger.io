@@ -17,15 +17,15 @@ const TABS: Array<{ key: string; label: string }> = [
 ];
 
 const STATUS_META: Record<string, { label: string; tone: string }> = {
-  open: { label: "Öppen", tone: "bg-[#EFF6FF] text-[#000000]" },
+  open: { label: "Öppen", tone: "bg-[#EFF6FF] text-[#3b82f6]" },
   awaiting_client: { label: "Väntar klient", tone: "bg-[#FAEEDA] text-[#7A5417]" },
-  responded: { label: "Besvarad", tone: "bg-[#EFF6FF] text-black" },
+  responded: { label: "Besvarad", tone: "bg-[#EFF6FF] text-blue-700" },
   resolved: { label: "Avslutad", tone: "bg-[#E1F5EE] text-[#085041]" },
 };
 
 const PRIORITY_TONE: Record<string, string> = {
-  urgent: "bg-[#FCE8E8] text-[#7A1A1A] ring-neutral-300",
-  high: "bg-[#FAEEDA] text-[#7A5417] ring-neutral-300",
+  urgent: "bg-[#FCE8E8] text-[#7A1A1A] ring-rose-200",
+  high: "bg-[#FAEEDA] text-[#7A5417] ring-amber-200",
   medium: "bg-slate-100 text-slate-700 ring-slate-200",
   low: "bg-slate-50 text-slate-500 ring-slate-200",
 };
@@ -151,7 +151,7 @@ const AdvisorRequests = () => {
               >
                 <div className="min-w-0">
                   <div className="text-sm font-semibold text-[#0F172A] truncate flex items-center gap-1.5">
-                    {r.ai_generated && <Sparkles className="h-3 w-3 text-[#000000] shrink-0" />}
+                    {r.ai_generated && <Sparkles className="h-3 w-3 text-[#3b82f6] shrink-0" />}
                     {r.title}
                   </div>
                   {r.message && (
@@ -199,9 +199,9 @@ const AdvisorRequests = () => {
         </div>
       )}
 
-      <div className="rounded-2xl border border-[#C8DDF5] bg-neutral-100/40 p-4 flex items-start gap-3">
-        <MessageSquare className="h-4 w-4 text-[#000000] mt-0.5" />
-        <div className="text-xs text-[#000000]">
+      <div className="rounded-2xl border border-[#C8DDF5] bg-blue-50/40 p-4 flex items-start gap-3">
+        <MessageSquare className="h-4 w-4 text-[#3b82f6] mt-0.5" />
+        <div className="text-xs text-[#3b82f6]">
           <strong>Tips:</strong> {awaitingClient} förfrågningar ligger hos klient — skicka påminnelse om svar dröjer mer än 3 dagar.
         </div>
       </div>

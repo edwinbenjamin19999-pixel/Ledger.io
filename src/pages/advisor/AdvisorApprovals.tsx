@@ -204,7 +204,7 @@ const AdvisorApprovals = () => {
                           </span>
                         </div>
                       </div>
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wide bg-[#FAEEDA] text-[#7A5417] ring-1 ring-neutral-300">
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wide bg-[#FAEEDA] text-[#7A5417] ring-1 ring-amber-200">
                         Pending
                       </span>
                       <div className="flex items-center gap-2">

@@ -32,12 +32,12 @@ export function PreviewMockup({ draft }: Props) {
       {/* Browser chrome */}
       <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-100 bg-slate-50/50">
         <div className="flex gap-1.5">
-          <div className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
-          <div className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
-          <div className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
+          <div className="h-2.5 w-2.5 rounded-full bg-rose-300" />
+          <div className="h-2.5 w-2.5 rounded-full bg-amber-300" />
+          <div className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
         </div>
         <div className="flex-1 mx-3 px-3 py-1 rounded-md bg-white border border-slate-100 text-[11px] text-slate-500 font-mono text-center">
-          {slug}.bokfy.se/dashboard
+          {slug}.cogniq.se/dashboard
         </div>
       </div>
 
@@ -158,7 +158,7 @@ export function PreviewMockup({ draft }: Props) {
 
           {/* Risk center */}
           <div className="grid sm:grid-cols-2 gap-3">
-            <div className="rounded-xl bg-white border border-neutral-100 p-3 flex items-start gap-2.5">
+            <div className="rounded-xl bg-white border border-amber-100 p-3 flex items-start gap-2.5">
               <div className="h-7 w-7 rounded-lg bg-[#FAEEDA] flex items-center justify-center flex-shrink-0">
                 <AlertTriangle className="h-3.5 w-3.5 text-[#7A5417]" />
               </div>
@@ -167,7 +167,7 @@ export function PreviewMockup({ draft }: Props) {
                 <div className="text-[11px] text-slate-500 mt-0.5">Period 2026-Q1 · 47 200 kr beräknat</div>
               </div>
             </div>
-            <div className="rounded-xl bg-white border border-neutral-100 p-3 flex items-start gap-2.5">
+            <div className="rounded-xl bg-white border border-emerald-100 p-3 flex items-start gap-2.5">
               <div className="h-7 w-7 rounded-lg bg-[#E1F5EE] flex items-center justify-center flex-shrink-0">
                 <CheckCircle2 className="h-3.5 w-3.5 text-[#085041]" />
               </div>

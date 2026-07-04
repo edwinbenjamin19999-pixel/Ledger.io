@@ -40,22 +40,22 @@ export interface AIActionStatusProps {
 
 const TIER_STYLES: Record<AITier, { badge: string; icon: typeof Check; label: string; ring: string }> = {
   done: {
-    badge: "bg-neutral-100 text-neutral-700 border-neutral-300",
+    badge: "bg-emerald-50 text-emerald-700 border-emerald-200",
     icon: Check,
     label: "Klar",
-    ring: "border-neutral-300 bg-neutral-100/40",
+    ring: "border-emerald-200 bg-emerald-50/40",
   },
   review: {
-    badge: "bg-neutral-100 text-neutral-700 border-neutral-300",
+    badge: "bg-amber-50 text-amber-700 border-amber-200",
     icon: AlertCircle,
     label: "Granska",
-    ring: "border-neutral-300 bg-neutral-100/40",
+    ring: "border-amber-200 bg-amber-50/40",
   },
   input_needed: {
-    badge: "bg-neutral-100 text-neutral-700 border-neutral-300",
+    badge: "bg-rose-50 text-rose-700 border-rose-200",
     icon: HelpCircle,
     label: "Behöver input",
-    ring: "border-neutral-300 bg-neutral-100/40",
+    ring: "border-rose-200 bg-rose-50/40",
   },
 };
 
@@ -157,7 +157,7 @@ export function AIActionStatus({
       )}
 
       {tier === "input_needed" && missingHint && !compact && (
-        <p className="text-[11px] text-neutral-700 leading-snug">
+        <p className="text-[11px] text-rose-700 leading-snug">
           <span className="font-medium">Saknas:</span> {missingHint}
         </p>
       )}
@@ -197,7 +197,7 @@ export function AIActionStatus({
               className={cn(
                 "h-6 w-6 rounded-md border-[0.5px] inline-flex items-center justify-center transition-colors",
                 feedback === "yes"
-                  ? "bg-neutral-100 border-neutral-300 text-neutral-700"
+                  ? "bg-emerald-100 border-emerald-300 text-emerald-700"
                   : "border-slate-200 text-slate-500 hover:bg-slate-50",
               )}
               aria-label="Ja, rätt"
@@ -211,7 +211,7 @@ export function AIActionStatus({
               className={cn(
                 "h-6 w-6 rounded-md border-[0.5px] inline-flex items-center justify-center transition-colors",
                 feedback === "no"
-                  ? "bg-neutral-100 border-neutral-300 text-neutral-700"
+                  ? "bg-rose-100 border-rose-300 text-rose-700"
                   : "border-slate-200 text-slate-500 hover:bg-slate-50",
               )}
               aria-label="Nej, fel"
@@ -223,14 +223,14 @@ export function AIActionStatus({
       )}
 
       {correctionOpen && (
-        <div className="flex items-center gap-2 pt-1 border-t-[0.5px] border-neutral-300">
+        <div className="flex items-center gap-2 pt-1 border-t-[0.5px] border-rose-200">
           <input
             autoFocus
             value={correction}
             onChange={(e) => setCorrection(e.target.value)}
             onKeyDown={(e) => { if (e.key === "Enter") submitCorrection(); }}
             placeholder="Vad borde jag ha gjort i stället?"
-            className="flex-1 h-7 px-2 text-[11px] rounded-md border-[0.5px] border-neutral-300 bg-white focus:outline-none focus:border-neutral-700"
+            className="flex-1 h-7 px-2 text-[11px] rounded-md border-[0.5px] border-rose-200 bg-white focus:outline-none focus:border-rose-400"
           />
           <Button size="sm" className="h-7 px-2 text-[11px]" onClick={submitCorrection}>Skicka</Button>
         </div>
@@ -243,7 +243,7 @@ export function AIActionStatus({
       )}
 
       {memoryNote && (
-        <p className="text-[10px] text-neutral-700 italic pt-1 border-t-[0.5px] border-neutral-300">
+        <p className="text-[10px] text-emerald-700 italic pt-1 border-t-[0.5px] border-emerald-200">
           {memoryNote}
         </p>
       )}

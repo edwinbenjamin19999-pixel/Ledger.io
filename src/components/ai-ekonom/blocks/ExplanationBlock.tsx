@@ -11,7 +11,7 @@ export const ExplanationBlock = ({ data }: { data: ExplanationPayload }) => {
       : "rose";
   const chipClass = {
     slate: "bg-slate-100 text-slate-600",
-    cyan:  "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5]",
+    cyan:  "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]",
     amber: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]",
     rose:  "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]",
   }[tone];

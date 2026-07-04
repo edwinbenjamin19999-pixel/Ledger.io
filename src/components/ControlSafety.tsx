@@ -29,7 +29,7 @@ export const ControlSafety = () => {
   const visible = expanded ? controls : controls.slice(0, 3);
 
   return (
-    <section className="py-20 sm:py-28 bg-gradient-to-b from-[#0B1D2A] to-[#000000]">
+    <section className="py-20 sm:py-28 bg-gradient-to-b from-[#0B1D2A] to-[#0F172A]">
       <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
         <div className="text-center mb-12">
           <h2
@@ -37,7 +37,7 @@ export const ControlSafety = () => {
             style={{ fontSize: "clamp(28px, 4vw, 44px)", letterSpacing: "-1.5px" }}
           >
             Full kontroll —{" "}
-            <span className="bg-gradient-to-r from-[#000000] to-[#000000] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] bg-clip-text text-transparent">
               alltid
             </span>
           </h2>
@@ -51,10 +51,10 @@ export const ControlSafety = () => {
           {controls.map((c) => (
             <div
               key={c.title}
-              className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 hover:border-[rgba(0,0,0,0.2)] hover:bg-white/[0.04] transition-colors duration-200"
+              className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 hover:border-[rgba(0,82,255,0.2)] hover:bg-white/[0.04] transition-colors duration-200"
             >
-              <div className="w-10 h-10 rounded-xl bg-[rgba(0,0,0,0.08)] border border-[rgba(0,0,0,0.15)] flex items-center justify-center mb-4">
-                <c.icon className="w-5 h-5 text-[#000000]" />
+              <div className="w-10 h-10 rounded-xl bg-[rgba(0,82,255,0.08)] border border-[rgba(0,82,255,0.15)] flex items-center justify-center mb-4">
+                <c.icon className="w-5 h-5 text-[#3b82f6]" />
               </div>
               <h3 className="text-[17px] font-semibold text-white mb-1.5">{c.title}</h3>
               <p className="text-[14px] text-white/50 leading-relaxed">{c.description}</p>
@@ -70,8 +70,8 @@ export const ControlSafety = () => {
               className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5"
             >
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-xl bg-[rgba(0,0,0,0.08)] border border-[rgba(0,0,0,0.15)] flex items-center justify-center flex-shrink-0">
-                  <c.icon className="w-4 h-4 text-[#000000]" />
+                <div className="w-9 h-9 rounded-xl bg-[rgba(0,82,255,0.08)] border border-[rgba(0,82,255,0.15)] flex items-center justify-center flex-shrink-0">
+                  <c.icon className="w-4 h-4 text-[#3b82f6]" />
                 </div>
                 <div className="min-w-0">
                   <h3 className="text-[15px] font-semibold text-white mb-1">{c.title}</h3>
@@ -83,7 +83,7 @@ export const ControlSafety = () => {
           {!expanded && (
             <button
               onClick={() => setExpanded(true)}
-              className="w-full flex items-center justify-center gap-1.5 py-3 text-[13px] font-medium text-[#000000]"
+              className="w-full flex items-center justify-center gap-1.5 py-3 text-[13px] font-medium text-[#3b82f6]"
             >
               Visa mer
               <ChevronDown className="w-4 h-4" />

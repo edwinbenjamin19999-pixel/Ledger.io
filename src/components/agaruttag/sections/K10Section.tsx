@@ -45,7 +45,7 @@ function AnimatedNumber({ value, className }: { value: number; className?: strin
   return <span className={className}>{formatSEK(display)}</span>;
 }
 
-function ProgressRing({ pct, size = 80, stroke = 6, color = "#000000" }: { pct: number; size?: number; stroke?: number; color?: string }) {
+function ProgressRing({ pct, size = 80, stroke = 6, color = "#10b981" }: { pct: number; size?: number; stroke?: number; color?: string }) {
   const r = (size - stroke) / 2;
   const circ = 2 * Math.PI * r;
   const [offset, setOffset] = useState(circ);

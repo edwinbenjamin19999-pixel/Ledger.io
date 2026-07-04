@@ -19,7 +19,7 @@ const SEV_BORDER: Record<InsightSeverity, string> = {
 const SEV_BG: Record<InsightSeverity, string> = {
   critical: "bg-[#FCE8E8] text-[#7A1A1A]",
   warning: "bg-[#FAEEDA] text-[#7A5417]",
-  info: "bg-[#EFF6FF] text-neutral-700",
+  info: "bg-[#EFF6FF] text-indigo-700",
   success: "bg-[#E1F5EE] text-[#085041]",
 };
 

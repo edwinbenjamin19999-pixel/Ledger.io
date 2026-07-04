@@ -19,7 +19,7 @@ export function MissTargetBanner({ miss, onCloseGap }: Props) {
           <div className="text-sm font-semibold text-[#7A1A1A]">
             Prognos missar EBIT-mål med {formatSEK(Math.abs(Math.round(miss)))} kr vid årets slut.
           </div>
-          <div className="text-xs text-neutral-700/80 mt-0.5">
+          <div className="text-xs text-rose-700/80 mt-0.5">
             Använd Stäng gapet-motorn för att se vilka driver-justeringar som täcker glappet.
           </div>
         </div>

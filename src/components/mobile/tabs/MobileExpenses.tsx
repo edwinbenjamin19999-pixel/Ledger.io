@@ -30,7 +30,7 @@ const CATEGORIES = [
   { id: "Mat & dryck", color: "bg-orange-500" },
   { id: "Transport", color: "bg-blue-500" },
   { id: "Kontorsmaterial", color: "bg-blue-500" },
-  { id: "Representation", color: "bg-neutral-700" },
+  { id: "Representation", color: "bg-emerald-500" },
   { id: "Övrigt", color: "bg-slate-400" },
 ] as const;
 
@@ -81,7 +81,7 @@ export const MobileExpenses = ({ user }: MobileExpensesProps) => {
       return <span className="text-[10px] text-[#791F1F] bg-[#FFF1F1] px-[8px] py-[2px] rounded-full font-medium">Avvisat</span>;
     if (s === "draft")
       return <span className="text-[10px] text-[#475569] bg-[#F1F5F9] px-[8px] py-[2px] rounded-full font-medium">Utkast</span>;
-    return <span className="text-[10px] text-[#000000] bg-[#EFF6FF] px-[8px] py-[2px] rounded-full font-medium">Väntar på godkännande</span>;
+    return <span className="text-[10px] text-[#0040CC] bg-[#EFF6FF] px-[8px] py-[2px] rounded-full font-medium">Väntar på godkännande</span>;
   };
 
   const categoryDot = (cat?: string | null) => {
@@ -98,7 +98,7 @@ export const MobileExpenses = ({ user }: MobileExpensesProps) => {
             <h1 className="text-[18px] font-medium text-[#0F172A]">Utlägg</h1>
             <button
               onClick={() => setSheetOpen(true)}
-              className="flex items-center gap-[4px] bg-[#000000] text-white text-[12px] font-medium rounded-full px-[12px] h-[32px] active:bg-[#1074A0]"
+              className="flex items-center gap-[4px] bg-[#0040CC] text-white text-[12px] font-medium rounded-full px-[12px] h-[32px] active:bg-[#1074A0]"
             >
               <Plus size={14} strokeWidth={2} />
               Ny
@@ -114,7 +114,7 @@ export const MobileExpenses = ({ user }: MobileExpensesProps) => {
                 className={cn(
                   "shrink-0 px-[12px] h-[30px] rounded-full text-[12px] font-medium transition-colors",
                   filter === f.id
-                    ? "bg-[#000000] text-white"
+                    ? "bg-[#0040CC] text-white"
                     : "bg-white text-[#475569] border-[0.5px] border-[#E2E8F0]",
                 )}
               >
@@ -135,7 +135,7 @@ export const MobileExpenses = ({ user }: MobileExpensesProps) => {
                 <p className="mt-3 text-[13px] text-[#94A3B8]">Inga utlägg ännu</p>
                 <button
                   onClick={() => setSheetOpen(true)}
-                  className="mt-4 text-[12px] text-[#000000] font-medium"
+                  className="mt-4 text-[12px] text-[#0040CC] font-medium"
                 >
                   Skapa ditt första utlägg
                 </button>
@@ -384,7 +384,7 @@ const NewExpenseSheet = ({
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             placeholder="0"
-            className="w-full mt-1 bg-transparent text-[28px] font-medium text-[#0F172A] tabular-nums focus:outline-none border-b border-[#E2E8F0] focus:border-[#000000] py-1"
+            className="w-full mt-1 bg-transparent text-[28px] font-medium text-[#0F172A] tabular-nums focus:outline-none border-b border-[#E2E8F0] focus:border-[#0040CC] py-1"
           />
         </label>
 
@@ -402,7 +402,7 @@ const NewExpenseSheet = ({
                 className={cn(
                   "shrink-0 px-[14px] h-[36px] rounded-full text-[12px] font-medium transition-colors",
                   category === c.id
-                    ? "bg-[#000000] text-white"
+                    ? "bg-[#0040CC] text-white"
                     : "bg-white border-[0.5px] border-[#E2E8F0] text-[#475569]",
                 )}
               >
@@ -422,7 +422,7 @@ const NewExpenseSheet = ({
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="w-full mt-1 bg-white border-[0.5px] border-[#E2E8F0] rounded-[10px] px-3 h-[44px] text-[14px] text-[#0F172A] focus:outline-none focus:border-[#000000]"
+            className="w-full mt-1 bg-white border-[0.5px] border-[#E2E8F0] rounded-[10px] px-3 h-[44px] text-[14px] text-[#0F172A] focus:outline-none focus:border-[#0040CC]"
           />
         </label>
 
@@ -437,7 +437,7 @@ const NewExpenseSheet = ({
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Vad gäller utlägget?"
-            className="w-full mt-1 bg-white border-[0.5px] border-[#E2E8F0] rounded-[10px] px-3 h-[44px] text-[14px] text-[#0F172A] focus:outline-none focus:border-[#000000]"
+            className="w-full mt-1 bg-white border-[0.5px] border-[#E2E8F0] rounded-[10px] px-3 h-[44px] text-[14px] text-[#0F172A] focus:outline-none focus:border-[#0040CC]"
           />
         </label>
 
@@ -458,7 +458,7 @@ const NewExpenseSheet = ({
                 <span className="text-[12px] text-[#475569]">
                   {analyzing ? "AI analyserar…" : "Fota eller välj kvitto"}
                 </span>
-                {analyzing && <Loader2 className="h-4 w-4 animate-spin text-[#000000]" />}
+                {analyzing && <Loader2 className="h-4 w-4 animate-spin text-[#0040CC]" />}
               </>
             )}
           </button>
@@ -477,7 +477,7 @@ const NewExpenseSheet = ({
                 className={cn(
                   "flex-1 h-[36px] rounded-[8px] text-[12px] font-medium transition-colors",
                   vat === v
-                    ? "bg-[#000000] text-white"
+                    ? "bg-[#0040CC] text-white"
                     : "bg-white border-[0.5px] border-[#E2E8F0] text-[#475569]",
                 )}
               >
@@ -491,7 +491,7 @@ const NewExpenseSheet = ({
         <button
           onClick={handleSave}
           disabled={saving}
-          className="mt-6 w-full h-[52px] bg-[#000000] text-white rounded-[12px] text-[15px] font-medium active:bg-[#1074A0] disabled:opacity-60 flex items-center justify-center gap-2"
+          className="mt-6 w-full h-[52px] bg-[#0040CC] text-white rounded-[12px] text-[15px] font-medium active:bg-[#1074A0] disabled:opacity-60 flex items-center justify-center gap-2"
         >
           {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : "Spara utlägg"}
         </button>

@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const bokforaKvitto: Article = {
   slug: "bokfora-kvitto",
   h1: "Hur bokför man ett kvitto? Steg-för-steg-guide (2026)",
-  metaTitle: "Hur bokför man ett kvitto? Komplett guide 2026 | Bokfy",
+  metaTitle: "Hur bokför man ett kvitto? Komplett guide 2026 | Cogniq",
   metaDescription:
     "Lär dig bokföra kvitton korrekt enligt svensk bokföringslag. Konton, momsavdrag och vanliga fel — med konkret exempel på 250 kr kontorsmaterial.",
   keywords: [
@@ -120,13 +120,13 @@ export const bokforaKvitto: Article = {
       a: "Representation är inte avdragsgill för inkomstskatt sedan 2017, men momsen är avdragsgill upp till 300 kr per person. Använd konto 6071 för avdragsgill representation.",
     },
     {
-      q: "Kan Bokfy bokföra kvitton automatiskt?",
+      q: "Kan Cogniq bokföra kvitton automatiskt?",
       a: "Ja. Fota kvittot i mobilappen — AI:n läser av leverantör, datum, momssats och konto, och bokför automatiskt om träffsäkerheten är ≥ 95 %.",
     },
   ],
   internalLinks: {
     related: ["moms-sverige", "bokfora-faktura", "vad-ar-bokforing"],
-    product: { label: "Se hur Bokfy bokför kvitton automatiskt", href: "/features/accounting-automation" },
+    product: { label: "Se hur Cogniq bokför kvitton automatiskt", href: "/features/accounting-automation" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

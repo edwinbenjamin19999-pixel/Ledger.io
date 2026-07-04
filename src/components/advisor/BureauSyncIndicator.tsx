@@ -15,9 +15,9 @@ export const BureauSyncIndicator = () => {
 
   const tone =
     status === "live"
-      ? { dot: "bg-neutral-700", pulse: true, text: "text-[#0F172A]" }
+      ? { dot: "bg-emerald-500", pulse: true, text: "text-[#0F172A]" }
       : status === "offline"
-        ? { dot: "bg-neutral-700", pulse: false, text: "text-[#7A5417]" }
+        ? { dot: "bg-amber-500", pulse: false, text: "text-[#7A5417]" }
         : { dot: "bg-slate-400", pulse: false, text: "text-[#64748B]" };
 
   const label =

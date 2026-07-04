@@ -284,7 +284,7 @@ export const SIEImportPreview = ({ data, fileContentBase64, onCommitted, onCance
           {validation.blockers.length === 0 && validation.warnings.length === 0 && (
             <Alert className="bg-[#E1F5EE] dark:bg-emerald-950/30 border-[#BFE6D6]">
               <CheckCircle2 className="h-4 w-4 text-[#085041]" />
-              <AlertDescription className="text-sm text-[#085041] dark:text-neutral-300">
+              <AlertDescription className="text-sm text-[#085041] dark:text-emerald-200">
                 Alla kontroller godkända.
               </AlertDescription>
             </Alert>
@@ -298,7 +298,7 @@ export const SIEImportPreview = ({ data, fileContentBase64, onCommitted, onCance
           {validation.warnings.slice(0, 5).map((w, i) => (
             <Alert key={`w-${i}`} className="bg-[#FAEEDA] dark:bg-amber-950/30 border-[#F0DDB7]">
               <AlertTriangle className="h-4 w-4 text-[#7A5417]" />
-              <AlertDescription className="text-sm text-[#7A5417] dark:text-neutral-300">
+              <AlertDescription className="text-sm text-[#7A5417] dark:text-amber-200">
                 {w.message}
               </AlertDescription>
             </Alert>

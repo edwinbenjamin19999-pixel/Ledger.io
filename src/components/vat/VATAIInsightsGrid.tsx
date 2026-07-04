@@ -81,13 +81,13 @@ export function VATAIInsightsGrid({ findings, loading, onOpenSource, onSuggestFi
       </div>
 
       {sorted.length === 0 ? (
-        <div className="rounded-2xl border border-[#BFE6D6] dark:border-neutral-700 bg-[#E1F5EE]/60 dark:bg-emerald-950/20 p-6 flex items-center gap-4 shadow-sm">
+        <div className="rounded-2xl border border-[#BFE6D6] dark:border-emerald-900 bg-[#E1F5EE]/60 dark:bg-emerald-950/20 p-6 flex items-center gap-4 shadow-sm">
           <div className="w-12 h-12 rounded-full bg-[#1D9E75] flex items-center justify-center shrink-0">
             <ShieldCheck className="w-6 h-6 text-white" />
           </div>
           <div>
-            <div className="font-semibold text-[#085041] dark:text-neutral-100">Allt ser rent ut</div>
-            <div className="text-sm text-[#085041] dark:text-neutral-300/80 mt-0.5">
+            <div className="font-semibold text-[#085041] dark:text-emerald-100">Allt ser rent ut</div>
+            <div className="text-sm text-[#085041] dark:text-emerald-300/80 mt-0.5">
               AI har granskat momsen för perioden — inga avvikelser hittades. Redo för inlämning.
             </div>
           </div>

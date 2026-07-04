@@ -32,14 +32,14 @@ export function APInsightBar({ invoices, cashBalance, onOptimize }: Props) {
   const cashAfter7 = cashBalance != null ? cashBalance - due7 : null;
 
   return (
-    <div className="rounded-2xl border border-black/70 bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
+    <div className="rounded-2xl border border-blue-200/70 bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
       <div className="flex items-start gap-3">
         <div className="h-9 w-9 rounded-xl bg-[#0F1F3D] flex items-center justify-center shrink-0">
           <Brain className="h-4 w-4 text-white" />
         </div>
         <div className="flex-1 min-w-0 space-y-1.5">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-[#000000] bg-[#EFF6FF] px-2 py-0.5 rounded-full flex items-center gap-1">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-[#3b82f6] bg-[#EFF6FF] px-2 py-0.5 rounded-full flex items-center gap-1">
               <Sparkles className="h-3 w-3" /> AI-rekommendation
             </span>
           </div>

@@ -116,7 +116,7 @@ const FirmAuth = () => { const navigate = useNavigate();
           <div className="flex items-center justify-center gap-2 mb-2">
             <div className="auth-ai-dot" />
           </div>
-          <h1 className="text-2xl font-bold tracking-tight auth-logo-text">Bokfy Byrå</h1>
+          <h1 className="text-2xl font-bold tracking-tight auth-logo-text">Cogniq Byrå</h1>
           <p className="text-muted-foreground mt-1">
             Portal för redovisningskonsultbyråer
           </p>
@@ -160,7 +160,7 @@ const FirmAuth = () => { const navigate = useNavigate();
             </form>
             <p className="text-center text-xs text-muted-foreground mt-4">
               Registrering av nya byråer är inte tillgänglig ännu.{" "}
-              <a href="mailto:kontakt@bokfy.se" className="text-primary hover:underline">Kontakta oss</a> för tidig åtkomst.
+              <a href="mailto:kontakt@cogniq.se" className="text-primary hover:underline">Kontakta oss</a> för tidig åtkomst.
             </p>
           </CardContent>
         </Card>

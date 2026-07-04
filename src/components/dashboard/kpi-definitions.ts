@@ -20,32 +20,32 @@ export const KPI_CATEGORIES = [
 
 export const ALL_KPIS: KpiDefinition[] = [
   // LÖNSAMHET
-  { id: 'revenue', label: 'Intäkter', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#000000', icon: 'TrendingUp', navigateTo: '/reports' },
+  { id: 'revenue', label: 'Intäkter', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#22C55E', icon: 'TrendingUp', navigateTo: '/reports' },
   { id: 'costs', label: 'Kostnader', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#F97316', icon: 'TrendingDown', invertChange: true, navigateTo: '/reports' },
-  { id: 'result', label: 'Resultat (EBIT)', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#000000', icon: 'BarChart3', navigateTo: '/reports' },
-  { id: 'margin', label: 'Bruttomarginal', category: 'LÖNSAMHET', suffix: '%', prefix: '', accentColor: '#737373', icon: 'BarChart3', navigateTo: '/reports' },
+  { id: 'result', label: 'Resultat (EBIT)', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#3B82F6', icon: 'BarChart3', navigateTo: '/reports' },
+  { id: 'margin', label: 'Bruttomarginal', category: 'LÖNSAMHET', suffix: '%', prefix: '', accentColor: '#8B5CF6', icon: 'BarChart3', navigateTo: '/reports' },
   { id: 'operating_margin', label: 'Rörelsemarginal', category: 'LÖNSAMHET', suffix: '%', prefix: '', accentColor: '#7C3AED', icon: 'BarChart3', navigateTo: '/reports' },
-  { id: 'ebitda', label: 'EBITDA', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#000000', icon: 'BarChart3', navigateTo: '/reports' },
-  { id: 'budget_variance', label: 'Budgetavvikelse', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#525252', icon: 'BarChart3', navigateTo: '/budget' },
+  { id: 'ebitda', label: 'EBITDA', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#0052FF', icon: 'BarChart3', navigateTo: '/reports' },
+  { id: 'budget_variance', label: 'Budgetavvikelse', category: 'LÖNSAMHET', suffix: ' kr', prefix: '', accentColor: '#D97706', icon: 'BarChart3', navigateTo: '/budget' },
 
   // LIKVIDITET & BALANS
-  { id: 'cash', label: 'Kassa & Bank', category: 'LIKVIDITET & BALANS', suffix: ' kr', prefix: '', accentColor: '#000000', icon: 'Wallet', navigateTo: '/bank' },
-  { id: 'current_ratio', label: 'Likviditetsgrad', category: 'LIKVIDITET & BALANS', suffix: '', prefix: '', accentColor: '#000000', icon: 'BarChart3', navigateTo: '/reports' },
+  { id: 'cash', label: 'Kassa & Bank', category: 'LIKVIDITET & BALANS', suffix: ' kr', prefix: '', accentColor: '#0052FF', icon: 'Wallet', navigateTo: '/bank' },
+  { id: 'current_ratio', label: 'Likviditetsgrad', category: 'LIKVIDITET & BALANS', suffix: '', prefix: '', accentColor: '#0052FF', icon: 'BarChart3', navigateTo: '/reports' },
   { id: 'quick_ratio', label: 'Kassalikviditet', category: 'LIKVIDITET & BALANS', suffix: '', prefix: '', accentColor: '#0E7490', icon: 'BarChart3', navigateTo: '/reports' },
   { id: 'period_cashflow', label: 'Periodens kassaflöde', category: 'LIKVIDITET & BALANS', suffix: ' kr', prefix: '', accentColor: '#14B8A6', icon: 'TrendingUp', navigateTo: '/cash-flow' },
 
   // FORDRINGAR & SKULDER
-  { id: 'ar', label: 'Kundfordringar', category: 'FORDRINGAR & SKULDER', suffix: ' kr', prefix: '', accentColor: '#525252', icon: 'ArrowUpRight', navigateTo: '/invoices' },
-  { id: 'ar_overdue', label: 'Förfallna kundfordringar', category: 'FORDRINGAR & SKULDER', suffix: ' kr', prefix: '', accentColor: '#525252', icon: 'ArrowUpRight', invertChange: true, navigateTo: '/invoices' },
-  { id: 'ap', label: 'Leverantörsskulder', category: 'FORDRINGAR & SKULDER', suffix: ' kr', prefix: '', accentColor: '#525252', icon: 'ArrowDownRight', navigateTo: '/invoices?tab=incoming' },
+  { id: 'ar', label: 'Kundfordringar', category: 'FORDRINGAR & SKULDER', suffix: ' kr', prefix: '', accentColor: '#F59E0B', icon: 'ArrowUpRight', navigateTo: '/invoices' },
+  { id: 'ar_overdue', label: 'Förfallna kundfordringar', category: 'FORDRINGAR & SKULDER', suffix: ' kr', prefix: '', accentColor: '#DC2626', icon: 'ArrowUpRight', invertChange: true, navigateTo: '/invoices' },
+  { id: 'ap', label: 'Leverantörsskulder', category: 'FORDRINGAR & SKULDER', suffix: ' kr', prefix: '', accentColor: '#EF4444', icon: 'ArrowDownRight', navigateTo: '/invoices?tab=incoming' },
   { id: 'ap_overdue', label: 'Förfallna leverantörsfakturor', category: 'FORDRINGAR & SKULDER', suffix: ' kr', prefix: '', accentColor: '#B91C1C', icon: 'ArrowDownRight', invertChange: true, navigateTo: '/invoices?tab=incoming' },
   { id: 'dso', label: 'Betalningstid kunder (DSO)', category: 'FORDRINGAR & SKULDER', suffix: ' dagar', prefix: '', accentColor: '#10B981', icon: 'Clock', invertChange: true, navigateTo: '/invoices' },
-  { id: 'dpo', label: 'Betalningstid leverantörer (DPO)', category: 'FORDRINGAR & SKULDER', suffix: ' dagar', prefix: '', accentColor: '#000000', icon: 'Clock', navigateTo: '/invoices?tab=incoming' },
+  { id: 'dpo', label: 'Betalningstid leverantörer (DPO)', category: 'FORDRINGAR & SKULDER', suffix: ' dagar', prefix: '', accentColor: '#059669', icon: 'Clock', navigateTo: '/invoices?tab=incoming' },
 
   // PERSONAL & SKATT
-  { id: 'payroll', label: 'Löner & personalkostnader', category: 'PERSONAL & SKATT', suffix: ' kr', prefix: '', accentColor: '#525252', icon: 'Users', navigateTo: '/hr' },
+  { id: 'payroll', label: 'Löner & personalkostnader', category: 'PERSONAL & SKATT', suffix: ' kr', prefix: '', accentColor: '#6366F1', icon: 'Users', navigateTo: '/hr' },
   { id: 'vat_balance', label: 'Moms att betala / återfå', category: 'PERSONAL & SKATT', suffix: ' kr', prefix: '', accentColor: '#A855F7', icon: 'FileText', navigateTo: '/vat-reports' },
-  { id: 'automation_pct', label: 'Automatiseringsgrad (AI %)', category: 'PERSONAL & SKATT', suffix: '%', prefix: '', accentColor: '#737373', icon: 'BarChart3', navigateTo: '/automation' },
+  { id: 'automation_pct', label: 'Automatiseringsgrad (AI %)', category: 'PERSONAL & SKATT', suffix: '%', prefix: '', accentColor: '#EC4899', icon: 'BarChart3', navigateTo: '/automation' },
   { id: 'verification_count', label: 'Antal verifikationer', category: 'PERSONAL & SKATT', suffix: ' st', prefix: '', accentColor: '#64748B', icon: 'FileText', navigateTo: '/verifications' },
 ];
 

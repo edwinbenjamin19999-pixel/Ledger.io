@@ -137,7 +137,7 @@ export function CashflowAISummary({
     <Card className="flex h-full flex-col p-5">
       <div className="mb-3 flex items-start justify-between gap-3">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EFF6FF] text-[#000000] dark:text-[#000000]">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6]">
             <Sparkles className="h-4 w-4" />
           </div>
           <div>
@@ -160,14 +160,14 @@ export function CashflowAISummary({
       </div>
 
       {error ? (
-        <div className="rounded-md border border-[#F4C8C8] bg-[#FCE8E8] p-3 text-xs text-[#7A1A1A] dark:text-neutral-300">
+        <div className="rounded-md border border-[#F4C8C8] bg-[#FCE8E8] p-3 text-xs text-[#7A1A1A] dark:text-rose-300">
           {error}
         </div>
       ) : null}
 
       <div className="min-h-[120px] flex-1 whitespace-pre-wrap text-sm leading-relaxed text-foreground">
         {text || (loading ? "Analyserar perioden…" : "Inga AI-insikter ännu.")}
-        {loading && text ? <span className="ml-0.5 inline-block h-3 w-1 animate-pulse bg-[#000000]" /> : null}
+        {loading && text ? <span className="ml-0.5 inline-block h-3 w-1 animate-pulse bg-[#3b82f6]" /> : null}
       </div>
 
       {drivers.length > 0 ? (
@@ -189,7 +189,7 @@ export function CashflowAISummary({
                 }
                 className={cn(
                   "inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-2.5 py-1 text-[11px] font-medium",
-                  "hover:border-[#C8DDF5] hover:bg-[#EFF6FF] hover:text-[#000000] dark:hover:text-[#000000]",
+                  "hover:border-[#C8DDF5] hover:bg-[#EFF6FF] hover:text-[#3b82f6] dark:hover:text-[#3b82f6]",
                 )}
               >
                 <span>{d.label}</span>
@@ -211,7 +211,7 @@ export function CashflowAISummary({
           <ul className="space-y-1 text-xs text-foreground">
             {risks.map((r, i) => (
               <li key={i} className="flex gap-2">
-                <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-neutral-700" />
+                <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-amber-500" />
                 <span>{r}</span>
               </li>
             ))}

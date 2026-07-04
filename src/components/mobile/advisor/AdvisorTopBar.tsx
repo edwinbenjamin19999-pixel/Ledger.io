@@ -25,7 +25,7 @@ export const AdvisorTopBar = ({ user, firmName, firmLogo, criticalCount }: Advis
         {firmLogo ? (
           <img src={firmLogo} alt={firmName ?? ""} className="h-7 w-7 rounded-lg object-cover shrink-0" />
         ) : (
-          <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#000000] to-blue-500 shrink-0" />
+          <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#3b82f6] to-blue-500 shrink-0" />
         )}
         <ClientSwitcherDropdown variant="mobile" />
       </div>
@@ -37,7 +37,7 @@ export const AdvisorTopBar = ({ user, firmName, firmLogo, criticalCount }: Advis
           <Bell className="h-4 w-4" />
           {criticalCount > 0 && (
             <span className={cn(
-              "absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-neutral-700",
+              "absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-rose-500",
               "shadow-[0_0_8px_rgba(244,63,94,0.7)] animate-pulse"
             )} />
           )}

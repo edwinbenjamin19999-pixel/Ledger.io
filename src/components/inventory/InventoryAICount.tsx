@@ -95,7 +95,7 @@ export const InventoryAICount = () => { const [mode, setMode] = useState<"schedu
                     {item.diff !== null && (
                       <Badge variant="outline" className={ item.diff === 0 ? "bg-[#E1F5EE] text-[#085041]" :
                         item.diff < 0 ? "bg-destructive/10 text-destructive" :
-                        "bg-[#EFF6FF] text-black"
+                        "bg-[#EFF6FF] text-blue-600"
                       }>
                         {item.diff > 0 ? "+" : ""}{item.diff}
                       </Badge>
@@ -103,7 +103,7 @@ export const InventoryAICount = () => { const [mode, setMode] = useState<"schedu
                   </div>
                 </div>
                 {item.aiWarning && (
-                  <div className="flex items-center gap-2 p-2 rounded bg-neutral-100/50 dark:bg-amber-950/10 border border-neutral-300/50 dark:border-neutral-700/30">
+                  <div className="flex items-center gap-2 p-2 rounded bg-amber-50/50 dark:bg-amber-950/10 border border-amber-200/50 dark:border-amber-800/30">
                     <AlertTriangle className="h-3.5 w-3.5 text-[#7A5417] flex-shrink-0" />
                     <p className="text-xs text-[#7A5417] dark:text-[#C28A2B]">{item.aiWarning}</p>
                   </div>
@@ -129,7 +129,7 @@ export const InventoryAICount = () => { const [mode, setMode] = useState<"schedu
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
-              <Camera className="h-5 w-5 text-[#000000]" />
+              <Camera className="h-5 w-5 text-[#3b82f6]" />
               <CardTitle className="text-base">Foto-inventering</CardTitle>
             </div>
             <p className="text-xs text-muted-foreground">
@@ -143,7 +143,7 @@ export const InventoryAICount = () => { const [mode, setMode] = useState<"schedu
                 Rikta kameran mot hyllan och ta ett foto
               </p>
               <Button
-                className="bg-[#000000] hover:bg-[#000000]/90 text-foreground"
+                className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground"
                 onClick={() => setPhotoResult({ detected: 43, expected: 48, article: "Kaffe 500g" })}
               >
                 <Camera className="h-4 w-4 mr-2" />
@@ -152,10 +152,10 @@ export const InventoryAICount = () => { const [mode, setMode] = useState<"schedu
             </div>
 
             {photoResult && (
-              <Card className="border-[#000000]/30 bg-[#000000]/5">
+              <Card className="border-[#3b82f6]/30 bg-[#3b82f6]/5">
                 <CardContent className="p-4">
                   <div className="flex items-start gap-2">
-                    <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+                    <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
                     <div className="flex-1">
                       <p className="text-sm font-medium">AI räknade {photoResult.detected} st {photoResult.article}</p>
                       <p className="text-xs text-muted-foreground mt-1">
@@ -164,7 +164,7 @@ export const InventoryAICount = () => { const [mode, setMode] = useState<"schedu
                         ({((photoResult.detected - photoResult.expected) * 39)} kr)
                       </p>
                       <div className="flex gap-2 mt-3">
-                        <Button size="sm" className="text-xs bg-[#000000] hover:bg-[#000000]/90 text-foreground">
+                        <Button size="sm" className="text-xs bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground">
                           <CheckCircle className="h-3 w-3 mr-1" /> Bekräfta
                         </Button>
                         <Button size="sm" variant="outline" className="text-xs">Räkna om manuellt</Button>
@@ -183,8 +183,8 @@ export const InventoryAICount = () => { const [mode, setMode] = useState<"schedu
   // Schedule view
   return (
     <div className="space-y-4">
-      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20">
-        <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
+        <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
         <div className="text-sm">
           <p className="font-medium">AI-schemalagd rullande inventering</p>
           <p className="text-xs text-muted-foreground mt-1">
@@ -195,7 +195,7 @@ export const InventoryAICount = () => { const [mode, setMode] = useState<"schedu
       </div>
 
       {schedule.map((s, i) => (
-        <Card key={i} className={i === 0 ? "border-[#000000]/50 ring-1 ring-[#000000]/20" : ""}>
+        <Card key={i} className={i === 0 ? "border-[#3b82f6]/50 ring-1 ring-[#3b82f6]/20" : ""}>
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
@@ -215,7 +215,7 @@ export const InventoryAICount = () => { const [mode, setMode] = useState<"schedu
                 </p>
               </div>
               {i === 0 && (
-                <Button size="sm" onClick={() => setMode("counting")} className="bg-[#000000] hover:bg-[#000000]/90 text-foreground">
+                <Button size="sm" onClick={() => setMode("counting")} className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground">
                   <ClipboardList className="h-3.5 w-3.5 mr-1" />
                   Starta räkning
                 </Button>

@@ -10,7 +10,7 @@
  *
  * All three modes share:
  *   - Identical header (title left, period below, company right, divider)
- *   - Identical footer (Bokfy · timestamp · Sida X av Y)
+ *   - Identical footer (Cogniq · timestamp · Sida X av Y)
  *   - Identical typography levels L1–L6 (PDF_TYPE)
  *   - Identical spacing scale (PDF_SPACING)
  *   - Identical number formatting via formatPdfNumber (negatives in parentheses)
@@ -209,7 +209,7 @@ function renderUnifiedFooter(
   applyType(pdf, PDF_TYPE.footer);
   const y = geom.height - L.margin.bottom + 28;
   pdf.text(
-    `Genererad av Bokfy · ${formatDate(new Date(), "yyyy-MM-dd HH:mm")}`,
+    `Genererad av Cogniq · ${formatDate(new Date(), "yyyy-MM-dd HH:mm")}`,
     geom.innerLeft,
     y,
   );

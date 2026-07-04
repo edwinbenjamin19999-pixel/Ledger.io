@@ -67,9 +67,9 @@ export const AnalysisView = ({ details, account, accounts }: AnalysisViewProps) 
               <XAxis dataKey="month" tick={{ fontSize: 10 }} stroke="#94a3b8" />
               <YAxis tick={{ fontSize: 10 }} stroke="#94a3b8" tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
               <Tooltip formatter={(v: number) => formatSEK(v)} labelStyle={{ fontSize: 11 }} />
-              <Line type="monotone" dataKey="debit" stroke="#000000" strokeWidth={2} name="Debet" dot={{ r: 3 }} />
-              <Line type="monotone" dataKey="credit" stroke="#525252" strokeWidth={2} name="Kredit" dot={{ r: 3 }} />
-              <Line type="monotone" dataKey="net" stroke="#525252" strokeWidth={2} name="Netto" strokeDasharray="5 5" dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="debit" stroke="#10b981" strokeWidth={2} name="Debet" dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="credit" stroke="#f43f5e" strokeWidth={2} name="Kredit" dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="net" stroke="#6366f1" strokeWidth={2} name="Netto" strokeDasharray="5 5" dot={{ r: 3 }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -85,8 +85,8 @@ export const AnalysisView = ({ details, account, accounts }: AnalysisViewProps) 
               <XAxis type="number" tick={{ fontSize: 10 }} stroke="#94a3b8" tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
               <YAxis type="category" dataKey="name" width={180} tick={{ fontSize: 9 }} stroke="#94a3b8" />
               <Tooltip formatter={(v: number) => formatSEK(v)} />
-              <Bar dataKey="debit" fill="#000000" name="Debet" stackId="a" radius={[0, 0, 0, 0]} />
-              <Bar dataKey="credit" fill="#525252" name="Kredit" stackId="a" radius={[0, 4, 4, 0]} />
+              <Bar dataKey="debit" fill="#10b981" name="Debet" stackId="a" radius={[0, 0, 0, 0]} />
+              <Bar dataKey="credit" fill="#f43f5e" name="Kredit" stackId="a" radius={[0, 4, 4, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -100,7 +100,7 @@ export const AnalysisView = ({ details, account, accounts }: AnalysisViewProps) 
           </h3>
           <div className="space-y-2">
             {anomalies.slice(0, 10).map(d => (
-              <div key={d.id} className="flex items-start gap-3 p-3 bg-[#FAEEDA] dark:bg-neutral-700/10 rounded-lg">
+              <div key={d.id} className="flex items-start gap-3 p-3 bg-[#FAEEDA] dark:bg-amber-900/10 rounded-lg">
                 <span className="text-sm">
                   {d.anomalyType === 'size' ? '🔴' : d.anomalyType === 'duplicate' ? '🔵' : d.anomalyType === 'missingDoc' ? '📎' : '🟡'}
                 </span>

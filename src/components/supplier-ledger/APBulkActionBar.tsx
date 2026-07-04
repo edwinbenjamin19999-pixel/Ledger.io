@@ -43,7 +43,7 @@ export function APBulkActionBar({ invoices, selectedIds, cashBalance, onClear, o
           )}
         </div>
         <div className="h-8 w-px bg-slate-200" />
-        <Button size="sm" variant="ghost" onClick={handleOptimize} className="text-[#000000]">
+        <Button size="sm" variant="ghost" onClick={handleOptimize} className="text-[#3b82f6]">
           <Sparkles className="h-3.5 w-3.5 mr-1" /> Optimera
         </Button>
         <Button size="sm" variant="outline" onClick={onSchedule}>

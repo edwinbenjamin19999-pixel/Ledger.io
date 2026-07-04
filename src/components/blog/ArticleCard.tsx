@@ -13,13 +13,13 @@ export const ArticleCard = ({ article }: { article: Article }) => {
       <span className={`inline-flex w-fit rounded-full px-2.5 py-0.5 text-[11px] font-medium uppercase tracking-wider ${cat.tint} ${cat.text}`}>
         {cat.label}
       </span>
-      <h3 className="mt-4 text-lg font-semibold text-[#000000] tracking-tight leading-snug group-hover:text-[#000000] transition-colors">
+      <h3 className="mt-4 text-lg font-semibold text-[#0F172A] tracking-tight leading-snug group-hover:text-[#3b82f6] transition-colors">
         {article.title}
       </h3>
       <p className="mt-2 text-sm text-[#64748b] leading-relaxed line-clamp-2">{article.excerpt}</p>
       <div className="mt-auto pt-5 flex items-center justify-between text-xs text-[#94a3b8]">
         <span className="inline-flex items-center gap-1.5"><Clock className="w-3 h-3" />{article.readingTime} min</span>
-        <ArrowRight className="w-4 h-4 text-[#000000] group-hover:translate-x-0.5 transition-transform" />
+        <ArrowRight className="w-4 h-4 text-[#3b82f6] group-hover:translate-x-0.5 transition-transform" />
       </div>
     </Link>
   );

@@ -39,7 +39,7 @@ export function K4Generator({ accountId }: Props) {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <div className="p-2 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/40">
-            <FileText className="h-5 w-5 text-[#7A5417] dark:text-neutral-300" />
+            <FileText className="h-5 w-5 text-[#7A5417] dark:text-amber-300" />
           </div>
           <div>
             <h3 className="font-semibold">K4-bilaga (AF)</h3>

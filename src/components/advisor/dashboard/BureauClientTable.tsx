@@ -62,8 +62,8 @@ const riskLevel = (s: BureauClientSummary): "critical" | "warning" | "watch" | "
 const RiskDots = ({ level }: { level: "critical" | "warning" | "watch" | "safe" }) => {
   const colors = {
     critical: ["#E24B4A", "#E24B4A", "#E24B4A"],
-    warning: ["#525252", "#525252", "#E2E8F0"],
-    watch: ["#525252", "#E2E8F0", "#E2E8F0"],
+    warning: ["#EF9F27", "#EF9F27", "#E2E8F0"],
+    watch: ["#EF9F27", "#E2E8F0", "#E2E8F0"],
     safe: ["#1D9E75", "#1D9E75", "#1D9E75"],
   } as const;
   return (
@@ -192,7 +192,7 @@ export const BureauClientTable = ({ onAddClient }: Props) => {
 
   const open = (s: BureauClientSummary) => {
     setActiveClient({ id: s.company_id, name: s.company_name, orgNumber: s.org_number });
-    // Enter the standard Bokfy dashboard scoped to this client.
+    // Enter the standard Cogniq dashboard scoped to this client.
     // The cyan "Byråöversikt" banner shown on every standard page lets the
     // advisor jump back to the bureau overview at any time.
     navigate("/dashboard");
@@ -397,13 +397,13 @@ export const BureauClientTable = ({ onAddClient }: Props) => {
                                 )}
                                 {s.missing_receipts_count > 5 && (
                                   <li className="flex items-center gap-2 text-[11px] text-[#475569]">
-                                    <span className="h-1.5 w-1.5 rounded-full bg-[#525252]" />
+                                    <span className="h-1.5 w-1.5 rounded-full bg-[#EF9F27]" />
                                     {s.missing_receipts_count} saknar underlag
                                   </li>
                                 )}
                                 {s.unreconciled_transactions > 10 && (
                                   <li className="flex items-center gap-2 text-[11px] text-[#475569]">
-                                    <span className="h-1.5 w-1.5 rounded-full bg-[#525252]" />
+                                    <span className="h-1.5 w-1.5 rounded-full bg-[#EF9F27]" />
                                     {s.unreconciled_transactions} oavstämda banktransaktioner
                                   </li>
                                 )}

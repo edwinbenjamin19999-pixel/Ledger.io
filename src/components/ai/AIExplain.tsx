@@ -28,12 +28,12 @@ export interface AIExplainProps {
 
 const confidenceTone = (pct: number) =>
   pct >= 95
-    ? { label: "mycket säker", color: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300" }
+    ? { label: "mycket säker", color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200" }
     : pct >= 80
-    ? { label: "säker", color: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300" }
+    ? { label: "säker", color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200" }
     : pct >= 60
-    ? { label: "rimligt säker", color: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300" }
-    : { label: "osäker — granska gärna", color: "text-neutral-700", bg: "bg-neutral-100 border-neutral-300" };
+    ? { label: "rimligt säker", color: "text-amber-700", bg: "bg-amber-50 border-amber-200" }
+    : { label: "osäker — granska gärna", color: "text-rose-700", bg: "bg-rose-50 border-rose-200" };
 
 function ExplanationBody({ what, why, confidence, ifWrong, action, extra }: Omit<AIExplainProps, "label" | "variant" | "className" | "triggerClassName">) {
   const pct = confidence != null ? Math.round(confidence * 100) : null;
@@ -42,7 +42,7 @@ function ExplanationBody({ what, why, confidence, ifWrong, action, extra }: Omit
     <div className="space-y-3 text-[13px] leading-[1.55]">
       {/* Header */}
       <div className="flex items-center gap-2 text-[11px] uppercase tracking-wider text-slate-500">
-        <Sparkles className="h-3 w-3 text-[#000000]" />
+        <Sparkles className="h-3 w-3 text-[#3b82f6]" />
         AI-förklaring
       </div>
 
@@ -84,7 +84,7 @@ function ExplanationBody({ what, why, confidence, ifWrong, action, extra }: Omit
       {action && (
         <button
           onClick={action.onClick}
-          className="w-full mt-1 inline-flex items-center justify-center gap-1.5 h-9 rounded-lg bg-[#000000] text-white text-[13px] font-medium active:scale-[0.98] transition-transform"
+          className="w-full mt-1 inline-flex items-center justify-center gap-1.5 h-9 rounded-lg bg-[#3b82f6] text-white text-[13px] font-medium active:scale-[0.98] transition-transform"
         >
           {action.label}
           <ArrowRight className="h-3.5 w-3.5" />
@@ -127,7 +127,7 @@ export const AIExplain = ({
       }}
       aria-label={label || "Varför?"}
       className={cn(
-        "inline-flex items-center gap-1 align-middle text-slate-400 hover:text-[#000000] focus:outline-none focus:text-[#000000] transition-colors",
+        "inline-flex items-center gap-1 align-middle text-slate-400 hover:text-[#3b82f6] focus:outline-none focus:text-[#3b82f6] transition-colors",
         variant === "link" && "text-[12px] underline decoration-dotted underline-offset-2",
         className,
         triggerClassName,

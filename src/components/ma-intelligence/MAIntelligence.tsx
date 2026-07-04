@@ -388,11 +388,11 @@ export const MAIntelligence = () => { const [companyId, setCompanyId] = useState
                     <Tooltip formatter={(v: number) => formatSEK(v)} />
                     <Legend content={<CustomLegend />} />
                     <Line type="monotone" dataKey="dcf" name="DCF" stroke="hsl(220, 50%, 30%)" strokeWidth={1.5} dot={false} />
-                    <Line type="monotone" dataKey="evEbitda" name="EV/EBITDA" stroke="#000000" strokeWidth={1.5} dot={false} />
+                    <Line type="monotone" dataKey="evEbitda" name="EV/EBITDA" stroke="#3b82f6" strokeWidth={1.5} dot={false} />
                     <Line type="monotone" dataKey="pe" name="P/E" stroke="hsl(200, 60%, 55%)" strokeWidth={1.5} dot={false} />
                     <Line type="monotone" dataKey="revenue" name="Omsättningsmultipel" stroke="hsl(0, 0%, 55%)" strokeWidth={1} dot={false} />
                     <Line type="monotone" dataKey="asset" name="Substansvärde" stroke="hsl(0, 0%, 40%)" strokeWidth={1} strokeDasharray="5 5" dot={false} />
-                    <Line type="monotone" dataKey="weighted" name="Viktat medelvärde" stroke="#000000" strokeWidth={3} dot={false} />
+                    <Line type="monotone" dataKey="weighted" name="Viktat medelvärde" stroke="#3b82f6" strokeWidth={3} dot={false} />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
@@ -444,7 +444,7 @@ export const MAIntelligence = () => { const [companyId, setCompanyId] = useState
           ))}
         </div>
 
-        <AccuracyDisclaimer dataSource="Bokfy huvudbok" />
+        <AccuracyDisclaimer dataSource="Cogniq huvudbok" />
       </TabsContent>
 
       {/* ====== METHODS ====== */}
@@ -483,7 +483,7 @@ export const MAIntelligence = () => { const [companyId, setCompanyId] = useState
                   <XAxis dataKey="year" tick={AXIS_TICK} axisLine={false} tickLine={false} />
                   <YAxis tickFormatter={(v) => formatSEK(v)} className="text-xs fill-muted-foreground" />
                   <Tooltip formatter={(v: number) => formatSEK(v)} />
-                  <Bar dataKey="cashflow" name="Kassaflöde" fill="#000000" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="cashflow" name="Kassaflöde" fill="#3b82f6" radius={[6, 6, 0, 0]} />
                   <Bar dataKey="discounted" name="Nuvärde" fill="hsl(var(--primary) / 0.4)" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>

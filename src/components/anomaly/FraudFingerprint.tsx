@@ -92,7 +92,7 @@ export function FraudFingerprint({ anomalies }: Props) {
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-muted rounded-full overflow-hidden">
                       <div
-                        className={`h-full rounded-full ${dim.score > 6 ? "bg-destructive" : dim.score > 3 ? "bg-yellow-500" : "bg-neutral-700"}`}
+                        className={`h-full rounded-full ${dim.score > 6 ? "bg-destructive" : dim.score > 3 ? "bg-yellow-500" : "bg-green-500"}`}
                         style={{ width: `${dim.score * 10}%` }}
                       />
                     </div>

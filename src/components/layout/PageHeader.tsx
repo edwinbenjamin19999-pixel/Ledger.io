@@ -53,7 +53,7 @@ interface PageHeaderProps { icon?: LucideIcon;
 const BADGE_STYLES: Record<string, string> = { success: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]",
   warning: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]",
   error: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]",
-  info: "bg-[#EFF6FF] text-black border-[#C8DDF5]",
+  info: "bg-[#EFF6FF] text-blue-700 border-[#C8DDF5]",
   ai: "bg-[#F1F5F9] text-purple-700 border-[#E2E8F0]",
 };
 

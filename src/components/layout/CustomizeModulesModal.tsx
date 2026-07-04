@@ -96,7 +96,7 @@ export const CustomizeModulesModal = ({ open, onOpenChange }: Props) => {
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-lg">
               <Settings2 className="h-5 w-5 text-[hsl(var(--sidebar-accent))]" />
-              Anpassa din Bokfy
+              Anpassa din Cogniq
             </DialogTitle>
             <p className="text-sm text-muted-foreground mt-1">
               Dra i handtaget för att ändra ordning. Dölj hela modulgrupper eller enskilda menyval.

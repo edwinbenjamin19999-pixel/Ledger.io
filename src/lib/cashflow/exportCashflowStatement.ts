@@ -31,7 +31,7 @@ export function exportCashflowPDF(doc: StatementDocument) {
 
 export async function exportCashflowXLSX(doc: StatementDocument) {
   const wb = new ExcelJS.Workbook();
-  wb.creator = "Bokfy";
+  wb.creator = "Cogniq";
   wb.created = new Date();
   wb.company = doc.header.company;
   renderStatementSheet(wb, doc, "Kassaflödesanalys");

@@ -106,10 +106,10 @@ export const DisposalDialog = ({ asset, bookValue, mode, open, onOpenChange, onC
           </div>
 
           {mode === "sell" && isProfit && taxEffect > 0 && (
-            <div className="flex items-start gap-2 p-3 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-neutral-700 text-xs">
+            <div className="flex items-start gap-2 p-3 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-amber-800 text-xs">
               <Calculator className="w-4 h-4 text-[#7A5417] mt-0.5 shrink-0" />
               <div>
-                <p className="font-medium text-[#7A5417] dark:text-neutral-300">
+                <p className="font-medium text-[#7A5417] dark:text-amber-300">
                   Realisationsvinst {gain.toLocaleString("sv-SE")} kr okar beskattningsbar inkomst.
                 </p>
                 <p className="text-[#7A5417] dark:text-[#C28A2B]">

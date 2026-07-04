@@ -57,7 +57,7 @@ const RULE_TEMPLATES: RuleTemplate[] = [
 const STATUS_META: Record<string, { dotClass: string; label: string; icon: React.ComponentType<{ className?: string }> }> = {
   success: { dotClass: "bg-[#1D9E75]", label: "Lyckad", icon: CheckCircle2 },
   failed: { dotClass: "bg-[#E24B4A]", label: "Misslyckad", icon: AlertTriangle },
-  awaiting_approval: { dotClass: "bg-[#525252]", label: "Väntar godkännande", icon: Clock },
+  awaiting_approval: { dotClass: "bg-[#EF9F27]", label: "Väntar godkännande", icon: Clock },
   skipped: { dotClass: "bg-[#94A3B8]", label: "Hoppat över", icon: ChevronRight },
 };
 
@@ -154,7 +154,7 @@ export default function AdvisorAutomation() {
     <div className="px-6 py-6 max-w-[1100px] mx-auto space-y-6">
       <div>
         <h1 className="text-[20px] font-medium tracking-[-0.02em] text-[#0F172A] flex items-center gap-2">
-          <Zap className="h-5 w-5 text-[#000000]" /> Automation
+          <Zap className="h-5 w-5 text-[#0040CC]" /> Automation
         </h1>
         <p className="text-[12px] text-[#94A3B8] mt-0.5">
           Förkonfigurerade regler som körs automatiskt över hela klientportföljen.
@@ -164,20 +164,20 @@ export default function AdvisorAutomation() {
       {/* Onboarding banner — visas när alla regler är OFF */}
       {allOff && (
         <div className="bg-[#EFF6FF] border-[0.5px] border-[#B5D4F4] rounded-[12px] p-[14px] mb-[16px] flex items-start gap-[10px]">
-          <div className="relative w-[14px] h-[14px] rounded-full bg-[#000000] shrink-0 mt-0.5 flex items-center justify-center">
+          <div className="relative w-[14px] h-[14px] rounded-full bg-[#0040CC] shrink-0 mt-0.5 flex items-center justify-center">
             <Sparkles className="h-2.5 w-2.5 text-white" />
             <span className="absolute -right-0.5 -bottom-0.5 w-[5px] h-[5px] rounded-full bg-[#1AB8B0] border border-white" />
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-[12px] font-medium text-[#0C447C]">Automatiseringen är inte aktiverad</p>
             <p className="text-[11px] text-[#185FA5] mt-0.5">
-              Aktivera reglerna nedan för att Bokfy ska arbeta autonomt åt dig — påminnelser, rapporter och varningar sköts automatiskt.
+              Aktivera reglerna nedan för att Cogniq ska arbeta autonomt åt dig — påminnelser, rapporter och varningar sköts automatiskt.
             </p>
           </div>
           <button
             onClick={() => enableAllMutation.mutate()}
             disabled={enableAllMutation.isPending}
-            className="bg-[#000000] hover:bg-[#1074A0] disabled:opacity-60 text-[#E6F4FA] rounded-[8px] text-[11px] px-[12px] h-[30px] inline-flex items-center gap-1 shrink-0"
+            className="bg-[#0040CC] hover:bg-[#1074A0] disabled:opacity-60 text-[#E6F4FA] rounded-[8px] text-[11px] px-[12px] h-[30px] inline-flex items-center gap-1 shrink-0"
           >
             {enableAllMutation.isPending && <Loader2 className="h-3 w-3 animate-spin" />}
             Aktivera alla
@@ -210,7 +210,7 @@ export default function AdvisorAutomation() {
 
       {/* Activity log */}
       <div className="bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] overflow-hidden">
-        <div className="h-[1.5px] bg-[#000000]" />
+        <div className="h-[1.5px] bg-[#0040CC]" />
         <div className="p-[14px]">
           <h2 className="text-[14px] font-medium text-[#0F172A] mb-1">Senaste aktivitet</h2>
           <p className="text-[11px] text-[#94A3B8] mb-3">De 50 senaste automation-körningarna</p>
@@ -291,7 +291,7 @@ function RuleRow({
 
   return (
     <div className="bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] overflow-hidden">
-      <div className="h-[1.5px] bg-[#000000]" />
+      <div className="h-[1.5px] bg-[#0040CC]" />
       <div className="p-[14px]">
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
@@ -319,7 +319,7 @@ function RuleRow({
                         [f.key]: f.type === "number" ? Number(e.target.value) : e.target.value,
                       })
                     }
-                    className="w-[60px] h-[26px] px-2 text-[11px] border-[0.5px] border-[#E2E8F0] rounded-[6px] bg-white text-[#0F172A] focus:outline-none focus:border-[#000000]"
+                    className="w-[60px] h-[26px] px-2 text-[11px] border-[0.5px] border-[#E2E8F0] rounded-[6px] bg-white text-[#0F172A] focus:outline-none focus:border-[#0040CC]"
                   />
                   {f.suffix && <span className="text-[10px] text-[#94A3B8]">{f.suffix}</span>}
                 </div>
@@ -334,7 +334,7 @@ function RuleRow({
               aria-checked={enabled}
               onClick={() => setEnabled(!enabled)}
               className={`relative w-[36px] h-[20px] rounded-full transition-colors ${
-                enabled ? "bg-[#000000]" : "bg-[#E2E8F0]"
+                enabled ? "bg-[#0040CC]" : "bg-[#E2E8F0]"
               }`}
             >
               <span
@@ -349,7 +349,7 @@ function RuleRow({
               className={`rounded-[8px] text-[11px] font-medium px-[12px] h-[28px] flex items-center gap-1 transition-colors text-[#E6F4FA] ${
                 saveState === "success"
                   ? "bg-[#1D9E75]"
-                  : "bg-[#000000] hover:bg-[#1074A0] disabled:opacity-50"
+                  : "bg-[#0040CC] hover:bg-[#1074A0] disabled:opacity-50"
               }`}
             >
               {saveState === "saving" && (

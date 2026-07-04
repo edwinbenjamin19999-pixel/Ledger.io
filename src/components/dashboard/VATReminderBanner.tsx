@@ -41,7 +41,7 @@ export const VATReminderBanner = () => {
   };
 
   return (
-    <div className="rounded-xl border border-black/30 bg-blue-500/5 p-4 flex items-start gap-3">
+    <div className="rounded-xl border border-blue-500/30 bg-blue-500/5 p-4 flex items-start gap-3">
       <div className="rounded-lg bg-blue-500/15 p-2 mt-0.5">
         <Receipt className="h-4 w-4 text-blue-400" />
       </div>
@@ -51,7 +51,7 @@ export const VATReminderBanner = () => {
         </p>
         <p className="text-xs text-muted-foreground mt-0.5">
           Underlaget är{" "}
-          <span className={ready ? "text-neutral-700" : "text-neutral-700"}>
+          <span className={ready ? "text-emerald-500" : "text-amber-500"}>
             {ready ? "klart" : "inte klart"}
           </span>
           {!ready && ` — ${uncertainCount} post${uncertainCount === 1 ? "" : "er"} att granska`}

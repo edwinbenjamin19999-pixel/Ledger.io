@@ -73,9 +73,9 @@ export function DividendExecution() {
           </div>
 
           {needsHigherTax && (
-            <div className="rounded-lg border border-[#F0DDB7] dark:border-neutral-700 bg-neutral-100/50 dark:bg-amber-950/20 p-3 flex items-start gap-2">
+            <div className="rounded-lg border border-[#F0DDB7] dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 p-3 flex items-start gap-2">
               <AlertTriangle className="h-4 w-4 text-[#7A5417] shrink-0 mt-0.5" />
-              <p className="text-sm text-[#7A5417] dark:text-neutral-300">
+              <p className="text-sm text-[#7A5417] dark:text-amber-300">
                 {fmt(amount - FORENKLING_2026)} kr överstiger gränsbeloppet och beskattas som inkomst av tjänst (ca 37,5%).
                 Överväg att minska beloppet till {fmt(FORENKLING_2026)} kr.
               </p>
@@ -94,9 +94,9 @@ export function DividendExecution() {
         </Button>
       ) : (
         <div className="space-y-4">
-          <Card className="border-[#BFE6D6] dark:border-neutral-700 bg-neutral-100/50 dark:bg-emerald-950/20">
+          <Card className="border-[#BFE6D6] dark:border-emerald-800 bg-emerald-50/50 dark:bg-emerald-950/20">
             <CardContent className="py-6 space-y-4">
-              <div className="flex items-center gap-2 text-[#085041] dark:text-neutral-300">
+              <div className="flex items-center gap-2 text-[#085041] dark:text-emerald-300">
                 <CheckCircle2 className="h-5 w-5" />
                 <p className="font-semibold">Utdelning bokförd</p>
               </div>

@@ -115,7 +115,7 @@ export const VATDeclarationPanel = ({ companyId, onTaskCreated, environment }: V
     // SRU format according to Skatteverket specification
     const lines = [
       '#DATABAS',
-      '#PROGRAM Bokfy 1.0',
+      '#PROGRAM Cogniq 1.0',
       `#FILTYP BLANKETTER`,
       `#MEDESSION 0`,
       '#UPPGIFT 1',

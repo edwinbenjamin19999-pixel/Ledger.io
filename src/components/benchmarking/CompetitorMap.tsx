@@ -60,7 +60,7 @@ function getQuadrant(growth: number, ebitda: number): string { if (ebitda >= 15 
 
 const quadrantColors: Record<string, string> = { "Lönsam tillväxt": "text-[#085041] dark:text-[#1D9E75]",
   "Lönsam men stillastående": "text-[#7A5417] dark:text-[#C28A2B]",
-  "Tillväxt på bekostnad av marginal": "text-black dark:text-[#1E3A5F]",
+  "Tillväxt på bekostnad av marginal": "text-blue-600 dark:text-[#1E3A5F]",
   "Kritisk zon": "text-[#7A1A1A] dark:text-[#C73838]",
 };
 
@@ -123,20 +123,20 @@ export function CompetitorMap({ sniCode, companyEbitda, companyGrowth, companyRe
               <ReferenceLine x={10} stroke="hsl(var(--muted-foreground))" strokeDasharray="6 3" />
               <Tooltip content={<CustomTooltip />} />
               <Scatter name="Peers" data={yourPeers} fill="hsl(var(--muted-foreground))" fillOpacity={0.4} />
-              <Scatter name="Ditt bolag" data={[you]} fill="#000000" strokeWidth={2} stroke="#000000" />
+              <Scatter name="Ditt bolag" data={[you]} fill="#3b82f6" strokeWidth={2} stroke="#3b82f6" />
             </ScatterChart>
           </ResponsiveContainer>
 
           {/* Quadrant legend */}
           <div className="grid grid-cols-2 gap-3 mt-4 text-xs">
-            <div className="p-2 rounded bg-[#E1F5EE] dark:bg-emerald-950/20 border border-[#BFE6D6] dark:border-neutral-700">
+            <div className="p-2 rounded bg-[#E1F5EE] dark:bg-emerald-950/20 border border-[#BFE6D6] dark:border-emerald-800">
               <span className="font-semibold text-[#085041] dark:text-[#1D9E75]">Övre höger:</span> Lönsam tillväxt
             </div>
-            <div className="p-2 rounded bg-[#FAEEDA] dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-neutral-700">
+            <div className="p-2 rounded bg-[#FAEEDA] dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-amber-800">
               <span className="font-semibold text-[#7A5417] dark:text-[#C28A2B]">Övre vänster:</span> Lönsam men stillastående
             </div>
-            <div className="p-2 rounded bg-[#EFF6FF] dark:bg-blue-950/20 border border-[#C8DDF5] dark:border-black">
-              <span className="font-semibold text-black dark:text-[#1E3A5F]">Nedre höger:</span> Tillväxt på bekostnad av marginal
+            <div className="p-2 rounded bg-[#EFF6FF] dark:bg-blue-950/20 border border-[#C8DDF5] dark:border-blue-800">
+              <span className="font-semibold text-blue-700 dark:text-[#1E3A5F]">Nedre höger:</span> Tillväxt på bekostnad av marginal
             </div>
             <div className="p-2 rounded bg-[#FCE8E8] dark:bg-red-950/20 border border-[#F4C8C8] dark:border-red-800">
               <span className="font-semibold text-[#7A1A1A] dark:text-[#C73838]">Nedre vänster:</span> Kritisk zon

@@ -2,7 +2,7 @@ import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip, Legend } from "recha
 import { formatSEK } from "@/lib/formatNumber";
 import type { VarianceRow } from "../types";
 
-const COLORS = ["#000000", "#737373", "#525252", "#737373", "#64748b"];
+const COLORS = ["#3b82f6", "#8b5cf6", "#f59e0b", "#ec4899", "#64748b"];
 
 interface Props {
   rows: VarianceRow[];

@@ -90,14 +90,14 @@ const articles: ArticlePrice[] = [
 
 const actionColor = { raise: "border-l-emerald-500",
   lower: "border-l-red-500",
-  optimal: "border-l-[#000000]",
+  optimal: "border-l-[#3b82f6]",
 };
 
 export const InventoryPriceOptimization = () => { return (
     <div className="space-y-4">
       {/* Competition alert */}
-      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20">
-        <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
+        <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
         <p className="text-xs text-muted-foreground">
           USB-C kabel 2m — ditt pris: 129 kr. Branschsnitt: 89 kr (-31%).
           Rekommendation: Justera till 109 kr — fortfarande lonsamt (68% marginal) och mer konkurrenskraftigt.
@@ -111,7 +111,7 @@ export const InventoryPriceOptimization = () => { return (
               <div className="flex items-center gap-2">
                 {a.action === "raise" && <ArrowUp className="h-4 w-4 text-[#085041]" />}
                 {a.action === "lower" && <ArrowDown className="h-4 w-4 text-[#7A1A1A]" />}
-                {a.action === "optimal" && <Tag className="h-4 w-4 text-[#000000]" />}
+                {a.action === "optimal" && <Tag className="h-4 w-4 text-[#3b82f6]" />}
                 <CardTitle className="text-sm">{a.name}</CardTitle>
                 <span className="text-xs text-muted-foreground">{a.articleNr}</span>
               </div>
@@ -119,7 +119,7 @@ export const InventoryPriceOptimization = () => { return (
                 "text-[10px]",
                 a.action === "raise" ? "bg-[#E1F5EE] text-[#085041]" :
                 a.action === "lower" ? "bg-[#FCE8E8] text-[#7A1A1A]" :
-                "bg-[#000000]/10 text-[#000000]"
+                "bg-[#3b82f6]/10 text-[#3b82f6]"
               )}>
                 {a.action === "raise" ? "HOJ PRIS" : a.action === "lower" ? "SANK PRIS" : "OPTIMALT"}
               </Badge>

@@ -118,7 +118,7 @@ export const NoteEditor = ({ framework, notes, onNotesChange, acctMap }: Props) 
                 {groupedUnused.rekommenderad.map(t => (
                   <SelectItem key={t.code} value={t.code}>
                     <span className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-neutral-700 inline-block" />
+                      <span className="w-2 h-2 rounded-full bg-amber-500 inline-block" />
                       {t.name}
                     </span>
                   </SelectItem>

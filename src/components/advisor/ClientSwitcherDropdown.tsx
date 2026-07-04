@@ -18,7 +18,7 @@ interface Props {
 
 /**
  * The defining WL UX element: a global dropdown letting the advisor jump
- * between "Byrå-vy" (firm cockpit) and any client (full Bokfy scoped to that
+ * between "Byrå-vy" (firm cockpit) and any client (full Cogniq scoped to that
  * client). Selecting a client navigates into the standard product surface so
  * every existing module works out of the box.
  */
@@ -69,7 +69,7 @@ export const ClientSwitcherDropdown = ({ variant = "desktop" }: Props) => {
     setOpen(false);
     setQuery("");
     // Selecting a client switches the global company_id context. All standard
-    // Bokfy modules (invoices, vat, bookkeeping, …) re-scope automatically
+    // Cogniq modules (invoices, vat, bookkeeping, …) re-scope automatically
     // via useCompanyId() listening to the "company-changed" event.
     navigate("/dashboard");
   };
@@ -167,7 +167,7 @@ export const ClientSwitcherDropdown = ({ variant = "desktop" }: Props) => {
               <div className="text-sm font-semibold">Sorterad efter brådska</div>
             </div>
             {criticalCount > 0 && (
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#FCE8E8] text-white border border-neutral-300/30">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#FCE8E8] text-white border border-rose-300/30">
                 <Flame className="h-2.5 w-2.5" />
                 {criticalCount} kritisk{criticalCount === 1 ? "" : "a"}
               </span>
@@ -229,10 +229,10 @@ export const ClientSwitcherDropdown = ({ variant = "desktop" }: Props) => {
               const tier = p?.tier ?? "stable";
               const dot =
                 tier === "critical"
-                  ? "bg-neutral-700"
+                  ? "bg-rose-500"
                   : tier === "warning"
-                  ? "bg-neutral-700"
-                  : "bg-neutral-700";
+                  ? "bg-amber-500"
+                  : "bg-emerald-500";
               return (
                 <button
                   key={c.id}

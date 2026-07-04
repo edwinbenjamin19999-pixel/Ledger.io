@@ -17,7 +17,7 @@ export const OnboardingProgress = ({ current, total = 5 }: OnboardingProgressPro
           <div
             key={n}
             className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${
-              n <= current ? "bg-[#000000]" : "bg-slate-100"
+              n <= current ? "bg-[#3b82f6]" : "bg-slate-100"
             }`}
           />
         ))}

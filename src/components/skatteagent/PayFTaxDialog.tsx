@@ -182,7 +182,7 @@ export function PayFTaxDialog({
       <DialogContent className="sm:max-w-xl">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <Banknote className="w-5 h-5 text-neutral-700" />
+            <Banknote className="w-5 h-5 text-indigo-600" />
             Betala preliminärskatt
           </DialogTitle>
           <DialogDescription>
@@ -218,7 +218,7 @@ export function PayFTaxDialog({
                 active={method === "manual"}
                 icon={CheckCircle2}
                 title="Markera som betald manuellt"
-                description="Endast bokföring. Använd om betalningen redan gjorts utanför Bokfy."
+                description="Endast bokföring. Använd om betalningen redan gjorts utanför Cogniq."
                 onClick={() => setMethod("manual")}
               />
             </div>
@@ -355,7 +355,7 @@ function MethodCard({
       className={cn(
         "text-left rounded-xl border p-3 transition-all",
         active
-          ? "border-neutral-700 bg-neutral-100/60 ring-2 ring-neutral-300"
+          ? "border-indigo-500 bg-indigo-50/60 ring-2 ring-indigo-200"
           : "border-slate-200 bg-white hover:border-slate-300",
         disabled && "opacity-60 cursor-not-allowed",
       )}
@@ -364,7 +364,7 @@ function MethodCard({
         <div
           className={cn(
             "h-9 w-9 rounded-lg flex items-center justify-center shrink-0",
-            active ? "bg-neutral-700 text-white" : "bg-slate-100 text-slate-600",
+            active ? "bg-indigo-600 text-white" : "bg-slate-100 text-slate-600",
           )}
         >
           <Icon className="w-4 h-4" />
@@ -373,7 +373,7 @@ function MethodCard({
           <div className="flex items-center gap-2">
             <span className="font-semibold text-slate-900 text-sm">{title}</span>
             {badge && (
-              <span className="text-[10px] uppercase tracking-wide font-semibold text-neutral-700 bg-[#EFF6FF] px-1.5 py-0.5 rounded">
+              <span className="text-[10px] uppercase tracking-wide font-semibold text-indigo-700 bg-[#EFF6FF] px-1.5 py-0.5 rounded">
                 {badge}
               </span>
             )}
@@ -403,7 +403,7 @@ function buildPain001Xml(p: {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
   <CstmrCdtTrfInitn>
-    <GrpHdr><MsgId>${msgId}</MsgId><CreDtTm>${new Date().toISOString()}</CreDtTm><NbOfTxs>1</NbOfTxs><CtrlSum>${amt}</CtrlSum><InitgPty><Nm>Bokfy</Nm></InitgPty></GrpHdr>
+    <GrpHdr><MsgId>${msgId}</MsgId><CreDtTm>${new Date().toISOString()}</CreDtTm><NbOfTxs>1</NbOfTxs><CtrlSum>${amt}</CtrlSum><InitgPty><Nm>Cogniq</Nm></InitgPty></GrpHdr>
     <PmtInf>
       <PmtInfId>${msgId}-1</PmtInfId><PmtMtd>TRF</PmtMtd><ReqdExctnDt>${p.executionDate}</ReqdExctnDt>
       <Dbtr><Nm>Företag</Nm></Dbtr>

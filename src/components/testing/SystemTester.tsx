@@ -222,7 +222,7 @@ export const SystemTester = () => { const [testing, setTesting] = useState(false
                     <Badge variant="secondary">Väntar</Badge>
                   )}
                   {test.status === 'running' && (
-                    <Loader2 className="w-5 h-5 animate-spin text-black" />
+                    <Loader2 className="w-5 h-5 animate-spin text-blue-600" />
                   )}
                   {test.status === 'passed' && (
                     <CheckCircle className="w-5 h-5 text-[#085041]" />

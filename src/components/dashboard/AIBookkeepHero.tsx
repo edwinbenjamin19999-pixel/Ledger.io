@@ -6,7 +6,7 @@ export const AIBookkeepHero = () => {
 
   const quickActions = [
     { icon: Upload, label: "Ladda upp", desc: "AI analyserar", path: "/accounting", iconColor: "text-[hsl(var(--brand-primary))]" },
-    { icon: Zap, label: "Automatisering", desc: "AGI & moms", path: "/automation", iconColor: "text-neutral-700" },
+    { icon: Zap, label: "Automatisering", desc: "AGI & moms", path: "/automation", iconColor: "text-violet-600" },
     { icon: FileText, label: "Skapa faktura", desc: "Enkelt med mallar", path: "/invoices", iconColor: "text-[#085041]" },
     { icon: TrendingUp, label: "Rapporter", desc: "Real-time insikter", path: "/reports", iconColor: "text-[#7A1A1A]" },
   ];
@@ -24,7 +24,7 @@ export const AIBookkeepHero = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-none border border-neutral-100 dark:border-neutral-700/50 overflow-hidden">
+    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-none border border-violet-100 dark:border-violet-900/50 overflow-hidden">
       {/* ── Gradient hero band ── */}
       <div className="bg-[#0F1F3D] px-6 py-5 relative overflow-hidden">
         {/* Decorative orbs */}
@@ -34,19 +34,19 @@ export const AIBookkeepHero = () => {
         <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-neutral-300 flex-shrink-0" />
+              <Sparkles className="w-5 h-5 text-violet-200 flex-shrink-0" />
               <h2 className="text-white font-black text-2xl">AI Bokföring</h2>
             </div>
-            <p className="text-neutral-300 text-sm mt-1">
+            <p className="text-violet-200 text-sm mt-1">
               Berätta vad du köpt — AI:n bokför automatiskt
             </p>
           </div>
 
           <button
             onClick={() => navigate("/bookkeep")}
-            className="bg-white text-neutral-700 font-bold rounded-2xl px-6 py-3 shadow-none hover:shadow-none hover:scale-105 transition-all duration-200 flex items-center gap-2 flex-shrink-0"
+            className="bg-white text-violet-700 font-bold rounded-2xl px-6 py-3 shadow-none hover:shadow-none hover:scale-105 transition-all duration-200 flex items-center gap-2 flex-shrink-0"
           >
-            <Sparkles className="w-4 h-4 text-neutral-700" />
+            <Sparkles className="w-4 h-4 text-violet-500" />
             Börja bokföra
           </button>
         </div>
@@ -70,7 +70,7 @@ export const AIBookkeepHero = () => {
       <div className="px-6 py-5">
         <textarea
           placeholder="Ex: Köpte kontorsmaterial för 450 kr på Staples..."
-          className="w-full bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-slate-800 dark:text-slate-200 text-sm placeholder:text-slate-300 dark:placeholder:text-slate-600 focus:outline-none focus:border-neutral-700 focus:bg-white dark:focus:bg-slate-800 focus:ring-4 focus:ring-neutral-100 dark:focus:ring-neutral-700/30 transition-all min-h-[90px] resize-none"
+          className="w-full bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-slate-800 dark:text-slate-200 text-sm placeholder:text-slate-300 dark:placeholder:text-slate-600 focus:outline-none focus:border-violet-400 focus:bg-white dark:focus:bg-slate-800 focus:ring-4 focus:ring-violet-100 dark:focus:ring-violet-900/30 transition-all min-h-[90px] resize-none"
           onFocus={() => navigate("/bookkeep")}
         />
 
@@ -81,7 +81,7 @@ export const AIBookkeepHero = () => {
               <button
                 key={chip.label}
                 onClick={() => navigate("/bookkeep")}
-                className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full px-3 py-1.5 text-xs text-slate-500 dark:text-slate-400 font-medium hover:border-neutral-300 hover:text-neutral-700 dark:hover:border-neutral-700 dark:hover:text-[#1E3A5F] transition cursor-pointer shadow-sm flex items-center gap-1.5"
+                className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full px-3 py-1.5 text-xs text-slate-500 dark:text-slate-400 font-medium hover:border-violet-300 hover:text-violet-600 dark:hover:border-violet-600 dark:hover:text-[#1E3A5F] transition cursor-pointer shadow-sm flex items-center gap-1.5"
               >
                 <chip.icon className="w-3.5 h-3.5" />
                 {chip.label}

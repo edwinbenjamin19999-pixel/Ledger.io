@@ -74,12 +74,12 @@ export const STATUS_LABELS: Record<AssetStatus, string> = {
 };
 
 export const STATUS_COLORS: Record<AssetStatus, string> = {
-  active: "bg-[#E1F5EE] text-neutral-700 border-[#BFE6D6]",
-  in_progress: "bg-[#EFF6FF] text-black border-[#C8DDF5]",
+  active: "bg-[#E1F5EE] text-emerald-700 border-[#BFE6D6]",
+  in_progress: "bg-[#EFF6FF] text-blue-700 border-[#C8DDF5]",
   fully_depreciated: "bg-muted text-muted-foreground border-border",
   sold: "bg-orange-500/10 text-orange-700 border-orange-500/20",
   scrapped: "bg-destructive/10 text-destructive border-destructive/20",
-  impaired: "bg-[#FAEEDA] text-neutral-700 border-[#F0DDB7]",
+  impaired: "bg-[#FAEEDA] text-amber-700 border-[#F0DDB7]",
 };
 
 export const CLASS_LABELS: Record<AssetClass, string> = {

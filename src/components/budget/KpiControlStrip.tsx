@@ -62,8 +62,8 @@ export function KpiControlStrip({ timeframe, onTimeframeChange, series, active, 
               className={cn(
                 "text-left rounded-xl border p-3 transition-all",
                 active === k
-                  ? "border-[#000000] bg-neutral-100/40 shadow-sm"
-                  : "border-slate-200 bg-white hover:border-[#000000] hover:bg-neutral-100/30"
+                  ? "border-[#3b82f6] bg-blue-50/40 shadow-sm"
+                  : "border-slate-200 bg-white hover:border-[#3b82f6] hover:bg-blue-50/30"
               )}
             >
               <div className="flex items-center justify-between gap-2">

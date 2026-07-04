@@ -72,10 +72,10 @@ const KPICard = ({ icon: Icon, accent, title, value, interpretation, trend, dela
   delay?: number;
 }) => {
   const accentMap = {
-    rose: { bar: "bg-neutral-700", icon: "text-[#7A1A1A]", iconBg: "bg-[#FCE8E8]" },
-    amber: { bar: "bg-neutral-700", icon: "text-[#7A5417]", iconBg: "bg-[#FAEEDA]" },
-    emerald: { bar: "bg-neutral-700", icon: "text-[#085041]", iconBg: "bg-[#E1F5EE]" },
-    cyan: { bar: "bg-[#000000]", icon: "text-[#000000]", iconBg: "bg-[#EFF6FF]" },
+    rose: { bar: "bg-rose-500", icon: "text-[#7A1A1A]", iconBg: "bg-[#FCE8E8]" },
+    amber: { bar: "bg-amber-500", icon: "text-[#7A5417]", iconBg: "bg-[#FAEEDA]" },
+    emerald: { bar: "bg-emerald-500", icon: "text-[#085041]", iconBg: "bg-[#E1F5EE]" },
+    cyan: { bar: "bg-[#3b82f6]", icon: "text-[#3b82f6]", iconBg: "bg-[#EFF6FF]" },
     slate: { bar: "bg-slate-400", icon: "text-slate-600", iconBg: "bg-slate-100" },
   }[accent];
   return (
@@ -109,9 +109,9 @@ const KPICard = ({ icon: Icon, accent, title, value, interpretation, trend, dela
 const SupplierAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   const colors = [
-    "from-neutral-700 to-pink-500", "from-neutral-700 to-orange-500",
-    "from-neutral-700 to-blue-500", "from-blue-500 to-[#000000]",
-    "from-neutral-700 to-neutral-700", "from-fuchsia-500 to-purple-500",
+    "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
+    "from-emerald-500 to-blue-500", "from-blue-500 to-[#3b82f6]",
+    "from-violet-500 to-indigo-500", "from-fuchsia-500 to-purple-500",
   ];
   return (
     <div className={`h-9 w-9 rounded-lg bg-gradient-to-br ${colors[name.charCodeAt(0) % colors.length]} flex items-center justify-center text-white text-xs font-bold shrink-0`}>
@@ -165,7 +165,7 @@ const PaymentCalendar = ({ invoices }: { invoices: Invoice[] }) => {
             const key = format(day, "yyyy-MM-dd");
             const amount = paymentsByDay[key] || 0;
             const isToday = isSameDay(day, new Date());
-            const dotColor = amount > 100000 ? "bg-neutral-700" : amount > 50000 ? "bg-neutral-700" : amount > 0 ? "bg-blue-400" : "";
+            const dotColor = amount > 100000 ? "bg-rose-500" : amount > 50000 ? "bg-amber-500" : amount > 0 ? "bg-blue-400" : "";
             return (
               <TooltipProvider key={key} delayDuration={200}>
                 <Tooltip>
@@ -188,8 +188,8 @@ const PaymentCalendar = ({ invoices }: { invoices: Invoice[] }) => {
         {/* Legend */}
         <div className="flex items-center gap-3 mt-3 text-[10px] text-muted-foreground">
           <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-blue-400" />&lt; 50k</span>
-          <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-neutral-700" />50k–100k</span>
-          <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-neutral-700" />&gt; 100k</span>
+          <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-amber-500" />50k–100k</span>
+          <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-rose-500" />&gt; 100k</span>
         </div>
       </CardContent>
     </Card>

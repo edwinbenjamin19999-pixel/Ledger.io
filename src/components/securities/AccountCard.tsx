@@ -14,10 +14,10 @@ const ACCOUNT_ICON: Record<AccountType, typeof TrendingUp> = {
 };
 
 const ACCOUNT_COLOR: Record<AccountType, string> = {
-  isk: 'bg-[#EFF6FF] text-[#000000] border-[#C8DDF5] dark:bg-blue-950/40 dark:text-[#000000] dark:border-[#000000]',
-  kf: 'bg-[#F1F5F9] text-neutral-700 border-[#E2E8F0] dark:bg-violet-950/40 dark:text-neutral-300 dark:border-neutral-700',
-  af: 'bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-950/40 dark:text-neutral-300 dark:border-neutral-700',
-  depot_ab: 'bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-emerald-950/40 dark:text-neutral-300 dark:border-neutral-700',
+  isk: 'bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5] dark:bg-blue-950/40 dark:text-[#3b82f6] dark:border-[#3b82f6]',
+  kf: 'bg-[#F1F5F9] text-violet-700 border-[#E2E8F0] dark:bg-violet-950/40 dark:text-violet-300 dark:border-violet-800',
+  af: 'bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7] dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800',
+  depot_ab: 'bg-[#E1F5EE] text-[#085041] border-[#BFE6D6] dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800',
 };
 
 const TAX_HINT: Record<AccountType, string> = {

@@ -40,7 +40,7 @@ export function L2_AccountBreakdown({ ctx, onPickAccount }: Props) {
                 onClick={() => onPickAccount({ accountNumber: a.accountNumber, accountName: a.accountName })}
                 className="flex w-full items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-muted/40"
               >
-                <span className="w-14 shrink-0 font-mono text-xs font-semibold text-[#000000] dark:text-[#1E3A5F]">
+                <span className="w-14 shrink-0 font-mono text-xs font-semibold text-[#3b82f6] dark:text-[#1E3A5F]">
                   {a.accountNumber}
                 </span>
                 <span className="flex-1 truncate text-sm text-foreground">{a.accountName}</span>
@@ -54,7 +54,7 @@ export function L2_AccountBreakdown({ ctx, onPickAccount }: Props) {
               </button>
               <div className="mx-4 mb-1 h-1 rounded-full bg-muted">
                 <div
-                  className="h-full rounded-full bg-[#000000]/70"
+                  className="h-full rounded-full bg-[#3b82f6]/70"
                   style={{ width: `${Math.min(pct, 100)}%` }}
                 />
               </div>

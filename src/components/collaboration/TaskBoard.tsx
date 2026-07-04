@@ -22,7 +22,7 @@ const COLUMNS = [
 const priorityConfig: Record<string, { label: string; bg: string; text: string }> = {
   urgent: { label: "Brådskande", bg: "bg-[#FCE8E8] dark:bg-red-900/30", text: "text-[#7A1A1A] dark:text-[#C73838]" },
   high: { label: "Hög", bg: "bg-orange-100 dark:bg-orange-900/30", text: "text-orange-700 dark:text-orange-400" },
-  medium: { label: "Medium", bg: "bg-[#EFF6FF] dark:bg-blue-900/30", text: "text-black dark:text-[#1E3A5F]" },
+  medium: { label: "Medium", bg: "bg-[#EFF6FF] dark:bg-blue-900/30", text: "text-blue-700 dark:text-[#1E3A5F]" },
   low: { label: "Låg", bg: "bg-muted", text: "text-muted-foreground" },
 };
 

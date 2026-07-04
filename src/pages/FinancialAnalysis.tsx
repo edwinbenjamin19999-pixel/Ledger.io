@@ -250,12 +250,12 @@ export default function FinancialAnalysis() {
                 <ScrollText className="h-4 w-4 text-slate-400" />
                 <span>
                   <strong className="text-slate-900">{aiCount + manualCount}</strong> ändringar i sessionen ·{' '}
-                  <span className="text-[#000000]">{aiCount} AI</span> ·{' '}
+                  <span className="text-[#3b82f6]">{aiCount} AI</span> ·{' '}
                   <span className="text-slate-700">{manualCount} manuella</span>
                 </span>
                 <button
                   onClick={() => setLogOpen(true)}
-                  className="text-xs text-[#000000] hover:underline"
+                  className="text-xs text-[#3b82f6] hover:underline"
                 >
                   Visa logg →
                 </button>
@@ -266,7 +266,7 @@ export default function FinancialAnalysis() {
                 </Button>
                 <Button
                   size="sm"
-                  className="bg-[#000000] hover:bg-[#000000]"
+                  className="bg-[#3b82f6] hover:bg-[#3b82f6]"
                   disabled={(aiCount + manualCount) === 0}
                   onClick={() => {
                     activatePlan();

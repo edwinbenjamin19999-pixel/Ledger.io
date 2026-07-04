@@ -232,7 +232,7 @@ export const OpeningBalancesPanel = ({ companyId, transitionDate }: Props) => {
       <CardContent className="space-y-5">
         {Object.entries(grouped).map(([group, subs]) => (
           <div key={group} className="space-y-2">
-            <h4 className="text-[10px] uppercase tracking-wider font-semibold text-[#000000]">{group}</h4>
+            <h4 className="text-[10px] uppercase tracking-wider font-semibold text-[#0040CC]">{group}</h4>
             {Object.entries(subs).map(([sub, items]) => (
               <div key={sub} className="space-y-1">
                 <p className="text-[11px] text-muted-foreground">{sub}</p>
@@ -309,7 +309,7 @@ export const OpeningBalancesPanel = ({ companyId, transitionDate }: Props) => {
                             <td className="px-2.5 py-1.5 text-right">
                               {editing ? (
                                 <div className="flex gap-1 justify-end">
-                                  <button onClick={saveEdit} className="text-neutral-700 hover:text-neutral-700">
+                                  <button onClick={saveEdit} className="text-emerald-600 hover:text-emerald-700">
                                     <Save className="h-3.5 w-3.5" />
                                   </button>
                                   <button onClick={cancelEdit} className="text-muted-foreground hover:text-foreground">
@@ -405,13 +405,13 @@ export const OpeningBalancesPanel = ({ companyId, transitionDate }: Props) => {
           </div>
           <div>
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Differens</p>
-            <p className={`tabular-nums font-semibold ${Math.abs(totals.diff) < 0.5 ? "text-neutral-700" : "text-red-700"}`}>
+            <p className={`tabular-nums font-semibold ${Math.abs(totals.diff) < 0.5 ? "text-emerald-700" : "text-red-700"}`}>
               {fmt(totals.diff)}
             </p>
           </div>
           <div className="flex items-center justify-end">
             {Math.abs(totals.diff) < 0.5 ? (
-              <Badge className="bg-neutral-100 text-neutral-700 border-neutral-300">
+              <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">
                 <CheckCircle2 className="h-3 w-3 mr-1" /> Balans OK
               </Badge>
             ) : (
@@ -426,8 +426,8 @@ export const OpeningBalancesPanel = ({ companyId, transitionDate }: Props) => {
         <div className="rounded-md border border-[#B5D4F4] bg-[#EFF6FF]/40 p-3 space-y-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-3.5 w-3.5 text-[#000000]" />
-              <p className="text-[12px] font-medium text-[#000000]">AI balanskontroll</p>
+              <Sparkles className="h-3.5 w-3.5 text-[#0040CC]" />
+              <p className="text-[12px] font-medium text-[#0040CC]">AI balanskontroll</p>
             </div>
             <Button size="sm" variant="outline" onClick={runAICheck} disabled={aiLoading}>
               {aiLoading ? <Loader2 className="h-3 w-3 animate-spin mr-1" /> : null}
@@ -435,7 +435,7 @@ export const OpeningBalancesPanel = ({ companyId, transitionDate }: Props) => {
             </Button>
           </div>
           {aiNotes.length > 0 ? (
-            <ul className="text-[11px] text-[#000000] space-y-1 list-disc pl-4">
+            <ul className="text-[11px] text-[#0040CC] space-y-1 list-disc pl-4">
               {aiNotes.map((n, i) => <li key={i}>{n}</li>)}
             </ul>
           ) : (

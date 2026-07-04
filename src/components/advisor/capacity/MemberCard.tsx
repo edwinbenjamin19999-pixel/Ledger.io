@@ -4,9 +4,9 @@ import type { FirmTask } from "@/hooks/useFirmTasks";
 import { GripVertical } from "lucide-react";
 
 const loadColor = (pct: number) => {
-  if (pct >= 110) return { bg: "bg-[#FCE8E8]", text: "text-[#7A1A1A]", bar: "bg-neutral-700" };
-  if (pct >= 90) return { bg: "bg-[#FAEEDA]", text: "text-[#7A5417]", bar: "bg-neutral-700" };
-  return { bg: "bg-[#E1F5EE]", text: "text-[#085041]", bar: "bg-neutral-700" };
+  if (pct >= 110) return { bg: "bg-[#FCE8E8]", text: "text-[#7A1A1A]", bar: "bg-rose-500" };
+  if (pct >= 90) return { bg: "bg-[#FAEEDA]", text: "text-[#7A5417]", bar: "bg-amber-500" };
+  return { bg: "bg-[#E1F5EE]", text: "text-[#085041]", bar: "bg-emerald-500" };
 };
 
 export const MemberCard = ({ cap }: { cap: MemberCapacity }) => {
@@ -21,7 +21,7 @@ export const MemberCard = ({ cap }: { cap: MemberCapacity }) => {
       style={{
         background: "#FFFFFF",
         border: "1px solid rgba(15,23,42,0.06)",
-        boxShadow: isOver ? "0 30px 80px rgba(0,0,0,0.18)" : "0 30px 80px rgba(15,23,42,0.05)",
+        boxShadow: isOver ? "0 30px 80px rgba(0,82,255,0.18)" : "0 30px 80px rgba(15,23,42,0.05)",
       }}
     >
       <div className="flex items-center justify-between mb-3">
@@ -87,7 +87,7 @@ export const DraggableTask = ({ task }: { task: FirmTask }) => {
     >
       <GripVertical className="h-3 w-3 text-[#CBD5E1] shrink-0" />
       <span className="text-xs text-[#475569] truncate flex-1">{task.title}</span>
-      {task.priority === "urgent" && <span className="h-1.5 w-1.5 rounded-full bg-neutral-700 shrink-0" />}
+      {task.priority === "urgent" && <span className="h-1.5 w-1.5 rounded-full bg-rose-500 shrink-0" />}
     </div>
   );
 };

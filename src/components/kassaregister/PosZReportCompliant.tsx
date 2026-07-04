@@ -84,7 +84,7 @@ export function PosZReportCompliant() { const { reports, isLoading } = usePosZRe
                 key={r.id}
                 className={cn(
                   "transition-all hover:shadow-md cursor-pointer group",
-                  isBooked && "border-neutral-300/50 dark:border-neutral-700/20"
+                  isBooked && "border-emerald-200/50 dark:border-emerald-800/20"
                 )}
                 onClick={() => setSelectedReport(r.id)}
               >
@@ -92,7 +92,7 @@ export function PosZReportCompliant() { const { reports, isLoading } = usePosZRe
                   <div className="flex items-center gap-3">
                     <div className={cn(
                       "h-10 w-10 rounded-lg flex items-center justify-center transition-colors",
-                      isBooked ? "bg-[#E1F5EE] dark:bg-neutral-700/30" : "bg-muted"
+                      isBooked ? "bg-[#E1F5EE] dark:bg-emerald-900/30" : "bg-muted"
                     )}>
                       {isBooked ? <Lock className="h-4 w-4 text-[#085041]" /> : <FileText className="h-4 w-4 text-muted-foreground" />}
                     </div>
@@ -247,7 +247,7 @@ export function PosZReportCompliant() { const { reports, isLoading } = usePosZRe
                 )}
 
                 {/* Status & compliance */}
-                <div className="flex items-center gap-2 p-3 rounded-lg bg-[#E1F5EE] dark:bg-emerald-950/20 border border-[#BFE6D6] dark:border-neutral-700/30">
+                <div className="flex items-center gap-2 p-3 rounded-lg bg-[#E1F5EE] dark:bg-emerald-950/20 border border-[#BFE6D6] dark:border-emerald-800/30">
                   <CheckCircle className="h-4 w-4 text-[#085041] flex-shrink-0" />
                   <div>
                     <p className="text-sm font-medium text-[#085041] dark:text-[#1D9E75]">Rapport komplett</p>

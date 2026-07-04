@@ -49,17 +49,17 @@ export function useChartTheme() {
 
     // Brand-safe chart colors (works in both modes)
     colors: {
-      violet: "#737373",
-      emerald: "#000000",
-      blue: "#000000",
-      amber: "#525252",
-      rose: "#525252",
-      indigo: "#525252",
-      teal: "#000000",
+      violet: "#8b5cf6",
+      emerald: "#10b981",
+      blue: "#3b82f6",
+      amber: "#f59e0b",
+      rose: "#f43f5e",
+      indigo: "#6366f1",
+      teal: "#14b8a6",
       orange: "#f97316",
-      cyan: "#000000",
-      red: "#525252",
-      green: "#000000",
+      cyan: "#3b82f6",
+      red: "#ef4444",
+      green: "#22c55e",
     },
 
     // Area fill opacities

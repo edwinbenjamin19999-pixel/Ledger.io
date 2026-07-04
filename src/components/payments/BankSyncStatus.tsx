@@ -25,7 +25,7 @@ export function BankSyncStatus({ accounts, onOpenSync }: Props) {
         onClick={onOpenSync}
         className="inline-flex items-center gap-1.5 text-[11px] text-[#7A1A1A] hover:underline"
       >
-        <span className="h-1.5 w-1.5 rounded-full bg-neutral-700" />
+        <span className="h-1.5 w-1.5 rounded-full bg-rose-500" />
         Anslut bank
       </button>
     );
@@ -57,9 +57,9 @@ export function BankSyncStatus({ accounts, onOpenSync }: Props) {
         >
           <span className={cn(
             "h-1.5 w-1.5 rounded-full",
-            tone === "emerald" && "bg-neutral-700",
-            tone === "amber" && "bg-neutral-700",
-            tone === "rose" && "bg-neutral-700",
+            tone === "emerald" && "bg-emerald-500",
+            tone === "amber" && "bg-amber-500",
+            tone === "rose" && "bg-rose-500",
           )} />
           {label} · {accounts.length} konto{accounts.length !== 1 ? "n" : ""}
         </button>

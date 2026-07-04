@@ -42,18 +42,18 @@ export interface Anomaly {
 
 const CATEGORY_CONFIG: Record<string, { icon: React.ElementType; label: string; color: string }> = {
   duplicate: { icon: Copy, label: "Dubbletter", color: "text-[#F97316]" },
-  unusual_amount: { icon: TrendingUp, label: "Ovanligt belopp", color: "text-[#525252]" },
+  unusual_amount: { icon: TrendingUp, label: "Ovanligt belopp", color: "text-[#EF4444]" },
   round_number: { icon: AlertTriangle, label: "Jämna belopp", color: "text-[#EAB308]" },
-  ghost_vendor: { icon: UserX, label: "Spökleverantör", color: "text-[#525252]" },
+  ghost_vendor: { icon: UserX, label: "Spökleverantör", color: "text-[#EF4444]" },
   personal_expense: { icon: ShoppingCart, label: "Privat kostnad", color: "text-purple-500" },
-  timing: { icon: Clock, label: "Tidpunktsavvikelse", color: "text-[#000000]" },
+  timing: { icon: Clock, label: "Tidpunktsavvikelse", color: "text-[#3B82F6]" },
   account_misuse: { icon: BookOpen, label: "Kontomissbruk", color: "text-[#7A5417]" },
   price_increase: { icon: TrendingUp, label: "Prisavvikelse", color: "text-[#F97316]" },
-  new_vendor_high: { icon: UserX, label: "Ny leverantör, högt belopp", color: "text-[#525252]" },
-  account_direction: { icon: BookOpen, label: "Konteringsavvikelse", color: "text-[#525252]" },
+  new_vendor_high: { icon: UserX, label: "Ny leverantör, högt belopp", color: "text-[#EF4444]" },
+  account_direction: { icon: BookOpen, label: "Konteringsavvikelse", color: "text-[#EF4444]" },
   vat_mismatch: { icon: AlertTriangle, label: "Momsavstämningsfel", color: "text-[#EAB308]" },
-  missing_period: { icon: CalendarDays, label: "Saknad post", color: "text-[#000000]" },
-  revenue_drop: { icon: TrendingUp, label: "Intäktsavvikelse", color: "text-[#525252]" },
+  missing_period: { icon: CalendarDays, label: "Saknad post", color: "text-[#3B82F6]" },
+  revenue_drop: { icon: TrendingUp, label: "Intäktsavvikelse", color: "text-[#EF4444]" },
 };
 
 const fmt = (n: number) => n.toLocaleString("sv-SE", { maximumFractionDigits: 0 });
@@ -644,8 +644,8 @@ export const AnomalyDetection = ({ companyId }: AnomalyDetectionProps) => {
           <div className="flex items-center gap-2">
             {liveMode && (
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#000000]" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#22c55e]" />
               </span>
             )}
             <span className="text-xs text-muted-foreground">Live</span>
@@ -657,7 +657,7 @@ export const AnomalyDetection = ({ companyId }: AnomalyDetectionProps) => {
 
       {/* KPIs */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card className={anomalyScore > 50 ? "border-[#525252]/30" : anomalyScore > 20 ? "border-[#EAB308]/30" : "border-[#000000]/30"}>
+        <Card className={anomalyScore > 50 ? "border-[#EF4444]/30" : anomalyScore > 20 ? "border-[#EAB308]/30" : "border-[#22c55e]/30"}>
           <CardContent className="pt-4 pb-3">
             <p className="text-xs text-muted-foreground mb-1">Anomalipoäng</p>
             <div className="flex items-end gap-2">
@@ -680,7 +680,7 @@ export const AnomalyDetection = ({ companyId }: AnomalyDetectionProps) => {
         <Card>
           <CardContent className="pt-4 pb-3">
             <p className="text-xs text-muted-foreground mb-1">Hög prioritet</p>
-            <p className="text-3xl font-bold text-[#525252]">{highCount}</p>
+            <p className="text-3xl font-bold text-[#EF4444]">{highCount}</p>
             <p className="text-xs text-muted-foreground mt-1">omedelbar granskning</p>
           </CardContent>
         </Card>
@@ -714,7 +714,7 @@ export const AnomalyDetection = ({ companyId }: AnomalyDetectionProps) => {
         <TabsContent value="pending" className="space-y-2 mt-4">
           {anomalies.filter(a => a.status === "pending").length === 0 ? (
             <Card><CardContent className="py-10 text-center">
-              <CheckCircle className="h-10 w-10 mx-auto mb-3 text-[#000000]" />
+              <CheckCircle className="h-10 w-10 mx-auto mb-3 text-[#22c55e]" />
               <p className="text-sm text-muted-foreground">Inga avvikelser -- bra jobbat!</p>
             </CardContent></Card>
           ) : (
@@ -787,7 +787,7 @@ function AnomalyCard({ anomaly, expanded, onToggle, onResolve, onIgnore, onEscal
   const Icon = cfg.icon;
 
   const severityStyle = anomaly.severity === "high"
-    ? "border-[#525252]/20"
+    ? "border-[#EF4444]/20"
     : anomaly.severity === "medium"
       ? "border-[#EAB308]/20"
       : "";
@@ -801,9 +801,9 @@ function AnomalyCard({ anomaly, expanded, onToggle, onResolve, onIgnore, onEscal
             <div className="flex items-center gap-2 flex-wrap">
               <p className="text-sm font-medium">{anomaly.title}</p>
               <Badge className={`text-[10px] ${
-                anomaly.severity === "high" ? "bg-[#525252] text-white" :
+                anomaly.severity === "high" ? "bg-[#EF4444] text-white" :
                 anomaly.severity === "medium" ? "bg-[#EAB308] text-white" :
-                "bg-[#000000] text-white"
+                "bg-[#3B82F6] text-white"
               }`}>
                 {anomaly.severity === "high" ? "Kritisk" : anomaly.severity === "medium" ? "Medium" : "Info"}
               </Badge>

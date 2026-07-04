@@ -34,7 +34,7 @@ export const DashboardHeader = () => { const { user, signOut } = useAuth();
             onClick={() => navigate("/dashboard")}
             className="text-2xl font-bold bg-clip-text text-transparent bg-[image:var(--gradient-accent)] cursor-pointer"
           >
-            Bokfy
+            Cogniq
           </h1>
           
           <nav className="hidden md:flex gap-2">

@@ -24,7 +24,7 @@ export const EmailInboxAddressCard = ({ companyId, variant = "desktop" }: Props)
       if (data?.email_inbox_address) {
         setEmailAddr(data.email_inbox_address);
       } else {
-        const generated = `bokforing-${companyId.slice(0, 8)}@inbox.bokfy.se`;
+        const generated = `bokforing-${companyId.slice(0, 8)}@inbox.cogniq.se`;
         await supabase
           .from("companies")
           .update({ email_inbox_address: generated })

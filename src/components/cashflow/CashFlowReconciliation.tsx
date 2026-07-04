@@ -17,9 +17,9 @@ export function CashFlowReconciliation({ periods, dismissed, onDismiss }: Props)
   if (dismissed) return null;
 
   return (
-    <div className="rounded-lg border border-[#C8DDF5] bg-neutral-100/50 dark:bg-blue-950/10 p-3 text-xs">
+    <div className="rounded-lg border border-[#C8DDF5] bg-blue-50/50 dark:bg-blue-950/10 p-3 text-xs">
       <div className="flex items-start gap-2">
-        <Info className="w-4 h-4 text-black mt-0.5 shrink-0" />
+        <Info className="w-4 h-4 text-blue-500 mt-0.5 shrink-0" />
         <div className="flex-1">
           <p className="text-foreground leading-relaxed">
             <strong>Kassaflödet visar faktiska in- och utbetalningar.</strong> Det skiljer sig från resultaträkningen eftersom intäkter bokförs vid fakturadatum, kostnader periodiseras, och avskrivningar påverkar resultatet men inte kassan.
@@ -28,7 +28,7 @@ export function CashFlowReconciliation({ periods, dismissed, onDismiss }: Props)
             <Button
               variant="ghost"
               size="sm"
-              className="h-6 text-[11px] text-black hover:text-black px-2"
+              className="h-6 text-[11px] text-blue-600 hover:text-blue-700 px-2"
               onClick={() => setExpanded(!expanded)}
             >
               {expanded ? <ChevronUp className="w-3 h-3 mr-1" /> : <ChevronDown className="w-3 h-3 mr-1" />}

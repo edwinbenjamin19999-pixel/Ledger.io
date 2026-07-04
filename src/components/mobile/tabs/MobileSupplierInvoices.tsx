@@ -278,7 +278,7 @@ const MobileInvoiceSheet = ({
             </p>
             <button
               onClick={() => setAccountPickerOpen(true)}
-              className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#000000]/10 border border-[#000000]/20 text-[#000000] text-[13px] font-medium active:bg-[#000000]/15"
+              className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#3b82f6]/10 border border-[#3b82f6]/20 text-[#3b82f6] text-[13px] font-medium active:bg-[#3b82f6]/15"
             >
               <Sparkles size={14} strokeWidth={1.75} />
               AI föreslår: {account.number} {account.name} ({aiPct}%)
@@ -316,7 +316,7 @@ const MobileInvoiceSheet = ({
                   {proposedLines.map((l, i) => (
                     <div key={i} className="flex items-center justify-between py-1.5 px-3 bg-[#F8FAFB] rounded-lg">
                       <span className="text-[13px] text-[#0F172A] leading-[1.6]">{l.description}</span>
-                      <span className={cn("text-[13px] tabular-nums font-medium", l.amount < 0 ? "text-[#000000]" : "text-[#1D9E75]")}>
+                      <span className={cn("text-[13px] tabular-nums font-medium", l.amount < 0 ? "text-[#3b82f6]" : "text-[#1D9E75]")}>
                         {formatSEK(Math.abs(l.amount))} {l.amount < 0 ? "Kr" : "Db"}
                       </span>
                     </div>
@@ -331,7 +331,7 @@ const MobileInvoiceSheet = ({
                 className="w-full flex items-center gap-3 px-4 py-3 bg-white border-[0.5px] border-[#E2E8F0] rounded-2xl active:bg-[#F8FAFB] min-h-[60px]"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
-                  <FileText size={18} color="#000000" strokeWidth={1.75} />
+                  <FileText size={18} color="#3b82f6" strokeWidth={1.75} />
                 </div>
                 <span className="flex-1 text-left text-[15px] text-[#0F172A]">Visa fakturabilaga</span>
                 <ChevronRight size={18} color="#CBD5E1" />
@@ -346,7 +346,7 @@ const MobileInvoiceSheet = ({
           >
             <button
               onClick={() => setConfirmOpen(true)}
-              className="w-full h-[52px] rounded-xl bg-[#000000] active:bg-[#000000] text-white text-[15px] font-medium"
+              className="w-full h-[52px] rounded-xl bg-[#3b82f6] active:bg-[#0052FF] text-white text-[15px] font-medium"
             >
               Attestera & bokför
             </button>
@@ -468,7 +468,7 @@ const AccountPickerOverlay = ({
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Sök konto eller nummer"
-            className="w-full h-11 pl-9 pr-3 bg-[#F8FAFB] border-[0.5px] border-[#E2E8F0] rounded-xl text-[15px] text-[#0F172A] focus:outline-none focus:border-[#000000]"
+            className="w-full h-11 pl-9 pr-3 bg-[#F8FAFB] border-[0.5px] border-[#E2E8F0] rounded-xl text-[15px] text-[#0F172A] focus:outline-none focus:border-[#3b82f6]"
           />
         </div>
       </div>
@@ -504,7 +504,7 @@ const AccountResultRow = ({ a, onSelect }: { a: { number: string; name: string }
     onClick={() => onSelect(a)}
     className="w-full h-[48px] px-4 flex items-center gap-3 active:bg-[#F8FAFB] border-b-[0.5px] border-[#F1F5F9]"
   >
-    <span className="font-mono text-[14px] text-[#000000] w-12 text-left">{a.number}</span>
+    <span className="font-mono text-[14px] text-[#3b82f6] w-12 text-left">{a.number}</span>
     <span className="flex-1 text-left text-[15px] text-[#0F172A]">{a.name}</span>
     <ChevronRight size={16} color="#CBD5E1" />
   </button>

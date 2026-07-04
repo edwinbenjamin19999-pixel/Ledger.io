@@ -12,7 +12,7 @@ interface Props {
 
 const variantRowClassComfortable: Record<FinancialRowData["variant"], string> = {
   section:
-    "h-14 bg-slate-50/60 dark:bg-slate-800/50 border-l-2 border-[#000000] border-b border-slate-200/60 dark:border-slate-700 font-semibold text-slate-900 dark:text-slate-100",
+    "h-14 bg-slate-50/60 dark:bg-slate-800/50 border-l-2 border-[#3b82f6] border-b border-slate-200/60 dark:border-slate-700 font-semibold text-slate-900 dark:text-slate-100",
   subcategory:
     "h-12 bg-slate-50/30 dark:bg-slate-900/40 border-b border-slate-100 dark:border-slate-800 font-medium text-slate-700 dark:text-slate-300",
   account:
@@ -126,7 +126,7 @@ export const FinancialRow = ({ row, columns, density = "comfortable" }: Props) =
               >
                 <span
                   className={cn(
-                    "report-numeric text-[#000000] dark:text-[#1E3A5F] font-semibold text-[12px]",
+                    "report-numeric text-[#3b82f6] dark:text-[#1E3A5F] font-semibold text-[12px]",
                     row.variant === "total" && "uppercase tracking-wider text-slate-900 dark:text-slate-100 text-[14px]",
                     row.variant === "section" && "uppercase tracking-wider text-slate-900 dark:text-slate-100 text-[15px]",
                   )}

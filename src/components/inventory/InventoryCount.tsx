@@ -175,7 +175,7 @@ export const InventoryCount = () => { const [active, setActive] = useState(false
                           ? "bg-[#E1F5EE] text-[#085041]"
                           : item.diff < 0
                           ? "bg-destructive/10 text-destructive"
-                          : "bg-[#EFF6FF] text-black"
+                          : "bg-[#EFF6FF] text-blue-600"
                       }
                     >
                       {item.diff > 0 ? "+" : ""}{item.diff}

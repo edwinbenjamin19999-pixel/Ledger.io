@@ -9,9 +9,9 @@ interface Props {
 }
 
 const DEFAULT_PALETTE = [
-  "#000000", // cyan
+  "#3b82f6", // cyan
   "#4f46e5", // indigo
-  "#000000", // emerald
+  "#10b981", // emerald
   "#0f172a", // slate
   "#7c3aed", // violet
   "#d97706", // amber
@@ -45,7 +45,7 @@ export function ColorPickerField({ label, value, onChange, optional, palette = D
         <div className="flex items-center gap-1.5 ml-1">
           <input
             type="color"
-            value={value || "#000000"}
+            value={value || "#3b82f6"}
             onChange={(e) => onChange(e.target.value)}
             className="h-8 w-8 rounded-full border border-slate-200 cursor-pointer overflow-hidden p-0"
           />
@@ -56,8 +56,8 @@ export function ColorPickerField({ label, value, onChange, optional, palette = D
               const v = e.target.value.startsWith("#") ? e.target.value : "#" + e.target.value;
               if (/^#[0-9a-f]{0,6}$/i.test(v)) onChange(v);
             }}
-            placeholder="#000000"
-            className="h-8 w-24 rounded-md border border-slate-200 px-2 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-[#000000]/30 focus:border-[#000000]"
+            placeholder="#3b82f6"
+            className="h-8 w-24 rounded-md border border-slate-200 px-2 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/30 focus:border-[#3b82f6]"
           />
         </div>
       </div>

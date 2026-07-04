@@ -28,7 +28,7 @@ export function MonthlyCapitalWidget({ companyId }: { companyId: string }) {
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <Wallet className="h-4 w-4 text-[#000000]" />
+            <Wallet className="h-4 w-4 text-[#3b82f6]" />
             <h3 className="text-sm font-semibold">Kapitalbehov denna månad</h3>
           </div>
           <p className={cn("text-xs font-medium", STATUS_TEXT[data.status])}>{STATUS_LABELS[data.status]}</p>

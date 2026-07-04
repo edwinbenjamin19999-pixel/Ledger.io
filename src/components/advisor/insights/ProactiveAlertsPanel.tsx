@@ -19,7 +19,7 @@ const SEVERITY_META: Record<BureauAlert["severity"], {
   },
   warning: {
     icon: AlertTriangle,
-    dotClass: "bg-[#525252]",
+    dotClass: "bg-[#EF9F27]",
     badgeClass: "bg-[#FEF3C7] text-[#78350F] border-[#FBBF24]",
     label: "VARNING",
   },
@@ -61,7 +61,7 @@ export const ProactiveAlertsPanel = () => {
 
   return (
     <div className="bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] overflow-hidden">
-      <div className="h-[1.5px] bg-[#000000]" />
+      <div className="h-[1.5px] bg-[#0040CC]" />
       <div className="p-[14px]">
         <div className="flex items-start justify-between mb-3">
           <div>
@@ -153,7 +153,7 @@ export const ProactiveAlertsPanel = () => {
                               {alert.client_name && (
                                 <button
                                   onClick={() => navigate(`/wl/app/clients/${alert.firm_client_id}`)}
-                                  className="text-[12px] font-medium text-[#0F172A] hover:text-[#000000] truncate"
+                                  className="text-[12px] font-medium text-[#0F172A] hover:text-[#0040CC] truncate"
                                 >
                                   {alert.client_name}
                                 </button>
@@ -173,7 +173,7 @@ export const ProactiveAlertsPanel = () => {
                             {alert.action_url && (
                               <button
                                 onClick={() => navigate(alert.action_url!)}
-                                className="bg-[#000000] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[6px] text-[10px] font-medium px-[10px] h-[24px] flex items-center gap-1"
+                                className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[6px] text-[10px] font-medium px-[10px] h-[24px] flex items-center gap-1"
                               >
                                 Åtgärda <ExternalLink className="h-2.5 w-2.5" />
                               </button>

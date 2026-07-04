@@ -17,9 +17,9 @@ const tierStyles: Record<CFOPriority["tier"], {
   badgeColor: string;
   badgeBorder: string;
 }> = {
-  critical: { label: "KRITISK", borderColor: "#525252", badgeBg: "#FEF2F2", badgeColor: "#525252", badgeBorder: "#FECACA" },
-  high:     { label: "VARNING", borderColor: "#525252", badgeBg: "#FFFBEB", badgeColor: "#525252", badgeBorder: "#FDE68A" },
-  medium:   { label: "VARNING", borderColor: "#525252", badgeBg: "#FFFBEB", badgeColor: "#525252", badgeBorder: "#FDE68A" },
+  critical: { label: "KRITISK", borderColor: "#EF4444", badgeBg: "#FEF2F2", badgeColor: "#DC2626", badgeBorder: "#FECACA" },
+  high:     { label: "VARNING", borderColor: "#F59E0B", badgeBg: "#FFFBEB", badgeColor: "#D97706", badgeBorder: "#FDE68A" },
+  medium:   { label: "VARNING", borderColor: "#F59E0B", badgeBg: "#FFFBEB", badgeColor: "#D97706", badgeBorder: "#FDE68A" },
   low:      { label: "LÅG",     borderColor: "#6B7280", badgeBg: "#F9FAFB", badgeColor: "#6B7280", badgeBorder: "#E5E7EB" },
 };
 
@@ -104,7 +104,7 @@ export function PriorityWorkflowCard({ insight, companyId, onPrimary, onIgnore, 
             <span
               className="inline-flex items-center"
               style={{
-                background: "rgba(0,0,0,0.08)",
+                background: "rgba(0,82,255,0.08)",
                 color: "#0D7A8A",
                 borderRadius: 100,
                 padding: "2px 10px",
@@ -126,7 +126,7 @@ export function PriorityWorkflowCard({ insight, companyId, onPrimary, onIgnore, 
                 style={{
                   fontSize: 22,
                   fontWeight: 700,
-                  color: isNeg ? "#525252" : "#10B981",
+                  color: isNeg ? "#EF4444" : "#10B981",
                 }}
               >
                 {isNeg
@@ -151,7 +151,7 @@ export function PriorityWorkflowCard({ insight, companyId, onPrimary, onIgnore, 
       <div className="mt-4 border-t border-slate-100 dark:border-white/5 pt-3">
         <button
           onClick={() => setExpanded(s => !s)}
-          className="w-full flex items-center justify-between text-xs font-medium text-slate-700 dark:text-white/80 hover:text-[#000000] dark:hover:text-[#000000] transition-colors"
+          className="w-full flex items-center justify-between text-xs font-medium text-slate-700 dark:text-white/80 hover:text-[#3b82f6] dark:hover:text-[#3b82f6] transition-colors"
         >
           <span className="flex items-center gap-1.5">
             {expanded ? <ChevronDown className="h-3.5 w-3.5" /> : <ChevronRight className="h-3.5 w-3.5" />}
@@ -217,7 +217,7 @@ export function PriorityWorkflowCard({ insight, companyId, onPrimary, onIgnore, 
             onClick={() => onPrimary(insight, Array.from(selected))}
             className="inline-flex items-center gap-1.5 transition-colors hover:bg-[#1a3550] disabled:opacity-60"
             style={{
-              background: "#000000",
+              background: "#0F172A",
               color: "white",
               borderRadius: 8,
               padding: "8px 16px",

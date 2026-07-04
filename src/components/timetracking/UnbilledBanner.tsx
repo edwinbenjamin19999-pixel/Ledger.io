@@ -15,7 +15,7 @@ export function UnbilledBanner() { const { unbilled } = useUnbilledSummary();
 
   return (
     <>
-      <div className="rounded-lg border border-[#000000]/30 bg-[#000000]/5 p-4 flex items-center justify-between gap-4">
+      <div className="rounded-lg border border-[#3b82f6]/30 bg-[#3b82f6]/5 p-4 flex items-center justify-between gap-4">
         <p className="text-sm">
           Du har{" "}
           <span className="font-bold">{top.hours.toFixed(1).replace(".", ",")} ofakturerade timmar</span>{" "}
@@ -27,7 +27,7 @@ export function UnbilledBanner() { const { unbilled } = useUnbilledSummary();
         </p>
         <Button
           size="sm"
-          className="bg-[#000000] hover:bg-[#000000]/90 text-white flex-shrink-0 gap-1"
+          className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white flex-shrink-0 gap-1"
           onClick={() => setReviewClient(top.client)}
         >
           Fakturera nu

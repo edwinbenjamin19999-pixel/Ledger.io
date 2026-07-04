@@ -47,18 +47,18 @@ type Severity = "critical" | "important" | "info";
 const SEVERITY_BADGE: Record<Severity, { label: string; cls: string; dot: string }> = {
   critical: {
     label: "KRITISK",
-    cls: "bg-neutral-100 text-[#7A1A1A] border-neutral-300",
-    dot: "bg-neutral-700",
+    cls: "bg-rose-50 text-[#7A1A1A] border-rose-200",
+    dot: "bg-rose-500",
   },
   important: {
     label: "VIKTIGT",
-    cls: "bg-neutral-100 text-[#7A5417] border-neutral-300",
-    dot: "bg-neutral-700",
+    cls: "bg-amber-50 text-[#7A5417] border-amber-200",
+    dot: "bg-amber-500",
   },
   info: {
     label: "INFO",
-    cls: "bg-neutral-100 text-[#1E3A8A] border-black",
-    dot: "bg-[#000000]",
+    cls: "bg-blue-50 text-[#1E3A8A] border-blue-200",
+    dot: "bg-[#3b82f6]",
   },
 };
 

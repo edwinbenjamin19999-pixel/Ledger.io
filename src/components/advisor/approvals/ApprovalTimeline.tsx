@@ -31,8 +31,8 @@ export function ApprovalTimeline({ items }: { items: FirmApprovalHistoryItem[] }
           const isSigned = item.status === "signed" || item.status === "approved";
           const Icon = isSigned ? (item.status === "signed" ? FileSignature : CheckCircle2) : XCircle;
           const tone = isSigned
-            ? { bg: "bg-[#E1F5EE]", ring: "ring-neutral-300", text: "text-[#085041]" }
-            : { bg: "bg-[#FCE8E8]", ring: "ring-neutral-300", text: "text-[#7A1A1A]" };
+            ? { bg: "bg-[#E1F5EE]", ring: "ring-emerald-200", text: "text-[#085041]" }
+            : { bg: "bg-[#FCE8E8]", ring: "ring-rose-200", text: "text-[#7A1A1A]" };
           return (
             <div key={item.id} className="relative">
               <div

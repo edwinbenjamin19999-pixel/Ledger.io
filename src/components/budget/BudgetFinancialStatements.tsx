@@ -85,7 +85,7 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
         isHeader && "bg-slate-100 dark:bg-slate-800",
         isTotal && "bg-slate-800 dark:bg-slate-900",
         isSubtotal && "bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-700",
-        isKPI && "bg-neutral-100/50 dark:bg-blue-950/10 border-b border-black dark:border-[#000000]",
+        isKPI && "bg-blue-50/50 dark:bg-blue-950/10 border-b border-blue-100 dark:border-[#3b82f6]",
         type === "account" && "border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/60 dark:hover:bg-slate-800/30"
       )}>
         <td className={cn(
@@ -93,7 +93,7 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
           isHeader && "font-black uppercase tracking-widest text-slate-500 dark:text-slate-400",
           isTotal && "text-sm font-black text-white",
           isSubtotal && "font-semibold text-slate-800 dark:text-slate-200",
-          isKPI && "font-semibold text-[#000000] dark:text-[#1E3A5F]",
+          isKPI && "font-semibold text-[#3b82f6] dark:text-[#1E3A5F]",
           type === "account" && "text-slate-700 dark:text-slate-300"
         )} style={{ paddingLeft: `${16 + indent * 16}px` }}>
           {label}
@@ -103,7 +103,7 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
             "py-2.5 px-4 text-right tabular-nums font-mono",
             isTotal && "text-sm font-black text-white",
             isSubtotal && "text-xs font-bold text-slate-800 dark:text-slate-200",
-            isKPI && "text-xs font-bold text-[#000000] dark:text-[#1E3A5F]",
+            isKPI && "text-xs font-bold text-[#3b82f6] dark:text-[#1E3A5F]",
             type === "account" && (value === 0 ? "text-slate-300 dark:text-slate-600 text-xs" : value < 0 ? "text-[#7A1A1A] dark:text-[#C73838] italic text-xs" : "text-slate-800 dark:text-slate-200 text-xs"),
           )}>
             {isKPI ? `${value}%` : value === 0 ? "—" : formatSEK(value)}
@@ -131,7 +131,7 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
         {/* RESULTATRÄKNING */}
         <div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-card shadow-sm">
           <div className="px-4 py-3 bg-slate-800 dark:bg-slate-900 flex items-center gap-2">
-            <div className="w-1 h-5 rounded-full bg-[#000000]" />
+            <div className="w-1 h-5 rounded-full bg-[#3b82f6]" />
             <h3 className="text-sm font-bold text-white">Resultaträkning</h3>
           </div>
           <div className="max-h-[600px] overflow-y-auto">
@@ -174,7 +174,7 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
         {/* BALANSRÄKNING */}
         <div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-card shadow-sm">
           <div className="px-4 py-3 bg-slate-800 dark:bg-slate-900 flex items-center gap-2">
-            <div className="w-1 h-5 rounded-full bg-neutral-700" />
+            <div className="w-1 h-5 rounded-full bg-violet-400" />
             <h3 className="text-sm font-bold text-white">Balansräkning</h3>
           </div>
           <div className="max-h-[600px] overflow-y-auto">

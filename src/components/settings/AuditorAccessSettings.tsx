@@ -120,7 +120,7 @@ export function AuditorAccessSettings({ companyId }: Props) {
   const statusBadge = (s: AuditorAccess) => {
     if (s.revoked_at) return <Badge variant="destructive">Återkallad</Badge>;
     if (new Date(s.valid_until) < new Date()) return <Badge variant="secondary">Utgången</Badge>;
-    return <Badge className="bg-neutral-700">Aktiv</Badge>;
+    return <Badge className="bg-emerald-600">Aktiv</Badge>;
   };
 
   return (

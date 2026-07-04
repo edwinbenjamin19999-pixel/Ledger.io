@@ -144,7 +144,7 @@ export default function Autofix() {
             </Button>
           </div>
           <div className="flex items-center gap-2 text-sm text-[#64748B]">
-            <ShieldCheck className="w-4 h-4 text-neutral-700" />
+            <ShieldCheck className="w-4 h-4 text-emerald-600" />
             {findings.length} öppna findings
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function Autofix() {
           <Card className="rounded-[12px] border-[0.5px] border-[#E2E8F0]">
             <CardContent className="py-16 text-center">
               <div className="rounded-2xl bg-[#E1F5EE] p-3 inline-block mb-4">
-                <ShieldCheck className="w-12 h-12 text-neutral-700" />
+                <ShieldCheck className="w-12 h-12 text-emerald-600" />
               </div>
               <p className="font-medium text-[#0F1F3D]">Inga öppna avvikelser</p>
               <p className="text-sm text-[#64748B] mt-1">Klicka "Skanna nu" för att leta efter problem.</p>

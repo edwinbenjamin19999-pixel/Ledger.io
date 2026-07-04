@@ -41,10 +41,10 @@ export const KPI_GRADIENTS = {
  * Color = meaning only (Law 3). Maps to a 3px left border on a neutral card.
  */
 export const KPI_ACCENT = {
-  emerald: { border: "border-l-emerald-500", icon: "text-[#085041]", dot: "bg-neutral-700" },
-  rose: { border: "border-l-rose-500", icon: "text-[#7A1A1A]", dot: "bg-neutral-700" },
-  cyan: { border: "border-l-[#000000]", icon: "text-[#000000]", dot: "bg-[#000000]" },
-  amber: { border: "border-l-amber-500", icon: "text-[#7A5417]", dot: "bg-neutral-700" },
+  emerald: { border: "border-l-emerald-500", icon: "text-[#085041]", dot: "bg-emerald-500" },
+  rose: { border: "border-l-rose-500", icon: "text-[#7A1A1A]", dot: "bg-rose-500" },
+  cyan: { border: "border-l-[#3b82f6]", icon: "text-[#3b82f6]", dot: "bg-[#3b82f6]" },
+  amber: { border: "border-l-amber-500", icon: "text-[#7A5417]", dot: "bg-amber-500" },
   slate: { border: "border-l-slate-400", icon: "text-slate-600", dot: "bg-slate-400" },
 } as const;
 

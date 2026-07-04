@@ -42,20 +42,20 @@ export function CCTaxInsightCard({
   if (insights.length === 0) return null;
 
   const tones: Record<string, string> = {
-    emerald: "border-l-emerald-500 bg-neutral-100/40",
-    amber: "border-l-amber-500 bg-neutral-100/40",
-    blue: "border-l-[#000000] bg-neutral-100/40",
+    emerald: "border-l-emerald-500 bg-emerald-50/40",
+    amber: "border-l-amber-500 bg-amber-50/40",
+    blue: "border-l-[#3b82f6] bg-blue-50/40",
   };
   const iconTones: Record<string, string> = {
     emerald: "text-[#085041]",
     amber: "text-[#7A5417]",
-    blue: "text-[#000000]",
+    blue: "text-[#3b82f6]",
   };
 
   return (
     <Card className="rounded-2xl p-5 bg-white">
       <div className="flex items-center gap-2 mb-3">
-        <Sparkles className="h-4 w-4 text-[#000000]" />
+        <Sparkles className="h-4 w-4 text-[#3b82f6]" />
         <h3 className="text-sm font-semibold text-slate-900">AI-skatteoptimering</h3>
       </div>
       <div className="space-y-2">

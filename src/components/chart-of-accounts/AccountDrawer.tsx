@@ -143,7 +143,7 @@ export function AccountDrawer({
                 onClick={() => setFormOrigin("custom")}
                 className={`flex-1 py-3 px-4 rounded-xl border text-sm font-medium transition-all text-left ${
                   formOrigin === "custom"
-                    ? "border-neutral-700 bg-neutral-700 text-white"
+                    ? "border-indigo-600 bg-indigo-600 text-white"
                     : "border-slate-200 text-slate-600 hover:border-slate-400"
                 }`}
               >

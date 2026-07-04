@@ -45,7 +45,7 @@ export function TaxForecastScenarios({ state }: TaxForecastScenariosProps) {
         label: "Rekommenderad",
         monthly: recommended,
         icon: TrendingUp,
-        tone: "border-neutral-300 bg-neutral-100/40",
+        tone: "border-indigo-300 bg-indigo-50/40",
         description: "AI-matchad mot förväntad årsskatt",
       },
       {

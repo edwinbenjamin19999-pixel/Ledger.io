@@ -15,7 +15,7 @@ const COLOR_TO_GRADIENT: Record<string, string> = { "text-muted-foreground": "bg
   "text-[#085041]": "bg-[#0F1F3D]",
   "text-primary": "bg-[#0F1F3D]",
   "text-destructive": "bg-[#0F1F3D]",
-  "text-black": "bg-[#0F1F3D]",
+  "text-blue-500": "bg-[#0F1F3D]",
   "text-[#7A5417]": "bg-[#0F1F3D]",
   "text-secondary": "bg-[#0F1F3D]",
 };

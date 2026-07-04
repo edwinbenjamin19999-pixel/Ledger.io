@@ -39,7 +39,7 @@ export function ManualReviewDrawer({ insight, open, onOpenChange, onApprove, onR
           {insight.impact_sek !== 0 && (
             <div className="rounded-xl border border-border p-4">
               <div className="text-xs text-muted-foreground uppercase tracking-wide">Finansiell påverkan</div>
-              <div className={`text-2xl font-bold tabular-nums mt-1 ${isNeg ? "text-[#7A1A1A] dark:text-neutral-300" : "text-[#085041] dark:text-neutral-300"}`}>
+              <div className={`text-2xl font-bold tabular-nums mt-1 ${isNeg ? "text-[#7A1A1A] dark:text-rose-300" : "text-[#085041] dark:text-emerald-300"}`}>
                 {isNeg ? "−" : "+"}{fmtSEK(insight.impact_sek)}
               </div>
             </div>
@@ -68,7 +68,7 @@ export function ManualReviewDrawer({ insight, open, onOpenChange, onApprove, onR
             <Button
               onClick={() => onApprove()}
               disabled={pending}
-              className="flex-1 bg-[#0F1F3D] hover:from-[#000000] hover:to-[#000000] text-white"
+              className="flex-1 bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-[#3b82f6] text-white"
             >
               {pending ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : <CheckCircle2 className="h-4 w-4 mr-2" />}
               Godkänn & utför

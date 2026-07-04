@@ -233,7 +233,7 @@ export const ReportKpiCard = ({
       {insightObj && (
         <div className="flex items-center gap-1.5 min-w-0" title={insightObj.text}>
           {insightObj.tone === "ai" ? (
-            <Sparkles className="w-3 h-3 shrink-0 text-[#000000] dark:text-[#1E3A5F]" />
+            <Sparkles className="w-3 h-3 shrink-0 text-[#3b82f6] dark:text-[#1E3A5F]" />
           ) : (
             <Info className="w-3 h-3 shrink-0 text-slate-500 dark:text-slate-400" />
           )}
@@ -241,7 +241,7 @@ export const ReportKpiCard = ({
             className={cn(
               "text-[11px] truncate min-w-0",
               insightObj.tone === "ai"
-                ? "text-[#000000] dark:text-[#000000]"
+                ? "text-[#3b82f6] dark:text-[#3b82f6]"
                 : "text-slate-600 dark:text-slate-400",
             )}
           >

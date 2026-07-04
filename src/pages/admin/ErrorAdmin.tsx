@@ -413,7 +413,7 @@ export default function ErrorAdmin() {
 
       {/* KPI row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[12px]">
-        <KpiCard label="Totala fel (denna vecka)" value={kpis.total} accent="#000000" />
+        <KpiCard label="Totala fel (denna vecka)" value={kpis.total} accent="#0040CC" />
         <KpiCard
           label="Auto-fixade"
           value={kpis.fixed}
@@ -423,7 +423,7 @@ export default function ErrorAdmin() {
         <KpiCard
           label="Kräver granskning"
           value={kpis.manual}
-          accent={kpis.manual > 0 ? "#525252" : "#94A3B8"}
+          accent={kpis.manual > 0 ? "#EF9F27" : "#94A3B8"}
           sub="väntar på din åtgärd"
         />
         <KpiCard
@@ -468,13 +468,13 @@ export default function ErrorAdmin() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Sök felmeddelande eller ID…"
-              className="pl-[30px] pr-[12px] h-[32px] text-[12px] border-[0.5px] border-[#E2E8F0] rounded-[8px] bg-white w-[260px] focus:outline-none focus:border-[#000000]"
+              className="pl-[30px] pr-[12px] h-[32px] text-[12px] border-[0.5px] border-[#E2E8F0] rounded-[8px] bg-white w-[260px] focus:outline-none focus:border-[#0040CC]"
             />
           </div>
           <select
             value={range}
             onChange={(e) => setRange(e.target.value as RangeKey)}
-            className="h-[32px] text-[12px] border-[0.5px] border-[#E2E8F0] rounded-[8px] bg-white px-[10px] focus:outline-none focus:border-[#000000]"
+            className="h-[32px] text-[12px] border-[0.5px] border-[#E2E8F0] rounded-[8px] bg-white px-[10px] focus:outline-none focus:border-[#0040CC]"
           >
             <option value="24h">Senaste 24h</option>
             <option value="7d">7 dagar</option>
@@ -653,7 +653,7 @@ function ExpandableRow({
               e.stopPropagation();
               onMarkResolved();
             }}
-            className="text-[11px] text-[#94A3B8] hover:text-[#000000]"
+            className="text-[11px] text-[#94A3B8] hover:text-[#0040CC]"
             title="Markera som löst"
           >
             <CheckCircle2 className="w-[14px] h-[14px] inline" strokeWidth={1.5} />
@@ -745,7 +745,7 @@ function ExpandableRow({
                       <button
                         onClick={onCopyCode}
                         disabled={!row.fix_code}
-                        className="bg-[#000000] hover:bg-[#1074A0] disabled:opacity-50 disabled:cursor-not-allowed text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[36px] inline-flex items-center gap-[6px]"
+                        className="bg-[#0040CC] hover:bg-[#1074A0] disabled:opacity-50 disabled:cursor-not-allowed text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[36px] inline-flex items-center gap-[6px]"
                       >
                         <Copy className="w-[12px] h-[12px]" strokeWidth={1.5} />
                         Kopiera kod
@@ -759,7 +759,7 @@ function ExpandableRow({
                       </button>
                       <button
                         onClick={onMarkResolved}
-                        className="text-[12px] text-[#94A3B8] hover:text-[#000000] px-[8px] h-[36px]"
+                        className="text-[12px] text-[#94A3B8] hover:text-[#0040CC] px-[8px] h-[36px]"
                       >
                         Markera som löst
                       </button>
@@ -773,7 +773,7 @@ function ExpandableRow({
                     <button
                       onClick={onAnalyze}
                       disabled={analyzing}
-                      className="bg-[#000000] hover:bg-[#1074A0] disabled:opacity-60 text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[36px] inline-flex items-center gap-[6px]"
+                      className="bg-[#0040CC] hover:bg-[#1074A0] disabled:opacity-60 text-[#E6F4FA] rounded-[8px] text-[12px] font-medium px-[14px] h-[36px] inline-flex items-center gap-[6px]"
                     >
                       {analyzing ? (
                         <Loader2 className="w-[12px] h-[12px] animate-spin" />

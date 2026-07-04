@@ -77,7 +77,7 @@ export const ProformaForecast = ({ companyId }: ProformaForecastProps) => {
       className={cn(
         "h-9 px-4 rounded-lg text-sm font-medium transition-colors",
         horizon === h
-          ? "bg-[#000000] text-white shadow-sm"
+          ? "bg-[#3b82f6] text-white shadow-sm"
           : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50",
       )}
     >
@@ -91,7 +91,7 @@ export const ProformaForecast = ({ companyId }: ProformaForecastProps) => {
       <div className="flex items-start justify-between flex-wrap gap-3">
         <div>
           <h2 className="text-2xl font-bold flex items-center gap-2 text-slate-900 dark:text-slate-50">
-            <Sparkles className="w-6 h-6 text-[#000000]" />
+            <Sparkles className="w-6 h-6 text-[#3b82f6]" />
             AI Proforma & Prognos
           </h2>
           <p className="text-sm text-slate-500 mt-1">
@@ -107,7 +107,7 @@ export const ProformaForecast = ({ companyId }: ProformaForecastProps) => {
 
       {loading ? (
         <div className="rounded-2xl border border-slate-200/60 bg-white py-16 flex items-center justify-center">
-          <Loader2 className="w-6 h-6 animate-spin text-[#000000]" />
+          <Loader2 className="w-6 h-6 animate-spin text-[#3b82f6]" />
           <span className="ml-3 text-sm text-slate-500">
             Analyserar historisk data och säsongsmönster…
           </span>

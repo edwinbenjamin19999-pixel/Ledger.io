@@ -8,7 +8,7 @@ interface Props {
 
 /**
  * PSD2-säker formulering. Visas i export-modaler och relevanta vyer för att
- * göra tydligt att Bokfy inte agerar betalningsinitierare.
+ * göra tydligt att Cogniq inte agerar betalningsinitierare.
  */
 export function ComplianceDisclaimer({ variant = "inline", className }: Props) {
   return (
@@ -23,7 +23,7 @@ export function ComplianceDisclaimer({ variant = "inline", className }: Props) {
     >
       <ShieldCheck className="h-3.5 w-3.5 mt-0.5 flex-shrink-0" />
       <span>
-        Bokfy förbereder endast betalningsdata och betalningsfiler. Betalningar godkänns och utförs av dig
+        Cogniq förbereder endast betalningsdata och betalningsfiler. Betalningar godkänns och utförs av dig
         i din egen bank.
       </span>
     </div>

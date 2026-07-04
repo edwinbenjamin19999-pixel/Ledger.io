@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 export const WhySwitch = () => { const advantages = [
     { icon: Brain,
       title: "AI som grund — inte tillägg",
-      description: "Traditionella system byggdes med manuella flöden och AI adderat efteråt. Bokfy är designat med AI som kärnan — bokföringen sker automatiskt, inte manuellt.",
+      description: "Traditionella system byggdes med manuella flöden och AI adderat efteråt. Cogniq är designat med AI som kärnan — bokföringen sker automatiskt, inte manuellt.",
       highlight: "Automatisk bokföring"
     },
     { icon: Zap,
@@ -44,7 +44,7 @@ export const WhySwitch = () => { const advantages = [
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-4">
-            <Badge variant="outline" className="mb-4">Varför Bokfy?</Badge>
+            <Badge variant="outline" className="mb-4">Varför Cogniq?</Badge>
             
             <h2 className="text-4xl md:text-5xl font-bold">
               Nästa generation{" "}
@@ -84,11 +84,11 @@ export const WhySwitch = () => { const advantages = [
 
           {/* Comparison table */}
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-center mb-8">Bokfy vs traditionella system</h3>
+            <h3 className="text-2xl font-bold text-center mb-8">Cogniq vs traditionella system</h3>
             <Card className="border-border/50 overflow-hidden">
               <div className="grid grid-cols-[1fr_auto_auto] text-sm">
                 <div className="p-3 font-semibold bg-muted/50 border-b border-border/50">Funktion</div>
-                <div className="p-3 font-semibold bg-muted/50 border-b border-border/50 text-center w-24">Bokfy</div>
+                <div className="p-3 font-semibold bg-muted/50 border-b border-border/50 text-center w-24">Cogniq</div>
                 <div className="p-3 font-semibold bg-muted/50 border-b border-border/50 text-center w-24">Legacy</div>
                 {comparisons.map((row, i) => (
                   <div key={i} className="contents">
@@ -114,7 +114,7 @@ export const WhySwitch = () => { const advantages = [
             <p className="text-lg font-medium">
               Redo att testa framtidens bokföring?
             </p>
-            <Button size="lg" onClick={() => window.location.href = '/auth'} className="group bg-white text-[#000000] hover:bg-white/90 font-semibold">
+            <Button size="lg" onClick={() => window.location.href = '/auth'} className="group bg-white text-[#0F172A] hover:bg-white/90 font-semibold">
               Kom igång gratis
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>

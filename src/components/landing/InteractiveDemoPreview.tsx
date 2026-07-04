@@ -36,7 +36,7 @@ const BOOK_STEPS = [
 
 const BookkeepingDemo = ({ step }: { step: number }) => (
   <div className="grid md:grid-cols-2 gap-px bg-white/5">
-    <div className="bg-[#000000] p-8">
+    <div className="bg-[#0F172A] p-8">
       <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6">
         <div className="text-xs text-white/40 uppercase tracking-wider mb-3">Faktura</div>
         <div className="flex justify-between items-start mb-6">
@@ -62,7 +62,7 @@ const BookkeepingDemo = ({ step }: { step: number }) => (
         </div>
       </div>
     </div>
-    <div className="bg-[#000000] p-8">
+    <div className="bg-[#0F172A] p-8">
       <div className="space-y-3">
         {BOOK_STEPS.map((s, i) => {
           const active = step >= i;
@@ -71,12 +71,12 @@ const BookkeepingDemo = ({ step }: { step: number }) => (
             <div
               key={i}
               className={`flex items-center gap-3 px-4 py-3 rounded-lg border transition-all duration-500 ${
-                active ? "border-[#000000]/30 bg-[#000000]/5" : "border-white/5 bg-white/[0.02] opacity-40"
+                active ? "border-[#3b82f6]/30 bg-[#3b82f6]/5" : "border-white/5 bg-white/[0.02] opacity-40"
               }`}
             >
               <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                  active ? "bg-[#000000]/20 text-[#000000]" : "bg-white/5 text-[#000000]/30"
+                  active ? "bg-[#3b82f6]/20 text-[#3b82f6]" : "bg-white/5 text-[#3b82f6]/30"
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -86,8 +86,8 @@ const BookkeepingDemo = ({ step }: { step: number }) => (
               </span>
               {active && i === step - 1 && (
                 <span className="ml-auto relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]" />
                 </span>
               )}
             </div>
@@ -95,7 +95,7 @@ const BookkeepingDemo = ({ step }: { step: number }) => (
         })}
       </div>
       <div className="mt-6 text-xs text-white/40">
-        Konfidens: <span className="text-[#000000] font-mono">98%</span> · Spårbar i revisionsloggen
+        Konfidens: <span className="text-[#3b82f6] font-mono">98%</span> · Spårbar i revisionsloggen
       </div>
     </div>
   </div>
@@ -103,12 +103,12 @@ const BookkeepingDemo = ({ step }: { step: number }) => (
 
 // ─── Demo 2: Bank reconciliation ──────────────────────────────────────
 const ReconciliationDemo = ({ step }: { step: number }) => (
-  <div className="bg-[#000000] p-10 min-h-[420px]">
+  <div className="bg-[#0F172A] p-10 min-h-[420px]">
     <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6">
       {/* Bank tx */}
       <div
         className={`rounded-lg border p-5 transition-all duration-500 ${
-          step >= 0 ? "border-[#000000]/30 bg-[#000000]/[0.04]" : "border-white/5 bg-white/[0.02] opacity-40"
+          step >= 0 ? "border-[#3b82f6]/30 bg-[#3b82f6]/[0.04]" : "border-white/5 bg-white/[0.02] opacity-40"
         }`}
       >
         <div className="flex items-center gap-2 text-xs text-white/40 uppercase tracking-wider mb-3">
@@ -124,7 +124,7 @@ const ReconciliationDemo = ({ step }: { step: number }) => (
       <div className="flex items-center justify-center py-4 md:py-0">
         <div
           className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 ${
-            step >= 1 ? "bg-[#000000]/20 text-[#000000] scale-100" : "bg-white/5 text-[#000000]/20 scale-90"
+            step >= 1 ? "bg-[#3b82f6]/20 text-[#3b82f6] scale-100" : "bg-white/5 text-[#3b82f6]/20 scale-90"
           }`}
         >
           <Link2 className="w-5 h-5" />
@@ -134,7 +134,7 @@ const ReconciliationDemo = ({ step }: { step: number }) => (
       {/* Invoice */}
       <div
         className={`rounded-lg border p-5 transition-all duration-500 ${
-          step >= 1 ? "border-[#000000]/30 bg-[#000000]/[0.04]" : "border-white/5 bg-white/[0.02] opacity-40"
+          step >= 1 ? "border-[#3b82f6]/30 bg-[#3b82f6]/[0.04]" : "border-white/5 bg-white/[0.02] opacity-40"
         }`}
       >
         <div className="flex items-center gap-2 text-xs text-white/40 uppercase tracking-wider mb-3">
@@ -149,12 +149,12 @@ const ReconciliationDemo = ({ step }: { step: number }) => (
 
     <div
       className={`mt-8 flex items-center justify-center gap-2 text-sm transition-all duration-500 ${
-        step >= 2 ? "opacity-100 text-[#000000]" : "opacity-0"
+        step >= 2 ? "opacity-100 text-[#3b82f6]" : "opacity-0"
       }`}
     >
       <span className="relative flex h-2 w-2">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75" />
+        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]" />
       </span>
       <CheckCircle2 className="w-4 h-4" />
       <span className="font-medium">Avstämd automatiskt · 99% match</span>
@@ -171,7 +171,7 @@ const VAT_BOXES = [
 ];
 
 const VatDemo = ({ step }: { step: number }) => (
-  <div className="bg-[#000000] p-10 relative">
+  <div className="bg-[#0F172A] p-10 relative">
     {/* Success badge top-right */}
     <div
       className={`absolute top-5 right-5 inline-flex items-center gap-1.5 rounded-full border transition-opacity duration-500 ${
@@ -184,10 +184,10 @@ const VatDemo = ({ step }: { step: number }) => (
       }}
     >
       <span className="relative flex h-1.5 w-1.5">
-        <span className="absolute inline-flex h-full w-full rounded-full bg-neutral-700 opacity-75 animate-ping" />
-        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-neutral-700" />
+        <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping" />
+        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-400" />
       </span>
-      <span className="text-[11px] font-medium text-neutral-700">Skickad till SKV</span>
+      <span className="text-[11px] font-medium text-green-400">Skickad till SKV</span>
     </div>
 
     <div className="max-w-2xl mx-auto">
@@ -206,7 +206,7 @@ const VatDemo = ({ step }: { step: number }) => (
             <div
               key={b.code}
               className={`flex items-center gap-4 px-4 py-3 rounded-lg border transition-all duration-500 ${
-                filled ? "border-[#000000]/20 bg-[#000000]/[0.03]" : "border-white/5 bg-white/[0.02]"
+                filled ? "border-[#3b82f6]/20 bg-[#3b82f6]/[0.03]" : "border-white/5 bg-white/[0.02]"
               }`}
             >
               <div className="text-xs font-mono text-white/40 w-8">{b.code}</div>
@@ -229,8 +229,8 @@ const VatDemo = ({ step }: { step: number }) => (
           step >= VAT_BOXES.length + 1 ? "opacity-100" : "opacity-40"
         }`}
         style={{
-          background: "rgba(0,0,0,0.06)",
-          borderBottom: "2px solid rgba(0,0,0,0.4)",
+          background: "rgba(0,82,255,0.06)",
+          borderBottom: "2px solid rgba(0,82,255,0.4)",
         }}
       >
         <span className="text-white font-semibold" style={{ fontSize: 18 }}>
@@ -270,7 +270,7 @@ const ForecastDemo = ({ step }: { step: number }) => {
   const visibleBars = Math.min(heights.length, step * 3);
 
   return (
-    <div className="bg-[#000000] p-10">
+    <div className="bg-[#0F172A] p-10">
       <div className="grid md:grid-cols-[260px_1fr] gap-8">
         <div className="space-y-4">
           <div>
@@ -286,18 +286,18 @@ const ForecastDemo = ({ step }: { step: number }) => {
               <div
                 key={i}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg border transition-all duration-500 ${
-                  m.active ? "border-[#000000]/25 bg-[#000000]/[0.04]" : "border-white/5 bg-white/[0.02] opacity-40"
+                  m.active ? "border-[#3b82f6]/25 bg-[#3b82f6]/[0.04]" : "border-white/5 bg-white/[0.02] opacity-40"
                 }`}
               >
                 <div
                   className={`w-7 h-7 rounded-full flex items-center justify-center ${
-                    m.active ? "bg-[#000000]/20 text-[#000000]" : "bg-white/5 text-[#000000]/30"
+                    m.active ? "bg-[#3b82f6]/20 text-[#3b82f6]" : "bg-white/5 text-[#3b82f6]/30"
                   }`}
                 >
                   <m.icon className="w-3.5 h-3.5" />
                 </div>
                 <span className="text-xs text-white/70 flex-1">{m.label}</span>
-                <span className={`text-xs font-mono ${m.active ? "text-[#000000]" : "text-[#000000]/30"}`}>
+                <span className={`text-xs font-mono ${m.active ? "text-[#3b82f6]" : "text-[#3b82f6]/30"}`}>
                   {m.value}
                 </span>
               </div>
@@ -314,7 +314,7 @@ const ForecastDemo = ({ step }: { step: number }) => {
                 <div
                   key={i}
                   className={`flex-1 rounded-t transition-all duration-700 ${
-                    visible ? "bg-gradient-to-t from-[#000000]/60 to-[#000000]/30" : "bg-white/5"
+                    visible ? "bg-gradient-to-t from-[#3b82f6]/60 to-[#3b82f6]/30" : "bg-white/5"
                   }`}
                   style={{ height: visible ? `${h}%` : "8%" }}
                 />
@@ -330,7 +330,7 @@ const ForecastDemo = ({ step }: { step: number }) => {
           </div>
           <div className="mt-4 pt-4 border-t border-white/5 flex justify-between text-xs">
             <span className="text-white/50">AI-prognos · 12 mån</span>
-            <span className="text-[#000000] font-mono">+18,2% YoY</span>
+            <span className="text-[#3b82f6] font-mono">+18,2% YoY</span>
           </div>
         </div>
       </div>
@@ -347,19 +347,19 @@ const COMMAND_ITEMS = [
 ];
 
 const CommandDemo = ({ step }: { step: number }) => (
-  <div className="bg-[#000000] p-10">
+  <div className="bg-[#0F172A] p-10">
     <div className="flex items-center gap-3 mb-6">
-      <div className="w-9 h-9 rounded-lg bg-[#000000]/15 text-[#000000] flex items-center justify-center">
+      <div className="w-9 h-9 rounded-lg bg-[#3b82f6]/15 text-[#3b82f6] flex items-center justify-center">
         <LayoutDashboard className="w-4.5 h-4.5" />
       </div>
       <div>
         <div className="text-sm text-white font-medium">Command Center</div>
         <div className="text-xs text-white/40">Realtidsstatus · alla automationer</div>
       </div>
-      <div className="ml-auto flex items-center gap-2 text-xs text-[#000000]">
+      <div className="ml-auto flex items-center gap-2 text-xs text-[#3b82f6]">
         <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]" />
         </span>
         Live
       </div>
@@ -370,15 +370,15 @@ const CommandDemo = ({ step }: { step: number }) => (
         const visible = step > i;
         const toneClass =
           item.tone === "warn"
-            ? "border-neutral-700/20 bg-neutral-700/[0.04]"
+            ? "border-amber-400/20 bg-amber-400/[0.04]"
             : item.tone === "ok"
-            ? "border-[#000000]/20 bg-[#000000]/[0.03]"
+            ? "border-[#3b82f6]/20 bg-[#3b82f6]/[0.03]"
             : "border-white/10 bg-white/[0.02]";
         const iconClass =
           item.tone === "warn"
-            ? "bg-neutral-700/15 text-neutral-300"
+            ? "bg-amber-400/15 text-amber-300"
             : item.tone === "ok"
-            ? "bg-[#000000]/15 text-[#000000]"
+            ? "bg-[#3b82f6]/15 text-[#3b82f6]"
             : "bg-white/5 text-white/60";
         return (
           <div
@@ -450,7 +450,7 @@ export const InteractiveDemoPreview = () => {
           className="section-headline text-4xl md:text-5xl font-[700] leading-[1.05]"
           style={{ letterSpacing: "-0.8px" }}
         >
-          Se produkten <span style={{ color: "#000000" }}>i arbete.</span>
+          Se produkten <span style={{ color: "#3b82f6" }}>i arbete.</span>
         </h2>
         <p className="section-lede text-[15px] leading-relaxed max-w-2xl">
           Det här är inte mockups — det är så systemet faktiskt fungerar. Fem flöden som körs autonomt: bokföring, bank, moms, prognos och kontroll.
@@ -466,7 +466,7 @@ export const InteractiveDemoPreview = () => {
                 onClick={() => setActive(t.key)}
                 className={`px-4 py-3 text-sm font-medium transition-all border-b-2 -mb-px ${
                   isActive
-                    ? "text-white border-[#000000]"
+                    ? "text-white border-[#3b82f6]"
                     : "text-white/50 hover:text-white/80 border-transparent"
                 }`}
               >
@@ -477,11 +477,11 @@ export const InteractiveDemoPreview = () => {
         </div>
 
         <div
-          className="overflow-hidden bg-[#000000]"
+          className="overflow-hidden bg-[#0F172A]"
           style={{
             borderRadius: 20,
             boxShadow:
-              "0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.08)",
+              "0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,82,255,0.12), inset 0 1px 0 rgba(255,255,255,0.08)",
           }}
         >
           {/* Browser chrome */}
@@ -509,7 +509,7 @@ export const InteractiveDemoPreview = () => {
               }}
             >
               <span className="text-[11px] text-white/45 font-mono truncate">
-                app.bokfy.se/{active}
+                app.cogniq.se/{active}
               </span>
             </div>
           </div>

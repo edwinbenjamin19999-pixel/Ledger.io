@@ -221,14 +221,14 @@ export default function Bankavstamning() { const navigate = useNavigate();
       <main className="px-8 space-y-6">
         {/* Context alert: ledger has entries but no bank transactions to match against */}
         {bankTxs.length === 0 && journalEntries.length > 0 && (
-          <Card className="border-neutral-300 bg-neutral-100/60">
+          <Card className="border-amber-200 bg-amber-50/60">
             <CardContent className="py-4 flex items-start gap-3">
-              <AlertTriangle className="h-5 w-5 text-neutral-700 mt-0.5 shrink-0" />
+              <AlertTriangle className="h-5 w-5 text-amber-600 mt-0.5 shrink-0" />
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-neutral-700">
+                <p className="text-sm font-semibold text-amber-900">
                   Bokförda poster finns – men ingen bankkoppling att stämma av mot
                 </p>
-                <p className="text-xs text-neutral-700 mt-1">
+                <p className="text-xs text-amber-800 mt-1">
                   Huvudboken innehåller {journalEntries.length} godkända verifikationer,
                   men inga banktransaktioner har importerats. Anslut din bank via PSD2
                   eller ladda upp ett kontoutdrag (CAMT.054 / SIE) för att kunna matcha
@@ -279,14 +279,14 @@ export default function Bankavstamning() { const navigate = useNavigate();
                 </CardTitle>
                 <CardDescription>Transaktioner som AI automatiskt parat ihop</CardDescription>
               </div>
-              <Button onClick={confirmAllMatches} disabled={confirming} className="bg-neutral-700 hover:bg-neutral-700">
+              <Button onClick={confirmAllMatches} disabled={confirming} className="bg-emerald-600 hover:bg-emerald-700">
                 {confirming ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <CheckCircle2 className="h-4 w-4 mr-2" />}
                 Bekräfta alla matchningar
               </Button>
             </CardHeader>
             <CardContent className="space-y-3">
               {matches.map((match, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-neutral-100/50 dark:bg-emerald-950/20 border border-neutral-300/50">
+                <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/50">
                   {/* Bank tx */}
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium truncate">{match.bankTx.description || match.bankTx.counterparty_name}</p>
@@ -334,7 +334,7 @@ export default function Bankavstamning() { const navigate = useNavigate();
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
-                <Landmark className="h-5 w-5 text-black" />
+                <Landmark className="h-5 w-5 text-blue-500" />
                 Omatchade banktransaktioner ({unmatchedTxs.length})
               </CardTitle>
             </CardHeader>
@@ -377,7 +377,7 @@ export default function Bankavstamning() { const navigate = useNavigate();
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
-                <FileCheck className="h-5 w-5 text-neutral-700" />
+                <FileCheck className="h-5 w-5 text-violet-500" />
                 Omatchade verifikationer ({unmatchedJes.length})
               </CardTitle>
             </CardHeader>
@@ -420,7 +420,7 @@ export default function Bankavstamning() { const navigate = useNavigate();
 
                 {bookingDialog.ai_explanation && (
                   <div className="bg-[#EFF6FF] dark:bg-blue-950/30 rounded-lg p-3">
-                    <p className="text-xs font-medium text-black dark:text-blue-300 mb-1">AI-förslag</p>
+                    <p className="text-xs font-medium text-blue-700 dark:text-blue-300 mb-1">AI-förslag</p>
                     <p className="text-sm">{bookingDialog.ai_explanation}</p>
                   </div>
                 )}

@@ -9,12 +9,12 @@ interface Props {
 
 const TONE_BG: Record<VerdictTone, string> = {
   strong:
-    "bg-neutral-100/60 dark:bg-emerald-950/20 text-[#085041] dark:text-neutral-300",
+    "bg-emerald-50/60 dark:bg-emerald-950/20 text-[#085041] dark:text-emerald-200",
   watch: "bg-slate-50 dark:bg-slate-900/40 text-foreground",
   attention:
-    "bg-neutral-100/70 dark:bg-amber-950/20 text-[#7A5417] dark:text-neutral-300",
+    "bg-amber-50/70 dark:bg-amber-950/20 text-[#7A5417] dark:text-amber-200",
   critical:
-    "bg-neutral-100/70 dark:bg-rose-950/20 text-[#7A1A1A] dark:text-neutral-300",
+    "bg-rose-50/70 dark:bg-rose-950/20 text-[#7A1A1A] dark:text-rose-200",
 };
 
 export function InsightLine({ text, tone }: Props) {

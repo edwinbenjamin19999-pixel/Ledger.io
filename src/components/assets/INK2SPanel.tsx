@@ -43,14 +43,14 @@ export const INK2SPanel = ({ assets, getBookValue }: INK2SPanelProps) => { const
   const diff = Math.round(bookDepr - taxDepr);
 
   return (
-    <Card className="border-[#C8DDF5] dark:border-black">
+    <Card className="border-[#C8DDF5] dark:border-blue-800">
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className="text-sm font-semibold flex items-center gap-2">
-            <Calculator className="w-4 h-4 text-black" />
+            <Calculator className="w-4 h-4 text-blue-600" />
             INK2S — Räkenskapsenlig avskrivning
           </CardTitle>
-          <Badge className="bg-[#EFF6FF] text-black dark:bg-blue-900/30 dark:text-[#1E3A5F] text-[10px]">
+          <Badge className="bg-[#EFF6FF] text-blue-700 dark:bg-blue-900/30 dark:text-[#1E3A5F] text-[10px]">
             Auto-beräknat
           </Badge>
         </div>
@@ -104,7 +104,7 @@ export const INK2SPanel = ({ assets, getBookValue }: INK2SPanelProps) => { const
             <span>30% avskrivning</span>
             <span className="font-medium">{Math.round(taxDepr).toLocaleString("sv-SE")} kr</span>
           </div>
-          <div className="flex justify-between p-2 bg-[#EFF6FF] dark:bg-blue-950/20 border border-[#C8DDF5] dark:border-black rounded font-medium text-sm">
+          <div className="flex justify-between p-2 bg-[#EFF6FF] dark:bg-blue-950/20 border border-[#C8DDF5] dark:border-blue-800 rounded font-medium text-sm">
             <span>Skattem. restvärde UB</span>
             <span>{Math.round(Math.max(0, taxUB)).toLocaleString("sv-SE")} kr</span>
           </div>
@@ -115,10 +115,10 @@ export const INK2SPanel = ({ assets, getBookValue }: INK2SPanelProps) => { const
           <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
             Ruta 4.1 — Avskrivningsdifferens
           </p>
-          <div className="flex items-center justify-between p-3 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-neutral-700 text-sm">
+          <div className="flex items-center justify-between p-3 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/20 border border-[#F0DDB7] dark:border-amber-800 text-sm">
             <div>
               <p className="text-xs text-muted-foreground">Bok: {Math.round(bookDepr).toLocaleString("sv-SE")} kr | Skatt: {Math.round(taxDepr).toLocaleString("sv-SE")} kr</p>
-              <p className="font-medium text-[#7A5417] dark:text-neutral-300">
+              <p className="font-medium text-[#7A5417] dark:text-amber-300">
                 Differens: {diff > 0 ? "+" : ""}{diff.toLocaleString("sv-SE")} kr
               </p>
             </div>

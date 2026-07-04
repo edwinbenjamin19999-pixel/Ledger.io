@@ -98,7 +98,7 @@ export function KassaSalesForecast({ sales }: Props) {
         <CardHeader className="pb-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-[#000000]" />
+              <Sparkles className="h-4 w-4 text-[#3b82f6]" />
               <CardTitle className="text-base">14-dagars forsaljningsprognos</CardTitle>
             </div>
             {peakDay && (
@@ -124,7 +124,7 @@ export function KassaSalesForecast({ sales }: Props) {
                   type="monotone"
                   dataKey="prognosMax"
                   stroke="none"
-                  fill="#000000"
+                  fill="#3b82f6"
                   fillOpacity={0.08}
                   name="Konfidensband"
                 />
@@ -147,7 +147,7 @@ export function KassaSalesForecast({ sales }: Props) {
                   type="monotone"
                   dataKey="prognos"
                   name="Prognos"
-                  stroke="#000000"
+                  stroke="#3b82f6"
                   strokeWidth={2}
                   dot={{ r: 3 }}
                   connectNulls={false}
@@ -160,8 +160,8 @@ export function KassaSalesForecast({ sales }: Props) {
 
       {/* AI forecast narrative */}
       {peakDay && (
-        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#000000]/5 border border-[#000000]/20">
-          <Sparkles className="h-4 w-4 text-[#000000] mt-0.5 flex-shrink-0" />
+        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
+          <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
           <p className="text-xs text-muted-foreground">
             {peakDay.date} prognos {formatKr(peakDay.prognos)} — baserat på historiskt
             veckomoenster. Helger visar typiskt +40-60% vs vardagar.
@@ -171,7 +171,7 @@ export function KassaSalesForecast({ sales }: Props) {
 
       {/* Inventory alerts */}
       {inventoryAlerts.length > 0 && (
-        <Card className="border-[#F0DDB7] dark:border-neutral-700/30">
+        <Card className="border-[#F0DDB7] dark:border-amber-800/30">
           <CardHeader className="pb-2">
             <div className="flex items-center gap-2">
               <AlertTriangle className="h-4 w-4 text-[#7A5417]" />

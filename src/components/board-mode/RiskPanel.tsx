@@ -7,7 +7,7 @@ const SEVERITY_COLOR: Record<string, string> = {
   critical: "bg-red-500",
   high: "bg-orange-500",
   medium: "bg-yellow-400",
-  low: "bg-neutral-700",
+  low: "bg-emerald-500",
 };
 
 export const RiskPanel = ({

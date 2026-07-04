@@ -33,14 +33,14 @@ const WEEKDAYS = ["Mån", "Tis", "Ons", "Tor", "Fre", "Lör", "Sön"];
 function getDeadlineColor(daysLeft: number, status: string): string { if (status === "completed") return "bg-primary text-primary-foreground";
   if (status === "overdue" || daysLeft < 0) return "bg-destructive text-destructive-foreground";
   if (daysLeft <= 7) return "bg-destructive text-destructive-foreground";
-  if (daysLeft <= 30) return "bg-neutral-700 text-white";
+  if (daysLeft <= 30) return "bg-amber-500 text-white";
   return "bg-primary text-primary-foreground";
 }
 
 function generateICS(deadlines: ComplianceDeadline[]): string { const lines = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Bokfy//Regelverksbevakning//SV",
+    "PRODID:-//Cogniq//Regelverksbevakning//SV",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
   ];
@@ -53,7 +53,7 @@ function generateICS(deadlines: ComplianceDeadline[]): string { const lines = [
       `SUMMARY:${d.title}`,
       `DESCRIPTION:${d.description}${d.autoAction ? "\\n" + d.autoAction : ""}`,
       `CATEGORIES:${d.category}`,
-      `UID:${d.id}@bokfy.se`,
+      `UID:${d.id}@cogniq.se`,
       "END:VEVENT"
     );
   }
@@ -174,7 +174,7 @@ export function RegulatoryDeadlineCalendar({ deadlines, onMarkComplete }: Props)
           {/* Legend */}
           <div className="flex gap-4 mt-3 text-[10px]">
             <span className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded-full bg-destructive" /> {"<"} 7 dagar</span>
-            <span className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded-full bg-neutral-700" /> 7-30 dagar</span>
+            <span className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded-full bg-amber-500" /> 7-30 dagar</span>
             <span className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded-full bg-primary" /> {">"} 30 dagar</span>
           </div>
         </CardContent>

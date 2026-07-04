@@ -45,7 +45,7 @@ const Section = ({
 }) => (
   <div>
     <div className="flex items-center gap-2 mb-2">
-      <Icon className="h-3.5 w-3.5 text-[#000000]" />
+      <Icon className="h-3.5 w-3.5 text-[#3b82f6]" />
       <h2 className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">{title}</h2>
       <span className="text-[10px] text-white/30 tabular-nums">({items.length})</span>
     </div>
@@ -66,7 +66,7 @@ const Section = ({
             )}
           >
             <span className="text-sm font-medium text-white truncate">{it.name}</span>
-            <span className="text-xs font-bold tabular-nums text-[#000000] px-2 py-0.5 rounded-full bg-[#000000]/15">
+            <span className="text-xs font-bold tabular-nums text-[#3b82f6] px-2 py-0.5 rounded-full bg-[#3b82f6]/15">
               {it.count}
             </span>
           </button>

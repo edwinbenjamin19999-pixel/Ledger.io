@@ -63,10 +63,10 @@ function KPICard({ gradient, icon: Icon, value, label, subtitle, badge, extra }:
 
 // ── Status pill for orders ─────────────────
 const STATUS_STYLES: Record<string, string> = {
-  pending: "bg-[#EFF6FF] text-black dark:text-[#1E3A5F] border border-[#C8DDF5]",
+  pending: "bg-[#EFF6FF] text-blue-600 dark:text-[#1E3A5F] border border-[#C8DDF5]",
   processing: "bg-[#FAEEDA] text-[#7A5417] dark:text-[#C28A2B] border border-[#F0DDB7]",
   paid: "bg-[#E1F5EE] text-[#085041] dark:text-[#1D9E75] border border-[#BFE6D6]",
-  fulfilled: "bg-[#F1F5F9] text-neutral-700 dark:text-[#1E3A5F] border border-[#E2E8F0]",
+  fulfilled: "bg-[#F1F5F9] text-violet-600 dark:text-[#1E3A5F] border border-[#E2E8F0]",
   refunded: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-[#C73838] border border-[#F4C8C8]",
   partial_refund: "bg-[#FCE8E8] text-[#7A1A1A] border border-[#F4C8C8]",
   cancelled: "bg-muted text-muted-foreground border border-border",
@@ -89,13 +89,13 @@ function PaymentIcon({ method }: { method?: string }) {
   const m = (method || "").toLowerCase();
   if (m.includes("klarna")) return <span className="text-[10px] font-bold text-pink-500 bg-pink-500/10 px-1.5 py-0.5 rounded">Klarna</span>;
   if (m.includes("swish")) return <span className="text-[10px] font-bold text-[#085041] bg-[#E1F5EE] px-1.5 py-0.5 rounded">Swish</span>;
-  return <span className="text-[10px] font-bold text-black bg-[#EFF6FF] px-1.5 py-0.5 rounded">Kort</span>;
+  return <span className="text-[10px] font-bold text-blue-500 bg-[#EFF6FF] px-1.5 py-0.5 rounded">Kort</span>;
 }
 
 // ── Platform badge ─────────────────────────
 function PlatformBadge({ platform }: { platform: string }) {
   const p = platform.toLowerCase();
-  const color = p.includes("shopify") ? "bg-[#E1F5EE] text-[#085041]" : p.includes("woo") ? "bg-[#F1F5F9] text-neutral-700" : "bg-[#EFF6FF] text-black";
+  const color = p.includes("shopify") ? "bg-[#E1F5EE] text-[#085041]" : p.includes("woo") ? "bg-[#F1F5F9] text-violet-600" : "bg-[#EFF6FF] text-blue-600";
   return <span className={cn("text-[10px] font-medium px-1.5 py-0.5 rounded", color)}>{platform}</span>;
 }
 
@@ -191,40 +191,40 @@ const EcommerceOverview = () => {
       {/* ── HERO KPI ROW ───────────────── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <KPICard
-          gradient="from-neutral-700 to-blue-600"
+          gradient="from-emerald-500 to-blue-600"
           icon={ShoppingCart}
           value={<AnimatedNumber value={todayRevenue} suffix=" kr" />}
           label="Omsättning idag"
           subtitle="Onlineförsäljning"
           badge={revTrend !== 0 ? (
             <span className={cn("text-[10px] font-semibold px-1.5 py-0.5 rounded-full mt-1 inline-block",
-              revTrend > 0 ? "bg-[#E1F5EE] text-neutral-300" : "bg-[#FCE8E8] text-neutral-300")}>
+              revTrend > 0 ? "bg-[#E1F5EE] text-emerald-200" : "bg-[#FCE8E8] text-rose-200")}>
               {revTrend > 0 ? "+" : ""}{revTrend}% vs igår
             </span>
           ) : undefined}
         />
         <KPICard
-          gradient="from-blue-500 to-neutral-700"
+          gradient="from-blue-500 to-indigo-600"
           icon={Package}
           value={<AnimatedNumber value={todayOrders.length} />}
           label="Ordrar idag"
           subtitle="Nya beställningar"
           badge={
             <span className="flex items-center gap-1.5 mt-1">
-              <span className="h-2 w-2 rounded-full bg-neutral-700 animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-[10px] text-white/70 font-medium">Live</span>
             </span>
           }
         />
         <KPICard
-          gradient="from-neutral-700 to-purple-700"
+          gradient="from-violet-600 to-purple-700"
           icon={TrendingUp}
           value={<AnimatedNumber value={avgOrderValue} suffix=" kr" />}
           label="Snittordervärde"
           subtitle="Average Order Value"
         />
         <KPICard
-          gradient={lowStockItems.length > 0 ? "from-neutral-700 to-orange-600" : "from-neutral-700 to-blue-600"}
+          gradient={lowStockItems.length > 0 ? "from-amber-500 to-orange-600" : "from-emerald-500 to-blue-600"}
           icon={AlertTriangle}
           value={<AnimatedNumber value={lowStockItems.length} />}
           label="Lagervarning"
@@ -282,9 +282,9 @@ const EcommerceOverview = () => {
             </ResponsiveContainer>
           </div>
           <div className="flex gap-4 mt-3 text-[11px] text-muted-foreground">
-            <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-neutral-700" />Intäkter</span>
-            <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-neutral-700" />Returer</span>
-            <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-neutral-700" />Netto</span>
+            <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-emerald-500" />Intäkter</span>
+            <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-rose-500" />Returer</span>
+            <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-violet-500" />Netto</span>
           </div>
         </CardContent>
       </Card>
@@ -375,9 +375,9 @@ const EcommerceOverview = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {(data.byPlatform.length > 0 ? data.byPlatform : [{ name: "Shopify", value: 0 }, { name: "WooCommerce", value: 0 }]).map(p => {
           const isShopify = p.name.toLowerCase().includes("shopify");
-          const gradient = isShopify ? "from-neutral-700/10 to-blue-500/5" : "from-neutral-700/10 to-purple-500/5";
+          const gradient = isShopify ? "from-emerald-500/10 to-blue-500/5" : "from-violet-500/10 to-purple-500/5";
           const borderColor = isShopify ? "border-[#BFE6D6]" : "border-[#E2E8F0]";
-          const dotColor = p.value > 0 ? "bg-neutral-700" : "bg-muted-foreground/30";
+          const dotColor = p.value > 0 ? "bg-emerald-500" : "bg-muted-foreground/30";
           const platformOrders = (orders || []).filter(o => o.platform.toLowerCase() === p.name.toLowerCase()).length;
           return (
             <Card key={p.name} className={cn("rounded-2xl border", borderColor, "bg-gradient-to-br", gradient)}>
@@ -385,7 +385,7 @@ const EcommerceOverview = () => {
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
                     <div className={cn("h-8 w-8 rounded-lg flex items-center justify-center text-white text-xs font-bold",
-                      isShopify ? "bg-neutral-700" : "bg-neutral-700")}>
+                      isShopify ? "bg-emerald-500" : "bg-violet-500")}>
                       {p.name[0]}
                     </div>
                     <div>

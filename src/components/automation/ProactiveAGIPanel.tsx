@@ -172,7 +172,7 @@ export const ProactiveAGIPanel = ({ companyId, onTaskCreated, environment }: Pro
   if (!agiData) return null;
 
   if (agiData.status === 'submitted') { return (
-      <Card className="border-neutral-700/30">
+      <Card className="border-green-500/30">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <CheckCircle2 className="w-5 h-5 text-[#085041]" />
@@ -277,7 +277,7 @@ export const ProactiveAGIPanel = ({ companyId, onTaskCreated, environment }: Pro
             onClick={handleSign}
             disabled={signing}
             className="flex-1"
-            style={{ backgroundColor: '#000000', color: '#0F2137' }}
+            style={{ backgroundColor: '#3b82f6', color: '#0F2137' }}
           >
             {signing ? (
               <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Signerar...</>

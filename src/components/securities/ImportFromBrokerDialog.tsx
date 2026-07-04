@@ -16,7 +16,7 @@ const BROKERS = [
   {
     id: 'nordnet',
     name: 'Nordnet',
-    color: 'bg-black',
+    color: 'bg-blue-600',
     loginUrl: 'https://www.nordnet.se/se/inloggning',
     exportUrl: 'https://www.nordnet.se/se/min-depa/transaktioner',
     steps: [
@@ -30,7 +30,7 @@ const BROKERS = [
   {
     id: 'avanza',
     name: 'Avanza',
-    color: 'bg-neutral-700',
+    color: 'bg-emerald-600',
     loginUrl: 'https://www.avanza.se/min-ekonomi/transaktioner.html',
     exportUrl: 'https://www.avanza.se/min-ekonomi/transaktioner.html',
     steps: [
@@ -44,7 +44,7 @@ const BROKERS = [
   {
     id: 'seb',
     name: 'SEB',
-    color: 'bg-neutral-700',
+    color: 'bg-emerald-700',
     loginUrl: 'https://privat.seb.se',
     exportUrl: 'https://privat.seb.se/cgi-bin/pts3/mpo/mpo7000c.aspx',
     steps: [

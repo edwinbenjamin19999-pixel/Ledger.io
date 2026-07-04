@@ -238,12 +238,12 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
   };
 
   const statusChip = (s: string, createdAt?: string | null) => {
-    if (s === "matched" || s === "booked" || s === "processed" || s === "completed") return <span className="text-[11px] font-semibold text-neutral-700 bg-neutral-100 px-2.5 py-1 rounded-full">✅ Bokförd</span>;
+    if (s === "matched" || s === "booked" || s === "processed" || s === "completed") return <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">✅ Bokförd</span>;
     if (s === "duplicate") return <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">🔁 Duplikat</span>;
     if (s === "failed") return <span className="text-[11px] font-semibold text-red-600 bg-red-50 px-2.5 py-1 rounded-full">❌ Misslyckades</span>;
-    if (s === "archived") return <span className="text-[11px] font-semibold text-black bg-neutral-100 px-2.5 py-1 rounded-full">📁 Underlag</span>;
+    if (s === "archived") return <span className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">📁 Underlag</span>;
     if (s === "pending" && isStuck(s, createdAt)) return <span className="text-[11px] font-semibold text-red-600 bg-red-50 px-2.5 py-1 rounded-full">⚠️ Försök igen</span>;
-    if (s === "pending") return <span className="text-[11px] font-semibold text-neutral-700 bg-neutral-100 px-2.5 py-1 rounded-full animate-pulse">⏳ Granskas</span>;
+    if (s === "pending") return <span className="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full animate-pulse">⏳ Granskas</span>;
     return <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">{s}</span>;
   };
 
@@ -264,7 +264,7 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
       {/* Quick Invoice */}
       <button
         onClick={() => setShowQuickInvoice(true)}
-        className="mx-5 mt-5 w-[calc(100%-2.5rem)] bg-gradient-to-r from-neutral-700 to-neutral-700 text-white rounded-2xl py-4 flex items-center justify-center gap-2 text-base font-semibold shadow-lg shadow-indigo-500/25 active:scale-[0.97] transition-all duration-200 min-h-[52px]"
+        className="mx-5 mt-5 w-[calc(100%-2.5rem)] bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-2xl py-4 flex items-center justify-center gap-2 text-base font-semibold shadow-lg shadow-indigo-500/25 active:scale-[0.97] transition-all duration-200 min-h-[52px]"
       >
         <Zap className="h-5 w-5" />
         <span>Snabbfaktura via AI</span>
@@ -291,7 +291,7 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
           {/* Smart Capture Card */}
           <div className="mx-5 mt-4 bg-white rounded-[20px] border border-slate-100 shadow-sm overflow-hidden">
             <div className="flex flex-col items-center py-8 px-5">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#000000] to-blue-500 flex items-center justify-center shadow-lg shadow-[#000000]/20 mb-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-blue-500 flex items-center justify-center shadow-lg shadow-[#3b82f6]/20 mb-4">
                 <Camera className="h-7 w-7 text-white" />
               </div>
               <p className="text-slate-800 font-bold text-lg">Skanna eller ladda upp</p>
@@ -349,7 +349,7 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
                       {/* Status */}
                       <div className="mt-auto pt-1">
                         {stuck && isRetrying ? (
-                          <span className="text-[11px] font-semibold text-[#000000] bg-neutral-100 px-2.5 py-1 rounded-full flex items-center gap-1 w-fit">
+                          <span className="text-[11px] font-semibold text-[#3b82f6] bg-blue-50 px-2.5 py-1 rounded-full flex items-center gap-1 w-fit">
                             <Loader2 className="h-3 w-3 animate-spin" /> Försöker...
                           </span>
                         ) : (
@@ -368,14 +368,14 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
           {/* Expense Capture Card */}
           <div className="mx-5 mt-4 bg-white rounded-[20px] border border-slate-100 shadow-sm overflow-hidden">
             <div className="flex flex-col items-center py-8 px-5">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-neutral-700 to-blue-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 mb-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 mb-4">
                 <Camera className="h-7 w-7 text-white" />
               </div>
               <p className="text-slate-800 font-bold text-lg">Registrera utlägg</p>
               <p className="text-slate-400 text-sm mt-1">Fota eller ladda upp kvitto för utlägg</p>
             </div>
             <div className="px-5 pb-5 space-y-2.5">
-              <button onClick={() => { setUploadMode("expense"); expenseCameraRef.current?.click(); }} className="w-full bg-neutral-700 text-white rounded-xl py-3.5 font-semibold text-sm active:scale-[0.97] transition-all duration-200 min-h-[44px]">
+              <button onClick={() => { setUploadMode("expense"); expenseCameraRef.current?.click(); }} className="w-full bg-emerald-600 text-white rounded-xl py-3.5 font-semibold text-sm active:scale-[0.97] transition-all duration-200 min-h-[44px]">
                 📷 Öppna kamera
               </button>
               <button onClick={() => { setUploadMode("expense"); expenseFileRef.current?.click(); }} className="w-full bg-white border-2 border-slate-200 text-slate-700 rounded-xl py-3.5 font-semibold text-sm active:scale-[0.97] transition-all duration-200 min-h-[44px]">
@@ -397,7 +397,7 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
                   </div>
                   <div className="text-right">
                     <p className="font-bold text-slate-900 text-base tabular-nums">{Number(e.amount || 0).toLocaleString("sv-SE")} kr</p>
-                    <span className={cn("text-[11px] font-semibold px-2 py-0.5 rounded-full", e.status === "approved" ? "bg-neutral-100 text-neutral-700" : e.status === "submitted" ? "bg-neutral-100 text-neutral-700" : "bg-slate-100 text-slate-500")}>{e.status === "approved" ? "Godkänd" : e.status === "submitted" ? "Väntar" : e.status}</span>
+                    <span className={cn("text-[11px] font-semibold px-2 py-0.5 rounded-full", e.status === "approved" ? "bg-emerald-50 text-emerald-600" : e.status === "submitted" ? "bg-amber-50 text-amber-600" : "bg-slate-100 text-slate-500")}>{e.status === "approved" ? "Godkänd" : e.status === "submitted" ? "Väntar" : e.status}</span>
                   </div>
                 </div>
               ))
@@ -417,18 +417,18 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
               onChange={(e) => setInvoiceText(e.target.value)}
               placeholder='t.ex. "Konsultarvode mars, Företaget AB, 8500 kr"'
               rows={3}
-              className="w-full bg-slate-50 rounded-2xl px-4 py-3 text-base placeholder:text-slate-400 resize-none focus:outline-none focus:ring-2 focus:ring-neutral-700/20 border border-slate-200 min-h-[80px] transition-all duration-200"
+              className="w-full bg-slate-50 rounded-2xl px-4 py-3 text-base placeholder:text-slate-400 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500/20 border border-slate-200 min-h-[80px] transition-all duration-200"
               style={{ fontSize: "16px" }}
             />
             <button
               onClick={() => setShowVoice(true)}
-              className="absolute right-3 top-3 text-neutral-700 min-h-[44px] min-w-[44px] flex items-center justify-center active:scale-[0.97] transition-all duration-200"
+              className="absolute right-3 top-3 text-indigo-500 min-h-[44px] min-w-[44px] flex items-center justify-center active:scale-[0.97] transition-all duration-200"
             >
               <Mic className="h-5 w-5" />
             </button>
           </div>
           {invoiceResult && (
-            <div className="mt-3 bg-neutral-100 border border-neutral-100 rounded-2xl p-4 text-sm text-slate-700">
+            <div className="mt-3 bg-indigo-50 border border-indigo-100 rounded-2xl p-4 text-sm text-slate-700">
               {invoiceResult}
             </div>
           )}
@@ -451,7 +451,7 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
             disabled={!invoiceText.trim() || invoiceLoading}
             className={cn(
               "w-full mt-4 rounded-2xl py-4 text-base font-semibold min-h-[52px] active:scale-[0.97] transition-all duration-200 flex items-center justify-center gap-2",
-              invoiceText.trim() && !invoiceLoading ? "bg-neutral-700 text-white shadow-lg shadow-indigo-500/25" : "bg-slate-200 text-slate-400"
+              invoiceText.trim() && !invoiceLoading ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25" : "bg-slate-200 text-slate-400"
             )}
           >
             {invoiceLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : null}

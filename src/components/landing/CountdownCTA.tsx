@@ -44,16 +44,17 @@ export const CountdownCTA = () => {
   return (
     <section
       id="signup"
-      className="relative overflow-hidden bg-[#000000] py-24 md:py-32 scroll-mt-20"
+      className="relative overflow-hidden bg-[#0F172A] py-24 md:py-32 scroll-mt-20"
     >
-      {/* Geometrisk dekoration — platta former i låg opacitet */}
+      {/* MM-textur: dot-mönster + radial accent-glow på inverterad yta */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full bg-white/5"
+        className="pointer-events-none absolute inset-0"
+        style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "32px 32px", opacity: 0.04 }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[10%] -left-24 h-[240px] w-[240px] rotate-12 bg-white/5"
+        className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-[#0052FF] opacity-25 blur-[150px]"
       />
 
       <div className="relative z-10 container mx-auto max-w-2xl px-6 text-center">
@@ -65,7 +66,7 @@ export const CountdownCTA = () => {
         </p>
         <p className="text-white/60 text-base mb-8 max-w-lg mx-auto leading-relaxed">
           De flesta ekonomisystem är byggda på 20 år gammal grund — med AI
-          tillagt i efterhand. Bokfy är byggt från grunden med AI som
+          tillagt i efterhand. Cogniq är byggt från grunden med AI som
           motor. Early access är begränsat.
         </p>
 
@@ -73,7 +74,7 @@ export const CountdownCTA = () => {
         <p className="mb-6 text-sm font-semibold text-white">
           <span
             aria-hidden
-            className="mr-2 inline-block h-2 w-2 rounded-full bg-neutral-700 align-middle"
+            className="mr-2 inline-block h-2 w-2 rounded-full bg-emerald-400 align-middle"
           />
           <span className="tabular-nums">{count.toLocaleString("sv-SE")}</span>{" "}
           företag redan anmälda
@@ -89,7 +90,7 @@ export const CountdownCTA = () => {
             placeholder="Ditt namn (valfritt)"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="h-12 w-full rounded-md border-2 border-transparent bg-white px-4 text-[15px] text-[#000000] placeholder:text-[#000000]/40 focus:border-[#000000] focus:outline-none transition-colors duration-200"
+            className="h-12 w-full rounded-xl border-2 border-transparent bg-white px-4 text-[15px] text-[#0F172A] placeholder:text-[#0F172A]/40 focus:border-[#4D7CFF] focus:outline-none transition-colors duration-200"
           />
           <label htmlFor="cta-email" className="sr-only">E-postadress</label>
           <input
@@ -100,12 +101,12 @@ export const CountdownCTA = () => {
             placeholder="din@email.se"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-12 w-full rounded-md border-2 border-transparent bg-white px-4 text-[15px] text-[#000000] placeholder:text-[#000000]/40 focus:border-[#000000] focus:outline-none transition-colors duration-200"
+            className="h-12 w-full rounded-xl border-2 border-transparent bg-white px-4 text-[15px] text-[#0F172A] placeholder:text-[#0F172A]/40 focus:border-[#4D7CFF] focus:outline-none transition-colors duration-200"
           />
           <button
             type="submit"
             disabled={loading}
-            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#000000] text-base font-bold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#000000] disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#000000]"
+            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] text-base font-bold text-white shadow-accent transition-all duration-200 hover:-translate-y-0.5 hover:shadow-accent-lg hover:brightness-110 disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
           >
             {loading ? "Skickar..." : "Säkra din plats"}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />

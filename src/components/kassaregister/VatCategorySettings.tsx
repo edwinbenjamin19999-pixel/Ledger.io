@@ -85,7 +85,7 @@ export function VatCategorySettings() { const { categories, addCategory } = useP
                 <Input value={newAccount} onChange={(e) => setNewAccount(e.target.value)} placeholder="3010" />
               </div>
             </div>
-            <Button onClick={handleAdd} disabled={!newCategory || addCategory.isPending} className="gap-1.5 bg-[#000000] hover:bg-[#000000]/90 text-white">
+            <Button onClick={handleAdd} disabled={!newCategory || addCategory.isPending} className="gap-1.5 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
               <Plus className="h-4 w-4" />
               Lägg till
             </Button>

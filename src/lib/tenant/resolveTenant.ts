@@ -38,17 +38,17 @@ export interface ResolvedTenant {
 
 /**
  * Resolve a tenant from:
- *  1. Subdomain (clientname.bokfy.se → slug = "clientname")
+ *  1. Subdomain (clientname.cogniq.se → slug = "clientname")
  *  2. Explicit slug param (e.g. /wl/:slug/login)
- * Standard Bokfy hosts (bokfy.se, app.bokfy.se, *.lovable.app) return null.
+ * Standard Cogniq hosts (cogniq.se, app.cogniq.se, *.lovable.app) return null.
  */
 export function resolveTenantSlugFromHost(hostname: string): string | null {
   const RESERVED = new Set(["app", "www", "api", "admin", "id-preview", "preview"]);
   const host = hostname.toLowerCase();
-  if (host === "bokfy.se" || host === "localhost") return null;
+  if (host === "cogniq.se" || host === "localhost") return null;
   if (host.endsWith(".lovable.app") || host.endsWith(".lovableproject.com")) return null;
-  if (host.endsWith(".bokfy.se")) {
-    const sub = host.replace(".bokfy.se", "");
+  if (host.endsWith(".cogniq.se")) {
+    const sub = host.replace(".cogniq.se", "");
     if (RESERVED.has(sub) || sub.includes(".")) return null;
     return sub;
   }
@@ -65,7 +65,7 @@ async function hydrateTenant(tenant: any): Promise<ResolvedTenant> {
     ...tenant,
     branding: brandingRes.data ?? {
       logo_url: null, logo_dark_url: null, favicon_url: null,
-      primary_color: "#000000", accent_color: null, style_preset: "enterprise",
+      primary_color: "#3b82f6", accent_color: null, style_preset: "enterprise",
       heading_font: "Inter", body_font: "Inter",
     },
     ai: aiRes.data ?? {
@@ -78,7 +78,7 @@ async function hydrateTenant(tenant: any): Promise<ResolvedTenant> {
       trust_bullets: ["Automatisk bokföring", "Realtidsanalys", "Full revisionslogg", "Spårbar AI"],
       show_bankid: true, show_password_login: true,
       support_email: null, support_url: null,
-      footer_attribution: "Powered by Bokfy",
+      footer_attribution: "Powered by Cogniq",
     },
   };
 }

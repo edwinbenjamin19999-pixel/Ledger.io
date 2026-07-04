@@ -93,7 +93,7 @@ export const INK2Annexes = ({ companyId }: INK2AnnexesProps) => { const [prepari
           variant={ annex.type === "obligatorisk" ? "default" : annex.type === "rekommenderad" ? "outline" : "secondary"
           }
           className={ annex.type === "obligatorisk"
-              ? "bg-[#E1F5EE] text-[#085041] border-neutral-700/30 text-xs"
+              ? "bg-[#E1F5EE] text-[#085041] border-green-500/30 text-xs"
               : "text-xs"
           }
         >

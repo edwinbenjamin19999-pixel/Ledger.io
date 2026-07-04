@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const bokforaFaktura: Article = {
   slug: "bokfora-faktura",
   h1: "Hur bokför man en faktura? Kund- och leverantörsfaktura förklarat",
-  metaTitle: "Hur bokför man en faktura? Komplett guide | Bokfy",
+  metaTitle: "Hur bokför man en faktura? Komplett guide | Cogniq",
   metaDescription:
     "Lär dig bokföra kundfakturor och leverantörsfakturor steg för steg. Fakturametoden vs kontantmetoden, momshantering och konkreta exempel.",
   keywords: [
@@ -115,7 +115,7 @@ export const bokforaFaktura: Article = {
   ],
   internalLinks: {
     related: ["bokfora-kvitto", "moms-sverige", "vad-ar-bokforing"],
-    product: { label: "Automatisera fakturahantering med Bokfy", href: "/features/accounting-automation" },
+    product: { label: "Automatisera fakturahantering med Cogniq", href: "/features/accounting-automation" },
     category: { label: "Alla bokföringsguider", href: "/resources/accounting-guides" },
   },
 };

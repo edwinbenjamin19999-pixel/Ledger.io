@@ -67,7 +67,7 @@ const STATUS_TO_STAGE: Record<string, SupplierInvoiceStage> = {
 /**
  * Cross-client supplier-invoice ledger for the WL workspace.
  * Reuses the standard `invoices` table filtered to `invoice_direction = incoming`
- * so nothing is duplicated from the Bokfy standard supplier engine.
+ * so nothing is duplicated from the Cogniq standard supplier engine.
  *
  * AI risk heuristics (no extra LLM call):
  *  - Amount > 3x supplier median for the same client → "ovanligt belopp"
@@ -198,18 +198,18 @@ export const STAGE_META: Record<
   { label: string; tone: string; order: number }
 > = {
   received: { label: "Mottagen", tone: "bg-slate-100 text-slate-700", order: 1 },
-  draft: { label: "Utkast bokförd", tone: "bg-neutral-100 text-[#000000]", order: 2 },
+  draft: { label: "Utkast bokförd", tone: "bg-blue-50 text-[#3b82f6]", order: 2 },
   awaiting_client: {
     label: "Väntar klientattest",
-    tone: "bg-neutral-100 text-neutral-700",
+    tone: "bg-amber-50 text-amber-700",
     order: 3,
   },
-  approved: { label: "Godkänd", tone: "bg-neutral-100 text-neutral-700", order: 4 },
+  approved: { label: "Godkänd", tone: "bg-emerald-50 text-emerald-700", order: 4 },
   in_payment_run: {
     label: "I betalningskörning",
-    tone: "bg-neutral-100 text-neutral-700",
+    tone: "bg-indigo-50 text-indigo-700",
     order: 5,
   },
-  paid: { label: "Betald", tone: "bg-neutral-100 text-neutral-700", order: 6 },
-  rejected: { label: "Avvisad", tone: "bg-neutral-100 text-neutral-700", order: 0 },
+  paid: { label: "Betald", tone: "bg-emerald-100 text-emerald-800", order: 6 },
+  rejected: { label: "Avvisad", tone: "bg-rose-50 text-rose-700", order: 0 },
 };

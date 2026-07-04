@@ -15,15 +15,15 @@ interface Props {
 }
 
 const ACCENT_RING: Record<string, string> = {
-  cyan: "ring-[#000000]",
-  emerald: "ring-neutral-300",
-  amber: "ring-neutral-300",
-  rose: "ring-neutral-300",
+  cyan: "ring-[#3b82f6]",
+  emerald: "ring-emerald-300",
+  amber: "ring-amber-300",
+  rose: "ring-rose-300",
   slate: "ring-slate-300",
 };
 
 const ACCENT_BG: Record<string, string> = {
-  cyan: "bg-[#EFF6FF] text-[#000000]",
+  cyan: "bg-[#EFF6FF] text-[#3b82f6]",
   emerald: "bg-[#E1F5EE] text-[#085041]",
   amber: "bg-[#FAEEDA] text-[#7A5417]",
   rose: "bg-[#FCE8E8] text-[#7A1A1A]",
@@ -56,7 +56,7 @@ export function AgentCard({
         "shadow-[0_1px_2px_rgba(15,23,42,0.04)] hover:shadow-[0_4px_16px_rgba(15,23,42,0.06)]",
         "transition-all duration-150",
         selected
-          ? `border-[#000000] ring-2 ${ACCENT_RING[accent]}`
+          ? `border-[#3b82f6] ring-2 ${ACCENT_RING[accent]}`
           : "border-slate-200/70 hover:border-slate-300"
       )}
     >

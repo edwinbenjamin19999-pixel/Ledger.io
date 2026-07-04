@@ -13,9 +13,9 @@ export const MigrationCompleteStep = ({ state, onFinish }: Props) => { const nav
 
   return (
     <div className="space-y-6">
-      <Card className="border-[#BFE6D6] dark:border-neutral-700 bg-neutral-100/50 dark:bg-emerald-950/20">
+      <Card className="border-[#BFE6D6] dark:border-emerald-800 bg-emerald-50/50 dark:bg-emerald-950/20">
         <CardContent className="p-8 text-center space-y-4">
-          <div className="w-16 h-16 rounded-full bg-[#E1F5EE] dark:bg-neutral-700 flex items-center justify-center mx-auto">
+          <div className="w-16 h-16 rounded-full bg-[#E1F5EE] dark:bg-emerald-900 flex items-center justify-center mx-auto">
             <CheckCircle className="h-8 w-8 text-[#085041]" />
           </div>
           <div>

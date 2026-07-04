@@ -368,7 +368,7 @@ export const AuditReadiness = () => { const [companyId, setCompanyId] = useState
                   <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 120 120">
                     <circle cx="60" cy="60" r="52" fill="none" stroke="hsl(var(--muted))" strokeWidth="8" />
                     <circle cx="60" cy="60" r="52" fill="none"
-                      stroke={readinessData.percent < 50 ? '#525252' : readinessData.percent < 80 ? '#525252' : '#000000'}
+                      stroke={readinessData.percent < 50 ? '#DC2626' : readinessData.percent < 80 ? '#F59E0B' : '#22C55E'}
                       strokeWidth="8" strokeLinecap="round"
                       strokeDasharray={`${readinessData.percent * 3.27} 327`}
                     />

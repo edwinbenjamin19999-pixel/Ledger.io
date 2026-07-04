@@ -7,7 +7,7 @@ interface MiniSparklineProps {
   color?: string;
 }
 
-export const MiniSparkline = ({ data, width = 60, height = 20, color = '#525252' }: MiniSparklineProps) => {
+export const MiniSparkline = ({ data, width = 60, height = 20, color = '#6366f1' }: MiniSparklineProps) => {
   if (!data || data.length < 2) return null;
   const chartData = data.map((v, i) => ({ v, i }));
 

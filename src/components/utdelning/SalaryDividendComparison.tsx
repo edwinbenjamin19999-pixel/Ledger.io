@@ -134,12 +134,12 @@ export function SalaryDividendComparison() {
           </CardContent>
         </Card>
 
-        <Card className={`${calc.savings > 0 ? "border-[#BFE6D6] dark:border-neutral-700 bg-neutral-100/30 dark:bg-emerald-950/10" : "border-border"}`}>
+        <Card className={`${calc.savings > 0 ? "border-[#BFE6D6] dark:border-emerald-700 bg-emerald-50/30 dark:bg-emerald-950/10" : "border-border"}`}>
           <CardHeader className="pb-3">
             <CardTitle className="text-base flex items-center justify-between">
               Utdelning + lön
               {calc.savings > 0 && (
-                <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700 dark:text-neutral-300">
+                <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900 dark:text-emerald-200">
                   Sparar {fmt(calc.savings)} kr
                 </Badge>
               )}
@@ -163,10 +163,10 @@ export function SalaryDividendComparison() {
       </div>
 
       {calc.annualSalary > 0 && calc.annualSalary < 614400 && (
-        <Card className="border-[#F0DDB7] dark:border-neutral-700 bg-neutral-100/50 dark:bg-amber-950/20">
+        <Card className="border-[#F0DDB7] dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
           <CardContent className="py-4">
             <p className="text-sm">
-              <span className="font-semibold text-[#7A5417] dark:text-neutral-300">Löneoptimering: </span>
+              <span className="font-semibold text-[#7A5417] dark:text-amber-300">Löneoptimering: </span>
               Din lön är {fmt(calc.annualSalary)} kr/år — under taket för inkomstbasbelopp ({fmt(614400)} kr).
               {calc.usesLoneunderlag
                 ? " Du använder löneunderlagsregeln. Varje extra lönekrona ökar ditt löneunderlag nästa år."

@@ -15,7 +15,7 @@ export default function CheckoutReturn() { const [searchParams] = useSearchParam
               <CheckCircle className="w-16 h-16 text-[#085041] mx-auto" />
               <h1 className="text-2xl font-bold">Tack för din beställning!</h1>
               <p className="text-muted-foreground">
-                Din prenumeration är nu aktiv. Du kan börja använda Bokfy direkt.
+                Din prenumeration är nu aktiv. Du kan börja använda Cogniq direkt.
               </p>
               <Button asChild className="w-full mt-4">
                 <Link to="/dashboard">Gå till Dashboard</Link>

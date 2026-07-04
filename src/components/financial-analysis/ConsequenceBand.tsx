@@ -33,8 +33,8 @@ export function ConsequenceBand({ kpis, monthlyBurn, onSeedScenario }: Props) {
     <section className={cn(
       "rounded-xl border px-4 py-3 flex flex-wrap items-center gap-x-5 gap-y-2",
       isNegative
-        ? "border-neutral-300/60 bg-neutral-100/50"
-        : "border-neutral-300/60 bg-neutral-100/40"
+        ? "border-rose-200/60 bg-rose-50/50"
+        : "border-emerald-200/60 bg-emerald-50/40"
     )}>
       <div className={cn(
         "flex items-center gap-2 shrink-0",
@@ -72,19 +72,19 @@ export function ConsequenceBand({ kpis, monthlyBurn, onSeedScenario }: Props) {
       <div className="flex items-center gap-1.5 ml-auto">
         <button
           onClick={() => navigate('/cash-command')}
-          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#000000] hover:text-[#000000] inline-flex items-center gap-1"
+          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#3b82f6] hover:text-[#3b82f6] inline-flex items-center gap-1"
         >
           Cash Command <ArrowRight className="h-3 w-3" />
         </button>
         <button
           onClick={() => onSeedScenario?.('cost')}
-          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#000000] hover:text-[#000000]"
+          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#3b82f6] hover:text-[#3b82f6]"
         >
           Justera kostnader
         </button>
         <button
           onClick={() => onSeedScenario?.('pricing')}
-          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#000000] hover:text-[#000000]"
+          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#3b82f6] hover:text-[#3b82f6]"
         >
           Höj priser
         </button>

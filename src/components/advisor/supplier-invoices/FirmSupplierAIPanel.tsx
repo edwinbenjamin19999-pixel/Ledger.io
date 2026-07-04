@@ -31,7 +31,7 @@ export function FirmSupplierAIPanel({ rows, onAction }: Props) {
       title: "Ovanliga leverantörsfakturor",
       desc: "AI flaggade kraftiga avvikelser från historiken",
       metric: `${highRisk.length} st`,
-      tone: "from-neutral-700/10 to-neutral-100 border-[#F4C8C8] text-[#7A1A1A]",
+      tone: "from-rose-500/10 to-rose-50 border-[#F4C8C8] text-[#7A1A1A]",
       visible: highRisk.length > 0,
     },
     {
@@ -40,7 +40,7 @@ export function FirmSupplierAIPanel({ rows, onAction }: Props) {
       title: "Möjliga dubbletter",
       desc: "Samma leverantör + belopp inom 60 dagar",
       metric: `${duplicates.length} st`,
-      tone: "from-neutral-700/10 to-neutral-100 border-[#F0DDB7] text-[#7A5417]",
+      tone: "from-amber-500/10 to-amber-50 border-[#F0DDB7] text-[#7A5417]",
       visible: duplicates.length > 0,
     },
     {
@@ -49,7 +49,7 @@ export function FirmSupplierAIPanel({ rows, onAction }: Props) {
       title: "Förfallna utan attest",
       desc: "Kräver omedelbar klient-eskalering",
       metric: `${overdueAwait.length} st`,
-      tone: "from-[#000000]/10 to-blue-50 border-[#C8DDF5] text-[#000000]",
+      tone: "from-[#3b82f6]/10 to-blue-50 border-[#C8DDF5] text-[#3b82f6]",
       visible: overdueAwait.length > 0,
     },
   ];

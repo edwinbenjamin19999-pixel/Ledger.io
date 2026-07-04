@@ -14,7 +14,7 @@ export const NextActionsBlock = ({ data, onPick }: Props) => (
         <button
           key={i}
           onClick={() => onPick(a.query)}
-          className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full border border-slate-200 bg-white hover:border-[#000000] hover:bg-neutral-100/60 hover:text-[#000000] text-slate-700 transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full border border-slate-200 bg-white hover:border-[#3b82f6] hover:bg-blue-50/60 hover:text-[#3b82f6] text-slate-700 transition-colors"
         >
           {a.label}
           <ArrowRight className="w-3 h-3" />

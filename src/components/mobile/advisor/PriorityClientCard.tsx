@@ -12,9 +12,9 @@ interface PriorityClientCardProps {
 }
 
 const URGENCY_BAR = {
-  high: "bg-neutral-700 shadow-[0_0_8px_rgba(244,63,94,0.6)]",
-  medium: "bg-neutral-700 shadow-[0_0_6px_rgba(245,158,11,0.5)]",
-  low: "bg-neutral-700",
+  high: "bg-rose-400 shadow-[0_0_8px_rgba(244,63,94,0.6)]",
+  medium: "bg-amber-400 shadow-[0_0_6px_rgba(245,158,11,0.5)]",
+  low: "bg-emerald-400",
 } as const;
 
 export const PriorityClientCard = ({ client, onTap, onApprove, onFlag }: PriorityClientCardProps) => {
@@ -44,10 +44,10 @@ export const PriorityClientCard = ({ client, onTap, onApprove, onFlag }: Priorit
   return (
     <div className="relative touch-pan-y">
       <div className="absolute inset-0 flex items-center justify-between px-5 rounded-2xl overflow-hidden pointer-events-none">
-        <div className="flex items-center gap-2 text-neutral-300 text-xs font-semibold">
+        <div className="flex items-center gap-2 text-emerald-300 text-xs font-semibold">
           <Check className="h-4 w-4" /> Godkänn
         </div>
-        <div className="flex items-center gap-2 text-neutral-300 text-xs font-semibold">
+        <div className="flex items-center gap-2 text-rose-300 text-xs font-semibold">
           Flagga <Flag className="h-4 w-4" />
         </div>
       </div>
@@ -77,14 +77,14 @@ export const PriorityClientCard = ({ client, onTap, onApprove, onFlag }: Priorit
                 {issue && (
                   <div className={cn(
                     "text-xs mt-0.5 truncate",
-                    issue.severity === "critical" ? "text-neutral-300" :
-                    issue.severity === "warning" ? "text-neutral-300" : "text-white/55"
+                    issue.severity === "critical" ? "text-rose-300" :
+                    issue.severity === "warning" ? "text-amber-300" : "text-white/55"
                   )}>
                     {issue.text}
                   </div>
                 )}
                 {!issue && (
-                  <div className="text-xs mt-0.5 text-neutral-300/80">Inga öppna ärenden</div>
+                  <div className="text-xs mt-0.5 text-emerald-300/80">Inga öppna ärenden</div>
                 )}
               </div>
               <ChevronRight className="h-4 w-4 text-white/30 flex-shrink-0 mt-0.5" />
@@ -107,7 +107,7 @@ const Mini = ({ label, value, accent }: { label: string; value: string; accent?:
     <div className="text-[10px] uppercase tracking-wider text-white/40">{label}</div>
     <div className={cn(
       "text-sm font-bold tabular-nums",
-      accent ? "text-neutral-300" : "text-white/90"
+      accent ? "text-rose-300" : "text-white/90"
     )}>{value}</div>
   </div>
 );

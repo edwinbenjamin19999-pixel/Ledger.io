@@ -43,12 +43,12 @@ export const HeroSignupInline = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         style={{ WebkitTextFillColor: "#ffffff", colorScheme: "dark" }}
-        className="flex-1 h-12 px-4 bg-white/10 border border-white/20 text-white text-[15px] placeholder:text-white/50 focus:border-[#000000]/60 focus:outline-none rounded-lg"
+        className="flex-1 h-12 px-4 bg-white/10 border border-white/20 text-white text-[15px] placeholder:text-white/50 focus:border-[#3b82f6]/60 focus:outline-none rounded-lg"
       />
       <Button
         type="submit"
         disabled={loading}
-        className="h-12 px-6 bg-white hover:bg-white/90 text-[#000000] font-semibold rounded-lg whitespace-nowrap"
+        className="h-12 px-6 bg-white hover:bg-white/90 text-[#0F172A] font-semibold rounded-lg whitespace-nowrap"
       >
         {loading ? "Skickar..." : "Säkra din plats"}
         <ArrowRight className="ml-1 h-4 w-4" />

@@ -6,7 +6,7 @@ export type AITone = "formal" | "advisory" | "executive" | "operational";
 
 export function aiToneSystemFragment(tone: string | null | undefined, aiName?: string): string {
   const name = aiName || "AI Ekonom";
-  const base = `Du heter "${name}" och representerar denna kunds egen ekonomi-AI. Skriv alltid som "${name}", aldrig som "Bokfy".`;
+  const base = `Du heter "${name}" och representerar denna kunds egen ekonomi-AI. Skriv alltid som "${name}", aldrig som "Cogniq".`;
   switch ((tone || "advisory") as AITone) {
     case "formal":
       return `${base} Använd en formell, professionell ton — tydlig, korrekt och utan slang.`;

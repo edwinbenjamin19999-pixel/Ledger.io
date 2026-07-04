@@ -11,7 +11,7 @@ interface Props {
 }
 
 const AVATAR_PALETTE = [
-  "#000000", "#5DCAA5", "#525252", "#85B7EB", "#A78BFA",
+  "#0040CC", "#5DCAA5", "#EF9F27", "#85B7EB", "#A78BFA",
   "#F09595", "#22A06B", "#0C447C", "#412402", "#475569",
 ];
 
@@ -19,7 +19,7 @@ const STATUS_BADGE: Record<string, { bg: string; color: string; border?: string;
   arbetar: { bg: "#E1F5EE", color: "#085041", border: "#5DCAA5", label: "Arbetar" },
   semester: { bg: "#EFF6FF", color: "#0C447C", border: "#85B7EB", label: "Semester" },
   sjuk: { bg: "#FCEBEB", color: "#791F1F", border: "#F09595", label: "Sjuk" },
-  pending: { bg: "#FAEEDA", color: "#412402", border: "#525252", label: "Väntar godkännande" },
+  pending: { bg: "#FAEEDA", color: "#412402", border: "#EF9F27", label: "Väntar godkännande" },
   ledig: { bg: "#F1F5F9", color: "#475569", label: "Ledig" },
 };
 
@@ -231,7 +231,7 @@ export function HROverviewTab({ companyId, onOpenSmartInput }: Props) {
               <button
                 key={e.id}
                 onClick={() => navigate(`/employees?id=${e.id}`)}
-                className="w-full text-left bg-white border-[0.5px] border-[#E2E8F0] rounded-[12px] px-[14px] py-[10px] flex items-center gap-[10px] hover:border-[#000000]/40 transition-colors"
+                className="w-full text-left bg-white border-[0.5px] border-[#E2E8F0] rounded-[12px] px-[14px] py-[10px] flex items-center gap-[10px] hover:border-[#0040CC]/40 transition-colors"
               >
                 <div
                   className="w-[32px] h-[32px] rounded-full flex items-center justify-center text-white text-[12px] font-medium flex-shrink-0"
@@ -267,7 +267,7 @@ export function HROverviewTab({ companyId, onOpenSmartInput }: Props) {
         >
           <div
             className="absolute top-0 left-0 right-0"
-            style={{ height: "1.5px", background: "#000000" }}
+            style={{ height: "1.5px", background: "#0040CC" }}
           />
           <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8] mb-3">
             Balanser — alla anställda
@@ -339,7 +339,7 @@ export function HROverviewTab({ companyId, onOpenSmartInput }: Props) {
                 let bg = "transparent";
                 let color = "#475569";
                 if (isToday) {
-                  bg = "#000000";
+                  bg = "#0040CC";
                   color = "#fff";
                 } else if (c.type === "work") {
                   bg = "#E1F5EE";
@@ -375,7 +375,7 @@ export function HROverviewTab({ companyId, onOpenSmartInput }: Props) {
                 { color: "#5DCAA5", label: "Arbete" },
                 { color: "#F09595", label: "Sjuk" },
                 { color: "#85B7EB", label: "Semester" },
-                { color: "#525252", label: "Övertid" },
+                { color: "#EF9F27", label: "Övertid" },
               ].map((l) => (
                 <div key={l.label} className="flex items-center gap-1">
                   <span
@@ -392,7 +392,7 @@ export function HROverviewTab({ companyId, onOpenSmartInput }: Props) {
         {/* Compact Smart Input */}
         <div className="bg-white border-[0.5px] border-[#E2E8F0] rounded-[12px] p-3">
           <div className="flex items-center gap-1.5 mb-2">
-            <Sparkles className="h-3 w-3 text-[#000000]" />
+            <Sparkles className="h-3 w-3 text-[#0040CC]" />
             <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8]">
               Snabbregistrering (AI)
             </div>
@@ -421,7 +421,7 @@ export function HROverviewTab({ companyId, onOpenSmartInput }: Props) {
           <button
             onClick={onOpenSmartInput}
             className="mt-2 w-full rounded-[8px] text-[12px] font-medium py-[7px]"
-            style={{ background: "#000000", color: "#E6F4FA" }}
+            style={{ background: "#0040CC", color: "#E6F4FA" }}
           >
             Tolka med AI →
           </button>

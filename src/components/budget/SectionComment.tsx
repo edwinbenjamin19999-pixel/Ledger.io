@@ -64,12 +64,12 @@ export function SectionCommentInline({
   if (!isOpen) return null;
 
   return (
-    <div className="px-4 py-2 bg-neutral-100/80 dark:bg-neutral-700/10 border-b border-[#F0DDB7] dark:border-neutral-700" onClick={e => e.stopPropagation()}>
+    <div className="px-4 py-2 bg-amber-50/80 dark:bg-amber-900/10 border-b border-[#F0DDB7] dark:border-amber-800" onClick={e => e.stopPropagation()}>
       <Textarea
         value={draft}
         onChange={e => setDraft(e.target.value)}
         placeholder="Lägg till kommentar för denna sektion..."
-        className="text-xs min-h-[48px] bg-white dark:bg-slate-800 border-[#F0DDB7] dark:border-neutral-700 resize-none"
+        className="text-xs min-h-[48px] bg-white dark:bg-slate-800 border-[#F0DDB7] dark:border-amber-700 resize-none"
         rows={2}
       />
       <div className="flex gap-2 mt-1.5 justify-end">

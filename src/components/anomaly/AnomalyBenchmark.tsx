@@ -48,13 +48,13 @@ export function AnomalyBenchmark({ anomalies }: Props) { const metrics = BENCHMA
               <div className="flex items-center gap-1.5">
                 {m.deviation > 0 ? (
                   <>
-                    <TrendingUp className="h-3.5 w-3.5 text-[#525252]" />
+                    <TrendingUp className="h-3.5 w-3.5 text-[#EF4444]" />
                     <Badge variant="destructive" className="text-[10px]">+{m.deviation}%</Badge>
                   </>
                 ) : m.deviation < -10 ? (
                   <>
-                    <TrendingDown className="h-3.5 w-3.5 text-[#000000]" />
-                    <Badge className="text-[10px] bg-[#000000] text-white">{m.deviation}%</Badge>
+                    <TrendingDown className="h-3.5 w-3.5 text-[#22c55e]" />
+                    <Badge className="text-[10px] bg-[#22c55e] text-white">{m.deviation}%</Badge>
                   </>
                 ) : (
                   <Badge variant="secondary" className="text-[10px]">Normal</Badge>

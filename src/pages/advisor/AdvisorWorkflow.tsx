@@ -128,7 +128,7 @@ const AdvisorWorkflow = () => {
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <Workflow className="h-5 w-5 text-[#000000]" />
+            <Workflow className="h-5 w-5 text-[#3b82f6]" />
             <h1 className="text-2xl font-bold text-slate-900">Arbetsflöde</h1>
           </div>
           <p className="text-sm text-slate-500">
@@ -167,7 +167,7 @@ const AdvisorWorkflow = () => {
               className={cn(
                 "px-3 py-1.5 text-xs font-semibold rounded-md transition-colors",
                 timeFilter === opt.key
-                  ? "bg-white text-[#000000] shadow-sm"
+                  ? "bg-white text-[#3b82f6] shadow-sm"
                   : "text-slate-600 hover:text-slate-900",
               )}
             >
@@ -192,7 +192,7 @@ const AdvisorWorkflow = () => {
             className={cn(
               "px-3 py-1.5 rounded-md inline-flex items-center gap-1.5 text-xs font-semibold transition-colors",
               view === "list"
-                ? "bg-white text-[#000000] shadow-sm"
+                ? "bg-white text-[#3b82f6] shadow-sm"
                 : "text-slate-600 hover:text-slate-900",
             )}
           >
@@ -204,7 +204,7 @@ const AdvisorWorkflow = () => {
             className={cn(
               "px-3 py-1.5 rounded-md inline-flex items-center gap-1.5 text-xs font-semibold transition-colors",
               view === "kanban"
-                ? "bg-white text-[#000000] shadow-sm"
+                ? "bg-white text-[#3b82f6] shadow-sm"
                 : "text-slate-600 hover:text-slate-900",
             )}
           >

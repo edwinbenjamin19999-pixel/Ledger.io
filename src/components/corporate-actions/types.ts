@@ -518,12 +518,12 @@ export const ACTION_TEMPLATES: Record<ActionType, ActionTemplate> = {
 
 export const STATUS_CONFIG: Record<ActionStatus, { label: string; color: string }> = {
   draft: { label: "Utkast", color: "bg-muted text-muted-foreground" },
-  needs_input: { label: "Behöver uppgifter", color: "bg-neutral-100 text-neutral-700 dark:bg-neutral-700/30 dark:text-[#C28A2B]" },
-  pending_review: { label: "Granskas", color: "bg-neutral-200 text-blue-800 dark:bg-blue-900/30 dark:text-[#1E3A5F]" },
+  needs_input: { label: "Behöver uppgifter", color: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-[#C28A2B]" },
+  pending_review: { label: "Granskas", color: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-[#1E3A5F]" },
   pending_approval: { label: "Väntar godkännande", color: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-[#1E3A5F]" },
   pending_signing: { label: "Väntar signering", color: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400" },
-  ready_to_execute: { label: "Redo att verkställa", color: "bg-neutral-200 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400" },
-  executed: { label: "Verkställd", color: "bg-neutral-100 text-neutral-700 dark:bg-neutral-700/30 dark:text-[#1D9E75]" },
+  ready_to_execute: { label: "Redo att verkställa", color: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400" },
+  executed: { label: "Verkställd", color: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-[#1D9E75]" },
   archived: { label: "Arkiverad", color: "bg-muted text-muted-foreground" },
   cancelled: { label: "Avbruten", color: "bg-destructive/10 text-destructive" },
 };

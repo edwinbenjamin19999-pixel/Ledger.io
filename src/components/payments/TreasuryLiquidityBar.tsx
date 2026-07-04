@@ -43,12 +43,12 @@ export function TreasuryLiquidityBar({
   const total = overdue + in7 + in30 + later || 1;
 
   return (
-    <div className="rounded-2xl border border-slate-100 bg-white shadow-sm border-l-[3px] border-l-[#000000] overflow-hidden">
+    <div className="rounded-2xl border border-slate-100 bg-white shadow-sm border-l-[3px] border-l-[#3b82f6] overflow-hidden">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-100">
         <Metric
           label="Banksaldo"
           value={`${fmt(bankBalance.total)} kr`}
-          icon={<Wallet className="h-3.5 w-3.5 text-[#000000]" />}
+          icon={<Wallet className="h-3.5 w-3.5 text-[#3b82f6]" />}
           extra={
             <BankSyncStatus
               accounts={bankBalance.accounts}
@@ -101,15 +101,15 @@ export function TreasuryLiquidityBar({
           <span className="text-[11px] tabular-nums text-slate-600">{fmt(total)} kr</span>
         </div>
         <div className="flex h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
-          {overdue > 0 && <div className="bg-neutral-700" style={{ width: `${(overdue / total) * 100}%` }} />}
-          {in7 > 0 && <div className="bg-neutral-700" style={{ width: `${(in7 / total) * 100}%` }} />}
-          {in30 > 0 && <div className="bg-[#000000]" style={{ width: `${(in30 / total) * 100}%` }} />}
+          {overdue > 0 && <div className="bg-rose-500" style={{ width: `${(overdue / total) * 100}%` }} />}
+          {in7 > 0 && <div className="bg-amber-500" style={{ width: `${(in7 / total) * 100}%` }} />}
+          {in30 > 0 && <div className="bg-[#3b82f6]" style={{ width: `${(in30 / total) * 100}%` }} />}
           {later > 0 && <div className="bg-slate-400" style={{ width: `${(later / total) * 100}%` }} />}
         </div>
         <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[11px] text-slate-500">
-          <Legend dot="bg-neutral-700" label="Förfallna" value={overdue} />
-          <Legend dot="bg-neutral-700" label="≤ 7d" value={in7} />
-          <Legend dot="bg-[#000000]" label="≤ 30d" value={in30} />
+          <Legend dot="bg-rose-500" label="Förfallna" value={overdue} />
+          <Legend dot="bg-amber-500" label="≤ 7d" value={in7} />
+          <Legend dot="bg-[#3b82f6]" label="≤ 30d" value={in30} />
           <Legend dot="bg-slate-400" label="Senare" value={later} />
         </div>
       </div>

@@ -171,7 +171,7 @@ function VersionRow({ v, onRestore, onDiffA, onDiffB, isA, isB }: {
     <div className="flex items-center justify-between border rounded-md p-2.5 text-sm hover:bg-muted/40">
       <div className="min-w-0">
         <div className="flex items-center gap-2">
-          {isNamed && <Pin className="h-3 w-3 text-black" />}
+          {isNamed && <Pin className="h-3 w-3 text-blue-600" />}
           <span className="font-medium truncate">{v.label || `v${v.version_number}`}</span>
           <Badge variant="outline" className="text-[10px]">{v.status}</Badge>
         </div>
@@ -215,7 +215,7 @@ function DiffView({ a, b, onClose }: { a: ARVersion; b: ARVersion; onClose: () =
             <div key={`r-${i}`} className="bg-red-50 text-red-900 px-2 py-0.5">- {l}</div>
           ))}
           {added.slice(0, 200).map((l, i) => (
-            <div key={`a-${i}`} className="bg-neutral-100 text-neutral-700 px-2 py-0.5">+ {l}</div>
+            <div key={`a-${i}`} className="bg-emerald-50 text-emerald-900 px-2 py-0.5">+ {l}</div>
           ))}
           {(removed.length > 200 || added.length > 200) && (
             <div className="text-muted-foreground py-1">… (förkortad)</div>

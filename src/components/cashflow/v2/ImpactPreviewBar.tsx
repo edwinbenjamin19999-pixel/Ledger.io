@@ -28,7 +28,7 @@ export function ImpactPreviewBar({
 }: Props) {
   if (pending.length === 0) {
     return (
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 rounded-full bg-[#000000] text-white px-4 py-2 shadow-lg flex items-center gap-2 text-xs">
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 rounded-full bg-[#3b82f6] text-white px-4 py-2 shadow-lg flex items-center gap-2 text-xs">
         <Beaker className="h-3.5 w-3.5" />
         Förhandsläge aktivt — välj åtgärder för att simulera effekten
       </div>
@@ -39,7 +39,7 @@ export function ImpactPreviewBar({
     <div className="fixed bottom-4 left-4 right-4 z-40 max-w-5xl mx-auto rounded-2xl border bg-background/95 backdrop-blur shadow-lg">
       <div className="p-4 flex items-center gap-4 flex-wrap">
         <div className="flex items-center gap-2">
-          <Beaker className="h-4 w-4 text-[#000000]" />
+          <Beaker className="h-4 w-4 text-[#3b82f6]" />
           <span className="text-xs font-semibold uppercase tracking-wide">
             {pending.length} simulerade åtgärder
           </span>
@@ -77,7 +77,7 @@ export function ImpactPreviewBar({
           </Button>
           <Button
             size="sm"
-            className="bg-[#000000] hover:bg-[#000000] text-white"
+            className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
             onClick={onApplyAll}
             disabled={applying}
           >

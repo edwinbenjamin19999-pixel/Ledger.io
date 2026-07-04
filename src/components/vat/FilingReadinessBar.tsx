@@ -72,8 +72,8 @@ export function FilingReadinessBar({
               <Badge variant="outline" className={cn(
                 "gap-1.5 font-medium",
                 hasCriticalIssues
-                  ? "border-[#F4C8C8] text-[#7A1A1A] dark:border-neutral-700 dark:text-[#C73838]"
-                  : "border-[#F0DDB7] text-[#7A5417] dark:border-neutral-700 dark:text-[#C28A2B]"
+                  ? "border-[#F4C8C8] text-[#7A1A1A] dark:border-rose-700 dark:text-[#C73838]"
+                  : "border-[#F0DDB7] text-[#7A5417] dark:border-amber-700 dark:text-[#C28A2B]"
               )}>
                 <AlertTriangle className="w-3 h-3" />
                 {unresolvedCount} olöst{unresolvedCount === 1 ? "" : "a"}
@@ -82,14 +82,14 @@ export function FilingReadinessBar({
 
             {/* Overrides indicator */}
             {hasOverrides && (
-              <Badge variant="outline" className="gap-1.5 border-black text-black dark:border-black dark:text-[#1E3A5F]">
+              <Badge variant="outline" className="gap-1.5 border-blue-300 text-blue-700 dark:border-blue-700 dark:text-[#1E3A5F]">
                 <Lock className="w-3 h-3" /> Justerad
               </Badge>
             )}
 
             {/* Ready badge */}
             {!hasCriticalIssues && unresolvedCount === 0 && confidence !== null && confidence >= 85 && (
-              <Badge className="gap-1.5 bg-[#1D9E75] hover:bg-neutral-700">
+              <Badge className="gap-1.5 bg-[#1D9E75] hover:bg-emerald-600">
                 <CheckCircle2 className="w-3 h-3" /> Redo
               </Badge>
             )}
@@ -112,7 +112,7 @@ export function FilingReadinessBar({
                 size="sm"
                 variant="outline"
                 onClick={onBookSettlement}
-                className="gap-1.5 border-[#F0DDB7] text-[#7A5417] hover:bg-[#FAEEDA] dark:border-neutral-700 dark:text-[#C28A2B] dark:hover:bg-amber-950/30"
+                className="gap-1.5 border-[#F0DDB7] text-[#7A5417] hover:bg-[#FAEEDA] dark:border-amber-700 dark:text-[#C28A2B] dark:hover:bg-amber-950/30"
               >
                 <Wallet className="w-3.5 h-3.5" />
                 Bokför momsavräkning
@@ -125,7 +125,7 @@ export function FilingReadinessBar({
                 size="sm"
                 variant="outline"
                 onClick={onRegisterPayment}
-                className="gap-1.5 border-[#BFE6D6] text-[#085041] hover:bg-[#E1F5EE] dark:border-neutral-700 dark:text-[#1D9E75] dark:hover:bg-emerald-950/30"
+                className="gap-1.5 border-[#BFE6D6] text-[#085041] hover:bg-[#E1F5EE] dark:border-emerald-700 dark:text-[#1D9E75] dark:hover:bg-emerald-950/30"
               >
                 <Receipt className="w-3.5 h-3.5" />
                 {vatPayable >= 0 ? "Registrera betalning" : "Registrera återbetalning"}
@@ -146,7 +146,7 @@ export function FilingReadinessBar({
                 "gap-1.5 shadow-md",
                 blockSubmit
                   ? "bg-slate-400 hover:bg-slate-400 cursor-not-allowed"
-                  : "bg-gradient-to-r from-[#1E3A5F] to-[#0F1F3D] hover:from-[#000000] hover:to-[#000000]"
+                  : "bg-gradient-to-r from-[#1E3A5F] to-[#0F1F3D] hover:from-[#3b82f6] hover:to-[#3b82f6]"
               )}
               title={blockSubmit ? "Lös kritiska problem innan inlämning" : undefined}
             >

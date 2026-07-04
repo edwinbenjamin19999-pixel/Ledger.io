@@ -268,12 +268,12 @@ export function sparklinePath(values: number[], width = 80, height = 20): string
 
 // Cash heatmap color
 export function cashHeatColor(value: number, avgMonthlyCost: number): string {
-  if (avgMonthlyCost === 0) return "bg-neutral-100";
+  if (avgMonthlyCost === 0) return "bg-emerald-100";
   const ratio = value / avgMonthlyCost;
   if (ratio < 0) return "bg-red-600 text-white";
   if (ratio < 0.5) return "bg-red-400 text-white";
   if (ratio < 1) return "bg-orange-400 text-white";
-  if (ratio < 2) return "bg-neutral-300";
-  if (ratio < 3) return "bg-neutral-300";
-  return "bg-neutral-700 text-white";
+  if (ratio < 2) return "bg-amber-300";
+  if (ratio < 3) return "bg-emerald-300";
+  return "bg-emerald-500 text-white";
 }

@@ -227,7 +227,7 @@ export const Stage2DataCollection = ({ groupId, periodId, onComplete }: Stage2Pr
       {allImported && (
         <Alert className="border-[#BFE6D6] bg-[#E1F5EE] dark:bg-green-950/20">
           <CheckCircle2 className="w-4 h-4 text-[#085041]" />
-          <AlertDescription className="text-[#085041] dark:text-neutral-300">
+          <AlertDescription className="text-[#085041] dark:text-green-300">
             Alla {companies.length} bolag importerade — Klar att konsolidera
           </AlertDescription>
         </Alert>
@@ -282,7 +282,7 @@ export const Stage2DataCollection = ({ groupId, periodId, onComplete }: Stage2Pr
                     <TableCell className="text-right tabular-nums">{formatSEK(totalCredit)}</TableCell>
                     <TableCell>
                       {status === "ok" && (
-                        <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]">
+                        <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-green-900/30 dark:text-[#1D9E75]">
                           <CheckCircle2 className="w-3 h-3 mr-1" />
                           {source === "native" ? "Hämtad automatiskt" : "Importerad"}
                         </Badge>

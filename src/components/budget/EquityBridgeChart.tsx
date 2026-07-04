@@ -34,15 +34,15 @@ export function EquityBridgeChart({ equity, cash, totalAssets }: EquityBridgeCha
         </defs>
         <XAxis dataKey="name" hide />
         <YAxis hide />
-        {hasNegative && <ReferenceLine y={0} stroke="#525252" strokeDasharray="4 4" strokeWidth={1} />}
+        {hasNegative && <ReferenceLine y={0} stroke="#ef4444" strokeDasharray="4 4" strokeWidth={1} />}
         <Tooltip
           contentStyle={{ fontSize: 11, borderRadius: 8, border: "1px solid #e2e8f0", boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
           formatter={(value: number, name: string) => [formatTip(value), name === "equity" ? "Eget kapital" : name === "cash" ? "Likvida medel" : "Tillgångar"]}
           labelFormatter={(label) => label}
         />
         <Area type="monotone" dataKey="assets" fill="url(#assetsFill)" stroke="#94a3b8" strokeWidth={1} dot={false} />
-        <Line type="monotone" dataKey="equity" stroke="#000000" strokeWidth={2} dot={false} />
-        <Line type="monotone" dataKey="cash" stroke="#000000" strokeWidth={2} dot={false} />
+        <Line type="monotone" dataKey="equity" stroke="#10b981" strokeWidth={2} dot={false} />
+        <Line type="monotone" dataKey="cash" stroke="#3b82f6" strokeWidth={2} dot={false} />
       </ComposedChart>
     </ResponsiveContainer>
   );

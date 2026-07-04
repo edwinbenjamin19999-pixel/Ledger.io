@@ -21,7 +21,7 @@ const SIE_FORMATS = [
 ];
 
 const PREVIEW_LINES = `#FLAGGA 0
-#PROGRAM "Bokfy" 2.0
+#PROGRAM "Cogniq" 2.0
 #FORMAT PC8
 #GEN 20260410
 #SIETYP 4
@@ -102,8 +102,8 @@ export const SIEExportPanel = ({ companyId, companyName }: SIEExportPanelProps) 
                       <button
                         onClick={() => setSieFormat(f.value)}
                         className={`rounded-xl px-3 py-2 text-sm font-medium border transition-all ${ sieFormat === f.value
-                            ? "bg-neutral-700 text-white border-neutral-700 shadow-sm"
-                            : "bg-card text-foreground border-border hover:border-neutral-300 hover:text-neutral-700"
+                            ? "bg-indigo-600 text-white border-indigo-600 shadow-sm"
+                            : "bg-card text-foreground border-border hover:border-indigo-300 hover:text-indigo-600"
                         }`}
                       >
                         {f.label}
@@ -122,7 +122,7 @@ export const SIEExportPanel = ({ companyId, companyName }: SIEExportPanelProps) 
           <div className="space-y-2">
             <label className="text-sm font-semibold text-foreground">Räkenskapsår</label>
             <Select value={selectedYear} onValueChange={setSelectedYear}>
-              <SelectTrigger className="rounded-xl border-border focus:ring-2 focus:ring-neutral-700/20 focus:border-neutral-700">
+              <SelectTrigger className="rounded-xl border-border focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-400">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -143,7 +143,7 @@ export const SIEExportPanel = ({ companyId, companyName }: SIEExportPanelProps) 
           <Button
             onClick={handleExport}
             disabled={exporting}
-            className="w-full h-12 text-base font-semibold rounded-xl bg-[#0F1F3D] hover:from-neutral-700 hover:to-neutral-700"
+            className="w-full h-12 text-base font-semibold rounded-xl bg-[#0F1F3D] hover:from-indigo-700 hover:to-violet-700"
           >
             {exporting ? (
               <>

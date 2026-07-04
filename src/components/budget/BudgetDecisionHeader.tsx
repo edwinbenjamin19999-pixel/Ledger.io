@@ -46,7 +46,7 @@ export function BudgetDecisionHeader({
   const status = statusFor(deltaPct, isCost);
   const Trend = delta > 0 ? ArrowUpRight : delta < 0 ? ArrowDownRight : Minus;
   const trendColor = (isCost ? delta < 0 : delta > 0) ? "text-[#085041]" : delta === 0 ? "text-slate-400" : "text-[#7A1A1A]";
-  const realismDot = realism.status === "ok" ? "bg-neutral-700" : realism.status === "warning" ? "bg-neutral-700" : "bg-red-500";
+  const realismDot = realism.status === "ok" ? "bg-emerald-500" : realism.status === "warning" ? "bg-amber-500" : "bg-red-500";
 
   return (
     <div className="rounded-2xl border bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] p-4 space-y-3">
@@ -60,7 +60,7 @@ export function BudgetDecisionHeader({
               className={cn(
                 "px-3 py-1 rounded-full text-xs font-medium border transition-colors",
                 activeKpi === k
-                  ? "bg-[#000000] text-white border-black"
+                  ? "bg-[#3b82f6] text-white border-blue-600"
                   : "bg-white text-slate-600 border-slate-200 hover:border-slate-300"
               )}
             >

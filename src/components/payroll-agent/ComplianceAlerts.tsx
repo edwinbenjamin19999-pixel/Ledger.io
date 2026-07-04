@@ -72,14 +72,14 @@ export const ComplianceAlerts = ({ employees, companyId }: ComplianceAlertsProps
 
   const iconMap = { error: <AlertTriangle className="h-4 w-4 text-destructive" />,
     warning: <AlertTriangle className="h-4 w-4 text-[#7A5417]" />,
-    info: <Info className="h-4 w-4 text-black" />,
+    info: <Info className="h-4 w-4 text-blue-500" />,
     success: <CheckCircle className="h-4 w-4 text-[#085041]" />,
   };
 
   const bgMap = { error: "border-destructive/30 bg-destructive/5",
     warning: "border-[#F0DDB7] bg-[#FAEEDA] dark:bg-yellow-950/10",
     info: "border-[#C8DDF5] bg-[#EFF6FF] dark:bg-blue-950/10",
-    success: "border-neutral-700/30 bg-[#E1F5EE] dark:bg-green-950/10",
+    success: "border-green-500/30 bg-[#E1F5EE] dark:bg-green-950/10",
   };
 
   return (

@@ -18,7 +18,7 @@ export default function FrameworkSwitchDialog({ open, fromFramework, toFramework
       <DialogContent className="max-w-lg">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5 text-neutral-700" />
+            <AlertTriangle className="h-5 w-5 text-amber-500" />
             Byt regelverk: {fromFramework} → {toFramework}
           </DialogTitle>
         </DialogHeader>
@@ -28,20 +28,20 @@ export default function FrameworkSwitchDialog({ open, fromFramework, toFramework
           </p>
           {switchingToK3 ? (
             <ul className="space-y-1.5">
-              <li className="flex gap-2"><span className="text-neutral-700">✗</span> Obeskattade reserver tas bort från BR (omklassas till EK och uppskjuten skatt)</li>
-              <li className="flex gap-2"><span className="text-neutral-700">+</span> Uppskjuten skatt tillkommer (på alla temporära skillnader)</li>
-              <li className="flex gap-2"><span className="text-neutral-700">+</span> Ny OCI-sektion i resultaträkningen</li>
-              <li className="flex gap-2"><span className="text-neutral-700">+</span> Leasingavtal aktiveras på balansräkningen (ROU-tillgång + leasingskuld)</li>
-              <li className="flex gap-2"><span className="text-neutral-700">+</span> 12 ytterligare obligatoriska noter tillkommer</li>
-              <li className="flex gap-2"><span className="text-neutral-700">+</span> Kassaflödesanalys blir obligatorisk</li>
+              <li className="flex gap-2"><span className="text-rose-500">✗</span> Obeskattade reserver tas bort från BR (omklassas till EK och uppskjuten skatt)</li>
+              <li className="flex gap-2"><span className="text-amber-500">+</span> Uppskjuten skatt tillkommer (på alla temporära skillnader)</li>
+              <li className="flex gap-2"><span className="text-amber-500">+</span> Ny OCI-sektion i resultaträkningen</li>
+              <li className="flex gap-2"><span className="text-amber-500">+</span> Leasingavtal aktiveras på balansräkningen (ROU-tillgång + leasingskuld)</li>
+              <li className="flex gap-2"><span className="text-amber-500">+</span> 12 ytterligare obligatoriska noter tillkommer</li>
+              <li className="flex gap-2"><span className="text-amber-500">+</span> Kassaflödesanalys blir obligatorisk</li>
             </ul>
           ) : (
             <ul className="space-y-1.5">
-              <li className="flex gap-2"><span className="text-neutral-700">✗</span> Uppskjuten skatt tas bort från BR</li>
-              <li className="flex gap-2"><span className="text-neutral-700">✗</span> Leasingredovisningen återgår till kostnadsföring (ROU-tillgång tas bort)</li>
-              <li className="flex gap-2"><span className="text-neutral-700">✗</span> OCI-sektionen i RR tas bort</li>
-              <li className="flex gap-2"><span className="text-neutral-700">✗</span> Kassaflödesanalys blir frivillig</li>
-              <li className="flex gap-2"><span className="text-neutral-700">+</span> Obeskattade reserver kan användas igen</li>
+              <li className="flex gap-2"><span className="text-rose-500">✗</span> Uppskjuten skatt tas bort från BR</li>
+              <li className="flex gap-2"><span className="text-rose-500">✗</span> Leasingredovisningen återgår till kostnadsföring (ROU-tillgång tas bort)</li>
+              <li className="flex gap-2"><span className="text-rose-500">✗</span> OCI-sektionen i RR tas bort</li>
+              <li className="flex gap-2"><span className="text-rose-500">✗</span> Kassaflödesanalys blir frivillig</li>
+              <li className="flex gap-2"><span className="text-amber-500">+</span> Obeskattade reserver kan användas igen</li>
             </ul>
           )}
           <p className="text-xs text-muted-foreground bg-muted/40 p-3 rounded">

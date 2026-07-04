@@ -149,7 +149,7 @@ export function HRPayrollBaseTab({ companyId }: Props) {
           style={{
             background: status === "Exporterad" ? "#E1F5EE" : status === "Klar för export" ? "#FAEEDA" : "#EFF6FF",
             color: status === "Exporterad" ? "#085041" : status === "Klar för export" ? "#412402" : "#0C447C",
-            border: `0.5px solid ${status === "Exporterad" ? "#5DCAA5" : status === "Klar för export" ? "#525252" : "#85B7EB"}`,
+            border: `0.5px solid ${status === "Exporterad" ? "#5DCAA5" : status === "Klar för export" ? "#EF9F27" : "#85B7EB"}`,
           }}
         >
           {status}
@@ -208,7 +208,7 @@ export function HRPayrollBaseTab({ companyId }: Props) {
         className="rounded-[12px] p-4 relative overflow-hidden"
         style={{ background: "#FAFBFC", border: "0.5px solid #DFE4EA" }}
       >
-        <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#000000" }} />
+        <div className="absolute top-0 left-0 right-0" style={{ height: "1.5px", background: "#0040CC" }} />
         <div className="text-[10px] font-medium uppercase tracking-[0.07em] text-[#94A3B8] mb-3">
           Total arbetsgivarkostnad
         </div>
@@ -232,7 +232,7 @@ export function HRPayrollBaseTab({ companyId }: Props) {
         </div>
         <button
           onClick={() => toast.info("Kontrollerar mot konto 7000-7699...")}
-          className="mt-3 text-[11px] text-[#000000] hover:underline"
+          className="mt-3 text-[11px] text-[#0040CC] hover:underline"
         >
           Kontrollera mot bokföring →
         </button>
@@ -242,7 +242,7 @@ export function HRPayrollBaseTab({ companyId }: Props) {
       <div className="flex flex-wrap items-center gap-2">
         <button
           onClick={exportExcel}
-          className="text-[12px] inline-flex items-center gap-1.5 px-3 py-[7px] rounded-[8px] bg-[#000000] text-[#E6F4FA]"
+          className="text-[12px] inline-flex items-center gap-1.5 px-3 py-[7px] rounded-[8px] bg-[#0040CC] text-[#E6F4FA]"
         >
           <FileSpreadsheet className="h-3.5 w-3.5" /> Exportera lönunderlag (Excel)
         </button>

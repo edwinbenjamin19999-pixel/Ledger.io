@@ -9,9 +9,9 @@ import { formatSEK } from "@/lib/formatNumber";
 import { cn } from "@/lib/utils";
 
 const TIER_CFG = {
-  critical: { dot: "bg-neutral-700", ring: "ring-neutral-700/30", label: "Kritisk", chip: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-neutral-300" },
+  critical: { dot: "bg-rose-500", ring: "ring-rose-500/30", label: "Kritisk", chip: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-rose-300" },
   high: { dot: "bg-orange-500", ring: "ring-orange-500/30", label: "Hög", chip: "bg-orange-500/10 text-orange-700 dark:text-orange-300" },
-  medium: { dot: "bg-neutral-700", ring: "ring-neutral-700/30", label: "Medium", chip: "bg-[#FAEEDA] text-[#7A5417] dark:text-neutral-300" },
+  medium: { dot: "bg-amber-500", ring: "ring-amber-500/30", label: "Medium", chip: "bg-[#FAEEDA] text-[#7A5417] dark:text-amber-300" },
   low: { dot: "bg-slate-400", ring: "ring-slate-400/20", label: "Låg", chip: "bg-slate-500/10 text-slate-700 dark:text-slate-300" },
 } as const;
 
@@ -40,7 +40,7 @@ export function TopPrioritiesSection({ companyId }: Props) {
         </div>
         {data?.counts && (
           <div className="flex items-center gap-1.5 text-[11px]">
-            {data.counts.critical > 0 && <Badge className="bg-neutral-700 text-white border-0">{data.counts.critical} kritiska</Badge>}
+            {data.counts.critical > 0 && <Badge className="bg-rose-500 text-white border-0">{data.counts.critical} kritiska</Badge>}
             {data.counts.high > 0 && <Badge className="bg-orange-500 text-white border-0">{data.counts.high} höga</Badge>}
             {data.counts.medium > 0 && <Badge variant="outline">{data.counts.medium} medium</Badge>}
           </div>

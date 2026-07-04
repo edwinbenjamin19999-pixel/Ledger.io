@@ -307,7 +307,7 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
               addFiles(Array.from(e.dataTransfer.files));
             }}
             className={`bg-white border-2 border-dashed rounded-xl p-10 text-center transition-colors ${
-              dragOver ? "border-[#000000] bg-[#F5F9FF]" : "border-[#E2E8F0]"
+              dragOver ? "border-[#0040CC] bg-[#F5F9FF]" : "border-[#E2E8F0]"
             }`}
           >
             <Upload className="h-8 w-8 mx-auto text-muted-foreground mb-3" />
@@ -346,7 +346,7 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
                     size="sm"
                     onClick={handleAnalyze}
                     disabled={analyzing || importing}
-                    className="bg-[#000000] hover:bg-[#093e56]"
+                    className="bg-[#0040CC] hover:bg-[#093e56]"
                   >
                     {analyzing ? (
                       <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Analyserar... {progress}%</>
@@ -407,7 +407,7 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
                     : conf >= 85
                     ? ""
                     : conf >= 70
-                    ? "bg-neutral-100/40"
+                    ? "bg-amber-50/40"
                     : conf > 0
                     ? "bg-red-50/40"
                     : "";
@@ -493,9 +493,9 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
                           <Badge
                             className={
                               conf >= 85
-                                ? "bg-neutral-100 text-neutral-700"
+                                ? "bg-emerald-100 text-emerald-800"
                                 : conf >= 70
-                                ? "bg-neutral-100 text-neutral-700"
+                                ? "bg-amber-100 text-amber-800"
                                 : "bg-red-100 text-red-800"
                             }
                           >
@@ -506,12 +506,12 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
                       <TableCell>
                         {f.status === "pending" && <Badge variant="secondary">Väntar</Badge>}
                         {f.status === "processing" && (
-                          <Badge className="bg-neutral-200 text-blue-800">
+                          <Badge className="bg-blue-100 text-blue-800">
                             <Loader2 className="h-3 w-3 mr-1 animate-spin" />Bearbetar
                           </Badge>
                         )}
                         {f.status === "done" && !f.duplicate?.isDuplicate && !f.duplicate?.isPossibleDuplicate && (
-                          <Badge className="bg-neutral-100 text-neutral-700">
+                          <Badge className="bg-emerald-100 text-emerald-800">
                             <CheckCircle2 className="h-3 w-3 mr-1" />Klar
                           </Badge>
                         )}
@@ -521,7 +521,7 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
                           </Badge>
                         )}
                         {f.duplicate?.isPossibleDuplicate && !f.duplicate?.isDuplicate && (
-                          <Badge className="bg-neutral-100 text-neutral-700">
+                          <Badge className="bg-amber-100 text-amber-800">
                             <AlertTriangle className="h-3 w-3 mr-1" />Möjlig dubblett
                           </Badge>
                         )}
@@ -559,7 +559,7 @@ export const MigrationPDFImport = ({ companyId, onImported }: Props) => {
               <Button
                 onClick={handleImport}
                 disabled={importing}
-                className="bg-[#000000] hover:bg-[#093e56]"
+                className="bg-[#0040CC] hover:bg-[#093e56]"
               >
                 {importing ? (
                   <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Importerar...</>

@@ -93,7 +93,7 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
 
       {isEmpty ? (
         // ============ EMPTY STATE HERO ============
-        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] border border-slate-800 p-10 md:p-14 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.25)]">
+        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] border border-slate-800 p-10 md:p-14 shadow-[0_8px_40px_-12px_rgba(0,82,255,0.25)]">
           {/* Cyan glow accent */}
           <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#EFF6FF] blur-3xl pointer-events-none" />
           <div className="absolute top-0 left-0 w-1 h-full bg-[#0F1F3D]" />
@@ -101,7 +101,7 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
           <div className="relative max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#C8DDF5] mb-5">
               <Sparkles className="h-3.5 w-3.5 text-[#1E3A5F]" />
-              <span className="text-xs font-medium text-[#000000] tracking-wide">REVENUE INTELLIGENCE</span>
+              <span className="text-xs font-medium text-[#3b82f6] tracking-wide">REVENUE INTELLIGENCE</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
               Lägg till din första återkommande intäktsström
@@ -110,7 +110,7 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
               AI genererar fakturor, intäkter och prognoser automatiskt — du gör inget.
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
-              <Button size="lg" onClick={() => setShowForm(true)} className="bg-[#000000] hover:bg-[#000000] text-slate-950 font-semibold shadow-lg shadow-[#000000]/20">
+              <Button size="lg" onClick={() => setShowForm(true)} className="bg-[#3b82f6] hover:bg-[#3b82f6] text-slate-950 font-semibold shadow-lg shadow-[#3b82f6]/20">
                 <Plus className="h-4 w-4 mr-1.5" />Lägg till återkommande intäktsström
               </Button>
               <Button size="lg" variant="outline" onClick={() => setShowExamples(true)} className="border-slate-700 bg-slate-900/50 text-slate-200 hover:bg-slate-800 hover:text-white">
@@ -142,10 +142,10 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="bg-slate-100/60 dark:bg-slate-900/60 p-1 rounded-full">
-              <TabsTrigger value="overview" className="rounded-full data-[state=active]:bg-[#000000] data-[state=active]:text-white data-[state=active]:shadow-sm">Översikt</TabsTrigger>
-              <TabsTrigger value="contracts" className="rounded-full data-[state=active]:bg-[#000000] data-[state=active]:text-white data-[state=active]:shadow-sm">Avtal</TabsTrigger>
-              <TabsTrigger value="timeline" className="rounded-full data-[state=active]:bg-[#000000] data-[state=active]:text-white data-[state=active]:shadow-sm">Tidslinje</TabsTrigger>
-              <TabsTrigger value="forecast" className="rounded-full data-[state=active]:bg-[#000000] data-[state=active]:text-white data-[state=active]:shadow-sm">Prognos</TabsTrigger>
+              <TabsTrigger value="overview" className="rounded-full data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white data-[state=active]:shadow-sm">Översikt</TabsTrigger>
+              <TabsTrigger value="contracts" className="rounded-full data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white data-[state=active]:shadow-sm">Avtal</TabsTrigger>
+              <TabsTrigger value="timeline" className="rounded-full data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white data-[state=active]:shadow-sm">Tidslinje</TabsTrigger>
+              <TabsTrigger value="forecast" className="rounded-full data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white data-[state=active]:shadow-sm">Prognos</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-6 pt-4">
@@ -183,12 +183,12 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
                       ) : (
                         <div className="space-y-2">
                           {upcomingRenewals.map(({ c, days }) => (
-                            <button key={c.id} onClick={() => setSelectedContract(c)} className="w-full text-left p-2.5 rounded-lg border border-slate-200/60 hover:bg-[#000000]/[0.04] transition-colors flex items-center justify-between gap-3">
+                            <button key={c.id} onClick={() => setSelectedContract(c)} className="w-full text-left p-2.5 rounded-lg border border-slate-200/60 hover:bg-[#3b82f6]/[0.04] transition-colors flex items-center justify-between gap-3">
                               <div className="min-w-0">
                                 <p className="text-sm font-medium truncate">{c.title}</p>
                                 <p className="text-[11px] text-muted-foreground truncate">{c.customer?.name || "—"}</p>
                               </div>
-                              <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 ${days <= 14 ? 'bg-[#FCE8E8] text-[#7A1A1A] dark:bg-rose-950/30 dark:text-neutral-300' : days <= 30 ? 'bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-950/30 dark:text-neutral-300' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'}`}>
+                              <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 ${days <= 14 ? 'bg-[#FCE8E8] text-[#7A1A1A] dark:bg-rose-950/30 dark:text-rose-300' : days <= 30 ? 'bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-950/30 dark:text-amber-300' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'}`}>
                                 {days}d
                               </span>
                             </button>
@@ -275,7 +275,7 @@ function ExamplesDialog({ open, onOpenChange, onCreate }: { open: boolean; onOpe
         <DialogHeader>
           <div className="flex items-center gap-2">
             <DialogTitle>Exempel: Återkommande intäktsströmmar</DialogTitle>
-            <Badge variant="outline" className="bg-neutral-100 text-neutral-700 border-neutral-300 text-[10px]">EXEMPELDATA</Badge>
+            <Badge variant="outline" className="bg-amber-50 text-amber-800 border-amber-200 text-[10px]">EXEMPELDATA</Badge>
           </div>
           <DialogDescription>
             Så här ser vyn ut med 3 avtal. Inga riktiga avtal skapas — stäng dialogen för att gå tillbaka till tomt läge.
@@ -285,7 +285,7 @@ function ExamplesDialog({ open, onOpenChange, onCreate }: { open: boolean; onOpe
         <div className="grid grid-cols-3 gap-3">
           <div className="rounded-xl border border-slate-200 p-3"><p className="text-[11px] uppercase text-slate-500">MRR</p><p className="text-xl font-bold tabular-nums">{fmtSek(totalMRR)}</p></div>
           <div className="rounded-xl border border-slate-200 p-3"><p className="text-[11px] uppercase text-slate-500">ARR</p><p className="text-xl font-bold tabular-nums">{fmtSek(totalARR)}</p></div>
-          <div className="rounded-xl border border-slate-200 p-3"><p className="text-[11px] uppercase text-slate-500">Churn-risk</p><p className="text-xl font-bold tabular-nums text-neutral-700">{highChurn.length} avtal</p></div>
+          <div className="rounded-xl border border-slate-200 p-3"><p className="text-[11px] uppercase text-slate-500">Churn-risk</p><p className="text-xl font-bold tabular-nums text-rose-700">{highChurn.length} avtal</p></div>
         </div>
 
         <div className="space-y-2">
@@ -294,7 +294,7 @@ function ExamplesDialog({ open, onOpenChange, onCreate }: { open: boolean; onOpe
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
                   <p className="text-sm font-semibold truncate">{c.title}</p>
-                  {c.churn >= 70 && <Badge variant="outline" className="bg-neutral-100 text-neutral-700 border-neutral-300 text-[10px]"><AlertTriangle className="h-3 w-3 mr-1" />Churn {c.churn}%</Badge>}
+                  {c.churn >= 70 && <Badge variant="outline" className="bg-rose-50 text-rose-700 border-rose-200 text-[10px]"><AlertTriangle className="h-3 w-3 mr-1" />Churn {c.churn}%</Badge>}
                 </div>
                 <p className="text-xs text-slate-500">{c.customer} · {c.interval} · Nästa faktura {c.next}</p>
               </div>
@@ -307,7 +307,7 @@ function ExamplesDialog({ open, onOpenChange, onCreate }: { open: boolean; onOpe
         </div>
 
         {highChurn.length > 0 && (
-          <div className="rounded-xl border border-neutral-300 bg-neutral-100/60 p-3 text-xs text-neutral-700">
+          <div className="rounded-xl border border-rose-200 bg-rose-50/60 p-3 text-xs text-rose-900">
             <strong>Churn-radar:</strong> {highChurn.length} avtal har förhöjd churn-risk. Systemet varnar dig automatiskt 30 dagar innan förnyelse.
           </div>
         )}

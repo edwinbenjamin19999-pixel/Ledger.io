@@ -38,7 +38,7 @@ const tierLabels: Record<string, string> = { mini: "Mini",
   enterprise: "Enterprise",
 };
 
-const statusColors: Record<string, string> = { active: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700 dark:text-neutral-300",
+const statusColors: Record<string, string> = { active: "bg-[#E1F5EE] text-[#085041] dark:bg-green-900 dark:text-green-200",
   trialing: "bg-[#EFF6FF] text-blue-800 dark:bg-blue-900 dark:text-blue-200",
   past_due: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900 dark:text-red-200",
   canceled: "bg-muted text-muted-foreground",
@@ -68,7 +68,7 @@ const AdminDashboard = () => { const { user, loading } = useAuth();
   }, [user]);
 
   const checkAccessAndLoad = async () => { if (!user) return;
-    // Check if user is a platform admin (internal Bokfy team only)
+    // Check if user is a platform admin (internal Cogniq team only)
     const { data: isAdmin } = await supabase.rpc("is_platform_admin", { _user_id: user.id,
     });
 
@@ -242,7 +242,7 @@ const AdminDashboard = () => { const { user, loading } = useAuth();
         </Card>
         <Card>
           <CardContent className="p-4 flex items-center gap-3">
-            <Clock className="h-8 w-8 text-black" />
+            <Clock className="h-8 w-8 text-blue-500" />
             <div>
               <p className="text-2xl font-bold">{totalTrialing}</p>
               <p className="text-xs text-muted-foreground">Trial</p>
@@ -417,7 +417,7 @@ const AdminDashboard = () => { const { user, loading } = useAuth();
             <div>
               <label className="text-sm font-medium">KAM:s e-postadress</label>
               <Input
-                placeholder="kam@bokfy.se"
+                placeholder="kam@cogniq.se"
                 value={kamEmail}
                 onChange={e => setKamEmail(e.target.value)}
               />

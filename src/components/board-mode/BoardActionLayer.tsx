@@ -36,13 +36,13 @@ export const BoardActionLayer = ({
             onClick={() => handle(a.route)}
             className={cn(
               "group text-left rounded-xl border border-gray-200 bg-gray-50 p-5",
-              "hover:bg-white hover:border-[#000000]/40 hover:-translate-y-0.5 transition-all",
+              "hover:bg-white hover:border-[#3b82f6]/40 hover:-translate-y-0.5 transition-all",
               "hover:shadow-md"
             )}
           >
             <p className="text-gray-800 font-medium text-sm leading-snug mb-3">{a.title}</p>
             <p className="text-gray-400 text-[11px] mb-4">{a.impactHint}</p>
-            <span className="inline-flex items-center gap-1 text-[#000000] text-xs font-medium group-hover:gap-2 transition-all">
+            <span className="inline-flex items-center gap-1 text-[#3b82f6] text-xs font-medium group-hover:gap-2 transition-all">
               {a.cta} <ArrowRight className="h-3 w-3" />
             </span>
           </button>

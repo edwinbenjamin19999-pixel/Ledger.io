@@ -114,8 +114,8 @@ export function FirmInvoiceAIPanel({ rows, onAction }: Props) {
               c.severity === "critical"
                 ? "bg-[#FCE8E8] text-[#7A1A1A] ring-red-200"
                 : c.severity === "warning"
-                ? "bg-[#FAEEDA] text-[#7A5417] ring-neutral-300"
-                : "bg-[#E1F5EE] text-[#085041] ring-neutral-300";
+                ? "bg-[#FAEEDA] text-[#7A5417] ring-amber-200"
+                : "bg-[#E1F5EE] text-[#085041] ring-emerald-200";
             return (
               <button
                 key={c.title}

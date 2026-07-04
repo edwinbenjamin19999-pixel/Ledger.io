@@ -7,7 +7,7 @@ interface Props {
 }
 
 const toneFor = (strength: number) => {
-  if (strength >= 1.1) return "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5]";
+  if (strength >= 1.1) return "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]";
   if (strength <= 0.85) return "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]";
   return "bg-slate-50 text-slate-600 border-slate-200";
 };

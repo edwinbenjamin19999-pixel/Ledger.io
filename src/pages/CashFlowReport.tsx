@@ -243,7 +243,7 @@ const CashFlowReport = () => {
                 className={cn(
                   "px-3 py-1 text-xs font-medium rounded-md transition-colors",
                   mode === t.key
-                    ? "bg-[#000000] text-white"
+                    ? "bg-[#3b82f6] text-white"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100",
                 )}
               >
@@ -262,7 +262,7 @@ const CashFlowReport = () => {
                 className={cn(
                   "px-3 py-1 text-xs font-medium rounded-[5px] transition-colors",
                   method === m.key
-                    ? "bg-[#000000] text-white"
+                    ? "bg-[#3b82f6] text-white"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100",
                 )}
                 title={m.key === "indirect"

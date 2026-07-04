@@ -101,12 +101,12 @@ function MiniProgressRing({ percent, size = 40 }: { percent: number; size?: numb
 }
 
 const SDG_GOALS = [
-  { id: 7, name: "Hållbar energi", color: "from-neutral-700 to-yellow-500", target: "100% förnybar el", kpi: "Elförbrukning" },
-  { id: 8, name: "Anständiga arbetsvillkor", color: "from-neutral-700 to-red-600", target: "<3% sjukfrånvaro", kpi: "Sjukfrånvaro" },
-  { id: 12, name: "Hållbar konsumtion", color: "from-neutral-700 to-orange-700", target: "Minska inköp 10%", kpi: "Leverantörsspend" },
-  { id: 13, name: "Bekämpa klimatförändr.", color: "from-neutral-700 to-neutral-700", target: "-50% CO₂ till 2030", kpi: "CO₂ utsläpp" },
-  { id: 5, name: "Jämställdhet", color: "from-red-500 to-neutral-700", target: "40/60 könsfördelning", kpi: "Könsbalans" },
-  { id: 16, name: "Fredliga institutioner", color: "from-blue-600 to-neutral-700", target: "100% efterlevnad", kpi: "Bokföringskvalitet" },
+  { id: 7, name: "Hållbar energi", color: "from-amber-400 to-yellow-500", target: "100% förnybar el", kpi: "Elförbrukning" },
+  { id: 8, name: "Anständiga arbetsvillkor", color: "from-rose-500 to-red-600", target: "<3% sjukfrånvaro", kpi: "Sjukfrånvaro" },
+  { id: 12, name: "Hållbar konsumtion", color: "from-amber-600 to-orange-700", target: "Minska inköp 10%", kpi: "Leverantörsspend" },
+  { id: 13, name: "Bekämpa klimatförändr.", color: "from-emerald-600 to-green-700", target: "-50% CO₂ till 2030", kpi: "CO₂ utsläpp" },
+  { id: 5, name: "Jämställdhet", color: "from-red-500 to-rose-600", target: "40/60 könsfördelning", kpi: "Könsbalans" },
+  { id: 16, name: "Fredliga institutioner", color: "from-blue-600 to-indigo-700", target: "100% efterlevnad", kpi: "Bokföringskvalitet" },
 ];
 
 function SDGCard({ goal, progress, status }: {
@@ -143,7 +143,7 @@ function GradeBadge({ grade }: { grade: string }) {
   const colors: Record<string, string> = {
     "A+": "bg-[#E1F5EE] text-[#085041] dark:text-[#1D9E75] border-[#BFE6D6]",
     "A": "bg-[#E1F5EE] text-[#085041] dark:text-[#1D9E75] border-[#BFE6D6]",
-    "B": "bg-[#EFF6FF] text-black dark:text-[#1E3A5F] border-[#C8DDF5]",
+    "B": "bg-[#EFF6FF] text-blue-600 dark:text-[#1E3A5F] border-[#C8DDF5]",
     "C": "bg-[#FAEEDA] text-[#7A5417] dark:text-[#C28A2B] border-[#F0DDB7]",
     "D": "bg-[#FCE8E8] text-[#7A1A1A] dark:text-[#C73838] border-[#F4C8C8]",
     "F": "bg-[#FCE8E8] text-[#7A1A1A] dark:text-[#C73838] border-[#F4C8C8]",
@@ -231,23 +231,23 @@ const ESGReportingPage = () => {
       <div className="px-8 space-y-6">
         {/* HERO KPI ROW */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <KPICard gradient="from-neutral-700 to-neutral-700" icon={Leaf}
+          <KPICard gradient="from-emerald-600 to-green-700" icon={Leaf}
             value={esg ? <>{formatTon(esg.co2Total)} CO₂e</> : "—"}
             label="CO₂ Utsläpp" subtitle="Scope 1+2+3"
             badge={esg && esg.co2Total < 18.2 ? (
-              <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full mt-1 inline-block bg-[#E1F5EE] text-neutral-300">
+              <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full mt-1 inline-block bg-[#E1F5EE] text-emerald-200">
                 {Math.round((1 - esg.co2Total / 18.2) * 100)}% under snitt
               </span>
             ) : undefined} />
-          <KPICard gradient="from-blue-500 to-[#000000]" icon={Award}
+          <KPICard gradient="from-blue-500 to-[#3b82f6]" icon={Award}
             value={<AnimatedNumber value={scores.total} suffix="/100" />}
             label="ESG Score" subtitle={`E: ${scores.e} | S: ${scores.s} | G: ${scores.g}`}
             extra={<MiniProgressRing percent={scores.total} />} />
-          <KPICard gradient="from-neutral-700 to-purple-700" icon={Target}
+          <KPICard gradient="from-violet-600 to-purple-700" icon={Target}
             value={<>{onTrackCount} av {SDG_GOALS.length} mål</>}
             label="Hållbarhetsmål" subtitle="SDG-relaterade mål"
             extra={<MiniProgressRing percent={(onTrackCount / SDG_GOALS.length) * 100} />} />
-          <KPICard gradient="from-neutral-700 to-orange-600" icon={Calendar}
+          <KPICard gradient="from-amber-500 to-orange-600" icon={Calendar}
             value={<>Om {daysUntilDeadline} dagar</>}
             label="Rapporteringsdeadline" subtitle={`Hållbarhetsrapport ${deadlineDate.getFullYear()}`}
             badge={daysUntilDeadline < 30 ? (

@@ -100,7 +100,7 @@ const TaxMandates = () => {
     if (!company) return;
     setMandateLoading(true);
     try {
-      const mandateText = `FULLMAKT FÖR SKATTEÄRENDEN - Bokfy AB får företräda ${company.name} hos Skatteverket för ${mandateType === 'full' ? 'AGI och moms' : mandateType === 'agi' ? 'AGI' : 'moms'}deklarationer. Accepterat ${new Date().toISOString()}`;
+      const mandateText = `FULLMAKT FÖR SKATTEÄRENDEN - Cogniq AB får företräda ${company.name} hos Skatteverket för ${mandateType === 'full' ? 'AGI och moms' : mandateType === 'agi' ? 'AGI' : 'moms'}deklarationer. Accepterat ${new Date().toISOString()}`;
       const { data, error } = await supabase.functions.invoke('register-tax-mandate', {
         body: { company_id: company.id, mandate_type: mandateType, consent_text: mandateText, consent_ip_address: null }
       });
@@ -171,7 +171,7 @@ const TaxMandates = () => {
 
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case 'active': return <Badge className="bg-neutral-700"><CheckCircle2 className="h-3 w-3 mr-1" />Aktiv</Badge>;
+      case 'active': return <Badge className="bg-green-500"><CheckCircle2 className="h-3 w-3 mr-1" />Aktiv</Badge>;
       case 'pending': return <Badge variant="secondary"><Clock className="h-3 w-3 mr-1" />Väntande</Badge>;
       case 'revoked': return <Badge variant="destructive"><XCircle className="h-3 w-3 mr-1" />Återkallad</Badge>;
       case 'expired': return <Badge variant="outline"><AlertTriangle className="h-3 w-3 mr-1" />Utgången</Badge>;
@@ -372,7 +372,7 @@ const TaxMandates = () => {
               <Alert>
                 <Shield className="h-4 w-4" />
                 <AlertDescription>
-                  Fullmakterna gör det möjligt för Bokfy att automatiskt skicka AGI och momsdeklarationer
+                  Fullmakterna gör det möjligt för Cogniq att automatiskt skicka AGI och momsdeklarationer
                   till Skatteverket för din räkning. Du behåller full kontroll och kan återkalla fullmakten när som helst.
                 </AlertDescription>
               </Alert>

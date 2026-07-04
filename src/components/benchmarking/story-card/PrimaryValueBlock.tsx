@@ -33,7 +33,7 @@ export function PrimaryValueBlock({
             "font-bold tracking-tight tabular-nums leading-none",
             "text-4xl sm:text-[40px]",
             !reliable && "text-muted-foreground/50",
-            simulating && "text-[#000000] dark:text-[#1E3A5F] transition-colors",
+            simulating && "text-[#3b82f6] dark:text-[#1E3A5F] transition-colors",
           )}
         >
           {reliable
@@ -74,13 +74,13 @@ export function PrimaryValueBlock({
             "shrink-0 rounded-full px-3 py-1.5 text-sm font-semibold tabular-nums",
             "border bg-gradient-to-b shadow-sm",
             verdict.tone === "strong" &&
-              "from-neutral-100 to-neutral-100/60 text-[#085041] border-[#BFE6D6] dark:from-emerald-950/60 dark:to-neutral-700/40 dark:text-neutral-300 dark:border-neutral-700",
+              "from-emerald-50 to-emerald-100/60 text-[#085041] border-[#BFE6D6] dark:from-emerald-950/60 dark:to-emerald-900/40 dark:text-emerald-300 dark:border-emerald-800",
             verdict.tone === "watch" &&
-              "from-blue-50 to-blue-100/60 text-[#000000] border-[#C8DDF5] dark:from-blue-950/60 dark:to-blue-900/40 dark:text-[#000000] dark:border-[#000000]",
+              "from-blue-50 to-blue-100/60 text-[#3b82f6] border-[#C8DDF5] dark:from-blue-950/60 dark:to-blue-900/40 dark:text-[#3b82f6] dark:border-[#3b82f6]",
             verdict.tone === "attention" &&
-              "from-neutral-100 to-neutral-100/60 text-[#7A5417] border-[#F0DDB7] dark:from-amber-950/60 dark:to-neutral-700/40 dark:text-neutral-300 dark:border-neutral-700",
+              "from-amber-50 to-amber-100/60 text-[#7A5417] border-[#F0DDB7] dark:from-amber-950/60 dark:to-amber-900/40 dark:text-amber-300 dark:border-amber-800",
             verdict.tone === "critical" &&
-              "from-neutral-100 to-neutral-100/60 text-[#7A1A1A] border-[#F4C8C8] dark:from-rose-950/60 dark:to-neutral-700/40 dark:text-neutral-300 dark:border-neutral-700",
+              "from-rose-50 to-rose-100/60 text-[#7A1A1A] border-[#F4C8C8] dark:from-rose-950/60 dark:to-rose-900/40 dark:text-rose-300 dark:border-rose-800",
           )}
         >
           {percentileLabel(percentile)}

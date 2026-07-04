@@ -160,7 +160,7 @@ export const DeclarationFormView = ({ title, subtitle, breadcrumb, fields, statu
                             <span className="text-primary text-[10px] ml-1">(auto)</span>
                           )}
                           {isModified && (
-                            <span className="text-[10px] text-black ml-1">✎ justerad</span>
+                            <span className="text-[10px] text-blue-500 ml-1">✎ justerad</span>
                           )}
                         </div>
                       </td>
@@ -172,7 +172,7 @@ export const DeclarationFormView = ({ title, subtitle, breadcrumb, fields, statu
                             type="number"
                             value={f.value || ""}
                             onChange={e => onFieldChange(i, Number(e.target.value) || 0)}
-                            className={`h-8 text-right font-mono ${isModified ? "border-black text-black" : ""}`}
+                            className={`h-8 text-right font-mono ${isModified ? "border-blue-500 text-blue-600" : ""}`}
                           />
                         ) : (
                           <span className="font-mono font-semibold">{fmt(f.value)}</span>

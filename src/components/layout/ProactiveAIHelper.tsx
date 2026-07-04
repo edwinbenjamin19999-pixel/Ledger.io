@@ -127,15 +127,15 @@ export const ProactiveAIHelper = () => { const location = useLocation();
     >
       <div className="relative bg-card border border-border rounded-2xl shadow-lg overflow-hidden">
         {/* Accent top bar */}
-        <div className="h-0.5 bg-gradient-to-r from-[#000000] to-[#000000]/40" />
+        <div className="h-0.5 bg-gradient-to-r from-[#3b82f6] to-[#3b82f6]/40" />
 
         <div className="p-4">
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#000000]/10 flex items-center justify-center shrink-0 mt-0.5">
-              <Sparkles className="w-4 h-4 text-[#000000]" />
+            <div className="w-8 h-8 rounded-full bg-[#3b82f6]/10 flex items-center justify-center shrink-0 mt-0.5">
+              <Sparkles className="w-4 h-4 text-[#3b82f6]" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-medium text-[#000000] mb-1">AI-assistent</p>
+              <p className="text-xs font-medium text-[#3b82f6] mb-1">AI-assistent</p>
               <p className="text-sm text-foreground leading-relaxed">{nudge}</p>
             </div>
             <button
@@ -148,7 +148,7 @@ export const ProactiveAIHelper = () => { const location = useLocation();
 
           <button
             onClick={handleOpenAssistant}
-            className="mt-3 w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl text-xs font-medium bg-[#000000]/10 text-[#000000] hover:bg-[#000000]/20 transition-colors"
+            className="mt-3 w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl text-xs font-medium bg-[#3b82f6]/10 text-[#3b82f6] hover:bg-[#3b82f6]/20 transition-colors"
           >
             <MessageCircle className="w-3.5 h-3.5" />
             Öppna chatten

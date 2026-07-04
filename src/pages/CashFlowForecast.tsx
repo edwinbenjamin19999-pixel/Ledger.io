@@ -28,10 +28,10 @@ interface Company { id: string; name: string; }
 const fmt = (n: number) => Math.round(n).toLocaleString("sv-SE");
 
 /* ─── Status pill ─────────────────────────────────────── */
-function StatusPill({ status }: { status: ForecastWeek["status"] }) { const map = { ok: { label: "Ok ✓", cls: "bg-[#ECFDF5] text-[#000000]" },
-    low: { label: "Låg ⚠", cls: "bg-[#FFFBEB] text-[#525252]" },
-    deficit: { label: "Underskott ✗", cls: "bg-[#FEF2F2] text-[#525252]" },
-    recovery: { label: "Återhämtning ↑", cls: "bg-[#EFF6FF] text-[#000000]" },
+function StatusPill({ status }: { status: ForecastWeek["status"] }) { const map = { ok: { label: "Ok ✓", cls: "bg-[#ECFDF5] text-[#059669]" },
+    low: { label: "Låg ⚠", cls: "bg-[#FFFBEB] text-[#D97706]" },
+    deficit: { label: "Underskott ✗", cls: "bg-[#FEF2F2] text-[#DC2626]" },
+    recovery: { label: "Återhämtning ↑", cls: "bg-[#EFF6FF] text-[#0052FF]" },
   };
   const s = map[status];
   return <span className={`text-[11px] font-medium px-2.5 py-0.5 rounded-full whitespace-nowrap ${s.cls}`}>{s.label}</span>;
@@ -45,11 +45,11 @@ function ChartTooltipContent({ active, payload, label }: any) { if (!active || !
     <div className="bg-card border border-border rounded-lg shadow-lg p-3 text-xs space-y-1 min-w-[200px]">
       <div className="font-semibold text-foreground mb-1">{label} ({data.dateRange})</div>
       <div className="border-t border-border pt-1 space-y-0.5">
-        <div className="flex justify-between"><span className="text-[#000000]">Inbetalningar</span><span className="font-mono">+{fmt(data.inflows)} kr</span></div>
-        <div className="flex justify-between"><span className="text-[#525252]">Utbetalningar</span><span className="font-mono">−{fmt(data.outflows)} kr</span></div>
+        <div className="flex justify-between"><span className="text-[#22C55E]">Inbetalningar</span><span className="font-mono">+{fmt(data.inflows)} kr</span></div>
+        <div className="flex justify-between"><span className="text-[#EF4444]">Utbetalningar</span><span className="font-mono">−{fmt(data.outflows)} kr</span></div>
       </div>
       <div className="border-t border-border pt-1 space-y-0.5">
-        <div className="flex justify-between font-medium"><span>Netto</span><span className={`font-mono ${data.net >= 0 ? "text-[#000000]" : "text-[#525252]"}`}>{data.net >= 0 ? "+" : ""}{fmt(data.net)} kr</span></div>
+        <div className="flex justify-between font-medium"><span>Netto</span><span className={`font-mono ${data.net >= 0 ? "text-[#059669]" : "text-[#DC2626]"}`}>{data.net >= 0 ? "+" : ""}{fmt(data.net)} kr</span></div>
         <div className="flex justify-between"><span>Ingående</span><span className="font-mono">{fmt(data.opening)} kr</span></div>
         <div className="flex justify-between font-semibold"><span>Utgående</span><span className="font-mono">{fmt(data.closing)} kr</span></div>
       </div>
@@ -172,7 +172,7 @@ const CashFlowForecast = () => {
 
         {/* ── ALERT BANNER ──────────────────────── */}
         {alerts.length > 0 && (
-          <div className="rounded-[10px] border border-destructive/20 bg-destructive/[0.04] overflow-hidden" style={{ borderLeft: "3px solid #525252" }}>
+          <div className="rounded-[10px] border border-destructive/20 bg-destructive/[0.04] overflow-hidden" style={{ borderLeft: "3px solid #DC2626" }}>
             <div className="flex items-center justify-between px-4 py-2.5 cursor-pointer" onClick={() => setShowAlertDetails(!showAlertDetails)}>
               <div className="flex items-center gap-2">
                 <AlertTriangle className="w-4 h-4 text-destructive shrink-0" />
@@ -196,7 +196,7 @@ const CashFlowForecast = () => {
                   {weeks.map(w => (
                     <button key={w.weekIdx} className="text-[10px] px-2 py-0.5 rounded-full border" style={{ backgroundColor: w.status === "deficit" ? "#FEF2F2" : w.status === "low" ? "#FFFBEB" : w.status === "recovery" ? "#EFF6FF" : "#ECFDF5",
                       borderColor: w.status === "deficit" ? "#FECACA" : w.status === "low" ? "#FDE68A" : "transparent",
-                      color: w.status === "deficit" ? "#525252" : w.status === "low" ? "#525252" : w.status === "recovery" ? "#000000" : "#000000",
+                      color: w.status === "deficit" ? "#DC2626" : w.status === "low" ? "#D97706" : w.status === "recovery" ? "#0052FF" : "#059669",
                     }} onClick={() => { setExpandedWeeks(new Set([w.weekIdx])); }}>
                       {w.label}
                     </button>
@@ -204,7 +204,7 @@ const CashFlowForecast = () => {
                 </div>
                 {/* Alert items */}
                 {alerts.map(alert => (
-                  <div key={alert.id} className="flex items-start gap-3 p-3 rounded-lg bg-card border" style={{ borderLeft: `3px solid ${alert.severity === "critical" ? "#525252" : alert.severity === "warning" ? "#525252" : alert.severity === "opportunity" ? "#000000" : "#6B7280"}`,
+                  <div key={alert.id} className="flex items-start gap-3 p-3 rounded-lg bg-card border" style={{ borderLeft: `3px solid ${alert.severity === "critical" ? "#DC2626" : alert.severity === "warning" ? "#F59E0B" : alert.severity === "opportunity" ? "#0052FF" : "#6B7280"}`,
                   }}>
                     <div className="flex-1">
                       <div className="text-xs font-semibold">{alert.title}</div>
@@ -229,29 +229,29 @@ const CashFlowForecast = () => {
           <TooltipProvider delayDuration={200}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { id: "balance", icon: <Wallet className="w-5 h-5" style={{ color: "#000000" }} />,
+                { id: "balance", icon: <Wallet className="w-5 h-5" style={{ color: "#3b82f6" }} />,
                   label: "KASSASALDO IDAG", value: `${fmt(kpi.cashBalance)} kr`,
-                  valueColor: kpi.cashBalance >= threshold ? "text-foreground" : "text-[#525252]",
+                  valueColor: kpi.cashBalance >= threshold ? "text-foreground" : "text-[#DC2626]",
                   sub: lastUpdated ? `Uppdaterad: ${lastUpdated.toLocaleTimeString("sv-SE", { hour: "2-digit", minute: "2-digit" })}` : "",
-                  accent: "#000000", tooltip: "Summa konto 1910–1940 idag",
+                  accent: "#3b82f6", tooltip: "Summa konto 1910–1940 idag",
                 },
-                { id: "inflows", icon: <ArrowUpRight className="w-5 h-5" style={{ color: "#000000" }} />,
+                { id: "inflows", icon: <ArrowUpRight className="w-5 h-5" style={{ color: "#22C55E" }} />,
                   label: "INBETALNINGAR 13V", value: `${fmt(kpi.totalInflows13w)} kr`,
-                  valueColor: "text-[#000000]",
+                  valueColor: "text-[#059669]",
                   sub: `från ${kpi.inflowInvoiceCount} kundfakturor`,
-                  accent: "#000000", tooltip: "Summa förväntade inbetalningar kommande 13 veckor",
+                  accent: "#22C55E", tooltip: "Summa förväntade inbetalningar kommande 13 veckor",
                 },
-                { id: "outflows", icon: <ArrowDownRight className="w-5 h-5" style={{ color: "#525252" }} />,
+                { id: "outflows", icon: <ArrowDownRight className="w-5 h-5" style={{ color: "#EF4444" }} />,
                   label: "UTBETALNINGAR 13V", value: `${fmt(kpi.totalOutflows13w)} kr`,
                   valueColor: "text-foreground",
                   sub: outflowBreakdown.slice(0, 3).map(b => `${b.label} ${fmt(b.amount)}`).join(" • "),
-                  accent: "#525252", tooltip: "Summa förväntade utbetalningar kommande 13 veckor",
+                  accent: "#EF4444", tooltip: "Summa förväntade utbetalningar kommande 13 veckor",
                 },
-                { id: "lowest", icon: <Activity className="w-5 h-5" style={{ color: kpi.lowestPoint < threshold ? "#525252" : "#737373" }} />,
+                { id: "lowest", icon: <Activity className="w-5 h-5" style={{ color: kpi.lowestPoint < threshold ? "#DC2626" : "#8B5CF6" }} />,
                   label: "LÄGSTA KASSAPUNKT", value: `${fmt(kpi.lowestPoint)} kr`,
-                  valueColor: kpi.lowestPoint < 0 ? "text-[#525252]" : kpi.lowestPoint < threshold ? "text-[#525252]" : "text-foreground",
+                  valueColor: kpi.lowestPoint < 0 ? "text-[#DC2626]" : kpi.lowestPoint < threshold ? "text-[#D97706]" : "text-foreground",
                   sub: `${kpi.lowestWeekLabel} · Buffert: ${fmt(kpi.lowestPoint - threshold)} kr`,
-                  accent: kpi.lowestPoint < threshold ? "#525252" : "#737373",
+                  accent: kpi.lowestPoint < threshold ? "#DC2626" : "#8B5CF6",
                   tooltip: "Lägsta beräknade kassasaldo under 13-veckorsperioden",
                 },
               ].map(card => (
@@ -275,7 +275,7 @@ const CashFlowForecast = () => {
 
         {/* ── SCENARIO PANEL ────────────────────── */}
         {showScenario && (
-          <Card className="border-[#F0DDB7] bg-neutral-100/30 dark:bg-amber-950/10">
+          <Card className="border-[#F0DDB7] bg-amber-50/30 dark:bg-amber-950/10">
             <CardHeader className="pb-2 flex flex-row items-center justify-between">
               <div>
                 <CardTitle className="text-sm">Scenariosimulator</CardTitle>
@@ -333,8 +333,8 @@ const CashFlowForecast = () => {
               <ChartGradients />
                     <defs>
                       <linearGradient id="bandGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#000000" stopOpacity={0.08} />
-                        <stop offset="100%" stopColor="#000000" stopOpacity={0.02} />
+                        <stop offset="0%" stopColor="#0052FF" stopOpacity={0.08} />
+                        <stop offset="100%" stopColor="#0052FF" stopOpacity={0.02} />
                       </linearGradient>
                     </defs>
                     <CartesianGrid {...GRID_PROPS} />
@@ -343,13 +343,13 @@ const CashFlowForecast = () => {
                     <RTooltip content={<ChartTooltipContent />} />
                     <Legend wrapperStyle={{ fontSize: 11 }} iconType="circle" iconSize={8} />
                     <ReferenceLine y={0} stroke="hsl(var(--muted-foreground))" strokeDasharray="3 3" />
-                    <ReferenceLine y={threshold} stroke="#525252" strokeDasharray="5 5" label={{ value: "Miniminivå", fontSize: 10, fill: "#525252" }} />
+                    <ReferenceLine y={threshold} stroke="#F59E0B" strokeDasharray="5 5" label={{ value: "Miniminivå", fontSize: 10, fill: "#F59E0B" }} />
                     {/* Confidence band */}
                     <Area type="monotone" dataKey="bandHigh" stroke="none" fill="url(#bandGrad)" legendType="none" />
                     <Area type="monotone" dataKey="bandLow" stroke="none" fill="transparent" legendType="none" />
-                    <Bar dataKey="inflows" name="Inbetalningar" fill="#000000" fillOpacity={0.75} radius={[6, 6, 0, 0]} />
-                    <Bar dataKey="outflows" name="Utbetalningar" fill="#525252" fillOpacity={0.75} radius={[6, 6, 0, 0]} />
-                    <Line type="monotone" dataKey="closing" name="Kassasaldo" stroke="#000000" strokeWidth={2.5} dot={{ r: 3, fill: "#000000" }} />
+                    <Bar dataKey="inflows" name="Inbetalningar" fill="#22C55E" fillOpacity={0.75} radius={[6, 6, 0, 0]} />
+                    <Bar dataKey="outflows" name="Utbetalningar" fill="#EF4444" fillOpacity={0.75} radius={[6, 6, 0, 0]} />
+                    <Line type="monotone" dataKey="closing" name="Kassasaldo" stroke="#0052FF" strokeWidth={2.5} dot={{ r: 3, fill: "#0052FF" }} />
                   </ComposedChart>
                 </ResponsiveContainer>
               </div>
@@ -371,16 +371,16 @@ const CashFlowForecast = () => {
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-3">
-                      <div className="text-xs font-semibold text-[#000000] tracking-wider">INBETALNINGAR (13V)</div>
+                      <div className="text-xs font-semibold text-[#059669] tracking-wider">INBETALNINGAR (13V)</div>
                       {inflowBreakdown.map(b => <CategoryBar key={b.category} {...b} />)}
                       {inflowBreakdown.length === 0 && <p className="text-xs text-muted-foreground">Inga förväntade inbetalningar</p>}
                     </div>
                     <div className="space-y-3">
-                      <div className="text-xs font-semibold text-[#525252] tracking-wider">UTBETALNINGAR (13V)</div>
+                      <div className="text-xs font-semibold text-[#DC2626] tracking-wider">UTBETALNINGAR (13V)</div>
                       {outflowBreakdown.map(b => <CategoryBar key={b.category} {...b} />)}
                       {outflowBreakdown.length === 0 && <p className="text-xs text-muted-foreground">Inga förväntade utbetalningar</p>}
                       {outflowBreakdown[0]?.pct > 60 && (
-                        <div className="flex items-center gap-1.5 text-xs text-[#525252] bg-[#FFFBEB] px-2 py-1 rounded-md">
+                        <div className="flex items-center gap-1.5 text-xs text-[#D97706] bg-[#FFFBEB] px-2 py-1 rounded-md">
                           <AlertTriangle className="w-3 h-3" />
                           {outflowBreakdown[0].pct}% av utflödet: {outflowBreakdown[0].label.toLowerCase()}
                         </div>
@@ -421,7 +421,7 @@ const CashFlowForecast = () => {
                         <Fragment key={w.weekIdx}>
                           <tr
                             className={`border-b cursor-pointer hover:bg-muted/30 transition-colors ${rowBg} ${expanded ? "bg-primary/[0.03]" : ""}`}
-                            style={expanded ? { borderLeft: "3px solid #000000" } : {}}
+                            style={expanded ? { borderLeft: "3px solid #3b82f6" } : {}}
                             onClick={() => toggleWeek(w.weekIdx)}
                           >
                             <td className="p-2 pl-4">{expanded ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}</td>
@@ -430,55 +430,55 @@ const CashFlowForecast = () => {
                               <span className="text-[11px] text-muted-foreground ml-2">{w.dateRange}</span>
                             </td>
                             <td className="p-2 text-right font-mono tabular-nums">{fmt(w.opening)}</td>
-                            <td className="p-2 text-right font-mono tabular-nums text-[#000000]">{w.inflows > 0 ? `+${fmt(w.inflows)}` : "—"}</td>
-                            <td className="p-2 text-right font-mono tabular-nums text-[#525252]">{w.outflows > 0 ? `−${fmt(w.outflows)}` : "—"}</td>
-                            <td className={`p-2 text-right font-mono tabular-nums font-medium ${w.net >= 0 ? "text-[#000000]" : "text-[#525252]"}`}>
+                            <td className="p-2 text-right font-mono tabular-nums text-[#059669]">{w.inflows > 0 ? `+${fmt(w.inflows)}` : "—"}</td>
+                            <td className="p-2 text-right font-mono tabular-nums text-[#DC2626]">{w.outflows > 0 ? `−${fmt(w.outflows)}` : "—"}</td>
+                            <td className={`p-2 text-right font-mono tabular-nums font-medium ${w.net >= 0 ? "text-[#059669]" : "text-[#DC2626]"}`}>
                               {w.net >= 0 ? `+${fmt(w.net)}` : `−${fmt(Math.abs(w.net))}`}
                             </td>
-                            <td className={`p-2 text-right font-mono tabular-nums font-semibold ${w.closing < 0 ? "text-[#525252]" : ""}`}>{fmt(w.closing)}</td>
+                            <td className={`p-2 text-right font-mono tabular-nums font-semibold ${w.closing < 0 ? "text-[#DC2626]" : ""}`}>{fmt(w.closing)}</td>
                             <td className="p-2 text-center"><StatusPill status={w.status} /></td>
                           </tr>
                           {expanded && (
-                            <tr className="bg-primary/[0.02]" style={{ borderLeft: "3px solid #000000" }}>
+                            <tr className="bg-primary/[0.02]" style={{ borderLeft: "3px solid #3b82f6" }}>
                               <td colSpan={8} className="px-6 py-3">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                   {/* Inflows */}
                                   <div className="space-y-1">
-                                    <div className="text-[11px] font-semibold text-[#000000] uppercase tracking-wider mb-1.5">Inbetalningar</div>
+                                    <div className="text-[11px] font-semibold text-[#059669] uppercase tracking-wider mb-1.5">Inbetalningar</div>
                                     {inflowItems.length === 0 && <p className="text-xs text-muted-foreground italic">Inga förväntade inbetalningar</p>}
                                     {inflowItems.map(item => (
                                       <div key={item.id} className="flex items-center justify-between text-xs py-1 border-b border-border/50 last:border-0">
                                         <div className="flex items-center gap-2">
                                           <span>{item.description}</span>
-                                          {item.overdueDays && <span className="text-[#525252] italic text-[10px]">FÖRFALLEN {item.overdueDays}d</span>}
-                                          {item.source === "manual" && <span className="text-[10px] bg-[#000000]/10 text-[#000000] px-1.5 rounded">Manuell</span>}
+                                          {item.overdueDays && <span className="text-[#DC2626] italic text-[10px]">FÖRFALLEN {item.overdueDays}d</span>}
+                                          {item.source === "manual" && <span className="text-[10px] bg-[#3b82f6]/10 text-[#3b82f6] px-1.5 rounded">Manuell</span>}
                                           {item.source === "pattern" && <span className="text-[10px] bg-muted text-muted-foreground px-1.5 rounded">Mönster</span>}
                                         </div>
-                                        <span className="font-mono tabular-nums text-[#000000]">+{fmt(item.amount)}</span>
+                                        <span className="font-mono tabular-nums text-[#059669]">+{fmt(item.amount)}</span>
                                       </div>
                                     ))}
                                     {inflowItems.length > 0 && (
-                                      <div className="flex justify-end text-xs font-semibold pt-1 border-t text-[#000000] font-mono tabular-nums">
+                                      <div className="flex justify-end text-xs font-semibold pt-1 border-t text-[#059669] font-mono tabular-nums">
                                         Total: +{fmt(w.inflows)} kr
                                       </div>
                                     )}
                                   </div>
                                   {/* Outflows */}
                                   <div className="space-y-1">
-                                    <div className="text-[11px] font-semibold text-[#525252] uppercase tracking-wider mb-1.5">Utbetalningar</div>
+                                    <div className="text-[11px] font-semibold text-[#DC2626] uppercase tracking-wider mb-1.5">Utbetalningar</div>
                                     {outflowItems.length === 0 && <p className="text-xs text-muted-foreground italic">Inga förväntade utbetalningar</p>}
                                     {outflowItems.map(item => (
                                       <div key={item.id} className="flex items-center justify-between text-xs py-1 border-b border-border/50 last:border-0">
                                         <div className="flex items-center gap-2">
                                           <span>{item.description}</span>
-                                          {item.source === "manual" && <span className="text-[10px] bg-[#000000]/10 text-[#000000] px-1.5 rounded">Manuell</span>}
+                                          {item.source === "manual" && <span className="text-[10px] bg-[#3b82f6]/10 text-[#3b82f6] px-1.5 rounded">Manuell</span>}
                                           {item.source === "pattern" && <span className="text-[10px] bg-muted text-muted-foreground px-1.5 rounded">Mönster</span>}
                                         </div>
-                                        <span className="font-mono tabular-nums text-[#525252]">−{fmt(item.amount)}</span>
+                                        <span className="font-mono tabular-nums text-[#DC2626]">−{fmt(item.amount)}</span>
                                       </div>
                                     ))}
                                     {outflowItems.length > 0 && (
-                                      <div className="flex justify-end text-xs font-semibold pt-1 border-t text-[#525252] font-mono tabular-nums">
+                                      <div className="flex justify-end text-xs font-semibold pt-1 border-t text-[#DC2626] font-mono tabular-nums">
                                         Total: −{fmt(w.outflows)} kr
                                       </div>
                                     )}
@@ -562,10 +562,10 @@ const CashFlowForecast = () => {
                           <YAxis tickFormatter={v => `${(v / 1000).toFixed(0)}k`} tick={AXIS_TICK} axisLine={false} tickLine={false} />
                           <RTooltip content={<ChartTooltip />} cursor={TOOLTIP_CURSOR} />
                           <Legend content={<CustomLegend />} />
-                          <ReferenceLine y={0} stroke="#525252" strokeDasharray="4 4" label={{ value: "Kritisk gräns", fontSize: 10, fill: "#525252" }} />
-                          <Line type="monotone" dataKey="base" name="Basfall" stroke="#000000" strokeWidth={2.5} dot={{ r: 3, fill: "#000000" }} {...LINE_ANIMATION} />
-                          <Line type="monotone" dataKey="optimistic" name="Optimistiskt" stroke="#000000" strokeWidth={1.5} strokeDasharray="6 3" dot={false} {...LINE_ANIMATION} />
-                          <Line type="monotone" dataKey="pessimistic" name="Pessimistiskt" stroke="#525252" strokeWidth={1.5} strokeDasharray="6 3" dot={false} {...LINE_ANIMATION} />
+                          <ReferenceLine y={0} stroke="#DC2626" strokeDasharray="4 4" label={{ value: "Kritisk gräns", fontSize: 10, fill: "#DC2626" }} />
+                          <Line type="monotone" dataKey="base" name="Basfall" stroke="#0052FF" strokeWidth={2.5} dot={{ r: 3, fill: "#0052FF" }} {...LINE_ANIMATION} />
+                          <Line type="monotone" dataKey="optimistic" name="Optimistiskt" stroke="#22C55E" strokeWidth={1.5} strokeDasharray="6 3" dot={false} {...LINE_ANIMATION} />
+                          <Line type="monotone" dataKey="pessimistic" name="Pessimistiskt" stroke="#DC2626" strokeWidth={1.5} strokeDasharray="6 3" dot={false} {...LINE_ANIMATION} />
                         </ComposedChart>
                       </ResponsiveContainer>
                     </div>

@@ -105,13 +105,13 @@ export const BureauPortfolioKPIs = () => {
         label="Aktiva klienter"
         value={String(k.activeClients)}
         sub={k.newThisMonth > 0 ? `${k.newThisMonth} nya denna månad` : "Stabil portfölj"}
-        accent="#000000"
+        accent="#0040CC"
       />
       <KPICard
         label="Omsättning i portfölj"
         value={fmtSEK(k.annualRevenue)}
         sub="rullande 12 månader"
-        accent="#000000"
+        accent="#0040CC"
       />
       <KPICard
         label="Kritiska klienter"
@@ -128,13 +128,13 @@ export const BureauPortfolioKPIs = () => {
         label="Moms att betala"
         value={fmtSEK(k.vatToPay)}
         sub={k.vatSoonest ? `deadline: ${fmtDate(k.vatSoonest)}` : "beräknad från huvudboken"}
-        accent={k.vatUrgent ? "#525252" : "#000000"}
+        accent={k.vatUrgent ? "#EF9F27" : "#0040CC"}
       />
       <KPICard
         label="Väntande uppgifter"
         value={String(k.pendingTasks)}
         sub={`${k.urgentToday} kräver åtgärd idag`}
-        accent={k.pendingTasks > 0 ? "#525252" : "#000000"}
+        accent={k.pendingTasks > 0 ? "#EF9F27" : "#0040CC"}
       />
       <KPICard
         label="AI-automatiserat idag"

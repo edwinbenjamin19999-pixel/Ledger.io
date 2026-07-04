@@ -40,7 +40,7 @@ export const AgeingHeader = ({ type, period, onPeriodChange }: AgeingHeaderProps
             className={cn(
               "px-3 py-1.5 text-xs font-semibold rounded-lg transition-all",
               period === p.key
-                ? "bg-[#000000] text-white shadow-sm"
+                ? "bg-[#3b82f6] text-white shadow-sm"
                 : "text-slate-600 dark:text-slate-300 hover:bg-white/70 dark:hover:bg-slate-700",
             )}
           >

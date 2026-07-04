@@ -29,7 +29,7 @@ export const Step4Receipt = ({ period, submittedAt, receiptNumber, companyName, 
             {/* Animated checkmark */}
             <div className="relative mx-auto w-20 h-20 mb-6">
               <div className="absolute inset-0 rounded-full bg-[#E1F5EE] animate-[ping_1.5s_ease-in-out_1]" />
-              <div className="relative w-20 h-20 rounded-full bg-neutral-700 flex items-center justify-center animate-[scale-in_0.4s_ease-out]">
+              <div className="relative w-20 h-20 rounded-full bg-emerald-500 flex items-center justify-center animate-[scale-in_0.4s_ease-out]">
                 <CheckCircle2 className="w-10 h-10 text-white" />
               </div>
             </div>
@@ -68,7 +68,7 @@ export const Step4Receipt = ({ period, submittedAt, receiptNumber, companyName, 
                 <Download className="w-4 h-4" />
                 Ladda ner kvittens (PDF)
               </Button>
-              <Button onClick={onBack} className="bg-[#000000] hover:bg-[#000000]/90 text-white gap-2">
+              <Button onClick={onBack} className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-white gap-2">
                 Ny deklaration
                 <ArrowRight className="w-4 h-4" />
               </Button>
@@ -80,8 +80,8 @@ export const Step4Receipt = ({ period, submittedAt, receiptNumber, companyName, 
         <Card className="bg-muted/20">
           <CardContent className="py-4 px-5">
             <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-[#000000]/10 shrink-0">
-                <Calendar className="w-4 h-4 text-[#000000]" />
+              <div className="p-2 rounded-lg bg-[#0052FF]/10 shrink-0">
+                <Calendar className="w-4 h-4 text-[#0052FF]" />
               </div>
               <div className="flex-1">
                 <p className="text-xs text-muted-foreground font-medium">Nästa deklaration</p>

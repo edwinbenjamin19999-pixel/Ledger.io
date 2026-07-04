@@ -21,7 +21,7 @@ interface Note { note_number: number;
 }
 
 const categoryConfig: Record<string, { label: string; icon: React.ReactNode; color: string }> = { accounting_principles: { label: "Redovisningsprinciper", icon: <Scale className="w-4 h-4" />, color: "bg-primary/10 text-primary" },
-  balance_sheet: { label: "Balansräkning", icon: <Landmark className="w-4 h-4" />, color: "bg-[#EFF6FF] text-black" },
+  balance_sheet: { label: "Balansräkning", icon: <Landmark className="w-4 h-4" />, color: "bg-[#EFF6FF] text-blue-600" },
   income_statement: { label: "Resultaträkning", icon: <BookOpen className="w-4 h-4" />, color: "bg-[#E1F5EE] text-[#085041]" },
   personnel: { label: "Personal", icon: <Users className="w-4 h-4" />, color: "bg-orange-500/10 text-orange-600" },
   tax: { label: "Skatt", icon: <Landmark className="w-4 h-4" />, color: "bg-[#FCE8E8] text-[#7A1A1A]" },

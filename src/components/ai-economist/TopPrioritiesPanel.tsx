@@ -32,7 +32,7 @@ export function TopPrioritiesPanel({ top, more, companyId, onPrimary, onIgnore, 
       )}
 
       {!loading && top.length === 0 && (
-        <div className="rounded-2xl border border-[#BFE6D6] dark:border-[#BFE6D6] bg-[#E1F5EE] dark:bg-neutral-700/[0.06] p-8 text-center">
+        <div className="rounded-2xl border border-[#BFE6D6] dark:border-[#BFE6D6] bg-[#E1F5EE] dark:bg-emerald-500/[0.06] p-8 text-center">
           <CheckCircle2 className="h-10 w-10 text-[#085041] dark:text-[#1D9E75] mx-auto mb-2" />
           <h3 className="text-base font-semibold text-slate-900 dark:text-white">Inget kritiskt att åtgärda</h3>
           <p className="text-sm text-muted-foreground mt-1">AI bevakar 47+ datapunkter live — vi hör av oss när något behöver din uppmärksamhet.</p>

@@ -3,7 +3,7 @@ import type { CompactGuide } from "./index";
 export const resultatrapport: CompactGuide = {
   slug: "resultatrapport",
   h1: "Resultatrapport — så analyserar du den som en CFO",
-  metaTitle: "Resultatrapport — så analyserar du | Bokfy",
+  metaTitle: "Resultatrapport — så analyserar du | Cogniq",
   metaDescription:
     "Läs och tolka resultatrapporten: omsättning, kostnadsblock, EBITDA och resultat. Snabbguide för småföretagare.",
   intent: "business",
@@ -57,6 +57,6 @@ export const resultatrapport: CompactGuide = {
     { title: "Tror EBITDA = vinst", body: "EBITDA exkluderar avskrivningar och finansiella poster — det är ett operativt mått, inte slutresultat." },
   ],
   northledgerNote:
-    "Bokfy levererar månatlig resultatrapport med automatisk avvikelseanalys mot budget och föregående år — och förklarar varför resultatet ändrats.",
+    "Cogniq levererar månatlig resultatrapport med automatisk avvikelseanalys mot budget och föregående år — och förklarar varför resultatet ändrats.",
   related: ["nyckeltal-smaforetag", "kassaflode", "bruttomarginal-lonsamhet"],
 };

@@ -6,12 +6,12 @@ const faqs = [
   {
     icon: Shield,
     q: "Stämmer bokföringen verkligen?",
-    a: "Bokfy följer svenska redovisningsstandarder (BAS 2026, K2/K3) och validerar varje post med regelbaserad logik kombinerad med AI. Inget slutförs utan ditt godkännande — du har alltid full kontroll.",
+    a: "Cogniq följer svenska redovisningsstandarder (BAS 2026, K2/K3) och validerar varje post med regelbaserad logik kombinerad med AI. Inget slutförs utan ditt godkännande — du har alltid full kontroll.",
   },
   {
     icon: Brain,
     q: "Kan jag verkligen lita på AI med min ekonomi?",
-    a: "Ja — Bokfy ersätter inte kontrollen, det tar bort manuellt arbete. AI:n hanterar repetitiva uppgifter medan du granskar och godkänner. All data krypteras med bank-level säkerhet (AES-256).",
+    a: "Ja — Cogniq ersätter inte kontrollen, det tar bort manuellt arbete. AI:n hanterar repetitiva uppgifter medan du granskar och godkänner. All data krypteras med bank-level säkerhet (AES-256).",
   },
   {
     icon: FileText,
@@ -21,22 +21,22 @@ const faqs = [
   {
     icon: Building2,
     q: "Fungerar det med Skatteverket och svenska regler?",
-    a: "Bokfy har direktkoppling till Skatteverket för moms (SKV 4700), AGI och INK2. Deklarationer förbereds automatiskt och skickas med ett klick — alltid enligt gällande regelverk.",
+    a: "Cogniq har direktkoppling till Skatteverket för moms (SKV 4700), AGI och INK2. Deklarationer förbereds automatiskt och skickas med ett klick — alltid enligt gällande regelverk.",
   },
   {
     icon: Users,
-    q: "Vem passar Bokfy för?",
-    a: "Bokfy är designat för små och medelstora företag, konsulter och e-handelsföretag som vill ersätta sin ekonomifunktion med AI — oavsett om du har en eller hundra anställda.",
+    q: "Vem passar Cogniq för?",
+    a: "Cogniq är designat för små och medelstora företag, konsulter och e-handelsföretag som vill ersätta sin ekonomifunktion med AI — oavsett om du har en eller hundra anställda.",
   },
   {
     icon: GraduationCap,
     q: "Behöver jag kunna bokföring?",
-    a: "Nej. Systemet är byggt så att du inte behöver förstå debet och kredit. Bokfy fungerar som din personliga ekonomiavdelning.",
+    a: "Nej. Systemet är byggt så att du inte behöver förstå debet och kredit. Cogniq fungerar som din personliga ekonomiavdelning.",
   },
   {
     icon: ArrowRightLeft,
     q: "Kan jag byta från mitt nuvarande system?",
-    a: "Ja. Bokfy importerar SIE4-filer och migrerar din data automatiskt. Hela övergången tar bara några minuter.",
+    a: "Ja. Cogniq importerar SIE4-filer och migrerar din data automatiskt. Hela övergången tar bara några minuter.",
   },
   {
     icon: Clock,
@@ -71,8 +71,8 @@ export const FAQ = () => {
               >
                 <AccordionTrigger className="px-5 py-4 hover:no-underline gap-3 text-left">
                   <div className="flex items-center gap-3 flex-1">
-                    <div className="w-9 h-9 rounded-lg bg-[rgba(0,0,0,0.08)] flex items-center justify-center flex-shrink-0">
-                      <faq.icon className="w-[18px] h-[18px] text-[#000000]" />
+                    <div className="w-9 h-9 rounded-lg bg-[rgba(0,82,255,0.08)] flex items-center justify-center flex-shrink-0">
+                      <faq.icon className="w-[18px] h-[18px] text-[#3b82f6]" />
                     </div>
                     <span className="text-[15px] sm:text-base font-semibold text-white/90">{faq.q}</span>
                   </div>
@@ -89,10 +89,10 @@ export const FAQ = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 asChild
-                className="h-11 px-6 bg-white text-[#000000] hover:bg-white/90 font-semibold rounded-lg"
+                className="h-11 px-6 bg-white text-[#0F172A] hover:bg-white/90 font-semibold rounded-lg"
               >
                 <a href="/auth">
-                  Testa Bokfy
+                  Testa Cogniq
                   <ArrowRight className="w-4 h-4 ml-1.5" />
                 </a>
               </Button>
@@ -101,7 +101,7 @@ export const FAQ = () => {
                 variant="glass"
                 className="h-11 px-6 rounded-lg"
               >
-                <a href="mailto:kontakt@bokfy.se">Boka demo</a>
+                <a href="mailto:kontakt@cogniq.se">Boka demo</a>
               </Button>
             </div>
             <p className="text-xs text-white/30 mt-3">Ingen bindningstid. Kom igång på några minuter.</p>

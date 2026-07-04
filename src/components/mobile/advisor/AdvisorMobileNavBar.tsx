@@ -39,19 +39,19 @@ export const AdvisorMobileNavBar = ({ active, onChange }: AdvisorMobileNavBarPro
             onClick={() => { haptic("light"); onChange(t.id); }}
             className={cn(
               "relative flex flex-col items-center justify-center gap-0.5 min-h-[44px] active:scale-90 transition-all duration-150",
-              isActive ? "text-[#000000]" : "text-white/45",
+              isActive ? "text-[#3b82f6]" : "text-white/45",
             )}
           >
             {isActive && (
               <span className={cn(
-                "absolute top-1 left-1/2 -translate-x-1/2 h-0.5 w-6 rounded-full bg-[#000000]",
-                "shadow-[0_0_8px_rgba(0,0,0,0.7)]",
+                "absolute top-1 left-1/2 -translate-x-1/2 h-0.5 w-6 rounded-full bg-[#3b82f6]",
+                "shadow-[0_0_8px_rgba(0,82,255,0.7)]",
               )} />
             )}
             <div className={cn(
               "rounded-xl p-1 transition-all",
               isActive && "scale-110",
-              isActive && isAI && "shadow-[0_0_14px_rgba(0,0,0,0.5)]",
+              isActive && isAI && "shadow-[0_0_14px_rgba(0,82,255,0.5)]",
             )}>
               <Icon className="h-5 w-5" strokeWidth={isActive ? 2.5 : 1.75} />
             </div>

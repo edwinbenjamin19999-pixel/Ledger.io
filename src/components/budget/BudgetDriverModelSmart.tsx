@@ -10,7 +10,7 @@ import { formatSEK, MONTH_LABELS } from "@/lib/budget/budgetEngine";
 const BudgetAIInsight = ({ title, insight }: { title: string; insight: string }) => (
   <div className="rounded-2xl border bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] p-4">
     <div className="flex items-center gap-2 mb-2">
-      <Sparkles className="w-3.5 h-3.5 text-[#000000]" />
+      <Sparkles className="w-3.5 h-3.5 text-[#3b82f6]" />
       <h4 className="text-sm font-semibold text-slate-900">{title}</h4>
     </div>
     <p className="text-xs text-slate-700">{insight}</p>
@@ -297,9 +297,9 @@ export const BudgetDriverModelSmart = ({ className, companyId }: Props) => {
               <YAxis tick={{ fontSize: 9 }} tickFormatter={v => `${(v / 1000).toFixed(0)}k`} />
               <Tooltip formatter={(v: number) => `${formatSEK(v)} kr`} />
               <Legend content={<CustomLegend />} />
-              <Area type="monotone" dataKey="revenue" fill="#c7d2fe" stroke="#525252" fillOpacity={0.3} strokeWidth={2} name="Intakter" />
-              <Area type="monotone" dataKey="grossProfit" fill="#a7f3d0" stroke="#000000" fillOpacity={0.2} strokeWidth={1.5} name="Bruttovinst" />
-              <Area type="monotone" dataKey="netResult" fill={annualResult >= 0 ? "#bbf7d0" : "#fecaca"} stroke={annualResult >= 0 ? "#000000" : "#525252"} fillOpacity={0.3} strokeWidth={2} name="Nettoresultat" />
+              <Area type="monotone" dataKey="revenue" fill="#c7d2fe" stroke="#6366f1" fillOpacity={0.3} strokeWidth={2} name="Intakter" />
+              <Area type="monotone" dataKey="grossProfit" fill="#a7f3d0" stroke="#059669" fillOpacity={0.2} strokeWidth={1.5} name="Bruttovinst" />
+              <Area type="monotone" dataKey="netResult" fill={annualResult >= 0 ? "#bbf7d0" : "#fecaca"} stroke={annualResult >= 0 ? "#16a34a" : "#dc2626"} fillOpacity={0.3} strokeWidth={2} name="Nettoresultat" />
             </AreaChart>
           </ResponsiveContainer>
         </CardContent>

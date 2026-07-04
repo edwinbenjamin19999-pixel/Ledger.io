@@ -88,18 +88,18 @@ export const AIInsightBar = ({ account, details }: AIInsightBarProps) => {
   if (insights.length === 0) return null;
 
   return (
-    <div className="bg-[#EFF6FF] dark:bg-indigo-950/30 border border-neutral-100 dark:border-neutral-700/40 rounded-xl px-5 py-3 flex items-start gap-3">
-      <span className="text-neutral-700 mt-0.5 text-sm">✦</span>
+    <div className="bg-[#EFF6FF] dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-800/40 rounded-xl px-5 py-3 flex items-start gap-3">
+      <span className="text-indigo-500 mt-0.5 text-sm">✦</span>
       <div className="flex-1 min-w-0">
-        <p className="text-[11px] font-semibold text-neutral-700 dark:text-neutral-700 mb-1">
+        <p className="text-[11px] font-semibold text-indigo-700 dark:text-indigo-400 mb-1">
           AI-analys — {account.accountNumber} {account.accountName}
         </p>
         <ul className="space-y-0.5">
           {insights.map((insight, i) => (
-            <li key={i} className="text-xs text-neutral-700 dark:text-neutral-300 flex items-center gap-2">
+            <li key={i} className="text-xs text-indigo-800 dark:text-indigo-300 flex items-center gap-2">
               <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
-                insight.type === 'warning' ? 'bg-neutral-700' :
-                insight.type === 'alert' ? 'bg-neutral-700' : 'bg-neutral-700'
+                insight.type === 'warning' ? 'bg-amber-500' :
+                insight.type === 'alert' ? 'bg-rose-500' : 'bg-indigo-400'
               }`} />
               {insight.text}
             </li>

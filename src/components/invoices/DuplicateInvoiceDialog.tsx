@@ -37,7 +37,7 @@ export function DuplicateInvoiceDialog({ open, onOpenChange, result, invoiceType
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle className="flex items-center gap-2">
-            <AlertTriangle className={`h-5 w-5 ${isBlock ? "text-destructive" : "text-neutral-700"}`} />
+            <AlertTriangle className={`h-5 w-5 ${isBlock ? "text-destructive" : "text-amber-500"}`} />
             {isBlock ? "Möjlig dubblett – blockerad" : "Liknande faktura senaste 30 dagarna"}
           </AlertDialogTitle>
           <AlertDialogDescription asChild>

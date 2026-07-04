@@ -4,7 +4,7 @@ import { useAdvisorActiveClient } from "@/contexts/AdvisorActiveClientContext";
 
 /**
  * Cyan "← Byråöversikt · [klientnamn]" strip rendered at the very top of every
- * standard Bokfy page whenever an advisor is operating inside a client.
+ * standard Cogniq page whenever an advisor is operating inside a client.
  *
  * Clicking the strip clears the active client and returns the advisor to the
  * bureau overview at /wl/app/dashboard.
@@ -27,7 +27,7 @@ export const ActiveClientBanner = () => {
     <button
       type="button"
       onClick={handleBack}
-      className="w-full flex items-center gap-2 bg-[#000000] hover:bg-[#000000] text-white font-medium transition-colors"
+      className="w-full flex items-center gap-2 bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-medium transition-colors"
       style={{ padding: "6px 16px", fontSize: "12px" }}
       aria-label="Återgå till byråöversikt"
     >

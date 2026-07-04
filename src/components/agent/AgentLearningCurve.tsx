@@ -51,12 +51,12 @@ export function AgentLearningCurve({ companyId, history }: AgentLearningCurvePro
               <ChartGradients />
               <defs>
                 <linearGradient id="autoRateGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#000000" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#000000" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
                 </linearGradient>
                 <linearGradient id="confGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#525252" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#525252" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#818cf8" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#818cf8" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <CartesianGrid {...GRID_PROPS} />
@@ -70,11 +70,11 @@ export function AgentLearningCurve({ companyId, history }: AgentLearningCurvePro
                 labelStyle={{ fontWeight: "bold" }}
                 contentStyle={chartTheme.tooltipStyle}
               />
-              <ReferenceLine y={97} stroke="#000000" strokeDasharray="5 5" label={{ value: "Mål 97%", position: "right", fontSize: 10 }} />
+              <ReferenceLine y={97} stroke="#3b82f6" strokeDasharray="5 5" label={{ value: "Mål 97%", position: "right", fontSize: 10 }} />
               <Area
                 type="monotone"
                 dataKey="autoRate"
-                stroke="#000000"
+                stroke="#3b82f6"
                 fill="url(#autoRateGrad)"
                 strokeWidth={2}
                 name="autoRate"
@@ -82,7 +82,7 @@ export function AgentLearningCurve({ companyId, history }: AgentLearningCurvePro
               <Area
                 type="monotone"
                 dataKey="avgConfidence"
-                stroke="#525252"
+                stroke="#818cf8"
                 fill="url(#confGrad)"
                 strokeWidth={2}
                 name="avgConfidence"
@@ -124,7 +124,7 @@ export function AgentLearningCurve({ companyId, history }: AgentLearningCurvePro
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <span className="font-semibold text-sm">{milestone.month}: {milestone.rate}</span>
-                      {reached && <Badge className="text-xs bg-[#E1F5EE] text-[#085041] border-neutral-700/20">Uppnådd</Badge>}
+                      {reached && <Badge className="text-xs bg-[#E1F5EE] text-[#085041] border-green-500/20">Uppnådd</Badge>}
                     </div>
                     <p className="text-xs text-muted-foreground">{milestone.desc}</p>
                   </div>

@@ -29,7 +29,7 @@ export function ISKSchablonCalculator() {
     <Card className="p-6">
       <div className="flex items-center gap-2 mb-4">
         <div className="p-2 rounded-lg bg-[#EFF6FF] dark:bg-blue-950/40">
-          <Calculator className="h-5 w-5 text-[#000000] dark:text-[#000000]" />
+          <Calculator className="h-5 w-5 text-[#3b82f6] dark:text-[#3b82f6]" />
         </div>
         <div>
           <h3 className="font-semibold">ISK Schablonskatt</h3>
@@ -81,7 +81,7 @@ export function ISKSchablonCalculator() {
         </div>
         <div className="flex justify-between text-sm pt-2 border-t">
           <span className="font-semibold">Skatt (30%)</span>
-          <span className="tabular-nums font-bold text-[#000000] dark:text-[#000000]">{formatSEK(result.taxAmount)}</span>
+          <span className="tabular-nums font-bold text-[#3b82f6] dark:text-[#3b82f6]">{formatSEK(result.taxAmount)}</span>
         </div>
         <p className="text-xs text-muted-foreground pt-2">
           SLR 30 nov {taxYear - 1}: {(result.slrUsed * 100).toFixed(2)}% · Bokförs konto 1630 (skattekonto) mot 8423.

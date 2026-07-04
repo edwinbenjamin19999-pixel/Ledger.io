@@ -39,16 +39,16 @@ const statusLabel: Record<AgentActivityStatus, string> = {
   in_progress: "Kräver beslut",
 };
 const statusTone: Record<AgentActivityStatus, string> = {
-  done: "bg-neutral-100 text-neutral-700 border-neutral-300",
-  corrected: "bg-neutral-100 text-neutral-700 border-neutral-300",
-  in_progress: "bg-neutral-100 text-[#000000] border-black",
+  done: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  corrected: "bg-amber-50 text-amber-700 border-amber-200",
+  in_progress: "bg-blue-50 text-[#3b82f6] border-blue-200",
 };
 
 function confidenceTone(c?: number) {
   if (c == null) return "bg-slate-50 text-slate-500 border-slate-200";
-  if (c >= 90) return "bg-neutral-100 text-neutral-700 border-neutral-300";
-  if (c >= 60) return "bg-neutral-100 text-neutral-700 border-neutral-300";
-  return "bg-neutral-100 text-neutral-700 border-neutral-300";
+  if (c >= 90) return "bg-emerald-50 text-emerald-700 border-emerald-200";
+  if (c >= 60) return "bg-amber-50 text-amber-700 border-amber-200";
+  return "bg-rose-50 text-rose-700 border-rose-200";
 }
 
 type Decision = { status: AgentActivityStatus; note?: string };
@@ -311,10 +311,10 @@ function ReviewDetailPanel({
                           <span className="ml-2 text-slate-500">{l.label}</span>
                         )}
                       </td>
-                      <td className="px-3 py-1.5 text-right tabular-nums text-neutral-700">
+                      <td className="px-3 py-1.5 text-right tabular-nums text-emerald-700">
                         {l.amount > 0 ? formatSEK(l.amount) : "—"}
                       </td>
-                      <td className="px-3 py-1.5 text-right tabular-nums text-[#000000]">
+                      <td className="px-3 py-1.5 text-right tabular-nums text-[#3b82f6]">
                         {l.amount < 0 ? formatSEK(Math.abs(l.amount)) : "—"}
                       </td>
                     </tr>
@@ -357,9 +357,9 @@ function ReviewDetailPanel({
                 <div
                   className={cn(
                     "absolute inset-y-0 left-0 rounded-full",
-                    confidence >= 90 && "bg-neutral-700",
-                    confidence >= 60 && confidence < 90 && "bg-neutral-700",
-                    confidence < 60 && "bg-neutral-700",
+                    confidence >= 90 && "bg-emerald-500",
+                    confidence >= 60 && confidence < 90 && "bg-amber-500",
+                    confidence < 60 && "bg-rose-500",
                   )}
                   style={{ width: `${Math.min(100, Math.max(0, confidence))}%` }}
                 />
@@ -410,7 +410,7 @@ function ReviewDetailPanel({
               <Button
                 size="sm"
                 variant="outline"
-                className="border-neutral-300 text-neutral-700 hover:bg-neutral-100"
+                className="border-rose-200 text-rose-700 hover:bg-rose-50"
                 onClick={() => {
                   onReject(note.trim() || undefined);
                   setSubmitted(true);
@@ -425,14 +425,14 @@ function ReviewDetailPanel({
             <Button
               size="sm"
               variant="outline"
-              className="border-neutral-300 text-neutral-700 hover:bg-neutral-100"
+              className="border-rose-200 text-rose-700 hover:bg-rose-50"
               onClick={() => setRejecting(true)}
             >
               <X className="h-3.5 w-3.5" /> Avvisa
             </Button>
             <Button
               size="sm"
-              className="bg-[#000000] text-white hover:bg-[#1e40af]"
+              className="bg-[#0052FF] text-white hover:bg-[#1e40af]"
               onClick={() => {
                 onApprove();
                 setSubmitted(true);

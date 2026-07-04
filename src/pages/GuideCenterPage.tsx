@@ -118,11 +118,11 @@ export default function GuideCenterPage() {
                           )}
                           {/* Tips */}
                           {item.tips && item.tips.length > 0 && (
-                            <div className="flex gap-2 p-2 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/20 border border-neutral-300/50 dark:border-neutral-700/30">
+                            <div className="flex gap-2 p-2 rounded-lg bg-[#FAEEDA] dark:bg-amber-950/20 border border-amber-200/50 dark:border-amber-800/30">
                               <Lightbulb className="h-3.5 w-3.5 text-[#7A5417] shrink-0 mt-0.5" />
                               <div className="space-y-1">
                                 {item.tips.map((tip, ti) => (
-                                  <p key={ti} className="text-xs text-[#7A5417] dark:text-neutral-300 leading-relaxed">{tip}</p>
+                                  <p key={ti} className="text-xs text-[#7A5417] dark:text-amber-300 leading-relaxed">{tip}</p>
                                 ))}
                               </div>
                             </div>

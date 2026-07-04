@@ -123,7 +123,7 @@ export const InternalTransactionRegister = ({ groupId, periodId, onCreateElimina
     });
   };
 
-  const confidenceBadge = (conf: string) => { if (conf === "high") return <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]">Säker match</Badge>;
+  const confidenceBadge = (conf: string) => { if (conf === "high") return <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-green-900/30 dark:text-[#1D9E75]">Säker match</Badge>;
     if (conf === "medium") return <Badge className="bg-[#FAEEDA] text-[#7A5417] dark:bg-yellow-900/30 dark:text-[#C28A2B]">Trolig match</Badge>;
     return <Badge variant="outline">Manuell</Badge>;
   };
@@ -194,7 +194,7 @@ export const InternalTransactionRegister = ({ groupId, periodId, onCreateElimina
                   <TableCell>{confidenceBadge(t.confidence)}</TableCell>
                   <TableCell>
                     {t.isEliminated ? (
-                      <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-[#1D9E75]">Eliminerad</Badge>
+                      <Badge className="bg-[#E1F5EE] text-[#085041] dark:bg-green-900/30 dark:text-[#1D9E75]">Eliminerad</Badge>
                     ) : (
                       <Badge variant="outline">Ej eliminerad</Badge>
                     )}

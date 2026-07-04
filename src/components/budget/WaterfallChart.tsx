@@ -24,7 +24,7 @@ export function WaterfallChart({ revenue, cogs, grossProfit, opex, ebit, tax, ne
     const items: { name: string; base: number; value: number; color: string; isTotal: boolean }[] = [];
     
     // Revenue (starts at 0)
-    items.push({ name: "Intäkter", base: 0, value: revenue, color: "#000000", isTotal: false });
+    items.push({ name: "Intäkter", base: 0, value: revenue, color: "#3b82f6", isTotal: false });
     
     // COGS (negative, drops from revenue)
     items.push({ name: "COGS", base: revenue + cogs, value: -cogs, color: "#fda4af", isTotal: false });
@@ -33,17 +33,17 @@ export function WaterfallChart({ revenue, cogs, grossProfit, opex, ebit, tax, ne
     items.push({ name: "Bruttoresultat", base: 0, value: grossProfit, color: "#334155", isTotal: true });
     
     // OPEX (negative, drops from gross profit)
-    items.push({ name: "OPEX", base: grossProfit - Math.abs(opex), value: Math.abs(opex), color: "#737373", isTotal: false });
+    items.push({ name: "OPEX", base: grossProfit - Math.abs(opex), value: Math.abs(opex), color: "#fb7185", isTotal: false });
     
     // EBIT (running total)
     items.push({ name: "EBIT", base: 0, value: ebit, color: "#4f46e5", isTotal: true });
     
     // Tax (negative)
     const taxAbs = Math.abs(tax);
-    items.push({ name: "Skatt", base: ebit - taxAbs, value: taxAbs, color: "#A3A3A3", isTotal: false });
+    items.push({ name: "Skatt", base: ebit - taxAbs, value: taxAbs, color: "#fbbf24", isTotal: false });
     
     // Net Income (final total)
-    items.push({ name: "Årets resultat", base: 0, value: netIncome, color: netIncome >= 0 ? "#000000" : "#525252", isTotal: true });
+    items.push({ name: "Årets resultat", base: 0, value: netIncome, color: netIncome >= 0 ? "#10b981" : "#e11d48", isTotal: true });
 
     return items.map(item => ({
       name: item.name,

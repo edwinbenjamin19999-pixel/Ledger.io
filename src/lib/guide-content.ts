@@ -455,11 +455,11 @@ export const guideCategories: GuideCategory[] = [
 ];
 
 export const faqItems = [
-  { q: "Stämmer bokföringen verkligen?", a: "Bokfy följer svenska redovisningsstandarder (BAS, K2/K3) och validerar varje post med regelbaserad logik kombinerad med AI. Inget slutförs utan ditt godkännande — du har alltid full kontroll." },
-  { q: "Kan jag verkligen lita på AI med min ekonomi?", a: "Ja — Bokfy ersätter inte kontrollen, det tar bort manuellt arbete. AI:n hanterar repetitiva uppgifter medan du granskar och godkänner allt viktigt." },
+  { q: "Stämmer bokföringen verkligen?", a: "Cogniq följer svenska redovisningsstandarder (BAS, K2/K3) och validerar varje post med regelbaserad logik kombinerad med AI. Inget slutförs utan ditt godkännande — du har alltid full kontroll." },
+  { q: "Kan jag verkligen lita på AI med min ekonomi?", a: "Ja — Cogniq ersätter inte kontrollen, det tar bort manuellt arbete. AI:n hanterar repetitiva uppgifter medan du granskar och godkänner allt viktigt." },
   { q: "Vad händer om något blir fel?", a: "Alla poster är fullt spårbara och redigerbara. Du kan korrigera, justera eller reversera vilken transaktion som helst, när som helst." },
-  { q: "Fungerar det med Skatteverket och svenska regler?", a: "Bokfy är byggt för att följa svensk bokföringslag och rapporteringsstandarder, inklusive momsberäkningar och finansiella rapporter." },
-  { q: "Behöver jag kunna bokföring?", a: "Nej. Systemet är byggt så att du inte behöver förstå debet och kredit — Bokfy sköter det åt dig." },
-  { q: "Kan jag byta från Fortnox eller Visma?", a: "Ja. Bokfy har en inbyggd migrationsmotor som importerar data från befintliga system." },
+  { q: "Fungerar det med Skatteverket och svenska regler?", a: "Cogniq är byggt för att följa svensk bokföringslag och rapporteringsstandarder, inklusive momsberäkningar och finansiella rapporter." },
+  { q: "Behöver jag kunna bokföring?", a: "Nej. Systemet är byggt så att du inte behöver förstå debet och kredit — Cogniq sköter det åt dig." },
+  { q: "Kan jag byta från Fortnox eller Visma?", a: "Ja. Cogniq har en inbyggd migrationsmotor som importerar data från befintliga system." },
   { q: "Hur mycket tid kan jag spara?", a: "De flesta användare minskar sitt manuella bokföringsarbete med 70–90 %." },
 ];

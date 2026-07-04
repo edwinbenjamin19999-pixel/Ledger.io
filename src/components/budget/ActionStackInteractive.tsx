@@ -28,7 +28,7 @@ export function ActionStackInteractive({ actions, dismissed, onAccept, onReject 
   return (
     <div className="space-y-2">
       <div className="flex items-center gap-2">
-        <Sparkles className="w-3.5 h-3.5 text-[#000000]" />
+        <Sparkles className="w-3.5 h-3.5 text-[#3b82f6]" />
         <h3 className="text-sm font-semibold text-slate-900">Topp 3 åtgärder</h3>
         <span className="text-[10px] text-slate-500">rangordnade efter resultatpåverkan</span>
       </div>
@@ -92,7 +92,7 @@ function ActionCard({
       <div className="flex gap-1.5 pt-1">
         <Button
           size="sm"
-          className="flex-1 text-xs h-8 bg-[#000000] hover:bg-[#000000]"
+          className="flex-1 text-xs h-8 bg-[#3b82f6] hover:bg-[#3b82f6]"
           onClick={() => onAccept(action, scaledPatch ?? {})}
           disabled={!action.driverPatch}
         >

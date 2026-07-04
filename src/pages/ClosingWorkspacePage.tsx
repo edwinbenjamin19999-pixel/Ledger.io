@@ -74,9 +74,9 @@ const ClosingWorkspacePage = () => { const { companyId, usePeriods, useChecklist
       : `${MONTH_NAMES[p.period_month || 1]} ${p.period_year}`;
 
   const stageConfig: Record<string, { label: string; color: string }> = { open: { label: "Öppen", color: "bg-blue-500" },
-    soft_closed: { label: "Soft Close", color: "bg-neutral-700" },
+    soft_closed: { label: "Soft Close", color: "bg-amber-500" },
     in_review: { label: "Granskning", color: "bg-purple-500" },
-    hard_closed: { label: "Låst", color: "bg-neutral-700" },
+    hard_closed: { label: "Låst", color: "bg-green-600" },
   };
   const stages = ["open", "soft_closed", "in_review", "hard_closed"];
 
@@ -395,7 +395,7 @@ const CloseEngineView = ({ period, periodLabel, stages, stageConfig, companyId,
                       ) : issue.severity === "warning" ? (
                         <AlertTriangle className="h-4 w-4 text-[#7A5417] flex-shrink-0" />
                       ) : (
-                        <Info className="h-4 w-4 text-black flex-shrink-0" />
+                        <Info className="h-4 w-4 text-blue-500 flex-shrink-0" />
                       )}
                       <div>
                         <p className="text-sm font-medium">{issue.title}</p>
@@ -534,7 +534,7 @@ const CloseEngineView = ({ period, periodLabel, stages, stageConfig, companyId,
 
       {/* Locking CTA */}
       {period.status === "in_review" && (
-        <Card className="border-[#BFE6D6] bg-neutral-100/50">
+        <Card className="border-[#BFE6D6] bg-green-50/50">
           <CardContent className="py-5">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -549,7 +549,7 @@ const CloseEngineView = ({ period, periodLabel, stages, stageConfig, companyId,
               <Button
                 onClick={() => onAdvance("hard_closed")}
                 disabled={errorCount > 0}
-                className="bg-neutral-700 hover:bg-neutral-700"
+                className="bg-green-700 hover:bg-green-800"
               >
                 <Lock className="h-4 w-4 mr-2" /> Lås perioden
               </Button>
@@ -560,7 +560,7 @@ const CloseEngineView = ({ period, periodLabel, stages, stageConfig, companyId,
 
       {/* Locked badge */}
       {isLocked && (
-        <Card className="border-[#BFE6D6] bg-neutral-100/50">
+        <Card className="border-[#BFE6D6] bg-green-50/50">
           <CardContent className="py-5 text-center">
             <Lock className="h-8 w-8 text-[#085041] mx-auto mb-2" />
             <p className="text-sm font-semibold text-[#085041]">{periodLabel} är låst</p>
@@ -580,7 +580,7 @@ const CloseEngineView = ({ period, periodLabel, stages, stageConfig, companyId,
                 <SheetTitle className="flex items-center gap-2">
                   {selectedIssue.severity === "error" ? <AlertCircle className="h-5 w-5 text-destructive" /> :
                    selectedIssue.severity === "warning" ? <AlertTriangle className="h-5 w-5 text-[#7A5417]" /> :
-                   <Info className="h-5 w-5 text-black" />}
+                   <Info className="h-5 w-5 text-blue-500" />}
                   {selectedIssue.title}
                 </SheetTitle>
               </SheetHeader>

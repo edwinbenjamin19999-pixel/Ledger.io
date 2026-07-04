@@ -70,8 +70,8 @@ export function ReportControls({
             className={cn(
               "rounded-full px-4 py-1.5 text-sm font-medium border transition-all",
               activePeriod === p.key
-                ? "bg-[#000000] text-white border-black shadow-sm"
-                : "bg-card text-foreground border-border hover:border-[#000000] hover:text-[#000000]",
+                ? "bg-[#3b82f6] text-white border-blue-600 shadow-sm"
+                : "bg-card text-foreground border-border hover:border-[#3b82f6] hover:text-[#3b82f6]",
             )}
           >
             {p.label}

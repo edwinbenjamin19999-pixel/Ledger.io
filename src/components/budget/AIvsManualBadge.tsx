@@ -56,7 +56,7 @@ export function AIvsManualBadge({ source, onReset, onUnlock, className }: Props)
       className={cn(
         "inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium border",
         isAi
-          ? "bg-[#EFF6FF] text-[#000000] border-[#C8DDF5]"
+          ? "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]"
           : "bg-slate-100 text-slate-700 border-slate-200",
         className
       )}
@@ -67,7 +67,7 @@ export function AIvsManualBadge({ source, onReset, onUnlock, className }: Props)
         <button
           type="button"
           onClick={onReset}
-          className="ml-1 inline-flex items-center text-slate-500 hover:text-[#000000]"
+          className="ml-1 inline-flex items-center text-slate-500 hover:text-[#3b82f6]"
           title="Återställ till AI"
         >
           <RotateCcw className="w-3 h-3" />

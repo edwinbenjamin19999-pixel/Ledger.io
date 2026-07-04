@@ -110,7 +110,7 @@ export function VATConfidencePanel({
               <div className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Varningar</div>
             </div>
             <div>
-              <div className={cn("text-base font-bold font-mono", overridesCount > 0 ? "text-black" : "text-slate-700 dark:text-slate-300")}>{overridesCount}</div>
+              <div className={cn("text-base font-bold font-mono", overridesCount > 0 ? "text-blue-600" : "text-slate-700 dark:text-slate-300")}>{overridesCount}</div>
               <div className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Justerade</div>
             </div>
           </div>
@@ -137,8 +137,8 @@ export function VATConfidencePanel({
               <li key={t.key} className="flex items-center gap-2.5">
                 <div className={cn(
                   "w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 border-2 transition-colors",
-                  isDone ? "bg-[#1D9E75] border-neutral-700 text-white"
-                    : isCurrent ? "bg-[#C28A2B] border-neutral-700 text-white animate-pulse"
+                  isDone ? "bg-[#1D9E75] border-emerald-500 text-white"
+                    : isCurrent ? "bg-[#C28A2B] border-amber-500 text-white animate-pulse"
                     : "bg-slate-50 border-slate-200 text-slate-400 dark:bg-slate-800 dark:border-slate-700"
                 )}>
                   <Icon className="w-3 h-3" />

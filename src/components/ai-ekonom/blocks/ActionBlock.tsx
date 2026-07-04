@@ -24,7 +24,7 @@ export const ActionBlock = ({ data, onApprove, onEdit, onReject }: Props) => {
   return (
     <div className={cn(
       "rounded-xl border bg-white p-4 transition-shadow",
-      auto ? "border-[#C8DDF5] shadow-[0_0_0_3px_rgba(0,0,0,0.06)]" : "border-slate-200"
+      auto ? "border-[#C8DDF5] shadow-[0_0_0_3px_rgba(0,82,255,0.06)]" : "border-slate-200"
     )}>
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="min-w-0">
@@ -33,7 +33,7 @@ export const ActionBlock = ({ data, onApprove, onEdit, onReject }: Props) => {
             <h4 className="text-sm font-semibold text-slate-900 truncate">{data.title}</h4>
           </div>
           {auto && (
-            <span className="inline-flex items-center gap-1 mt-1 text-[11px] font-semibold text-[#000000] bg-[#EFF6FF] px-2 py-0.5 rounded-full">
+            <span className="inline-flex items-center gap-1 mt-1 text-[11px] font-semibold text-[#3b82f6] bg-[#EFF6FF] px-2 py-0.5 rounded-full">
               <Check className="w-3 h-3" /> Auto-bokförd
             </span>
           )}
@@ -105,13 +105,13 @@ export const ActionBlock = ({ data, onApprove, onEdit, onReject }: Props) => {
 
       <div className="flex items-center gap-2 flex-wrap">
         {data.primary?.intent === "open" ? (
-          <Button size="sm" onClick={data.voucherId ? onApprove : onEdit} className="bg-[#000000] hover:bg-[#000000] text-white">
+          <Button size="sm" onClick={data.voucherId ? onApprove : onEdit} className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white">
             {data.primary.label}
             <ArrowRight className="w-3.5 h-3.5 ml-1" />
           </Button>
         ) : (
           <>
-            <Button size="sm" onClick={onApprove} className="bg-[#000000] hover:bg-[#000000] text-white">
+            <Button size="sm" onClick={onApprove} className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white">
               <Check className="w-3.5 h-3.5 mr-1" /> Godkänn
             </Button>
             <Button size="sm" variant="outline" onClick={onEdit}>

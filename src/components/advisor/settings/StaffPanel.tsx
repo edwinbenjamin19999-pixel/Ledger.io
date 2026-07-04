@@ -31,8 +31,8 @@ interface Invitation {
 }
 
 const ROLE_META: Record<Member["role"], { label: string; icon: typeof Crown; tone: string }> = {
-  admin:      { label: "Byråadmin",  icon: Crown,     tone: "text-neutral-700 bg-neutral-100" },
-  consultant: { label: "Redovisare", icon: Briefcase, tone: "text-[#000000] bg-neutral-100" },
+  admin:      { label: "Byråadmin",  icon: Crown,     tone: "text-amber-700 bg-amber-50" },
+  consultant: { label: "Redovisare", icon: Briefcase, tone: "text-[#3b82f6] bg-blue-50" },
   viewer:     { label: "Läsare",     icon: Eye,       tone: "text-slate-700 bg-slate-100" },
 };
 
@@ -174,7 +174,7 @@ export function StaffPanel() {
       {/* Pending invitations */}
       {invites.length > 0 && (
         <div className="rounded-3xl bg-white border border-[#E2E8F0] overflow-hidden">
-          <div className="px-5 py-3 bg-neutral-100 text-[10px] uppercase tracking-wide font-bold text-neutral-700">
+          <div className="px-5 py-3 bg-amber-50 text-[10px] uppercase tracking-wide font-bold text-amber-700">
             Väntande inbjudningar ({invites.length})
           </div>
           <div className="divide-y divide-[#F1F5F9]">
@@ -196,7 +196,7 @@ export function StaffPanel() {
                 >
                   <Copy className="h-3 w-3 mr-1" /> Kopiera länk
                 </Button>
-                <Button variant="ghost" size="sm" className="text-[#525252]" onClick={() => revokeInvite(inv.id)}>
+                <Button variant="ghost" size="sm" className="text-[#DC2626]" onClick={() => revokeInvite(inv.id)}>
                   Återkalla
                 </Button>
               </div>

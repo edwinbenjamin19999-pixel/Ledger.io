@@ -59,10 +59,10 @@ export function CashWaterfall({ steps, onDrillDown, highlightKinds }: Props) {
         </div>
         <div className="flex items-center gap-3 text-[11px] text-muted-foreground">
           <span className="inline-flex items-center gap-1">
-            <span className="h-2 w-2 rounded-sm bg-neutral-700" /> Positiv
+            <span className="h-2 w-2 rounded-sm bg-emerald-500" /> Positiv
           </span>
           <span className="inline-flex items-center gap-1">
-            <span className="h-2 w-2 rounded-sm bg-neutral-700" /> Negativ
+            <span className="h-2 w-2 rounded-sm bg-rose-500" /> Negativ
           </span>
           <span className="inline-flex items-center gap-1">
             <span className="h-2 w-2 rounded-sm bg-slate-700" /> Total

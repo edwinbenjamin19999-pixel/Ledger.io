@@ -22,13 +22,13 @@ export function RegulatoryDiff({ diffs }: Props) { if (diffs.length === 0) retur
             <p className="text-xs font-medium text-foreground mb-2">{diff.field}</p>
             <div className="flex items-center gap-3 mb-2">
               <span
-                className="px-2 py-1 rounded text-sm font-mono line-through bg-[#FCE8E8] text-[#7A1A1A] dark:bg-neutral-700/30 dark:text-neutral-300"
+                className="px-2 py-1 rounded text-sm font-mono line-through bg-[#FCE8E8] text-[#7A1A1A] dark:bg-rose-900/30 dark:text-rose-300"
               >
                 {diff.oldValue}
               </span>
               <span className="text-muted-foreground text-xs">&#8594;</span>
               <span
-                className="px-2 py-1 rounded text-sm font-mono font-medium bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700/30 dark:text-neutral-300"
+                className="px-2 py-1 rounded text-sm font-mono font-medium bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-emerald-300"
               >
                 {diff.newValue}
               </span>

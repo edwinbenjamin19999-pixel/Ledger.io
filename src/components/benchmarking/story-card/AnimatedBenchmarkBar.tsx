@@ -31,7 +31,7 @@ export function AnimatedBenchmarkBar({
     <div className={cn("space-y-2", !reliable && "opacity-40")}>
       <div className="relative">
         {/* Track with gradient quartiles */}
-        <div className="relative h-2.5 rounded-full overflow-hidden bg-gradient-to-r from-neutral-100 via-amber-100 via-blue-100 to-neutral-100 dark:from-rose-950/40 dark:via-amber-950/40 dark:via-blue-950/40 dark:to-emerald-950/40">
+        <div className="relative h-2.5 rounded-full overflow-hidden bg-gradient-to-r from-rose-100 via-amber-100 via-blue-100 to-emerald-100 dark:from-rose-950/40 dark:via-amber-950/40 dark:via-blue-950/40 dark:to-emerald-950/40">
           {/* Tick lines */}
           {TICKS.map((t) => (
             <div
@@ -53,7 +53,7 @@ export function AnimatedBenchmarkBar({
           <div
             className={cn(
               "h-4 w-4 rounded-full border-2 border-background shadow-md",
-              simulating && "ring-4 ring-[#000000]/40 animate-pulse",
+              simulating && "ring-4 ring-[#3b82f6]/40 animate-pulse",
             )}
             style={{ backgroundColor: verdict.markerColor }}
           />
