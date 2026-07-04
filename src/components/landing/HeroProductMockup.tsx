@@ -7,15 +7,15 @@ import heroDashboard from "@/assets/hero-dashboard.png";
 export const HeroProductMockup = () => {
   return (
     <div className="relative w-full">
-      <div className="overflow-hidden rounded-lg bg-white p-1.5">
+      <div className="overflow-hidden border-2 border-background bg-background">
         <img
           src={heroDashboard}
           alt="Bokfy dashboardöversikt"
-          className="block w-full h-auto rounded-md"
+          className="block w-full h-auto grayscale contrast-110"
           loading="eager"
         />
       </div>
-      <p className="text-white/50 text-xs text-center mt-4">
+      <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-widest text-background/50">
         Riktiga siffror. Alltid uppdaterade. Ingen manuell bokföring.
       </p>
     </div>

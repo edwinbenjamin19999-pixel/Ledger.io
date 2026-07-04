@@ -28,47 +28,53 @@ const STATS = [
 export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-white">
-      {/* LEFT — flat blått poster-block, dolt på mobil */}
-      <div className="hidden lg:flex flex-1 bg-[#000000] relative overflow-hidden flex-col justify-between p-12 xl:p-16">
-        {/* Geometrisk dekoration — platta former i låg opacitet */}
-        <div aria-hidden className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full bg-white/5" />
-          <div className="absolute bottom-[18%] -left-24 h-[260px] w-[260px] rounded-full bg-white/5" />
-          <div className="absolute -bottom-16 right-[14%] h-[180px] w-[180px] rotate-12 bg-white/5" />
-        </div>
+      {/* LEFT — inverterat svart editoriellt block, dolt på mobil */}
+      <div className="hidden lg:flex flex-1 bg-foreground text-background relative overflow-hidden flex-col justify-between p-12 xl:p-16">
+        {/* Vertikalt linjemönster (spec: inverted section texture) */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(90deg, transparent, transparent 1px, #fff 1px, #fff 2px)",
+            backgroundSize: "4px 100%",
+          }}
+        />
 
         <div className="relative z-10">
-          <span className="text-2xl font-extrabold tracking-tight text-white">Bokfy</span>
+          <span className="font-display text-2xl tracking-tight text-background">
+            <span className="font-bold">Bok</span>
+            <span className="font-medium italic">fy</span>
+          </span>
         </div>
 
         <div className="relative z-10 space-y-8">
           <h2
-            className={`${compact ? "text-[36px]" : "text-[44px]"} font-extrabold text-white leading-[1.15] tracking-tight`}
+            className={`font-display ${compact ? "text-[44px]" : "text-[56px]"} font-medium text-background leading-[1.05] tracking-tight`}
           >
             Bokföring.
             <br />
-            <span className="inline-block bg-[#525252] px-3 text-[#000000]">
+            {/* Inversion för emphasis: vit ruta, svart text */}
+            <span className="mt-2 inline-block bg-background px-3 text-foreground">
               Automatiserad.
             </span>
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-4 border-t border-background/20 pt-6">
             {FEATURES.map((f) => (
               <div key={f} className="flex items-center gap-3">
-                <div className="flex h-[26px] w-[26px] flex-shrink-0 items-center justify-center rounded-md bg-white">
-                  <Check className="h-3.5 w-3.5 text-[#000000]" strokeWidth={3} aria-hidden />
-                </div>
-                <span className="text-sm font-medium text-white/90">{f}</span>
+                <span className="font-mono text-xs text-background/50">—</span>
+                <span className="font-serif text-[15px] text-background/90">{f}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="relative z-10 flex gap-10">
+        <div className="relative z-10 flex gap-10 border-t border-background/20 pt-6">
           {STATS.map((s) => (
             <div key={s.label}>
-              <div className="text-[22px] font-extrabold text-white">{s.value}</div>
-              <div className="mt-0.5 text-[11.5px] uppercase tracking-wider text-white">
+              <div className="font-display text-[24px] font-bold text-background">{s.value}</div>
+              <div className="mt-0.5 font-mono text-[10px] uppercase tracking-widest text-background/50">
                 {s.label}
               </div>
             </div>
@@ -77,12 +83,14 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
       </div>
 
       {/* RIGHT — minimal form slot */}
-      <div className="w-full lg:w-1/2 xl:w-[560px] flex-shrink-0 bg-white flex items-center justify-center px-6 sm:px-8 py-12 min-h-screen">
+      <div className="w-full lg:w-1/2 xl:w-[560px] flex-shrink-0 bg-background flex items-center justify-center px-6 sm:px-8 py-12 min-h-screen border-l-4 border-foreground">
         <div className="w-full max-w-sm mx-auto">
           {/* Mobile-only logo */}
           <div className="flex lg:hidden items-center gap-0 mb-8">
-            <span className="text-xl font-extrabold tracking-tight text-[#000000]">Bok</span>
-            <span className="text-xl font-extrabold tracking-tight text-[#000000]">fy</span>
+            <span className="font-display text-xl tracking-tight text-foreground">
+              <span className="font-bold">Bok</span>
+              <span className="font-medium italic">fy</span>
+            </span>
           </div>
           {children}
         </div>
