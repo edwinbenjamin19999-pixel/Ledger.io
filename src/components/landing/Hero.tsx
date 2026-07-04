@@ -89,15 +89,19 @@ export const Hero = () => {
             {/* Roterande streckad ring — glaciärt långsam */}
             <div className="hero-ring absolute left-1/2 top-1/2 h-[460px] w-[460px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-[#0052FF]/15" />
             {/* Higgsfield 3D-glasrender — svävar */}
-            <img
-              src={hero3d}
-              alt=""
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster={hero3d}
               width={1024}
               height={1024}
-              loading="eager"
               className="hero-float-slow relative z-10 mx-auto w-full max-w-[440px] mix-blend-multiply"
               style={{ maskImage: "radial-gradient(circle at 50% 48%, #000 52%, transparent 76%)", WebkitMaskImage: "radial-gradient(circle at 50% 48%, #000 52%, transparent 76%)" }}
-            />
+            >
+              <source src="/hero-3d.mp4" type="video/mp4" />
+            </video>
             {/* Flytande KPI-kort 1 */}
             <div className="hero-float-a absolute left-[-8px] top-[16%] z-20 rounded-xl border border-border bg-card px-4 py-3 shadow-xl">
               <div className="flex items-center gap-2.5">
