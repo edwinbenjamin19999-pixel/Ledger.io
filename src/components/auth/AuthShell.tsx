@@ -38,7 +38,8 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
         </div>
 
         <div className="relative z-10">
-          <span className="text-2xl font-extrabold tracking-tight text-white">Cogniq</span>
+          <span className="text-2xl font-extrabold tracking-tight text-white">Cog</span>
+          <span className="text-2xl font-extrabold tracking-tight text-[#4D7CFF]">niq</span>
         </div>
 
         <div className="relative z-10 space-y-8">
