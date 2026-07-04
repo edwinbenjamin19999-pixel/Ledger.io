@@ -47,9 +47,7 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
           >
             Bokföring.
             <br />
-            <span className="bg-gradient-to-r from-[#4D7CFF] to-[#9DB8FF] bg-clip-text text-transparent">
-              Automatiserad.
-            </span>
+            <span className="text-[#4D7CFF]">Automatiserad.</span>
           </h2>
 
           <div className="space-y-4">

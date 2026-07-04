@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
  */
 export const PilotCTA = () => {
   return (
-    <section id="pilot" className="relative overflow-hidden bg-gradient-to-br from-[#0052FF] to-[#4D7CFF] py-24">
+    <section id="pilot" className="relative overflow-hidden bg-[#0052FF] py-24">
       <div
         aria-hidden
         className="pointer-events-none absolute -right-24 -top-24 h-[360px] w-[360px] rounded-full bg-white/10"

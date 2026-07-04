@@ -106,7 +106,7 @@ export const CountdownCTA = () => {
           <button
             type="submit"
             disabled={loading}
-            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] text-base font-bold text-white shadow-accent transition-all duration-200 hover:-translate-y-0.5 hover:shadow-accent-lg hover:brightness-110 disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
+            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0052FF] text-base font-bold text-white shadow-accent transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0040CC] hover:shadow-accent-lg disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
           >
             {loading ? "Skickar..." : "Säkra din plats"}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />

@@ -20,7 +20,7 @@ export const SectionLabel = ({
   >
     <span
       aria-hidden
-      className={`h-2 w-2 rounded-full bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] ${
+      className={`h-2 w-2 rounded-full bg-[#0052FF] ${
         pulse ? "animate-[labelPulse_2s_ease-in-out_infinite]" : ""
       }`}
     />

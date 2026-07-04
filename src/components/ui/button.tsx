@@ -11,14 +11,14 @@ import { cn } from "@/lib/utils";
  */
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
-  { variants: { variant: { default: "bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] text-white font-semibold shadow-sm hover:shadow-accent-lg hover:-translate-y-0.5 hover:brightness-110 active:scale-[0.98] active:translate-y-0",
+  { variants: { variant: { default: "bg-[#0052FF] text-white font-semibold shadow-sm hover:bg-[#0040CC] hover:shadow-accent hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0",
         destructive: "bg-destructive text-destructive-foreground font-semibold shadow-sm hover:bg-destructive/90 hover:-translate-y-0.5 active:scale-[0.98]",
         outline: "border border-border bg-transparent text-foreground hover:bg-muted hover:border-[#0052FF]/30 hover:shadow-sm",
         secondary: "bg-muted text-foreground font-semibold hover:bg-muted/70 hover:-translate-y-0.5 hover:shadow-sm active:scale-[0.98]",
         ghost: "text-muted-foreground hover:text-foreground hover:bg-muted",
         link: "text-primary underline-offset-4 hover:underline",
         chip: "rounded-full bg-[#0052FF]/5 border border-[#0052FF]/20 text-primary text-xs font-semibold hover:bg-[#0052FF]/10 transition-colors duration-200",
-        hero: "bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] text-white font-bold text-base shadow-accent hover:shadow-accent-lg hover:-translate-y-0.5 hover:brightness-110 active:scale-[0.98]",
+        hero: "bg-[#0052FF] text-white font-bold text-base shadow-accent hover:bg-[#0040CC] hover:shadow-accent-lg hover:-translate-y-0.5 active:scale-[0.98]",
         glass: "bg-white/10 border border-white/25 text-white backdrop-blur-sm hover:bg-white/20 hover:border-white/40",
       },
       size: { default: "h-10 px-4 py-2",

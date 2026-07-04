@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, TrendingUp, Sparkles } from "lucide-react";
 import { useWaitlistCount } from "@/hooks/useWaitlistCount";
 import { SectionLabel } from "./SectionLabel";
-import hero3d from "@/assets/hero-3d.png";
 
 /**
  * MINIMALIST MODERN HERO — asymmetriskt 1.1fr/0.9fr-grid på varm off-white.
@@ -22,7 +21,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero-section" className="relative w-full overflow-hidden bg-background pt-[60px]">
+    <section id="hero-section" className="relative w-full overflow-hidden bg-background bg-dot-grid pt-[60px]">
       {/* Radial accent-glow — atmosfäriskt djup, känns mer än syns */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 right-[-10%] h-[600px] w-[600px] rounded-full bg-[#0052FF] opacity-[0.05] blur-[150px]" />
@@ -40,9 +39,7 @@ export const Hero = () => {
             <h1 className="hero-anim hero-anim-headline mt-8 font-display text-[2.75rem] leading-[1.05] tracking-[-0.02em] text-foreground md:text-6xl lg:text-[4.6rem]">
               Ekonomin på{" "}
               <span className="relative inline-block whitespace-nowrap">
-                <span className="bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] bg-clip-text text-transparent">
-                  autopilot
-                </span>
+                <span className="text-[#0052FF]">autopilot</span>
                 <span
                   aria-hidden
                   className="absolute -bottom-1 left-0 h-3 w-full rounded-sm bg-gradient-to-r from-[#0052FF]/15 to-[#4D7CFF]/10 md:-bottom-2 md:h-4"
@@ -84,50 +81,83 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* ── Höger: 3D-komposition (dold på mobil) ── */}
-          <div aria-hidden className="relative hidden select-none lg:block">
+          {/* ── Höger: abstrakt svävande UI-komposition (ref-stil) ── */}
+          <div aria-hidden className="relative hidden h-[480px] select-none lg:block">
             {/* Roterande streckad ring — glaciärt långsam */}
-            <div className="hero-ring absolute left-1/2 top-1/2 h-[460px] w-[460px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-[#0052FF]/15" />
-            {/* Higgsfield 3D-glasrender — svävar */}
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster={hero3d}
-              width={1024}
-              height={1024}
-              className="hero-float-slow relative z-10 mx-auto w-full max-w-[440px] mix-blend-multiply"
-              style={{ maskImage: "radial-gradient(circle at 50% 48%, #000 52%, transparent 76%)", WebkitMaskImage: "radial-gradient(circle at 50% 48%, #000 52%, transparent 76%)" }}
-            >
-              <source src="/hero-3d.mp4" type="video/mp4" />
-            </video>
-            {/* Flytande KPI-kort 1 */}
-            <div className="hero-float-a absolute left-[-8px] top-[16%] z-20 rounded-xl border border-border bg-card px-4 py-3 shadow-xl">
+            <div className="hero-ring absolute left-1/2 top-1/2 h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-[#0052FF]/20" />
+
+            {/* Stort skelett-kort */}
+            <div className="hero-float-slow absolute left-[6%] top-[10%] z-10 w-[300px] rounded-2xl border border-border bg-card p-5 shadow-xl">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-xl bg-[#0052FF]/15" />
+                <div className="space-y-2">
+                  <div className="h-2.5 w-32 rounded-full bg-muted" />
+                  <div className="h-2 w-20 rounded-full bg-muted" />
+                </div>
+              </div>
+              <div className="mt-4 space-y-2.5">
+                <div className="h-2 w-full rounded-full bg-muted" />
+                <div className="h-2 w-4/5 rounded-full bg-muted" />
+              </div>
+              <div className="mt-4 grid grid-cols-3 gap-2">
+                <div className="h-10 rounded-lg bg-gradient-to-br from-[#0052FF]/15 to-[#4D7CFF]/10" />
+                <div className="h-10 rounded-lg bg-muted" />
+                <div className="h-10 rounded-lg bg-muted" />
+              </div>
+            </div>
+
+            {/* Mindre överlappande kort */}
+            <div className="hero-float-a absolute bottom-[16%] left-[30%] z-20 w-[220px] rounded-2xl border border-border bg-card p-4 shadow-xl">
+              <div className="flex items-center justify-between">
+                <div className="h-8 w-8 rounded-full bg-[#0052FF]" />
+                <div className="grid grid-cols-3 gap-1">
+                  {Array.from({ length: 9 }).map((_, i) => (
+                    <span key={i} className="h-1 w-1 rounded-full bg-[#0052FF]/30" />
+                  ))}
+                </div>
+              </div>
+              <div className="mt-3 space-y-2">
+                <div className="h-2 w-full rounded-full bg-muted" />
+                <div className="h-2 w-2/3 rounded-full bg-muted" />
+              </div>
+            </div>
+
+            {/* Mini-statkort */}
+            <div className="hero-float-b absolute right-[2%] top-[22%] z-20 rounded-xl border border-border bg-card px-4 py-3 shadow-xl">
               <div className="flex items-center gap-2.5">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#0052FF] to-[#4D7CFF] text-white">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0052FF] text-white">
                   <Sparkles className="h-4 w-4" strokeWidth={2} />
                 </span>
                 <div>
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Kontering</div>
+                  <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Kontering</div>
                   <div className="text-sm font-semibold text-foreground">98% konfidens</div>
                 </div>
               </div>
             </div>
-            {/* Flytande KPI-kort 2 */}
-            <div className="hero-float-b absolute bottom-[14%] right-[-4px] z-20 rounded-xl border border-border bg-card px-4 py-3 shadow-xl">
+
+            {/* Likviditets-kort */}
+            <div className="hero-float-a absolute bottom-[4%] right-[10%] z-20 rounded-xl border border-border bg-card px-4 py-3 shadow-xl" style={{ animationDelay: "1.2s" }}>
               <div className="flex items-center gap-2.5">
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600">
                   <TrendingUp className="h-4 w-4" strokeWidth={2} />
                 </span>
                 <div>
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Likviditet</div>
-                  <div className="text-sm font-semibold text-foreground tabular-nums">+12,4%</div>
+                  <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Likviditet</div>
+                  <div className="text-sm font-semibold tabular-nums text-foreground">+12,4%</div>
                 </div>
               </div>
             </div>
-            {/* Hörnaccent */}
-            <div className="absolute right-[8%] top-[6%] z-0 h-9 w-9 rounded-lg bg-gradient-to-br from-[#0052FF] to-[#4D7CFF] opacity-90 shadow-accent" />
+
+            {/* Live-pill */}
+            <div className="absolute bottom-[24%] left-[4%] z-20 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 shadow-md">
+              <span className="hero-live-dot h-2 w-2 rounded-full bg-emerald-500" />
+              <span className="text-xs font-medium text-foreground">AI bokför — live</span>
+            </div>
+
+            {/* Hörnaccent — solid blå kloss */}
+            <div className="absolute right-[6%] bottom-[30%] z-0 h-12 w-12 rounded-xl bg-[#0052FF] opacity-90 shadow-accent" />
+            {/* Blå cirkel bakom */}
+            <div className="absolute left-[16%] bottom-[6%] z-0 h-16 w-16 rounded-full bg-gradient-to-br from-[#0052FF]/20 to-[#4D7CFF]/10" />
           </div>
         </div>
 

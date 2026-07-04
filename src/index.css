@@ -790,6 +790,12 @@ textarea[class*="bg-slate-"]:focus {
 ::-webkit-scrollbar-thumb { background: hsl(var(--muted-foreground) / 0.18); border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.3); }
 
+/* Dot-grid — referensens subtila mönster på ljusa marknadsytor */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, rgba(15,23,42,0.08) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
 /* ── 17. UTILITIES ── */
 .section-gap { margin-bottom: 1.5rem; }
 .card-padding { padding: 1.25rem 1.5rem; }
@@ -1456,13 +1462,11 @@ textarea[class*="bg-slate-"]:focus {
     font-size: 13px;
   }
 
-  /* Minimalist Modern: Calistoga bär rubrikpersonligheten (endast vikt 400),
-     Inter tar h3–h6 */
+  /* Minimalist Modern (ref): rena sans-rubriker — Inter, halvfet, tight */
   h1, h2 {
-    font-family: 'Calistoga', Georgia, serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
   }
   h3, h4, h5, h6 {
     font-weight: 600;

@@ -41,9 +41,7 @@ export const Header = (_props: HeaderProps = {}) => {
         {/* Logo — gradient-signatur på "niq" */}
         <Link to="/" className="flex items-center gap-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2">
           <span className="text-xl font-extrabold tracking-tight text-foreground">Cog</span>
-          <span className="bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] bg-clip-text text-xl font-extrabold tracking-tight text-transparent">
-            niq
-          </span>
+          <span className="text-xl font-extrabold tracking-tight text-[#0052FF]">niq</span>
         </Link>
 
         {/* Desktop nav */}
@@ -64,7 +62,7 @@ export const Header = (_props: HeaderProps = {}) => {
           <Button variant="ghost" size="sm" onClick={() => navigate("/auth")} className="text-sm">
             Logga in
           </Button>
-          <Button size="sm" onClick={() => navigate("/auth")} className="group h-9 gap-1.5 text-sm">
+          <Button size="sm" onClick={() => navigate("/auth")} className="group h-9 gap-1.5 rounded-full px-4 text-sm">
             Kom igång gratis
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden />
           </Button>

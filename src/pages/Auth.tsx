@@ -274,8 +274,8 @@ const Auth = () => {
 
   // FLAT: solid blå CTA — färgskifte + skala, aldrig skugga (matchar landningssidan)
   const primaryBtn =
-    "w-full h-[52px] rounded-xl bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] text-white font-bold text-[15px] shadow-accent " +
-    "hover:-translate-y-0.5 hover:shadow-accent-lg hover:brightness-110 active:scale-[0.98] transition-all duration-200 " +
+    "w-full h-[52px] rounded-xl bg-[#0052FF] text-white font-bold text-[15px] shadow-accent " +
+    "hover:-translate-y-0.5 hover:bg-[#0040CC] hover:shadow-accent-lg active:scale-[0.98] transition-all duration-200 " +
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 " +
     "disabled:opacity-60 disabled:hover:scale-100 flex items-center justify-center gap-2";
 

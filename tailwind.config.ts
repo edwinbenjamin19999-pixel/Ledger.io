@@ -117,7 +117,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
-        display: ["Calistoga", "Georgia", "serif"],
+        display: ["Inter", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "Fira Code", "ui-monospace", "monospace"],
       },
       borderRadius: {
