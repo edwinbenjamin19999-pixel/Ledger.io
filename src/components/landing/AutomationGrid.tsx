@@ -10,27 +10,27 @@ const ITEMS = [
 ];
 
 /**
- * FLAT AUTOMATIONS-BLOCK — solitt ink-navy med tydliga white/5-kortblock
- * och solida blå ikon-cirklar. Ytan är synlig, inte antydd.
+ * LJUST AUTOMATIONS-BLOCK — luftig, near-white yta med vita kort, mjuk skugga
+ * och platta Electric Blue ikon-cirklar. SaaS-referensens ljusa känsla.
  */
 export const AutomationGrid = () => {
   return (
-    <section className="relative overflow-hidden bg-[#0F172A] py-24 px-6">
+    <section className="relative overflow-hidden bg-white py-24 px-6">
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-white/5"
+        className="pointer-events-none absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-[#0052FF]/5"
       />
       <div className="relative mx-auto max-w-6xl">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#4D7CFF]">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
           Vad Cogniq gör
         </p>
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
-          Det här gör Cogniq <span className="text-[#4D7CFF]">åt dig</span>
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F172A]">
+          Det här gör Cogniq <span className="text-[#0052FF]">åt dig</span>
         </h2>
-        <p className="mt-3 max-w-xl text-base text-white/70">
+        <p className="mt-3 max-w-xl text-base text-slate-600">
           Det som tar 40 timmar manuellt — Cogniq gör det på sekunder.
         </p>
-        <p className="mt-2 max-w-2xl text-base leading-relaxed text-white/60">
+        <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-500">
           Sex återkommande arbetsmoment som körs automatiskt i bakgrunden — så
           du kan fokusera på besluten istället för bokföringen.
         </p>
@@ -39,13 +39,13 @@ export const AutomationGrid = () => {
           {ITEMS.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="group rounded-lg bg-white/[0.07] p-7 transition-all duration-200 hover:scale-[1.02] hover:bg-white/[0.12]"
+              className="group rounded-xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0052FF] text-white transition-transform duration-200 group-hover:scale-110">
                 <Icon className="h-5 w-5" strokeWidth={2.5} aria-hidden />
               </div>
-              <h3 className="mt-5 text-base font-bold text-white">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/60">{desc}</p>
+              <h3 className="mt-5 text-base font-bold text-[#0F172A]">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">{desc}</p>
             </div>
           ))}
         </div>

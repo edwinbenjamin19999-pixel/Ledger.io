@@ -448,16 +448,16 @@ export const InteractiveDemoPreview = () => {
         <p className="section-label">Produktdemo</p>
         <h2
           className="section-headline text-4xl md:text-5xl font-[700] leading-[1.05]"
-          style={{ letterSpacing: "-0.8px" }}
+          style={{ letterSpacing: "-0.8px", color: "#0F172A" }}
         >
           Se produkten <span style={{ color: "#0052FF" }}>i arbete.</span>
         </h2>
-        <p className="section-lede text-[15px] leading-relaxed max-w-2xl">
+        <p className="section-lede text-[15px] leading-relaxed max-w-2xl" style={{ color: "#475569" }}>
           Det här är inte mockups — det är så systemet faktiskt fungerar. Fem flöden som körs autonomt: bokföring, bank, moms, prognos och kontroll.
         </p>
 
         {/* Tab selector */}
-        <div className="flex flex-wrap justify-center gap-1 mb-8 border-b border-white/5">
+        <div className="flex flex-wrap justify-center gap-1 mb-8 border-b border-slate-200">
           {TABS.map((t) => {
             const isActive = active === t.key;
             return (
@@ -466,8 +466,8 @@ export const InteractiveDemoPreview = () => {
                 onClick={() => setActive(t.key)}
                 className={`px-4 py-3 text-sm font-medium transition-all border-b-2 -mb-px ${
                   isActive
-                    ? "text-white border-[#0052FF]"
-                    : "text-white/50 hover:text-white/80 border-transparent"
+                    ? "text-[#0052FF] border-[#0052FF]"
+                    : "text-slate-500 hover:text-slate-800 border-transparent"
                 }`}
               >
                 {t.label}
@@ -533,7 +533,7 @@ export const InteractiveDemoPreview = () => {
               el.scrollIntoView({ behavior: "smooth" });
             }
           }}
-          className="mt-10 w-full flex items-center justify-center gap-2 text-center font-medium transition-colors border border-white/10 text-white/50 hover:text-white/70 hover:border-white/20"
+          className="mt-10 w-full flex items-center justify-center gap-2 text-center font-medium transition-colors border border-slate-200 text-slate-500 hover:text-slate-700 hover:border-slate-300"
           style={{
             fontSize: 15,
             padding: "16px 32px",

@@ -2,8 +2,8 @@ import { ArrowRight, Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 /**
- * FLAT WHITE LABEL-BLOCK — solitt ink-navy, vita check-rutor, mockup i
- * vit platt ram (som hero). Inga glows, gradienter eller skuggor.
+ * LJUST WHITE LABEL-BLOCK — near-white yta, platta blå check-rutor, mockup i
+ * vit ram med mörk produktkropp (branded dashboard-screenshot).
  */
 const points = [
   { title: "Din branding", desc: "Logotyp, färger, domän — helt ditt." },
@@ -22,22 +22,22 @@ const BARS = [30, 45, 38, 55, 48, 62, 58, 72, 68, 80, 75, 88];
 export const WhiteLabelSection = () => {
   const navigate = useNavigate();
   return (
-    <section className="relative overflow-hidden bg-[#0F172A] py-24 px-6">
+    <section className="relative overflow-hidden bg-[#F5F8FF] py-24 px-6">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-28 -left-28 h-[340px] w-[340px] rounded-full bg-white/5"
+        className="pointer-events-none absolute -top-28 -left-28 h-[340px] w-[340px] rounded-full bg-[#0052FF]/5"
       />
       <div className="relative mx-auto max-w-6xl">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Vänster */}
           <div className="lg:col-span-5">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#4D7CFF]">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
               White Label
             </p>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight text-white">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight text-[#0F172A]">
               Lansera din egen bokföringsplattform.
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/70">
+            <p className="mt-4 text-base leading-relaxed text-slate-600">
               Erbjud Cogniq under ditt varumärke. För redovisningsbyråer, banker
               och rådgivare.
             </p>
@@ -45,12 +45,12 @@ export const WhiteLabelSection = () => {
             <ul className="mt-8 space-y-4">
               {points.map((p) => (
                 <li key={p.title} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-[22px] w-[22px] flex-shrink-0 items-center justify-center rounded-md bg-white">
-                    <Check className="h-3 w-3 text-[#0052FF]" strokeWidth={3} aria-hidden />
+                  <span className="mt-0.5 flex h-[22px] w-[22px] flex-shrink-0 items-center justify-center rounded-md bg-[#0052FF]">
+                    <Check className="h-3 w-3 text-white" strokeWidth={3} aria-hidden />
                   </span>
                   <div>
-                    <div className="text-[15px] font-bold text-white">{p.title}</div>
-                    <div className="mt-0.5 text-[13px] text-white/60">{p.desc}</div>
+                    <div className="text-[15px] font-bold text-[#0F172A]">{p.title}</div>
+                    <div className="mt-0.5 text-[13px] text-slate-500">{p.desc}</div>
                   </div>
                 </li>
               ))}
@@ -58,7 +58,7 @@ export const WhiteLabelSection = () => {
 
             <button
               onClick={() => navigate("/white-label")}
-              className="group mt-8 inline-flex h-12 items-center gap-2 rounded-md bg-[#0052FF] px-6 text-[15px] font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#0040CC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
+              className="group mt-8 inline-flex h-12 items-center gap-2 rounded-md bg-[#0052FF] px-6 text-[15px] font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#0040CC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5F8FF]"
             >
               Läs mer om White Label
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />

@@ -44,37 +44,37 @@ export const CountdownCTA = () => {
   return (
     <section
       id="signup"
-      className="relative overflow-hidden bg-[#0F172A] py-24 md:py-32 scroll-mt-20"
+      className="relative overflow-hidden bg-[#F5F8FF] py-24 md:py-32 scroll-mt-20"
     >
-      {/* MM-textur: dot-mönster + radial accent-glow på inverterad yta */}
+      {/* Ljus, luftig yta — mjuk blå glow, ingen tung textur */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
-        style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "32px 32px", opacity: 0.04 }}
+        style={{ backgroundImage: "radial-gradient(circle, rgba(15,23,42,0.5) 1px, transparent 1px)", backgroundSize: "32px 32px", opacity: 0.025 }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-[#0052FF] opacity-25 blur-[150px]"
+        className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-[#0052FF] opacity-[0.07] blur-[150px]"
       />
 
       <div className="relative z-10 container mx-auto max-w-2xl px-6 text-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.05] mb-4">
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#0F172A] leading-[1.05] mb-4">
           Sluta betala för system som inte tänker.
         </h2>
-        <p className="text-white/80 text-xl mb-3">
+        <p className="text-slate-600 text-xl mb-3">
           Pilotfas pågår — begränsat antal platser.
         </p>
-        <p className="text-white/60 text-base mb-8 max-w-lg mx-auto leading-relaxed">
+        <p className="text-slate-500 text-base mb-8 max-w-lg mx-auto leading-relaxed">
           De flesta ekonomisystem är byggda på 20 år gammal grund — med AI
           tillagt i efterhand. Cogniq är byggt från grunden med AI som
           motor. Early access är begränsat.
         </p>
 
         {/* Live signup counter */}
-        <p className="mb-6 text-sm font-semibold text-white">
+        <p className="mb-6 text-sm font-semibold text-slate-700">
           <span
             aria-hidden
-            className="mr-2 inline-block h-2 w-2 rounded-full bg-emerald-400 align-middle"
+            className="mr-2 inline-block h-2 w-2 rounded-full bg-emerald-500 align-middle"
           />
           <span className="tabular-nums">{count.toLocaleString("sv-SE")}</span>{" "}
           företag redan anmälda
@@ -90,7 +90,7 @@ export const CountdownCTA = () => {
             placeholder="Ditt namn (valfritt)"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="h-12 w-full rounded-xl border-2 border-transparent bg-white px-4 text-[15px] text-[#0F172A] placeholder:text-[#0F172A]/40 focus:border-[#4D7CFF] focus:outline-none transition-colors duration-200"
+            className="h-12 w-full rounded-xl border-2 border-slate-200 bg-white px-4 text-[15px] text-[#0F172A] placeholder:text-[#0F172A]/40 focus:border-[#0052FF] focus:outline-none transition-colors duration-200"
           />
           <label htmlFor="cta-email" className="sr-only">E-postadress</label>
           <input
@@ -101,33 +101,33 @@ export const CountdownCTA = () => {
             placeholder="din@email.se"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-12 w-full rounded-xl border-2 border-transparent bg-white px-4 text-[15px] text-[#0F172A] placeholder:text-[#0F172A]/40 focus:border-[#4D7CFF] focus:outline-none transition-colors duration-200"
+            className="h-12 w-full rounded-xl border-2 border-slate-200 bg-white px-4 text-[15px] text-[#0F172A] placeholder:text-[#0F172A]/40 focus:border-[#0052FF] focus:outline-none transition-colors duration-200"
           />
           <button
             type="submit"
             disabled={loading}
-            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0052FF] text-base font-bold text-white shadow-accent transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0040CC] hover:shadow-accent-lg disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
+            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0052FF] text-base font-bold text-white shadow-accent transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0040CC] hover:shadow-accent-lg disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5F8FF]"
           >
             {loading ? "Skickar..." : "Säkra din plats"}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
           </button>
-          <p className="mt-3 text-xs font-medium tracking-wide text-white/60">
+          <p className="mt-3 text-xs font-medium tracking-wide text-slate-500">
             ✓ 14 dagar gratis · ✓ Ingen bindningstid
           </p>
-          <p className="mx-auto mt-2 max-w-sm text-xs text-white/50">
+          <p className="mx-auto mt-2 max-w-sm text-xs text-slate-400">
             Din data lagras på svenska servrar, krypteras i vila och transit,
             och delas aldrig med tredje part.
           </p>
         </form>
 
-        {/* Princip-rad — platt block */}
-        <div className="mx-auto mt-12 mb-12 max-w-2xl rounded-lg bg-white/5 px-8 py-4">
+        {/* Princip-rad — ljust kort */}
+        <div className="mx-auto mt-12 mb-12 max-w-2xl rounded-lg border border-slate-200 bg-white px-8 py-4 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center md:justify-center text-center md:text-left">
-            <span className="text-base font-bold text-white">
+            <span className="text-base font-bold text-[#0F172A]">
               AI bokför — du godkänner.
             </span>
-            <span aria-hidden className="mx-6 hidden text-white/20 md:inline">·</span>
-            <span className="mt-2 text-sm text-white/60 md:mt-0">
+            <span aria-hidden className="mx-6 hidden text-slate-300 md:inline">·</span>
+            <span className="mt-2 text-sm text-slate-500 md:mt-0">
               Varje post är granskbar, spårbar och alltid i linje med bokföringslagen.
             </span>
           </div>

@@ -39,9 +39,7 @@ const Index = () => {
       <main>
         <Hero />
         <Reveal><CountdownCTA /></Reveal>
-        <NavyBlock>
-          <Reveal><InteractiveDemoPreview /></Reveal>
-        </NavyBlock>
+        <Reveal><InteractiveDemoPreview /></Reveal>
         <Reveal><Pillars /></Reveal>
         <AIEngineSection />
         <Reveal><ReceiptFlowSection /></Reveal>

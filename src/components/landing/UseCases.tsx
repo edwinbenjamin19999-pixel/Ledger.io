@@ -29,30 +29,29 @@ const CASES = [
 ];
 
 /**
- * FLAT "EMERALD BENEFITS"-BLOCK — helt emerald-600-block (posterprincip:
- * en sektion, en färg). Vita ikon-cirklar med emerald-ikon, white/10-kort.
- * AA: vit text på #059669 passerar.
+ * LJUST "FÖR VEM"-BLOCK — luftig, near-white yta (SaaS-referens). Vita kort
+ * med mjuk skugga, platta Electric Blue ikon-cirklar, mörk ink-text.
  */
 export const UseCases = () => {
   const reveal = useScrollReveal<HTMLDivElement>();
   return (
-    <section className="relative overflow-hidden bg-[#0F172A] py-24 px-6">
+    <section className="relative overflow-hidden bg-[#F5F8FF] py-24 px-6">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 right-[8%] h-[320px] w-[320px] rounded-full bg-white/10"
+        className="pointer-events-none absolute -top-32 right-[8%] h-[320px] w-[320px] rounded-full bg-[#0052FF]/5"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-24 -left-16 h-[220px] w-[220px] rotate-12 bg-white/10"
+        className="pointer-events-none absolute -bottom-24 -left-16 h-[220px] w-[220px] rotate-12 rounded-3xl bg-[#0052FF]/5"
       />
       <div ref={reveal.ref} className={`relative mx-auto max-w-5xl ${reveal.className}`}>
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-white/80">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
           För vem
         </p>
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] text-white">
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] text-[#0F172A]">
           Ett system. Fyra roller.
         </h2>
-        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-white/85">
+        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-slate-600">
           Cogniq anpassar sig efter vem du är och vad du behöver — utan att
           du byter system.
         </p>
@@ -61,14 +60,14 @@ export const UseCases = () => {
           {CASES.map(({ icon: Icon, title, desc, outcome }) => (
             <div
               key={title}
-              className="group rounded-lg bg-white/10 p-7 transition-all duration-200 hover:scale-[1.02] hover:bg-white/[0.16]"
+              className="group rounded-xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#059669] transition-transform duration-200 group-hover:scale-110">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#0052FF] text-white transition-transform duration-200 group-hover:scale-110">
                 <Icon className="h-5 w-5" strokeWidth={2.5} aria-hidden />
               </div>
-              <h3 className="mb-2 text-xl font-bold tracking-tight text-white">{title}</h3>
-              <p className="text-sm leading-relaxed text-white/85">{desc}</p>
-              <p className="mt-3 text-[13px] font-bold text-white">{outcome}</p>
+              <h3 className="mb-2 text-xl font-bold tracking-tight text-[#0F172A]">{title}</h3>
+              <p className="text-sm leading-relaxed text-slate-600">{desc}</p>
+              <p className="mt-3 text-[13px] font-bold text-[#0052FF]">{outcome}</p>
             </div>
           ))}
         </div>
