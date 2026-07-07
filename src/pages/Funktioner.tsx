@@ -78,13 +78,13 @@ export default function Funktioner() {
         </div>
         <div className="relative mx-auto max-w-3xl px-6 pt-20 pb-20 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-blue-100">
-            Funktioner
+            Plattformen
           </p>
           <h1 className="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight text-white">
             Allt du behöver. Inget du inte behöver.
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-blue-50">
-            Cogniq sköter hela bokföringen i bakgrunden — från transaktion till deklaration.
+            Cogniq sköter hela ekonomifunktionen i bakgrunden — från transaktion till deklaration, och vidare till prognos och beslut.
           </p>
         </div>
       </section>
@@ -96,7 +96,7 @@ export default function Funktioner() {
             {FEATURES.map(({ icon: Icon, title, body }) => (
               <div
                 key={title}
-                className="group rounded-lg bg-gray-100 p-7 transition-all duration-200 hover:scale-[1.02] hover:bg-gray-200"
+                className="group rounded-xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0052FF] text-white transition-transform duration-200 group-hover:scale-110">
                   <Icon className="h-5 w-5" strokeWidth={2.5} aria-hidden />
@@ -109,24 +109,24 @@ export default function Funktioner() {
         </div>
       </section>
 
-      {/* Amber CTA-block */}
-      <section className="relative overflow-hidden bg-[#F59E0B] py-20">
+      {/* Blått CTA-block */}
+      <section className="relative overflow-hidden bg-[#0052FF] py-20">
         <div
           aria-hidden
           className="pointer-events-none absolute -right-20 -top-20 h-[280px] w-[280px] rounded-full bg-white/10"
         />
         <div className="relative mx-auto max-w-2xl px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F172A]">
-            Redo att sluta bokföra manuellt?
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+            Redo för en ekonomi som ligger steget före?
           </h2>
-          <p className="mt-3 text-base text-[#0F172A]/80">
-            Pilotfas pågår — begränsat antal platser.
+          <p className="mt-3 text-base text-blue-50">
+            Pilotfas pågår — begränsat antal platser inför lansering Q3 2026.
           </p>
           <button
             onClick={() => navigate("/auth")}
-            className="mt-8 inline-flex h-14 items-center gap-2 rounded-md bg-[#0F172A] px-8 text-base font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#1a2c46] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F172A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F59E0B]"
+            className="mt-8 inline-flex h-14 items-center gap-2 rounded-md bg-white px-8 text-base font-bold text-[#0052FF] transition-all duration-200 hover:scale-105 hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0052FF]"
           >
-            Säkra din plats
+            Gå med i piloten
             <ArrowRight className="h-5 w-5" aria-hidden />
           </button>
         </div>

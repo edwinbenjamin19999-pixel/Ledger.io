@@ -23,19 +23,19 @@ const items = [
 
 export const WLAIDifferentiation = () => {
   return (
-    <section className="bg-[#0F172A] py-24 md:py-32">
+    <section className="bg-white py-24 md:py-32">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-[#0052FF] text-xs font-medium tracking-[0.25em] uppercase mb-3">
             AI-motorn
           </p>
           <h2
-            className="text-4xl md:text-5xl font-[700] text-white leading-[1.05]"
+            className="text-4xl md:text-5xl font-[700] text-[#0F172A] leading-[1.05]"
             style={{ letterSpacing: "-0.8px" }}
           >
             AI:n som driver din plattform.
           </h2>
-          <p className="mt-5 text-[15px] text-white/55 leading-relaxed">
+          <p className="mt-5 text-[15px] text-slate-500 leading-relaxed">
             Inte ett bolt-on. En motor byggd för svensk redovisning från grunden.
           </p>
         </div>
@@ -44,7 +44,7 @@ export const WLAIDifferentiation = () => {
           {items.map(({ icon: Icon, title, desc, example }) => (
             <div
               key={title}
-              className="relative rounded-xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-transparent p-7 flex flex-col"
+              className="relative rounded-xl border border-slate-200 bg-white p-7 flex flex-col"
             >
               <div className="absolute top-7 right-7 flex gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0052FF] animate-pulse" />
@@ -52,9 +52,9 @@ export const WLAIDifferentiation = () => {
               <div className="w-10 h-10 rounded-lg bg-[#0052FF]/10 flex items-center justify-center mb-5">
                 <Icon className="w-5 h-5 text-[#0052FF]" />
               </div>
-              <h3 className="text-white font-semibold mb-2 text-[15px]">{title}</h3>
-              <p className="text-white/55 text-sm leading-relaxed">{desc}</p>
-              <div className="mt-5 pt-4 border-t border-white/[0.05]">
+              <h3 className="text-[#0F172A] font-semibold mb-2 text-[15px]">{title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
+              <div className="mt-5 pt-4 border-t border-slate-200">
                 <p className="text-[#0052FF] text-xs leading-relaxed italic">{example}</p>
               </div>
             </div>

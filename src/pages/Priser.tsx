@@ -105,7 +105,7 @@ const Priser = () => {
               </span>
               <h2 className="text-xl font-bold text-[#0F172A]">Standard</h2>
               <p className="mt-1 text-sm text-[#0F172A]/60">
-                För företag som vill automatisera sin bokföring
+                För bolag som vill ha en ekonomifunktion som tänker själv
               </p>
               <div className="mt-6">
                 <div className="flex items-baseline gap-1">
@@ -123,11 +123,11 @@ const Priser = () => {
                 onClick={() => navigate("/auth")}
                 className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#0052FF] text-[15px] font-bold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-[#0040CC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2"
               >
-                Kom igång gratis
+                Gå med i piloten
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </button>
               <p className="mt-3 text-center text-xs text-[#0F172A]/50">
-                14 dagar gratis · Ingen bindningstid
+                Pilotpris · begränsat antal platser
               </p>
               <div className="mt-6 border-t-2 border-[#0052FF]/15 pt-6">
                 <p className="mb-3 text-[10px] font-semibold uppercase tracking-wider text-[#0F172A]/50">
@@ -182,8 +182,8 @@ const Priser = () => {
           </div>
         </section>
 
-        {/* FAQ — grå sektion, border-2-avdelare */}
-        <section className="bg-gray-100 py-20">
+        {/* FAQ — ljus blå-tonad sektion */}
+        <section className="bg-[#F5F8FF] py-20">
           <div className="mx-auto max-w-2xl px-6">
             <h2 className="mb-10 text-center text-3xl font-extrabold tracking-tight text-[#0F172A]">
               Vanliga frågor
@@ -239,17 +239,17 @@ const Priser = () => {
           />
           <div className="relative px-6">
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
-              Redo att börja?
+              Redo att ligga steget före?
             </h2>
             <p className="mt-3 text-white/70">
-              Kom igång på några minuter. Ingen bindningstid.
+              Gå med i piloten inför lansering Q3 2026. Begränsat antal platser.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <button
                 onClick={() => navigate("/auth")}
                 className="inline-flex h-12 items-center gap-2 rounded-md bg-[#0052FF] px-8 font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#0040CC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
               >
-                Kom igång gratis
+                Gå med i piloten
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </button>
               <button

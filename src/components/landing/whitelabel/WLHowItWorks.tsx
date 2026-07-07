@@ -7,14 +7,14 @@ const steps = [
 
 export const WLHowItWorks = () => {
   return (
-    <section id="how-it-works" className="bg-[#0F172A] py-24 md:py-32">
+    <section id="how-it-works" className="bg-[#F5F8FF] py-24 md:py-32">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="max-w-2xl mb-16">
           <p className="text-[#0052FF] text-xs font-medium tracking-[0.25em] uppercase mb-3">
             Så fungerar det
           </p>
           <h2
-            className="text-4xl md:text-5xl font-[700] text-white leading-[1.05]"
+            className="text-4xl md:text-5xl font-[700] text-[#0F172A] leading-[1.05]"
             style={{ letterSpacing: "-0.8px" }}
           >
             Från noll till lansering på dagar.
@@ -28,8 +28,8 @@ export const WLHowItWorks = () => {
                 <div className="hidden md:block absolute top-3 left-12 right-0 h-px bg-gradient-to-r from-[#0052FF]/30 to-transparent" />
               )}
               <div className="text-[#0052FF] font-mono text-xs tracking-wider mb-4">{s.n}</div>
-              <h3 className="text-white font-semibold mb-2 text-[15px]">{s.title}</h3>
-              <p className="text-white/55 text-sm leading-relaxed">{s.desc}</p>
+              <h3 className="text-[#0F172A] font-semibold mb-2 text-[15px]">{s.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
