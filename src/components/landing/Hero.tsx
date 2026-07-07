@@ -24,7 +24,7 @@ export const Hero = () => {
     <section id="hero-section" className="relative w-full overflow-hidden bg-background bg-dot-grid pt-[60px]">
       {/* Radial accent-glow — atmosfäriskt djup, känns mer än syns */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 right-[-10%] h-[600px] w-[600px] rounded-full bg-[#0052FF] opacity-[0.05] blur-[150px]" />
+        <div className="absolute -top-40 right-[-10%] h-[600px] w-[600px] rounded-full bg-[#0052FF] opacity-[0.08] blur-[150px]" />
         <div className="absolute bottom-0 left-[-10%] h-[400px] w-[400px] rounded-full bg-[#4D7CFF] opacity-[0.04] blur-[120px]" />
       </div>
 
@@ -33,39 +33,40 @@ export const Hero = () => {
           {/* ── Vänster: text ── */}
           <div className="text-center lg:text-left">
             <div className="hero-anim hero-anim-badge flex justify-center lg:justify-start">
-              <SectionLabel pulse>AI som kärna — inte som ett lager</SectionLabel>
+              <SectionLabel pulse>Beslutsintelligens för växande bolag</SectionLabel>
             </div>
 
             <h1 className="hero-anim hero-anim-headline mt-8 font-display text-[2.75rem] leading-[1.05] tracking-[-0.02em] text-foreground md:text-6xl lg:text-[4.6rem]">
-              Ekonomin på{" "}
+              Ekonomin som{" "}
               <span className="relative inline-block whitespace-nowrap">
-                <span className="text-[#0052FF]">autopilot</span>
+                <span className="text-[#0052FF]">tänker själv.</span>
                 <span
                   aria-hidden
-                  className="absolute -bottom-1 left-0 h-3 w-full rounded-sm bg-gradient-to-r from-[#0052FF]/15 to-[#4D7CFF]/10 md:-bottom-2 md:h-4"
+                  className="absolute -bottom-1 left-0 h-3 w-full rounded-sm bg-[#0052FF]/15 md:-bottom-2 md:h-4"
                 />
               </span>
             </h1>
 
             <p className="hero-anim hero-anim-sub mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground lg:mx-0">
-              Det enda ekonomisystemet där AI inte är ett tillägg — det är
-              motorn. Bokföring, moms, budget, prognos och rapportering i ett
-              system som tänker själv.
+              Cogniq bokför, stämmer av och deklarerar automatiskt — och
+              förvandlar varje siffra till prognoser, varningar och beslut du
+              kan lita på. Byggt för svenska regler, spårbart in i minsta
+              verifikat.
             </p>
 
             <div className="hero-anim hero-anim-cta mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <button
                 onClick={() => navigate("/auth")}
-                className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] px-8 text-base font-bold text-white shadow-accent transition-all duration-200 hover:-translate-y-0.5 hover:shadow-accent-lg hover:brightness-110 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 sm:w-auto"
+                className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#0052FF] px-8 text-base font-bold text-white shadow-accent transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0040CC] hover:shadow-accent-lg active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 sm:w-auto"
               >
-                Kom igång gratis
+                Gå med i piloten
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden />
               </button>
               <button
                 onClick={() => scrollToId("how-it-works")}
                 className="inline-flex h-14 w-full items-center justify-center rounded-xl border border-border bg-card px-6 text-base font-semibold text-foreground transition-all duration-200 hover:border-[#0052FF]/30 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 sm:w-auto"
               >
-                Se hur det fungerar ↓
+                Se Cogniq i arbete ↓
               </button>
             </div>
 

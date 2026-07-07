@@ -25,10 +25,10 @@ export const Header = (_props: HeaderProps = {}) => {
   }, []);
 
   const navLinks = [
-    { label: "Funktioner", href: "/funktioner" },
-    { label: "Guide", href: "/resources/guide" },
+    { label: "Plattformen", href: "/funktioner" },
+    { label: "Så tänker Cogniq", href: "/resources/guide" },
+    { label: "För byråer", href: "/white-label" },
     { label: "Priser", href: "/priser" },
-    { label: "Kontakt", href: "/contact" },
   ];
 
   return (
@@ -63,7 +63,7 @@ export const Header = (_props: HeaderProps = {}) => {
             Logga in
           </Button>
           <Button size="sm" onClick={() => navigate("/auth")} className="group h-9 gap-1.5 rounded-full px-4 text-sm">
-            Kom igång gratis
+            Gå med i piloten
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden />
           </Button>
         </div>
@@ -97,7 +97,7 @@ export const Header = (_props: HeaderProps = {}) => {
             onClick={() => { navigate("/auth"); setMobileOpen(false); }}
             className="h-11 w-full text-sm"
           >
-            Kom igång gratis
+            Gå med i piloten
           </Button>
         </div>
       )}

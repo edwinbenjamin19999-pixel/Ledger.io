@@ -22,9 +22,9 @@ const companyLinks = [
 
 const resourceLinks = [
   { label: "FAQ", to: "/faq" },
-  { label: "AI-bokföring förklarat", to: "/resources/ai-bookkeeping" },
+  { label: "Beslutsintelligens förklarat", to: "/resources/ai-bookkeeping" },
   { label: "Svensk momsguide", to: "/resources/vat-guide" },
-  { label: "Bokföringsguider", to: "/resources/accounting-guides" },
+  { label: "Guider för svensk ekonomi", to: "/resources/accounting-guides" },
   { label: "Blogg", to: "/blog" },
 ];
 
@@ -66,7 +66,7 @@ const FooterLinkColumn = ({ title, links }: { title: string; links: { label: str
 
 export const Footer = () => {
   return (
-    <footer className="text-white bg-[#0a1628]" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+    <footer className="text-white bg-[#0a1628]" style={{ borderTop: "2px solid #0052FF" }}>
       {/* Main grid */}
       <div className="container mx-auto px-4 sm:px-6 py-14 sm:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
@@ -77,7 +77,7 @@ export const Footer = () => {
               <span className="text-2xl font-[800] text-[#0052FF] tracking-tight">niq</span>
             </Link>
             <p className="text-sm text-white/60 max-w-[260px] leading-relaxed">
-              AI-driven bokföringsplattform för SME:s och växande företag i Sverige
+              Ekonomin som tänker själv. Hela ekonomifunktionen — bokföring, prognos och beslut — driven av AI, byggd för svenska regler.
             </p>
             <div className="space-y-2.5 text-sm text-white/60">
               <a href="mailto:info@cogniq.se" className="flex items-center gap-2 hover:text-[#0052FF] transition-colors">
@@ -133,20 +133,20 @@ export const Footer = () => {
         <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-14">
           <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-8 sm:p-10 text-center max-w-2xl mx-auto">
             <h3 className="text-xl sm:text-2xl font-bold text-white/90 mb-2">
-              Redo att förenkla din bokföring?
+              Redo för en ekonomi som ligger steget före?
             </h3>
             <p className="text-sm text-white/50 mb-6">
-              Låt AI hantera det repetitiva arbetet så att du kan fokusera på ditt företag.
+              Gå med i piloten inför lansering Q3 2026 och forma produkten med oss.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild size="lg" className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold">
-                <Link to="/auth">Testa Cogniq</Link>
+              <Button asChild size="lg" className="bg-[#0052FF] text-white hover:bg-[#0040CC] font-semibold">
+                <Link to="/auth">Gå med i piloten</Link>
               </Button>
               <Button asChild variant="glass" size="lg" className="hover:scale-[1.02]">
                 <Link to="/contact">Boka demo</Link>
               </Button>
             </div>
-            <p className="text-xs text-white/50 mt-4">Ingen bindning. Kom igång på några minuter.</p>
+            <p className="text-xs text-white/50 mt-4">Begränsat antal platser. Ingen bindning.</p>
           </div>
         </div>
       </div>

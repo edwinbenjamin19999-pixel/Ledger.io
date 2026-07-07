@@ -3,6 +3,10 @@ import { ChevronDown } from "lucide-react";
 
 const FAQS = [
   {
+    q: "Är Cogniq bara ännu ett AI-bokföringsverktyg?",
+    a: "Nej. Att bokföra automatiskt är utgångspunkten, inte målet. Cogniq förvandlar din löpande bokföring till prognoser, avvikelser och beslutsunderlag i realtid — en hel ekonomifunktion, inte bara en robot som konterar. Det är skillnaden mellan att se bakåt och att ligga steget före.",
+  },
+  {
     q: "Vad händer om AI:n konterar fel?",
     a: "Cogniq bokför med hög precision mot BAS-kontoplanen, men du godkänner alltid innan något låses. Varje post är granskbar och spårbar till källtransaktionen. Du behåller full kontroll — AI:n tar bort arbetet, inte ansvaret.",
   },

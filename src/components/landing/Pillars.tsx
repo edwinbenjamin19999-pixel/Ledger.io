@@ -1,38 +1,37 @@
-import { Bot, Landmark, CreditCard, ShieldCheck } from "lucide-react";
+import { Bot, Landmark, CreditCard, LineChart } from "lucide-react";
 
 /**
- * FLAT COLOR-BLOCK CARDS — vit sektion med fyra mjukt tintade kortblock.
- * Ingen skugga, ingen kant: färgen definierar ytan. Ikon i solid cirkel.
- * Hover = subtil skala + färgintensifiering (posterprincip).
+ * LJUSA KORTBLOCK — vit sektion, fyra near-white kort med platta Electric
+ * Blue ikon-cirklar (enhetligt genom hela sidan). Hover = subtil skala.
  */
 const pillars = [
   {
     icon: Bot,
-    tint: "bg-blue-50 hover:bg-blue-100",
+    tint: "bg-[#F5F8FF] hover:bg-[#EAF0FF]",
     iconCircle: "bg-[#0052FF] text-white",
-    title: "Automatiserad bokföring",
+    title: "Bokföringen sköter sig själv",
     desc: "Lägg noll tid på bokföring. Cogniq konterar mot BAS-kontoplanen automatiskt — du fokuserar på företaget.",
   },
   {
     icon: Landmark,
-    tint: "bg-emerald-50 hover:bg-emerald-100",
-    iconCircle: "bg-[#059669] text-white",
-    title: "Direkt till myndigheter",
+    tint: "bg-[#F5F8FF] hover:bg-[#EAF0FF]",
+    iconCircle: "bg-[#0052FF] text-white",
+    title: "Deklarationer utan deadlines",
     desc: "Moms (konto 2610–2650), AGI och inkomstskatt lämnas direkt till Skatteverket. Inga formulär, inga glömda deadlines.",
   },
   {
     icon: CreditCard,
-    tint: "bg-amber-50 hover:bg-amber-100",
-    iconCircle: "bg-[#F59E0B] text-[#0F172A]",
-    title: "Bankintegrationer",
+    tint: "bg-[#F5F8FF] hover:bg-[#EAF0FF]",
+    iconCircle: "bg-[#0052FF] text-white",
+    title: "Banken stämd i realtid",
     desc: "Koppla din bank en gång. Kontinuerlig bankavstämning mot verifikat — varje transaktion matchas och konteras automatiskt.",
   },
   {
-    icon: ShieldCheck,
-    tint: "bg-gray-100 hover:bg-gray-200",
-    iconCircle: "bg-[#0F172A] text-white",
-    title: "Revision & kontroll",
-    desc: "Resultat- och balansräkning alltid uppdaterad. Varje post är spårbar, verifierbar och revisionssäker.",
+    icon: LineChart,
+    tint: "bg-[#F5F8FF] hover:bg-[#EAF0FF]",
+    iconCircle: "bg-[#0052FF] text-white",
+    title: "Prognos som ligger steget före",
+    desc: "Varje verifikat blir prognos, likviditet och avvikelser i realtid — så du fattar beslut på siffror du kan lita på.",
   },
 ];
 
@@ -47,7 +46,7 @@ export const Pillars = () => {
           Fyra grundpelare — ett enda system.
         </h2>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[#0F172A]/60">
-          Allt du behöver för automatiserad bokföring och rapportering, integrerat från dag ett.
+          Allt en ekonomifunktion gör — bokföring, deklaration, avstämning och prognos — i ett system som tänker själv.
         </p>
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           {pillars.map((p) => (

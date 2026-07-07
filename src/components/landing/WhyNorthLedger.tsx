@@ -11,7 +11,7 @@ const TRADITIONAL = [
 ];
 
 const CONTO = [
-  "AI som kärna — byggt från grunden för automation",
+  "Beslut byggda in från grunden — inte påklistrat",
   "Ett system: bokföring, moms, löner, budget, prognos",
   "Realtidsdata — resultat och balans alltid uppdaterad",
   "Proaktiv kontroll — avvikelser flaggas direkt",
@@ -90,7 +90,7 @@ export const WhyNorthLedger = () => {
             onClick={() => navigate("/auth")}
             className="inline-flex h-14 items-center gap-2 rounded-md bg-[#0052FF] px-8 text-[15px] font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#0040CC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2"
           >
-            Säkra din plats — 14 dagar utan kostnad vid lansering
+            Gå med i piloten
             <ArrowRight className="h-4 w-4" aria-hidden />
           </button>
         </div>

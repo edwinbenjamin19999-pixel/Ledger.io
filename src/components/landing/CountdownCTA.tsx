@@ -65,9 +65,9 @@ export const CountdownCTA = () => {
           Pilotfas pågår — begränsat antal platser.
         </p>
         <p className="text-slate-500 text-base mb-8 max-w-lg mx-auto leading-relaxed">
-          De flesta ekonomisystem är byggda på 20 år gammal grund — med AI
-          tillagt i efterhand. Cogniq är byggt från grunden med AI som
-          motor. Early access är begränsat.
+          De flesta ekonomisystem bokför bakåt. Cogniq är byggt för att se
+          framåt — prognos, avvikelser och beslut, inte bara verifikat. Vi tar
+          in ett begränsat antal pilotbolag inför lansering Q3 2026.
         </p>
 
         {/* Live signup counter */}
@@ -108,7 +108,7 @@ export const CountdownCTA = () => {
             disabled={loading}
             className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0052FF] text-base font-bold text-white shadow-accent transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0040CC] hover:shadow-accent-lg disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5F8FF]"
           >
-            {loading ? "Skickar..." : "Säkra din plats"}
+            {loading ? "Skickar..." : "Ansök till piloten"}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
           </button>
           <p className="mt-3 text-xs font-medium tracking-wide text-slate-500">

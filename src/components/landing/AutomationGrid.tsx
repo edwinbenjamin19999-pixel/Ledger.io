@@ -22,10 +22,10 @@ export const AutomationGrid = () => {
       />
       <div className="relative mx-auto max-w-6xl">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
-          Vad Cogniq gör
+          Autonomt i bakgrunden
         </p>
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F172A]">
-          Det här gör Cogniq <span className="text-[#0052FF]">åt dig</span>
+          Sex arbetsmoment. <span className="text-[#0052FF]">Noll av dem dina.</span>
         </h2>
         <p className="mt-3 max-w-xl text-base text-slate-600">
           Det som tar 40 timmar manuellt — Cogniq gör det på sekunder.

@@ -45,7 +45,7 @@ export const SelectedFeatures = () => {
           Funktioner
         </p>
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F172A]">
-          Det som ersätter manuellt arbete.
+          Allt en ekonomiavdelning gör — <span className="text-[#0052FF]">inbyggt.</span>
         </h2>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[#0F172A]/60">
           Sex kärnflöden som körs autonomt — granskade, spårbara och alltid aktuella.
