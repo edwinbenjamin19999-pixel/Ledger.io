@@ -41,7 +41,7 @@ export const FAQ = () => {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-white py-24 px-6">
+    <section className="bg-[#F5F8FF] py-24 px-6">
       <div className="mx-auto max-w-2xl">
         <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#0052FF]">
           Vanliga frågor

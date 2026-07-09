@@ -39,7 +39,7 @@ const FEATURES = [
 
 export const FeaturesSection = () => {
   return (
-    <section id="produkt" className="bg-[#F7F9FC] py-24 px-6 md:py-28">
+    <section id="produkt" className="bg-[#F5F8FF] py-24 px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-[#14181F] md:text-[2.6rem]">
