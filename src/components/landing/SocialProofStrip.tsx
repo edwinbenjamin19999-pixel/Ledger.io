@@ -14,7 +14,7 @@ const SEGMENTS = [
 
 export const SocialProofStrip = () => {
   return (
-    <section id="kunder" className="border-b border-t border-border bg-white pb-12 pt-32 md:pt-40">
+    <section id="kunder" className="border-b border-t border-border bg-white py-12">
       <div className="mx-auto max-w-5xl px-6">
         <p className="text-center font-mono text-[10.5px] uppercase tracking-[0.18em] text-muted-foreground">
           Byggt för svenska bolag och byråer

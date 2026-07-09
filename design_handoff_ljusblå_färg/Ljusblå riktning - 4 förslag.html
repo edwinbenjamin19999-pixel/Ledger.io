@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="design_doc_mode" content="canvas">
+<title>Cogniq — ljusblå riktning, 4 förslag</title>
+<template id="__bundler_thumbnail" data-bg-color="#0052FF">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#0052FF"/>
+    <circle cx="50" cy="50" r="27" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.32"/>
+    <path d="M62 32 A16 16 0 1 0 62 68" stroke="#FFFFFF" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <circle cx="50" cy="50" r="5" fill="#4D93FF"/>
+  </svg>
+</template>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #E7EBF0;
+  color: #0F172A;
+}
+h1,h2,h3,.display { font-family: 'Instrument Sans', 'Inter', sans-serif; }
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+.frame {
+  position: absolute;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(15,23,42,.16);
+  background: #fff;
+}
+.prop-label {
+  position: absolute;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #0F172A;
+}
+.prop-desc {
+  position: absolute;
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+}
+.badge {
+  display: inline-flex; align-items:center; justify-content:center;
+  width: 30px; height: 30px; border-radius: 8px;
+  background: #0052FF; color: #fff; font-weight:700; font-size:15px;
+  margin-right: 10px; font-family:'Instrument Sans',sans-serif;
+}
+
+/* ---- shared: logo mark (real Sigill-C SVG, light/dark variants) ---- */
+.logo { display:flex; align-items:center; gap:8px; }
+.logo-mark-svg { flex: none; display:block; }
+.logo-word { font-family:'Instrument Sans',sans-serif; font-weight:700; font-size:17px; letter-spacing:-0.01em; }
+
+/* ---- shared: buttons ---- */
+.btn { display:inline-flex; align-items:center; justify-content:center; height:44px; padding:0 22px; border-radius:10px; font-weight:600; font-size:14px; font-family:'Inter',sans-serif; border:none; cursor:default; white-space:nowrap; }
+
+/* ---- shared: nav / sidebar ---- */
+.navbar { display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:76px; }
+.navlinks { display:flex; gap:28px; font-size:14px; font-weight:500; }
+
+.sidebar { width:220px; height:100%; flex:none; padding:20px 14px; display:flex; flex-direction:column; gap:4px; overflow:hidden; }
+.sb-logo { padding:8px 10px 20px; }
+.nav-item { display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:8px; font-size:12.5px; font-weight:500; }
+.nav-icon { width:14px; height:14px; border-radius:5px; flex:none; }
+.nav-group-label { font-size:9.5px; font-weight:600; letter-spacing:0.07em; text-transform:uppercase; padding:12px 12px 4px; opacity:.55; }
+
+.topbar { height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:none; }
+.content { flex:1; padding:24px; overflow:hidden; }
+.app-shell { display:flex; height:100%; }
+.app-main { flex:1; display:flex; flex-direction:column; }
+
+.kpi-card { border-radius:12px; padding:16px 18px; display:flex; flex-direction:column; gap:8px; }
+.kpi-label { font-size:11px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; opacity:.6; }
+.kpi-value { font-family:'JetBrains Mono',monospace; font-size:26px; font-weight:600; letter-spacing:-0.02em; }
+.kpi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+
+.field-label { font-size:12px; font-weight:600; color:#475569; margin-bottom:6px; display:block; }
+.field-input { width:100%; height:46px; border-radius:10px; border:1.5px solid #E2E8F0; padding:0 14px; font-size:14px; font-family:'Inter',sans-serif; color:#0F172A; background:#fff; }
+</style>
+</head>
+<body>
+
+<div style="position:absolute; top:24px; left:80px; font-family:'Instrument Sans',sans-serif; font-weight:700; font-size:28px; color:#0F172A;">Cogniq — ljusblå riktning</div>
+<div style="position:absolute; top:62px; left:80px; font-size:14px; color:#64748B; max-width:640px;">5 förslag för att ersätta den mörka navy-hero:n med den ljusare brand-blå (#0052FF) + vit — genom hemsida, login och den inloggade plattformen. Skala från heltäckande blått (A) till blått som accent (D), plus en medveten blandning (E).</div>
+
+<!-- ============================================================ -->
+<!-- PROPOSAL A — Fullblå (~90%) -->
+<!-- ============================================================ -->
+<div class="prop-label" style="top:132px; left:80px;"><span class="badge">A</span>Fullblå</div>
+<div class="prop-desc" style="top:172px; left:122px;">Blått är ytan — hero, login och app-chrome helt blå. Direkt återgivning av din referensbild.</div>
+
+<!-- Hero A -->
+<div class="frame" style="top:212px; left:80px; width:1600px; height:380px; background:#0052FF;">
+  <div class="navbar" style="color:#fff;">
+    <div class="logo">
+      <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.32"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#FFFFFF" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#4D93FF"></circle></svg>
+      <div class="logo-word" style="color:#fff;">Cogniq</div>
+    </div>
+    <div class="navlinks" style="color:rgba(255,255,255,.85);"><span>Produkt</span><span>Priser</span><span>Kunder</span><span>Om oss</span></div>
+    <div style="display:flex; gap:10px;">
+      <div class="btn" style="background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.4); height:38px;">Logga in</div>
+      <div class="btn" style="background:#fff; color:#0052FF; height:38px;">Kom igång</div>
+    </div>
+  </div>
+  <div style="text-align:center; padding:26px 40px 0;">
+    <h1 style="color:#fff; font-size:44px; font-weight:700; letter-spacing:-0.02em;">Sluta bokföra. Börja driva.</h1>
+    <div style="color:rgba(255,255,255,.85); font-size:17px; margin-top:12px;">Kom igång på minuter. Cogniq migrerar din historik gratis.</div>
+    <div style="display:flex; gap:12px; justify-content:center; margin-top:24px;">
+      <div class="btn" style="background:#fff; color:#0052FF;">Kom igång gratis</div>
+      <div class="btn" style="background:rgba(255,255,255,.16); color:#fff;">Boka demo</div>
+    </div>
+  </div>
+</div>
+
+<!-- Login A -->
+<div class="frame" style="top:640px; left:80px; width:440px; height:640px; background:#0052FF; display:flex; align-items:center; justify-content:center;">
+  <div style="width:340px; background:#fff; border-radius:16px; padding:32px 28px; box-shadow:0 20px 40px rgba(0,0,0,.18);">
+    <div class="logo" style="margin-bottom:22px;">
+      <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#0F172A" stroke-width="1.4" fill="none" opacity="0.18"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#14181F" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#0052FF"></circle></svg>
+      <div class="logo-word" style="color:#0F172A;">Cogniq</div>
+    </div>
+    <h2 style="font-size:20px; font-weight:600; margin-bottom:4px;">Välkommen tillbaka</h2>
+    <div style="font-size:13px; color:#64748B; margin-bottom:22px;">Logga in på ditt konto</div>
+    <label class="field-label">E-post</label>
+    <div class="field-input" style="margin-bottom:14px; color:#94A3B8;">namn@foretag.se</div>
+    <label class="field-label">Lösenord</label>
+    <div class="field-input" style="margin-bottom:20px; color:#94A3B8;">••••••••</div>
+    <div class="btn" style="background:#0052FF; color:#fff; width:100%;">Logga in</div>
+    <div style="text-align:center; font-size:12px; color:#64748B; margin-top:16px;">Glömt lösenord?</div>
+  </div>
+</div>
+
+<!-- Platform A -->
+<div class="frame" style="top:640px; left:550px; width:1130px; height:640px; background:#F8FAFB;">
+  <div class="app-shell">
+    <div class="sidebar" style="background:#0052FF; color:rgba(255,255,255,.9);">
+      <div class="sb-logo logo">
+        <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.32"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#FFFFFF" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#4D93FF"></circle></svg>
+        <div class="logo-word" style="color:#fff;">Cogniq</div>
+      </div>
+      <div class="nav-group-label" style="color:#fff;">AI &amp; automatisering</div>
+      <div class="nav-item" style="background:rgba(255,255,255,.18); color:#fff;"><div class="nav-icon" style="background:#fff;"></div>AI Ekonom</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>AI Bokförare</div>
+      <div class="nav-group-label" style="color:#fff;">Gör</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>Kundfakturor</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>Utlägg</div>
+      <div class="nav-group-label" style="color:#fff;">Förstå</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>Resultat &amp; balans</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>Kassaflöde</div>
+    </div>
+    <div class="app-main">
+      <div class="topbar" style="background:#fff; border-bottom:1px solid #E2E8F0;">
+        <div style="font-weight:600; font-size:14px;">Ekonomisk översikt · Juni 2026</div>
+        <div class="btn" style="background:#0052FF; color:#fff; height:36px; padding:0 16px; font-size:13px;">+ Ny faktura</div>
+      </div>
+      <div class="content">
+        <div class="kpi-grid">
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Intäkter</div><div class="kpi-value" style="color:#0F172A;">842 300 kr</div></div>
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Kostnader</div><div class="kpi-value" style="color:#0F172A;">312 100 kr</div></div>
+          <div class="kpi-card" style="background:#0052FF;"><div class="kpi-label" style="color:rgba(255,255,255,.8);">Resultat</div><div class="kpi-value" style="color:#fff;">530 200 kr</div></div>
+        </div>
+        <div style="margin-top:18px; background:#fff; border:1px solid #E2E8F0; border-radius:12px; height:280px; padding:18px;">
+          <div style="font-size:13px; font-weight:600; margin-bottom:12px;">Kassaflöde, senaste 30 dagarna</div>
+          <div style="display:flex; align-items:flex-end; gap:6px; height:200px;">
+            <div style="flex:1; background:#DBEAFE; height:60%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:85%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:45%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:70%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:95%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:55%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:75%; border-radius:4px 4px 0 0;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PROPOSAL B — 60/40 (blått dominerar, vitt andas) -->
+<!-- ============================================================ -->
+<div class="prop-label" style="top:1368px; left:80px;"><span class="badge">B</span>60/40 — blått leder</div>
+<div class="prop-desc" style="top:1408px; left:122px;">Stora blå block (produktpanel, sidebar) mot vit botten. Fortfarande tydligt blått, men luftigare.</div>
+
+<!-- Hero B -->
+<div class="frame" style="top:1448px; left:80px; width:1600px; height:380px; background:#fff;">
+  <div style="display:flex; height:100%;">
+    <div style="flex:0 0 640px; padding:56px 48px; display:flex; flex-direction:column; justify-content:center;">
+      <div class="logo" style="margin-bottom:28px;">
+        <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#0F172A" stroke-width="1.4" fill="none" opacity="0.18"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#14181F" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#0052FF"></circle></svg>
+        <div class="logo-word" style="color:#0F172A;">Cogniq</div>
+      </div>
+      <h1 style="font-size:38px; font-weight:700; letter-spacing:-0.02em; line-height:1.1;">Sluta bokföra.<br>Börja <span style="color:#0052FF;">driva.</span></h1>
+      <div style="color:#475569; font-size:16px; margin-top:14px;">Kom igång på minuter. Cogniq migrerar din historik gratis.</div>
+      <div style="display:flex; gap:12px; margin-top:24px;">
+        <div class="btn" style="background:#0052FF; color:#fff;">Kom igång gratis</div>
+        <div class="btn" style="background:#fff; color:#0052FF; border:1.5px solid #DBEAFE;">Boka demo</div>
+      </div>
+    </div>
+    <div style="flex:1; background:#0052FF; border-radius:20px; margin:24px 24px 24px 0; display:flex; align-items:center; justify-content:center;">
+      <div style="width:82%; background:#fff; border-radius:12px; padding:18px; box-shadow:0 30px 60px rgba(0,0,0,.25);">
+        <div style="display:flex; gap:8px; margin-bottom:12px;">
+          <div style="width:70px; height:8px; background:#E2E8F0; border-radius:4px;"></div>
+          <div style="width:40px; height:8px; background:#E2E8F0; border-radius:4px;"></div>
+        </div>
+        <div class="kpi-grid" style="grid-template-columns:repeat(2,1fr); gap:8px;">
+          <div class="kpi-card" style="background:#EFF6FF; padding:10px 12px; gap:4px;"><div class="kpi-label" style="color:#0040CC; font-size:9px;">Resultat</div><div class="kpi-value" style="font-size:17px;">530 200 kr</div></div>
+          <div class="kpi-card" style="background:#F8FAFB; padding:10px 12px; gap:4px;"><div class="kpi-label" style="color:#64748B; font-size:9px;">Intäkter</div><div class="kpi-value" style="font-size:17px;">842 300 kr</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login B -->
+<div class="frame" style="top:1876px; left:80px; width:440px; height:640px; display:flex;">
+  <div style="flex:0 0 42%; background:#0052FF; padding:32px 24px; display:flex; flex-direction:column; justify-content:space-between;">
+    <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.32"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#FFFFFF" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#4D93FF"></circle></svg>
+    <div style="color:#fff; font-size:15px; font-weight:600; line-height:1.4;">"Bokföring som redan är gjord."</div>
+  </div>
+  <div style="flex:1; padding:32px 24px; display:flex; flex-direction:column; justify-content:center;">
+    <h2 style="font-size:19px; font-weight:600; margin-bottom:4px;">Logga in</h2>
+    <div style="font-size:13px; color:#64748B; margin-bottom:20px;">Välkommen tillbaka</div>
+    <label class="field-label">E-post</label>
+    <div class="field-input" style="margin-bottom:12px; height:42px; color:#94A3B8; font-size:13px;">namn@foretag.se</div>
+    <label class="field-label">Lösenord</label>
+    <div class="field-input" style="margin-bottom:18px; height:42px; color:#94A3B8; font-size:13px;">••••••••</div>
+    <div class="btn" style="background:#0052FF; color:#fff; width:100%; height:42px;">Logga in</div>
+  </div>
+</div>
+
+<!-- Platform B -->
+<div class="frame" style="top:1876px; left:550px; width:1130px; height:640px; background:#F8FAFB;">
+  <div class="app-shell">
+    <div class="sidebar" style="background:#0052FF; color:rgba(255,255,255,.9);">
+      <div class="sb-logo logo">
+        <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.32"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#FFFFFF" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#4D93FF"></circle></svg>
+        <div class="logo-word" style="color:#fff;">Cogniq</div>
+      </div>
+      <div class="nav-group-label" style="color:#fff;">AI &amp; automatisering</div>
+      <div class="nav-item" style="background:rgba(255,255,255,.18); color:#fff;"><div class="nav-icon" style="background:#fff;"></div>AI Ekonom</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>AI Bokförare</div>
+      <div class="nav-group-label" style="color:#fff;">Gör</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>Kundfakturor</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>Utlägg</div>
+      <div class="nav-group-label" style="color:#fff;">Förstå</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>Resultat &amp; balans</div>
+      <div class="nav-item"><div class="nav-icon" style="background:rgba(255,255,255,.55);"></div>Kassaflöde</div>
+    </div>
+    <div class="app-main">
+      <div class="topbar" style="background:#fff; border-bottom:1px solid #E2E8F0;">
+        <div style="font-weight:600; font-size:14px;">Ekonomisk översikt · Juni 2026</div>
+        <div class="btn" style="background:#EFF6FF; color:#0040CC; height:36px; padding:0 16px; font-size:13px;">+ Ny faktura</div>
+      </div>
+      <div class="content">
+        <div class="kpi-grid">
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Intäkter</div><div class="kpi-value" style="color:#0F172A;">842 300 kr</div></div>
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Kostnader</div><div class="kpi-value" style="color:#0F172A;">312 100 kr</div></div>
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Resultat</div><div class="kpi-value" style="color:#0052FF;">530 200 kr</div></div>
+        </div>
+        <div style="margin-top:18px; background:#fff; border:1px solid #E2E8F0; border-radius:12px; height:280px; padding:18px;">
+          <div style="font-size:13px; font-weight:600; margin-bottom:12px;">Kassaflöde, senaste 30 dagarna</div>
+          <div style="display:flex; align-items:flex-end; gap:6px; height:200px;">
+            <div style="flex:1; background:#DBEAFE; height:60%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:85%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:45%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:70%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:95%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:55%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:75%; border-radius:4px 4px 0 0;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PROPOSAL C — 50/50 -->
+<!-- ============================================================ -->
+<div class="prop-label" style="top:2604px; left:80px;"><span class="badge">C</span>50/50 — split</div>
+<div class="prop-desc" style="top:2644px; left:122px;">Blått och vitt i jämn balans genom raka delningar: hälften blå, hälften vit, i varje yta.</div>
+
+<!-- Hero C -->
+<div class="frame" style="top:2684px; left:80px; width:1600px; height:380px; display:flex;">
+  <div style="flex:1; background:#fff; padding:56px 48px; display:flex; flex-direction:column; justify-content:center;">
+    <div class="logo" style="margin-bottom:28px;">
+      <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#0F172A" stroke-width="1.4" fill="none" opacity="0.18"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#14181F" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#0052FF"></circle></svg>
+      <div class="logo-word" style="color:#0F172A;">Cogniq</div>
+    </div>
+    <h1 style="font-size:38px; font-weight:700; letter-spacing:-0.02em; line-height:1.1;">Sluta bokföra.<br>Börja driva.</h1>
+    <div style="color:#475569; font-size:16px; margin-top:14px;">Kom igång på minuter. Cogniq migrerar din historik gratis.</div>
+    <div style="display:flex; gap:12px; margin-top:24px;">
+      <div class="btn" style="background:#0052FF; color:#fff;">Kom igång gratis</div>
+      <div class="btn" style="background:#fff; color:#0052FF; border:1.5px solid #DBEAFE;">Boka demo</div>
+    </div>
+  </div>
+  <div style="flex:1; background:#0052FF; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;">
+    <div class="mono" style="color:#fff; font-size:52px; font-weight:600; letter-spacing:-0.02em;">14 min</div>
+    <div style="color:rgba(255,255,255,.85); font-size:14px; font-weight:500;">genomsnittlig tid att komma igång</div>
+  </div>
+</div>
+
+<!-- Login C -->
+<div class="frame" style="top:3112px; left:80px; width:440px; height:640px; display:flex; flex-direction:column;">
+  <div style="flex:0 0 45%; background:#0052FF; padding:28px; display:flex; flex-direction:column; justify-content:flex-end;">
+    <div class="logo">
+      <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.32"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#FFFFFF" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#4D93FF"></circle></svg>
+      <div class="logo-word" style="color:#fff;">Cogniq</div>
+    </div>
+  </div>
+  <div style="flex:1; background:#fff; padding:28px; display:flex; flex-direction:column; justify-content:center;">
+    <h2 style="font-size:19px; font-weight:600; margin-bottom:4px;">Logga in</h2>
+    <div style="font-size:13px; color:#64748B; margin-bottom:18px;">Välkommen tillbaka</div>
+    <label class="field-label">E-post</label>
+    <div class="field-input" style="margin-bottom:12px; height:42px; color:#94A3B8; font-size:13px;">namn@foretag.se</div>
+    <label class="field-label">Lösenord</label>
+    <div class="field-input" style="margin-bottom:18px; height:42px; color:#94A3B8; font-size:13px;">••••••••</div>
+    <div class="btn" style="background:#0052FF; color:#fff; width:100%; height:42px;">Logga in</div>
+  </div>
+</div>
+
+<!-- Platform C -->
+<div class="frame" style="top:3112px; left:550px; width:1130px; height:640px; background:#F8FAFB;">
+  <div class="app-shell">
+    <div class="sidebar" style="background:#fff; border-right:1px solid #E2E8F0; color:#475569;">
+      <div class="sb-logo logo">
+        <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#0F172A" stroke-width="1.4" fill="none" opacity="0.18"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#14181F" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#0052FF"></circle></svg>
+        <div class="logo-word" style="color:#0F172A;">Cogniq</div>
+      </div>
+      <div class="nav-group-label" style="color:#94A3B8;">AI &amp; automatisering</div>
+      <div class="nav-item" style="background:#0052FF; color:#fff;"><div class="nav-icon" style="background:#fff;"></div>AI Ekonom</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>AI Bokförare</div>
+      <div class="nav-group-label" style="color:#94A3B8;">Gör</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Kundfakturor</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Utlägg</div>
+      <div class="nav-group-label" style="color:#94A3B8;">Förstå</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Resultat &amp; balans</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Kassaflöde</div>
+    </div>
+    <div class="app-main">
+      <div class="topbar" style="background:#fff; border-bottom:1px solid #E2E8F0;">
+        <div style="font-weight:600; font-size:14px;">Ekonomisk översikt · Juni 2026</div>
+        <div class="btn" style="background:#0052FF; color:#fff; height:36px; padding:0 16px; font-size:13px;">+ Ny faktura</div>
+      </div>
+      <div class="content">
+        <div class="kpi-grid">
+          <div class="kpi-card" style="background:#0052FF;"><div class="kpi-label" style="color:rgba(255,255,255,.8);">Intäkter</div><div class="kpi-value" style="color:#fff;">842 300 kr</div></div>
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Kostnader</div><div class="kpi-value" style="color:#0F172A;">312 100 kr</div></div>
+          <div class="kpi-card" style="background:#0052FF;"><div class="kpi-label" style="color:rgba(255,255,255,.8);">Resultat</div><div class="kpi-value" style="color:#fff;">530 200 kr</div></div>
+        </div>
+        <div style="margin-top:18px; background:#fff; border:1px solid #E2E8F0; border-radius:12px; height:280px; padding:18px;">
+          <div style="font-size:13px; font-weight:600; margin-bottom:12px;">Kassaflöde, senaste 30 dagarna</div>
+          <div style="display:flex; align-items:flex-end; gap:6px; height:200px;">
+            <div style="flex:1; background:#DBEAFE; height:60%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:85%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:45%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:70%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:95%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:55%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:75%; border-radius:4px 4px 0 0;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PROPOSAL D — Blått som accent (~30%) -->
+<!-- ============================================================ -->
+<div class="prop-label" style="top:3840px; left:80px;"><span class="badge">D</span>Blått som accent</div>
+<div class="prop-desc" style="top:3880px; left:122px;">Vitt/ljust leder, blått reserverat för CTA:er, aktiva tillstånd och nyckeltal. Lugnast och luftigast.</div>
+
+<!-- Hero D -->
+<div class="frame" style="top:3920px; left:80px; width:1600px; height:380px; background:#fff;">
+  <div class="navbar" style="border-bottom:1px solid #F1F5F9;">
+    <div class="logo">
+      <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#0F172A" stroke-width="1.4" fill="none" opacity="0.18"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#14181F" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#0052FF"></circle></svg>
+      <div class="logo-word" style="color:#0F172A;">Cogniq</div>
+    </div>
+    <div class="navlinks" style="color:#475569;"><span>Produkt</span><span>Priser</span><span>Kunder</span><span>Om oss</span></div>
+    <div style="display:flex; gap:10px;">
+      <div class="btn" style="background:transparent; color:#0F172A; border:1.5px solid #E2E8F0; height:38px;">Logga in</div>
+      <div class="btn" style="background:#0052FF; color:#fff; height:38px;">Kom igång</div>
+    </div>
+  </div>
+  <div style="text-align:center; padding:26px 40px 0;">
+    <div style="display:inline-flex; align-items:center; gap:6px; background:#EFF6FF; color:#0040CC; font-size:12px; font-weight:600; padding:6px 14px; border-radius:100px; margin-bottom:16px;">Nytt · AI-bokföring inbyggd</div>
+    <h1 style="font-size:44px; font-weight:700; letter-spacing:-0.02em; color:#0F172A;">Sluta bokföra. Börja <span style="color:#0052FF;">driva.</span></h1>
+    <div style="color:#475569; font-size:17px; margin-top:12px;">Kom igång på minuter. Cogniq migrerar din historik gratis.</div>
+    <div style="display:flex; gap:12px; justify-content:center; margin-top:24px;">
+      <div class="btn" style="background:#0052FF; color:#fff;">Kom igång gratis</div>
+      <div class="btn" style="background:#fff; color:#0F172A; border:1.5px solid #E2E8F0;">Boka demo</div>
+    </div>
+  </div>
+</div>
+
+<!-- Login D -->
+<div class="frame" style="top:4348px; left:80px; width:440px; height:640px; background:#F8FAFB; display:flex; align-items:center; justify-content:center;">
+  <div style="width:340px; background:#fff; border:1px solid #E2E8F0; border-radius:16px; padding:32px 28px;">
+    <div class="logo" style="margin-bottom:22px;">
+      <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#0F172A" stroke-width="1.4" fill="none" opacity="0.18"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#14181F" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#0052FF"></circle></svg>
+      <div class="logo-word" style="color:#0F172A;">Cogniq</div>
+    </div>
+    <h2 style="font-size:20px; font-weight:600; margin-bottom:4px;">Välkommen tillbaka</h2>
+    <div style="font-size:13px; color:#64748B; margin-bottom:22px;">Logga in på ditt konto</div>
+    <label class="field-label">E-post</label>
+    <div class="field-input" style="margin-bottom:14px; color:#94A3B8;">namn@foretag.se</div>
+    <label class="field-label">Lösenord</label>
+    <div class="field-input" style="margin-bottom:20px; color:#94A3B8;">••••••••</div>
+    <div class="btn" style="background:#0052FF; color:#fff; width:100%;">Logga in</div>
+    <div style="text-align:center; font-size:12px; color:#0052FF; margin-top:16px; font-weight:600;">Glömt lösenord?</div>
+  </div>
+</div>
+
+<!-- Platform D -->
+<div class="frame" style="top:4348px; left:550px; width:1130px; height:640px; background:#F8FAFB;">
+  <div class="app-shell">
+    <div class="sidebar" style="background:#fff; border-right:1px solid #E2E8F0; color:#475569;">
+      <div class="sb-logo logo">
+        <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#0F172A" stroke-width="1.4" fill="none" opacity="0.18"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#14181F" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#0052FF"></circle></svg>
+        <div class="logo-word" style="color:#0F172A;">Cogniq</div>
+      </div>
+      <div class="nav-group-label" style="color:#94A3B8;">AI &amp; automatisering</div>
+      <div class="nav-item" style="background:#EFF6FF; color:#0040CC;"><div class="nav-icon" style="background:#0052FF;"></div>AI Ekonom</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>AI Bokförare</div>
+      <div class="nav-group-label" style="color:#94A3B8;">Gör</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Kundfakturor</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Utlägg</div>
+      <div class="nav-group-label" style="color:#94A3B8;">Förstå</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Resultat &amp; balans</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Kassaflöde</div>
+    </div>
+    <div class="app-main">
+      <div class="topbar" style="background:#fff; border-bottom:1px solid #E2E8F0;">
+        <div style="font-weight:600; font-size:14px;">Ekonomisk översikt · Juni 2026</div>
+        <div class="btn" style="background:#0052FF; color:#fff; height:36px; padding:0 16px; font-size:13px;">+ Ny faktura</div>
+      </div>
+      <div class="content">
+        <div class="kpi-grid">
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Intäkter</div><div class="kpi-value" style="color:#0F172A;">842 300 kr</div></div>
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Kostnader</div><div class="kpi-value" style="color:#0F172A;">312 100 kr</div></div>
+          <div class="kpi-card" style="background:#fff; border:1.5px solid #0052FF;"><div class="kpi-label" style="color:#0052FF;">Resultat</div><div class="kpi-value" style="color:#0052FF;">530 200 kr</div></div>
+        </div>
+        <div style="margin-top:18px; background:#fff; border:1px solid #E2E8F0; border-radius:12px; height:280px; padding:18px;">
+          <div style="font-size:13px; font-weight:600; margin-bottom:12px;">Kassaflöde, senaste 30 dagarna</div>
+          <div style="display:flex; align-items:flex-end; gap:6px; height:200px;">
+            <div style="flex:1; background:#F1F5F9; height:60%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:85%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#F1F5F9; height:45%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#F1F5F9; height:70%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:95%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#F1F5F9; height:55%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#F1F5F9; height:75%; border-radius:4px 4px 0 0;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PROPOSAL E — Blandning, medveten balans -->
+<!-- ============================================================ -->
+<div class="prop-label" style="top:5076px; left:80px;"><span class="badge" style="background:#0040CC;">E</span>Blandning — medveten balans</div>
+<div class="prop-desc" style="top:5116px; left:122px;">Tar det bästa av A–D: chrome (sidebar/topbar) förblir mest ljust för läsbarhet i den täta appen, men blått får väga tydligt i hero, login och en nyckeltalscard — aldrig helt blått, aldrig helt vitt.</div>
+
+<!-- Hero E -->
+<div class="frame" style="top:5156px; left:80px; width:1600px; height:380px; background:#fff;">
+  <div style="display:flex; height:100%;">
+    <div style="flex:0 0 620px; padding:56px 48px; display:flex; flex-direction:column; justify-content:center;">
+      <div class="logo" style="margin-bottom:26px;">
+        <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#0F172A" stroke-width="1.4" fill="none" opacity="0.18"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#14181F" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#0052FF"></circle></svg>
+        <div class="logo-word" style="color:#0F172A;">Cogniq</div>
+      </div>
+      <h1 style="font-size:38px; font-weight:700; letter-spacing:-0.02em; line-height:1.1;">Sluta bokföra.<br>Börja <span style="color:#0052FF;">driva.</span></h1>
+      <div style="color:#475569; font-size:16px; margin-top:14px;">Kom igång på minuter. Cogniq migrerar din historik gratis.</div>
+      <div style="display:flex; gap:12px; margin-top:24px;">
+        <div class="btn" style="background:#0052FF; color:#fff;">Kom igång gratis</div>
+        <div class="btn" style="background:#fff; color:#0F172A; border:1.5px solid #E2E8F0;">Boka demo</div>
+      </div>
+    </div>
+    <div style="flex:1; background:#0052FF; border-radius:20px; margin:28px 28px 28px 0; display:flex; align-items:center; justify-content:center;">
+      <div style="width:80%; background:#fff; border-radius:12px; padding:16px; box-shadow:0 24px 48px rgba(0,0,0,.22);">
+        <div style="display:flex; gap:8px; margin-bottom:10px;">
+          <div style="width:60px; height:7px; background:#E2E8F0; border-radius:4px;"></div>
+          <div style="width:36px; height:7px; background:#E2E8F0; border-radius:4px;"></div>
+        </div>
+        <div class="kpi-grid" style="grid-template-columns:repeat(2,1fr); gap:8px;">
+          <div class="kpi-card" style="background:#F8FAFB; padding:9px 11px; gap:4px;"><div class="kpi-label" style="color:#64748B; font-size:9px;">Intäkter</div><div class="kpi-value" style="font-size:16px;">842 300 kr</div></div>
+          <div class="kpi-card" style="background:#0052FF; padding:9px 11px; gap:4px;"><div class="kpi-label" style="color:rgba(255,255,255,.8); font-size:9px;">Resultat</div><div class="kpi-value" style="font-size:16px; color:#fff;">530 200 kr</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login E -->
+<div class="frame" style="top:5584px; left:80px; width:440px; height:640px; display:flex;">
+  <div style="flex:0 0 38%; background:#0052FF; padding:26px 22px; display:flex; flex-direction:column; justify-content:space-between;">
+    <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.32"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#FFFFFF" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#4D93FF"></circle></svg>
+    <div style="color:#fff; font-size:14px; font-weight:600; line-height:1.4;">"Bokföring som redan är gjord."</div>
+  </div>
+  <div style="flex:1; background:#fff; padding:30px 24px; display:flex; flex-direction:column; justify-content:center;">
+    <h2 style="font-size:19px; font-weight:600; margin-bottom:4px;">Logga in</h2>
+    <div style="font-size:13px; color:#64748B; margin-bottom:20px;">Välkommen tillbaka</div>
+    <label class="field-label">E-post</label>
+    <div class="field-input" style="margin-bottom:12px; height:42px; color:#94A3B8; font-size:13px;">namn@foretag.se</div>
+    <label class="field-label">Lösenord</label>
+    <div class="field-input" style="margin-bottom:18px; height:42px; color:#94A3B8; font-size:13px;">••••••••</div>
+    <div class="btn" style="background:#0052FF; color:#fff; width:100%; height:42px;">Logga in</div>
+    <div style="text-align:center; font-size:12px; color:#0052FF; margin-top:14px; font-weight:600;">Glömt lösenord?</div>
+  </div>
+</div>
+
+<!-- Platform E -->
+<div class="frame" style="top:5584px; left:550px; width:1130px; height:640px; background:#F8FAFB;">
+  <div class="app-shell">
+    <div class="sidebar" style="background:#fff; border-right:1px solid #E2E8F0; color:#475569;">
+      <div class="sb-logo logo">
+        <svg class="logo-mark-svg" width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#0F172A" stroke-width="1.4" fill="none" opacity="0.18"></circle><path d="M32 16 A11 11 0 1 0 32 32" stroke="#14181F" stroke-width="4.8" fill="none" stroke-linecap="round"></path><circle cx="24" cy="24" r="3.3" fill="#0052FF"></circle></svg>
+        <div class="logo-word" style="color:#0F172A;">Cogniq</div>
+      </div>
+      <div class="nav-group-label" style="color:#94A3B8;">AI &amp; automatisering</div>
+      <div class="nav-item" style="background:#0052FF; color:#fff;"><div class="nav-icon" style="background:#fff;"></div>AI Ekonom</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>AI Bokförare</div>
+      <div class="nav-group-label" style="color:#94A3B8;">Gör</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Kundfakturor</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Utlägg</div>
+      <div class="nav-group-label" style="color:#94A3B8;">Förstå</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Resultat &amp; balans</div>
+      <div class="nav-item"><div class="nav-icon" style="background:#CBD5E1;"></div>Kassaflöde</div>
+    </div>
+    <div class="app-main">
+      <div class="topbar" style="background:#fff; border-bottom:1px solid #E2E8F0;">
+        <div style="font-weight:600; font-size:14px;">Ekonomisk översikt · Juni 2026</div>
+        <div class="btn" style="background:#0052FF; color:#fff; height:36px; padding:0 16px; font-size:13px;">+ Ny faktura</div>
+      </div>
+      <div class="content">
+        <div class="kpi-grid">
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Intäkter</div><div class="kpi-value" style="color:#0F172A;">842 300 kr</div></div>
+          <div class="kpi-card" style="background:#fff; border:1px solid #E2E8F0;"><div class="kpi-label" style="color:#64748B;">Kostnader</div><div class="kpi-value" style="color:#0F172A;">312 100 kr</div></div>
+          <div class="kpi-card" style="background:#0052FF;"><div class="kpi-label" style="color:rgba(255,255,255,.8);">Resultat</div><div class="kpi-value" style="color:#fff;">530 200 kr</div></div>
+        </div>
+        <div style="margin-top:18px; background:#fff; border:1px solid #E2E8F0; border-radius:12px; height:280px; padding:18px;">
+          <div style="font-size:13px; font-weight:600; margin-bottom:12px;">Kassaflöde, senaste 30 dagarna</div>
+          <div style="display:flex; align-items:flex-end; gap:6px; height:200px;">
+            <div style="flex:1; background:#DBEAFE; height:60%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:85%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:45%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:70%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#0052FF; height:95%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:55%; border-radius:4px 4px 0 0;"></div>
+            <div style="flex:1; background:#DBEAFE; height:75%; border-radius:4px 4px 0 0;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -12,7 +12,6 @@ import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent,
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 import { BrandedLogo } from "@/components/wl/BrandedLogo";
-import aiCore from "@/assets/ai-core.png";
 import { useTenant } from "@/contexts/TenantContext";
 import { usePlatformAdmin } from "@/hooks/usePlatformAdmin";
 import { AddCompanyDialog } from "@/components/companies/AddCompanyDialog";
@@ -42,10 +41,10 @@ export const AppSidebar = () => { const location = useLocation();
   const visibleBottomItems = bottomItems;
   // FLAT: medium-vikt text med högre kontrast, aktiv = solitt blått block
   // med tjock kantlist — färg som struktur, aldrig glow
-  const sidebarMenuButtonClass = "flex items-center gap-2 px-3 text-[13px] font-medium text-white/70 border-l-2 border-transparent hover:text-white hover:bg-white/[0.06] cursor-pointer transition-colors rounded-md whitespace-normal h-9 min-h-0 leading-tight !overflow-visible [&>span:last-child]:!overflow-visible [&>span:last-child]:!whitespace-normal [&>span:last-child]:!text-clip";
+  const sidebarMenuButtonClass = "flex items-center gap-2 px-3 text-[13px] font-medium text-[#475569] hover:text-[#0F172A] hover:bg-[#F1F5F9] cursor-pointer transition-colors rounded-md whitespace-normal h-9 min-h-0 leading-tight !overflow-visible [&>span:last-child]:!overflow-visible [&>span:last-child]:!whitespace-normal [&>span:last-child]:!text-clip";
   const sidebarMenuButtonActiveClass = tenant
     ? "font-semibold border"
-    : "!text-white !font-semibold !bg-[#0052FF]/[0.18] !border-l-2 !border-[#0052FF]";
+    : "!text-white !font-semibold !bg-[#0052FF]";
   const tenantActiveStyle = tenant
     ? {
         backgroundColor: `hsl(var(--brand-primary) / 0.18)`,
@@ -86,22 +85,10 @@ export const AppSidebar = () => { const location = useLocation();
     : filteredGroups;
 
   return (
-    <Sidebar
-      className="bg-[#0F172A] border-r [border-width:0.5px] border-white/[0.06]"
-      style={{
-        backgroundImage:
-          "radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)",
-        backgroundSize: "26px 26px",
-      }}
-    >
+    <Sidebar className="bg-white border-r border-[#E2E8F0]">
       {/* Logo header — Cogniq 3D-orb + wordmark (tenant-aware) */}
-      <SidebarHeader className="p-4 border-b [border-width:0.5px] border-white/[0.06]">
+      <SidebarHeader className="p-4 border-b border-[#E2E8F0]">
         <div className="flex items-center gap-2.5">
-          {!tenant && (
-            <span className="relative flex h-8 w-8 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-[#0B1220]">
-              <img src={aiCore} alt="" aria-hidden className="h-full w-full object-cover" />
-            </span>
-          )}
           <BrandedLogo />
         </div>
       </SidebarHeader>
@@ -120,7 +107,7 @@ export const AppSidebar = () => { const location = useLocation();
                       isActive={isActive}
                       className={cn(
                         isHeaderShortcut
-                          ? "flex items-center gap-2 px-3 h-9 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/50 hover:text-white/60 hover:bg-white/[0.04] cursor-pointer transition-colors rounded-lg"
+                          ? "flex items-center gap-2 px-3 h-9 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#94A3B8] hover:text-[#475569] hover:bg-[#F1F5F9] cursor-pointer transition-colors rounded-lg"
                           : sidebarMenuButtonClass,
                         isActive && sidebarMenuButtonActiveClass
                       )}
@@ -142,14 +129,14 @@ export const AppSidebar = () => { const location = useLocation();
           const defaultExpanded = isGroupActive || ["Gör", "Granska", "Förstå"].includes(group.label);
           return (
             <Collapsible key={group.label} defaultOpen={defaultExpanded} className="group/collapsible">
-              <div className="border-t border-white/5 mx-3 my-1" />
+              <div className="border-t border-[#E2E8F0] mx-3 my-1" />
               <SidebarGroup className="py-0">
                 <CollapsibleTrigger asChild>
                    <SidebarGroupLabel
-                     className="cursor-pointer transition-colors flex items-center justify-between pr-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/50 px-3 h-9 mt-0 mb-0 hover:text-white/60"
+                     className="cursor-pointer transition-colors flex items-center justify-between pr-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#94A3B8] px-3 h-9 mt-0 mb-0 hover:text-[#475569]"
                   >
                     {group.label}
-                    <ChevronDown className="h-3.5 w-3.5 transition-transform group-data-[state=open]/collapsible:rotate-180 text-white/30" />
+                    <ChevronDown className="h-3.5 w-3.5 transition-transform group-data-[state=open]/collapsible:rotate-180 text-[#CBD5E1]" />
                   </SidebarGroupLabel>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
@@ -248,7 +235,7 @@ export const AppSidebar = () => { const location = useLocation();
         })}
 
         {/* Bottom items – always visible, no collapsible */}
-        <SidebarGroup className="py-0.5 mt-auto pt-3 border-t border-white/5">
+        <SidebarGroup className="py-0.5 mt-auto pt-3 border-t border-[#E2E8F0]">
           <SidebarMenu>
             {visibleBottomItems.map((item) => { const Icon = item.icon;
               const isActive = location.pathname === item.path;
@@ -258,8 +245,8 @@ export const AppSidebar = () => { const location = useLocation();
                     onClick={() => navigate(item.path)}
                     isActive={isActive}
                     className={cn(
-                      "transition-colors flex items-center gap-2 px-3 py-1.5 text-[12px] text-white/40 hover:text-white/60 hover:bg-white/[0.04] cursor-pointer rounded-lg",
-                      isActive && "!text-white !bg-white/[0.06]"
+                      "transition-colors flex items-center gap-2 px-3 py-1.5 text-[12px] text-[#94A3B8] hover:text-[#475569] hover:bg-[#F1F5F9] cursor-pointer rounded-lg",
+                      isActive && "!text-[#0F172A] !bg-[#F1F5F9]"
                     )}
                   >
                     <Icon size={16} strokeWidth={2} />
@@ -272,18 +259,18 @@ export const AppSidebar = () => { const location = useLocation();
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-2 space-y-2 border-t border-white/5">
+      <SidebarFooter className="p-2 space-y-2 border-t border-[#E2E8F0]">
         <GettingStartedChecklist />
         <button
           onClick={() => navigate("/how-it-works")}
-          className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-white/40 hover:text-white/60 hover:bg-white/[0.04] transition-colors"
+          className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-[#94A3B8] hover:text-[#475569] hover:bg-[#F1F5F9] transition-colors"
         >
           <Sparkles size={14} strokeWidth={2} />
           Hur Cogniq fungerar
         </button>
         <button
           onClick={() => setCustomizeOpen(true)}
-          className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-white/40 hover:text-white/60 hover:bg-white/[0.04] transition-colors"
+          className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-[#94A3B8] hover:text-[#475569] hover:bg-[#F1F5F9] transition-colors"
         >
           <Settings2 size={16} strokeWidth={2} />
           Anpassa
@@ -304,7 +291,7 @@ export const AppSidebar = () => { const location = useLocation();
             {location.pathname === "/admin" ? "Tillbaka till kundvy" : "Växla till Admin"}
           </button>
         )}
-        <p className="text-[10px] text-white/15 text-center pb-3 pt-2">
+        <p className="text-[10px] text-[#94A3B8] text-center pb-3 pt-2">
           {tenant ? (tenant.login.footer_attribution || "Powered by Cogniq") : "Cogniq © 2026"}
         </p>
       </SidebarFooter>

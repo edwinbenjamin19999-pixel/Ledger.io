@@ -34,7 +34,7 @@ export function BrandedLogo({ onClick }: Props) {
           </div>
         )}
         <div className="min-w-0">
-          <div className="text-sm font-semibold text-white truncate leading-tight">
+          <div className="text-sm font-semibold text-[#0F172A] truncate leading-tight">
             {tenant.name}
           </div>
         </div>
@@ -44,7 +44,7 @@ export function BrandedLogo({ onClick }: Props) {
 
   return (
     <button onClick={handle} className="flex items-center">
-      <CogniqLogo size={22} reversed />
+      <CogniqLogo size={22} />
     </button>
   );
 }
