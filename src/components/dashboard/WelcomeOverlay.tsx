@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { CogniqLogo } from "@/components/brand/CogniqLogo";
 
 interface WelcomeOverlayProps {
   onComplete: () => void;
@@ -36,9 +37,8 @@ export const WelcomeOverlay = ({ onComplete, durationMs = 2600, companyName }: W
       }`}
       aria-live="polite"
     >
-      <div className="flex items-center gap-0 mb-6">
-        <span className="text-3xl font-[800] text-[#0052FF]">Cog</span>
-        <span className="text-3xl font-[800] text-[#0F172A]">niq</span>
+      <div className="flex items-center mb-6">
+        <CogniqLogo size={36} />
       </div>
 
       <h1 className="text-[22px] font-bold text-[#0F172A] tracking-tight text-center px-6">

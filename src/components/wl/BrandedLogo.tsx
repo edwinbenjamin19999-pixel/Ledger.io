@@ -1,5 +1,6 @@
 import { useTenant } from "@/contexts/TenantContext";
 import { useNavigate } from "react-router-dom";
+import { CogniqLogo } from "@/components/brand/CogniqLogo";
 
 interface Props {
   onClick?: () => void;
@@ -42,9 +43,8 @@ export function BrandedLogo({ onClick }: Props) {
   }
 
   return (
-    <button onClick={handle} className="text-xl font-bold tracking-tight">
-      <span className="text-white font-bold">Cog</span>
-      <span className="text-[#0052FF] font-bold">niq</span>
+    <button onClick={handle} className="flex items-center">
+      <CogniqLogo size={22} reversed />
     </button>
   );
 }

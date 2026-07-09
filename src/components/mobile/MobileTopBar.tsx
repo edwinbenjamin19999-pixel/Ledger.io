@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { User } from "@supabase/supabase-js";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { CogniqLogo } from "@/components/brand/CogniqLogo";
 import { LogOut, Settings, Building2, ChevronDown, Check } from "lucide-react";
 import { MobileBottomSheet } from "./MobileBottomSheet";
 import { useNavigate } from "react-router-dom";
@@ -92,8 +93,7 @@ export const MobileTopBar = ({ user, signOut }: MobileTopBarProps) => {
       >
         {/* LEFT: logo */}
         <div className="flex items-center shrink-0">
-          <span className="text-white font-medium text-[18px] leading-none">Cog</span>
-          <span className="text-[#0052FF] font-medium text-[18px] leading-none">niq</span>
+          <CogniqLogo size={22} reversed />
         </div>
 
         {/* CENTER: company selector */}

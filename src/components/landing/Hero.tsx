@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { useWaitlistCount } from "@/hooks/useWaitlistCount";
+import { CogniqLogo } from "@/components/brand/CogniqLogo";
 
 /**
  * AGENTISK REDOVISNING HERO — mörk navy scen (matchar footerns ink-navy),
@@ -127,11 +128,8 @@ export const Hero = () => {
           <div className="grid min-h-[420px] grid-cols-1 md:grid-cols-[200px_1fr]">
             {/* Sidebar */}
             <aside className="hidden flex-col gap-0.5 bg-[#0B1D2A] p-3.5 md:flex">
-              <div className="flex items-center gap-2 px-2 pb-4 pt-1 font-display text-[15px] font-bold text-white">
-                <span className="grid h-[18px] w-[18px] place-items-center rounded-[5px] bg-[#0052FF] font-mono text-[11px]">
-                  C
-                </span>
-                Cogniq
+              <div className="px-1 pb-4 pt-1">
+                <CogniqLogo size={20} reversed />
               </div>
               {NAV_ITEMS.map((item) => (
                 <div

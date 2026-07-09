@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import aiCore from "@/assets/ai-core.png";
+import { CogniqLogo } from "@/components/brand/CogniqLogo";
 
 interface AuthShellProps {
   children: ReactNode;
@@ -44,9 +45,8 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
         </div>
 
         {/* Wordmark */}
-        <div className="mb-8 flex items-center gap-0">
-          <span className="text-2xl font-extrabold tracking-tight text-foreground">Cog</span>
-          <span className="text-2xl font-extrabold tracking-tight text-[#0052FF]">niq</span>
+        <div className="mb-8 flex items-center">
+          <CogniqLogo size={30} />
         </div>
 
         {/* Fokuserat kort med formuläret */}

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Shield, CheckCircle, FileText, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CogniqLogo } from "@/components/brand/CogniqLogo";
 
 const productLinks = [
   { label: "Funktioner", to: "/features" },
@@ -72,9 +73,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand / Contact */}
           <div className="space-y-5 sm:col-span-2 lg:col-span-1">
-            <Link to="/" className="flex items-center gap-0">
-              <span className="text-2xl font-[800] text-white tracking-tight">Cog</span>
-              <span className="text-2xl font-[800] text-[#0052FF] tracking-tight">niq</span>
+            <Link to="/" className="flex items-center">
+              <CogniqLogo size={30} reversed />
             </Link>
             <p className="text-sm text-white/60 max-w-[260px] leading-relaxed">
               Ekonomin som tänker själv. Hela ekonomifunktionen — bokföring, prognos och beslut — driven av AI, byggd för svenska regler.

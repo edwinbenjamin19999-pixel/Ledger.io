@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { CogniqLogo } from "@/components/brand/CogniqLogo";
 
 interface HeaderProps {
   /** Behålls för bakåtkompatibilitet. */
@@ -38,10 +39,9 @@ export const Header = (_props: HeaderProps = {}) => {
       }`}
     >
       <div className="container mx-auto flex h-full items-center justify-between px-4 sm:px-6">
-        {/* Logo — gradient-signatur på "niq" */}
-        <Link to="/" className="flex items-center gap-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2">
-          <span className="text-xl font-extrabold tracking-tight text-foreground">Cog</span>
-          <span className="text-xl font-extrabold tracking-tight text-[#0052FF]">niq</span>
+        {/* Logo — Cogniq-sigill + wordmark (design system) */}
+        <Link to="/" className="flex items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2">
+          <CogniqLogo size={26} />
         </Link>
 
         {/* Desktop nav */}
