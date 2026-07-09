@@ -9,7 +9,6 @@ import {
   Percent,
   Users,
 } from "lucide-react";
-import { useWaitlistCount } from "@/hooks/useWaitlistCount";
 import { CogniqLogo } from "@/components/brand/CogniqLogo";
 
 /**
@@ -42,7 +41,6 @@ const FLAGS = [
 
 export const Hero = () => {
   const navigate = useNavigate();
-  const { count } = useWaitlistCount();
 
   return (
     <section id="hero-section" className="relative w-full bg-[#0B1D2A] pt-[60px]">
@@ -68,20 +66,19 @@ export const Hero = () => {
       </div>
 
       <div className="relative z-[2] mx-auto max-w-3xl px-6 pt-20 pb-2 text-center md:pt-24">
-        <div className="hero-anim hero-anim-badge inline-flex items-center gap-2.5 rounded-full border border-white/15 py-1.5 pl-2 pr-4 text-[12.5px] text-white/80">
-          <span className="rounded-full bg-[#0052FF] px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-white">
-            Nytt
-          </span>
-          Djupanalys ner på verifikatsnivå
+        <div className="hero-anim hero-anim-badge inline-flex items-center gap-2.5 rounded-full border border-white/15 px-4 py-1.5 text-[12.5px] text-white/80">
+          <span aria-hidden className="hero-live-dot h-1.5 w-1.5 rounded-full bg-[#4D7CFF]" />
+          AI-native bokföring · byggd för svenska bolag
         </div>
 
         <h1 className="hero-anim hero-anim-headline mt-7 font-display text-[2.6rem] font-bold leading-[1.03] tracking-[-0.03em] text-white md:text-6xl lg:text-[4.3rem]">
-          Redovisning som <span className="text-[#7DA5FF]">granskar sig själv.</span>
+          Bokföring som<br />
+          <span className="text-[#4D7CFF]">redan är gjord.</span>
         </h1>
 
         <p className="hero-anim hero-anim-sub mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-          Agenter sköter avstämning, kontroll och månadsbokslut i bakgrunden.
-          Ditt team går från att mata in siffror till att fatta beslut.
+          Cogniq kopplar din bank, bokför automatiskt och stämmer av varje
+          natt. Du driver bolaget — din AI-ekonom sköter siffrorna.
         </p>
 
         <div className="hero-anim hero-anim-cta mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -89,7 +86,7 @@ export const Hero = () => {
             onClick={() => navigate("/auth")}
             className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0052FF] px-7 text-[15px] font-semibold text-white shadow-[0_1px_2px_rgba(0,40,120,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0040CC] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B1D2A] sm:w-auto"
           >
-            Gå med i piloten
+            Kom igång gratis
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
           </button>
           <button
@@ -100,18 +97,9 @@ export const Hero = () => {
           </button>
         </div>
 
-        <div className="hero-anim hero-anim-cta mt-12">
-          <p className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-white/40">
-            Pilotfas pågår
-          </p>
-          <p className="mt-3 text-sm font-medium text-white/70">
-            <span aria-hidden className="hero-live-dot mr-2 inline-block h-2 w-2 rounded-full bg-emerald-400 align-middle" />
-            <span className="font-semibold text-white tabular-nums">
-              {count.toLocaleString("sv-SE")}
-            </span>{" "}
-            anmälda · 14 aktiva pilotkunder · Lansering Q3 2026
-          </p>
-        </div>
+        <p className="hero-anim hero-anim-cta mt-8 text-sm text-white/50">
+          Ingen bindningstid · Fri migrering · 14 dagar gratis
+        </p>
       </div>
 
       {/* Produktskärm — svävar ned över nästa sektion (kompenseras av dess top-padding) */}

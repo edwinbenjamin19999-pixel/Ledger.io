@@ -26,10 +26,11 @@ export const Header = (_props: HeaderProps = {}) => {
   }, []);
 
   const navLinks = [
-    { label: "Plattformen", href: "/funktioner" },
-    { label: "Så tänker Cogniq", href: "/resources/guide" },
-    { label: "För byråer", href: "/white-label" },
+    { label: "Produkt", href: "/funktioner" },
+    { label: "AI Ekonom", href: "/#ai-ekonom" },
     { label: "Priser", href: "/priser" },
+    { label: "Kunder", href: "/#kunder" },
+    { label: "Om oss", href: "/about" },
   ];
 
   return (
@@ -46,15 +47,25 @@ export const Header = (_props: HeaderProps = {}) => {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-6 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.href.includes("#") ? (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* Desktop CTA */}
@@ -63,7 +74,7 @@ export const Header = (_props: HeaderProps = {}) => {
             Logga in
           </Button>
           <Button size="sm" onClick={() => navigate("/auth")} className="group h-9 gap-1.5 rounded-full px-4 text-sm">
-            Gå med i piloten
+            Kom igång gratis
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden />
           </Button>
         </div>
@@ -82,22 +93,33 @@ export const Header = (_props: HeaderProps = {}) => {
       {/* Mobile dropdown */}
       {mobileOpen && (
         <div className="space-y-3 border-b border-border bg-white/95 px-4 py-4 backdrop-blur-md md:hidden">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className="block text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.href.includes("#") ? (
+              <a
+                key={link.label}
+                href={link.href}
+                className="block text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="block text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
           <Button
             size="sm"
             onClick={() => { navigate("/auth"); setMobileOpen(false); }}
             className="h-11 w-full text-sm"
           >
-            Gå med i piloten
+            Kom igång gratis
           </Button>
         </div>
       )}
