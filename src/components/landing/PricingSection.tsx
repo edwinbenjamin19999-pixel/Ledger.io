@@ -63,17 +63,17 @@ export const PricingSection = () => {
                 key={tier.name}
                 className={`relative flex flex-col rounded-2xl p-8 ${
                   dark
-                    ? "bg-[#0B1D2A] text-white shadow-[0_30px_60px_-30px_rgba(11,29,42,0.5)] md:-translate-y-3"
+                    ? "bg-[#0052FF] text-white shadow-[0_30px_60px_-30px_rgba(0,82,255,0.45)] md:-translate-y-3"
                     : "border border-border bg-white text-[#14181F]"
                 }`}
               >
                 {dark && (
-                  <span className="absolute right-6 top-8 rounded-full bg-[#0052FF] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
+                  <span className="absolute right-6 top-8 rounded-full bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#0052FF]">
                     Populärast
                   </span>
                 )}
                 <h3 className="font-display text-xl font-semibold tracking-tight">{tier.name}</h3>
-                <p className={`mt-1 text-sm ${dark ? "text-white/55" : "text-[#14181F]/55"}`}>
+                <p className={`mt-1 text-sm ${dark ? "text-white/70" : "text-[#14181F]/55"}`}>
                   {tier.tagline}
                 </p>
 
@@ -82,7 +82,7 @@ export const PricingSection = () => {
                     {tier.price}
                   </span>
                   {tier.unit && (
-                    <span className={`text-sm ${dark ? "text-white/50" : "text-[#14181F]/50"}`}>
+                    <span className={`text-sm ${dark ? "text-white/70" : "text-[#14181F]/50"}`}>
                       {tier.unit}
                     </span>
                   )}
@@ -92,7 +92,7 @@ export const PricingSection = () => {
                   onClick={() => navigate(tier.cta === "Boka demo" ? "/contact" : "/auth")}
                   className={`mt-6 h-11 w-full rounded-xl text-[14px] font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
                     dark
-                      ? "bg-[#0052FF] text-white hover:bg-[#0040CC] focus-visible:ring-[#0052FF] focus-visible:ring-offset-[#0B1D2A]"
+                      ? "bg-white text-[#0052FF] hover:bg-blue-50 focus-visible:ring-white focus-visible:ring-offset-[#0052FF]"
                       : "border border-border bg-white text-[#14181F] hover:border-[#0052FF]/40 hover:bg-[#F7F9FC] focus-visible:ring-[#0052FF]"
                   }`}
                 >
@@ -103,11 +103,11 @@ export const PricingSection = () => {
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-[13.5px]">
                       <Check
-                        className={`mt-0.5 h-4 w-4 flex-shrink-0 ${dark ? "text-[#7DA5FF]" : "text-[#0052FF]"}`}
+                        className={`mt-0.5 h-4 w-4 flex-shrink-0 ${dark ? "text-white" : "text-[#0052FF]"}`}
                         strokeWidth={2.5}
                         aria-hidden
                       />
-                      <span className={dark ? "text-white/75" : "text-[#14181F]/70"}>{f}</span>
+                      <span className={dark ? "text-white/90" : "text-[#14181F]/70"}>{f}</span>
                     </li>
                   ))}
                 </ul>

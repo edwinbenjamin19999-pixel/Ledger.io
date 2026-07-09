@@ -1,4 +1,4 @@
-import { lazy, Suspense, ReactNode } from "react";
+import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Reveal } from "@/components/landing/Reveal";
@@ -10,10 +10,6 @@ import { FAQ } from "@/components/landing/FAQ";
 import { ClosingCTA } from "@/components/landing/ClosingCTA";
 
 const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
-
-const NavyBlock = ({ children }: { children: ReactNode }) => (
-  <div className="bg-[#0a1628]">{children}</div>
-);
 
 /**
  * Marknadssida enligt Cogniq Design System:
@@ -33,9 +29,7 @@ const Index = () => {
         <Reveal><ClosingCTA /></Reveal>
       </main>
       <Suspense fallback={null}>
-        <NavyBlock>
-          <Footer />
-        </NavyBlock>
+        <Footer />
       </Suspense>
     </div>
   );

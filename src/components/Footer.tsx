@@ -52,11 +52,11 @@ const integrations = [
 
 const FooterLinkColumn = ({ title, links }: { title: string; links: { label: string; to: string }[] }) => (
   <div className="space-y-4">
-    <h4 className="text-xs font-semibold uppercase tracking-wider text-white/60">{title}</h4>
+    <h4 className="text-xs font-semibold uppercase tracking-wider text-[#475569]">{title}</h4>
     <ul className="space-y-2.5">
       {links.map((link) => (
         <li key={link.to + link.label}>
-          <Link to={link.to} className="text-sm text-white/70 hover:text-[#0052FF] transition-colors">
+          <Link to={link.to} className="text-sm text-[#475569] hover:text-[#0052FF] transition-colors">
             {link.label}
           </Link>
         </li>
@@ -67,19 +67,19 @@ const FooterLinkColumn = ({ title, links }: { title: string; links: { label: str
 
 export const Footer = () => {
   return (
-    <footer className="text-white bg-[#0a1628]" style={{ borderTop: "2px solid #0052FF" }}>
+    <footer className="text-[#0F172A] bg-[#F8FAFB]" style={{ borderTop: "2px solid #0052FF" }}>
       {/* Main grid */}
       <div className="container mx-auto px-4 sm:px-6 py-14 sm:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand / Contact */}
           <div className="space-y-5 sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center">
-              <CogniqLogo size={30} reversed />
+              <CogniqLogo size={30} />
             </Link>
-            <p className="text-sm text-white/60 max-w-[260px] leading-relaxed">
+            <p className="text-sm text-[#475569] max-w-[260px] leading-relaxed">
               Ekonomin som tänker själv. Hela ekonomifunktionen — bokföring, prognos och beslut — driven av AI, byggd för svenska regler.
             </p>
-            <div className="space-y-2.5 text-sm text-white/60">
+            <div className="space-y-2.5 text-sm text-[#475569]">
               <a href="mailto:info@cogniq.se" className="flex items-center gap-2 hover:text-[#0052FF] transition-colors">
                 <Mail className="w-4 h-4 shrink-0" />
                 info@cogniq.se
@@ -102,11 +102,11 @@ export const Footer = () => {
       </div>
 
       {/* Compliance trust strip */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-[#E2E8F0]">
         <div className="container mx-auto px-4 sm:px-6 py-6">
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {trustItems.map((item) => (
-              <div key={item.text} className="flex items-center gap-2 text-xs text-white/60">
+              <div key={item.text} className="flex items-center gap-2 text-xs text-[#475569]">
                 <item.icon className="w-3.5 h-3.5 text-[#0052FF]" />
                 <span>{item.text}</span>
               </div>
@@ -116,11 +116,11 @@ export const Footer = () => {
       </div>
 
       {/* Integration badge row */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-[#E2E8F0]">
         <div className="container mx-auto px-4 sm:px-6 py-5">
           <div className="flex flex-wrap justify-center gap-2.5">
             {integrations.map((name) => (
-              <span key={name} className="text-[11px] text-white/55 border border-white/15 rounded-full px-3 py-1">
+              <span key={name} className="text-[11px] text-[#475569] border border-[#E2E8F0] rounded-full px-3 py-1">
                 {name}
               </span>
             ))}
@@ -129,32 +129,32 @@ export const Footer = () => {
       </div>
 
       {/* Final CTA strip */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-[#E2E8F0]">
         <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-14">
-          <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-8 sm:p-10 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-bold text-white/90 mb-2">
+          <div className="bg-[#F8FAFB] border border-[#E2E8F0] rounded-2xl p-8 sm:p-10 text-center max-w-2xl mx-auto">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#0F172A] mb-2">
               Redo för en ekonomi som ligger steget före?
             </h3>
-            <p className="text-sm text-white/50 mb-6">
+            <p className="text-sm text-[#94A3B8] mb-6">
               Gå med i piloten inför lansering Q3 2026 och forma produkten med oss.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-[#0052FF] text-white hover:bg-[#0040CC] font-semibold">
                 <Link to="/auth">Gå med i piloten</Link>
               </Button>
-              <Button asChild variant="glass" size="lg" className="hover:scale-[1.02]">
+              <Button asChild variant="outline" size="lg" className="hover:scale-[1.02]">
                 <Link to="/contact">Boka demo</Link>
               </Button>
             </div>
-            <p className="text-xs text-white/50 mt-4">Begränsat antal platser. Ingen bindning.</p>
+            <p className="text-xs text-[#94A3B8] mt-4">Begränsat antal platser. Ingen bindning.</p>
           </div>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-[#E2E8F0]">
         <div className="container mx-auto px-4 sm:px-6 py-6 flex justify-center items-center">
-          <p className="text-xs text-white/50">
+          <p className="text-xs text-[#94A3B8]">
             © {new Date().getFullYear()} Cogniq. Alla rättigheter förbehållna.
           </p>
         </div>
