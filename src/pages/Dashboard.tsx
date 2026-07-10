@@ -355,62 +355,18 @@ const Dashboard = () => {
       <DashboardEmptyBanner />
       <NotificationBanner />
 
-      {/* Compact unified toolbar — title + company + period + meta + Anpassa */}
-      {tenant ? (
+      {/* White-label behåller sin egen header. Standard-shell har sidtiteln i
+          topbaren (F07) — ingen dubblerad "Finansiell översikt"-toolbar här. */}
+      {tenant && (
         <div className="fade-up-1">
           <WLDashboardHeader companyName={company?.name} />
         </div>
-      ) : (
-        <div className="fade-up-1 flex items-center justify-between gap-3 mb-5 pt-1 flex-wrap">
-          <div className="flex items-center gap-3 min-w-0">
-            <div className="p-1.5 rounded-lg bg-primary/10 flex-shrink-0">
-              <LayoutDashboard className="h-4 w-4 text-primary" />
-            </div>
-            <span className="text-base font-semibold text-gray-800 dark:text-white whitespace-nowrap">
-              Finansiell översikt
-            </span>
-            <span className="text-gray-300 dark:text-white/20">·</span>
-            {companies.length > 1 ? (
-              <Select value={selectedCompanyId} onValueChange={setSelectedCompanyId}>
-                <SelectTrigger className="h-8 px-3 text-sm border border-gray-200 dark:border-white/10 rounded-lg bg-white dark:bg-white/[0.03] text-gray-700 dark:text-white/80 w-auto min-w-[160px]">
-                  <SelectValue placeholder="Välj företag" />
-                </SelectTrigger>
-                <SelectContent>
-                  {companies.map((item) => (
-                    <SelectItem key={item.id} value={item.id}>{item.name}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            ) : company ? (
-              <span className="text-sm font-medium text-gray-700 dark:text-white/80 truncate">{company.name}</span>
-            ) : null}
-            <Select value={dashboardPeriod} onValueChange={setDashboardPeriod}>
-              <SelectTrigger className="h-8 px-3 text-sm border border-gray-200 dark:border-white/10 rounded-lg bg-white dark:bg-white/[0.03] text-gray-700 dark:text-white/80 w-auto min-w-[120px]">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="month">Denna månad</SelectItem>
-                <SelectItem value="q1">Q1 (jan–mar)</SelectItem>
-                <SelectItem value="q2">Q2 (apr–jun)</SelectItem>
-                <SelectItem value="q3">Q3 (jul–sep)</SelectItem>
-                <SelectItem value="q4">Q4 (okt–dec)</SelectItem>
-                <SelectItem value="year">Helår</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-          <DashboardHeaderActions
-            kpiCount={kpiCount}
-            widgetCount={widgetCount}
-            aiOptimized={layoutCtl.aiOptimized}
-            onOpenCustomize={() => setCustomizeOpen(true)}
-          />
-        </div>
       )}
 
-      {/* Customisable KPI widget grid */}
+      {/* KPI-rad — äger sin egen period + Anpassa (en enda kontrollrad) */}
       {company && (
         <div className="fade-up-1">
-          <KPIWidgetGrid companyId={company.id} period={dashboardPeriod} onPeriodChange={setDashboardPeriod} />
+          <KPIWidgetGrid companyId={company.id} />
         </div>
       )}
 

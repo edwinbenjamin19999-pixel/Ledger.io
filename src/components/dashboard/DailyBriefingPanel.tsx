@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { CheckCircle2, AlertCircle, CalendarClock, Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight, MessageSquare } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { generateCFOInsights, type CFOInsight } from "@/lib/ai-cfo-insights";
 import { generateDeadlines, parseCompanySettings } from "@/lib/tax/generateDeadlines";
@@ -52,6 +52,7 @@ export function DailyBriefingPanel({ companyId }: Props) {
   const [done, setDone] = useState<DoneItem[]>([]);
   const [attention, setAttention] = useState<AttentionItem[]>([]);
   const [upcoming, setUpcoming] = useState<Upcoming[]>([]);
+  const [stats, setStats] = useState({ autoBooked: 0, needsReview: 0, matched: 0 });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -98,6 +99,7 @@ export function DailyBriefingPanel({ companyId }: Props) {
         else if (conf !== null && conf < 0.8) needsReview += 1;
       });
       const matched = (invRes.data || []).length;
+      setStats({ autoBooked, needsReview, matched });
 
       if (autoBooked > 0)
         doneItems.push({
@@ -174,113 +176,81 @@ export function DailyBriefingPanel({ companyId }: Props) {
     };
   }, [companyId]);
 
+  // Automationsgrad = andel auto-bokförda av det AI:n rört senaste dygnet.
+  const totalTouched = stats.autoBooked + stats.needsReview;
+  const automationPct = totalTouched > 0 ? Math.round((stats.autoBooked / totalTouched) * 100) : 100;
+  const openCount = attention.length;
+
+  // Två narrativstycken byggda av samma data som de gamla sektionerna.
+  const doneLine =
+    done.length === 0
+      ? "Allt är uppdaterat sedan du loggade in sist — inget nytt att bokföra."
+      : `Klart sedan sist. ${done
+          .slice(0, 3)
+          .map((d) => d.text)
+          .join(". ")}.`;
+  const attentionLine =
+    openCount === 0
+      ? "Inget kräver din uppmärksamhet just nu."
+      : `Behöver dig: ${attention[0].title}${openCount > 1 ? ` — och ${openCount - 1} till.` : "."}`;
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-      {/* Section 1 — Done */}
-      <section className="rounded-2xl border border-emerald-200/60 bg-emerald-50/40 p-5">
-        <div className="flex items-center gap-2 mb-3">
-          <div className="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center">
-            <CheckCircle2 className="w-4 h-4 text-emerald-700" />
-          </div>
-          <h3 className="text-[13px] font-semibold text-emerald-950">
-            Det här har jag gjort sedan du loggade in sist
-          </h3>
+    <div className="rounded-xl border border-[#DBE4FA] bg-gradient-to-b from-[#F4F7FE] to-[#FAFBFF] p-5">
+      {/* Header */}
+      <div className="flex items-center gap-2.5">
+        <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-[#0052FF] to-[#4D7CFF] text-white">
+          <Sparkles className="h-4 w-4" strokeWidth={2} />
+        </span>
+        <div className="leading-tight">
+          <div className="text-[14px] font-semibold text-[#0F172A]">AI Ekonom</div>
+          <div className="text-[11px] font-mono text-[#4D7CFF]">Daglig briefing · idag</div>
         </div>
-        {loading ? (
-          <div className="space-y-2">
-            <div className="h-3 bg-emerald-100/60 rounded animate-pulse" />
-            <div className="h-3 bg-emerald-100/60 rounded w-4/5 animate-pulse" />
-          </div>
-        ) : done.length === 0 ? (
-          <p className="text-[13px] text-emerald-900/80 leading-relaxed flex items-start gap-2">
-            <Sparkles className="w-4 h-4 mt-0.5 text-emerald-700 flex-shrink-0" />
-            Allt är uppdaterat. Jag säger till om något behöver uppmärksamhet.
-          </p>
-        ) : (
-          <ul className="space-y-2">
-            {done.map((d) => (
-              <li key={d.id} className="text-[13px] text-emerald-950 flex items-start gap-2">
-                <span className="text-emerald-600 mt-0.5">•</span>
-                <span className="flex-1">
-                  {d.text}
-                  <span className="text-emerald-700/60 ml-1.5 text-[11px]">{fmtRel(d.ts)}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+      </div>
 
-      {/* Section 2 — Attention */}
-      <section className="rounded-2xl border border-amber-200/70 bg-amber-50/40 p-5">
-        <div className="flex items-center gap-2 mb-3">
-          <div className="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center">
-            <AlertCircle className="w-4 h-4 text-amber-700" />
-          </div>
-          <h3 className="text-[13px] font-semibold text-amber-950">Behöver din uppmärksamhet</h3>
+      {/* Narrativ */}
+      {loading ? (
+        <div className="mt-4 space-y-2">
+          <div className="h-3.5 w-full animate-pulse rounded bg-[#E4EAF7]" />
+          <div className="h-3.5 w-4/5 animate-pulse rounded bg-[#E4EAF7]" />
         </div>
-        {loading ? (
-          <div className="space-y-2">
-            <div className="h-12 bg-amber-100/60 rounded animate-pulse" />
-            <div className="h-12 bg-amber-100/60 rounded animate-pulse" />
-          </div>
-        ) : attention.length === 0 ? (
-          <p className="text-[13px] text-amber-900/80 leading-relaxed">
-            Inget kräver din uppmärksamhet just nu.
-          </p>
-        ) : (
-          <ul className="space-y-2">
-            {attention.map((a) => (
-              <li
-                key={a.id}
-                className={`rounded-xl border px-3 py-2.5 ${severityBg(a.severity)}`}
-              >
-                <p className="text-[13px] font-medium leading-tight">{a.title}</p>
-                <p className="text-[11.5px] opacity-80 mt-0.5 leading-snug">{a.why}</p>
-                <button
-                  onClick={() => navigate(a.route)}
-                  className="mt-2 inline-flex items-center gap-1 text-[12px] font-semibold hover:underline"
-                >
-                  {a.cta} <ArrowRight className="w-3 h-3" />
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+      ) : (
+        <div className="mt-4 space-y-2.5 text-[13.5px] leading-[1.6] text-[#334155]">
+          <p>{doneLine}</p>
+          <p>{attentionLine}</p>
+        </div>
+      )}
 
-      {/* Section 3 — Upcoming */}
-      <section className="rounded-2xl border border-slate-200 bg-white p-5">
-        <div className="flex items-center gap-2 mb-3">
-          <div className="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center">
-            <CalendarClock className="w-4 h-4 text-slate-700" />
-          </div>
-          <h3 className="text-[13px] font-semibold text-slate-900">På gång</h3>
+      {/* Automationsgrad */}
+      <div className="mt-5">
+        <div className="mb-1.5 flex items-center justify-between text-[11px] font-medium text-[#475569]">
+          <span>Automationsgrad senaste dygnet</span>
+          <span className="font-mono tabular-nums text-[#0052FF]">{automationPct}%</span>
         </div>
-        {loading ? (
-          <div className="space-y-2">
-            <div className="h-3 bg-slate-100 rounded animate-pulse" />
-            <div className="h-3 bg-slate-100 rounded w-3/4 animate-pulse" />
-          </div>
-        ) : upcoming.length === 0 ? (
-          <p className="text-[13px] text-slate-600">Inga inplanerade händelser den närmaste tiden.</p>
-        ) : (
-          <ul className="space-y-2">
-            {upcoming.map((u) => (
-              <li key={u.id} className="flex items-center justify-between gap-3 text-[13px]">
-                <span className="text-slate-800 truncate">{u.title}</span>
-                <span
-                  className={`text-[11px] tabular-nums whitespace-nowrap font-medium ${
-                    u.daysLeft <= 5 ? "text-rose-700" : u.daysLeft <= 14 ? "text-amber-700" : "text-slate-500"
-                  }`}
-                >
-                  {u.daysLeft === 0 ? "idag" : `om ${u.daysLeft} ${u.daysLeft === 1 ? "dag" : "dagar"}`}
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+        <div className="h-1.5 w-full overflow-hidden rounded-full bg-[#E4EAF7]">
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-[#0052FF] to-[#4D7CFF] transition-all"
+            style={{ width: `${automationPct}%` }}
+          />
+        </div>
+      </div>
+
+      {/* CTA-rad */}
+      <div className="mt-5 flex flex-wrap items-center gap-2.5">
+        <button
+          onClick={() => navigate("/verifications")}
+          className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-[#0052FF] px-3.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#0040CC]"
+        >
+          {openCount > 0 ? `Öppna ${openCount} ${openCount === 1 ? "ärende" : "ärenden"}` : "Öppna granskningskö"}
+          <ArrowRight className="h-3.5 w-3.5" />
+        </button>
+        <button
+          onClick={() => navigate("/ai-ekonom")}
+          className="inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-[13px] font-medium text-[#475569] transition-colors hover:bg-[#E7EDFB]"
+        >
+          <MessageSquare className="h-3.5 w-3.5" />
+          Fråga AI Ekonom
+        </button>
+      </div>
     </div>
   );
 }
