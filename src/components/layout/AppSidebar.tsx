@@ -41,7 +41,7 @@ export const AppSidebar = () => { const location = useLocation();
   const visibleBottomItems = bottomItems;
   // FLAT: medium-vikt text med högre kontrast, aktiv = solitt blått block
   // med tjock kantlist — färg som struktur, aldrig glow
-  const sidebarMenuButtonClass = "flex items-center gap-2 px-3 text-[13px] font-medium text-[#475569] hover:text-[#0F172A] hover:bg-[#F1F5F9] cursor-pointer transition-colors rounded-md whitespace-normal h-9 min-h-0 leading-tight !overflow-visible [&>span:last-child]:!overflow-visible [&>span:last-child]:!whitespace-normal [&>span:last-child]:!text-clip";
+  const sidebarMenuButtonClass = "flex items-center gap-2 px-3 text-[13px] font-medium text-[#475569] hover:text-[#0F172A] hover:bg-[#E7EDFB] cursor-pointer transition-colors rounded-md whitespace-normal h-9 min-h-0 leading-tight !overflow-visible [&>span:last-child]:!overflow-visible [&>span:last-child]:!whitespace-normal [&>span:last-child]:!text-clip";
   const sidebarMenuButtonActiveClass = tenant
     ? "font-semibold border"
     : "!text-white !font-semibold !bg-[#0052FF]";
@@ -85,15 +85,15 @@ export const AppSidebar = () => { const location = useLocation();
     : filteredGroups;
 
   return (
-    <Sidebar className="bg-white border-r border-[#E2E8F0]">
-      {/* Logo header — Cogniq 3D-orb + wordmark (tenant-aware) */}
-      <SidebarHeader className="p-4 border-b border-[#E2E8F0]">
+    <Sidebar className="bg-[#F4F7FE] border-r border-[#E4EAF7]">
+      {/* F07 · Brand-panel — solid blå toppanel (logga + wordmark) mot mjukt blå nav-yta */}
+      <SidebarHeader className="bg-[#0052FF] px-4 pt-[18px] pb-4">
         <div className="flex items-center gap-2.5">
-          <BrandedLogo />
+          <BrandedLogo reversed />
         </div>
       </SidebarHeader>
 
-      <SidebarContent className="px-2 py-2">
+      <SidebarContent className="px-2 py-2 bg-[#F4F7FE]">
         {allGroups.map((group) => { if (group.items.length === 1) { const item = group.items[0];
             const Icon = item.icon;
             const isActive = location.pathname === item.path;
@@ -129,14 +129,14 @@ export const AppSidebar = () => { const location = useLocation();
           const defaultExpanded = isGroupActive || ["Gör", "Granska", "Förstå"].includes(group.label);
           return (
             <Collapsible key={group.label} defaultOpen={defaultExpanded} className="group/collapsible">
-              <div className="border-t border-[#E2E8F0] mx-3 my-1" />
+              <div className="border-t border-[#E4EAF7] mx-3 my-1" />
               <SidebarGroup className="py-0">
                 <CollapsibleTrigger asChild>
                    <SidebarGroupLabel
-                     className="cursor-pointer transition-colors flex items-center justify-between pr-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#94A3B8] px-3 h-9 mt-0 mb-0 hover:text-[#475569]"
+                     className="cursor-pointer transition-colors flex items-center justify-between pr-2 text-[10px] font-semibold uppercase tracking-[0.11em] text-[#0052FF] px-3 h-[26px] mt-0 mb-0 hover:text-[#0040CC]"
                   >
                     {group.label}
-                    <ChevronDown className="h-3.5 w-3.5 transition-transform group-data-[state=open]/collapsible:rotate-180 text-[#CBD5E1]" />
+                    <ChevronDown className="h-3.5 w-3.5 transition-transform group-data-[state=open]/collapsible:rotate-180 text-[#0052FF]/45" />
                   </SidebarGroupLabel>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
@@ -190,6 +190,8 @@ export const AppSidebar = () => { const location = useLocation();
 
                         const isActive = location.pathname === item.path;
                         const isAIEkonom = item.path === "/ai-ekonom";
+                        // AI-kanal-items får blå ikon (#4D7CFF) i inaktivt läge (F07)
+                        const isAIItem = item.path === "/ai-ekonom" || item.path === "/agent";
                         const wlElevate = tenant && isAIEkonom;
                         const showPendingBadge =
                           (item.path === "/verifications" || item.path === "/verifikationer") &&
@@ -212,7 +214,11 @@ export const AppSidebar = () => { const location = useLocation();
                                     : undefined
                               }
                             >
-                              <Icon size={16} strokeWidth={2} className="mt-0.5" />
+                              <Icon
+                                size={16}
+                                strokeWidth={2}
+                                className={cn("mt-0.5", !isActive && isAIItem && "text-[#4D7CFF]")}
+                              />
                               <span className="flex-1 whitespace-normal break-words">{item.label}</span>
                               {showPendingBadge && (
                                 <span
@@ -235,7 +241,7 @@ export const AppSidebar = () => { const location = useLocation();
         })}
 
         {/* Bottom items – always visible, no collapsible */}
-        <SidebarGroup className="py-0.5 mt-auto pt-3 border-t border-[#E2E8F0]">
+        <SidebarGroup className="py-0.5 mt-auto pt-3 border-t border-[#E4EAF7]">
           <SidebarMenu>
             {visibleBottomItems.map((item) => { const Icon = item.icon;
               const isActive = location.pathname === item.path;
@@ -259,7 +265,7 @@ export const AppSidebar = () => { const location = useLocation();
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-2 space-y-2 border-t border-[#E2E8F0]">
+      <SidebarFooter className="p-2 space-y-2 border-t border-[#E4EAF7]">
         <GettingStartedChecklist />
         <button
           onClick={() => navigate("/how-it-works")}

@@ -19,6 +19,8 @@ interface Props {
   tooltip?: string;
   children?: ReactNode;
   invertColor?: boolean;
+  /** F07 · lyft ett KPI till den blå "hero"-brickan (#0052FF, vit text). */
+  accent?: boolean;
 }
 
 export function KPIWidget({
@@ -35,6 +37,7 @@ export function KPIWidget({
   tooltip,
   children,
   invertColor,
+  accent,
 }: Props) {
   const positive = changePct != null ? (invertColor ? changePct < 0 : changePct >= 0) : null;
   const ArrowIcon =
@@ -44,7 +47,10 @@ export function KPIWidget({
     <Card
       className={cn(
         "p-4 flex flex-col gap-2 relative transition-all min-h-[148px]",
-        onClick && !editing && "cursor-pointer hover:border-primary/40",
+        onClick && !editing && "cursor-pointer",
+        accent
+          ? "bg-[#0052FF] border-transparent text-white hover:shadow-[0_4px_12px_rgba(15,23,42,0.12)]"
+          : onClick && !editing && "hover:border-primary/40",
         editing && "outline-dashed outline-1 outline-muted-foreground/30",
       )}
       onClick={editing ? undefined : onClick}
@@ -70,7 +76,10 @@ export function KPIWidget({
       )}
 
       <div className="flex items-center justify-between gap-2">
-        <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wide truncate">
+        <h3 className={cn(
+          "text-xs font-medium uppercase tracking-wide truncate",
+          accent ? "text-white/75" : "text-muted-foreground",
+        )}>
           {tooltip ? (
             <TooltipProvider>
               <Tooltip>
@@ -95,13 +104,17 @@ export function KPIWidget({
             <span
               className={cn(
                 "flex items-center gap-0.5 text-xs font-medium tabular-nums",
-                positive ? "text-emerald-600" : "text-destructive",
+                accent
+                  ? "text-white"
+                  : positive
+                    ? "text-emerald-600"
+                    : "text-destructive",
               )}
             >
               <ArrowIcon className="h-3 w-3" />
               {Math.abs(changePct).toFixed(1)}%
               {changeLabel && (
-                <span className="text-muted-foreground font-normal ml-1">{changeLabel}</span>
+                <span className={cn("font-normal ml-1", accent ? "text-white/60" : "text-muted-foreground")}>{changeLabel}</span>
               )}
             </span>
           )}
@@ -111,9 +124,12 @@ export function KPIWidget({
       {children}
 
       {aiComment && !loading && (
-        <div className="mt-auto pt-2 border-t border-border/50 flex items-start gap-1.5">
-          <Sparkles className="h-3 w-3 text-primary shrink-0 mt-0.5" />
-          <p className="text-xs text-muted-foreground leading-snug">{aiComment}</p>
+        <div className={cn(
+          "mt-auto pt-2 border-t flex items-start gap-1.5",
+          accent ? "border-white/20" : "border-border/50",
+        )}>
+          <Sparkles className={cn("h-3 w-3 shrink-0 mt-0.5", accent ? "text-white/80" : "text-primary")} />
+          <p className={cn("text-xs leading-snug", accent ? "text-white/80" : "text-muted-foreground")}>{aiComment}</p>
         </div>
       )}
     </Card>

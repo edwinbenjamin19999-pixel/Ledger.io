@@ -142,6 +142,7 @@ export function KPIWidgetGrid({ companyId, period: controlledPeriod, onPeriodCha
         return (
           <KPIWidget
             {...common}
+            accent
             title="Resultat"
             primaryValue={fmtSEK(data.result)}
             changePct={change}
