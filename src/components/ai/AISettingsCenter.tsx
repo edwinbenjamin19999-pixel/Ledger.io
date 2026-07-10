@@ -128,7 +128,7 @@ export function AISettingsCenter() {
       </div>
 
       {/* Summary card */}
-      <div className="rounded-2xl border border-blue-200/60 bg-[#0F1F3D] p-5">
+      <div className="rounded-2xl border border-blue-200/60 bg-[#EFF6FF] p-5">
         <p className="text-[11px] uppercase font-semibold text-[#0052FF] tracking-wide">Nuvarande AI-läge</p>
         <h2 className="text-xl font-bold text-slate-900 mt-1">{summary}</h2>
         <ul className="text-sm text-slate-700 mt-3 space-y-1">

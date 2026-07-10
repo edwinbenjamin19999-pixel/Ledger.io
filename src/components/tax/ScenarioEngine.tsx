@@ -81,13 +81,13 @@ export function ScenarioEngine({ baselineInput, current, optimized }: ScenarioEn
       <div className="rounded-[12px] border-[0.5px] border-[#E2E8F0] bg-white p-6">
         <Tabs defaultValue="current">
           <TabsList className="bg-[#F1F5F9] p-1 rounded-[8px] h-auto">
-            <TabsTrigger value="current" className="rounded-[6px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white text-[#64748B] h-[28px] px-3 text-xs">
+            <TabsTrigger value="current" className="rounded-[6px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white text-[#64748B] h-[28px] px-3 text-xs">
               <Equal className="h-3.5 w-3.5 mr-1.5" />Nuvarande
             </TabsTrigger>
-            <TabsTrigger value="optimized" className="rounded-[6px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white text-[#64748B] h-[28px] px-3 text-xs">
+            <TabsTrigger value="optimized" className="rounded-[6px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white text-[#64748B] h-[28px] px-3 text-xs">
               <TrendingDown className="h-3.5 w-3.5 mr-1.5" />Optimerad
             </TabsTrigger>
-            <TabsTrigger value="custom" className="rounded-[6px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white text-[#64748B] h-[28px] px-3 text-xs">
+            <TabsTrigger value="custom" className="rounded-[6px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white text-[#64748B] h-[28px] px-3 text-xs">
               <Settings2 className="h-3.5 w-3.5 mr-1.5" />Anpassad
             </TabsTrigger>
           </TabsList>

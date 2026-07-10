@@ -11,7 +11,7 @@ interface Props {
 export function RiskBadge({ level, score, blocked, size = "sm" }: Props) {
   if (blocked) {
     return (
-      <span className="inline-flex items-center gap-1 px-[8px] py-px rounded-full text-[10px] font-medium uppercase tracking-[0.07em] bg-[#0F172A] text-white">
+      <span className="inline-flex items-center gap-1 px-[8px] py-px rounded-full border-[0.5px] border-[#F1A1A0] text-[10px] font-medium uppercase tracking-[0.07em] bg-[#FCE8E8] text-[#7A1F1E]">
         <Ban className="h-2.5 w-2.5" /> Blockerad
       </span>
     );

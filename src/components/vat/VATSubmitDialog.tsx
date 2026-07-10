@@ -260,11 +260,11 @@ export function VATSubmitDialog({
           <div className={cn(
             "rounded-[10px] border-2 p-4 transition-colors",
             bankid.status === "pending" || bankid.status === "complete"
-              ? "border-[#1E3A5F] bg-[#EFF6FF]"
+              ? "border-[#0052FF] bg-[#EFF6FF]"
               : "border-border hover:border-[#C8DDF5]"
           )}>
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-lg bg-[#1E3A5F] flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 rounded-lg bg-[#0052FF] flex items-center justify-center flex-shrink-0">
                 <ShieldCheck className="w-5 h-5 text-white" />
               </div>
               <div className="flex-1 min-w-0">

@@ -95,7 +95,7 @@ export function PosConfidenceSettingsStep({ onBack, onFinish, isPending, thresho
       </Card>
 
       {/* Result preview */}
-      <Card className="border-l-[3px] border-l-[#0052FF] bg-[#0F1F3D]">
+      <Card className="border-l-[3px] border-l-[#0052FF] bg-white">
         <CardHeader>
           <CardTitle className="text-base flex items-center gap-2">
             <Sparkles className="h-4 w-4 text-[#0052FF]" /> Så här kommer det att fungera

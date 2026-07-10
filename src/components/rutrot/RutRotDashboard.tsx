@@ -49,7 +49,7 @@ export function RutRotDashboard({ settings }: { settings: RutRotSettings }) { co
         </div>
         <button
           onClick={() => setShowNew(true)}
-          className="bg-[#0F1F3D] text-white rounded-xl px-5 py-2.5 font-semibold shadow-sm hover:shadow-md hover:from-amber-600 hover:to-orange-600 transition-all flex items-center gap-1.5"
+          className="bg-[#0052FF] text-white rounded-xl px-5 py-2.5 font-semibold shadow-sm hover:shadow-md hover:bg-[#0040CC] transition-all flex items-center gap-1.5"
         >
           <Plus className="h-4 w-4" />
           Ny RUT/ROT-faktura
@@ -58,39 +58,39 @@ export function RutRotDashboard({ settings }: { settings: RutRotSettings }) { co
 
       {/* KPI cards — premium gradient style */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] p-5 text-white shadow-md">
+        <div className="relative overflow-hidden rounded-2xl bg-[#0052FF] p-5 text-white shadow-md">
           <div className="text-white/70 text-xs uppercase tracking-widest font-medium">Totalt fakturerat</div>
           <div className="text-white font-black text-xl mt-1 tabular-nums">{fmtDisplay(totalInvoiced)}</div>
           <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-white/10 rounded-full blur-xl" />
         </div>
-        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] p-5 text-white shadow-md">
-          <div className="text-white/70 text-xs uppercase tracking-widest font-medium">Avdragsdel (SKV)</div>
-          <div className="text-white font-black text-xl mt-1 tabular-nums">{fmtDisplay(totalDeduction)}</div>
-          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-white/10 rounded-full blur-xl" />
+        <div className="relative overflow-hidden rounded-2xl bg-white border border-[#E2E8F0] p-5 shadow-sm">
+          <div className="text-[#64748B] text-xs uppercase tracking-widest font-medium">Avdragsdel (SKV)</div>
+          <div className="text-[#0F172A] font-black text-xl mt-1 tabular-nums">{fmtDisplay(totalDeduction)}</div>
+          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-[#F1F5F9] rounded-full blur-xl" />
         </div>
-        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] p-5 text-white shadow-md">
-          <div className="text-white/70 text-xs uppercase tracking-widest font-medium">Kunddel</div>
-          <div className="text-white font-black text-xl mt-1 tabular-nums">{fmtDisplay(totalCustomerPays)}</div>
-          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-white/10 rounded-full blur-xl" />
+        <div className="relative overflow-hidden rounded-2xl bg-white border border-[#E2E8F0] p-5 shadow-sm">
+          <div className="text-[#64748B] text-xs uppercase tracking-widest font-medium">Kunddel</div>
+          <div className="text-[#0F172A] font-black text-xl mt-1 tabular-nums">{fmtDisplay(totalCustomerPays)}</div>
+          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-[#F1F5F9] rounded-full blur-xl" />
         </div>
-        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] p-5 text-white shadow-md">
-          <div className="text-white/70 text-xs uppercase tracking-widest font-medium">Väntar från SKV</div>
-          <div className="text-white font-black text-xl mt-1 tabular-nums">{fmtDisplay(pendingSKV)}</div>
-          {pendingSKV > 0 && <div className="text-white/60 text-xs mt-1">Normalt 3–5 bankdagar</div>}
-          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-white/10 rounded-full blur-xl" />
+        <div className="relative overflow-hidden rounded-2xl bg-white border border-[#E2E8F0] p-5 shadow-sm">
+          <div className="text-[#64748B] text-xs uppercase tracking-widest font-medium">Väntar från SKV</div>
+          <div className="text-[#0F172A] font-black text-xl mt-1 tabular-nums">{fmtDisplay(pendingSKV)}</div>
+          {pendingSKV > 0 && <div className="text-[#64748B] text-xs mt-1">Normalt 3–5 bankdagar</div>}
+          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-[#F1F5F9] rounded-full blur-xl" />
         </div>
-        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] p-5 text-white shadow-md">
-          <div className="text-white/70 text-xs uppercase tracking-widest font-medium">Inbetalt från SKV</div>
-          <div className="text-white font-black text-xl mt-1 tabular-nums">{fmtDisplay(paidSKV)}</div>
-          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-white/10 rounded-full blur-xl" />
+        <div className="relative overflow-hidden rounded-2xl bg-white border border-[#E2E8F0] p-5 shadow-sm">
+          <div className="text-[#64748B] text-xs uppercase tracking-widest font-medium">Inbetalt från SKV</div>
+          <div className="text-[#0F172A] font-black text-xl mt-1 tabular-nums">{fmtDisplay(paidSKV)}</div>
+          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-[#F1F5F9] rounded-full blur-xl" />
         </div>
-        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] p-5 text-white shadow-md">
-          <div className="text-white/70 text-xs uppercase tracking-widest font-medium">Gränser i riskzon</div>
-          <div className={cn("text-white font-black text-xl mt-1", riskCustomers.length === 0 && "text-white/40")}>
+        <div className="relative overflow-hidden rounded-2xl bg-white border border-[#E2E8F0] p-5 shadow-sm">
+          <div className="text-[#64748B] text-xs uppercase tracking-widest font-medium">Gränser i riskzon</div>
+          <div className={cn("text-[#0F172A] font-black text-xl mt-1", riskCustomers.length === 0 && "text-[#94A3B8]")}>
             {riskCustomers.length > 0 ? `${riskCustomers.length} ${riskCustomers.length === 1 ? "kund" : "kunder"}` : "—"}
           </div>
-          {riskCustomers.length > 0 && <div className="text-white/60 text-xs mt-1">&lt;15 000 kr kvar</div>}
-          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-white/10 rounded-full blur-xl" />
+          {riskCustomers.length > 0 && <div className="text-[#64748B] text-xs mt-1">&lt;15 000 kr kvar</div>}
+          <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-[#F1F5F9] rounded-full blur-xl" />
         </div>
       </div>
 

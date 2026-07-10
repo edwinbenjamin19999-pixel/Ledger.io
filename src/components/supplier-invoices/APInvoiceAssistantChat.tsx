@@ -175,24 +175,24 @@ export function APInvoiceAssistantChat({
   };
 
   return (
-    <div className="rounded-2xl bg-slate-950 text-slate-100 border-t-2 border-[#0052FF] overflow-hidden shadow-lg">
+    <div className="rounded-2xl bg-white text-[#0F172A] border border-[#E2E8F0] border-t-2 border-t-[#0052FF] overflow-hidden shadow-sm">
       {/* Header */}
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="w-full flex items-center justify-between px-4 py-3 hover:bg-slate-900/60 transition-colors"
+        className="w-full flex items-center justify-between px-4 py-3 hover:bg-[#F1F5F9] transition-colors"
       >
         <div className="flex items-center gap-2">
-          <Sparkles className="h-4 w-4 text-[#1E3A5F]" />
+          <Sparkles className="h-4 w-4 text-[#0052FF]" />
           <span className="text-sm font-semibold">Cogniq Assistent</span>
-          <span className="text-[10px] text-slate-400 font-mono hidden sm:inline">
+          <span className="text-[10px] text-[#64748B] font-mono hidden sm:inline">
             #{invoiceNumber}
           </span>
         </div>
         {open ? (
-          <ChevronUp className="h-4 w-4 text-slate-400" />
+          <ChevronUp className="h-4 w-4 text-[#64748B]" />
         ) : (
-          <ChevronDown className="h-4 w-4 text-slate-400" />
+          <ChevronDown className="h-4 w-4 text-[#64748B]" />
         )}
       </button>
 
@@ -200,7 +200,7 @@ export function APInvoiceAssistantChat({
         <div className="px-4 pb-4 space-y-3">
           {/* Initial insight */}
           {initialInsight && messages.length === 0 && (
-            <div className="text-xs text-slate-300 leading-relaxed bg-slate-900/60 rounded-xl p-3 border border-slate-800">
+            <div className="text-xs text-[#64748B] leading-relaxed bg-[#F1F5F9] rounded-xl p-3 border border-[#E2E8F0]">
               {initialInsight}
             </div>
           )}
@@ -217,12 +217,12 @@ export function APInvoiceAssistantChat({
                     className={cn(
                       "inline-block max-w-[92%] rounded-xl px-3 py-2 text-xs leading-relaxed",
                       m.role === "user"
-                        ? "bg-[#EFF6FF] text-blue-100 border border-[#C8DDF5]"
-                        : "bg-slate-900 text-slate-100 border border-slate-800",
+                        ? "bg-[#EFF6FF] text-[#0C447C] border border-[#C8DDF5]"
+                        : "bg-[#F1F5F9] text-[#0F172A] border border-[#E2E8F0]",
                     )}
                   >
                     {m.role === "assistant" ? (
-                      <div className="prose prose-invert prose-xs max-w-none [&_*]:text-xs [&_h2]:text-sm [&_h2]:mt-2 [&_h2]:mb-1 [&_p]:my-1 [&_ul]:my-1 [&_li]:my-0">
+                      <div className="prose prose-xs max-w-none [&_*]:text-xs [&_h2]:text-sm [&_h2]:mt-2 [&_h2]:mb-1 [&_p]:my-1 [&_ul]:my-1 [&_li]:my-0">
                         <ReactMarkdown>{m.content || "…"}</ReactMarkdown>
                       </div>
                     ) : (
@@ -232,7 +232,7 @@ export function APInvoiceAssistantChat({
                 </div>
               ))}
               {streaming && (
-                <div className="text-xs text-slate-400 flex items-center gap-1.5">
+                <div className="text-xs text-[#64748B] flex items-center gap-1.5">
                   <Loader2 className="h-3 w-3 animate-spin" />
                   Tänker…
                 </div>
@@ -248,7 +248,7 @@ export function APInvoiceAssistantChat({
                   key={s}
                   onClick={() => send(s)}
                   disabled={streaming}
-                  className="text-[11px] px-2.5 py-1 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors disabled:opacity-50"
+                  className="text-[11px] px-2.5 py-1 rounded-full bg-[#F1F5F9] hover:bg-[#E2E8F0] text-[#475569] border border-[#E2E8F0] transition-colors disabled:opacity-50"
                 >
                   {s}
                 </button>
@@ -269,13 +269,13 @@ export function APInvoiceAssistantChat({
               onChange={(e) => setInput(e.target.value)}
               placeholder={`Ställ en fråga om fakturan från ${supplierName}…`}
               disabled={streaming}
-              className="bg-slate-900 border-slate-800 text-slate-100 placeholder:text-slate-500 text-xs h-9 focus-visible:ring-[#0052FF]/40"
+              className="bg-white border-[#E2E8F0] text-[#0F172A] placeholder:text-[#94A3B8] text-xs h-9 focus-visible:ring-[#0052FF]/40"
             />
             <Button
               type="submit"
               size="sm"
               disabled={streaming || !input.trim()}
-              className="bg-[#0052FF] hover:bg-[#0052FF] text-slate-950 h-9"
+              className="bg-[#0052FF] hover:bg-[#0040CC] text-white h-9"
             >
               <Send className="h-3.5 w-3.5" />
             </Button>

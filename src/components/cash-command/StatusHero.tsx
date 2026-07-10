@@ -23,7 +23,7 @@ export function StatusHero({ monthLabel, openingCash, totalOutflow, totalInflow,
   const s = STATUS[status];
   const Icon = s.icon;
   return (
-    <div className={cn("relative overflow-hidden rounded-2xl border border-slate-800/60 bg-[#0F1F3D] p-6 sm:p-8 ring-1", s.ring)}>
+    <div className="relative overflow-hidden rounded-2xl bg-[#0052FF] p-6 sm:p-8">
       <div className={cn("absolute -top-24 -right-24 h-64 w-64 rounded-full blur-3xl pointer-events-none", s.bg)} />
       <div className="relative">
         <div className="flex items-center gap-2 mb-2">
@@ -55,8 +55,8 @@ export function StatusHero({ monthLabel, openingCash, totalOutflow, totalInflow,
 function Metric({ label, value, positive, negative, highlight }: { label: string; value: number; positive?: boolean; negative?: boolean; highlight?: string }) {
   const colorClass = highlight || (positive ? "text-[#1D9E75]" : negative ? "text-[#C73838]" : "text-white");
   return (
-    <div className="rounded-xl bg-slate-900/60 border border-slate-800/60 px-3 py-3">
-      <div className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">{label}</div>
+    <div className="rounded-xl bg-white/10 border border-white/10 px-3 py-3">
+      <div className="text-[11px] uppercase tracking-wider text-white/70 font-semibold">{label}</div>
       <div className={cn("text-lg sm:text-xl font-bold tabular-nums mt-1", colorClass)}>
         {positive ? "+" : negative ? "−" : ""}{formatSEK(Math.abs(value))}
       </div>

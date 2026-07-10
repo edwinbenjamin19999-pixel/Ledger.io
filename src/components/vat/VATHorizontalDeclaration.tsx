@@ -151,7 +151,7 @@ const RutaRow = ({ box, value, onClick, isCalculated, isHighlighted, isEditing, 
     statusDot === "critical" ? "bg-[#C73838]"
     : statusDot === "high" ? "bg-[#C28A2B]"
     : statusDot === "medium" ? "bg-[#C28A2B]"
-    : statusDot === "info" ? "bg-[#1E3A5F]"
+    : statusDot === "info" ? "bg-[#0052FF]"
     : populated ? "bg-[#1D9E75]"
     : "bg-[#CBD5E1]";
 
@@ -389,7 +389,7 @@ export const VATHorizontalDeclaration = ({
           <Button
             size="sm"
             onClick={onReviewAI}
-            className="gap-1.5 h-[34px] rounded-[8px] bg-[#0F1F3D] hover:bg-[#0F1F3D]/90 text-white"
+            className="gap-1.5 h-[34px] rounded-[8px] bg-[#0052FF] hover:bg-[#0052FF]/90 text-white"
           >
             <Sparkles className="w-4 h-4" />
             Granska med AI
@@ -405,7 +405,7 @@ export const VATHorizontalDeclaration = ({
           <Button
             variant={manualMode ? "default" : "outline"}
             size="sm"
-            className={cn("gap-1.5 h-[34px] rounded-[8px]", manualMode && "bg-[#0F1F3D] hover:bg-[#0F1F3D]/90 text-white")}
+            className={cn("gap-1.5 h-[34px] rounded-[8px]", manualMode && "bg-[#0052FF] hover:bg-[#0052FF]/90 text-white")}
             onClick={() => {
               if (manualMode && overrideCount > 0) {
                 toast.success(`${overrideCount} manuella justeringar sparade`);

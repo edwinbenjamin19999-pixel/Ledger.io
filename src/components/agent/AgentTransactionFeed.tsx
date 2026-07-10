@@ -182,7 +182,7 @@ export function AgentTransactionFeed({ companyId }: Props) { const [transactions
 
   if (transactions.length === 0) {
     return (
-      <Card className="border-0 bg-[#0F1F3D] shadow-[0_0_30px_rgba(0,198,255,0.08)]">
+      <Card className="border-0 bg-[#0052FF] shadow-[0_0_30px_rgba(0,198,255,0.08)]">
         <CardContent className="py-12 text-center space-y-6">
           {/* Animated AI illustration */}
           <div className="flex items-center justify-center gap-3">

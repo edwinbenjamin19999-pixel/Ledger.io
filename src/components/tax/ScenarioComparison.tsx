@@ -57,9 +57,9 @@ function ScenarioCard({ label, result, baseline, headerBg, borderColor, icon: Ic
 export function ScenarioComparison({ current, optimized, aggressive }: ScenarioComparisonProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <ScenarioCard label="Nuvarande" result={current} baseline={current.corporateTax} headerBg="bg-[#1E3A5F]" borderColor="border-[#E2E8F0]" icon={Equal} tone="neutral" />
+      <ScenarioCard label="Nuvarande" result={current} baseline={current.corporateTax} headerBg="bg-[#475569]" borderColor="border-[#E2E8F0]" icon={Equal} tone="neutral" />
       <ScenarioCard label="Optimerad" result={optimized} baseline={current.corporateTax} headerBg="bg-[#1D9E75]" borderColor="border-[#BFE6D6]" icon={TrendingDown} tone="good" />
-      <ScenarioCard label="Aggressiv" result={aggressive} baseline={current.corporateTax} headerBg="bg-[#0F1F3D]" borderColor="border-[#C8DDF5]" icon={Zap} tone="best" />
+      <ScenarioCard label="Aggressiv" result={aggressive} baseline={current.corporateTax} headerBg="bg-[#0052FF]" borderColor="border-[#C8DDF5]" icon={Zap} tone="best" />
     </div>
   );
 }

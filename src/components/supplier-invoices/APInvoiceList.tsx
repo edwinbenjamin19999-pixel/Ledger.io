@@ -371,7 +371,7 @@ export function APInvoiceList({ companyId, onSelect, onPay, activeId = null, com
 
       {/* Selection action bar */}
       {selected.size > 0 && (
-        <div className="bg-[#0F172A] text-white rounded-[12px] px-[14px] py-[10px] flex items-center justify-between flex-wrap gap-3">
+        <div className="bg-[#0052FF] text-white rounded-[12px] px-[14px] py-[10px] flex items-center justify-between flex-wrap gap-3">
           <div className="flex items-center gap-[12px] text-[12px]">
             <span className="font-medium">{selected.size} av {filtered.length} valda</span>
             <button onClick={toggleAll} className="text-[#94A3B8] hover:text-white transition-colors">

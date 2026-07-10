@@ -6,8 +6,8 @@ const MiniSparkline = () => {
   const fillPoints = `${points} 80,24 0,24`;
   return (
     <svg width="80" height="24" viewBox="0 0 80 24" className="flex-shrink-0">
-      <polyline points={fillPoints} fill="white" fillOpacity="0.12" stroke="none" />
-      <polyline points={points} fill="none" stroke="white" strokeOpacity="0.5" strokeWidth="1.5" strokeLinejoin="round" />
+      <polyline points={fillPoints} fill="#0052FF" fillOpacity="0.08" stroke="none" />
+      <polyline points={points} fill="none" stroke="#0052FF" strokeOpacity="0.55" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
   );
 };
@@ -22,18 +22,18 @@ export interface GradientKPICardData {
 
 // Preset gradients (legacy — kept for backwards compatibility outside dashboard)
 export const KPI_GRADIENTS = {
-  emerald: "bg-[#0F1F3D]",
-  rose: "bg-[#0F1F3D]",
-  indigo: "bg-[#0F1F3D]",
-  slate: "bg-[#0F1F3D]",
-  amber: "bg-[#0F1F3D]",
-  blue: "bg-[#0F1F3D]",
-  teal: "bg-[#0F1F3D]",
-  purple: "bg-[#0F1F3D]",
-  cyan: "bg-[#0F1F3D]",
-  orange: "bg-[#0F1F3D]",
-  red: "bg-[#0F1F3D]",
-  green: "bg-[#0F1F3D]",
+  emerald: "bg-white border border-[#E2E8F0]",
+  rose: "bg-white border border-[#E2E8F0]",
+  indigo: "bg-white border border-[#E2E8F0]",
+  slate: "bg-white border border-[#E2E8F0]",
+  amber: "bg-white border border-[#E2E8F0]",
+  blue: "bg-white border border-[#E2E8F0]",
+  teal: "bg-white border border-[#E2E8F0]",
+  purple: "bg-white border border-[#E2E8F0]",
+  cyan: "bg-white border border-[#E2E8F0]",
+  orange: "bg-white border border-[#E2E8F0]",
+  red: "bg-white border border-[#E2E8F0]",
+  green: "bg-white border border-[#E2E8F0]",
 } as const;
 
 /**
@@ -52,19 +52,19 @@ export type KPIAccent = keyof typeof KPI_ACCENT;
 
 export const GradientKPICard = ({ label, value, sub, icon: Icon, gradient }: GradientKPICardData) => (
   <div
-    className={`${gradient} rounded-2xl p-5 shadow-[0_8px_32px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.22)] hover:-translate-y-1 transition-all duration-200 relative`}
+    className={`${gradient} rounded-2xl p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow duration-200 relative`}
   >
     <div className="flex items-start justify-between gap-3 mb-2">
-      <span className="text-white/80 text-xs font-semibold uppercase tracking-wider whitespace-nowrap">
+      <span className="text-[#64748B] text-xs font-semibold uppercase tracking-wider whitespace-nowrap">
         {label}
       </span>
-      <Icon className="w-6 h-6 text-white/40 flex-shrink-0" />
+      <Icon className="w-6 h-6 text-[#94A3B8] flex-shrink-0" />
     </div>
-    <p className="text-2xl font-black text-white tracking-tight tabular-nums whitespace-nowrap">
+    <p className="text-2xl font-black text-[#0F172A] tracking-tight tabular-nums whitespace-nowrap">
       {value}
     </p>
     <div className="flex items-center justify-between mt-2">
-      <span className="text-xs text-white/60 whitespace-nowrap">{sub || "vs förra månaden"}</span>
+      <span className="text-xs text-[#64748B] whitespace-nowrap">{sub || "vs förra månaden"}</span>
       <MiniSparkline />
     </div>
   </div>

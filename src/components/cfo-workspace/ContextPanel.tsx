@@ -22,7 +22,7 @@ export const ContextPanel = ({ companyId, context }: Props) => {
     <aside className="h-full overflow-y-auto bg-slate-50 dark:bg-slate-950/50 border-l border-slate-200 dark:border-slate-800 p-5 space-y-5">
       {/* Active context */}
       {context.type !== "general" && (
-        <section className="rounded-2xl bg-[#0F1F3D] border border-[#C8DDF5] p-4">
+        <section className="rounded-2xl bg-white border border-[#C8DDF5] p-4">
           <div className="text-xs font-bold uppercase tracking-wider text-[#0052FF] dark:text-[#0052FF] mb-2">Aktiv kontext</div>
           {context.kpi && (
             <>

@@ -185,7 +185,7 @@ export function LiquidityPriorityCard({
           onClick={() => onExecute(insight, Array.from(selected))}
           className={cn(
             "px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all",
-            "bg-[#0F1F3D] text-white",
+            "bg-[#0052FF] text-white",
             "hover:shadow-[0_0_24px_hsl(var(--primary)/0.4)]",
             "disabled:opacity-60",
           )}

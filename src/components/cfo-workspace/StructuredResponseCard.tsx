@@ -94,7 +94,7 @@ export const StructuredResponseCard = ({ structured, companyId }: Props) => {
       </div>
 
       {/* Recommendation */}
-      <div className="rounded-xl bg-[#0F1F3D] border border-[#C8DDF5] p-4">
+      <div className="rounded-xl bg-[#EFF6FF] border border-[#C8DDF5] p-4">
         <div className="flex items-start gap-3">
           <CheckCircle2 className="h-5 w-5 text-[#0052FF] dark:text-[#1E3A5F] shrink-0 mt-0.5" />
           <div>
@@ -113,7 +113,7 @@ export const StructuredResponseCard = ({ structured, companyId }: Props) => {
               size="sm"
               onClick={() => onAction(a)}
               disabled={!!pendingId}
-              className="gap-1.5 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100"
+              className="gap-1.5 bg-[#0052FF] hover:bg-[#0052FF] dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100"
             >
               {a.label}
               <ArrowRight className="h-3.5 w-3.5" />

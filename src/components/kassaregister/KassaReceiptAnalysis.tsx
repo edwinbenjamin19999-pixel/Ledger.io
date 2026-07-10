@@ -56,7 +56,7 @@ export function KassaReceiptAnalysis({ sales }: Props) { const avgTicket = useMe
           value={formatKr(avgTicket)}
           sub="Branschsnitt: 380 kr"
           icon={Receipt}
-          gradient="bg-[#0F1F3D]"
+          gradient="bg-[#0052FF]"
         />
         <GradientKPICard
           label="Kvittotrend"
@@ -65,7 +65,7 @@ export function KassaReceiptAnalysis({ sales }: Props) { const avgTicket = useMe
             : "-"}
           sub="Senaste 14 dagar"
           icon={TrendingUp}
-          gradient="bg-[#0F1F3D]"
+          gradient="bg-[#0052FF]"
         />
         <GradientKPICard
           label="Opportunity"
@@ -74,7 +74,7 @@ export function KassaReceiptAnalysis({ sales }: Props) { const avgTicket = useMe
             : "-"}
           sub="per dag vid branschsnitt"
           icon={Target}
-          gradient="bg-[#0F1F3D]"
+          gradient="bg-[#0052FF]"
         />
       </div>
 

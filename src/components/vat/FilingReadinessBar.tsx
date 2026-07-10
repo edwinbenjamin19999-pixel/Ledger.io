@@ -146,7 +146,7 @@ export function FilingReadinessBar({
                 "gap-1.5 shadow-md",
                 blockSubmit
                   ? "bg-slate-400 hover:bg-slate-400 cursor-not-allowed"
-                  : "bg-gradient-to-r from-[#1E3A5F] to-[#0F1F3D] hover:from-[#0052FF] hover:to-[#0052FF]"
+                  : "bg-[#0052FF] hover:bg-[#0052FF]/90"
               )}
               title={blockSubmit ? "Lös kritiska problem innan inlämning" : undefined}
             >

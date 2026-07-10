@@ -35,7 +35,7 @@ export function TaxHeroRow({
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {/* PRIMARY — Navy */}
-      <div className="rounded-[12px] bg-[#0F1F3D] p-6 text-white">
+      <div className="rounded-[12px] bg-[#0052FF] p-6 text-white">
         <div className="space-y-3">
           <div className="flex items-center gap-2 text-[11px] uppercase tracking-wider text-white/60">
             <Wallet className="h-3.5 w-3.5" />

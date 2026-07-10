@@ -60,7 +60,7 @@ export function VATCorrectionDialog({ open, onOpenChange, finding, onOpenDrilldo
           {finding.affectedBox && (
             <Button
               onClick={() => { onOpenDrilldown?.(finding.affectedBox!); onOpenChange(false); }}
-              className="bg-[#0F1F3D] hover:bg-[#0F1F3D]/90 text-white gap-2"
+              className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-white gap-2"
             >
               <FileText className="w-4 h-4" /> Granska transaktioner <ArrowRight className="w-4 h-4" />
             </Button>

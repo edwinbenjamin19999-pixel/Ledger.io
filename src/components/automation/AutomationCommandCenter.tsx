@@ -315,7 +315,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
 
         {/* TODAY ACTION BAR */}
         {totalActionCount > 0 && (
-          <Card className="border-0 bg-[#0B1929] rounded-2xl overflow-hidden">
+          <Card className="border-0 bg-[#0052FF] rounded-2xl overflow-hidden">
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-3 flex-1">
@@ -608,7 +608,7 @@ export const AutomationCommandCenter = ({ companyId }: AutomationCommandCenterPr
                         <div className="flex items-center gap-2 shrink-0">
                           <Button
                             size="sm"
-                            className="bg-[#0F1F3D] text-white hover:from-violet-700 hover:to-indigo-700 text-xs"
+                            className="bg-[#0052FF] text-white hover:bg-[#0040CC] text-xs"
                             onClick={(e) => {
                               e.stopPropagation();
                               setExpandedItem(item.id);

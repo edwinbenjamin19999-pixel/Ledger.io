@@ -40,7 +40,7 @@ const SEV_META = {
   info: {
     icon: Lightbulb,
     iconBg: "bg-[#EFF6FF] text-[#1E3A5F] dark:bg-blue-950/30 dark:text-[#1E3A5F]",
-    chip: "bg-[#1E3A5F] text-white",
+    chip: "bg-[#0052FF] text-white",
     impact: "text-[#1E3A5F] dark:text-[#1E3A5F]",
     label: "Tips",
   },
@@ -70,7 +70,7 @@ export function VATAIInsightsGrid({ findings, loading, onOpenSource, onSuggestFi
     <section>
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg bg-[#0F1F3D] flex items-center justify-center">
+          <div className="w-7 h-7 rounded-lg bg-[#0052FF] flex items-center justify-center">
             <Sparkles className="w-4 h-4 text-white" />
           </div>
           <h2 className="text-lg font-semibold text-foreground">AI granskar din moms</h2>

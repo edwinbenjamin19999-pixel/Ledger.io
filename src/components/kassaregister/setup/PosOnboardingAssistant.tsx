@@ -29,7 +29,7 @@ export function PosOnboardingAssistant({ step }: { step: keyof typeof COPY }) {
   return (
     <aside className="lg:sticky lg:top-6 rounded-2xl border border-slate-200/70 bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
-        <div className="h-10 w-10 rounded-full bg-[#0F1F3D] flex items-center justify-center text-white">
+        <div className="h-10 w-10 rounded-full bg-[#0052FF] flex items-center justify-center text-white">
           <Bot className="h-5 w-5" />
         </div>
         <div>

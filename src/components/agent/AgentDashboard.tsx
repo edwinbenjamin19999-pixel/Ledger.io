@@ -156,7 +156,7 @@ export function AgentDashboard({ companyId }: AgentDashboardProps) {
             "absolute -top-32 -right-32 w-96 h-96 rounded-full blur-3xl pointer-events-none",
             isDark ? "bg-[#EFF6FF]" : "bg-[#EFF6FF]"
           )} />
-          <div className="absolute top-0 left-0 w-1 h-full bg-[#0F1F3D]" />
+          <div className="absolute top-0 left-0 w-1 h-full bg-[#0052FF]" />
 
           <div className="relative grid md:grid-cols-[1.1fr,1fr] gap-10 items-start">
             {/* Left: value prop */}

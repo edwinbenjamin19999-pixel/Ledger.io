@@ -68,7 +68,7 @@ export function ManualReviewDrawer({ insight, open, onOpenChange, onApprove, onR
             <Button
               onClick={() => onApprove()}
               disabled={pending}
-              className="flex-1 bg-[#0F1F3D] hover:from-[#0052FF] hover:to-[#0052FF] text-white"
+              className="flex-1 bg-[#0052FF] hover:bg-[#0040CC] text-white"
             >
               {pending ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : <CheckCircle2 className="h-4 w-4 mr-2" />}
               Godkänn & utför

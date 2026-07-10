@@ -215,9 +215,9 @@ export function PriorityWorkflowCard({ insight, companyId, onPrimary, onIgnore, 
           <button
             disabled={pending}
             onClick={() => onPrimary(insight, Array.from(selected))}
-            className="inline-flex items-center gap-1.5 transition-colors hover:bg-[#1a3550] disabled:opacity-60"
+            className="inline-flex items-center gap-1.5 transition-colors hover:bg-[#0040CC] disabled:opacity-60"
             style={{
-              background: "#0F172A",
+              background: "#0052FF",
               color: "white",
               borderRadius: 8,
               padding: "8px 16px",

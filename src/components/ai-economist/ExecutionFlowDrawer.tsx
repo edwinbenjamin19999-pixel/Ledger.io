@@ -127,7 +127,7 @@ export function ExecutionFlowDrawer({ open, onClose, insight, companyId, selecte
                   <TrustPanel companyId={companyId} actionType={insight.action_type} />
 
                   <div className="flex gap-2 pt-2">
-                    <Button onClick={handleConfirm} className="flex-1 bg-[#0F1F3D] text-white hover:shadow-lg">
+                    <Button onClick={handleConfirm} className="flex-1 bg-[#0052FF] text-white hover:shadow-lg">
                       <CheckCircle2 className="h-4 w-4 mr-1.5" />
                       Godkänn & utför
                     </Button>
@@ -148,7 +148,7 @@ export function ExecutionFlowDrawer({ open, onClose, insight, companyId, selecte
               </div>
               <div className="h-2 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-[#0F1F3D] transition-all duration-500"
+                  className="h-full bg-[#0052FF] transition-all duration-500"
                   style={{ width: `${(progress.current / Math.max(1, progress.total)) * 100}%` }}
                 />
               </div>

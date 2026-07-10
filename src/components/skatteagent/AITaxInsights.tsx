@@ -35,7 +35,7 @@ export function AITaxInsights({ insights, onAction }: AITaxInsightsProps) {
   return (
     <section className="space-y-4">
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-lg bg-[#0F1F3D] flex items-center justify-center">
+        <div className="w-8 h-8 rounded-lg bg-[#0052FF] flex items-center justify-center">
           <Sparkles className="w-4 h-4 text-white" />
         </div>
         <h2 className="text-lg font-semibold text-slate-900">Skatteagent — AI-insikter</h2>

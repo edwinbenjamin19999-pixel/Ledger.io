@@ -66,7 +66,7 @@ export const ProactiveCFOBanner = ({ companyId }: { companyId: string | null }) 
   return (
     <div className={cn(
       "fixed bottom-4 right-4 z-50 max-w-sm rounded-2xl border-2 border-[#C8DDF5] p-4",
-      "bg-[#0F1F3D] text-white shadow-lg shadow-[#0052FF]/20",
+      "bg-[#0052FF] text-white shadow-lg shadow-[#0052FF]/20",
       "animate-in slide-in-from-bottom-4 fade-in duration-500",
     )}>
       <button onClick={onDismiss} className="absolute top-2 right-2 text-white/60 hover:text-white">
@@ -77,14 +77,14 @@ export const ProactiveCFOBanner = ({ companyId }: { companyId: string | null }) 
           <Sparkles className="h-4 w-4 text-[#1E3A5F]" />
         </div>
         <div className="flex-1 min-w-0">
-          <div className="text-[10px] uppercase tracking-wider text-[#1E3A5F] font-bold">AI CFO upptäckte</div>
+          <div className="text-[10px] uppercase tracking-wider text-white/80 font-bold">AI CFO upptäckte</div>
           <p className="text-sm font-semibold mt-0.5">{insight.title}</p>
           {insight.payload?.explanation && (
             <p className="text-xs text-white/70 mt-1 line-clamp-2">{insight.payload.explanation}</p>
           )}
           <button
             onClick={onDiscuss}
-            className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0052FF] hover:text-[#0052FF]"
+            className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-white"
           >
             Diskutera med AI CFO <ArrowRight className="h-3 w-3" />
           </button>

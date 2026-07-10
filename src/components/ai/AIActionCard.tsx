@@ -117,7 +117,7 @@ export const AIActionCard = ({ action, onComplete }: Props) => {
           {action.details.map((d) => (
             <div key={d.label} className="contents">
               <dt className="text-muted-foreground">{d.label}</dt>
-              <dd className="text-foreground tabular-nums truncate">{d.value}</dd>
+              <dd className="text-foreground tabular-nums whitespace-nowrap">{d.value}</dd>
             </div>
           ))}
         </dl>

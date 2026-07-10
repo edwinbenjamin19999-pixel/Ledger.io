@@ -107,7 +107,7 @@ export function AIReviewPanel({
         <div className="px-5 py-4 border-b border-border bg-gradient-to-r from-blue-50/50 to-transparent dark:from-blue-950/20 sticky top-0 z-10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#0F1F3D] flex items-center justify-center shadow-md">
+              <div className="w-9 h-9 rounded-xl bg-[#0052FF] flex items-center justify-center shadow-md">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
               <div>

@@ -68,7 +68,7 @@ export function HeroStatusRow({
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
       {/* Card 1 — Next F-skatt (premium gradient) */}
-      <Card className="relative overflow-hidden border-0 bg-[#0F1F3D] text-white p-6 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+      <Card className="relative overflow-hidden border-0 bg-[#0052FF] text-white p-6 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_60%)]" />
         <div className="relative">
           <div className="flex items-center gap-2 text-xs font-medium text-indigo-200 uppercase tracking-wide">

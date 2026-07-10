@@ -20,7 +20,7 @@ export function TaxHeroCard({ corporateTax, optimizedTax, effectiveTaxRate, fisc
   const hasOptimization = saving > 1000;
 
   return (
-    <div className="rounded-[12px] bg-[#0F1F3D] p-6 text-white">
+    <div className="rounded-[12px] bg-[#0052FF] p-6 text-white">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
         <div className="lg:col-span-2 space-y-2">
           <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-white/60">

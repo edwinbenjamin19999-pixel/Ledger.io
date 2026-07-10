@@ -53,7 +53,7 @@ export function TaxStickyFooter({
               size="sm"
               onClick={onBookFinalTax}
               disabled={bookDisabled || bookBusy || !!bookedRef}
-              className="bg-[#0F1F3D] hover:bg-[#1E3A5F] text-white"
+              className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-white"
             >
               {bookBusy ? (
                 <Loader2 className="h-3.5 w-3.5 mr-1 animate-spin" />

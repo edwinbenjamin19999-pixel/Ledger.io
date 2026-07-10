@@ -19,7 +19,7 @@ export function OverviewHeaderCard({
 }: OverviewHeaderCardProps) {
   const today = new Date();
   return (
-    <div className="rounded-2xl bg-[#111827] text-white p-6 lg:p-8">
+    <div className="rounded-2xl bg-[#0052FF] text-white p-6 lg:p-8">
       <div className="flex flex-col lg:flex-row gap-8">
         {/* LEFT */}
         <div className="flex-1 min-w-0 space-y-4">

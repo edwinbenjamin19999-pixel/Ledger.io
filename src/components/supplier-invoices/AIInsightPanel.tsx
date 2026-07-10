@@ -91,7 +91,7 @@ export function AIInsightPanel({ invoice }: Props) {
       {/* ───────── A. Header + confidence ───────── */}
       <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4 space-y-3">
         <div className="flex items-center gap-2">
-          <div className="h-7 w-7 rounded-lg bg-[#0F1F3D] flex items-center justify-center shrink-0">
+          <div className="h-7 w-7 rounded-lg bg-[#0052FF] flex items-center justify-center shrink-0">
             <Sparkles className="h-3.5 w-3.5 text-white" />
           </div>
           <div className="min-w-0">
@@ -197,7 +197,7 @@ export function AIInsightPanel({ invoice }: Props) {
           <Button
             size="sm"
             disabled={!canAcceptSuggestion || wf.savePreAccounting.isPending}
-            className="bg-[#0F1F3D] text-white hover:from-[#0052FF] hover:to-blue-500 justify-start"
+            className="bg-[#0052FF] text-white hover:bg-[#0040CC] justify-start"
             onClick={() => {
               wf.savePreAccounting.mutate({
                 invoice_id: invoice.id,

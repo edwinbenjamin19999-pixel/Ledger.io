@@ -44,7 +44,7 @@ export function ZReportFlowVisual() {
         <ArrowRight className="hidden md:block h-4 w-4 text-[#0052FF] animate-pulse mx-auto" />
 
         {/* AI */}
-        <div className="rounded-xl border border-[#C8DDF5] bg-[#0F1F3D] p-3 flex flex-col items-center justify-center text-center">
+        <div className="rounded-xl border border-[#C8DDF5] bg-[#EFF6FF] p-3 flex flex-col items-center justify-center text-center">
           <div className="h-10 w-10 rounded-full bg-[#EFF6FF] flex items-center justify-center animate-pulse mb-1.5">
             <Brain className="h-5 w-5 text-[#0052FF]" />
           </div>

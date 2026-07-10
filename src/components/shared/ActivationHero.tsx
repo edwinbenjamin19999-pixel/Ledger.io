@@ -46,31 +46,31 @@ export function ActivationHero({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-slate-800/60 bg-[#0F1F3D] p-6 sm:p-8",
+        "relative overflow-hidden rounded-2xl border border-white/10 bg-[#0052FF] p-6 sm:p-8",
         className,
       )}
     >
       {/* Subtle cyan accent */}
-      <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[#EFF6FF] blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-white/10 blur-3xl pointer-events-none" />
 
       <div className="relative">
         <div className="flex items-center gap-2 mb-3">
-          <div className="h-8 w-8 rounded-lg bg-[#EFF6FF] border border-[#C8DDF5] flex items-center justify-center">
-            <Icon className="h-4 w-4 text-[#1E3A5F]" />
+          <div className="h-8 w-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center">
+            <Icon className="h-4 w-4 text-white" />
           </div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-[#0052FF]/80">
+          <span className="text-xs font-semibold uppercase tracking-wider text-white/80">
             Aktivera
           </span>
         </div>
 
         <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">{title}</h2>
-        <p className="text-sm sm:text-base text-slate-300 max-w-2xl">{valueProp}</p>
+        <p className="text-sm sm:text-base text-white/80 max-w-2xl">{valueProp}</p>
 
         {/* Primary + secondary CTAs — only ONE primary (Law 4) */}
         <div className="flex flex-wrap items-center gap-2 mt-5">
           <button
             onClick={onPrimaryCta}
-            className="inline-flex items-center gap-1.5 rounded-xl bg-[#0052FF] px-4 py-2.5 text-sm font-semibold text-slate-950 hover:bg-[#0052FF] transition-colors"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-[#0052FF] hover:bg-white/90 transition-colors"
           >
             {primaryCtaLabel}
             <ArrowRight className="h-4 w-4" />
@@ -78,7 +78,7 @@ export function ActivationHero({
           {secondaryCtaLabel && onSecondaryCta && (
             <button
               onClick={onSecondaryCta}
-              className="inline-flex items-center rounded-xl border border-slate-700 bg-transparent px-4 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-800/50 transition-colors"
+              className="inline-flex items-center rounded-xl border border-white/20 bg-transparent px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition-colors"
             >
               {secondaryCtaLabel}
             </button>
@@ -87,8 +87,8 @@ export function ActivationHero({
 
         {/* Steps */}
         {steps && steps.length > 0 && (
-          <div className="mt-6 pt-6 border-t border-slate-800/60">
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+          <div className="mt-6 pt-6 border-t border-white/10">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/60 mb-3">
               Så kommer du igång
             </p>
             <ol className="space-y-2">
@@ -99,12 +99,12 @@ export function ActivationHero({
                       "flex h-6 w-6 items-center justify-center rounded-full text-xs font-semibold shrink-0",
                       step.done
                         ? "bg-[#E1F5EE] text-[#1D9E75] border border-[#BFE6D6]"
-                        : "bg-slate-800 text-slate-400 border border-slate-700",
+                        : "bg-white/10 text-white/70 border border-white/20",
                     )}
                   >
                     {step.done ? "✓" : i + 1}
                   </span>
-                  <span className={cn(step.done ? "text-slate-400 line-through" : "text-slate-200")}>
+                  <span className={cn(step.done ? "text-white/50 line-through" : "text-white/90")}>
                     {step.label}
                   </span>
                 </li>

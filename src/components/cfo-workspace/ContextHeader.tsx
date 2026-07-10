@@ -22,7 +22,7 @@ export const ContextHeader = ({ context, onNewConversation }: Props) => {
   return (
     <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 py-4 bg-white dark:bg-slate-950">
       <div className="flex items-center gap-3">
-        <div className="h-9 w-9 rounded-xl bg-[#0F1F3D] flex items-center justify-center">
+        <div className="h-9 w-9 rounded-xl bg-[#0052FF] flex items-center justify-center">
           <Sparkles className="h-4 w-4 text-white" />
         </div>
         <div>

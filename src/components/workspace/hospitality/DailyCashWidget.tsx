@@ -24,14 +24,14 @@ export const DailyCashWidget = () => {
         </Link>
       </CardHeader>
       <CardContent className="space-y-4">
-        <div className="rounded-lg border bg-[#0F1F3D] p-4 dark:from-blue-950/20 dark:to-emerald-950/20">
+        <div className="rounded-lg bg-[#0052FF] p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-xs text-muted-foreground">Idag</p>
-              <p className="text-2xl font-bold">
+              <p className="text-xs text-white/70">Idag</p>
+              <p className="text-2xl font-bold text-white whitespace-nowrap">
                 {isLoading ? "…" : formatKr(todaySale?.total_sales ?? 0)}
               </p>
-              <p className="mt-1 text-xs text-muted-foreground">
+              <p className="mt-1 text-xs text-white/70">
                 {todaySale?.transaction_count ?? 0} transaktioner
               </p>
             </div>
@@ -40,7 +40,7 @@ export const DailyCashWidget = () => {
                 <CheckCircle2 className="h-3 w-3" /> Bokförd
               </Badge>
             ) : (
-              <Badge variant="outline" className="gap-1">
+              <Badge variant="outline" className="gap-1 border-white/30 bg-white/10 text-white">
                 <Clock className="h-3 w-3" /> Ej stängd
               </Badge>
             )}

@@ -42,9 +42,9 @@ export const AutomationChainStatus = ({ companyId }: AutomationChainStatusProps)
   ];
 
   return (
-    <div className="bg-[#0B1F2E] rounded-3xl p-6 shadow-sm border border-white/[0.04] overflow-hidden relative">
+    <div className="bg-[#0052FF] rounded-3xl p-6 shadow-sm border border-white/[0.04] overflow-hidden relative">
       {/* Subtle overlay */}
-      <div className="absolute inset-0 bg-[#0E2A3D]/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-[#0052FF]/40 pointer-events-none" />
 
       {/* Header */}
       <div className="relative z-10 flex items-center justify-between mb-6">
@@ -72,7 +72,7 @@ export const AutomationChainStatus = ({ companyId }: AutomationChainStatusProps)
             return (
               <div key={step.type} className="relative z-10">
                 {/* Step number badge */}
-                <div className="absolute -top-2 -left-2 z-20 bg-[#0B1F2E] text-white/60 border border-white/10 rounded-full w-6 h-6 text-xs font-medium flex items-center justify-center">
+                <div className="absolute -top-2 -left-2 z-20 bg-[#0052FF] text-white/60 border border-white/10 rounded-full w-6 h-6 text-xs font-medium flex items-center justify-center">
                   {i + 1}
                 </div>
 

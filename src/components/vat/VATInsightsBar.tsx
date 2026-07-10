@@ -19,7 +19,7 @@ const SEV_META = {
   critical: { tone: "border-[#F4C8C8] bg-[#FCE8E8]", chip: "bg-[#C73838] text-white", icon: AlertTriangle, label: "Kritisk" },
   high:     { tone: "border-[#F0DDB7] bg-[#FAEEDA]", chip: "bg-[#C28A2B] text-white", icon: AlertCircle,   label: "Hög" },
   medium:   { tone: "border-[#F0DDB7] bg-[#FAEEDA]/60", chip: "bg-[#C28A2B] text-white", icon: AlertCircle, label: "Medium" },
-  info:     { tone: "border-[#C8DDF5] bg-[#EFF6FF]", chip: "bg-[#1E3A5F] text-white", icon: Info,           label: "Info" },
+  info:     { tone: "border-[#C8DDF5] bg-[#EFF6FF]", chip: "bg-[#0052FF] text-white", icon: Info,           label: "Info" },
 } as const;
 
 export function VATInsightsBar({ findings, loading, onReview, onSuggestFix, onOpenSource }: VATInsightsBarProps) {

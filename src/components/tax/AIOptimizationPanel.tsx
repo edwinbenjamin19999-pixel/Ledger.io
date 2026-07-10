@@ -76,7 +76,7 @@ export function AIOptimizationPanel({ recommendations, onApply, appliedTypes }: 
                 variant={applied ? "outline" : "default"}
                 disabled={applied || isInfoOnly}
                 onClick={() => onApply(r)}
-                className={applied ? "shrink-0" : "shrink-0 bg-[#0F1F3D] hover:bg-[#1E3A5F] text-white"}
+                className={applied ? "shrink-0" : "shrink-0 bg-[#0052FF] hover:bg-[#0052FF]/90 text-white"}
               >
                 {applied ? <><Check className="h-3.5 w-3.5 mr-1" />Tillämpad</> : isInfoOnly ? "Granska" : "Tillämpa"}
               </Button>

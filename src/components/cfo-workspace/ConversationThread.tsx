@@ -50,7 +50,7 @@ export const ConversationThread = ({ companyId, conversationId, context, onConve
       <div ref={scrollRef} className="flex-1 overflow-y-auto px-6 py-6 space-y-6">
         {messages.length === 0 && !sending && (
           <div className="text-center py-12">
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F1F3D] mb-4">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0052FF] mb-4">
               <span className="text-2xl">🧠</span>
             </div>
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Strategisk dialog</h3>
@@ -61,7 +61,7 @@ export const ConversationThread = ({ companyId, conversationId, context, onConve
         {messages.map((m) => (
           <div key={m.id} className={m.role === "user" ? "flex justify-end" : ""}>
             {m.role === "user" ? (
-              <div className="max-w-[80%] rounded-2xl bg-slate-900 dark:bg-white dark:text-slate-900 text-white px-4 py-3 text-sm">
+              <div className="max-w-[80%] rounded-2xl bg-[#0052FF] dark:bg-white dark:text-slate-900 text-white px-4 py-3 text-sm">
                 {m.content}
               </div>
             ) : m.structured ? (

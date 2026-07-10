@@ -51,7 +51,7 @@ export function CFOStatusHeader({
       <div className="relative flex items-start justify-between gap-6 flex-wrap">
         <div className="min-w-0">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-xl bg-[#0F1F3D] flex items-center justify-center shadow-lg shadow-[#0052FF]/30">
+            <div className="h-10 w-10 rounded-xl bg-[#0052FF] flex items-center justify-center shadow-lg shadow-[#0052FF]/30">
               <Sparkles className="h-5 w-5 text-white" />
             </div>
             <div>

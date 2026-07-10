@@ -123,7 +123,7 @@ export function VATPaymentDialog({
           <Button
             onClick={handleApprove}
             disabled={posting || proposal.netAmount <= 0}
-            className="bg-[#0F1F3D] hover:bg-[#0F1F3D]/90 text-white gap-2"
+            className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-white gap-2"
           >
             {posting && <Loader2 className="w-4 h-4 animate-spin" />}
             Godkänn & bokför

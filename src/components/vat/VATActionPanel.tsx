@@ -17,7 +17,7 @@ const SEV_DOT = {
   critical: "bg-[#C73838]",
   high: "bg-[#C28A2B]",
   medium: "bg-[#C28A2B]",
-  info: "bg-[#1E3A5F]",
+  info: "bg-[#0052FF]",
 } as const;
 
 const SEV_ICON = {
@@ -90,7 +90,7 @@ export function VATActionPanel({ findings, confidence, onOpenSource, onSuggestFi
                       {f.affectedBox && onOpenSource && (
                         <Button
                           size="sm"
-                          className="h-7 text-[11px] gap-1 px-2.5 rounded-[6px] bg-[#0F1F3D] hover:bg-[#0F1F3D]/90 text-white"
+                          className="h-7 text-[11px] gap-1 px-2.5 rounded-[6px] bg-[#0052FF] hover:bg-[#0052FF]/90 text-white"
                           onClick={() => onOpenSource(f)}
                         >
                           Visa transaktioner

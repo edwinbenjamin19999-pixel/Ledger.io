@@ -213,7 +213,7 @@ function CustomerRow({ customer, profile, onEdit, onShowProfile, onSendReminder 
     )}>
       <div className="flex items-center gap-4">
         {/* Avatar */}
-        <div className="h-11 w-11 rounded-full bg-[#0F1F3D] flex items-center justify-center flex-shrink-0">
+        <div className="h-11 w-11 rounded-full bg-[#F1F5F9] flex items-center justify-center flex-shrink-0">
           <span className="text-sm font-semibold text-slate-700">{initials}</span>
         </div>
 

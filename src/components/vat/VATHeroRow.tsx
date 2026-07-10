@@ -36,7 +36,7 @@ export function VATHeroRow({
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {/* CARD 1 — Primary navy */}
-      <div className="relative overflow-hidden rounded-[12px] p-6 bg-[#0F1F3D] text-white">
+      <div className="relative overflow-hidden rounded-[12px] p-6 bg-[#0052FF] text-white">
         <div className="relative">
           <div className="text-[11px] uppercase tracking-widest text-white/60 font-semibold">
             Moms att {isOwing ? "betala" : "få tillbaka"}

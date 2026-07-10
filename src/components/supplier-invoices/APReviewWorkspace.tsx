@@ -664,7 +664,7 @@ function DetailRow({
     <div className="flex items-center justify-between gap-3 px-3 py-1.5">
       <span className="text-[#475569] shrink-0">{label}</span>
       <span
-        className={`text-right truncate ${bold ? "font-bold text-[#0F172A]" : "font-medium text-[#0F172A]"} ${
+        className={`text-right whitespace-nowrap ${bold ? "font-bold text-[#0F172A]" : "font-medium text-[#0F172A]"} ${
           highlight ? "bg-amber-100/50 px-1.5 py-0.5 rounded" : ""
         }`}
       >

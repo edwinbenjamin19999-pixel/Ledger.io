@@ -87,8 +87,8 @@ export function INK2Section({ companyId, userId, orgNumber, companyName, fiscalY
 
   return (
     <Card className="rounded-[12px] border-[0.5px] border-[#E2E8F0] bg-white overflow-hidden">
-      <CardHeader className="pb-2 bg-[#0F1F3D]">
-        <CardTitle className="text-base flex items-center gap-2 text-white">
+      <CardHeader className="pb-2 bg-white border-b border-[#E2E8F0]">
+        <CardTitle className="text-base flex items-center gap-2 text-[#0F172A]">
           <FileText className="h-4 w-4" />
           INK2 — Inkomstdeklaration 2 ({fiscalYear})
         </CardTitle>
@@ -173,7 +173,7 @@ export function INK2Section({ companyId, userId, orgNumber, companyName, fiscalY
           <Button variant="outline" size="sm" onClick={downloadXml} disabled={!validation.isValid} className="border-[#E2E8F0] text-[#0F1F3D]">
             <Download className="h-3.5 w-3.5 mr-1" />Ladda ner XML
           </Button>
-          <Button size="sm" onClick={handleBook} disabled={!validation.isValid || booking || !!bookedRef} className="bg-[#0F1F3D] hover:bg-[#1E3A5F] text-white">
+          <Button size="sm" onClick={handleBook} disabled={!validation.isValid || booking || !!bookedRef} className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-white">
             {booking ? <Loader2 className="h-3.5 w-3.5 mr-1 animate-spin" /> : <BookOpen className="h-3.5 w-3.5 mr-1" />}
             {bookedRef ? `Bokförd (#${bookedRef})` : "Bokför slutskatt"}
           </Button>
