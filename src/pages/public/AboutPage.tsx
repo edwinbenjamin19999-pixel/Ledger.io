@@ -11,7 +11,7 @@ import { AboutFinalCTA } from "@/components/about/AboutFinalCTA";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0F172A]">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
       <main className="flex-1">
         <AboutHero />

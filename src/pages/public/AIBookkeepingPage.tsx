@@ -139,7 +139,7 @@ export default function AIBookkeepingPage() {
         {/* CTA */}
         <section className="py-16">
           <div className="container mx-auto max-w-3xl px-6">
-            <div className="rounded-3xl bg-[#0F172A] p-10 md:p-14 text-center text-white">
+            <div className="rounded-3xl bg-[#0052FF] p-10 md:p-14 text-center text-white">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">Redo att släppa det manuella?</h2>
               <p className="mt-3 text-white/70">Onboarding på 30 minuter. Ingen bindning.</p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">

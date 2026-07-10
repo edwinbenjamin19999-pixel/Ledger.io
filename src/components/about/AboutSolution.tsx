@@ -9,13 +9,13 @@ const nodes = [
 ];
 
 export const AboutSolution = () => (
-  <section className="bg-[#0F172A] py-24 md:py-32">
+  <section className="bg-white py-24 md:py-32">
     <div className="container mx-auto max-w-6xl px-6">
       <div className="text-center max-w-2xl mx-auto mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-white leading-[1.05]" style={{ letterSpacing: "-0.8px" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-[#0F172A] leading-[1.05]" style={{ letterSpacing: "-0.8px" }}>
           Vi automatiserar <span className="text-[#0052FF]">hela flödet.</span>
         </h2>
-        <p className="mt-5 text-[15px] text-white/55 leading-relaxed">
+        <p className="mt-5 text-[15px] text-slate-500 leading-relaxed">
           Ett enda kvitto resulterar i bokförd verifikation, momsavdrag och uppdaterad rapport — utan manuella steg.
         </p>
       </div>
@@ -27,8 +27,8 @@ export const AboutSolution = () => (
               <div className="w-14 h-14 rounded-xl border border-[#0052FF]/20 bg-[#0052FF]/[0.06] flex items-center justify-center">
                 <n.icon className="w-6 h-6 text-[#0052FF]" />
               </div>
-              <div className="mt-3 text-white font-semibold text-[14px]">{n.label}</div>
-              <div className="text-[12px] text-white/45 mt-0.5">{n.sub}</div>
+              <div className="mt-3 text-[#0F172A] font-semibold text-[14px]">{n.label}</div>
+              <div className="text-[12px] text-slate-400 mt-0.5">{n.sub}</div>
             </div>
             {i < nodes.length - 1 && (
               <ChevronRight className="w-5 h-5 text-[#0052FF] flex-shrink-0 md:mb-12 rotate-90 md:rotate-0" />

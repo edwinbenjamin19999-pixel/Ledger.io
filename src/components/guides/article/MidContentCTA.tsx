@@ -25,7 +25,7 @@ export const MidContentCTA = ({
       </div>
       <Link
         to={href}
-        className="shrink-0 inline-flex items-center gap-1.5 rounded-xl bg-[#0F172A] px-5 py-3 text-sm font-semibold text-white hover:bg-[#0F172A]/90 transition-all duration-200"
+        className="shrink-0 inline-flex items-center gap-1.5 rounded-xl bg-[#0052FF] px-5 py-3 text-sm font-semibold text-white hover:bg-[#0040CC] transition-all duration-200"
       >
         {ctaLabel} <ArrowRight className="w-4 h-4" />
       </Link>

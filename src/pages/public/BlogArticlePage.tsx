@@ -25,7 +25,7 @@ export default function BlogArticlePage() {
           <div className="text-center max-w-md">
             <h1 className="text-2xl font-bold text-[#0F172A]">Artikeln hittades inte</h1>
             <p className="mt-2 text-[#64748b]">Kanske flyttad eller borttagen.</p>
-            <Button asChild className="mt-6 bg-white text-[#0F172A] hover:bg-white/90 font-semibold">
+            <Button asChild className="mt-6 bg-[#0052FF] text-white hover:bg-[#0040CC] font-semibold">
               <Link to="/blog">Tillbaka till bloggen</Link>
             </Button>
           </div>
@@ -83,7 +83,7 @@ export default function BlogArticlePage() {
             )}
 
             {/* Final inline CTA */}
-            <div className="mt-12 rounded-2xl bg-[#0F172A] p-8 md:p-10 text-white">
+            <div className="mt-12 rounded-2xl bg-[#0052FF] p-8 md:p-10 text-white">
               <div className="text-xs uppercase tracking-[0.2em] text-[#0052FF]">Redo att testa?</div>
               <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight">Låt AI sköta din bokföring</h3>
               <p className="mt-2 text-white/60 max-w-lg">Onboarding på 30 minuter. Ingen bindning. Bygg en framtidssäker ekonomi.</p>

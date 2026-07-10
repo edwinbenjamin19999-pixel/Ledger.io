@@ -40,21 +40,21 @@ export default function AccountingFirmsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero — dark */}
-        <section className="relative overflow-hidden bg-[#0F172A] pt-32 pb-20 text-white">
+        <section className="relative overflow-hidden bg-[#0052FF] pt-32 pb-20 text-white">
           <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 70% 30%, rgba(0,82,255,0.4), transparent 60%)" }} />
           <div className="relative container mx-auto max-w-4xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-[#0052FF]/30 bg-[#0052FF]/10 px-3 py-1 text-xs font-medium text-[#0052FF]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/15 px-3 py-1 text-xs font-medium text-white">
               <Sparkles className="w-3 h-3" />
               För redovisningsbyråer
             </div>
             <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] text-white">
-              Lansera din egen <span className="text-[#0052FF]">bokföringsplattform</span>
+              Lansera din egen <span className="text-[#BBD1FF]">bokföringsplattform</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto">
               Erbjud Cogniq under ditt varumärke — med automation, AI och full kontroll över dina klienter.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild className="bg-[#0052FF] text-[#0a1428] hover:bg-[#0052FF] font-semibold h-11 px-6">
+              <Button asChild className="bg-white text-[#0052FF] hover:bg-blue-50 font-semibold h-11 px-6">
                 <Link to="/white-label">Starta White Label <ArrowRight className="w-4 h-4 ml-1" /></Link>
               </Button>
               <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white h-11 px-6">
@@ -167,14 +167,14 @@ export default function AccountingFirmsPage() {
         {/* Final CTA */}
         <section className="py-20">
           <div className="container mx-auto max-w-3xl px-6">
-            <div className="relative overflow-hidden rounded-3xl bg-[#0F172A] p-10 md:p-14 text-center text-white">
+            <div className="relative overflow-hidden rounded-3xl bg-[#0052FF] p-10 md:p-14 text-center text-white">
               <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 50% 0%, rgba(0,82,255,0.4), transparent 60%)" }} />
               <div className="relative">
                 <Shield className="w-7 h-7 mx-auto text-[#0052FF]" />
                 <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-white">Redo att skala din byrå?</h2>
                 <p className="mt-3 text-white/70 max-w-md mx-auto">Boka en partnergenomgång — vi visar plattformen och räknar hem caset tillsammans.</p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-                  <Button asChild className="bg-[#0052FF] text-[#0a1428] hover:bg-[#0052FF] font-semibold">
+                  <Button asChild className="bg-white text-[#0052FF] hover:bg-blue-50 font-semibold">
                     <Link to="/white-label">Starta White Label <ArrowRight className="w-4 h-4 ml-1" /></Link>
                   </Button>
                   <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">

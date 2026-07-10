@@ -166,11 +166,11 @@ export default function VatGuidePage() {
                 <FAQAccordion items={FAQS} />
               </section>
 
-              <section className="rounded-2xl bg-[#0F172A] p-8 md:p-10 text-white text-center">
+              <section className="rounded-2xl bg-[#0052FF] p-8 md:p-10 text-white text-center">
                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Slipp tänka på moms</h3>
                 <p className="mt-2 text-white/70 max-w-md mx-auto">Låt Cogniq sköta kodning, beräkning och inlämning automatiskt.</p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
-                  <Button asChild className="bg-[#0052FF] text-[#0a1428] hover:bg-[#0052FF] font-semibold">
+                  <Button asChild className="bg-white text-[#0052FF] hover:bg-blue-50 font-semibold">
                     <Link to="/auth">Testa gratis <ArrowRight className="w-4 h-4 ml-1" /></Link>
                   </Button>
                   <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">

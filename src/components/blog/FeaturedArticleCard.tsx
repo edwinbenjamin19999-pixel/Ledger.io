@@ -11,7 +11,7 @@ export const FeaturedArticleCard = ({ article }: { article: Article }) => {
       className="group block rounded-3xl border border-slate-100 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.06)] hover:shadow-[0_24px_60px_rgba(15,23,42,0.1)] transition-all duration-200 overflow-hidden"
     >
       <div className="grid md:grid-cols-2 gap-0">
-        <div className="relative h-64 md:h-full bg-gradient-to-br from-[#0F172A] via-[#0052FF] to-[#0052FF] flex items-center justify-center p-10">
+        <div className="relative h-64 md:h-full bg-gradient-to-br from-[#4D7CFF] via-[#0052FF] to-[#0052FF] flex items-center justify-center p-10">
           <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 30% 30%, rgba(0,82,255,0.6), transparent 60%)" }} />
           <div className="relative text-white/95 text-center">
             <div className="text-xs uppercase tracking-[0.2em] text-[#0052FF] mb-3">Featured</div>

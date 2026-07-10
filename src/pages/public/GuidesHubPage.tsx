@@ -73,7 +73,7 @@ export default function GuidesHubPage() {
             <h2 className="text-3xl font-bold text-[#0F172A]">Slipp läsa — låt AI göra jobbet</h2>
             <p className="mt-3 text-[#64748b]">Cogniq tillämpar reglerna automatiskt så att du kan fokusera på företaget.</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold">
+              <Button asChild className="bg-[#0052FF] text-white hover:bg-[#0040CC] font-semibold">
                 <Link to="/auth">Testa Cogniq <ArrowRight className="w-4 h-4 ml-1" /></Link>
               </Button>
               <Button asChild variant="outline">
@@ -83,7 +83,7 @@ export default function GuidesHubPage() {
           </div>
         </section>
       </main>
-      <div className="bg-[#0F172A]">
+      <div className="bg-[#0052FF]">
         <Footer />
       </div>
     </div>

@@ -117,7 +117,7 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
         </section>
 
         {/* Cogniq block */}
-        <section className="my-12 rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#0F172A] p-8 text-white">
+        <section className="my-12 rounded-2xl bg-[#0052FF] p-8 text-white">
           <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#0052FF]">
             <Sparkles className="w-3.5 h-3.5" /> Hur Cogniq hjälper
           </div>

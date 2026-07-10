@@ -183,8 +183,8 @@ export default function AccountingGuidesIndexPage() {
         {/* White Label CTA for agencies */}
         <section className="pb-16">
           <div className="container mx-auto max-w-4xl px-6">
-            <div className="rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#0F172A] p-8 md:p-10 text-white">
-              <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#0052FF]">
+            <div className="rounded-2xl bg-[#0052FF] p-8 md:p-10 text-white">
+              <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-white/80">
                 <Building2 className="w-3.5 h-3.5" /> För redovisningsbyråer
               </div>
               <h2 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight">
@@ -194,7 +194,7 @@ export default function AccountingGuidesIndexPage() {
                 Erbjud automatiserad bokföring under ditt eget varumärke. Multi-client management, white label branding och AI-driven kvalitetskontroll.
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                <Button asChild className="bg-[#0052FF] text-white hover:bg-[#0052FF] gap-1.5">
+                <Button asChild className="bg-white text-[#0052FF] hover:bg-blue-50 gap-1.5">
                   <Link to="/white-label">
                     Starta White Label <ArrowRight className="w-3.5 h-3.5" />
                   </Link>

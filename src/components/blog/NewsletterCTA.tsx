@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export const NewsletterCTA = () => (
   <section className="py-16">
     <div className="container mx-auto max-w-4xl px-6">
-      <div className="rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#0052FF] p-10 md:p-14 text-center text-white shadow-[0_30px_80px_rgba(0,82,255,0.25)]">
+      <div className="rounded-3xl bg-gradient-to-br from-[#4D7CFF] to-[#0052FF] p-10 md:p-14 text-center text-white shadow-[0_30px_80px_rgba(0,82,255,0.25)]">
         <Mail className="w-8 h-8 mx-auto text-[#0052FF]" />
         <h2 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">Få nya insikter om AI och bokföring</h2>
         <p className="mt-3 text-white/70 max-w-lg mx-auto">
@@ -25,7 +25,7 @@ export const NewsletterCTA = () => (
             placeholder="din@epost.se"
             className="flex-1 rounded-lg bg-white/10 border border-white/20 px-4 py-2.5 text-sm placeholder:text-white/40 focus:outline-none focus:border-[#0052FF]"
           />
-          <Button type="submit" className="bg-[#0052FF] text-[#0a1428] hover:bg-[#0052FF] font-semibold">
+          <Button type="submit" className="bg-white text-[#0052FF] hover:bg-blue-50 font-semibold">
             Prenumerera
           </Button>
         </form>
