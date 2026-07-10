@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { NotificationCenter } from "@/components/notifications/NotificationCenter";
 import { useSessionTimeout } from "@/hooks/useSessionTimeout";
 import { Button } from "@/components/ui/button";
-import { LogOut, Settings, Sun, Moon, Palette } from "lucide-react";
+import { LogOut, Settings, Sun, Moon, Palette, Search, Plus } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem,
   DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,
@@ -18,7 +18,6 @@ import { safariDebugLog } from "@/lib/safe-browser";
 import { useTheme } from "@/hooks/useTheme";
 import { DailyAssistantModal } from "./DailyAssistantModal";
 import { GlobalAIAssistant } from "./GlobalAIAssistant";
-import { GlobalCompanyPicker } from "./GlobalCompanyPicker";
 import { GlobalCommandPalette } from "./GlobalCommandPalette";
 import { ProactiveAIHelper } from "./ProactiveAIHelper";
 import { BalanceAlertBanner } from "./BalanceAlertBanner";
@@ -35,6 +34,44 @@ import { AccountLockedScreen } from "@/components/subscription/AccountLockedScre
 import { TechSupportProvider } from "@/components/tech-support/TechSupportProvider";
 // NOTE: Tenant identity (TenantTopbarIdentity, TenantSwitcher, PoweredByNorthLedger)
 // belongs to WhiteLabelAppShell — NOT to the standard Cogniq shell.
+
+// F07 · härleder en sidtitel för topbaren från aktuell route.
+const PAGE_TITLES: { prefix: string; title: string }[] = [
+  { prefix: "/dashboard", title: "Översikt" },
+  { prefix: "/ai-ekonom", title: "AI Ekonom" },
+  { prefix: "/bookkeep", title: "AI Bokförare" },
+  { prefix: "/board", title: "Styrelseläge" },
+  { prefix: "/agent", title: "AI-aktivitetslogg" },
+  { prefix: "/invoices", title: "Kundfakturor" },
+  { prefix: "/customer-ledger", title: "Kundreskontra" },
+  { prefix: "/expenses", title: "Utlägg" },
+  { prefix: "/kassaregister", title: "Kassaregister" },
+  { prefix: "/supplier-invoices", title: "Leverantörsfakturor" },
+  { prefix: "/supplier-ledger", title: "Leverantörsreskontra" },
+  { prefix: "/verifications", title: "Att godkänna" },
+  { prefix: "/bankavstamning", title: "Bankavstämning" },
+  { prefix: "/anomaly-detection", title: "Avvikelser & risk" },
+  { prefix: "/reports", title: "Resultat & balans" },
+  { prefix: "/cashflow", title: "Kassaflöde" },
+  { prefix: "/cash-flow-report", title: "Kassaflöde" },
+  { prefix: "/cfo", title: "KPI:er & nyckeltal" },
+  { prefix: "/annual-report", title: "Årsredovisning" },
+  { prefix: "/moms", title: "Momssammanställning" },
+  { prefix: "/vat-reports", title: "Momsdeklaration" },
+  { prefix: "/tax-calculation", title: "Skatteberäkning" },
+  { prefix: "/rut-rot", title: "RUT/ROT-avdrag" },
+  { prefix: "/settings", title: "Inställningar" },
+  { prefix: "/integrations", title: "Integrationer" },
+  { prefix: "/companies", title: "Företag & användare" },
+  { prefix: "/audit-log", title: "Revisionslogg" },
+];
+
+function getPageTitle(pathname: string): string {
+  const match = PAGE_TITLES.filter((p) => pathname.startsWith(p.prefix)).sort(
+    (a, b) => b.prefix.length - a.prefix.length,
+  )[0];
+  return match?.title ?? "Cogniq";
+}
 
 export const AppLayout = () => { const { user, loading, signOut } = useAuth();
   const navigate = useNavigate();
@@ -103,36 +140,65 @@ export const AppLayout = () => { const { user, loading, signOut } = useAuth();
           <CoSigningPendingBanner />
           <BalanceAlertBanner companyId={activeCompanyId} />
           <header
-            className="sticky top-0 z-40 h-14 flex items-center justify-between px-4 gap-4 topbar-themed"
+            className="sticky top-0 z-40 h-[60px] flex items-center gap-3.5 px-6 bg-white border-b border-[#E2E8F0]"
           >
-            <style>{`
-              .topbar-themed { background: hsl(var(--topbar-bg));
-                border-bottom: 1px solid hsl(var(--topbar-border-bottom));
-              }
-              :root[data-theme="blue"] .topbar-themed { border-top: 3px solid hsl(var(--topbar-border-top));
-              }
-            `}</style>
-            <SidebarTrigger className="h-8 w-8" />
+            <SidebarTrigger className="h-8 w-8 shrink-0" />
 
-            <div className="flex items-center gap-2 ml-auto">
+            {/* Sidtitel + subtitel */}
+            <div className="min-w-0">
+              <div className="text-[16px] font-semibold tracking-[-0.02em] text-[#0F172A] leading-tight truncate">
+                {getPageTitle(location.pathname)}
+              </div>
+              <div className="text-[11px] font-mono text-[#94A3B8] tracking-[0.04em] leading-tight truncate">
+                {new Date().toLocaleDateString("sv-SE", { month: "long", year: "numeric" })}
+              </div>
+            </div>
+
+            <div className="flex-1" />
+
+            {/* Sökfält → öppnar kommandopaletten (⌘K) */}
+            <button
+              type="button"
+              onClick={() =>
+                window.dispatchEvent(
+                  new KeyboardEvent("keydown", { key: "k", metaKey: true, bubbles: true }),
+                )
+              }
+              className="hidden lg:flex h-9 w-[280px] items-center gap-2 rounded-lg border border-[#E2E8F0] bg-[#F8FAFB] px-3 text-[13px] text-[#94A3B8] hover:border-[#CBD5E1] transition-colors"
+            >
+              <Search className="h-[15px] w-[15px] shrink-0" />
+              <span className="flex-1 truncate text-left">Sök transaktioner, konton, verifikat…</span>
+              <kbd className="hidden xl:inline text-[10px] font-mono text-[#94A3B8]">⌘K</kbd>
+            </button>
+
+            <div className="flex items-center gap-2">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-8 w-8" onClick={cycleTheme}>
-                      <ThemeIcon className="h-4 w-4 text-muted-foreground" />
+                    <Button variant="ghost" size="icon" className="h-9 w-9 text-[#475569] hover:bg-[#F1F5F9]" onClick={cycleTheme}>
+                      <ThemeIcon className="h-4 w-4" />
                     </Button>
                   </TooltipTrigger>
                   <TooltipContent>{themeLabel}</TooltipContent>
                 </Tooltip>
               </TooltipProvider>
               {isAdvisor && <ClientSwitcherDropdown variant="desktop" />}
-              <GlobalCompanyPicker />
               <NotificationCenter />
+
+              {/* Primär CTA */}
+              <Button
+                onClick={() => navigate("/invoices")}
+                className="hidden sm:flex h-9 gap-1.5 bg-[#0052FF] hover:bg-[#0040CC] text-white font-semibold text-[13px] px-3.5"
+              >
+                <Plus className="h-[15px] w-[15px]" />
+                Ny faktura
+              </Button>
+
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="relative h-9 w-9 rounded-full">
-                    <Avatar className="h-8 w-8">
-                      <AvatarFallback className="text-xs font-bold bg-primary text-accent">
+                  <Button variant="ghost" className="relative h-9 w-9 rounded-full p-0">
+                    <Avatar className="h-[34px] w-[34px]">
+                      <AvatarFallback className="text-[12px] font-semibold bg-[#0052FF] text-white font-display tracking-[-0.02em]">
                         {getInitials()}
                       </AvatarFallback>
                     </Avatar>

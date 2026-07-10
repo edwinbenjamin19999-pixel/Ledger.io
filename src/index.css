@@ -565,41 +565,34 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── 6. SIDEBAR — solitt navy-block, flat aktiv-markör ── */
+/* ── 6. SIDEBAR — F07: blå brand-panel × mjukt blå nav-yta (aldrig navy) ── */
+/* Neutralisera det gamla navy-blocket: ingen tvingad bakgrund, ingen dot-grid. */
 [data-sidebar] {
-  background: hsl(var(--sidebar-background)) !important;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px) !important;
-  background-size: 28px 28px !important;
+  background: transparent !important;
+  background-image: none !important;
   box-shadow: none;
 }
-[data-sidebar] [data-active="true"] {
-  position: relative;
-  background: hsl(var(--sidebar-accent) / 0.18) !important;
-  box-shadow: none;
+[data-sidebar="sidebar"] { background: #F4F7FE !important; }
+[data-sidebar="footer"] { background: #F4F7FE !important; }
+/* Standard Cogniq-shell: solid blå toppanel. Scopat så white-label behåller sitt. */
+.cogniq-shell [data-sidebar="header"] { background: #0052FF !important; }
+/* Aktivt nav-item i standard-shell: solid blå bricka, vit text, ingen rail. */
+.cogniq-shell [data-active="true"] {
+  background: #0052FF !important;
+  color: #FFFFFF !important;
 }
-[data-sidebar] [data-active="true"]::after {
-  content: '';
-  position: absolute;
-  left: 0; top: 18%; bottom: 18%;
-  width: 3px;
-  background: hsl(var(--sidebar-accent));
-  border-radius: 0 3px 3px 0;
-  box-shadow: none;
-}
+[data-sidebar] [data-active="true"]::after { content: none !important; }
 [data-sidebar] button {
-  transition: var(--transition-smooth);
-  border-radius: 8px;
+  border-radius: 6px;
   margin: 1px 8px;
-}
-[data-sidebar] button svg {
-  transition: var(--transition-smooth);
+  transition: background-color 120ms ease-out, color 120ms ease-out;
 }
 [data-sidebar] button:hover {
-  background: hsl(0 0% 100% / 0.07);
+  background: #E7EDFB;
 }
 [data-sidebar] button:hover svg {
-  transform: scale(1.08);
-  color: hsl(var(--sidebar-accent));
+  transform: none;
+  color: inherit;
 }
 
 /* ── 7. BUTTONS — flat: färgskifte + skala, aldrig djup ── */

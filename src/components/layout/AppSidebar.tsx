@@ -12,6 +12,7 @@ import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent,
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 import { BrandedLogo } from "@/components/wl/BrandedLogo";
+import { SidebarCompanySwitcher } from "./SidebarCompanySwitcher";
 import { useTenant } from "@/contexts/TenantContext";
 import { usePlatformAdmin } from "@/hooks/usePlatformAdmin";
 import { AddCompanyDialog } from "@/components/companies/AddCompanyDialog";
@@ -85,15 +86,16 @@ export const AppSidebar = () => { const location = useLocation();
     : filteredGroups;
 
   return (
-    <Sidebar className="bg-[#F4F7FE] border-r border-[#E4EAF7]">
-      {/* F07 · Brand-panel — solid blå toppanel (logga + wordmark) mot mjukt blå nav-yta */}
-      <SidebarHeader className="bg-[#0052FF] px-4 pt-[18px] pb-4">
+    <Sidebar className="cogniq-shell border-r border-[#E4EAF7] [&_[data-sidebar=sidebar]]:!bg-[#F4F7FE] [&_[data-sidebar=sidebar]]:!text-[#475569]">
+      {/* F07 · Brand-panel — solid blå toppanel (logga + företagsväxlare) mot mjukt blå nav-yta */}
+      <SidebarHeader className="!bg-[#0052FF] px-4 pt-[18px] pb-4 gap-3">
         <div className="flex items-center gap-2.5">
           <BrandedLogo reversed />
         </div>
+        <SidebarCompanySwitcher />
       </SidebarHeader>
 
-      <SidebarContent className="px-2 py-2 bg-[#F4F7FE]">
+      <SidebarContent className="px-2 py-2 !bg-[#F4F7FE]">
         {allGroups.map((group) => { if (group.items.length === 1) { const item = group.items[0];
             const Icon = item.icon;
             const isActive = location.pathname === item.path;
