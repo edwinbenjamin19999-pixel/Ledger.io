@@ -414,53 +414,21 @@ const Dashboard = () => {
         </div>
       )}
 
-      {/* 1. KPIs first — pinned cockpit at top so KPIs are visible without scroll.
-          DashboardCockpit also renders the configurable widget grid below the KPI strip
-          (driven by useDashboardConfig → DEFAULT_WIDGETS). */}
+      {/* F07 · prototyplayout: AI-briefing + Kommande deadlines sida vid sida.
+          Övriga widgets (cockpit, KPI-tiles, aktivitetsfeed m.m.) finns kvar och
+          kan återaktiveras via "Anpassa" — de force-renderas inte längre för att
+          hålla översikten ren enligt designprototypen. */}
       {company && (
-        <div className="fade-up-1">
-          <DashboardCockpit
-            companyId={company.id}
-            tiles={tiles}
-            widgets={configWidgets}
-            general={general}
-            layout={configLayout}
-            period={dashboardPeriod}
-            onPeriodChange={setDashboardPeriod}
-          />
-        </div>
-      )}
-
-      {/* Daily AI briefing — three-section handoff (Done · Attention · Upcoming) */}
-      {company && (
-        <div className="fade-up-1">
+        <div className="fade-up-1 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-5 items-start">
           <DailyBriefingPanel companyId={company.id} />
+          <DeadlinesWidget companyId={company.id} />
         </div>
       )}
 
-      {/* 2. AI signal bar — single instance, full width */}
-      {company && <CompactAIAlertBar />}
-
-      {/* 3. User-configurable widget grid (driven by DashboardLayoutContext) */}
-      {company && visibleWidgets.length > 0 && (
-        <div className="grid grid-cols-2 gap-4">
-          {visibleWidgets.map((w) => {
-            const body = renderConfigurableWidget(w, company.id);
-            if (!body) return null;
-            const span = w.size === "S" ? "md:col-span-1" : w.size === "L" || w.size === "Helbredd" ? "md:col-span-2" : "md:col-span-1";
-            return (
-              <div key={w.id} className={cn("min-w-0", span)}>
-                {body}
-              </div>
-            );
-          })}
-        </div>
-      )}
-
-      {/* AI accuracy tracker — bottom of dashboard */}
+      {/* Senaste aktivitet */}
       {company && (
         <div className="fade-up-1">
-          <AIAccuracyWidget companyId={company.id} />
+          <RecentActivity />
         </div>
       )}
 
