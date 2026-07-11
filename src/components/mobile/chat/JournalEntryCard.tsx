@@ -76,9 +76,9 @@ export function JournalEntryCard({
       : null;
 
   return (
-    <div className="bg-slate-900 border border-slate-700/80 rounded-2xl overflow-hidden shadow-lg shadow-black/20">
+    <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-sm">
       {/* Header */}
-      <div className="p-4 border-b border-slate-800 flex items-center justify-between">
+      <div className="p-4 border-b border-[#E2E8F0] flex items-center justify-between">
         <div className="flex items-center gap-2.5 min-w-0">
           <div
             className={cn(
@@ -93,10 +93,10 @@ export function JournalEntryCard({
             )}
           </div>
           <div className="min-w-0">
-            <p className="text-white font-semibold text-sm truncate">
+            <p className="text-[#0F172A] font-semibold text-sm truncate">
               {isPosted ? "Verifikat bokfört" : "Verifikatförslag"}
             </p>
-            <p className="text-slate-400 text-xs truncate">
+            <p className="text-[#64748B] text-xs truncate">
               {data.verificationNumber ? `${data.verificationNumber} · ` : ""}
               {data.date || "—"}
             </p>
@@ -107,10 +107,10 @@ export function JournalEntryCard({
             className={cn(
               "text-[10px] font-semibold px-2 py-1 rounded-full border",
               confidencePct >= 95
-                ? "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+                ? "bg-[#E1F5EE] text-[#085041] border-[#A7E8D2]"
                 : confidencePct >= 80
-                  ? "bg-amber-500/10 text-amber-300 border-amber-500/30"
-                  : "bg-rose-500/10 text-rose-300 border-rose-500/30",
+                  ? "bg-[#FAEEDA] text-[#7A5417] border-[#EAD9B0]"
+                  : "bg-[#FCE8E8] text-[#7A1A1A] border-[#F3C4C4]",
             )}
           >
             {confidencePct}%
@@ -121,10 +121,10 @@ export function JournalEntryCard({
       {/* Description */}
       {data.description && (
         <div className="px-4 pt-3">
-          <p className="text-slate-500 text-[10px] uppercase tracking-wider mb-0.5">
+          <p className="text-[#94A3B8] text-[10px] uppercase tracking-wider mb-0.5">
             Beskrivning
           </p>
-          <p className="text-slate-200 text-sm leading-snug">
+          <p className="text-[#334155] text-sm leading-snug">
             {data.description}
           </p>
         </div>
@@ -132,7 +132,7 @@ export function JournalEntryCard({
 
       {/* Lines */}
       <div className="px-4 pt-3 pb-2">
-        <div className="grid grid-cols-[1fr_auto_auto] gap-x-3 text-[10px] uppercase tracking-wider text-slate-500 px-2 pb-1.5">
+        <div className="grid grid-cols-[1fr_auto_auto] gap-x-3 text-[10px] uppercase tracking-wider text-[#94A3B8] px-2 pb-1.5">
           <span>Konto</span>
           <span className="text-right w-20">Debet</span>
           <span className="text-right w-20">Kredit</span>
@@ -141,22 +141,22 @@ export function JournalEntryCard({
           {data.lines.map((l, i) => (
             <div
               key={i}
-              className="grid grid-cols-[1fr_auto_auto] gap-x-3 items-center bg-slate-800/40 rounded-lg px-2 py-2 text-[13px]"
+              className="grid grid-cols-[1fr_auto_auto] gap-x-3 items-center bg-[#F1F5F9] rounded-lg px-2 py-2 text-[13px]"
             >
               <div className="flex items-baseline gap-2 min-w-0">
-                <span className="text-slate-100 font-mono font-semibold shrink-0">
+                <span className="text-[#0F172A] font-mono font-semibold shrink-0">
                   {l.account}
                 </span>
                 {l.accountName && (
-                  <span className="text-slate-400 truncate min-w-0">
+                  <span className="text-[#64748B] truncate min-w-0">
                     {l.accountName}
                   </span>
                 )}
               </div>
-              <div className="w-20 text-right font-mono text-slate-200 tabular-nums">
+              <div className="w-20 text-right font-mono text-[#334155] tabular-nums">
                 {formatAmount(l.debit)}
               </div>
-              <div className="w-20 text-right font-mono text-slate-200 tabular-nums">
+              <div className="w-20 text-right font-mono text-[#334155] tabular-nums">
                 {formatAmount(l.credit)}
               </div>
             </div>
@@ -166,14 +166,14 @@ export function JournalEntryCard({
 
       {/* Totals */}
       <div className="px-4 pb-3">
-        <div className="flex justify-between items-center pt-2 border-t border-slate-800 text-sm">
-          <span className="text-slate-400">Summa</span>
+        <div className="flex justify-between items-center pt-2 border-t border-[#E2E8F0] text-sm">
+          <span className="text-[#64748B]">Summa</span>
           <div className="flex gap-6 font-mono">
-            <span className="text-slate-200">{formatSEK(totalDebit)}</span>
+            <span className="text-[#334155]">{formatSEK(totalDebit)}</span>
             <span
               className={cn(
                 "font-semibold",
-                balanced ? "text-emerald-400" : "text-rose-400",
+                balanced ? "text-[#16A34A]" : "text-[#DC2626]",
               )}
             >
               {formatSEK(totalCredit)}
@@ -181,7 +181,7 @@ export function JournalEntryCard({
           </div>
         </div>
         {!balanced && (
-          <p className="text-rose-400 text-[11px] mt-1">
+          <p className="text-[#DC2626] text-[11px] mt-1">
             ⚠ Differens {formatSEK(Math.abs(totalDebit - totalCredit))}
           </p>
         )}

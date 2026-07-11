@@ -195,32 +195,32 @@ function ExpensePreviewCard({ data, companyId, userId }: { data: ExpenseData; co
   }
 
   return (
-    <div className="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden">
-      <div className="p-4 border-b border-slate-800">
+    <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
+      <div className="p-4 border-b border-[#E2E8F0]">
         <div className="flex items-center gap-2">
           <div className="bg-emerald-600 rounded-xl p-2">
             <Receipt className="h-5 w-5 text-white" />
           </div>
           <div>
-            <p className="text-white font-semibold text-sm">Förslag på utlägg</p>
-            <p className="text-slate-400 text-xs">{data.date} • Inget är sparat ännu</p>
+            <p className="text-[#0F172A] font-semibold text-sm">Förslag på utlägg</p>
+            <p className="text-[#64748B] text-xs">{data.date} • Inget är sparat ännu</p>
           </div>
         </div>
       </div>
       <div className="p-4 space-y-3">
         <div>
-          <p className="text-slate-500 text-xs uppercase tracking-wider mb-0.5">Kategori</p>
-          <p className="text-white font-medium text-sm">{data.category}</p>
+          <p className="text-[#94A3B8] text-xs uppercase tracking-wider mb-0.5">Kategori</p>
+          <p className="text-[#0F172A] font-medium text-sm">{data.category}</p>
         </div>
         <div>
-          <p className="text-slate-500 text-xs uppercase tracking-wider mb-1">Belopp (kr)</p>
+          <p className="text-[#94A3B8] text-xs uppercase tracking-wider mb-1">Belopp (kr)</p>
           <input
             type="number"
             inputMode="decimal"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             placeholder="Ange belopp i kr"
-            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-white text-sm focus:outline-none focus:border-emerald-500"
+            className="w-full bg-[#F1F5F9] border border-[#E2E8F0] rounded-xl px-3 py-2.5 text-[#0F172A] text-sm focus:outline-none focus:border-emerald-500"
           />
         </div>
         <button
@@ -553,7 +553,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
     return (
       <div className="space-y-2">
         {cleanedText && (
-          <div className="bg-slate-800 rounded-2xl px-4 py-3 text-sm text-slate-200">
+          <div className="bg-[#F1F5F9] rounded-2xl px-4 py-3 text-sm text-[#334155]">
             <div className="prose prose-sm prose-invert max-w-none [&>p]:mb-1 [&>ul]:mb-1">
               <ReactMarkdown>{cleanedText || "..."}</ReactMarkdown>
             </div>
@@ -567,18 +567,18 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
   };
 
   return (
-    <div className="flex flex-col h-full bg-slate-950">
+    <div className="flex flex-col h-full bg-[#F8FAFB]">
       <input ref={cameraRef} type="file" accept="image/*" capture="environment" className="hidden" onChange={(e) => { if (e.target.files?.[0]) handleFileAttach(e.target.files[0]); e.target.value = ""; }} />
       <input ref={fileRef} type="file" accept="image/*,.pdf" className="hidden" onChange={(e) => { if (e.target.files?.[0]) handleFileAttach(e.target.files[0]); e.target.value = ""; }} />
 
       {/* Header — back arrow returns to previous view without losing chat history */}
-      <div className="bg-slate-900 border-b border-slate-800 px-2 py-2" style={{ paddingTop: "calc(env(safe-area-inset-top) + 4px)" }}>
+      <div className="bg-white border-b border-[#E2E8F0] px-2 py-2" style={{ paddingTop: "calc(env(safe-area-inset-top) + 4px)" }}>
         <div className="flex items-center gap-2">
           {onBack && (
             <button
               onClick={onBack}
               aria-label="Tillbaka"
-              className="min-w-[44px] min-h-[44px] flex items-center justify-center text-slate-200 active:scale-[0.95] transition-transform"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[#334155] active:scale-[0.95] transition-transform"
             >
               <ArrowLeft className="h-5 w-5" />
             </button>
@@ -587,10 +587,10 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
             <Sparkles className="h-4 w-4 text-white" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-white font-semibold text-[15px] truncate">Cogniq Assistent</p>
+            <p className="text-[#0F172A] font-semibold text-[15px] truncate">Cogniq Assistent</p>
             <div className="flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span className="text-slate-400 text-xs truncate">{companyName ? `Inloggad som ${companyName}` : "Redo att hjälpa"}</span>
+              <span className="text-[#64748B] text-xs truncate">{companyName ? `Inloggad som ${companyName}` : "Redo att hjälpa"}</span>
             </div>
           </div>
         </div>
@@ -634,9 +634,9 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
                 >
                   {m.role === "assistant" ? (
                     showThinking ? (
-                      <div className="bg-slate-800 rounded-2xl px-4 py-3 text-[15px] leading-[1.5] text-slate-300 flex items-center gap-2">
+                      <div className="bg-[#F1F5F9] rounded-2xl px-4 py-3 text-[15px] leading-[1.5] text-[#475569] flex items-center gap-2">
                         <Loader2 className="h-3.5 w-3.5 animate-spin text-indigo-400" />
-                        <span className="text-slate-400">Tänker</span>
+                        <span className="text-[#64748B]">Tänker</span>
                         <span className="flex gap-1">
                           <span className="w-1 h-1 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: "0ms" }} />
                           <span className="w-1 h-1 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: "150ms" }} />
@@ -652,7 +652,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
                 </div>
               </div>
               {showTimestamp && (
-                <span className={cn("text-[11px] text-slate-500 mt-1", m.role === "user" ? "mr-2" : "ml-9")}>
+                <span className={cn("text-[11px] text-[#94A3B8] mt-1", m.role === "user" ? "mr-2" : "ml-9")}>
                   {new Date(m.createdAt!).toLocaleTimeString("sv-SE", { hour: "2-digit", minute: "2-digit" })}
                 </span>
               )}
@@ -683,7 +683,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
                 setInput(prompt);
                 inputRef.current?.focus();
               }}
-              className="flex-shrink-0 flex items-center px-3 h-9 bg-white/10 backdrop-blur-sm rounded-full text-slate-200 text-[13px] border border-white/10 active:bg-white/20 active:scale-[0.97] transition-all whitespace-nowrap"
+              className="flex-shrink-0 flex items-center px-3 h-9 bg-white/10 backdrop-blur-sm rounded-full text-[#334155] text-[13px] border border-white/10 active:bg-white/20 active:scale-[0.97] transition-all whitespace-nowrap"
             >
               {prompt}
             </button>
@@ -693,7 +693,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
 
       {/* Waveform */}
       {isListening && (
-        <div className="py-2 bg-slate-900/50">
+        <div className="py-2 bg-transparent">
           <WaveformBars />
         </div>
       )}
@@ -702,7 +702,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
           Padding-bottom uses safe-area-inset to avoid the home indicator on iOS;
           the bottom nav is hidden in chat view so we don't add extra offset. */}
       <div
-        className="bg-slate-900/95 backdrop-blur-xl border-t border-white/5 px-3 py-2 flex items-end gap-2"
+        className="bg-white/95 backdrop-blur-xl border-t border-[#E2E8F0] px-3 py-2 flex items-end gap-2"
         style={{ paddingBottom: "calc(env(safe-area-inset-bottom) + 8px)" }}
       >
         {/* Mic button — opens voice overlay (transcription editable before send) */}
@@ -711,14 +711,14 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
           aria-label="Röstinmatning"
           className={cn(
             "min-h-[44px] min-w-[44px] rounded-xl flex items-center justify-center active:scale-[0.97] transition-transform flex-shrink-0",
-            isListening ? "bg-rose-600 text-white" : "bg-slate-800 text-slate-300"
+            isListening ? "bg-rose-600 text-white" : "bg-[#F1F5F9] text-[#475569]"
           )}
         >
           <Mic className="h-5 w-5" />
         </button>
 
         {/* Attachments */}
-        <button onClick={() => fileRef.current?.click()} aria-label="Bifoga fil" className="min-h-[44px] min-w-[44px] flex items-center justify-center text-slate-400 active:scale-[0.97] transition-transform flex-shrink-0">
+        <button onClick={() => fileRef.current?.click()} aria-label="Bifoga fil" className="min-h-[44px] min-w-[44px] flex items-center justify-center text-[#64748B] active:scale-[0.97] transition-transform flex-shrink-0">
           <Paperclip className="h-5 w-5" />
         </button>
 
@@ -740,7 +740,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
           autoCorrect="off"
           autoCapitalize="sentences"
           spellCheck={false}
-          className="flex-1 bg-slate-800 placeholder:text-slate-500 outline-none min-w-0 min-h-[44px] max-h-[140px] rounded-2xl px-4 py-3 border border-slate-700 focus:border-indigo-500 transition-colors resize-none leading-[1.4]"
+          className="flex-1 bg-[#F1F5F9] placeholder:text-[#94A3B8] outline-none min-w-0 min-h-[44px] max-h-[140px] rounded-2xl px-4 py-3 border border-[#E2E8F0] focus:border-[#0052FF] transition-colors resize-none leading-[1.4]"
           style={{ fontSize: "16px", color: "#ffffff", WebkitTextFillColor: "#ffffff", caretColor: "#4D7CFF" }}
         />
 
@@ -753,7 +753,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
             "min-h-[44px] min-w-[44px] rounded-xl flex items-center justify-center transition-all flex-shrink-0 active:scale-[0.97]",
             input.trim() && !streaming
               ? "bg-[#0052FF] text-white"
-              : "bg-slate-800 text-slate-600 cursor-not-allowed"
+              : "bg-[#F1F5F9] text-[#94A3B8] cursor-not-allowed"
           )}
         >
           {streaming ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}

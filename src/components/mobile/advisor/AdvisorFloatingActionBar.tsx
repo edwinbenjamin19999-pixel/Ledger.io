@@ -20,7 +20,7 @@ export const AdvisorFloatingActionBar = ({
       <div
         className={cn(
           "pointer-events-auto mx-auto max-w-md flex items-center gap-1 px-2 py-2 rounded-full",
-          "bg-slate-900/80 backdrop-blur-2xl border border-white/15",
+          "bg-[#0052FF]/90 backdrop-blur-2xl border border-white/20",
           "shadow-[0_12px_40px_-8px_rgba(0,0,0,0.6)]",
           "animate-in fade-in slide-in-from-bottom-4 duration-200",
         )}
@@ -48,7 +48,7 @@ export const AdvisorFloatingActionBar = ({
 
 const TONES = {
   emerald: "text-emerald-300 hover:bg-emerald-500/15",
-  cyan: "text-[#0052FF] hover:bg-[#0052FF]/15",
+  cyan: "text-white hover:bg-white/20",
   amber: "text-amber-300 hover:bg-amber-500/15",
   violet: "text-violet-300 hover:bg-violet-500/15",
 } as const;

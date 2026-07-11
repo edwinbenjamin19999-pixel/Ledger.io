@@ -28,7 +28,7 @@ export const MobileAppRouter = ({ user, signOut }: MobileAppRouterProps) => {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-slate-950">
+      <div className="flex items-center justify-center min-h-screen bg-[#F8FAFB]">
         <LoadingSpinner />
       </div>
     );

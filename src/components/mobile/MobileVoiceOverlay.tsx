@@ -76,7 +76,7 @@ export const MobileVoiceOverlay = ({ open, onClose, onConfirm }: MobileVoiceOver
 
   return (
     <div
-      className="fixed inset-0 z-[60] bg-slate-900/95 flex flex-col items-center justify-center"
+      className="fixed inset-0 z-[60] bg-[#0052FF]/95 flex flex-col items-center justify-center"
       onClick={handleConfirm}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -99,13 +99,13 @@ export const MobileVoiceOverlay = ({ open, onClose, onConfirm }: MobileVoiceOver
       <div className="relative w-40 h-40 flex items-center justify-center mb-10">
         {listening && (
           <>
-            <div className="absolute inset-0 rounded-full bg-indigo-500/20 animate-ping" style={{ animationDuration: "2s" }} />
-            <div className="absolute inset-4 rounded-full bg-indigo-500/30 animate-ping" style={{ animationDuration: "1.5s", animationDelay: "0.3s" }} />
-            <div className="absolute inset-8 rounded-full bg-indigo-500/40 animate-ping" style={{ animationDuration: "1s", animationDelay: "0.6s" }} />
+            <div className="absolute inset-0 rounded-full bg-white/20 animate-ping" style={{ animationDuration: "2s" }} />
+            <div className="absolute inset-4 rounded-full bg-white/25 animate-ping" style={{ animationDuration: "1.5s", animationDelay: "0.3s" }} />
+            <div className="absolute inset-8 rounded-full bg-white/30 animate-ping" style={{ animationDuration: "1s", animationDelay: "0.6s" }} />
           </>
         )}
-        <div className="relative bg-indigo-600 rounded-full p-6 shadow-lg shadow-indigo-500/40">
-          <Mic className="h-10 w-10 text-white" />
+        <div className="relative bg-white rounded-full p-6 shadow-lg shadow-black/20">
+          <Mic className="h-10 w-10 text-[#0052FF]" />
         </div>
       </div>
 
