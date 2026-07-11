@@ -264,7 +264,7 @@ const AdvisorDocuments = () => {
             onClick={() => setView("folders")}
             className={cn(
               "px-3 py-1.5 rounded-md text-xs font-semibold transition-colors flex items-center gap-1.5",
-              view === "folders" ? "bg-slate-900 text-white" : "text-slate-600 hover:text-slate-900",
+              view === "folders" ? "bg-[#0052FF] text-white" : "text-slate-600 hover:text-slate-900",
             )}
           >
             <Folder className="h-3.5 w-3.5" />
@@ -275,7 +275,7 @@ const AdvisorDocuments = () => {
             onClick={() => setView("timeline")}
             className={cn(
               "px-3 py-1.5 rounded-md text-xs font-semibold transition-colors flex items-center gap-1.5",
-              view === "timeline" ? "bg-slate-900 text-white" : "text-slate-600 hover:text-slate-900",
+              view === "timeline" ? "bg-[#0052FF] text-white" : "text-slate-600 hover:text-slate-900",
             )}
           >
             <Clock className="h-3.5 w-3.5" />

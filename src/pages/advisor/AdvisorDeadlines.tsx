@@ -77,7 +77,7 @@ export default function AdvisorDeadlines() {
               key={v.k}
               onClick={() => setView(v.k)}
               className={`px-3 py-1.5 rounded-md flex items-center gap-1.5 transition ${
-                view === v.k ? "bg-slate-900 text-white" : "text-slate-600 hover:bg-slate-50"
+                view === v.k ? "bg-[#0052FF] text-white" : "text-slate-600 hover:bg-slate-50"
               }`}
             >
               <v.icon className="h-3.5 w-3.5" /> {v.label}
@@ -362,7 +362,7 @@ const TimelineView = ({ items }: { items: FirmDeadlineItem[] }) => {
             <div className="w-32 shrink-0 text-[12px] truncate text-slate-700">{name}</div>
             <div className="relative flex-1 h-7 bg-slate-50 rounded-md">
               {todayPct >= 0 && todayPct <= 100 && (
-                <div className="absolute top-0 bottom-0 w-px bg-slate-900" style={{ left: `${todayPct}%` }} />
+                <div className="absolute top-0 bottom-0 w-px bg-[#0052FF]" style={{ left: `${todayPct}%` }} />
               )}
               {list.map((it, j) => {
                 const pct = ((it.due_date.getTime() - minDate) / range) * 100;

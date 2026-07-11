@@ -11,11 +11,11 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 const CATEGORY_META: Record<string, { label: string; color: string }> = {
-  health: { label: "Portföljhälsa", color: "bg-emerald-500/20 text-emerald-200" },
-  industry: { label: "Branschanalys", color: "bg-blue-500/20 text-blue-200" },
-  automation: { label: "Automation", color: "bg-purple-500/20 text-purple-200" },
-  deadlines: { label: "Deadlines", color: "bg-amber-500/20 text-amber-200" },
-  anomaly: { label: "Anomalier", color: "bg-red-500/20 text-red-200" },
+  health: { label: "Portföljhälsa", color: "bg-[#E1F5EE] text-[#085041]" },
+  industry: { label: "Branschanalys", color: "bg-[#EFF6FF] text-[#0052FF]" },
+  automation: { label: "Automation", color: "bg-[#F3E8FF] text-[#6D28D9]" },
+  deadlines: { label: "Deadlines", color: "bg-[#FAEEDA] text-[#7A5417]" },
+  anomaly: { label: "Anomalier", color: "bg-[#FCE8E8] text-[#7A1A1A]" },
 };
 
 interface AIInsight {
@@ -107,15 +107,15 @@ export default function AdvisorInsights() {
               return (
                 <div
                   key={key}
-                  className="bg-[#111827] border-[0.5px] border-white/[0.08] rounded-[12px] p-[14px]"
+                  className="bg-white border-[0.5px] border-[#E2E8F0] rounded-[12px] p-[14px]"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="bg-white/[0.08] text-white/60 rounded-full text-[10px] px-[8px] py-[2px]">
+                    <span className="bg-[#F1F5F9] text-[#64748B] rounded-full text-[10px] px-[8px] py-[2px]">
                       {ai.category}
                     </span>
                     <button
                       onClick={() => setOpen((o) => ({ ...o, [key]: !isOpen }))}
-                      className="text-white/60 hover:text-white"
+                      className="text-[#64748B] hover:text-[#0F172A]"
                     >
                       {isOpen ? (
                         <ChevronDown className="h-4 w-4" />
@@ -125,21 +125,21 @@ export default function AdvisorInsights() {
                     </button>
                   </div>
                   {ai.affected_clients && ai.affected_clients.length > 0 && (
-                    <p className="text-[11px] text-white/40 mb-1.5">
+                    <p className="text-[11px] text-[#94A3B8] mb-1.5">
                       {ai.affected_clients.join(", ")}
                     </p>
                   )}
-                  <p className="text-[13px] text-white/80 leading-[1.5] font-medium">
+                  <p className="text-[13px] text-[#0F172A] leading-[1.5] font-medium">
                     {ai.title}
                   </p>
                   {isOpen && (
-                    <div className="mt-3 pt-3 border-t border-white/[0.06] space-y-2">
-                      <p className="text-[12px] text-white/70 leading-relaxed">
-                        <span className="text-white/40">Observation: </span>
+                    <div className="mt-3 pt-3 border-t border-[#E2E8F0] space-y-2">
+                      <p className="text-[12px] text-[#475569] leading-relaxed">
+                        <span className="text-[#94A3B8]">Observation: </span>
                         {ai.observation}
                       </p>
-                      <p className="text-[12px] text-white/85 leading-relaxed">
-                        <span className="text-purple-300">Rekommendation: </span>
+                      <p className="text-[12px] text-[#334155] leading-relaxed">
+                        <span className="text-[#6D28D9]">Rekommendation: </span>
                         {ai.recommendation}
                       </p>
                     </div>
@@ -147,13 +147,13 @@ export default function AdvisorInsights() {
                   <div className="mt-3 pt-2 flex items-center gap-2">
                     <button
                       onClick={() => navigate("/wl/app/workflow")}
-                      className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
+                      className="bg-[#0052FF] hover:bg-[#0040CC] text-white rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
                     >
                       Åtgärda
                     </button>
                     <button
                       onClick={() => setIgnored((s) => new Set(s).add(key))}
-                      className="text-white/30 hover:text-white/60 text-[10px]"
+                      className="text-[#CBD5E1] hover:text-[#475569] text-[10px]"
                     >
                       Ignorera
                     </button>
@@ -177,10 +177,10 @@ export default function AdvisorInsights() {
       {isLoading ? (
         <p className="text-center text-[12px] text-slate-400 p-8">Laddar insikter…</p>
       ) : recent.length === 0 ? (
-        <div className="bg-[#0B1929] rounded-[12px] p-8 text-center text-white/70">
-          <Sparkles className="h-8 w-8 text-purple-300 mx-auto mb-2" />
+        <div className="bg-white border border-[#E2E8F0] rounded-[12px] p-8 text-center text-[#475569]">
+          <Sparkles className="h-8 w-8 text-[#6D28D9] mx-auto mb-2" />
           <p className="text-[14px]">Inga insikter ännu.</p>
-          <p className="text-[12px] text-white/50 mt-1">
+          <p className="text-[12px] text-[#94A3B8] mt-1">
             Insikter genereras automatiskt varje måndag morgon.
           </p>
         </div>
@@ -190,7 +190,7 @@ export default function AdvisorInsights() {
             .filter((i: any) => !ignored.has(i.id))
             .map((i: any) => {
               const meta =
-                CATEGORY_META[i.category] ?? { label: i.category ?? "Insikt", color: "bg-slate-500/20 text-slate-200" };
+                CATEGORY_META[i.category] ?? { label: i.category ?? "Insikt", color: "bg-[#F1F5F9] text-[#475569]" };
               const isOpen = open[i.id] ?? false;
               const affectedNames = (i.affected ?? [])
                 .slice(0, 3)
@@ -199,7 +199,7 @@ export default function AdvisorInsights() {
               return (
                 <div
                   key={i.id}
-                  className="bg-[#111827] border-[0.5px] border-white/[0.08] rounded-[12px] p-[14px] text-white"
+                  className="bg-white border-[0.5px] border-[#E2E8F0] rounded-[12px] p-[14px] text-[#0F172A]"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
@@ -209,7 +209,7 @@ export default function AdvisorInsights() {
                     </div>
                     <button
                       onClick={() => setOpen((o) => ({ ...o, [i.id]: !isOpen }))}
-                      className="text-white/60 hover:text-white"
+                      className="text-[#64748B] hover:text-[#0F172A]"
                     >
                       {isOpen ? (
                         <ChevronDown className="h-4 w-4" />
@@ -219,31 +219,31 @@ export default function AdvisorInsights() {
                     </button>
                   </div>
                   {affectedNames && (
-                    <p className="text-[11px] text-white/40 mb-1.5">{affectedNames}</p>
+                    <p className="text-[11px] text-[#94A3B8] mb-1.5">{affectedNames}</p>
                   )}
-                  <p className="text-[13px] text-white/80 leading-[1.5] font-medium">
+                  <p className="text-[13px] text-[#0F172A] leading-[1.5] font-medium">
                     {i.title ?? "AI-insikt"}
                   </p>
-                  <p className="text-[12px] text-white/65 leading-relaxed mt-1.5">
+                  <p className="text-[12px] text-[#64748B] leading-relaxed mt-1.5">
                     {i.description ?? i.summary ?? ""}
                   </p>
                   {isOpen && (i.detail || i.body || i.notifyMessage) && (
-                    <div className="mt-3 pt-3 border-t border-white/[0.06] space-y-2">
+                    <div className="mt-3 pt-3 border-t border-[#E2E8F0] space-y-2">
                       {i.affected && i.affected.length > 0 && (
-                        <p className="text-[11px] text-white/50">
+                        <p className="text-[11px] text-[#94A3B8]">
                           Berör {i.affected.length} klient
                           {i.affected.length === 1 ? "" : "er"}:{" "}
                           {i.affected.map((a: any) => a.name).join(", ")}
                         </p>
                       )}
                       {(i.detail || i.body) && (
-                        <p className="text-[12px] text-white/70 whitespace-pre-wrap leading-relaxed">
+                        <p className="text-[12px] text-[#475569] whitespace-pre-wrap leading-relaxed">
                           {i.detail ?? i.body}
                         </p>
                       )}
                       {i.notifyMessage && (
-                        <p className="text-[12px] text-white/85">
-                          <span className="text-purple-300">Rekommendation: </span>
+                        <p className="text-[12px] text-[#334155]">
+                          <span className="text-[#6D28D9]">Rekommendation: </span>
                           {i.notifyMessage}
                         </p>
                       )}
@@ -252,13 +252,13 @@ export default function AdvisorInsights() {
                   <div className="mt-3 pt-2 flex items-center gap-2">
                     <button
                       onClick={() => navigate(i.fixRoute ?? "/wl/app/workflow")}
-                      className="bg-[#0040CC] hover:bg-[#1074A0] text-[#E6F4FA] rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
+                      className="bg-[#0052FF] hover:bg-[#0040CC] text-white rounded-[7px] text-[10px] font-medium px-[10px] h-[26px]"
                     >
                       Åtgärda
                     </button>
                     <button
                       onClick={() => setIgnored((s) => new Set(s).add(i.id))}
-                      className="text-white/30 hover:text-white/60 text-[10px]"
+                      className="text-[#CBD5E1] hover:text-[#475569] text-[10px]"
                     >
                       Ignorera
                     </button>
